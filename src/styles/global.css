@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand red — z loga */
+  --color-brand-50:  #fdf2f3;
+  --color-brand-100: #fbe0e2;
+  --color-brand-200: #f6c0c4;
+  --color-brand-300: #ef9098;
+  --color-brand-400: #e55662;
+  --color-brand-500: #C41E2A;
+  --color-brand-600: #a01820;
+  --color-brand-700: #831319;
+  --color-brand-800: #6d1216;
+  --color-brand-900: #4a0c0f;
+
+  /* Charcoal — z textu loga */
+  --color-charcoal-50:  #f6f6f6;
+  --color-charcoal-100: #e8e8e8;
+  --color-charcoal-200: #d0d0d0;
+  --color-charcoal-300: #ababab;
+  --color-charcoal-400: #848484;
+  --color-charcoal-500: #636363;
+  --color-charcoal-600: #4a4a4a;
+  --color-charcoal-700: #363636;
+  --color-charcoal-800: #282828;
+  --color-charcoal-900: #1C1C1C;
+
+  /* Neutral grays */
+  --color-gray-50:  #F7F7F7;
+  --color-gray-100: #f0f0f0;
+  --color-gray-200: #e4e4e4;
+  --color-gray-300: #d1d1d1;
+  --color-gray-400: #b4b4b4;
+  --color-gray-500: #9a9a9a;
+  --color-gray-600: #6f6f6f;
+  --color-gray-700: #4f4f4f;
+  --color-gray-800: #333333;
+  --color-gray-900: #1a1a1a;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-charcoal-900);
+    background-color: #fff;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-charcoal-900);
+  }
+
+  p {
+    line-height: 1.7;
+    color: var(--color-charcoal-600);
+  }
+}
