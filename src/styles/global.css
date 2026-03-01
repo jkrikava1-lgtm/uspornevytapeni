@@ -13,7 +13,19 @@
   --color-brand-800: #6d1216;
   --color-brand-900: #4a0c0f;
 
-  /* Charcoal — z textu loga */
+  /* Navy — pro tmavé sekce */
+  --color-navy-50:  #eef3f9;
+  --color-navy-100: #d4e2f0;
+  --color-navy-200: #a9c5e1;
+  --color-navy-300: #7ea8d2;
+  --color-navy-400: #538bc3;
+  --color-navy-500: #2e6eae;
+  --color-navy-600: #245891;
+  --color-navy-700: #1B3A5C;
+  --color-navy-800: #142c46;
+  --color-navy-900: #0e1e30;
+
+  /* Charcoal — pro text */
   --color-charcoal-50:  #f6f6f6;
   --color-charcoal-100: #e8e8e8;
   --color-charcoal-200: #d0d0d0;
