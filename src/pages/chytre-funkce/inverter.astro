@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Technologie Inverter" description="Co je inverterová technologie u tepelných čerpadel? Proč je lepší než on/off systémy, jak šetří energii a prodlužuje životnost.">
+  <PageHero
+    title="Technologie Inverter"
+    subtitle="Inverterové tepelné čerpadlo neběží na plný výkon nebo stojí. Plynule přizpůsobuje výkon aktuální potřebě — méně elektřiny, delší životnost, větší komfort."
+    breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce/inverter' }, { label: 'Technologie Inverter', href: '/chytre-funkce/inverter' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Inverter vs. on/off</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Plynulý výkon místo zbytečných startů</h2>
+          <div class="space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Klasická tepelná čerpadla fungují binárně — buď jedou na 100 %, nebo stojí. Inverterová technologie umožňuje plynulou regulaci výkonu od 30 % do 100 % — přesně podle toho, co dům v danou chvíli potřebuje.</p>
+            <p>Výsledek: méně startů kompresoru, nižší opotřebení, tiší provoz a výrazná úspora elektřiny zejména v přechodném období (jaro, podzim), kdy dům potřebuje jen trochu dotápět.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-3">On/Off systém</div>
+              <div class="space-y-2 text-sm text-charcoal-600">
+                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Plný výkon nebo stop</div>
+                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Časté starty</div>
+                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Vyšší opotřebení</div>
+                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Výkyvy teploty</div>
+              </div>
+            </div>
+            <div class="bg-brand-50 rounded-xl p-6 border border-brand-200">
+              <div class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-3">Inverter systém</div>
+              <div class="space-y-2 text-sm text-charcoal-700">
+                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Plynulá regulace 30–100 %</div>
+                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Méně startů kompresoru</div>
+                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Delší životnost</div>
+                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Stabilní teplota</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-navy-700 rounded-2xl p-8 text-white">
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">Výhody v číslech</div>
+            <div class="space-y-5">
+              {[
+                { hodnota: 'až 30 %', popis: 'nižší spotřeba elektřiny oproti on/off systémům' },
+                { hodnota: '+5 let', popis: 'delší životnost díky méně startům kompresoru' },
+                { hodnota: '< 45 dB', popis: 'tichý provoz při částečném výkonu' },
+              ].map(item => (
+                <div class="border-b border-navy-600 pb-4 last:border-0 last:pb-0">
+                  <div class="text-3xl font-extrabold text-brand-400 mb-1">{item.hodnota}</div>
+                  <div class="text-sm text-navy-300">{item.popis}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Všechna naše čerpadla jsou inverterová</h3>
+            <p class="text-sm text-charcoal-500 leading-relaxed">Celý aktuální sortiment Master Therm je vybaven inverterovou technologií jako standard. Není to příplatek — je to základ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete inverterové tepelné čerpadlo?</h2>
+      <p class="text-charcoal-500 mb-8">Konzultace a návrh jsou zdarma.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+    </div>
+  </section>
+</Layout>

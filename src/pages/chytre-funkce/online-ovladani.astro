@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Online ovládání tepelného čerpadla" description="Ovládejte tepelné čerpadlo přes internet z mobilu nebo počítače. Vzdálený přístup, monitoring spotřeby, nastavení programu odkudkoliv.">
+  <PageHero
+    title="Online ovládání přes internet"
+    subtitle="Nastavte teplotu z kanceláře, z dovolené, odkudkoliv. Váš dům bude vyhřátý přesně tehdy, kdy potřebujete."
+    breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce/online-ovladani' }, { label: 'Online ovládání', href: '/chytre-funkce/online-ovladani' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Vzdálený přístup</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Plná kontrola z telefonu</h2>
+          <div class="space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Tepelná čerpadla Master Therm jsou standardně vybavena Wi-Fi modulem a vlastní cloudovou platformou. Připojení k internetu zpřístupní kompletní ovládání z mobilní aplikace nebo webového rozhraní.</p>
+            <p>Zapomněli jste snížit teplotu před odjezdem na chatu? Žádný problém — upravíte to odkudkoliv za pár sekund.</p>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            {[
+              { title: 'Nastavení teploty odkudkoliv', desc: 'Okamžitá změna požadované teploty v každé zóně přes mobil nebo web.' },
+              { title: 'Monitoring spotřeby', desc: 'Přehled spotřeby elektřiny, topného faktoru COP a provozních hodin v reálném čase.' },
+              { title: 'Notifikace a alarmy', desc: 'Upozornění na poruchu nebo neobvyklý stav přímo do telefonu.' },
+              { title: 'Vzdálená diagnostika', desc: 'Náš servisní tým může zkontrolovat stav systému vzdáleně — rychlejší servis.' },
+            ].map(item => (
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
+                  <div class="text-sm text-charcoal-500">{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-navy-700 rounded-2xl p-8 text-white">
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-5">Funkce aplikace</div>
+            <div class="space-y-3">
+              {[
+                { icon: '🌡️', text: 'Aktuální teplota v každé zóně' },
+                { icon: '⚡', text: 'Spotřeba elektřiny v reálném čase' },
+                { icon: '📊', text: 'Grafy spotřeby a výkonu' },
+                { icon: '📅', text: 'Správa týdenního programu' },
+                { icon: '🔔', text: 'Push notifikace při poruchách' },
+                { icon: '🔧', text: 'Vzdálený přístup pro servis' },
+              ].map(item => (
+                <div class="flex items-center gap-3 bg-navy-600 rounded-lg px-4 py-3">
+                  <span class="text-lg">{item.icon}</span>
+                  <span class="text-sm text-navy-200">{item.text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Součástí standardní dodávky</h3>
+            <p class="text-sm text-charcoal-500 leading-relaxed">Wi-Fi modul a přístup do cloudové platformy je součástí každého tepelného čerpadla Master Therm bez příplatku. Žádné měsíční poplatky.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete mít dům pod kontrolou odkudkoliv?</h2>
+      <p class="text-charcoal-500 mb-8">Poptejte tepelné čerpadlo s online ovládáním zdarma.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+    </div>
+  </section>
+</Layout>

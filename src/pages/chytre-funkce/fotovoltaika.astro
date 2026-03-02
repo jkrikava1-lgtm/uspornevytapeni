@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Tepelné čerpadlo a fotovoltaika" description="Kombinace tepelného čerpadla s fotovoltaikou — jak funguje, jak moc ušetříte a proč je to nejlepší investice do vašeho domu.">
+  <PageHero
+    title="Spolupráce s fotovoltaikou"
+    subtitle="Tepelné čerpadlo + fotovoltaika = nejúspornější kombinace pro moderní dům. Topíte vlastní elektřinou — provozní náklady klesají téměř na nulu."
+    breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce/fotovoltaika' }, { label: 'Fotovoltaika', href: '/chytre-funkce/fotovoltaika' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Synergie dvou technologií</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">FVE pohání TČ — energie skoro zadarmo</h2>
+          <div class="space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Tepelné čerpadlo je největší spotřebič v domácnosti — a fotovoltaika je jeho ideální doplněk. Přebytky solární elektřiny, které byste jinak prodali do sítě za výkupní cenu, spotřebuje tepelné čerpadlo k přímému vytápění nebo ohřevu vody.</p>
+            <p>Řídicí systém TČ automaticky rozpozná, kdy je k dispozici levná sluneční elektřina, a přizpůsobí provoz tak, aby ji maximálně využil — bez zásahu uživatele.</p>
+          </div>
+
+          <div class="mt-8 space-y-4">
+            {[
+              { title: 'Automatické využití přebytků', desc: 'Řídicí systém TČ reaguje na signál z FVE střídače a spustí ohřev vody nebo topení, když je elektřina zadarmo.' },
+              { title: 'Prediktivní řízení', desc: 'Systém zohledňuje předpověď počasí a plánuje ohřev na doby s nejvyšší produkcí FVE.' },
+              { title: 'Bateriový doplněk', desc: 'S bateriovým úložištěm funguje synergie i v noci — elektřina ze dne se spotřebuje večer.' },
+              { title: 'Maximální soběstačnost', desc: 'Kombinace TČ + FVE + baterie může pokrýt 70–90 % roční spotřeby energie z vlastních zdrojů.' },
+            ].map(item => (
+              <div class="flex gap-4">
+                <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
+                  <div class="text-sm text-charcoal-500">{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-navy-700 rounded-2xl p-8 text-white">
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">Příklad úspory — dům 150 m²</div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-navy-300">TČ bez FVE</span>
+                  <span class="font-semibold">15 000 Kč/rok</span>
+                </div>
+                <div class="h-2 bg-navy-600 rounded-full">
+                  <div class="h-2 bg-navy-300 rounded-full" style="width:75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-navy-300">TČ + FVE 6 kWp</span>
+                  <span class="font-semibold">5 000 Kč/rok</span>
+                </div>
+                <div class="h-2 bg-navy-600 rounded-full">
+                  <div class="h-2 bg-brand-400 rounded-full" style="width:25%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5">
+                  <span class="text-navy-300">TČ + FVE + baterie</span>
+                  <span class="font-semibold">~1 500 Kč/rok</span>
+                </div>
+                <div class="h-2 bg-navy-600 rounded-full">
+                  <div class="h-2 bg-brand-500 rounded-full" style="width:8%"></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-navy-400 mt-5">* Orientační hodnoty, závisí na produkci FVE a způsobu vytápění</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Připraveni na FVE od začátku</h3>
+            <p class="text-sm text-charcoal-500 leading-relaxed">Každé tepelné čerpadlo Master Therm dodáváme připravené na integraci s fotovoltaikou. Pokud FVE plánujete v budoucnu, zohledníme to již při návrhu systému.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Plánujete TČ i fotovoltaiku?</h2>
+      <p class="text-charcoal-500 mb-8">Navrhujeme oboje jako celek — lepší výsledek, nižší náklady.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+    </div>
+  </section>
+</Layout>
