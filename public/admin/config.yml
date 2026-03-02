@@ -2,7 +2,8 @@ backend:
   name: github
   repo: jkrikava1-lgtm/uspornevytapeni
   branch: main
-  base_url: https://sveltia-cms-auth.vercel.app
+  auth_type: pkce
+  app_id: DOPLNIT_CLIENT_ID
 
 media_folder: public/images
 public_folder: /images
@@ -19,13 +20,13 @@ collections:
         format: json
         fields:
           - { label: Název firmy, name: name, widget: string }
-          - { label: Telefon (zobrazený), name: phone, widget: string, hint: "Např. +420 777 724 573" }
-          - { label: Telefon (odkaz), name: phone_href, widget: string, hint: "Např. tel:+420777724573" }
+          - { label: "Telefon (zobrazený, např. +420 777 724 573)", name: phone, widget: string }
+          - { label: "Telefon (odkaz, např. tel:+420777724573)", name: phone_href, widget: string }
           - { label: E-mail, name: email, widget: string }
-          - { label: Adresa — ulice a číslo, name: address_line1, widget: string }
-          - { label: Adresa — PSČ a město, name: address_line2, widget: string }
+          - { label: "Adresa — ulice a číslo", name: address_line1, widget: string }
+          - { label: "Adresa — PSČ a město", name: address_line2, widget: string }
           - { label: Rok založení, name: founded, widget: string }
-          - { label: Tagline (krátký popis), name: tagline, widget: string }
+          - { label: Tagline (krátký popis firmy), name: tagline, widget: string }
 
   - name: homepage
     label: Obsah úvodní stránky
@@ -35,61 +36,26 @@ collections:
         file: src/data/homepage.json
         format: json
         fields:
-          - label: Hero sekce
-            name: hero
-            widget: object
-            collapsed: false
-            fields:
-              - { label: Badge (malý text nad nadpisem), name: hero_badge, widget: string }
-              - { label: Nadpis — řádek 1, name: hero_h1_line1, widget: string }
-              - { label: Nadpis — zvýrazněná část, name: hero_h1_highlight, widget: string }
-              - { label: Nadpis — řádek 3, name: hero_h1_line3, widget: string }
-              - { label: Popis pod nadpisem, name: hero_text, widget: text }
-              - { label: Tlačítko 1 (poptávka), name: hero_cta_primary, widget: string }
-              - { label: Tlačítko 2 (reference), name: hero_cta_secondary, widget: string }
-          - label: Statistiky
-            name: stats
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Statistika 1 — číslo, name: stat1_number, widget: string }
-              - { label: Statistika 1 — popis, name: stat1_label, widget: string }
-              - { label: Statistika 2 — číslo, name: stat2_number, widget: string }
-              - { label: Statistika 2 — popis, name: stat2_label, widget: string }
-              - { label: Statistika 3 — číslo, name: stat3_number, widget: string }
-              - { label: Statistika 3 — popis, name: stat3_label, widget: string }
-          - label: Proč tepelné čerpadlo
-            name: savings
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Nadpis sekce, name: savings_headline, widget: string }
-              - { label: Text sekce, name: savings_text, widget: text }
-          - label: Proč my
-            name: why_us
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Nadpis sekce, name: why_us_headline, widget: string }
-          - label: Reference (citát)
-            name: testimonial
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Text citátu, name: testimonial_text, widget: text }
-              - { label: Jméno, name: testimonial_name, widget: string }
-              - { label: Lokalita a typ, name: testimonial_location, widget: string }
-          - label: Dotační banner
-            name: dotace
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Nadpis, name: dotace_headline, widget: string }
-              - { label: Text, name: dotace_text, widget: string }
-          - label: Závěrečná výzva k akci
-            name: cta
-            widget: object
-            collapsed: true
-            fields:
-              - { label: Nadpis, name: cta_headline, widget: string }
-              - { label: Text, name: cta_text, widget: text }
+          - { label: "Hero — malý text nad nadpisem", name: hero_badge, widget: string }
+          - { label: "Hero — nadpis řádek 1", name: hero_h1_line1, widget: string }
+          - { label: "Hero — zvýrazněná část nadpisu", name: hero_h1_highlight, widget: string }
+          - { label: "Hero — nadpis řádek 3", name: hero_h1_line3, widget: string }
+          - { label: "Hero — popis pod nadpisem", name: hero_text, widget: text }
+          - { label: "Hero — tlačítko poptávka", name: hero_cta_primary, widget: string }
+          - { label: "Hero — tlačítko reference", name: hero_cta_secondary, widget: string }
+          - { label: "Statistika 1 — číslo", name: stat1_number, widget: string }
+          - { label: "Statistika 1 — popis", name: stat1_label, widget: string }
+          - { label: "Statistika 2 — číslo", name: stat2_number, widget: string }
+          - { label: "Statistika 2 — popis", name: stat2_label, widget: string }
+          - { label: "Statistika 3 — číslo", name: stat3_number, widget: string }
+          - { label: "Statistika 3 — popis", name: stat3_label, widget: string }
+          - { label: "Proč TČ — nadpis", name: savings_headline, widget: string }
+          - { label: "Proč TČ — text", name: savings_text, widget: text }
+          - { label: "Proč my — nadpis", name: why_us_headline, widget: string }
+          - { label: "Citát — text", name: testimonial_text, widget: text }
+          - { label: "Citát — jméno", name: testimonial_name, widget: string }
+          - { label: "Citát — lokalita a typ", name: testimonial_location, widget: string }
+          - { label: "Dotace — nadpis", name: dotace_headline, widget: string }
+          - { label: "Dotace — text", name: dotace_text, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
