@@ -3,7 +3,7 @@ backend:
   repo: jkrikava1-lgtm/uspornevytapeni
   branch: main
   auth_type: pkce
-  app_id: DOPLNIT_CLIENT_ID
+  app_id: 0v23liULFKPTN5umCK4Q
 
 media_folder: public/images
 public_folder: /images
