@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Porovnání nákladů na vytápění" description="Srovnání ročních nákladů na vytápění — tepelné čerpadlo vs. plynový kotel vs. elektrokotel vs. kotel na tuhá paliva.">
+  <PageHero
+    title="Porovnání nákladů na vytápění"
+    subtitle="Kolik skutečně stojí různé způsoby vytápění? Objektivní srovnání podle reálných cen energií."
+    breadcrumb={[{ label: 'Porovnání nákladů', href: '/porovnani-nakladu' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-10 flex gap-3">
+        <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="text-sm text-amber-800">Výpočty jsou orientační pro rodinný dům 150 m² s průměrnou potřebou tepla 15 000 kWh/rok. Ceny energií dle průměru roku 2024.</p>
+      </div>
+
+      <!-- Hlavní srovnání -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {[
+          { zdroj: 'Tepelné čerpadlo', icon: '⚡', rocni: '12 000–18 000 Kč', poznamka: 'Elektřina, tarif D57d', highlight: true, uspory: null },
+          { zdroj: 'Plynový kotel', icon: '🔥', rocni: '40 000–55 000 Kč', poznamka: 'Zemní plyn, cena 2024', highlight: false, uspory: '~35 000 Kč/rok' },
+          { zdroj: 'Elektrokotel', icon: '🔌', rocni: '55 000–80 000 Kč', poznamka: 'Elektřina, tarif D02d', highlight: false, uspory: '~50 000 Kč/rok' },
+          { zdroj: 'Kotel na pelety', icon: '🪵', rocni: '25 000–40 000 Kč', poznamka: 'Pelety, cena 2024', highlight: false, uspory: '~20 000 Kč/rok' },
+        ].map(item => (
+          <div class={`rounded-xl p-7 border-2 ${item.highlight ? 'border-brand-500 bg-brand-50' : 'border-gray-200 bg-white'}`}>
+            {item.highlight && <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">Nejlevnější provoz</div>}
+            <div class="text-3xl mb-3">{item.icon}</div>
+            <h3 class="font-bold text-charcoal-900 mb-2">{item.zdroj}</h3>
+            <div class={`text-2xl font-extrabold mb-1 ${item.highlight ? 'text-brand-600' : 'text-charcoal-800'}`}>{item.rocni}</div>
+            <div class="text-xs text-charcoal-400 mb-3">{item.poznamka}</div>
+            {item.uspory && (
+              <div class="bg-brand-50 rounded-lg px-3 py-2 text-xs font-semibold text-brand-600">
+                Úspora s TČ: {item.uspory}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Vizuální graf -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-16">
+        <h2 class="text-xl font-extrabold text-charcoal-900 mb-8">Roční náklady — vizuální srovnání</h2>
+        <div class="space-y-5">
+          {[
+            { label: 'Tepelné čerpadlo', hodnota: 15000, max: 70000, barva: 'bg-brand-500' },
+            { label: 'Plynový kotel', hodnota: 47000, max: 70000, barva: 'bg-gray-400' },
+            { label: 'Kotel na pelety', hodnota: 32000, max: 70000, barva: 'bg-amber-400' },
+            { label: 'Elektrokotel', hodnota: 67000, max: 70000, barva: 'bg-gray-500' },
+          ].map(item => (
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-charcoal-800">{item.label}</span>
+                <span class="text-sm font-bold text-charcoal-600">{item.hodnota.toLocaleString('cs-CZ')} Kč/rok</span>
+              </div>
+              <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+                <div class={`h-3 ${item.barva} rounded-full transition-all`} style={`width:${Math.round(item.hodnota/item.max*100)}%`}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- 10letý výhled -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-navy-700 rounded-2xl p-8 text-white">
+          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">10letý výhled</div>
+          <h3 class="text-xl font-extrabold mb-6">Celkové náklady za 10 let</h3>
+          <div class="space-y-3">
+            {[
+              { label: 'Tepelné čerpadlo (provoz + pořízení)', hodnota: '430 000 Kč', highlight: true },
+              { label: 'Plynový kotel (provoz + pořízení)', hodnota: '620 000 Kč', highlight: false },
+              { label: 'Elektrokotel (provoz + pořízení)', hodnota: '750 000 Kč', highlight: false },
+            ].map(item => (
+              <div class={`flex justify-between p-3 rounded-lg ${item.highlight ? 'bg-brand-500' : 'bg-navy-600'}`}>
+                <span class="text-sm text-navy-100">{item.label}</span>
+                <span class={`text-sm font-bold ${item.highlight ? 'text-white' : 'text-navy-200'}`}>{item.hodnota}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-navy-400 mt-4">* Včetně dotace 200 000 Kč u tepelného čerpadla</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+          <h3 class="text-xl font-extrabold text-charcoal-900 mb-4">Faktory ovlivňující úsporu</h3>
+          <div class="space-y-4">
+            {[
+              { title: 'Ceny energií', desc: 'Při růstu cen plynu a elektřiny se výhoda tepelného čerpadla dále prohlubuje.' },
+              { title: 'Zateplení domu', desc: 'Lépe zateplený dům = nižší spotřeba = větší úspora v absolutních číslech.' },
+              { title: 'Tarif HDO', desc: 'Speciální tarif pro tepelná čerpadla výrazně snižuje cenu elektřiny.' },
+              { title: 'Fotovoltaika', desc: 'Kombinace TČ s FVE může snížit provozní náklady až na minimum.' },
+            ].map(item => (
+              <div class="flex gap-3">
+                <svg class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+                <div>
+                  <span class="font-semibold text-charcoal-900 text-sm">{item.title}: </span>
+                  <span class="text-sm text-charcoal-500">{item.desc}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete výpočet pro váš dům?</h2>
+      <p class="text-charcoal-500 mb-8">Připravíme individuální srovnání nákladů zdarma — na základě skutečných parametrů vašeho domu.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Chci srovnání pro můj dům</a>
+    </div>
+  </section>
+</Layout>

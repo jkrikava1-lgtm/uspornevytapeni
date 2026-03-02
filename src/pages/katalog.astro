@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const produkty = [
+  { model: 'AQ 8 Inverter', typ: 'Vzduch-voda', vykon: '8 kW', cop: '4,8', vhodnost: 'Do 80 m²', cena: 'od 180 000 Kč' },
+  { model: 'AQ 14 Inverter', typ: 'Vzduch-voda', vykon: '14 kW', cop: '4,6', vhodnost: '80–130 m²', cena: 'od 220 000 Kč' },
+  { model: 'AQ 17 Inverter', typ: 'Vzduch-voda', vykon: '17 kW', cop: '4,5', vhodnost: '130–160 m²', cena: 'od 250 000 Kč' },
+  { model: 'AQ 22 Inverter', typ: 'Vzduch-voda', vykon: '22 kW', cop: '4,3', vhodnost: '160–220 m²', cena: 'od 290 000 Kč' },
+  { model: 'AQ 28 Inverter', typ: 'Vzduch-voda', vykon: '28 kW', cop: '4,2', vhodnost: '220–300 m²', cena: 'od 340 000 Kč' },
+  { model: 'GW 10', typ: 'Země-voda', vykon: '10 kW', cop: '5,2', vhodnost: 'Do 100 m²', cena: 'od 180 000 Kč' },
+  { model: 'GW 14', typ: 'Země-voda', vykon: '14 kW', cop: '5,4', vhodnost: '100–140 m²', cena: 'od 210 000 Kč' },
+  { model: 'GW 22', typ: 'Země-voda', vykon: '22 kW', cop: '5,5', vhodnost: '140–240 m²', cena: 'od 260 000 Kč' },
+  { model: 'WW 14', typ: 'Voda-voda', vykon: '14 kW', cop: '6,2', vhodnost: '100–150 m²', cena: 'od 200 000 Kč' },
+  { model: 'WW 22', typ: 'Voda-voda', vykon: '22 kW', cop: '6,5', vhodnost: '150–250 m²', cena: 'od 260 000 Kč' },
+  { model: 'WW 35', typ: 'Voda-voda', vykon: '35 kW', cop: '6,8', vhodnost: 'Komerční', cena: 'od 380 000 Kč' },
+];
+
+const barvy: Record<string, string> = {
+  'Vzduch-voda': 'bg-blue-50 text-blue-700',
+  'Země-voda': 'bg-green-50 text-green-700',
+  'Voda-voda': 'bg-cyan-50 text-cyan-700',
+};
+---
+
+<Layout title="Katalog tepelných čerpadel" description="Katalog tepelných čerpadel Master Therm — vzduch-voda, země-voda, voda-voda. Technické parametry a orientační ceny.">
+  <PageHero
+    title="Katalog tepelných čerpadel"
+    subtitle="Tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění. Vzduch-voda, země-voda, voda-voda."
+    breadcrumb={[{ label: 'Katalog', href: '/katalog' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="overflow-x-auto rounded-xl border border-gray-200">
+        <table class="w-full text-sm">
+          <thead class="bg-navy-700 text-white">
+            <tr>
+              <th class="text-left px-5 py-4 font-semibold">Model</th>
+              <th class="text-left px-5 py-4 font-semibold">Typ</th>
+              <th class="text-left px-5 py-4 font-semibold">Výkon</th>
+              <th class="text-left px-5 py-4 font-semibold">COP</th>
+              <th class="text-left px-5 py-4 font-semibold">Vhodnost</th>
+              <th class="text-left px-5 py-4 font-semibold">Cena (bez inst.)</th>
+              <th class="px-5 py-4"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {produkty.map((p, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-5 py-4 font-bold text-charcoal-900">{p.model}</td>
+                <td class="px-5 py-4">
+                  <span class={`inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold ${barvy[p.typ]}`}>{p.typ}</span>
+                </td>
+                <td class="px-5 py-4 text-charcoal-700">{p.vykon}</td>
+                <td class="px-5 py-4 font-semibold text-navy-700">{p.cop}</td>
+                <td class="px-5 py-4 text-charcoal-500">{p.vhodnost}</td>
+                <td class="px-5 py-4 font-semibold text-charcoal-800">{p.cena}</td>
+                <td class="px-5 py-4">
+                  <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-charcoal-400 mt-4">* Ceny jsou orientační a nezahrnují instalaci. Přesnou nabídku připravíme na základě poptávky.</p>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Nevíte, který model vybrat?</h2>
+      <p class="text-charcoal-500 mb-8">Pomůžeme vám vybrat správný výkon i typ — zdarma.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+    </div>
+  </section>
+</Layout>
