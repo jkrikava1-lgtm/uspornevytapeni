@@ -44,7 +44,7 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
         </div>
 
         <!-- Desktop: logo vlevo, nav vpravo ve dvou řádcích -->
-        <div class="hidden lg:flex" style="height:80px;overflow:hidden;">
+        <div class="hidden lg:flex" style="height:80px;">
 
           <!-- Logo: vyplňuje celou výšku -->
           <a href="/" class="flex items-center flex-shrink-0 pr-6 border-r border-gray-100">
@@ -66,42 +66,42 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
             <!-- Řádek 2: hlavní nav -->
             <nav class="flex items-center gap-1 h-10">
 
-          <div class="relative group">
+          <div class="relative" data-nav-group>
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
               Návrh řešení
-              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
-            <div class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-1">
+            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
               <a href="/navrh-reseni/novostavba" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Novostavba</a>
               <a href="/navrh-reseni/stavajici-dum" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Stávající dům</a>
               <a href="/navrh-reseni/velky-vykon" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Velký výkon</a>
             </div>
           </div>
 
-          <div class="relative group">
+          <div class="relative" data-nav-group>
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
               Tepelná čerpadla
-              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
-            <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-1">
+            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
               <a href="/tepelna-cerpadla/vzduch-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Vzduch – voda</a>
               <a href="/tepelna-cerpadla/zeme-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Země – voda</a>
               <a href="/tepelna-cerpadla/voda-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Voda – voda</a>
             </div>
           </div>
 
-          <div class="relative group">
+          <div class="relative" data-nav-group>
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
               Chytré funkce
-              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
-            <div class="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-1">
+            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
               <a href="/chytre-funkce/ovladani-systemu" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Ovládání systému</a>
               <a href="/chytre-funkce/online-ovladani" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Online ovládání</a>
               <a href="/chytre-funkce/inverter" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Technologie inverter</a>
@@ -111,14 +111,14 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           </div>
 
           <a href="/katalog" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Katalog</a>
-          <div class="relative group">
+          <div class="relative" data-nav-group>
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
               Cena
-              <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
-            <div class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-1">
+            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
               <a href="/cena" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Cena tepelného čerpadla</a>
               <a href="/cenova-kalkulace" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Cenová kalkulace</a>
             </div>
@@ -249,6 +249,30 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
       const header = document.getElementById('header');
       window.addEventListener('scroll', () => {
         header?.classList.toggle('shadow-md', window.scrollY > 10);
+      });
+
+      // Desktop nav dropdowns
+      document.querySelectorAll('[data-nav-group]').forEach(group => {
+        const dd = group.querySelector('[data-nav-dropdown]') as HTMLElement | null;
+        if (!dd) return;
+        let t: ReturnType<typeof setTimeout>;
+        const show = () => {
+          clearTimeout(t);
+          dd.style.opacity = '1';
+          dd.style.visibility = 'visible';
+          dd.style.pointerEvents = 'auto';
+        };
+        const hide = () => {
+          t = setTimeout(() => {
+            dd.style.opacity = '0';
+            dd.style.visibility = 'hidden';
+            dd.style.pointerEvents = 'none';
+          }, 150);
+        };
+        group.addEventListener('mouseenter', show);
+        group.addEventListener('mouseleave', hide);
+        dd.addEventListener('mouseenter', show);
+        dd.addEventListener('mouseleave', hide);
       });
     </script>
   </body>
