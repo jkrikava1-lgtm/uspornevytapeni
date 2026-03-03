@@ -157,8 +157,8 @@ import PageHero from '../components/PageHero.astro';
             <p id="ztrata-nevis-text" class="hidden text-sm text-charcoal-500 italic">Tepelná ztráta bude stanovena při konzultaci.</p>
           </div>
 
-          <!-- Vytápěná plocha -->
-          <div>
+          <!-- Vytápěná plocha – zobrazí se jen když neví tepelnou ztrátu -->
+          <div id="plocha-wrap" class="hidden">
             <label class="block text-sm font-semibold text-charcoal-800 mb-3">Vytápěná plocha</label>
             <div class="flex items-center gap-3">
               <input type="number" id="plocha-input" min="20" max="2000" placeholder="150"
@@ -317,19 +317,23 @@ import PageHero from '../components/PageHero.astro';
   const ztrataNevis = document.getElementById('ztrata-nevis') as HTMLInputElement;
   const ztrataWrap = document.getElementById('ztrata-wrap')!;
   const ztrataNevisText = document.getElementById('ztrata-nevis-text')!;
+  const plochWrap = document.getElementById('plocha-wrap')!;
   ztrataNevis?.addEventListener('change', () => {
     ztrataWrap.classList.toggle('hidden', ztrataNevis.checked);
     ztrataNevisText.classList.toggle('hidden', !ztrataNevis.checked);
+    plochWrap.classList.toggle('hidden', !ztrataNevis.checked);
   });
 
   document.getElementById('btn-step5')?.addEventListener('click', () => {
-    const plocha = (document.getElementById('plocha-input') as HTMLInputElement).value;
-    if (!plocha) {
-      (document.getElementById('plocha-input') as HTMLInputElement).focus();
-      return;
+    if (ztrataNevis.checked) {
+      const plocha = (document.getElementById('plocha-input') as HTMLInputElement).value;
+      if (!plocha) {
+        (document.getElementById('plocha-input') as HTMLInputElement).focus();
+        return;
+      }
+      answers['plocha'] = plocha + ' m²';
     }
     answers['tepelna_ztrata'] = ztrataNevis.checked ? 'Nevím' : slider.value + ' kW';
-    answers['plocha'] = plocha + ' m²';
     showStep(6);
   });
 
