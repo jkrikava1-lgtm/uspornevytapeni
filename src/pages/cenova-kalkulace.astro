@@ -118,9 +118,17 @@ import PageHero from '../components/PageHero.astro';
             <span class="choice-label">Země – voda, kolektor</span>
             <span class="choice-desc">Horizontální kolektor v zemi</span>
           </button>
-          <button class="choice-card sm:col-span-2" data-field="typ_tc" data-value="Nevím">
-            <span class="choice-label">Nevím – poraďte mi</span>
-            <span class="choice-desc">Doporučíme nejvhodnější variantu pro váš pozemek</span>
+        </div>
+        <div class="mt-4 pt-4 border-t border-gray-100">
+          <button class="choice-card choice-card--help w-full flex-row justify-start gap-4 py-4 px-5" data-field="typ_tc" data-value="Nevím">
+            <span class="w-9 h-9 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center flex-shrink-0 text-amber-500">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <span class="text-left">
+              <span class="choice-label block">Nevím – poraďte mi</span>
+              <span class="choice-desc">Doporučíme nejvhodnější variantu pro váš dům a pozemek</span>
+            </span>
+            <svg class="w-4 h-4 text-gray-300 ml-auto flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
       </div>
@@ -258,6 +266,12 @@ import PageHero from '../components/PageHero.astro';
   }
   .back-btn {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer border border-gray-200 hover:border-gray-300;
+  }
+  .choice-card--help {
+    @apply border-dashed border-amber-200 bg-amber-50/40 hover:border-amber-400 hover:bg-amber-50;
+  }
+  .choice-card--help.selected {
+    @apply border-amber-500 bg-amber-50;
   }
 </style>
 
