@@ -620,3 +620,87 @@ collections:
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
           - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+      - name: online_ovladani
+        label: Online ovládání
+        file: src/data/online-ovladani.json
+        format: json
+        fields:
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Aplikace — štítek", name: app_label, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+      - name: inverter
+        label: Technologie Inverter
+        file: src/data/inverter.json
+        format: json
+        fields:
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
+          - { label: "Statistiky — štítek", name: stats_label, widget: string }
+          - { label: "Statistika 1 — hodnota", name: stat1_hodnota, widget: string }
+          - { label: "Statistika 1 — popis", name: stat1_popis, widget: string }
+          - { label: "Statistika 2 — hodnota", name: stat2_hodnota, widget: string }
+          - { label: "Statistika 2 — popis", name: stat2_popis, widget: string }
+          - { label: "Statistika 3 — hodnota", name: stat3_hodnota, widget: string }
+          - { label: "Statistika 3 — popis", name: stat3_popis, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+      - name: desuperheater
+        label: Desuperheater
+        file: src/data/desuperheater.json
+        format: json
+        fields:
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "ROI — štítek", name: roi_label, widget: string }
+          - { label: "ROI — roční úspora (štítek)", name: roi_savings_label, widget: string }
+          - { label: "ROI — roční úspora", name: roi_savings, widget: string }
+          - { label: "ROI — letní měsíce (štítek)", name: roi_summer_label, widget: string }
+          - { label: "ROI — letní měsíce", name: roi_summer, widget: string }
+          - { label: "ROI — příplatek (štítek)", name: roi_cost_label, widget: string }
+          - { label: "ROI — příplatek", name: roi_cost, widget: string }
+          - { label: "ROI — návratnost (štítek)", name: roi_payback_label, widget: string }
+          - { label: "ROI — návratnost", name: roi_payback, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
