@@ -83,8 +83,18 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
             <a href="/cena" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Cena</a>
             <a href="/reference" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Reference</a>
             <a href="/dotace" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Dotace</a>
-            <a href="/o-nas" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">O nás</a>
-            <a href="/kontakty" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Kontakt</a>
+            <div class="relative group">
+              <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
+                Firma
+                <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div class="absolute top-full left-0 mt-1 w-44 bg-white rounded-lg shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-1">
+                <a href="/o-nas" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">O nás</a>
+                <a href="/kontakty" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Kontakt</a>
+              </div>
+            </div>
           </nav>
 
           <!-- CTA + mobile toggle -->
