@@ -26,25 +26,12 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-shadow duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Řádek 1: Logo + sekundární nav (O nás, Kontakt, Poptávka) -->
-        <div class="flex items-center justify-between h-16 lg:h-10 lg:border-b lg:border-gray-100">
-
-          <!-- Logo -->
-          <a href="/" class="flex items-center gap-3 flex-shrink-0">
-            <img src="/logo.png" alt="Úsporné vytápění s.r.o." class="h-10 lg:h-9 w-auto" />
+        <!-- Mobile layout -->
+        <div class="flex items-center justify-between h-16 lg:hidden">
+          <a href="/" class="flex items-center flex-shrink-0">
+            <img src="/logo.png" alt="Úsporné vytápění s.r.o." class="h-10 w-auto" />
           </a>
-
-          <!-- Sekundární nav (desktop) -->
-          <div class="hidden lg:flex items-center gap-1">
-            <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">O nás</a>
-            <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">Kontakt</a>
-            <a href="/poptavka" class="ml-2 inline-flex items-center px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold rounded-md transition-colors">
-              Nezávazná poptávka
-            </a>
-          </div>
-
-          <!-- Mobilní ovládání -->
-          <div class="flex items-center gap-2 lg:hidden">
+          <div class="flex items-center gap-2">
             <a href="/poptavka" class="inline-flex items-center px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
               Poptávka
             </a>
@@ -56,8 +43,25 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           </div>
         </div>
 
-        <!-- Řádek 2: Hlavní nav (pouze desktop) -->
-        <nav class="hidden lg:flex items-center gap-1 h-10">
+        <!-- Desktop grid: logo vlevo přes oba řádky, nav vpravo -->
+        <div class="hidden lg:grid lg:grid-cols-[auto_1fr]">
+
+          <!-- Logo: přes oba řádky -->
+          <a href="/" class="row-span-2 flex items-center pr-6 border-r border-gray-100 mr-2">
+            <img src="/logo.png" alt="Úsporné vytápění s.r.o." class="h-14 w-auto" />
+          </a>
+
+          <!-- Řádek 1: sekundární nav -->
+          <div class="flex items-center justify-end gap-1 pl-4 h-10 border-b border-gray-100">
+            <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">O nás</a>
+            <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">Kontakt</a>
+            <a href="/poptavka" class="ml-2 inline-flex items-center px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold rounded-md transition-colors">
+              Nezávazná poptávka
+            </a>
+          </div>
+
+          <!-- Řádek 2: hlavní nav -->
+          <nav class="flex items-center gap-1 pl-4 h-10">
 
           <div class="relative group">
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
@@ -118,7 +122,9 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           </div>
           <a href="/reference" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Reference</a>
           <a href="/dotace" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Dotace</a>
-        </nav>
+          </nav>
+
+        </div><!-- /desktop grid -->
 
       </div>
 
