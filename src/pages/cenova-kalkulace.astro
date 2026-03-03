@@ -295,20 +295,18 @@ import PageHero from '../components/PageHero.astro';
       card.closest('.step-panel')!.querySelectorAll('.choice-card').forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
 
-      // Auto-advance after short delay (skip step 5 if "Nevím" in step 4)
-      const nextStep = (field === 'typ_tc' && value === 'Nevím') ? 6 : currentStep + 1;
-      setTimeout(() => showStep(nextStep), 260);
+      // Auto-advance after short delay (redirect to poptavka if "Nevím" in step 4)
+      if (field === 'typ_tc' && value === 'Nevím') {
+        setTimeout(() => { window.location.href = '/poptavka'; }, 260);
+        return;
+      }
+      setTimeout(() => showStep(currentStep + 1), 260);
     });
   });
 
   // Back buttons
   document.querySelectorAll<HTMLButtonElement>('.back-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      let target = Number(btn.dataset.target);
-      // If going back from step 6 and user chose "Nevím" in step 4, skip step 5
-      if (target === 5 && answers['typ_tc'] === 'Nevím') target = 4;
-      showStep(target);
-    });
+    btn.addEventListener('click', () => showStep(Number(btn.dataset.target)));
   });
 
   // Step 5 slider
