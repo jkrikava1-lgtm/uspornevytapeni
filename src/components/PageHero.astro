@@ -8,9 +8,9 @@ const { title, subtitle, breadcrumb } = Astro.props;
 ---
 
 <section class="bg-navy-700 text-white pt-16 lg:pt-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 lg:py-9">
     {breadcrumb && (
-      <nav class="flex items-center gap-2 text-xs text-navy-300 mb-5">
+      <nav class="flex items-center gap-2 text-xs text-navy-300 mb-3">
         <a href="/" class="hover:text-white transition-colors">Úvod</a>
         {breadcrumb.map(item => (
           <>
@@ -23,8 +23,8 @@ const { title, subtitle, breadcrumb } = Astro.props;
       </nav>
     )}
     <div class="max-w-3xl">
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">{title}</h1>
-      {subtitle && <p class="text-lg text-navy-200 leading-relaxed">{subtitle}</p>}
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-2">{title}</h1>
+      {subtitle && <p class="text-base text-navy-200 leading-relaxed">{subtitle}</p>}
     </div>
   </div>
 </section>
