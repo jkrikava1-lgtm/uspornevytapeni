@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/novostavba.json';
 ---
 
 <Layout title="Úsporné vytápění novostavby" description="Navrhujeme optimální systém vytápění pro novostavby. Tepelné čerpadlo, podlahové vytápění, chlazení — vše v jednom projektu na míru.">
   <PageHero
-    title="Vytápění novostavby"
-    subtitle="Novostavba je ideální příležitost navrhnout vytápění správně od začátku. Ušetříte desítky tisíc korun ročně — a nebudete muset nic přestavovat."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Novostavba', href: '/navrh-reseni/novostavba' }]}
   />
 
@@ -14,19 +15,19 @@ import PageHero from '../../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Proč řešit vytápění hned</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Správný základ = dlouhodobá úspora</h2>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.why_label}</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.why_headline}</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>V novostavbě máte jedinečnou příležitost — od podlahy a rozvodů až po zdroj tepla — navrhnout vše jako celek. Tepelné čerpadlo + podlahové vytápění je dnes nejúspornější kombinace pro moderní domy.</p>
-            <p>Navrhujeme systémy, které splňují požadavky na nízkoenergetické a pasivní domy. Zároveň pomůžeme s dokumentací pro stavební povolení i dotace.</p>
+            <p>{data.why_text1}</p>
+            <p>{data.why_text2}</p>
           </div>
 
           <div class="mt-8 space-y-4">
             {[
-              { title: 'Kompletní projekt', desc: 'Tepelné čerpadlo, podlahové vytápění, TUV, chlazení — vše v jednom návrhu.' },
-              { title: 'Splnění norem', desc: 'Projekt splňuje požadavky PENB třídy A a podmínky pro dotace.' },
-              { title: 'Koordinace se stavbou', desc: 'Spolupracujeme s vaším architektem a stavební firmou.' },
-              { title: 'Fotovoltaika v plánu?', desc: 'Navrhujeme systémy připravené na spolupráci s FV panely.' },
+              { title: data.feat1_title, desc: data.feat1_desc },
+              { title: data.feat2_title, desc: data.feat2_desc },
+              { title: data.feat3_title, desc: data.feat3_desc },
+              { title: data.feat4_title, desc: data.feat4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -45,13 +46,13 @@ import PageHero from '../../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-5">Doporučené řešení pro novostavbu</h3>
+            <h3 class="font-bold text-charcoal-900 mb-5">{data.recommended_headline}</h3>
             <div class="space-y-4">
               {[
-                { cislo: '1', nazev: 'Tepelné čerpadlo vzduch-voda', popis: 'Primární zdroj tepla a chladu. Zajistí vytápění, chlazení i ohřev TUV.' },
-                { cislo: '2', nazev: 'Podlahové vytápění', popis: 'Nejkomfortnější a nejúspornější distribuce tepla v nízkoenergetickém domě.' },
-                { cislo: '3', nazev: 'Zásobník TUV', popis: '200–300 litrů — dostatek teplé vody pro celou rodinu.' },
-                { cislo: '4', nazev: 'Smart ovládání', popis: 'Regulace podle plánu, počasí, přítomnosti — automaticky nebo přes telefon.' },
+                { cislo: data.rec1_cislo, nazev: data.rec1_nazev, popis: data.rec1_popis },
+                { cislo: data.rec2_cislo, nazev: data.rec2_nazev, popis: data.rec2_popis },
+                { cislo: data.rec3_cislo, nazev: data.rec3_nazev, popis: data.rec3_popis },
+                { cislo: data.rec4_cislo, nazev: data.rec4_nazev, popis: data.rec4_popis },
               ].map(item => (
                 <div class="flex gap-4">
                   <div class="w-7 h-7 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0 text-white font-bold text-xs">{item.cislo}</div>
@@ -65,10 +66,10 @@ import PageHero from '../../components/PageHero.astro';
           </div>
 
           <div class="bg-navy-700 rounded-xl p-6 text-white">
-            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">Tip na dotaci</div>
-            <p class="text-sm text-navy-200 leading-relaxed">Pro novostavby je dostupná dotace až <strong class="text-white">150 000 Kč</strong> z programu Nová zelená úsporám Light. Pomůžeme s žádostí.</p>
+            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">{data.tip_label}</div>
+            <p class="text-sm text-navy-200 leading-relaxed">{data.tip_text}</p>
             <a href="/dotace" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-400 hover:text-brand-300 mt-3">
-              Zjistit více o dotacích
+              {data.tip_link}
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -81,9 +82,9 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Stavíte? Poradíme vám zdarma.</h2>
-      <p class="text-charcoal-500 mb-8">Čím dřív se ozvete, tím lépe — vytápění je lepší navrhnout před hrubou stavbou.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
 </Layout>

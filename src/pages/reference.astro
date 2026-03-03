@@ -1,24 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
-
-const reference = [
-  { lokalita: 'Praha', typ: 'Rodinný dům', system: 'Vzduch-voda Master Therm AQ 17', popis: 'Výměna plynového kotle za tepelné čerpadlo. Roční úspora přes 35 000 Kč.', rok: '2024' },
-  { lokalita: 'Brno', typ: 'Rodinný dům — novostavba', system: 'Vzduch-voda Master Therm AQ 22', popis: 'Kompletní systém vytápění novostavby — podlahové vytápění, TUV a chlazení.', rok: '2024' },
-  { lokalita: 'Jičín', typ: 'Starší rodinný dům', system: 'Země-voda Master Therm GW 14', popis: 'Rekonstrukce vytápění — výměna kotle na tuhá paliva. Vrty 2× 100 m.', rok: '2023' },
-  { lokalita: 'Liberec', typ: 'Bytový dům (8 bytů)', system: 'Kaskáda vzduch-voda 3× AQ 28', popis: 'Centrální tepelné čerpadlo pro bytový dům. Výkon 84 kW, roční úspora přes 120 000 Kč.', rok: '2023' },
-  { lokalita: 'Hradec Králové', typ: 'Rodinný dům', system: 'Vzduch-voda Master Therm AQ 17', popis: 'Výměna elektrického kotle. Kombinace s fotovoltaikou — minimální provozní náklady.', rok: '2023' },
-  { lokalita: 'Pardubice', typ: 'Komerční objekt', system: 'Voda-voda Master Therm WW 35', popis: 'Vytápění a chlazení administrativní budovy. Výkon 35 kW, COP 6,2.', rok: '2022' },
-  { lokalita: 'Mladá Boleslav', typ: 'Rodinný dům — novostavba', system: 'Vzduch-voda Master Therm AQ 14', popis: 'Nízkoenergetický dům A+. Tepelné čerpadlo pokrývá 100 % energetické potřeby objektu.', rok: '2022' },
-  { lokalita: 'Plzeň', typ: 'Starší rodinný dům', system: 'Vzduch-voda Master Therm AQ 22 Inverter', popis: 'Výměna plynového kotle. Inverterová technologie — tichý provoz, nízká spotřeba.', rok: '2022' },
-  { lokalita: 'České Budějovice', typ: 'Zemědělský objekt', system: 'Kaskáda země-voda 2× GW 22', popis: 'Vytápění provozní haly a zázemí. Zemní kolektory 3 000 m² na vlastním pozemku.', rok: '2021' },
-];
+import ref from '../data/reference.json';
 ---
 
 <Layout title="Reference" description="Realizované instalace tepelných čerpadel po celé ČR. Rodinné domy, bytové domy, komerční objekty.">
   <PageHero
-    title="Reference"
-    subtitle="Stovky spokojených klientů po celé České republice. Rodinné domy, bytové domy i komerční projekty."
+    title={ref.hero_title}
+    subtitle={ref.hero_subtitle}
     breadcrumb={[{ label: 'Reference', href: '/reference' }]}
   />
 
@@ -28,10 +17,10 @@ const reference = [
       <!-- Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
         {[
-          { num: '500+', label: 'Instalací ročně' },
-          { num: '15+', label: 'Let zkušeností' },
-          { num: '98 %', label: 'Spokojených klientů' },
-          { num: 'ČR', label: 'Celá republika' },
+          { num: ref.stat1_num, label: ref.stat1_label },
+          { num: ref.stat2_num, label: ref.stat2_label },
+          { num: ref.stat3_num, label: ref.stat3_label },
+          { num: ref.stat4_num, label: ref.stat4_label },
         ].map(item => (
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 text-center">
             <div class="text-3xl font-extrabold text-navy-700">{item.num}</div>
@@ -42,7 +31,7 @@ const reference = [
 
       <!-- Reference grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {reference.map(item => (
+        {ref.references.map(item => (
           <div class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
             <div class="bg-gray-100 h-44 flex items-center justify-center text-charcoal-300">
               <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,10 +55,10 @@ const reference = [
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete být dalším spokojeným klientem?</h2>
-      <p class="text-charcoal-500 mb-8">Konzultace je zdarma a bez závazků.</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{ref.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{ref.cta_text}</p>
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">
-        Odeslat poptávku
+        {ref.cta_button}
       </a>
     </div>
   </section>

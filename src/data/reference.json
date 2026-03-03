@@ -1,0 +1,26 @@
+{
+  "hero_title": "Reference",
+  "hero_subtitle": "Stovky spokojených klientů po celé České republice. Rodinné domy, bytové domy i komerční projekty.",
+  "stat1_num": "500+",
+  "stat1_label": "Instalací ročně",
+  "stat2_num": "15+",
+  "stat2_label": "Let zkušeností",
+  "stat3_num": "98 %",
+  "stat3_label": "Spokojených klientů",
+  "stat4_num": "ČR",
+  "stat4_label": "Celá republika",
+  "cta_headline": "Chcete být dalším spokojeným klientem?",
+  "cta_text": "Konzultace je zdarma a bez závazků.",
+  "cta_button": "Odeslat poptávku",
+  "references": [
+    { "lokalita": "Praha", "typ": "Rodinný dům", "system": "Vzduch-voda Master Therm AQ 17", "popis": "Výměna plynového kotle za tepelné čerpadlo. Roční úspora přes 35 000 Kč.", "rok": "2024" },
+    { "lokalita": "Brno", "typ": "Rodinný dům — novostavba", "system": "Vzduch-voda Master Therm AQ 22", "popis": "Kompletní systém vytápění novostavby — podlahové vytápění, TUV a chlazení.", "rok": "2024" },
+    { "lokalita": "Jičín", "typ": "Starší rodinný dům", "system": "Země-voda Master Therm GW 14", "popis": "Rekonstrukce vytápění — výměna kotle na tuhá paliva. Vrty 2× 100 m.", "rok": "2023" },
+    { "lokalita": "Liberec", "typ": "Bytový dům (8 bytů)", "system": "Kaskáda vzduch-voda 3× AQ 28", "popis": "Centrální tepelné čerpadlo pro bytový dům. Výkon 84 kW, roční úspora přes 120 000 Kč.", "rok": "2023" },
+    { "lokalita": "Hradec Králové", "typ": "Rodinný dům", "system": "Vzduch-voda Master Therm AQ 17", "popis": "Výměna elektrického kotle. Kombinace s fotovoltaikou — minimální provozní náklady.", "rok": "2023" },
+    { "lokalita": "Pardubice", "typ": "Komerční objekt", "system": "Voda-voda Master Therm WW 35", "popis": "Vytápění a chlazení administrativní budovy. Výkon 35 kW, COP 6,2.", "rok": "2022" },
+    { "lokalita": "Mladá Boleslav", "typ": "Rodinný dům — novostavba", "system": "Vzduch-voda Master Therm AQ 14", "popis": "Nízkoenergetický dům A+. Tepelné čerpadlo pokrývá 100 % energetické potřeby objektu.", "rok": "2022" },
+    { "lokalita": "Plzeň", "typ": "Starší rodinný dům", "system": "Vzduch-voda Master Therm AQ 22 Inverter", "popis": "Výměna plynového kotle. Inverterová technologie — tichý provoz, nízká spotřeba.", "rok": "2022" },
+    { "lokalita": "České Budějovice", "typ": "Zemědělský objekt", "system": "Kaskáda země-voda 2× GW 22", "popis": "Vytápění provozní haly a zázemí. Zemní kolektory 3 000 m² na vlastním pozemku.", "rok": "2021" }
+  ]
+}

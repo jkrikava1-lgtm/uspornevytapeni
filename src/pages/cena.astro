@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import data from '../data/cena.json';
 ---
 
 <Layout title="Cena tepelného čerpadla" description="Kolik stojí tepelné čerpadlo? Orientační ceny včetně instalace, faktory ovlivňující cenu a návratnost investice.">
   <PageHero
-    title="Cena tepelného čerpadla"
-    subtitle="Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat — přesnou nabídku připravíme zdarma."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Cena', href: '/cena' }]}
   />
 
@@ -17,24 +18,24 @@ import PageHero from '../components/PageHero.astro';
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {[
           {
-            typ: 'Vzduch – voda',
-            rozsah: '200 000 – 400 000 Kč',
-            poznamka: 'Včetně montáže, zásobníku TUV a uvedení do provozu',
-            body: ['Nejnižší pořizovací náklady', 'Snadná instalace', 'Vhodné pro 95 % domů'],
+            typ: data.price1_typ,
+            rozsah: data.price1_rozsah,
+            poznamka: data.price1_poznamka,
+            body: [data.price1_body1, data.price1_body2, data.price1_body3],
             highlight: true,
           },
           {
-            typ: 'Země – voda',
-            rozsah: '350 000 – 600 000 Kč',
-            poznamka: 'Cena zahrnuje vrty nebo zemní kolektor',
-            body: ['Nejvyšší účinnost', 'Nižší provozní náklady', 'Tichý provoz'],
+            typ: data.price2_typ,
+            rozsah: data.price2_rozsah,
+            poznamka: data.price2_poznamka,
+            body: [data.price2_body1, data.price2_body2, data.price2_body3],
             highlight: false,
           },
           {
-            typ: 'Voda – voda',
-            rozsah: '400 000 – 700 000 Kč',
-            poznamka: 'Závisí na hydrogeologickém průzkumu a studnách',
-            body: ['Maximální výkon', 'COP až 7', 'Pro náročné objekty'],
+            typ: data.price3_typ,
+            rozsah: data.price3_rozsah,
+            poznamka: data.price3_poznamka,
+            body: [data.price3_body1, data.price3_body2, data.price3_body3],
             highlight: false,
           },
         ].map(item => (
@@ -59,13 +60,13 @@ import PageHero from '../components/PageHero.astro';
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">Co ovlivňuje výslednou cenu?</h2>
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.factors_headline}</h2>
           <div class="space-y-4">
             {[
-              { title: 'Výkon čerpadla', desc: 'Závisí na ploše, zateplení a tepelných ztrátách objektu. Správné dimenzování = nižší provozní náklady.' },
-              { title: 'Stávající otopná soustava', desc: 'Zachování radiátorů vs. nové podlahové vytápění — každá varianta má jinou cenu a účinnost.' },
-              { title: 'Příprava TUV', desc: 'Zásobník teplé vody, desuperheater nebo průtokový ohřev — různé investice s různou návratností.' },
-              { title: 'Elektroinstalace', desc: 'Jistič, HDO tarif, případně posílení přípojky. Zajistíme vše koordinovaně.' },
+              { title: data.factor1_title, desc: data.factor1_desc },
+              { title: data.factor2_title, desc: data.factor2_desc },
+              { title: data.factor3_title, desc: data.factor3_desc },
+              { title: data.factor4_title, desc: data.factor4_desc },
             ].map(item => (
               <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
                 <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
@@ -83,35 +84,35 @@ import PageHero from '../components/PageHero.astro';
         </div>
 
         <div class="bg-navy-700 rounded-2xl p-8 text-white">
-          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">Návratnost investice</div>
-          <h3 class="text-xl font-extrabold mb-6">Kdy se to zaplatí?</h3>
+          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.roi_label}</div>
+          <h3 class="text-xl font-extrabold mb-6">{data.roi_headline}</h3>
           <div class="space-y-5">
             <div>
               <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">Průměrná roční úspora</span>
-                <span class="font-bold">30 000 – 50 000 Kč</span>
+                <span class="text-navy-300">{data.roi_annual_savings_label}</span>
+                <span class="font-bold">{data.roi_annual_savings}</span>
               </div>
               <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">Pořizovací cena (vzduch-voda)</span>
-                <span class="font-bold">~280 000 Kč</span>
+                <span class="text-navy-300">{data.roi_price_label}</span>
+                <span class="font-bold">{data.roi_price}</span>
               </div>
               <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">Dotace Nová zelená úsporám</span>
-                <span class="font-bold text-brand-400">- 200 000 Kč</span>
+                <span class="text-navy-300">{data.roi_dotace_label}</span>
+                <span class="font-bold text-brand-400">{data.roi_dotace}</span>
               </div>
               <div class="border-t border-navy-600 pt-3 mt-3">
                 <div class="flex justify-between text-sm">
-                  <span class="text-navy-300">Čistá investice</span>
-                  <span class="font-bold text-white">~80 000 Kč</span>
+                  <span class="text-navy-300">{data.roi_net_label}</span>
+                  <span class="font-bold text-white">{data.roi_net}</span>
                 </div>
                 <div class="flex justify-between text-sm mt-1">
-                  <span class="text-navy-300">Návratnost</span>
-                  <span class="font-extrabold text-brand-400 text-lg">2 – 3 roky</span>
+                  <span class="text-navy-300">{data.roi_payback_label}</span>
+                  <span class="font-extrabold text-brand-400 text-lg">{data.roi_payback}</span>
                 </div>
               </div>
             </div>
           </div>
-          <p class="text-xs text-navy-400 mt-6">* Orientační výpočet pro dům 150 m², ceny energií 2024</p>
+          <p class="text-xs text-navy-400 mt-6">{data.roi_footnote}</p>
         </div>
       </div>
     </div>
@@ -119,10 +120,10 @@ import PageHero from '../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete přesnou nabídku?</h2>
-      <p class="text-charcoal-500 mb-8">Připravíme individuální kalkulaci zdarma — včetně odhadu provozních nákladů a dotačních možností.</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">
-        Chci bezplatnou kalkulaci
+        {data.cta_button}
       </a>
     </div>
   </section>

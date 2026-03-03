@@ -1,0 +1,21 @@
+{
+  "hero_title": "Katalog tepelných čerpadel",
+  "hero_subtitle": "Tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění. Vzduch-voda, země-voda, voda-voda.",
+  "table_footnote": "* Ceny jsou orientační a nezahrnují instalaci. Přesnou nabídku připravíme na základě poptávky.",
+  "cta_headline": "Nevíte, který model vybrat?",
+  "cta_text": "Pomůžeme vám vybrat správný výkon i typ — zdarma.",
+  "cta_button": "Odeslat poptávku",
+  "produkty": [
+    { "model": "AQ 8 Inverter", "typ": "Vzduch-voda", "vykon": "8 kW", "cop": "4,8", "vhodnost": "Do 80 m²", "cena": "od 180 000 Kč" },
+    { "model": "AQ 14 Inverter", "typ": "Vzduch-voda", "vykon": "14 kW", "cop": "4,6", "vhodnost": "80–130 m²", "cena": "od 220 000 Kč" },
+    { "model": "AQ 17 Inverter", "typ": "Vzduch-voda", "vykon": "17 kW", "cop": "4,5", "vhodnost": "130–160 m²", "cena": "od 250 000 Kč" },
+    { "model": "AQ 22 Inverter", "typ": "Vzduch-voda", "vykon": "22 kW", "cop": "4,3", "vhodnost": "160–220 m²", "cena": "od 290 000 Kč" },
+    { "model": "AQ 28 Inverter", "typ": "Vzduch-voda", "vykon": "28 kW", "cop": "4,2", "vhodnost": "220–300 m²", "cena": "od 340 000 Kč" },
+    { "model": "GW 10", "typ": "Země-voda", "vykon": "10 kW", "cop": "5,2", "vhodnost": "Do 100 m²", "cena": "od 180 000 Kč" },
+    { "model": "GW 14", "typ": "Země-voda", "vykon": "14 kW", "cop": "5,4", "vhodnost": "100–140 m²", "cena": "od 210 000 Kč" },
+    { "model": "GW 22", "typ": "Země-voda", "vykon": "22 kW", "cop": "5,5", "vhodnost": "140–240 m²", "cena": "od 260 000 Kč" },
+    { "model": "WW 14", "typ": "Voda-voda", "vykon": "14 kW", "cop": "6,2", "vhodnost": "100–150 m²", "cena": "od 200 000 Kč" },
+    { "model": "WW 22", "typ": "Voda-voda", "vykon": "22 kW", "cop": "6,5", "vhodnost": "150–250 m²", "cena": "od 260 000 Kč" },
+    { "model": "WW 35", "typ": "Voda-voda", "vykon": "35 kW", "cop": "6,8", "vhodnost": "Komerční", "cena": "od 380 000 Kč" }
+  ]
+}

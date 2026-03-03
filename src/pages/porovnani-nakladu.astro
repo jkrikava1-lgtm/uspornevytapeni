@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import data from '../data/porovnani-nakladu.json';
 ---
 
 <Layout title="Porovnání nákladů na vytápění" description="Srovnání ročních nákladů na vytápění — tepelné čerpadlo vs. plynový kotel vs. elektrokotel vs. kotel na tuhá paliva.">
   <PageHero
-    title="Porovnání nákladů na vytápění"
-    subtitle="Kolik skutečně stojí různé způsoby vytápění? Objektivní srovnání podle reálných cen energií."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Porovnání nákladů', href: '/porovnani-nakladu' }]}
   />
 
@@ -17,16 +18,16 @@ import PageHero from '../components/PageHero.astro';
         <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
-        <p class="text-sm text-amber-800">Výpočty jsou orientační pro rodinný dům 150 m² s průměrnou potřebou tepla 15 000 kWh/rok. Ceny energií dle průměru roku 2024.</p>
+        <p class="text-sm text-amber-800">{data.note_text}</p>
       </div>
 
       <!-- Hlavní srovnání -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         {[
-          { zdroj: 'Tepelné čerpadlo', icon: '⚡', rocni: '12 000–18 000 Kč', poznamka: 'Elektřina, tarif D57d', highlight: true, uspory: null },
-          { zdroj: 'Plynový kotel', icon: '🔥', rocni: '40 000–55 000 Kč', poznamka: 'Zemní plyn, cena 2024', highlight: false, uspory: '~35 000 Kč/rok' },
-          { zdroj: 'Elektrokotel', icon: '🔌', rocni: '55 000–80 000 Kč', poznamka: 'Elektřina, tarif D02d', highlight: false, uspory: '~50 000 Kč/rok' },
-          { zdroj: 'Kotel na pelety', icon: '🪵', rocni: '25 000–40 000 Kč', poznamka: 'Pelety, cena 2024', highlight: false, uspory: '~20 000 Kč/rok' },
+          { zdroj: data.source1_zdroj, icon: '⚡', rocni: data.source1_rocni, poznamka: data.source1_poznamka, highlight: true, uspory: null },
+          { zdroj: data.source2_zdroj, icon: '🔥', rocni: data.source2_rocni, poznamka: data.source2_poznamka, highlight: false, uspory: data.source2_uspory },
+          { zdroj: data.source3_zdroj, icon: '🔌', rocni: data.source3_rocni, poznamka: data.source3_poznamka, highlight: false, uspory: data.source3_uspory },
+          { zdroj: data.source4_zdroj, icon: '🪵', rocni: data.source4_rocni, poznamka: data.source4_poznamka, highlight: false, uspory: data.source4_uspory },
         ].map(item => (
           <div class={`rounded-xl p-7 border-2 ${item.highlight ? 'border-brand-500 bg-brand-50' : 'border-gray-200 bg-white'}`}>
             {item.highlight && <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">Nejlevnější provoz</div>}
@@ -45,7 +46,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- Vizuální graf -->
       <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-16">
-        <h2 class="text-xl font-extrabold text-charcoal-900 mb-8">Roční náklady — vizuální srovnání</h2>
+        <h2 class="text-xl font-extrabold text-charcoal-900 mb-8">{data.chart_headline}</h2>
         <div class="space-y-5">
           {[
             { label: 'Tepelné čerpadlo', hodnota: 15000, max: 70000, barva: 'bg-brand-500' },
@@ -69,13 +70,13 @@ import PageHero from '../components/PageHero.astro';
       <!-- 10letý výhled -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div class="bg-navy-700 rounded-2xl p-8 text-white">
-          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">10letý výhled</div>
-          <h3 class="text-xl font-extrabold mb-6">Celkové náklady za 10 let</h3>
+          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.tenyear_label}</div>
+          <h3 class="text-xl font-extrabold mb-6">{data.tenyear_headline}</h3>
           <div class="space-y-3">
             {[
-              { label: 'Tepelné čerpadlo (provoz + pořízení)', hodnota: '430 000 Kč', highlight: true },
-              { label: 'Plynový kotel (provoz + pořízení)', hodnota: '620 000 Kč', highlight: false },
-              { label: 'Elektrokotel (provoz + pořízení)', hodnota: '750 000 Kč', highlight: false },
+              { label: data.tenyear1_label, hodnota: data.tenyear1_hodnota, highlight: true },
+              { label: data.tenyear2_label, hodnota: data.tenyear2_hodnota, highlight: false },
+              { label: data.tenyear3_label, hodnota: data.tenyear3_hodnota, highlight: false },
             ].map(item => (
               <div class={`flex justify-between p-3 rounded-lg ${item.highlight ? 'bg-brand-500' : 'bg-navy-600'}`}>
                 <span class="text-sm text-navy-100">{item.label}</span>
@@ -83,17 +84,17 @@ import PageHero from '../components/PageHero.astro';
               </div>
             ))}
           </div>
-          <p class="text-xs text-navy-400 mt-4">* Včetně dotace 200 000 Kč u tepelného čerpadla</p>
+          <p class="text-xs text-navy-400 mt-4">{data.tenyear_footnote}</p>
         </div>
 
         <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-          <h3 class="text-xl font-extrabold text-charcoal-900 mb-4">Faktory ovlivňující úsporu</h3>
+          <h3 class="text-xl font-extrabold text-charcoal-900 mb-4">{data.factors_headline}</h3>
           <div class="space-y-4">
             {[
-              { title: 'Ceny energií', desc: 'Při růstu cen plynu a elektřiny se výhoda tepelného čerpadla dále prohlubuje.' },
-              { title: 'Zateplení domu', desc: 'Lépe zateplený dům = nižší spotřeba = větší úspora v absolutních číslech.' },
-              { title: 'Tarif HDO', desc: 'Speciální tarif pro tepelná čerpadla výrazně snižuje cenu elektřiny.' },
-              { title: 'Fotovoltaika', desc: 'Kombinace TČ s FVE může snížit provozní náklady až na minimum.' },
+              { title: data.factor1_title, desc: data.factor1_desc },
+              { title: data.factor2_title, desc: data.factor2_desc },
+              { title: data.factor3_title, desc: data.factor3_desc },
+              { title: data.factor4_title, desc: data.factor4_desc },
             ].map(item => (
               <div class="flex gap-3">
                 <svg class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,9 +114,9 @@ import PageHero from '../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete výpočet pro váš dům?</h2>
-      <p class="text-charcoal-500 mb-8">Připravíme individuální srovnání nákladů zdarma — na základě skutečných parametrů vašeho domu.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Chci srovnání pro můj dům</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
 </Layout>

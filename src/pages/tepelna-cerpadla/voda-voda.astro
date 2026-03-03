@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/voda-voda.json';
 ---
 
 <Layout title="Tepelná čerpadla voda-voda" description="Tepelná čerpadla voda-voda Master Therm. Maximální výkon a účinnost COP až 7 pro objekty s přístupem k podzemní vodě.">
   <PageHero
-    title="Tepelná čerpadla voda – voda"
-    subtitle="Nejvyšší účinnost ze všech tepelných čerpadel. COP až 7 — pro velké objekty nebo tam, kde je přístup k podzemní vodě."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Tepelná čerpadla', href: '/tepelna-cerpadla/voda-voda' }, { label: 'Voda – voda', href: '/tepelna-cerpadla/voda-voda' }]}
   />
 
@@ -14,19 +15,19 @@ import PageHero from '../../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Jak to funguje</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Nejvyšší možná účinnost — energie z podzemní vody</h2>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.how_label}</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.how_headline}</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>Tepelné čerpadlo voda-voda využívá podzemní vodu jako zdroj tepelné energie. Voda má celoročně stabilní teplotu 8–12 °C — to umožňuje dosáhnout topného faktoru COP až 7.</p>
-            <p>Systém vyžaduje dvě studny: jímací (odtud čerpáme vodu) a vsakovací (vodu po odebrání energie vracíme zpět). Podmínkou je hydrogeologický průzkum a dostatečná vydatnost zdroje.</p>
+            <p>{data.how_text1}</p>
+            <p>{data.how_text2}</p>
           </div>
 
           <div class="mt-8 space-y-4">
             {[
-              { title: 'COP až 7,0', desc: 'Absolutně nejvyšší topný faktor — každá kWh elektřiny přinese 7 kWh tepla.' },
-              { title: 'Pro velké objekty', desc: 'Komerční budovy, průmysl, bytové domy. Výkon od 20 do 200+ kW.' },
-              { title: 'Tichý a kompaktní', desc: 'Celá technika uvnitř budovy. Venku pouze studny.' },
-              { title: 'Celoroční stabilita', desc: 'Teplota podzemní vody je konstantní — výkon nezávisí na počasí.' },
+              { title: data.feat1_title, desc: data.feat1_desc },
+              { title: data.feat2_title, desc: data.feat2_desc },
+              { title: data.feat3_title, desc: data.feat3_desc },
+              { title: data.feat4_title, desc: data.feat4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -45,15 +46,15 @@ import PageHero from '../../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">Technické parametry</div>
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.params_label}</div>
             <div class="space-y-3">
               {[
-                { label: 'Výkonový rozsah', value: '10 – 200+ kW' },
-                { label: 'Topný faktor COP', value: '5,5 – 7,0' },
-                { label: 'Teplota zdroje (voda)', value: '+5 až +15 °C' },
-                { label: 'Max. teplota výstupu', value: '65 °C' },
-                { label: 'Hlučnost', value: '< 40 dB(A)' },
-                { label: 'Životnost', value: '25–30 let' },
+                { label: data.param1_label, value: data.param1_value },
+                { label: data.param2_label, value: data.param2_value },
+                { label: data.param3_label, value: data.param3_value },
+                { label: data.param4_label, value: data.param4_value },
+                { label: data.param5_label, value: data.param5_value },
+                { label: data.param6_label, value: data.param6_value },
               ].map(item => (
                 <div class="flex justify-between py-2 border-b border-navy-600 last:border-0">
                   <span class="text-sm text-navy-300">{item.label}</span>
@@ -69,16 +70,16 @@ import PageHero from '../../components/PageHero.astro';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
               <div>
-                <h4 class="font-bold text-amber-900 text-sm mb-1">Vyžaduje průzkum</h4>
-                <p class="text-xs text-amber-700 leading-relaxed">Před instalací je nutný hydrogeologický průzkum. Zajistíme ho pro vás — včetně veškerých povolení.</p>
+                <h4 class="font-bold text-amber-900 text-sm mb-1">{data.warning_title}</h4>
+                <p class="text-xs text-amber-700 leading-relaxed">{data.warning_text}</p>
               </div>
             </div>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-2">Orientační cena</h3>
-            <div class="text-2xl font-extrabold text-navy-700 mb-1">400 000 – 700 000+ Kč</div>
-            <p class="text-xs text-charcoal-500">Závisí na výkonu a hydrogeologických podmínkách</p>
+            <h3 class="font-bold text-charcoal-900 mb-2">{data.price_headline}</h3>
+            <div class="text-2xl font-extrabold text-navy-700 mb-1">{data.price_value}</div>
+            <p class="text-xs text-charcoal-500">{data.price_note}</p>
           </div>
         </div>
       </div>
@@ -87,9 +88,9 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Má váš pozemek vhodné podmínky?</h2>
-      <p class="text-charcoal-500 mb-8">Kontaktujte nás — posoudíme lokalitu a připravíme orientační návrh zdarma.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
 </Layout>

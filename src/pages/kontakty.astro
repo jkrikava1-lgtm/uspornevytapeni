@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import site from '../data/site.json';
+import data from '../data/kontakty.json';
 ---
 
 <Layout title="Kontakt" description="Kontaktujte Úsporné vytápění s.r.o. Telefon, e-mail, adresa. Jsme v Jičíně a pracujeme po celé ČR.">
   <PageHero
-    title="Kontakt"
-    subtitle="Jsme v Jičíně, pracujeme po celé České republice."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Kontakt', href: '/kontakty' }]}
   />
 
@@ -16,7 +18,7 @@ import PageHero from '../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-            <h2 class="text-xl font-bold text-charcoal-900 mb-6">Úsporné vytápění s.r.o.</h2>
+            <h2 class="text-xl font-bold text-charcoal-900 mb-6">{site.name}</h2>
             <div class="space-y-5">
               <div class="flex gap-4">
                 <div class="w-10 h-10 bg-navy-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -26,7 +28,7 @@ import PageHero from '../components/PageHero.astro';
                 </div>
                 <div>
                   <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">Telefon</div>
-                  <a href="tel:+420777724573" class="text-lg font-bold text-charcoal-900 hover:text-brand-500 transition-colors">+420 777 724 573</a>
+                  <a href={site.phone_href} class="text-lg font-bold text-charcoal-900 hover:text-brand-500 transition-colors">{site.phone}</a>
                 </div>
               </div>
               <div class="flex gap-4">
@@ -37,7 +39,7 @@ import PageHero from '../components/PageHero.astro';
                 </div>
                 <div>
                   <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">E-mail</div>
-                  <a href="mailto:info@uspornevytapeni.cz" class="text-lg font-bold text-charcoal-900 hover:text-brand-500 transition-colors">info@uspornevytapeni.cz</a>
+                  <a href={`mailto:${site.email}`} class="text-lg font-bold text-charcoal-900 hover:text-brand-500 transition-colors">{site.email}</a>
                 </div>
               </div>
               <div class="flex gap-4">
@@ -49,17 +51,17 @@ import PageHero from '../components/PageHero.astro';
                 </div>
                 <div>
                   <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">Adresa</div>
-                  <div class="font-bold text-charcoal-900">Dělnická 395<br>506 01 Jičín</div>
+                  <div class="font-bold text-charcoal-900">{site.address_line1}<br>{site.address_line2}</div>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-3">Fakturační údaje</h3>
+            <h3 class="font-bold text-charcoal-900 mb-3">{data.billing_headline}</h3>
             <div class="text-sm text-charcoal-600 space-y-1">
-              <p><span class="font-semibold">Obchodní název:</span> Úsporné vytápění s.r.o.</p>
-              <p><span class="font-semibold">Sídlo:</span> Dělnická 395, 506 01 Jičín</p>
+              <p><span class="font-semibold">{data.billing_name_label}</span> {data.billing_name}</p>
+              <p><span class="font-semibold">{data.billing_address_label}</span> {data.billing_address}</p>
             </div>
           </div>
         </div>

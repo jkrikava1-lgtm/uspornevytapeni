@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/velky-vykon.json';
 ---
 
 <Layout title="Tepelné čerpadlo velkého výkonu" description="Kaskádové systémy tepelných čerpadel pro bytové domy, komerční objekty a průmysl. Výkon 20–200 kW a více.">
   <PageHero
-    title="Tepelné čerpadlo velkého výkonu"
-    subtitle="Pro bytové domy, komerční budovy i průmysl. Navrhujeme kaskádové systémy s výkonem od 20 kW až po stovky kilowatt."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/velky-vykon' }, { label: 'Velký výkon', href: '/navrh-reseni/velky-vykon' }]}
   />
 
@@ -14,18 +15,18 @@ import PageHero from '../../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Pro náročné projekty</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Kaskádové systémy bez kompromisů</h2>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>Pro větší objekty navrhujeme kaskádové systémy — kombinaci více jednotek, které pracují synchronně. Výhodou je redundance (při výpadku jedné jednotky ostatní pokryjí provoz) a možnost postupného rozšiřování.</p>
-            <p>Každý projekt začíná důkladnou energetickou analýzou. Navrhneme řešení přesně na míru vašemu objektu — s ohledem na výkon, provoz, servis a náklady.</p>
+            <p>{data.intro_text1}</p>
+            <p>{data.intro_text2}</p>
           </div>
 
           <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { typ: 'Bytové domy', popis: '8–50 bytů, centrální tepelné čerpadlo nebo distribuovaný systém.' },
-              { typ: 'Komerční budovy', popis: 'Kanceláře, hotely, obchodní centra — vytápění i chlazení.' },
-              { typ: 'Průmysl', popis: 'Výrobní haly, sklady, zemědělství — vysoký výkon za nízké náklady.' },
+              { typ: data.segment1_typ, popis: data.segment1_popis },
+              { typ: data.segment2_typ, popis: data.segment2_popis },
+              { typ: data.segment3_typ, popis: data.segment3_popis },
             ].map(item => (
               <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
                 <h4 class="font-bold text-charcoal-900 text-sm mb-2">{item.typ}</h4>
@@ -37,15 +38,15 @@ import PageHero from '../../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">Parametry systémů</div>
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.params_label}</div>
             <div class="space-y-3">
               {[
-                { label: 'Výkonový rozsah', value: '20 – 500+ kW' },
-                { label: 'Počet jednotek v kaskádě', value: '2 – 10+' },
-                { label: 'Topný faktor COP', value: '3,5 – 5,5' },
-                { label: 'Redundance', value: 'Ano (n+1)' },
-                { label: 'Vzdálený monitoring', value: 'Ano — online' },
-                { label: 'Servisní smlouva', value: 'K dispozici' },
+                { label: data.param1_label, value: data.param1_value },
+                { label: data.param2_label, value: data.param2_value },
+                { label: data.param3_label, value: data.param3_value },
+                { label: data.param4_label, value: data.param4_value },
+                { label: data.param5_label, value: data.param5_value },
+                { label: data.param6_label, value: data.param6_value },
               ].map(item => (
                 <div class="flex justify-between py-2 border-b border-navy-600 last:border-0">
                   <span class="text-sm text-navy-300">{item.label}</span>
@@ -56,9 +57,9 @@ import PageHero from '../../components/PageHero.astro';
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-3">Co zahrnuje naše nabídka</h3>
+            <h3 class="font-bold text-charcoal-900 mb-3">{data.offer_headline}</h3>
             <ul class="space-y-2">
-              {['Energetická analýza objektu', 'Výpočet optimálního výkonu', 'Návrh kaskádového systému', 'Koordinace s TZB projektem', 'Instalace a uvedení do provozu', 'Servisní smlouva'].map(item => (
+              {[data.offer_item1, data.offer_item2, data.offer_item3, data.offer_item4, data.offer_item5, data.offer_item6].map(item => (
                 <li class="flex items-center gap-2 text-sm text-charcoal-600">
                   <svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
@@ -75,11 +76,11 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Máte velký projekt?</h2>
-      <p class="text-charcoal-500 mb-8">Kontaktujte nás — připravíme technickou studii a ekonomický výpočet zdarma.</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
-        <a href="tel:+420777724573" class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-gray-200 hover:border-gray-400 text-charcoal-700 font-semibold rounded-md transition-colors">+420 777 724 573</a>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button1}</a>
+        <a href={`tel:${data.cta_button2.replace(/\s/g, '')}`} class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-gray-200 hover:border-gray-400 text-charcoal-700 font-semibold rounded-md transition-colors">{data.cta_button2}</a>
       </div>
     </div>
   </section>

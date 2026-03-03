@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/ovladani-systemu.json';
 ---
 
 <Layout title="Ovládání systému s tepelným čerpadlem" description="Jak se ovládá systém s tepelným čerpadlem? Regulace, programování, ekvitermní křivka, zónové vytápění.">
   <PageHero
-    title="Ovládání systému"
-    subtitle="Moderní tepelné čerpadlo řídí vytápění automaticky. Vy nastavíte požadavky — zbytek obstará systém sám."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce/ovladani-systemu' }, { label: 'Ovládání systému', href: '/chytre-funkce/ovladani-systemu' }]}
   />
 
@@ -14,19 +15,19 @@ import PageHero from '../../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Inteligentní regulace</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Systém, který myslí za vás</h2>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>Tepelné čerpadlo Master Therm je vybaveno vlastní řídicí jednotkou, která průběžně vyhodnocuje venkovní teplotu, požadovanou teplotu v místnostech a aktuální stav systému — a automaticky přizpůsobuje výkon.</p>
-            <p>Výsledkem je optimální komfort při minimální spotřebě elektřiny. Systém sám pozná, kdy přitlačit a kdy zvolnit.</p>
+            <p>{data.intro_text1}</p>
+            <p>{data.intro_text2}</p>
           </div>
 
           <div class="mt-8 space-y-4">
             {[
-              { title: 'Ekvitermní regulace', desc: 'Teplota topné vody se automaticky mění podle venkovní teploty — žádné přetápění, žádné mráz.' },
-              { title: 'Zónové vytápění', desc: 'Různé teploty v různých místnostech nebo patrech — každá zóna se řídí samostatně.' },
-              { title: 'Týdenní program', desc: 'Nižší teplota přes den nebo v noci, vyšší ráno — nastavíte jednou a zapomenete.' },
-              { title: 'Dohled na spotřebu', desc: 'Řídicí jednotka zaznamenává spotřebu a výkon — vždy víte, co se děje.' },
+              { title: data.feat1_title, desc: data.feat1_desc },
+              { title: data.feat2_title, desc: data.feat2_desc },
+              { title: data.feat3_title, desc: data.feat3_desc },
+              { title: data.feat4_title, desc: data.feat4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -45,11 +46,11 @@ import PageHero from '../../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-5">Co umí řídicí jednotka</div>
+            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-5">{data.functions_label}</div>
             <div class="grid grid-cols-2 gap-3">
               {[
-                'Ekvitermní regulace', 'Zónové vytápění', 'Ohřev TUV', 'Chlazení',
-                'Týdenní program', 'Úsporný režim', 'Protimrazová ochrana', 'HDO tarif',
+                data.function1, data.function2, data.function3, data.function4,
+                data.function5, data.function6, data.function7, data.function8,
               ].map(item => (
                 <div class="flex items-center gap-2 bg-navy-600 rounded-lg px-3 py-2">
                   <div class="w-1.5 h-1.5 bg-brand-400 rounded-full flex-shrink-0"></div>
@@ -60,10 +61,10 @@ import PageHero from '../../components/PageHero.astro';
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-3">Ovládací panel</h3>
-            <p class="text-sm text-charcoal-500 leading-relaxed">Každé tepelné čerpadlo Master Therm je dodáváno s intuitivním dotykovým displejem. Vše nastavíte přímo na jednotce nebo přes mobilní aplikaci.</p>
+            <h3 class="font-bold text-charcoal-900 mb-3">{data.panel_headline}</h3>
+            <p class="text-sm text-charcoal-500 leading-relaxed">{data.panel_text}</p>
             <a href="/chytre-funkce/online-ovladani" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 mt-3">
-              Online ovládání přes internet
+              {data.panel_link}
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -76,9 +77,9 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete systém, který pracuje za vás?</h2>
-      <p class="text-charcoal-500 mb-8">Konzultace je zdarma.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
 </Layout>

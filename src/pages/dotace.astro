@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import data from '../data/dotace.json';
 ---
 
 <Layout title="Dotace na tepelné čerpadlo" description="Jak získat dotaci až 200 000 Kč na tepelné čerpadlo. Nová zelená úsporám, podmínky, postup žádosti. Pomůžeme vám od začátku do konce.">
   <PageHero
-    title="Dotace na tepelné čerpadlo"
-    subtitle="Stát přispívá na výměnu zastaralého zdroje tepla. Dotace až 200 000 Kč — pomůžeme vám celý proces zvládnout bez stresu."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Dotace', href: '/dotace' }]}
   />
 
@@ -16,9 +17,9 @@ import PageHero from '../components/PageHero.astro';
       <!-- Přehled dotací -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {[
-          { program: 'Nová zelená úsporám', castka: 'až 200 000 Kč', desc: 'Hlavní dotační program pro rodinné domy. Pokrývá tepelné čerpadlo vzduch-voda i země-voda.' },
-          { program: 'OPŽP — Kotlíkové dotace', castka: 'až 180 000 Kč', desc: 'Pro domácnosti s nízkými příjmy. Výměna kotle za tepelné čerpadlo nebo jiný ekologický zdroj.' },
-          { program: 'Kombinace programů', castka: 'až 380 000 Kč', desc: 'Za určitých podmínek lze čerpat z více programů najednou. Pomůžeme zjistit nárok.' },
+          { program: data.program1_name, castka: data.program1_castka, desc: data.program1_desc },
+          { program: data.program2_name, castka: data.program2_castka, desc: data.program2_desc },
+          { program: data.program3_name, castka: data.program3_castka, desc: data.program3_desc },
         ].map(item => (
           <div class="bg-white rounded-xl p-7 border-2 border-gray-200 hover:border-brand-300 transition-colors">
             <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">{item.program}</div>
@@ -30,13 +31,13 @@ import PageHero from '../components/PageHero.astro';
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">Podmínky pro získání dotace</h2>
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.conditions_headline}</h2>
           <div class="space-y-4">
             {[
-              { title: 'Rodinný nebo bytový dům', desc: 'Objekt musí být v ČR a sloužit k trvalému bydlení.' },
-              { title: 'Výměna za zastaralý zdroj', desc: 'Nahrazujete kotel na fosilní paliva, elektrický kotel nebo jinou neefektivní technologii.' },
-              { title: 'Certifikované zařízení', desc: 'Tepelné čerpadlo musí být na Seznamu výrobků a technologií (SVT) — vše, co dodáváme, splňuje podmínky.' },
-              { title: 'Odborná instalace', desc: 'Instalaci musí provést certifikovaná firma — to jsme my.' },
+              { title: data.condition1_title, desc: data.condition1_desc },
+              { title: data.condition2_title, desc: data.condition2_desc },
+              { title: data.condition3_title, desc: data.condition3_desc },
+              { title: data.condition4_title, desc: data.condition4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -54,13 +55,13 @@ import PageHero from '../components/PageHero.astro';
         </div>
 
         <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">Jak probíhá proces</h2>
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.process_headline}</h2>
           <div class="space-y-5">
             {[
-              { krok: '1', title: 'Zjistíme váš nárok', desc: 'Bezplatně posoudíme, na jaké dotace máte nárok a v jaké výši.' },
-              { krok: '2', title: 'Navrhneme systém', desc: 'Připravíme technickou dokumentaci, která je součástí žádosti.' },
-              { krok: '3', title: 'Podáme žádost', desc: 'Pomůžeme vyplnit a podat žádost na SFŽP nebo krajský úřad.' },
-              { krok: '4', title: 'Instalace a doklady', desc: 'Po schválení provedeme instalaci a doložíme vše potřebné pro vyplacení dotace.' },
+              { krok: data.step1_krok, title: data.step1_title, desc: data.step1_desc },
+              { krok: data.step2_krok, title: data.step2_title, desc: data.step2_desc },
+              { krok: data.step3_krok, title: data.step3_title, desc: data.step3_desc },
+              { krok: data.step4_krok, title: data.step4_title, desc: data.step4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-8 h-8 bg-navy-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{item.krok}</div>
@@ -79,11 +80,11 @@ import PageHero from '../components/PageHero.astro';
   <section class="bg-brand-500 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
-        <h3 class="text-2xl font-extrabold text-white">Zjistěte svůj nárok zdarma</h3>
-        <p class="text-white/80 text-sm mt-1">Zavolejte nebo pošlete poptávku — vyhodnotíme dotační možnosti do 24 hodin.</p>
+        <h3 class="text-2xl font-extrabold text-white">{data.cta_headline}</h3>
+        <p class="text-white/80 text-sm mt-1">{data.cta_text}</p>
       </div>
       <a href="/poptavka" class="flex-shrink-0 inline-flex items-center px-6 py-3 bg-white text-brand-600 font-semibold rounded-md hover:bg-brand-50 transition-colors text-sm">
-        Odeslat poptávku
+        {data.cta_button}
         <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>

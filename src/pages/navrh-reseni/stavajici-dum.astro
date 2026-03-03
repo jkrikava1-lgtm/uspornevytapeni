@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/stavajici-dum.json';
 ---
 
 <Layout title="Úsporné vytápění stávajícího domu" description="Výměna kotle za tepelné čerpadlo v rodinném domě. Jak to funguje, co to obnáší a kolik ušetříte.">
   <PageHero
-    title="Vytápění stávajícího domu"
-    subtitle="Máte doma starý kotel a chcete ušetřit? Výměna za tepelné čerpadlo je dnes nejrozumnější investice do vašeho domu."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/stavajici-dum' }, { label: 'Stávající dům', href: '/navrh-reseni/stavajici-dum' }]}
   />
 
@@ -14,19 +15,19 @@ import PageHero from '../../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">Výměna je snazší než si myslíte</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">Tepelné čerpadlo funguje i s radiátory</h2>
+          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
+          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>Nejčastější obava je: „Mám radiátory, musím celý dům předělat?" Odpověď je ve většině případů ne. Moderní tepelná čerpadla jsou navržena pro práci s nízkoteplotními radiátory — stačí případně vyměnit ty nejmenší.</p>
-            <p>Posoudíme váš dům, stávající otopnou soustavu a navrhneme nejefektivnější řešení. Instalace trvá typicky 2–3 dny a nezasahuje do běžného provozu domácnosti.</p>
+            <p>{data.intro_text1}</p>
+            <p>{data.intro_text2}</p>
           </div>
 
           <div class="mt-8 space-y-4">
             {[
-              { title: 'Zachováme radiátory', desc: 'Ve většině domů není nutná výměna otopné soustavy — ušetří to čas i peníze.' },
-              { title: 'Výměna za 2–3 dny', desc: 'Minimální zásah do vašeho každodenního života.' },
-              { title: 'Okamžitá úspora', desc: 'Od první topné sezóny ušetříte průměrně 30 000–50 000 Kč ročně.' },
-              { title: 'Dotace až 200 000 Kč', desc: 'Výměna kotle za tepelné čerpadlo je dotována z programu Nová zelená úsporám.' },
+              { title: data.feat1_title, desc: data.feat1_desc },
+              { title: data.feat2_title, desc: data.feat2_desc },
+              { title: data.feat3_title, desc: data.feat3_desc },
+              { title: data.feat4_title, desc: data.feat4_desc },
             ].map(item => (
               <div class="flex gap-4">
                 <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -45,12 +46,12 @@ import PageHero from '../../components/PageHero.astro';
 
         <div class="space-y-6">
           <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-5">Porovnání nákladů</h3>
+            <h3 class="font-bold text-charcoal-900 mb-5">{data.comparison_headline}</h3>
             <div class="space-y-4">
               {[
-                { zdroj: 'Plynový kotel', naklady: '40 000–60 000 Kč/rok', barva: 'bg-gray-300' },
-                { zdroj: 'Elektrokotel', naklady: '60 000–90 000 Kč/rok', barva: 'bg-gray-400' },
-                { zdroj: 'Tepelné čerpadlo', naklady: '12 000–20 000 Kč/rok', barva: 'bg-brand-500' },
+                { zdroj: data.comp1_zdroj, naklady: data.comp1_naklady, barva: 'bg-gray-300' },
+                { zdroj: data.comp2_zdroj, naklady: data.comp2_naklady, barva: 'bg-gray-400' },
+                { zdroj: data.comp3_zdroj, naklady: data.comp3_naklady, barva: 'bg-brand-500' },
               ].map(item => (
                 <div>
                   <div class="flex justify-between text-sm mb-1.5">
@@ -58,19 +59,19 @@ import PageHero from '../../components/PageHero.astro';
                     <span class="text-charcoal-500">{item.naklady}</span>
                   </div>
                   <div class="h-2 bg-gray-100 rounded-full">
-                    <div class={`h-2 ${item.barva} rounded-full`} style={item.zdroj === 'Tepelné čerpadlo' ? 'width:25%' : item.zdroj === 'Plynový kotel' ? 'width:65%' : 'width:90%'}></div>
+                    <div class={`h-2 ${item.barva} rounded-full`} style={item.zdroj === data.comp3_zdroj ? 'width:25%' : item.zdroj === data.comp1_zdroj ? 'width:65%' : 'width:90%'}></div>
                   </div>
                 </div>
               ))}
             </div>
-            <p class="text-xs text-charcoal-400 mt-4">* Orientační hodnoty pro dům 150 m², ceny energií 2024</p>
+            <p class="text-xs text-charcoal-400 mt-4">{data.comparison_footnote}</p>
           </div>
 
           <div class="bg-navy-700 rounded-xl p-6 text-white">
-            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">Nezapomeňte na dotaci</div>
-            <p class="text-sm text-navy-200 leading-relaxed">Výměna starého kotle za tepelné čerpadlo je dotována až <strong class="text-white">200 000 Kč</strong>. Návratnost investice pak bývá 2–4 roky.</p>
+            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">{data.tip_label}</div>
+            <p class="text-sm text-navy-200 leading-relaxed">{data.tip_text}</p>
             <a href="/dotace" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-400 hover:text-brand-300 mt-3">
-              Zjistit nárok na dotaci
+              {data.tip_link}
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
@@ -83,9 +84,9 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Zjistěte, kolik ušetříte</h2>
-      <p class="text-charcoal-500 mb-8">Připravíme konkrétní výpočet úspory pro váš dům zdarma.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Chci výpočet zdarma</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
 </Layout>
