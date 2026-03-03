@@ -144,8 +144,9 @@ import PageHero from '../components/PageHero.astro';
           <div>
             <div class="flex items-center justify-between mb-3">
               <label class="text-sm font-semibold text-charcoal-800">Tepelná ztráta objektu</label>
-              <label class="flex items-center gap-2 text-sm text-charcoal-500 cursor-pointer">
-                <input type="checkbox" id="ztrata-nevis" class="w-4 h-4 accent-brand-500" />
+              <label id="nevis-toggle" for="ztrata-nevis" style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #e5e7eb;font-size:0.8125rem;font-weight:500;color:#6b7280;cursor:pointer;transition:all 150ms;user-select:none;">
+                <input type="checkbox" id="ztrata-nevis" class="sr-only" />
+                <svg style="width:0.875rem;height:0.875rem;flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 Nevím
               </label>
             </div>
@@ -348,10 +349,23 @@ import PageHero from '../components/PageHero.astro';
   const ztrataWrap = document.getElementById('ztrata-wrap')!;
   const ztrataNevisText = document.getElementById('ztrata-nevis-text')!;
   const plochWrap = document.getElementById('plocha-wrap')!;
+  const nevisToggle = document.getElementById('nevis-toggle') as HTMLElement;
+  const updateNevisToggle = () => {
+    if (ztrataNevis.checked) {
+      nevisToggle.style.borderColor = '#f59e0b';
+      nevisToggle.style.color = '#b45309';
+      nevisToggle.style.backgroundColor = '#fffbeb';
+    } else {
+      nevisToggle.style.borderColor = '#e5e7eb';
+      nevisToggle.style.color = '#6b7280';
+      nevisToggle.style.backgroundColor = '';
+    }
+  };
   ztrataNevis?.addEventListener('change', () => {
     ztrataWrap.classList.toggle('hidden', ztrataNevis.checked);
     ztrataNevisText.classList.toggle('hidden', !ztrataNevis.checked);
     plochWrap.classList.toggle('hidden', !ztrataNevis.checked);
+    updateNevisToggle();
   });
 
   document.getElementById('btn-step5')?.addEventListener('click', () => {
