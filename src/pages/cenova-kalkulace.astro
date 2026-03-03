@@ -48,7 +48,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- ── STEP 2 – Ohřev TUV ── -->
       <div id="step-2" class="step-panel hidden">
-        <button class="back-btn" data-target="1">← Zpět</button>
+        <button class="back-btn" data-target="1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Ohřev teplé vody?</h2>
         <p class="text-charcoal-500 text-sm mb-8">Má tepelné čerpadlo zajišťovat i ohřev užitkové vody (TUV)?</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -71,7 +71,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- ── STEP 3 – Topný systém ── -->
       <div id="step-3" class="step-panel hidden">
-        <button class="back-btn" data-target="2">← Zpět</button>
+        <button class="back-btn" data-target="2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Typ topného systému</h2>
         <p class="text-charcoal-500 text-sm mb-8">Jakým způsobem je v domě rozváděno teplo?</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -98,7 +98,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- ── STEP 4 – Typ TČ ── -->
       <div id="step-4" class="step-panel hidden">
-        <button class="back-btn" data-target="3">← Zpět</button>
+        <button class="back-btn" data-target="3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Preferovaný typ tepelného čerpadla</h2>
         <p class="text-charcoal-500 text-sm mb-8">Pokud nejste si jisti, vyberte „Nevím" a poradíme vám.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -127,7 +127,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- ── STEP 5 – Parametry domu ── -->
       <div id="step-5" class="step-panel hidden">
-        <button class="back-btn" data-target="4">← Zpět</button>
+        <button class="back-btn" data-target="4"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Parametry domu</h2>
         <p class="text-charcoal-500 text-sm mb-8">Přibližné hodnoty jsou v pořádku. Pokud tepelnou ztrátu neznáte, zaškrtněte „Nevím".</p>
 
@@ -176,7 +176,7 @@ import PageHero from '../components/PageHero.astro';
 
       <!-- ── STEP 6 – Kontakt ── -->
       <div id="step-6" class="step-panel hidden">
-        <button class="back-btn" data-target="5">← Zpět</button>
+        <button class="back-btn" data-target="5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Vaše kontaktní údaje</h2>
         <p class="text-charcoal-500 text-sm mb-8">Do 24 hodin vám zašleme návrh systému a orientační cenu.</p>
 
@@ -228,7 +228,7 @@ import PageHero from '../components/PageHero.astro';
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Kalkulace odeslána!</h2>
         <p class="text-charcoal-500 mb-8 max-w-sm mx-auto">Ozve se vám náš specialista do 24 hodin s návrhem systému a orientační cenou.</p>
         <a href="/" class="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-charcoal-700 font-semibold rounded-md transition-colors text-sm">
-          ← Zpět na hlavní stránku
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět na hlavní stránku
         </a>
       </div>
 
@@ -257,7 +257,7 @@ import PageHero from '../components/PageHero.astro';
     @apply text-xs text-charcoal-400 leading-snug;
   }
   .back-btn {
-    @apply text-sm text-charcoal-400 hover:text-brand-500 transition-colors cursor-pointer;
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer border border-gray-200 hover:border-gray-300;
   }
 </style>
 
