@@ -1,0 +1,376 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Cenová kalkulace tepelného čerpadla" description="Zjistěte orientační cenu tepelného čerpadla pro váš dům. Stačí odpovědět na 6 otázek a do 24 hodin vám zašleme nabídku.">
+  <PageHero
+    title="Cenová kalkulace"
+    subtitle="Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu."
+    breadcrumb={[{ label: 'Cenová kalkulace', href: '/cenova-kalkulace' }]}
+  />
+
+  <section class="py-16 lg:py-24">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+
+      <!-- Progress bar -->
+      <div id="progress-wrap" class="mb-10">
+        <div class="flex items-center justify-between text-xs text-charcoal-400 mb-2">
+          <span id="progress-label">Krok 1 ze 6</span>
+          <span id="progress-pct">17 %</span>
+        </div>
+        <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+          <div id="progress-fill" class="h-full bg-brand-500 rounded-full transition-all duration-500" style="width:17%"></div>
+        </div>
+      </div>
+
+      <!-- ── STEP 1 – Typ objektu ── -->
+      <div id="step-1" class="step-panel">
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Typ vašeho objektu</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Vyberte, zda se jedná o novostavbu nebo stávající dům.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            </span>
+            <span class="choice-label">Novostavba</span>
+            <span class="choice-desc">Dům teprve stavíte nebo je po kolaudaci</span>
+          </button>
+          <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+            </span>
+            <span class="choice-label">Stávající dům</span>
+            <span class="choice-desc">Rekonstrukce nebo výměna stávajícího zdroje</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 2 – Ohřev TUV ── -->
+      <div id="step-2" class="step-panel hidden">
+        <button class="back-btn" data-target="1">← Zpět</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Ohřev teplé vody?</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Má tepelné čerpadlo zajišťovat i ohřev užitkové vody (TUV)?</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button class="choice-card" data-field="ohrev_tuv" data-value="Ano">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </span>
+            <span class="choice-label">Ano, i TUV</span>
+            <span class="choice-desc">Čerpadlo bude ohřívat i vodu pro sprchy a kuchyň</span>
+          </button>
+          <button class="choice-card" data-field="ohrev_tuv" data-value="Ne">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+            </span>
+            <span class="choice-label">Ne, jen vytápění</span>
+            <span class="choice-desc">TUV zajišťuje jiný zdroj</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 3 – Topný systém ── -->
+      <div id="step-3" class="step-panel hidden">
+        <button class="back-btn" data-target="2">← Zpět</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Typ topného systému</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Jakým způsobem je v domě rozváděno teplo?</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <button class="choice-card" data-field="topny_system" data-value="Podlahové topení">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            </span>
+            <span class="choice-label">Podlahové topení</span>
+          </button>
+          <button class="choice-card" data-field="topny_system" data-value="Radiátory">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
+            </span>
+            <span class="choice-label">Radiátory</span>
+          </button>
+          <button class="choice-card" data-field="topny_system" data-value="Více topných okruhů">
+            <span class="choice-icon">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </span>
+            <span class="choice-label">Více okruhů</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 4 – Typ TČ ── -->
+      <div id="step-4" class="step-panel hidden">
+        <button class="back-btn" data-target="3">← Zpět</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Preferovaný typ tepelného čerpadla</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Pokud nejste si jisti, vyberte „Nevím" a poradíme vám.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button class="choice-card" data-field="typ_tc" data-value="Vzduch–voda">
+            <span class="choice-label">Vzduch – voda</span>
+            <span class="choice-desc">Nejrozšířenější, bez zemních prací</span>
+          </button>
+          <button class="choice-card" data-field="typ_tc" data-value="Voda–voda">
+            <span class="choice-label">Voda – voda</span>
+            <span class="choice-desc">Studna nebo jiný vodní zdroj</span>
+          </button>
+          <button class="choice-card" data-field="typ_tc" data-value="Země–voda, vrt">
+            <span class="choice-label">Země – voda, vrt</span>
+            <span class="choice-desc">Geotermální vrty, nejvyšší COP</span>
+          </button>
+          <button class="choice-card" data-field="typ_tc" data-value="Země–voda, plošný kolektor">
+            <span class="choice-label">Země – voda, kolektor</span>
+            <span class="choice-desc">Horizontální kolektor v zemi</span>
+          </button>
+          <button class="choice-card sm:col-span-2" data-field="typ_tc" data-value="Nevím">
+            <span class="choice-label">Nevím – poraďte mi</span>
+            <span class="choice-desc">Doporučíme nejvhodnější variantu pro váš pozemek</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 5 – Parametry domu ── -->
+      <div id="step-5" class="step-panel hidden">
+        <button class="back-btn" data-target="4">← Zpět</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Parametry domu</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Přibližné hodnoty jsou v pořádku. Pokud tepelnou ztrátu neznáte, zaškrtněte „Nevím".</p>
+
+        <div class="space-y-8">
+          <!-- Tepelná ztráta -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <label class="text-sm font-semibold text-charcoal-800">Tepelná ztráta objektu</label>
+              <label class="flex items-center gap-2 text-sm text-charcoal-500 cursor-pointer">
+                <input type="checkbox" id="ztrata-nevis" class="w-4 h-4 accent-brand-500" />
+                Nevím
+              </label>
+            </div>
+            <div id="ztrata-wrap" class="space-y-2">
+              <div class="flex items-center gap-4">
+                <input type="range" id="ztrata-slider" min="2" max="30" value="10" step="1"
+                  class="flex-1 accent-brand-500 cursor-pointer" />
+                <div class="w-20 text-right">
+                  <span id="ztrata-val" class="text-2xl font-extrabold text-brand-500">10</span>
+                  <span class="text-sm text-charcoal-400 ml-1">kW</span>
+                </div>
+              </div>
+              <div class="flex justify-between text-xs text-charcoal-400">
+                <span>2 kW</span><span>30 kW</span>
+              </div>
+            </div>
+            <p id="ztrata-nevis-text" class="hidden text-sm text-charcoal-500 italic">Tepelná ztráta bude stanovena při konzultaci.</p>
+          </div>
+
+          <!-- Vytápěná plocha -->
+          <div>
+            <label class="block text-sm font-semibold text-charcoal-800 mb-3">Vytápěná plocha</label>
+            <div class="flex items-center gap-3">
+              <input type="number" id="plocha-input" min="20" max="2000" placeholder="150"
+                class="w-32 px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-center text-lg font-bold" />
+              <span class="text-charcoal-500 font-medium">m²</span>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-step5" class="mt-10 inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors w-full sm:w-auto">
+          Pokračovat
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>
+
+      <!-- ── STEP 6 – Kontakt ── -->
+      <div id="step-6" class="step-panel hidden">
+        <button class="back-btn" data-target="5">← Zpět</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Vaše kontaktní údaje</h2>
+        <p class="text-charcoal-500 text-sm mb-8">Do 24 hodin vám zašleme návrh systému a orientační cenu.</p>
+
+        <div class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Jméno a příjmení *</label>
+              <input type="text" id="f-jmeno" required placeholder="Jan Novák"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Telefon *</label>
+              <input type="tel" id="f-telefon" required placeholder="+420 777 000 111"
+                class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-charcoal-800 mb-2">E-mail *</label>
+            <input type="email" id="f-email" required placeholder="jan@example.cz"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-charcoal-800 mb-2">Obec / město *</label>
+            <input type="text" id="f-obec" required placeholder="Praha"
+              class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+          </div>
+          <div class="flex items-start gap-3 pt-2">
+            <input type="checkbox" id="f-souhlas" class="mt-1 w-4 h-4 accent-brand-500 flex-shrink-0" />
+            <label for="f-souhlas" class="text-xs text-charcoal-500 leading-relaxed cursor-pointer">
+              Souhlasím se zasíláním obchodních sdělení firmy Úsporné vytápění s.r.o.
+            </label>
+          </div>
+        </div>
+
+        <div id="form-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-md text-sm text-red-700"></div>
+
+        <button id="btn-submit" class="mt-8 inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors w-full sm:w-auto">
+          <span id="btn-submit-label">Odeslat kalkulaci</span>
+          <svg id="btn-submit-icon" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <svg id="btn-submit-spin" class="hidden w-4 h-4 ml-2 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/></svg>
+        </button>
+      </div>
+
+      <!-- ── SUCCESS ── -->
+      <div id="step-success" class="step-panel hidden text-center py-8">
+        <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Kalkulace odeslána!</h2>
+        <p class="text-charcoal-500 mb-8 max-w-sm mx-auto">Ozve se vám náš specialista do 24 hodin s návrhem systému a orientační cenou.</p>
+        <a href="/" class="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-charcoal-700 font-semibold rounded-md transition-colors text-sm">
+          ← Zpět na hlavní stránku
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .choice-card {
+    @apply flex flex-col items-center text-center gap-3 p-6 rounded-xl border-2 border-gray-200 bg-white hover:border-brand-400 hover:bg-brand-50 transition-all duration-150 cursor-pointer;
+  }
+  .choice-card.selected {
+    @apply border-brand-500 bg-brand-50;
+  }
+  .choice-icon {
+    @apply w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-charcoal-500;
+  }
+  .choice-card.selected .choice-icon {
+    @apply bg-brand-100 text-brand-600;
+  }
+  .choice-label {
+    @apply font-bold text-charcoal-900 text-sm;
+  }
+  .choice-desc {
+    @apply text-xs text-charcoal-400 leading-snug;
+  }
+  .back-btn {
+    @apply text-sm text-charcoal-400 hover:text-brand-500 transition-colors cursor-pointer;
+  }
+</style>
+
+<script>
+  const answers: Record<string, string> = {};
+  let currentStep = 1;
+  const TOTAL_STEPS = 6;
+
+  function showStep(n: number) {
+    document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
+    const el = document.getElementById(`step-${n}`);
+    if (el) el.classList.remove('hidden');
+
+    if (n <= TOTAL_STEPS) {
+      const pct = Math.round((n / TOTAL_STEPS) * 100);
+      (document.getElementById('progress-fill') as HTMLElement).style.width = pct + '%';
+      (document.getElementById('progress-label') as HTMLElement).textContent = `Krok ${n} ze ${TOTAL_STEPS}`;
+      (document.getElementById('progress-pct') as HTMLElement).textContent = pct + ' %';
+      document.getElementById('progress-wrap')!.classList.remove('hidden');
+    } else {
+      document.getElementById('progress-wrap')!.classList.add('hidden');
+    }
+    currentStep = n;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Choice cards
+  document.querySelectorAll<HTMLButtonElement>('.choice-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const field = card.dataset.field!;
+      const value = card.dataset.value!;
+      answers[field] = value;
+
+      // Mark selected within the same step
+      card.closest('.step-panel')!.querySelectorAll('.choice-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+
+      // Auto-advance after short delay
+      setTimeout(() => showStep(currentStep + 1), 260);
+    });
+  });
+
+  // Back buttons
+  document.querySelectorAll<HTMLButtonElement>('.back-btn').forEach(btn => {
+    btn.addEventListener('click', () => showStep(Number(btn.dataset.target)));
+  });
+
+  // Step 5 slider
+  const slider = document.getElementById('ztrata-slider') as HTMLInputElement;
+  const ztrataVal = document.getElementById('ztrata-val')!;
+  slider?.addEventListener('input', () => { ztrataVal.textContent = slider.value; });
+
+  const ztrataNevis = document.getElementById('ztrata-nevis') as HTMLInputElement;
+  const ztrataWrap = document.getElementById('ztrata-wrap')!;
+  const ztrataNevisText = document.getElementById('ztrata-nevis-text')!;
+  ztrataNevis?.addEventListener('change', () => {
+    ztrataWrap.classList.toggle('hidden', ztrataNevis.checked);
+    ztrataNevisText.classList.toggle('hidden', !ztrataNevis.checked);
+  });
+
+  document.getElementById('btn-step5')?.addEventListener('click', () => {
+    const plocha = (document.getElementById('plocha-input') as HTMLInputElement).value;
+    if (!plocha) {
+      (document.getElementById('plocha-input') as HTMLInputElement).focus();
+      return;
+    }
+    answers['tepelna_ztrata'] = ztrataNevis.checked ? 'Nevím' : slider.value + ' kW';
+    answers['plocha'] = plocha + ' m²';
+    showStep(6);
+  });
+
+  // Submit
+  document.getElementById('btn-submit')?.addEventListener('click', async () => {
+    const jmeno = (document.getElementById('f-jmeno') as HTMLInputElement).value.trim();
+    const email = (document.getElementById('f-email') as HTMLInputElement).value.trim();
+    const telefon = (document.getElementById('f-telefon') as HTMLInputElement).value.trim();
+    const obec = (document.getElementById('f-obec') as HTMLInputElement).value.trim();
+    const souhlas = (document.getElementById('f-souhlas') as HTMLInputElement).checked;
+
+    const errorEl = document.getElementById('form-error')!;
+    errorEl.classList.add('hidden');
+
+    if (!jmeno || !email || !telefon || !obec) {
+      errorEl.textContent = 'Vyplňte prosím všechna povinná pole.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    const submitBtn = document.getElementById('btn-submit') as HTMLButtonElement;
+    const labelEl = document.getElementById('btn-submit-label')!;
+    const iconEl = document.getElementById('btn-submit-icon')!;
+    const spinEl = document.getElementById('btn-submit-spin')!;
+    submitBtn.disabled = true;
+    labelEl.textContent = 'Odesílám…';
+    iconEl.classList.add('hidden');
+    spinEl.classList.remove('hidden');
+
+    try {
+      const res = await fetch('/api/kalkulace', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...answers, jmeno, email, telefon, obec, souhlas_obchodni: souhlas }),
+      });
+
+      if (!res.ok) throw new Error('server error');
+      showStep(99);
+      document.getElementById('step-success')!.classList.remove('hidden');
+    } catch {
+      errorEl.textContent = 'Odeslání se nezdařilo. Zavolejte nám na +420 777 724 573.';
+      errorEl.classList.remove('hidden');
+      submitBtn.disabled = false;
+      labelEl.textContent = 'Odeslat kalkulaci';
+      iconEl.classList.remove('hidden');
+      spinEl.classList.add('hidden');
+    }
+  });
+</script>
