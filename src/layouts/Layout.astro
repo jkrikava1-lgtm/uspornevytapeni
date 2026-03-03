@@ -43,25 +43,28 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           </div>
         </div>
 
-        <!-- Desktop grid: logo vlevo přes oba řádky, nav vpravo -->
-        <div class="hidden lg:grid lg:grid-cols-[auto_1fr]">
+        <!-- Desktop: logo vlevo, nav vpravo ve dvou řádcích -->
+        <div class="hidden lg:flex">
 
-          <!-- Logo: přes oba řádky -->
-          <a href="/" class="row-span-2 flex items-center pr-6 border-r border-gray-100 mr-2">
-            <img src="/logo.png" alt="Úsporné vytápění s.r.o." class="h-14 w-auto" />
+          <!-- Logo: vyplňuje celou výšku -->
+          <a href="/" class="flex items-center flex-shrink-0 pr-6 border-r border-gray-100">
+            <img src="/logo.png" alt="Úsporné vytápění s.r.o." style="height:56px;width:auto;" />
           </a>
 
-          <!-- Řádek 1: sekundární nav -->
-          <div class="flex items-center justify-end gap-1 pl-4 h-10 border-b border-gray-100">
-            <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">O nás</a>
-            <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">Kontakt</a>
-            <a href="/poptavka" class="ml-2 inline-flex items-center px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold rounded-md transition-colors">
-              Nezávazná poptávka
-            </a>
-          </div>
+          <!-- Nav sloupec: dva řádky -->
+          <div class="flex-1 flex flex-col pl-4">
 
-          <!-- Řádek 2: hlavní nav -->
-          <nav class="flex items-center gap-1 pl-4 h-10">
+            <!-- Řádek 1: sekundární nav -->
+            <div class="flex items-center justify-end gap-1 h-10 border-b border-gray-100">
+              <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">O nás</a>
+              <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">Kontakt</a>
+              <a href="/poptavka" class="ml-2 inline-flex items-center px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold rounded-md transition-colors">
+                Nezávazná poptávka
+              </a>
+            </div>
+
+            <!-- Řádek 2: hlavní nav -->
+            <nav class="flex items-center gap-1 h-10">
 
           <div class="relative group">
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
@@ -122,9 +125,11 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           </div>
           <a href="/reference" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Reference</a>
           <a href="/dotace" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Dotace</a>
-          </nav>
+            </nav>
 
-        </div><!-- /desktop grid -->
+          </div><!-- /nav sloupec -->
+
+        </div><!-- /desktop flex -->
 
       </div>
 
