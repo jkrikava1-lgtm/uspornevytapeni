@@ -1,93 +1,267 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import data from '../../data/vzduch-voda.json';
 ---
 
-<Layout title="Tepelná čerpadla vzduch-voda" description="Tepelná čerpadla vzduch-voda Master Therm. Nejrozšířenější typ — snadná instalace, výborná účinnost, vhodné pro 95 % domácností.">
+<Layout title="Tepelná čerpadla vzduch-voda" description="Tepelná čerpadla vzduch-voda Master Therm. Dvě varianty — venkovní kompakt nebo split. Rychlá montáž 2–3 dny, ověřené řešení pro české klima.">
   <PageHero
-    title={data.hero_title}
-    subtitle={data.hero_subtitle}
+    title="Tepelná čerpadla vzduch – voda"
+    subtitle="Maximální úspora. Rychlá montáž. Ověřené řešení pro české klima."
     breadcrumb={[{ label: 'Tepelná čerpadla', href: '/tepelna-cerpadla/vzduch-voda' }, { label: 'Vzduch – voda', href: '/tepelna-cerpadla/vzduch-voda' }]}
   />
 
-  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+  <!-- Intro sekce -->
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.how_label}</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.how_headline}</h2>
-          <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>{data.how_text1}</p>
-            <p>{data.how_text2}</p>
-          </div>
 
-          <div class="mt-8 space-y-4">
+        <div>
+          <p class="text-charcoal-600 leading-relaxed mb-4">
+            Díky klimatickým podmínkám České republiky je provoz tepelného čerpadla vzduch–voda mimořádně ekonomický. Průměrná teplota vzduchu v topném období se pohybuje kolem <strong>+4 °C</strong>, což znamená, že systém pracuje s velmi vysokou účinností i v zimě.
+          </p>
+          <p class="text-charcoal-600 leading-relaxed mb-8">
+            Pokud máte jeden topný okruh (většina domů), instaluje se kromě TČ pouze bojler. V případě více okruhů (podlahové topení + radiátory nebo třeba vytápění bazénu) je třeba instalovat malou akumulační nádobu (50–100 litrů).
+          </p>
+
+          <div class="space-y-3 mb-8">
             {[
-              { title: data.feat1_title, desc: data.feat1_desc },
-              { title: data.feat2_title, desc: data.feat2_desc },
-              { title: data.feat3_title, desc: data.feat3_desc },
-              { title: data.feat4_title, desc: data.feat4_desc },
+              'rychlá montáž v rodinném domě za 2–3 dny',
+              'nízké provozní náklady',
+              'moderní technologie s vysokou účinností',
+              'řešení, kterému věříme – i majitel naší firmy má tento systém doma',
+              'moderní ventilátory s velmi tichým provozem – hlučnost vám rádi předvedeme',
             ].map(item => (
-              <div class="flex gap-4">
-                <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+              <div class="flex gap-3 items-start">
+                <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
-                <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
-                  <div class="text-sm text-charcoal-500">{item.desc}</div>
+                <span class="text-charcoal-700 text-sm leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-charcoal-700 font-semibold">
+            Tepelné čerpadlo vzduch–voda dodáváme ve dvou variantách. Vybereme pro vás tu nejvhodnější podle typu domu a vašich očekávání.
+          </p>
+        </div>
+
+        <div class="bg-navy-700 rounded-2xl p-8 text-white">
+          <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-5">Klíčové parametry</div>
+          <div class="space-y-4">
+            {[
+              { label: 'Průměrná teplota vzduchu v topné sezóně', value: '+4 °C' },
+              { label: 'Doba montáže', value: '2–3 dny' },
+              { label: 'Potřebná plocha venku', value: 'cca 0,7 m²' },
+              { label: 'Max. délka potrubí (split)', value: '15 metrů' },
+              { label: 'Rozměry vnitřní jednotky (split)', value: '72 × 53 cm' },
+            ].map(item => (
+              <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
+                <span class="text-sm text-navy-300">{item.label}</span>
+                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Varianta 1: Venkovní kompakt -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+        <div>
+          <h2 class="text-2xl font-extrabold text-charcoal-900">Vzduch – voda: Venkovní kompakt</h2>
+          <p class="text-charcoal-500 text-sm mt-0.5">Nejprodávanější řešení pro rodinné domy, jednoduché a funkční</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div>
+          <h3 class="font-bold text-charcoal-900 mb-4">Proč je venkovní kompakt tak oblíbený?</h3>
+          <div class="space-y-3 mb-8">
+            {[
+              'nezabírá žádné místo uvnitř domu – skutečně neexistuje žádná vnitřní jednotka jako u jiných výrobců, jen ovládací displej',
+              'venku potřebuje pouze cca 0,7 m²',
+              'rychlá a cenově dostupnější montáž',
+              'vhodný pro novostavby i rekonstrukce',
+              'inverterové technologie (plynulá regulace výkonu podle potřeby domu) jako standard',
+              'kvalitní zpracování a špičkové technologie',
+            ].map(item => (
+              <div class="flex gap-3 items-start">
+                <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
                 </div>
+                <span class="text-charcoal-700 text-sm leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          <h3 class="font-bold text-charcoal-900 mb-3">Kam se jednotka umístí?</h3>
+          <p class="text-charcoal-600 text-sm leading-relaxed">
+            Venkovní kompakt lze instalovat u domu, na zahradě nebo na jiné vhodné místo. Rádi vám ukážeme možnosti umístění i reálné realizace.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">Používaný model</div>
+            <div class="font-bold text-charcoal-900 text-base mb-1">BoxAir Inverter</div>
+            <div class="text-sm text-charcoal-500">od firmy Master Therm — nejprodávanější model skvělého českého výrobce</div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-gray-200">
+            <p class="text-charcoal-700 text-sm mb-4">Nechte si navrhnout venkovní kompakt na míru:</p>
+            <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-sm w-full sm:w-auto">
+              Zpracujte mi nabídku
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Varianta 2: Split -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex items-center gap-4 mb-6">
+        <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+        <div>
+          <h2 class="text-2xl font-extrabold text-charcoal-900">Vzduch – voda: Dělená konstrukce neboli Split</h2>
+          <p class="text-charcoal-500 text-sm mt-0.5">Maximální variabilita umístění a špičkové technologie</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">Venkovní jednotka</h3>
+          <div class="space-y-2">
+            {[
+              'obsahuje výparník a ventilátor',
+              'vertikální provedení na základ na zem (minimální půdorysné nároky) nebo i na plochou střechu',
+              'montáž i na konzoli přímo na stěnu domu',
+              'možnost využití technologie desuperheater – speciální ohřev užitkové vody, který vzniká jako vedlejší produkt provozu TČ',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">Propojení jednotek</h3>
+          <div class="space-y-2">
+            {[
+              'venkovní jednotka je spojena s vnitřní speciálním izolovaným měděným potrubím s chladivem',
+              'maximální délka vedení potrubí je 15 metrů, takže jednotku lze bez problémů umístit i dál od domu',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">Vnitřní jednotka – srdce systému</h3>
+          <div class="space-y-2">
+            {[
+              'obsahuje kompresor, elektrokotel, regulaci a další komponenty',
+              'rozměrově odpovídá přibližně lednici: 72 × 53 cm',
+              'jednotka může být namontována blízko stěny',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div>
+          <h3 class="font-bold text-charcoal-900 mb-3">Co bude ještě uvnitř domu?</h3>
+          <p class="text-charcoal-600 text-sm mb-4">Podle konkrétního návrhu zapojení:</p>
+          <div class="space-y-2">
+            {[
+              'bojler na ohřev užitkové vody',
+              'případně akumulační nádoba (u kombinovaných systémů)',
+              'další prvky dle typu vytápění',
+            ].map(item => (
+              <div class="flex gap-3 items-start">
+                <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-700 text-sm leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
         </div>
 
         <div class="space-y-6">
-          <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.params_label}</div>
-            <div class="space-y-3">
-              {[
-                { label: data.param1_label, value: data.param1_value },
-                { label: data.param2_label, value: data.param2_value },
-                { label: data.param3_label, value: data.param3_value },
-                { label: data.param4_label, value: data.param4_value },
-                { label: data.param5_label, value: data.param5_value },
-                { label: data.param6_label, value: data.param6_value },
-              ].map(item => (
-                <div class="flex justify-between py-2 border-b border-navy-600 last:border-0">
-                  <span class="text-sm text-navy-300">{item.label}</span>
-                  <span class="text-sm font-semibold">{item.value}</span>
-                </div>
-              ))}
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">Používané modely</div>
+            <div class="space-y-1 mb-2">
+              <div class="font-bold text-charcoal-900 text-sm">BoxAir Inverter Split</div>
+              <div class="font-bold text-charcoal-900 text-sm">BoxAir Inverter Split Combi</div>
             </div>
+            <div class="text-xs text-charcoal-500">špičkové modely od společnosti Master Therm</div>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-3">{data.price_headline}</h3>
-            <div class="text-2xl font-extrabold text-navy-700 mb-1">{data.price_value}</div>
-            <p class="text-xs text-charcoal-500 mb-4">{data.price_note}</p>
-            <a href="/dotace" class="text-sm font-semibold text-brand-500 hover:text-brand-600 flex items-center gap-1">
-              {data.price_dotace_link}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+            <p class="text-charcoal-700 text-sm mb-4">Vše navrhneme individuálně podle vašeho domu. Nechte si navrhnout dělený systém na míru:</p>
+            <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-sm w-full sm:w-auto">
+              Zpracujte mi nabídku
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-50 py-12">
+  <!-- Závěrečná CTA -->
+  <section class="bg-gray-50 py-14">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
-      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button1}</a>
-        <a href="/katalog" class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-gray-200 hover:border-gray-400 text-charcoal-700 font-semibold rounded-md transition-colors">{data.cta_button2}</a>
-      </div>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-4">Nejste si jistí, která varianta je pro vás vhodná?</h2>
+      <p class="text-charcoal-500 mb-8">
+        Navrhneme řešení přesně podle typu domu, způsobu vytápění i vašich finančních očekávání. Cílem je jediné – maximální úspora, spolehlivost a dlouhodobý komfort.
+      </p>
+      <p class="text-charcoal-600 text-sm mb-6">Rádi vám zpracujeme individuální cenovou kalkulaci:</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">
+        Zpracujte mi nabídku
+      </a>
     </div>
   </section>
 </Layout>
