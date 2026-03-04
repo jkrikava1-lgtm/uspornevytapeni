@@ -16,8 +16,17 @@ import PageHero from '../components/PageHero.astro';
 
         <!-- Formulář -->
         <div class="lg:col-span-2">
-          <form class="space-y-6" name="poptavka" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="poptavka" />
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-xl p-6 text-center">
+            <svg class="w-12 h-12 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-1">Poptávka odeslána!</h3>
+            <p class="text-sm text-charcoal-600">Ozveme se vám do 24 hodin.</p>
+          </div>
+          <div id="form-error" class="hidden bg-red-50 border border-red-200 rounded-xl p-4 mb-4 text-sm text-red-700">
+            Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.
+          </div>
+          <form id="poptavka-form" class="space-y-6" method="POST" action="/api/poptavka">
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
@@ -141,3 +150,38 @@ import PageHero from '../components/PageHero.astro';
     </div>
   </section>
 </Layout>
+
+<script>
+  const form = document.getElementById('poptavka-form') as HTMLFormElement;
+  const successBox = document.getElementById('form-success')!;
+  const errorBox = document.getElementById('form-error')!;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.classList.add('hidden');
+
+    const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Odesílám…';
+
+    try {
+      const res = await fetch('/api/poptavka', {
+        method: 'POST',
+        body: new FormData(form),
+      });
+
+      if (res.ok) {
+        form.classList.add('hidden');
+        successBox.classList.remove('hidden');
+      } else {
+        errorBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.textContent = 'Odeslat poptávku';
+      }
+    } catch {
+      errorBox.classList.remove('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Odeslat poptávku';
+    }
+  });
+</script>
