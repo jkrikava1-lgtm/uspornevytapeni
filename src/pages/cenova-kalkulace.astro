@@ -163,12 +163,11 @@ import PageHero from '../components/PageHero.astro';
                 <span>2 kW</span><span>30 kW</span>
               </div>
             </div>
-            <p id="ztrata-nevis-text" class="hidden text-sm text-charcoal-500 italic">Tepelná ztráta bude stanovena při konzultaci.</p>
           </div>
 
           <!-- Vytápěná plocha – zobrazí se jen když neví tepelnou ztrátu -->
           <div id="plocha-wrap" class="hidden">
-            <label class="block text-sm font-semibold text-charcoal-800 mb-3">Vytápěná plocha</label>
+            <label class="block text-sm font-semibold text-charcoal-800 mb-3">Zadejte vytápěnou plochu</label>
             <div class="flex items-center gap-3">
               <input type="number" id="plocha-input" min="20" max="2000" placeholder="150"
                 class="w-32 px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-center text-lg font-bold" />
@@ -347,7 +346,6 @@ import PageHero from '../components/PageHero.astro';
 
   const ztrataNevis = document.getElementById('ztrata-nevis') as HTMLInputElement;
   const ztrataWrap = document.getElementById('ztrata-wrap')!;
-  const ztrataNevisText = document.getElementById('ztrata-nevis-text')!;
   const plochWrap = document.getElementById('plocha-wrap')!;
   const nevisToggle = document.getElementById('nevis-toggle') as HTMLElement;
   const updateNevisToggle = () => {
@@ -363,7 +361,6 @@ import PageHero from '../components/PageHero.astro';
   };
   ztrataNevis?.addEventListener('change', () => {
     ztrataWrap.classList.toggle('hidden', ztrataNevis.checked);
-    ztrataNevisText.classList.toggle('hidden', !ztrataNevis.checked);
     plochWrap.classList.toggle('hidden', !ztrataNevis.checked);
     updateNevisToggle();
   });

@@ -1,9 +1,29 @@
 {
-  "hero_title": "Kontakt",
+  "hero_title": "Kontakty",
   "hero_subtitle": "Jsme v Jičíně, pracujeme po celé České republice.",
+  "contacts": [
+    {
+      "name": "Jakub Křikava",
+      "role": "Obchod",
+      "phone": "777 724 573",
+      "phone_href": "tel:+420777724573",
+      "email": "j.krikava@uspornevytapeni.cz"
+    },
+    {
+      "name": "Ing. Jana Křikavová",
+      "role": "Ekonom",
+      "phone": "604 208 853",
+      "phone_href": "tel:+420604208853",
+      "email": "j.krikavova@uspornevytapeni.cz"
+    }
+  ],
   "billing_headline": "Fakturační údaje",
   "billing_name_label": "Obchodní název:",
   "billing_name": "Úsporné vytápění s.r.o.",
   "billing_address_label": "Sídlo:",
-  "billing_address": "Dělnická 395, 506 01 Jičín"
+  "billing_address": "Dělnická 395, 506 01 Jičín",
+  "billing_ico_label": "IČO:",
+  "billing_ico": "28783115",
+  "billing_dico_label": "DIČ:",
+  "billing_dico": "CZ28783115"
 }
