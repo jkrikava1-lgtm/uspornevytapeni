@@ -1,12 +1,26 @@
 export const prerender = false;
 
+import nodemailer from 'nodemailer';
+
 export async function POST({ request }: { request: Request }) {
   const data = await request.json();
 
-  const resendKey = import.meta.env.RESEND_API_KEY;
-  if (!resendKey) {
-    return Response.json({ error: 'RESEND_API_KEY not configured' }, { status: 500 });
+  const host = import.meta.env.SMTP_HOST;
+  const port = Number(import.meta.env.SMTP_PORT);
+  const user = import.meta.env.SMTP_USER;
+  const pass = import.meta.env.SMTP_PASS;
+  const from = import.meta.env.SMTP_FROM;
+
+  if (!host || !user || !pass) {
+    return Response.json({ error: 'SMTP not configured' }, { status: 500 });
   }
+
+  const transporter = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465,
+    auth: { user, pass },
+  });
 
   const body = `
 Nová cenová kalkulace z webu
@@ -27,24 +41,16 @@ Obec:     ${data.obec}
 Souhlas s obch. sděleními: ${data.souhlas_obchodni ? 'Ano' : 'Ne'}
 `.trim();
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${resendKey}`,
-    },
-    body: JSON.stringify({
-      from: 'web@uspornevytapeni.cz',
+  try {
+    await transporter.sendMail({
+      from: `"Úsporné vytápění" <${from}>`,
       to: 'info@uspornevytapeni.cz',
-      reply_to: data.email,
+      replyTo: data.email,
       subject: `Kalkulace TČ: ${data.jmeno} (${data.obec})`,
       text: body,
-    }),
-  });
-
-  if (!res.ok) {
-    const err = await res.text();
-    console.error('Resend error:', err);
+    });
+  } catch (err) {
+    console.error('SMTP error:', err);
     return Response.json({ error: 'Email send failed' }, { status: 500 });
   }
 

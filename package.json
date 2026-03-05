@@ -12,6 +12,10 @@
     "@astrojs/vercel": "^9.0.4",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^5.17.1",
+    "nodemailer": "^8.0.1",
     "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^7.0.11"
   }
 }
