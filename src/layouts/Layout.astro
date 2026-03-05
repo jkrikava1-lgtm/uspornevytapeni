@@ -110,7 +110,19 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
             </div>
           </div>
 
-          <a href="/katalog" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Katalog</a>
+          <div class="relative" data-nav-group>
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
+              Katalog
+              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
+              <a href="/katalog/vzduch-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Vzduch – voda</a>
+              <a href="/katalog/zeme-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Země – voda</a>
+              <a href="/katalog/voda-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Voda – voda</a>
+            </div>
+          </div>
           <div class="relative" data-nav-group>
             <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
               Cena
@@ -151,7 +163,10 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
           <a href="/chytre-funkce/desuperheater" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Desuperheater</a>
           <a href="/chytre-funkce/fotovoltaika" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Spolupráce s fotovoltaikou</a>
           <div class="pt-3 border-t border-gray-100 space-y-1">
-            <a href="/katalog" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Katalog</a>
+            <div class="font-semibold text-xs text-gray-400 uppercase tracking-wider px-3 pt-1 pb-1">Katalog</div>
+            <a href="/katalog/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
+            <a href="/katalog/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
+            <a href="/katalog/voda-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
             <a href="/cena" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cena</a>
             <a href="/cenova-kalkulace" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cenová kalkulace</a>
             <a href="/reference" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Reference</a>
@@ -219,7 +234,9 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
               <li><a href="/dotace" class="hover:text-white transition-colors">Dotace</a></li>
               <li><a href="/porovnani-nakladu" class="hover:text-white transition-colors">Porovnání nákladů</a></li>
               <li><a href="/reference" class="hover:text-white transition-colors">Reference</a></li>
-              <li><a href="/katalog" class="hover:text-white transition-colors">Katalog</a></li>
+              <li><a href="/katalog/vzduch-voda" class="hover:text-white transition-colors">Katalog vzduch–voda</a></li>
+              <li><a href="/katalog/zeme-voda" class="hover:text-white transition-colors">Katalog země–voda</a></li>
+              <li><a href="/katalog/voda-voda" class="hover:text-white transition-colors">Katalog voda–voda</a></li>
             </ul>
           </div>
 
