@@ -1,15 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import data from '../../data/katalog.json';
-
-const produkty = data.produkty.filter(p => p.typ === 'Země-voda');
 ---
 
-<Layout title="Katalog — Země-voda" description="Katalog tepelných čerpadel země-voda Master Therm. Modely, výkony, orientační ceny.">
+<Layout title="Katalog — Země-voda" description="Kompletní katalog tepelných čerpadel země-voda Master Therm. AquaMaster, AquaMaster Inverter, AquaMaster Inverter Combi. Výkony, COP, technické listy.">
   <PageHero
     title="Tepelná čerpadla země – voda"
-    subtitle="Katalog modelů Master Therm — země-voda"
+    subtitle="Kompletní katalog modelů Master Therm"
     breadcrumb={[{ label: 'Katalog', href: '/katalog' }, { label: 'Země – voda', href: '/katalog/zeme-voda' }]}
   />
 
@@ -22,35 +19,228 @@ const produkty = data.produkty.filter(p => p.typ === 'Země-voda');
         <a href="/katalog/voda-voda" class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-charcoal-500 hover:bg-gray-200 transition-colors">Voda-voda</a>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-gray-200">
-        <table class="w-full text-sm">
-          <thead class="bg-navy-700 text-white">
-            <tr>
-              <th class="text-left px-5 py-4 font-semibold">Model</th>
-              <th class="text-left px-5 py-4 font-semibold">Výkon</th>
-              <th class="text-left px-5 py-4 font-semibold">COP</th>
-              <th class="text-left px-5 py-4 font-semibold">Vhodnost</th>
-              <th class="text-left px-5 py-4 font-semibold">Cena (bez inst.)</th>
-              <th class="px-5 py-4"></th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100">
-            {produkty.map((p, i) => (
-              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                <td class="px-5 py-4 font-bold text-charcoal-900">{p.model}</td>
-                <td class="px-5 py-4 text-charcoal-700">{p.vykon}</td>
-                <td class="px-5 py-4 font-semibold text-navy-700">{p.cop}</td>
-                <td class="px-5 py-4 text-charcoal-500">{p.vhodnost}</td>
-                <td class="px-5 py-4 font-semibold text-charcoal-800">{p.cena}</td>
-                <td class="px-5 py-4">
-                  <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 mb-12">
+        <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-3">Produktové řady</div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#aquamaster" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">AquaMaster</a>
+          <span class="text-gray-300">|</span>
+          <a href="#aquamaster-inverter" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">AquaMaster Inverter</a>
+          <span class="text-gray-300">|</span>
+          <a href="#aquamaster-combi" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">AquaMaster Inverter Combi</a>
+        </div>
       </div>
-      <p class="text-xs text-charcoal-400 mt-4">{data.table_footnote}</p>
+
+      <!-- 1. AquaMaster -->
+      <div id="aquamaster" class="scroll-mt-24 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">AquaMaster</h2>
+            <p class="text-charcoal-500 text-sm">Scroll kompresor, 7,8–64,4 kW</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            Tepelné čerpadlo země-voda ve výkonu od 6 do 64 kW. Nerezové výměníky, oběhová čerpadla primárního i topného okruhu v ceně, velmi tichý chod scroll kompresoru. Velmi tiché, výkonné a spolehlivé tepelné čerpadlo.
+          </p>
+          <div class="space-y-2">
+            {[
+              'nerezové výměníky a oběhová čerpadla v ceně',
+              'velmi tichý chod scroll kompresoru',
+              'široký rozsah výkonů — optimální návrh pro každý dům',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'AquaMaster 22Z', vykon: '7,8 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq22z_410a_14511.pdf' },
+                { model: 'AquaMaster 26Z', vykon: '10,1 kW', cop: '4,4', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq26z_14511.pdf' },
+                { model: 'AquaMaster 30Z', vykon: '11,4 kW', cop: '4,4', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30z_14511.pdf' },
+                { model: 'AquaMaster 37Z', vykon: '14,1 kW', cop: '4,3', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq37z_14511.pdf' },
+                { model: 'AquaMaster 45Z', vykon: '17,2 kW', cop: '4,4', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq45z_14511.pdf' },
+                { model: 'AquaMaster 60Z', vykon: '23,1 kW', cop: '4,2', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq60z_14511.pdf' },
+                { model: 'AquaMaster 75Z', vykon: '28,2 kW', cop: '4,1', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq75z_14511.pdf' },
+                { model: 'AquaMaster 90Z', vykon: '33,2 kW', cop: '4,3', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq90z_14511.pdf' },
+                { model: 'AquaMaster 120.2Z', vykon: '46,8 kW', cop: '4,2', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq120_2z_14511.pdf' },
+                { model: 'AquaMaster 150.2Z', vykon: '57,7 kW', cop: '4,2', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq150_2z_14511.pdf' },
+                { model: 'AquaMaster 180.2Z', vykon: '64,4 kW', cop: '4,1', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq180_2z_14511.pdf' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3">
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Podmínky B0W35</p>
+      </div>
+
+      <!-- 2. AquaMaster Inverter -->
+      <div id="aquamaster-inverter" class="scroll-mt-24 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">AquaMaster Inverter</h2>
+            <p class="text-charcoal-500 text-sm">Inverterová technologie, 1–48 kW</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            AquaMaster Inverter s plynulou regulací výkonu podle potřeby domu. Ocenění FOR ARCH Grand Prix 2008. Optimální provozní ekonomika díky inverterové technologii.
+          </p>
+          <div class="space-y-2">
+            {[
+              'inverterová technologie — plynulá regulace výkonu',
+              'ocenění FOR ARCH Grand Prix 2008',
+              'rozsáhlá výbava a možnosti rozšíření',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'AquaMaster 17I', vykon: '1–5 kW', cop: '4,3', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq17i_bldc_14511_ehpa.pdf' },
+                { model: 'AquaMaster 22I', vykon: '2–7 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq22i_bldc_14511_ehpa.pdf' },
+                { model: 'AquaMaster 26I', vykon: '3–9 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq26i_bldc_14511_ehpa_062014.pdf' },
+                { model: 'AquaMaster 30I', vykon: '4–12 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30i_bldc_14511_ehpa.pdf' },
+                { model: 'AquaMaster 37I', vykon: '5–15 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq37i_bldc_14511_ehpa_062014.pdf' },
+                { model: 'AquaMaster 45I', vykon: '7–22 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq45i_bldc_14511_ehpa.pdf' },
+                { model: 'AquaMaster 60I', vykon: '7–35 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/MTTC_aq60i_bldc_14511_ehpa_072015.pdf' },
+                { model: 'AquaMaster 90I', vykon: '10–48 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/MTTC_aq90i_bldc_14511_ehpa_072015.pdf' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3">
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Podmínky B0W35, COP při 60 Hz</p>
+      </div>
+
+      <!-- 3. AquaMaster Inverter Combi -->
+      <div id="aquamaster-combi" class="scroll-mt-24 mb-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">AquaMaster Inverter Combi</h2>
+            <p class="text-charcoal-500 text-sm">All-in-one s integrovaným bojlerem, 2–15 kW</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            Konstrukce „all in one" s integrovaným nerezovým zásobníkem TUV, solárním výměníkem a inverterovým kompresorem. Moderní BLDC kompresor s variabilními oběhovými čerpadly a unikátním řídicím systémem. Volitelný modul pasivního chlazení.
+          </p>
+          <div class="space-y-2">
+            {[
+              'all-in-one — integrovaný nerezový bojler a solární výměník',
+              'minimální nároky na instalaci a zapojení',
+              'volitelné pasivní chlazení bez spotřeby energie',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'AquaMaster 22IC', vykon: '2–7 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq22ic_bldc_14511.pdf' },
+                { model: 'AquaMaster 26IC', vykon: '3–9 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq26ic_bldc_14511_ehpa_062014.pdf' },
+                { model: 'AquaMaster 30IC', vykon: '4–12 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30ic_bldc_14511.pdf' },
+                { model: 'AquaMaster 37IC', vykon: '5–15 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq37ic_bldc_14511_ehpa_062014.pdf' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3">
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Podmínky B0W35</p>
+      </div>
 
       <div class="mt-8">
         <a href="/tepelna-cerpadla/zeme-voda" class="text-sm font-semibold text-brand-500 hover:text-brand-600 flex items-center gap-1">
