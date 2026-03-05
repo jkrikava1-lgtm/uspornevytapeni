@@ -1,56 +1,318 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import data from '../../data/katalog.json';
-
-const produkty = data.produkty.filter(p => p.typ === 'Vzduch-voda');
 ---
 
-<Layout title="Katalog — Vzduch-voda" description="Katalog tepelných čerpadel vzduch-voda Master Therm. Modely, výkony, orientační ceny.">
+<Layout title="Katalog — Vzduch-voda" description="Kompletní katalog tepelných čerpadel vzduch-voda Master Therm. BoxAir Inverter, Split, Split Combi a velké objekty. Výkony, COP, ceny.">
   <PageHero
     title="Tepelná čerpadla vzduch – voda"
-    subtitle="Katalog modelů Master Therm — vzduch-voda"
+    subtitle="Kompletní katalog modelů Master Therm"
     breadcrumb={[{ label: 'Katalog', href: '/katalog' }, { label: 'Vzduch – voda', href: '/katalog/vzduch-voda' }]}
   />
 
   <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      <!-- Kategorie přepínač -->
       <div class="flex gap-3 mb-8">
         <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">Vzduch-voda</span>
         <a href="/katalog/zeme-voda" class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-charcoal-500 hover:bg-gray-200 transition-colors">Země-voda</a>
         <a href="/katalog/voda-voda" class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-charcoal-500 hover:bg-gray-200 transition-colors">Voda-voda</a>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-gray-200">
-        <table class="w-full text-sm">
-          <thead class="bg-navy-700 text-white">
-            <tr>
-              <th class="text-left px-5 py-4 font-semibold">Model</th>
-              <th class="text-left px-5 py-4 font-semibold">Výkon</th>
-              <th class="text-left px-5 py-4 font-semibold">COP</th>
-              <th class="text-left px-5 py-4 font-semibold">Vhodnost</th>
-              <th class="text-left px-5 py-4 font-semibold">Cena (bez inst.)</th>
-              <th class="px-5 py-4"></th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-100">
-            {produkty.map((p, i) => (
-              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                <td class="px-5 py-4 font-bold text-charcoal-900">{p.model}</td>
-                <td class="px-5 py-4 text-charcoal-700">{p.vykon}</td>
-                <td class="px-5 py-4 font-semibold text-navy-700">{p.cop}</td>
-                <td class="px-5 py-4 text-charcoal-500">{p.vhodnost}</td>
-                <td class="px-5 py-4 font-semibold text-charcoal-800">{p.cena}</td>
-                <td class="px-5 py-4">
-                  <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <!-- Rychlá navigace -->
+      <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 mb-12">
+        <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-3">Produktové řady</div>
+        <div class="flex flex-wrap gap-3">
+          <a href="#boxair-inverter" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">BoxAir Inverter</a>
+          <span class="text-gray-300">|</span>
+          <a href="#boxair-split" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">BoxAir Inverter Split</a>
+          <span class="text-gray-300">|</span>
+          <a href="#boxair-split-combi" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">BoxAir Inverter Split Combi</a>
+          <span class="text-gray-300">|</span>
+          <a href="#velke-objekty" class="text-sm font-semibold text-navy-700 hover:text-brand-500 transition-colors">Velké objekty</a>
+        </div>
       </div>
-      <p class="text-xs text-charcoal-400 mt-4">{data.table_footnote}</p>
+
+      <!-- 1. BoxAir Inverter -->
+      <div id="boxair-inverter" class="scroll-mt-24 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter</h2>
+            <p class="text-charcoal-500 text-sm">Venkovní kompakt, 2–35 kW</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+          <div class="lg:col-span-2">
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+              BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.
+            </p>
+            <div class="space-y-2">
+              {[
+                'nenáročná instalace a excelentní výkon bez poruch při zachování rozumné ceny',
+                'inverterová technologie — plynulá regulace výkonu podle potřeby domu',
+                'u většiny domů odpadá potřeba akumulační nádoby',
+                'ocenění Grand Prix For Arch 2007',
+              ].map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="bg-navy-700 rounded-xl p-5 text-white text-sm">
+            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-3">Dostupné výkony</div>
+            <div class="grid grid-cols-2 gap-2">
+              {['2–7 kW', '3–9 kW', '5–12 kW', '5–17 kW', '7–22 kW', '10–35 kW'].map(v => (
+                <div class="bg-navy-600 rounded-lg px-3 py-2 text-center text-xs font-semibold">{v}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="text-left px-5 py-3 font-semibold">Cena Standard</th>
+                <th class="text-left px-5 py-3 font-semibold">Cena Plus</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'BoxAir 22I', vykon: '2–7 kW', cop: '4,7', standard: '183 900 Kč', plus: '194 900 Kč' },
+                { model: 'BoxAir 26I', vykon: '3–9 kW', cop: '4,8', standard: '191 900 Kč', plus: '199 900 Kč' },
+                { model: 'BoxAir 30I', vykon: '5–12 kW', cop: '5,2', standard: '225 900 Kč', plus: '234 900 Kč' },
+                { model: 'BoxAir 37I', vykon: '5–17 kW', cop: '4,7', standard: '235 900 Kč', plus: '247 900 Kč' },
+                { model: 'BoxAir 45I', vykon: '7–22 kW', cop: '4,7', standard: '249 900 Kč', plus: '260 900 Kč' },
+                { model: 'BoxAir 60I', vykon: '10–35 kW', cop: '4,8', standard: '—', plus: '403 900 Kč' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.standard}</td>
+                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.plus}</td>
+                  <td class="px-5 py-3">
+                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
+      </div>
+
+      <!-- 2. BoxAir Inverter Split -->
+      <div id="boxair-split" class="scroll-mt-24 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter Split</h2>
+            <p class="text-charcoal-500 text-sm">Dělená konstrukce, 2–35 kW</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.
+          </p>
+          <div class="space-y-2 mb-4">
+            {[
+              'velmi variabilní systém s možností instalace rozsáhlé výbavy — potenciál TČ využit na 100 %',
+              'v základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody',
+              'používá se tam, kde je výhodné rozdělit instalaci na dvě části (venkovní jednotka na střeše, na konzoli na stěně apod.)',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'BoxAir 22IS', vykon: '2–7 kW', cop: '4,7', cena: '223 900 Kč' },
+                { model: 'BoxAir 26IS', vykon: '3–9 kW', cop: '4,6', cena: '232 900 Kč' },
+                { model: 'BoxAir 37IS', vykon: '5–17 kW', cop: '4,7', cena: '269 900 Kč' },
+                { model: 'BoxAir 45IS', vykon: '7–22 kW', cop: '4,7', cena: '289 900 Kč' },
+                { model: 'BoxAir 60IS', vykon: '10–35 kW', cop: '4,8', cena: '403 900 Kč' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
+                  <td class="px-5 py-3">
+                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
+      </div>
+
+      <!-- 3. BoxAir Inverter Split Combi -->
+      <div id="boxair-split-combi" class="scroll-mt-24 mb-16">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter Split Combi</h2>
+            <p class="text-charcoal-500 text-sm">Dělená konstrukce s integrovaným bojlerem, 2–17 kW</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.
+          </p>
+          <div class="space-y-2 mb-4">
+            {[
+              'výhodné řešení dělené konstrukce pro malé strojovny',
+              'integrovaný nerezový bojler 180 l — úspora místa',
+              'vysoká spolehlivost a bezporuchový provoz',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'BoxAir 22ISC', vykon: '2–7 kW', cop: '4,7', cena: '263 900 Kč' },
+                { model: 'BoxAir 26ISC', vykon: '3–9 kW', cop: '4,6', cena: '272 900 Kč' },
+                { model: 'BoxAir 37ISC', vykon: '5–17 kW', cop: '4,5', cena: '299 900 Kč' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
+                  <td class="px-5 py-3">
+                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
+      </div>
+
+      <!-- 4. Velké objekty -->
+      <div id="velke-objekty" class="scroll-mt-24 mb-8">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
+          <div>
+            <h2 class="text-xl font-extrabold text-charcoal-900">Tepelná čerpadla pro velké objekty</h2>
+            <p class="text-charcoal-500 text-sm">Výkon 10–35 kW, možnost kaskád</p>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.
+          </p>
+          <div class="space-y-2 mb-4">
+            {[
+              'kompaktní i split verze',
+              'možnost kaskádového zapojení — prakticky neomezený výkon',
+              'osvědčila se především kompaktní verze — za rozumné peníze velké výkony',
+            ].map(item => (
+              <div class="flex gap-2 items-start">
+                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <span class="text-charcoal-600 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-200">
+          <table class="w-full text-sm">
+            <thead class="bg-navy-700 text-white">
+              <tr>
+                <th class="text-left px-5 py-3 font-semibold">Model</th>
+                <th class="text-left px-5 py-3 font-semibold">Výkon</th>
+                <th class="text-left px-5 py-3 font-semibold">COP</th>
+                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
+                <th class="px-5 py-3"></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { model: 'BoxAir 60I (Inverter)', vykon: '10–35 kW', cop: '4,8', cena: '379 900 Kč' },
+                { model: 'BoxAir 60IS (Inverter)', vykon: '10–35 kW', cop: '4,8', cena: '403 900 Kč' },
+                { model: 'BoxAir 75Z', vykon: '30,8 kW', cop: '4,0', cena: '331 900 Kč' },
+                { model: 'EasyMaster 60Z', vykon: '24,6 kW', cop: '4,1', cena: '356 900 Kč' },
+                { model: 'EasyMaster 75Z', vykon: '30,8 kW', cop: '4,0', cena: '361 900 Kč' },
+              ].map((p, i) => (
+                <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
+                  <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
+                  <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
+                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
+                  <td class="px-5 py-3">
+                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
+      </div>
 
       <div class="mt-8">
         <a href="/tepelna-cerpadla/vzduch-voda" class="text-sm font-semibold text-brand-500 hover:text-brand-600 flex items-center gap-1">
