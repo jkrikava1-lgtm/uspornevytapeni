@@ -84,26 +84,22 @@ import PageHero from '../../components/PageHero.astro';
                 <th class="text-left px-5 py-3 font-semibold">Model</th>
                 <th class="text-left px-5 py-3 font-semibold">Výkon</th>
                 <th class="text-left px-5 py-3 font-semibold">COP</th>
-                <th class="text-left px-5 py-3 font-semibold">Cena Standard</th>
-                <th class="text-left px-5 py-3 font-semibold">Cena Plus</th>
                 <th class="px-5 py-3"></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22I', vykon: '2–7 kW', cop: '4,7', standard: '183 900 Kč', plus: '194 900 Kč' },
-                { model: 'BoxAir 26I', vykon: '3–9 kW', cop: '4,8', standard: '191 900 Kč', plus: '199 900 Kč' },
-                { model: 'BoxAir 30I', vykon: '5–12 kW', cop: '5,2', standard: '225 900 Kč', plus: '234 900 Kč' },
-                { model: 'BoxAir 37I', vykon: '5–17 kW', cop: '4,7', standard: '235 900 Kč', plus: '247 900 Kč' },
-                { model: 'BoxAir 45I', vykon: '7–22 kW', cop: '4,7', standard: '249 900 Kč', plus: '260 900 Kč' },
-                { model: 'BoxAir 60I', vykon: '10–35 kW', cop: '4,8', standard: '—', plus: '403 900 Kč' },
+                { model: 'BoxAir 22I', vykon: '2–7 kW', cop: '4,7' },
+                { model: 'BoxAir 26I', vykon: '3–9 kW', cop: '4,8' },
+                { model: 'BoxAir 30I', vykon: '5–12 kW', cop: '5,2' },
+                { model: 'BoxAir 37I', vykon: '5–17 kW', cop: '4,7' },
+                { model: 'BoxAir 45I', vykon: '7–22 kW', cop: '4,7' },
+                { model: 'BoxAir 60I', vykon: '10–35 kW', cop: '4,8' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
-                  <td class="px-5 py-3 text-charcoal-700">{p.standard}</td>
-                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.plus}</td>
                   <td class="px-5 py-3">
                     <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
                   </td>
@@ -112,7 +108,6 @@ import PageHero from '../../components/PageHero.astro';
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
       </div>
 
       <!-- 2. BoxAir Inverter Split -->
@@ -154,23 +149,21 @@ import PageHero from '../../components/PageHero.astro';
                 <th class="text-left px-5 py-3 font-semibold">Model</th>
                 <th class="text-left px-5 py-3 font-semibold">Výkon</th>
                 <th class="text-left px-5 py-3 font-semibold">COP</th>
-                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
                 <th class="px-5 py-3"></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22IS', vykon: '2–7 kW', cop: '4,7', cena: '223 900 Kč' },
-                { model: 'BoxAir 26IS', vykon: '3–9 kW', cop: '4,6', cena: '232 900 Kč' },
-                { model: 'BoxAir 37IS', vykon: '5–17 kW', cop: '4,7', cena: '269 900 Kč' },
-                { model: 'BoxAir 45IS', vykon: '7–22 kW', cop: '4,7', cena: '289 900 Kč' },
-                { model: 'BoxAir 60IS', vykon: '10–35 kW', cop: '4,8', cena: '403 900 Kč' },
+                { model: 'BoxAir 22IS', vykon: '2–7 kW', cop: '4,7' },
+                { model: 'BoxAir 26IS', vykon: '3–9 kW', cop: '4,6' },
+                { model: 'BoxAir 37IS', vykon: '5–17 kW', cop: '4,7' },
+                { model: 'BoxAir 45IS', vykon: '7–22 kW', cop: '4,7' },
+                { model: 'BoxAir 60IS', vykon: '10–35 kW', cop: '4,8' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
-                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
                   <td class="px-5 py-3">
                     <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
                   </td>
@@ -179,7 +172,6 @@ import PageHero from '../../components/PageHero.astro';
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
       </div>
 
       <!-- 3. BoxAir Inverter Split Combi -->
@@ -221,21 +213,19 @@ import PageHero from '../../components/PageHero.astro';
                 <th class="text-left px-5 py-3 font-semibold">Model</th>
                 <th class="text-left px-5 py-3 font-semibold">Výkon</th>
                 <th class="text-left px-5 py-3 font-semibold">COP</th>
-                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
                 <th class="px-5 py-3"></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22ISC', vykon: '2–7 kW', cop: '4,7', cena: '263 900 Kč' },
-                { model: 'BoxAir 26ISC', vykon: '3–9 kW', cop: '4,6', cena: '272 900 Kč' },
-                { model: 'BoxAir 37ISC', vykon: '5–17 kW', cop: '4,5', cena: '299 900 Kč' },
+                { model: 'BoxAir 22ISC', vykon: '2–7 kW', cop: '4,7' },
+                { model: 'BoxAir 26ISC', vykon: '3–9 kW', cop: '4,6' },
+                { model: 'BoxAir 37ISC', vykon: '5–17 kW', cop: '4,5' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
-                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
                   <td class="px-5 py-3">
                     <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
                   </td>
@@ -244,7 +234,6 @@ import PageHero from '../../components/PageHero.astro';
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
       </div>
 
       <!-- 4. Velké objekty -->
@@ -286,23 +275,21 @@ import PageHero from '../../components/PageHero.astro';
                 <th class="text-left px-5 py-3 font-semibold">Model</th>
                 <th class="text-left px-5 py-3 font-semibold">Výkon</th>
                 <th class="text-left px-5 py-3 font-semibold">COP</th>
-                <th class="text-left px-5 py-3 font-semibold">Cena (bez DPH)</th>
                 <th class="px-5 py-3"></th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 60I (Inverter)', vykon: '10–35 kW', cop: '4,8', cena: '379 900 Kč' },
-                { model: 'BoxAir 60IS (Inverter)', vykon: '10–35 kW', cop: '4,8', cena: '403 900 Kč' },
-                { model: 'BoxAir 75Z', vykon: '30,8 kW', cop: '4,0', cena: '331 900 Kč' },
-                { model: 'EasyMaster 60Z', vykon: '24,6 kW', cop: '4,1', cena: '356 900 Kč' },
-                { model: 'EasyMaster 75Z', vykon: '30,8 kW', cop: '4,0', cena: '361 900 Kč' },
+                { model: 'BoxAir 60I (Inverter)', vykon: '10–35 kW', cop: '4,8' },
+                { model: 'BoxAir 60IS (Inverter)', vykon: '10–35 kW', cop: '4,8' },
+                { model: 'BoxAir 75Z', vykon: '30,8 kW', cop: '4,0' },
+                { model: 'EasyMaster 60Z', vykon: '24,6 kW', cop: '4,1' },
+                { model: 'EasyMaster 75Z', vykon: '30,8 kW', cop: '4,0' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
-                  <td class="px-5 py-3 font-semibold text-charcoal-800">{p.cena}</td>
                   <td class="px-5 py-3">
                     <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
                   </td>
@@ -311,7 +298,6 @@ import PageHero from '../../components/PageHero.astro';
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-charcoal-400 mt-2">* Ceny bez DPH, podmínky A7W35</p>
       </div>
 
       <div class="mt-8">
