@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import data from '../../data/katalog.json';
+
+const produkty = data.produkty.filter(p => p.typ === 'Vzduch-voda');
+---
+
+<Layout title="Katalog — Vzduch-voda" description="Katalog tepelných čerpadel vzduch-voda Master Therm. Modely, výkony, orientační ceny.">
+  <PageHero
+    title="Tepelná čerpadla vzduch – voda"
+    subtitle="Katalog modelů Master Therm — vzduch-voda"
+    breadcrumb={[{ label: 'Katalog', href: '/katalog' }, { label: 'Vzduch – voda', href: '/katalog/vzduch-voda' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="flex gap-3 mb-8">
+        <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700">Vzduch-voda</span>
+        <a href="/katalog/zeme-voda" class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-charcoal-500 hover:bg-gray-200 transition-colors">Země-voda</a>
+        <a href="/katalog/voda-voda" class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-charcoal-500 hover:bg-gray-200 transition-colors">Voda-voda</a>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-gray-200">
+        <table class="w-full text-sm">
+          <thead class="bg-navy-700 text-white">
+            <tr>
+              <th class="text-left px-5 py-4 font-semibold">Model</th>
+              <th class="text-left px-5 py-4 font-semibold">Výkon</th>
+              <th class="text-left px-5 py-4 font-semibold">COP</th>
+              <th class="text-left px-5 py-4 font-semibold">Vhodnost</th>
+              <th class="text-left px-5 py-4 font-semibold">Cena (bez inst.)</th>
+              <th class="px-5 py-4"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {produkty.map((p, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-5 py-4 font-bold text-charcoal-900">{p.model}</td>
+                <td class="px-5 py-4 text-charcoal-700">{p.vykon}</td>
+                <td class="px-5 py-4 font-semibold text-navy-700">{p.cop}</td>
+                <td class="px-5 py-4 text-charcoal-500">{p.vhodnost}</td>
+                <td class="px-5 py-4 font-semibold text-charcoal-800">{p.cena}</td>
+                <td class="px-5 py-4">
+                  <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-charcoal-400 mt-4">{data.table_footnote}</p>
+
+      <div class="mt-8">
+        <a href="/tepelna-cerpadla/vzduch-voda" class="text-sm font-semibold text-brand-500 hover:text-brand-600 flex items-center gap-1">
+          Více o tepelných čerpadlech vzduch–voda
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Nevíte, který model vybrat?</h2>
+      <p class="text-charcoal-500 mb-8">Pomůžeme vám vybrat správný výkon i typ — zdarma.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+    </div>
+  </section>
+</Layout>
