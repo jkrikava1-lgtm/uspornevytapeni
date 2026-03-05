@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 ---
 
-<Layout title="Katalog — Vzduch-voda" description="Kompletní katalog tepelných čerpadel vzduch-voda Master Therm. BoxAir Inverter, Split, Split Combi a velké objekty. Výkony, COP, ceny.">
+<Layout title="Katalog — Vzduch-voda" description="Kompletní katalog tepelných čerpadel vzduch-voda Master Therm. BoxAir Inverter, Split, Split Combi a velké objekty. Výkony, COP, technické listy.">
   <PageHero
     title="Tepelná čerpadla vzduch – voda"
     subtitle="Kompletní katalog modelů Master Therm"
@@ -89,19 +89,22 @@ import PageHero from '../../components/PageHero.astro';
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22I', vykon: '2–7 kW', cop: '4,7' },
-                { model: 'BoxAir 26I', vykon: '3–9 kW', cop: '4,8' },
-                { model: 'BoxAir 30I', vykon: '5–12 kW', cop: '5,2' },
-                { model: 'BoxAir 37I', vykon: '5–17 kW', cop: '4,7' },
-                { model: 'BoxAir 45I', vykon: '7–22 kW', cop: '4,7' },
-                { model: 'BoxAir 60I', vykon: '10–35 kW', cop: '4,8' },
+                { model: 'BoxAir 22I', vykon: '2–7 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba22i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 26I', vykon: '3–9 kW', cop: '4,8', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba26i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 30I', vykon: '5–12 kW', cop: '5,2', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba30i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 37I', vykon: '5–17 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/05/ba37i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 45I', vykon: '7–22 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba45i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 60I', vykon: '10–35 kW', cop: '4,8', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
                   <td class="px-5 py-3">
-                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -154,18 +157,21 @@ import PageHero from '../../components/PageHero.astro';
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22IS', vykon: '2–7 kW', cop: '4,7' },
-                { model: 'BoxAir 26IS', vykon: '3–9 kW', cop: '4,6' },
-                { model: 'BoxAir 37IS', vykon: '5–17 kW', cop: '4,7' },
-                { model: 'BoxAir 45IS', vykon: '7–22 kW', cop: '4,7' },
-                { model: 'BoxAir 60IS', vykon: '10–35 kW', cop: '4,8' },
+                { model: 'BoxAir 22IS', vykon: '2–7 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba22is_bldc_ehpa.pdf' },
+                { model: 'BoxAir 26IS', vykon: '3–9 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba26is_bldc_ehpa.pdf' },
+                { model: 'BoxAir 37IS', vykon: '5–17 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba37is_14511_ehpa.pdf' },
+                { model: 'BoxAir 45IS', vykon: '7–22 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba45is_14511_ehpa.pdf' },
+                { model: 'BoxAir 60IS', vykon: '10–35 kW', cop: '4,8', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technický_list_ba60is_14511_ehpa.pdf' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
                   <td class="px-5 py-3">
-                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -218,16 +224,19 @@ import PageHero from '../../components/PageHero.astro';
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 22ISC', vykon: '2–7 kW', cop: '4,7' },
-                { model: 'BoxAir 26ISC', vykon: '3–9 kW', cop: '4,6' },
-                { model: 'BoxAir 37ISC', vykon: '5–17 kW', cop: '4,5' },
+                { model: 'BoxAir 22ISC', vykon: '2–7 kW', cop: '4,7', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/06/technický_list_ba22isc_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 26ISC', vykon: '3–9 kW', cop: '4,6', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/06/ba26ics_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 37ISC', vykon: '5–17 kW', cop: '4,5', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2013/06/technický_list_ba37isc_bldc_14511_ehpa.pdf' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
                   <td class="px-5 py-3">
-                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -280,18 +289,21 @@ import PageHero from '../../components/PageHero.astro';
             </thead>
             <tbody class="divide-y divide-gray-100">
               {[
-                { model: 'BoxAir 60I (Inverter)', vykon: '10–35 kW', cop: '4,8' },
-                { model: 'BoxAir 60IS (Inverter)', vykon: '10–35 kW', cop: '4,8' },
-                { model: 'BoxAir 75Z', vykon: '30,8 kW', cop: '4,0' },
-                { model: 'EasyMaster 60Z', vykon: '24,6 kW', cop: '4,1' },
-                { model: 'EasyMaster 75Z', vykon: '30,8 kW', cop: '4,0' },
+                { model: 'BoxAir 60I (Inverter)', vykon: '10–35 kW', cop: '4,8', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf' },
+                { model: 'BoxAir 60IS (Inverter)', vykon: '10–35 kW', cop: '4,8', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technický_list_ba60is_14511_ehpa.pdf' },
+                { model: 'BoxAir 75Z', vykon: '30,8 kW', cop: '4,0', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba75z_14511_032018.pdf' },
+                { model: 'EasyMaster 60Z', vykon: '24,6 kW', cop: '4,1', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em60z_14511.pdf' },
+                { model: 'EasyMaster 75Z', vykon: '30,8 kW', cop: '4,0', pdf: 'https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em75z_14511.pdf' },
               ].map((p, i) => (
                 <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td class="px-5 py-3 font-bold text-charcoal-900">{p.model}</td>
                   <td class="px-5 py-3 text-charcoal-700">{p.vykon}</td>
                   <td class="px-5 py-3 font-semibold text-navy-700">{p.cop}</td>
                   <td class="px-5 py-3">
-                    <a href="/poptavka" class="text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">Poptávka →</a>
+                    <a href={p.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs font-semibold text-brand-500 hover:text-brand-600 whitespace-nowrap">
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      Technický list
+                    </a>
                   </td>
                 </tr>
               ))}
