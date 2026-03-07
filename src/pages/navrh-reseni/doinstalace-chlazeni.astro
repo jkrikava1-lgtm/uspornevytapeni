@@ -15,30 +15,64 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše. Zdroj tepla se může změnit ve zdroj chladu.
+          Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše. Pokud máte topný systém s tepelným čerpadlem jako zdrojem tepla, máte k dispozici i chlazení. Stačí chlazení objednat a tepelné čerpadlo dokáže vyrobit z topné vody vodu chladící.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Máte podlahové topení?</h2>
-            <p class="text-charcoal-600 text-sm leading-relaxed">
-              Pokud máte podlahové topení, je to jednoduché a můžete chladit přímo podlahovým topným systémem.
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+              Pokud máte podlahové topení, je to jednoduché a můžete chladit přímo podlahovým topným systémem. Díky velké ploše podlahy dokáže snížit teplotu o několik stupňů.
             </p>
+            <div class="space-y-3">
+              {[
+                'Jedním systémem řešíte vytápění i chlazení',
+                'Prostorové termostaty s čidlem rosného bodu hlídají kondenzaci',
+                'Vhodné krytiny: dlažba, kámen, lino, vinyl, plovoucí podlahy',
+              ].map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Nemáte podlahové topení?</h2>
-            <p class="text-charcoal-600 text-sm leading-relaxed">
-              Pokud podlahové topení nemáte, lze chladit speciálními radiátory, tzv. fancoily.
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+              Pokud podlahové topení nemáte, lze chladit speciálními radiátory — fancoily. Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru.
             </p>
+            <div class="space-y-3">
+              {[
+                'Nejefektivnější metoda pro plnohodnotné chlazení',
+                'Lze umístit nad dveře nebo zabudovat v podhledu',
+                'Měděné potrubí ke každému fancoilu, vlastní oběhové čerpadlo',
+                'Malé odpadní potrubí pro odvod kondenzované vlhkosti',
+                'Investice cca 20 000 Kč za místnost',
+              ].map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
 
         <div class="bg-gray-100 rounded-xl p-6 mt-8">
           <p class="font-semibold text-sm text-charcoal-800">
-            Nechte si navrhnout komfortní chlazení. Posoudíme váš dům a navrhneme optimální řešení.
+            Nechte si navrhnout komfortní chlazení. Posoudíme váš dům a navrhneme optimální řešení — ať už podlahovým systémem, fancoily, nebo jejich kombinací.
           </p>
         </div>
       </div>
