@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 ---
 
-<Layout title="Dvoukompresorová tepelná čerpadla" description="Dvoukompresorová tepelná čerpadla — prakticky dvě čerpadla v jednom. Kaskádní provoz, vyvážený běh kompresorů.">
+<Layout title="Dvoukompresorová tepelná čerpadla" description="Dvoukompresorová tepelná čerpadla — prakticky dvě tepelná čerpadla v jedné konstrukci. Kaskádovité spínání, úspora prostoru.">
   <PageHero
     title="Dvoukompresorová tepelná čerpadla"
     subtitle="Prakticky dvě tepelná čerpadla v jedné konstrukci."
@@ -15,21 +15,25 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Dvoukompresorová tepelná čerpadla jsou prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádně připíná podle potřeby — při nižší zátěži pracuje jen jeden kompresor, při vyšší se zapojí i druhý.
+          Dvoukompresorové jednotky mají dva kompresory — prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádovitě připíná podle potřeby. Výhodou je úspora prostoru a vyvážený provoz obou kompresorů.
         </p>
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak to funguje?</h2>
 
-        <div class="space-y-5">
+        <div class="space-y-3">
           {[
-            'Při běžném provozu (přechodné období, ohřev TUV) pracuje pouze jeden kompresor — nízká spotřeba, tichý chod.',
-            'Když potřeba tepla vzroste (mrazy), automaticky se připne druhý kompresor a výkon se zdvojnásobí.',
-            'Řídící jednotka střídá kompresory tak, aby měly vyrovnané provozní hodiny — prodlužuje se životnost celého systému.',
-            'Úspora prostoru oproti dvěma samostatným jednotkám — jedno připojení, jedna regulace.',
-          ].map((item, i) => (
-            <div class="flex gap-4 items-start">
-              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
-              <p class="text-charcoal-600 text-sm leading-relaxed pt-1">{item}</p>
+            'Při běžném provozu (přechodné období, ohřev TUV) pracuje pouze jeden kompresor.',
+            'Když potřeba tepla vzroste (mrazy), kaskádovitě se připne druhý kompresor.',
+            'Řídící jednotka střídá kompresory tak, aby měly vyrovnaný počet provozních hodin.',
+            'Úspora prostoru oproti dvěma samostatným jednotkám.',
+          ].map(item => (
+            <div class="flex gap-2 items-start">
+              <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-charcoal-600 text-sm">{item}</span>
             </div>
           ))}
         </div>
@@ -37,33 +41,14 @@ import PageHero from '../../components/PageHero.astro';
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Doporučené modely</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
-              </svg>
-            </div>
             <h3 class="text-lg font-bold text-charcoal-900 mb-2">AirMaster 2</h3>
-            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo vzduch-voda. Dva nezávislé kompresory s kaskádním řízením pro maximální efektivitu.</p>
+            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo vzduch-voda.</p>
           </div>
-
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
             <h3 class="text-lg font-bold text-charcoal-900 mb-2">AquaMaster</h3>
-            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo země-voda. Stabilní výkon díky geotermální energii v kombinaci s dvěma kompresory.</p>
+            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo země-voda.</p>
           </div>
-
-        </div>
-
-        <div class="bg-navy-700 rounded-xl p-6 text-white mt-8">
-          <p class="font-semibold text-sm">
-            Dvoukompresorové řešení je ideální pro objekty, které potřebují vyšší výkon, ale nemají prostor pro dvě samostatné jednotky. Kaskádní řízení zajišťuje maximální účinnost a dlouhou životnost.
-          </p>
         </div>
       </div>
 
