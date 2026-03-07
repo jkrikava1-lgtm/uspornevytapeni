@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Kombinace topných okruhů" description="Topné a chladící okruhy lze kombinovat — podlahové topení s radiátory, chlazení s ohřevem bazénu. Každý okruh řídí elektronický regulátor.">
+  <PageHero
+    title="Kombinace topných okruhů"
+    subtitle="Topné a chladící okruhy lze libovolně kombinovat."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Kombinace topných okruhů', href: '/navrh-reseni/kombinace-topnych-okruhu' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Topné a chladící okruhy lze kombinovat. Například můžete současně chladit dům a vytápět bazén, nebo kombinovat radiátory s podlahovým topením v různých částech domu.
+        </p>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak to funguje?</h2>
+
+        <div class="space-y-3">
+          {[
+            'Akumulační nádoba pojímá teplo z více zdrojů — tepelné čerpadlo, kotel, krb, plynový kotel.',
+            'Každý topný nebo chladící okruh má vlastní oběhové čerpadlo.',
+            'Elektronický regulátor řídí jednotlivé okruhy nezávisle na sobě.',
+            'Systém automaticky rozhoduje, který okruh je aktivní podle aktuální potřeby.',
+          ].map(item => (
+            <div class="flex gap-2 items-start">
+              <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-charcoal-600 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Příklady kombinací</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Podlahové topení + radiátory</h3>
+            <p class="text-charcoal-600 text-sm leading-relaxed">
+              V přízemí podlahové topení, v patře radiátory. Každý okruh pracuje s jinou teplotou topné vody — regulátor je řídí nezávisle.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Chlazení + ohřev bazénu</h3>
+            <p class="text-charcoal-600 text-sm leading-relaxed">
+              V létě tepelné čerpadlo chladí dům a současně ohřívá bazén. Odpadní teplo z chlazení se využije pro ohřev vody v bazénu.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Tepelné čerpadlo + krb</h3>
+            <p class="text-charcoal-600 text-sm leading-relaxed">
+              Teplo z krbové vložky se ukládá do akumulační nádoby a doplňuje tepelné čerpadlo. Systém automaticky přepíná mezi zdroji.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-2">Více zdrojů tepla</h3>
+            <p class="text-charcoal-600 text-sm leading-relaxed">
+              Akumulační nádoba pojímá teplo z tepelného čerpadla, kotle i krbu. Regulátor vybírá nejekonomičtější zdroj podle aktuálních podmínek.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>
