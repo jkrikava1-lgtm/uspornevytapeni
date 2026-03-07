@@ -35,9 +35,13 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
             <a href="/poptavka" class="inline-flex items-center px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
               Poptávka
             </a>
-            <button id="mobile-menu-toggle" class="p-2 text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md" aria-label="Otevřít menu">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="mobile-menu-toggle" class="relative w-9 h-9 flex items-center justify-center text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md" aria-label="Otevřít menu" aria-expanded="false">
+              <span class="sr-only">Menu</span>
+              <svg id="icon-hamburger" class="w-5 h-5 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg id="icon-close" class="w-5 h-5 absolute transition-opacity duration-200 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
               </svg>
             </button>
           </div>
@@ -146,40 +150,98 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
-        <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
-          <div class="font-semibold text-xs text-gray-400 uppercase tracking-wider px-3 pt-2 pb-1">Návrh řešení</div>
-          <a href="/navrh-reseni/novostavba" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Novostavba</a>
-          <a href="/navrh-reseni/stavajici-dum" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Stávající dům</a>
-          <a href="/navrh-reseni/velky-vykon" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Velký výkon</a>
-          <div class="font-semibold text-xs text-gray-400 uppercase tracking-wider px-3 pt-3 pb-1">Tepelná čerpadla</div>
-          <a href="/tepelna-cerpadla/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
-          <a href="/tepelna-cerpadla/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
-          <a href="/tepelna-cerpadla/voda-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
-          <div class="font-semibold text-xs text-gray-400 uppercase tracking-wider px-3 pt-3 pb-1">Chytré funkce</div>
-          <a href="/chytre-funkce/ovladani-systemu" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Ovládání systému</a>
-          <a href="/chytre-funkce/online-ovladani" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Online ovládání</a>
-          <a href="/chytre-funkce/inverter" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Technologie inverter</a>
-          <a href="/chytre-funkce/desuperheater" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Desuperheater</a>
-          <a href="/chytre-funkce/fotovoltaika" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Spolupráce s fotovoltaikou</a>
-          <div class="pt-3 border-t border-gray-100 space-y-1">
-            <div class="font-semibold text-xs text-gray-400 uppercase tracking-wider px-3 pt-1 pb-1">Katalog</div>
-            <a href="/katalog/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
-            <a href="/katalog/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
-            <a href="/katalog/voda-voda" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
-            <a href="/cena" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cena</a>
-            <a href="/cenova-kalkulace" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cenová kalkulace</a>
-            <a href="/reference" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Reference</a>
-            <a href="/dotace" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Dotace</a>
-            <a href="/o-nas" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">O nás</a>
-            <a href="/kontakty" class="block px-3 py-2 text-sm text-charcoal-700 hover:text-brand-500 hover:bg-gray-50 rounded-md">Kontakty</a>
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white overflow-y-auto" style="max-height:calc(100dvh - 64px);">
+        <nav class="max-w-7xl mx-auto px-4 py-3">
+
+          <!-- Návrh řešení -->
+          <div class="border-b border-gray-100" data-mobile-accordion>
+            <button class="flex items-center justify-between w-full px-3 py-3 text-sm font-semibold text-charcoal-800" data-mobile-trigger>
+              Návrh řešení
+              <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="hidden pb-2 pl-3" data-mobile-panel>
+              <a href="/navrh-reseni/novostavba" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Novostavba</a>
+              <a href="/navrh-reseni/stavajici-dum" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Stávající dům</a>
+              <a href="/navrh-reseni/velky-vykon" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Velký výkon</a>
+            </div>
           </div>
-          <div class="pt-3">
-            <a href="/poptavka" class="block w-full text-center px-4 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
+
+          <!-- Tepelná čerpadla -->
+          <div class="border-b border-gray-100" data-mobile-accordion>
+            <button class="flex items-center justify-between w-full px-3 py-3 text-sm font-semibold text-charcoal-800" data-mobile-trigger>
+              Tepelná čerpadla
+              <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="hidden pb-2 pl-3" data-mobile-panel>
+              <a href="/tepelna-cerpadla/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
+              <a href="/tepelna-cerpadla/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
+              <a href="/tepelna-cerpadla/voda-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
+            </div>
+          </div>
+
+          <!-- Chytré funkce -->
+          <div class="border-b border-gray-100" data-mobile-accordion>
+            <button class="flex items-center justify-between w-full px-3 py-3 text-sm font-semibold text-charcoal-800" data-mobile-trigger>
+              Chytré funkce
+              <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="hidden pb-2 pl-3" data-mobile-panel>
+              <a href="/chytre-funkce/ovladani-systemu" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Ovládání systému</a>
+              <a href="/chytre-funkce/online-ovladani" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Online ovládání</a>
+              <a href="/chytre-funkce/inverter" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Technologie inverter</a>
+              <a href="/chytre-funkce/desuperheater" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Desuperheater</a>
+              <a href="/chytre-funkce/fotovoltaika" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Spolupráce s fotovoltaikou</a>
+            </div>
+          </div>
+
+          <!-- Katalog -->
+          <div class="border-b border-gray-100" data-mobile-accordion>
+            <button class="flex items-center justify-between w-full px-3 py-3 text-sm font-semibold text-charcoal-800" data-mobile-trigger>
+              Katalog
+              <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="hidden pb-2 pl-3" data-mobile-panel>
+              <a href="/katalog/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
+              <a href="/katalog/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
+              <a href="/katalog/voda-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
+            </div>
+          </div>
+
+          <!-- Cena -->
+          <div class="border-b border-gray-100" data-mobile-accordion>
+            <button class="flex items-center justify-between w-full px-3 py-3 text-sm font-semibold text-charcoal-800" data-mobile-trigger>
+              Cena
+              <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="hidden pb-2 pl-3" data-mobile-panel>
+              <a href="/cena" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cena tepelného čerpadla</a>
+              <a href="/cenova-kalkulace" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cenová kalkulace</a>
+            </div>
+          </div>
+
+          <!-- Přímé odkazy -->
+          <a href="/reference" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Reference</a>
+          <a href="/dotace" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Dotace</a>
+          <a href="/o-nas" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">O nás</a>
+          <a href="/kontakty" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Kontakty</a>
+
+          <!-- CTA -->
+          <div class="pt-4 pb-2">
+            <a href="/poptavka" class="block w-full text-center px-4 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
               Nezávazná poptávka
             </a>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -260,8 +322,37 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
     <script>
       const toggle = document.getElementById('mobile-menu-toggle');
       const menu = document.getElementById('mobile-menu');
+      const iconHamburger = document.getElementById('icon-hamburger');
+      const iconClose = document.getElementById('icon-close');
       toggle?.addEventListener('click', () => {
+        const isOpen = !menu?.classList.contains('hidden');
         menu?.classList.toggle('hidden');
+        if (isOpen) {
+          iconHamburger?.classList.remove('opacity-0');
+          iconClose?.classList.add('opacity-0');
+          toggle.setAttribute('aria-expanded', 'false');
+        } else {
+          iconHamburger?.classList.add('opacity-0');
+          iconClose?.classList.remove('opacity-0');
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Mobile accordion
+      document.querySelectorAll('[data-mobile-accordion]').forEach(acc => {
+        const trigger = acc.querySelector('[data-mobile-trigger]');
+        const panel = acc.querySelector('[data-mobile-panel]') as HTMLElement | null;
+        const chevron = acc.querySelector('[data-mobile-chevron]') as HTMLElement | null;
+        trigger?.addEventListener('click', () => {
+          const isOpen = !panel?.classList.contains('hidden');
+          if (isOpen) {
+            panel?.classList.add('hidden');
+            chevron?.style.setProperty('transform', 'rotate(0deg)');
+          } else {
+            panel?.classList.remove('hidden');
+            chevron?.style.setProperty('transform', 'rotate(180deg)');
+          }
+        });
       });
       const header = document.getElementById('header');
       window.addEventListener('scroll', () => {
