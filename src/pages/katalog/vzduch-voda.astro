@@ -36,24 +36,24 @@ import PageHero from '../../components/PageHero.astro';
 
       <!-- 1. BoxAir Inverter -->
       <div id="boxair-inverter" class="scroll-mt-24 mb-16">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-          <div>
-            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter</h2>
-            <p class="text-charcoal-500 text-sm">Venkovní kompakt, 2–35 kW</p>
+        <!-- Ilustrační banner -->
+        <div class="relative h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-navy-700 to-navy-900">
+          <img src="/images/products/boxair-inverter.png" alt="" class="absolute right-4 bottom-0 h-52 object-contain opacity-80 drop-shadow-2xl" />
+          <div class="absolute inset-0 bg-gradient-to-r from-navy-800 via-navy-800/80 to-transparent"></div>
+          <div class="relative z-10 flex items-center gap-4 p-6 h-full">
+            <div class="w-10 h-10 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-white">BoxAir Inverter</h2>
+              <p class="text-navy-200 text-sm mt-1">Venkovní kompakt · 2–35 kW</p>
+            </div>
           </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
           <div class="lg:col-span-2">
-            <div class="flex gap-6 mb-4">
-              <div class="flex-1">
-                <p class="text-charcoal-600 text-sm leading-relaxed">
-                  BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.
-                </p>
-              </div>
-              <img src="/images/products/boxair-inverter.png" alt="BoxAir Inverter" class="w-36 h-36 object-contain flex-shrink-0 hidden sm:block" />
-            </div>
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+              BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.
+            </p>
             <div class="space-y-2">
               {[
                 'nenáročná instalace a excelentní výkon bez poruch při zachování rozumné ceny',
@@ -120,23 +120,23 @@ import PageHero from '../../components/PageHero.astro';
 
       <!-- 2. BoxAir Inverter Split -->
       <div id="boxair-split" class="scroll-mt-24 mb-16">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
-          <div>
-            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter Split</h2>
-            <p class="text-charcoal-500 text-sm">Dělená konstrukce, 2–35 kW</p>
+        <!-- Ilustrační banner -->
+        <div class="relative h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-brand-600 to-brand-800">
+          <img src="/images/products/boxair-split.png" alt="" class="absolute right-4 bottom-0 h-52 object-contain opacity-80 drop-shadow-2xl" />
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-700 via-brand-700/80 to-transparent"></div>
+          <div class="relative z-10 flex items-center gap-4 p-6 h-full">
+            <div class="w-10 h-10 bg-white text-brand-600 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-white">BoxAir Inverter Split</h2>
+              <p class="text-brand-100 text-sm mt-1">Dělená konstrukce · 2–35 kW</p>
+            </div>
           </div>
         </div>
 
         <div class="mb-6">
-          <div class="flex gap-6 mb-4">
-            <div class="flex-1">
-              <p class="text-charcoal-600 text-sm leading-relaxed">
-                BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.
-              </p>
-            </div>
-            <img src="/images/products/boxair-split.png" alt="BoxAir Inverter Split" class="w-36 h-36 object-contain flex-shrink-0 hidden sm:block" />
-          </div>
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.
+          </p>
           <div class="space-y-2 mb-4">
             {[
               'velmi variabilní systém s možností instalace rozsáhlé výbavy — potenciál TČ využit na 100 %',
@@ -192,23 +192,23 @@ import PageHero from '../../components/PageHero.astro';
 
       <!-- 3. BoxAir Inverter Split Combi -->
       <div id="boxair-split-combi" class="scroll-mt-24 mb-16">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
-          <div>
-            <h2 class="text-xl font-extrabold text-charcoal-900">BoxAir Inverter Split Combi</h2>
-            <p class="text-charcoal-500 text-sm">Dělená konstrukce s integrovaným bojlerem, 2–17 kW</p>
+        <!-- Ilustrační banner -->
+        <div class="relative h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-navy-700 to-navy-900">
+          <img src="/images/products/boxair-split-combi.png" alt="" class="absolute right-4 bottom-0 h-52 object-contain opacity-80 drop-shadow-2xl" />
+          <div class="absolute inset-0 bg-gradient-to-r from-navy-800 via-navy-800/80 to-transparent"></div>
+          <div class="relative z-10 flex items-center gap-4 p-6 h-full">
+            <div class="w-10 h-10 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">3</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-white">BoxAir Inverter Split Combi</h2>
+              <p class="text-navy-200 text-sm mt-1">S integrovaným bojlerem · 2–17 kW</p>
+            </div>
           </div>
         </div>
 
         <div class="mb-6">
-          <div class="flex gap-6 mb-4">
-            <div class="flex-1">
-              <p class="text-charcoal-600 text-sm leading-relaxed">
-                BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.
-              </p>
-            </div>
-            <img src="/images/products/boxair-split-combi.png" alt="BoxAir Inverter Split Combi" class="w-36 h-36 object-contain flex-shrink-0 hidden sm:block" />
-          </div>
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.
+          </p>
           <div class="space-y-2 mb-4">
             {[
               'výhodné řešení dělené konstrukce pro malé strojovny',
@@ -262,23 +262,23 @@ import PageHero from '../../components/PageHero.astro';
 
       <!-- 4. Velké objekty -->
       <div id="velke-objekty" class="scroll-mt-24 mb-8">
-        <div class="flex items-center gap-4 mb-4">
-          <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
-          <div>
-            <h2 class="text-xl font-extrabold text-charcoal-900">Tepelná čerpadla pro velké objekty</h2>
-            <p class="text-charcoal-500 text-sm">Výkon 10–35 kW, možnost kaskád</p>
+        <!-- Ilustrační banner -->
+        <div class="relative h-48 rounded-2xl overflow-hidden mb-6 bg-gradient-to-br from-brand-600 to-brand-800">
+          <img src="/images/products/boxair-90ip.png" alt="" class="absolute right-4 bottom-0 h-52 object-contain opacity-80 drop-shadow-2xl" />
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-700 via-brand-700/80 to-transparent"></div>
+          <div class="relative z-10 flex items-center gap-4 p-6 h-full">
+            <div class="w-10 h-10 bg-white text-brand-600 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">4</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-white">Tepelná čerpadla pro velké objekty</h2>
+              <p class="text-brand-100 text-sm mt-1">Výkon 10–35 kW · Možnost kaskád</p>
+            </div>
           </div>
         </div>
 
         <div class="mb-6">
-          <div class="flex gap-6 mb-4">
-            <div class="flex-1">
-              <p class="text-charcoal-600 text-sm leading-relaxed">
-                Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.
-              </p>
-            </div>
-            <img src="/images/products/boxair-90ip.png" alt="BoxAir pro velké objekty" class="w-36 h-36 object-contain flex-shrink-0 hidden sm:block" />
-          </div>
+          <p class="text-charcoal-600 text-sm leading-relaxed mb-4">
+            Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.
+          </p>
           <div class="space-y-2 mb-4">
             {[
               'kompaktní i split verze',
