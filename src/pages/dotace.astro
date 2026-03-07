@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/dotace.json';
 ---
 
-<Layout title="Dotace na tepelné čerpadlo" description="Jak získat dotaci až 200 000 Kč na tepelné čerpadlo. Nová zelená úsporám, podmínky, postup žádosti. Pomůžeme vám od začátku do konce.">
+<Layout title="Dotace na tepelné čerpadlo" description="Dotace na tepelná čerpadla — Nová zelená úsporám 2026. Informace o programu, podmínky, jak se připravit. Pomůžeme vám celý proces zvládnout.">
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
@@ -14,64 +14,64 @@ import data from '../data/dotace.json';
   <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Přehled dotací -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        {[
-          { program: data.program1_name, castka: data.program1_castka, desc: data.program1_desc },
-          { program: data.program2_name, castka: data.program2_castka, desc: data.program2_desc },
-          { program: data.program3_name, castka: data.program3_castka, desc: data.program3_desc },
-        ].map(item => (
-          <div class="bg-white rounded-xl p-7 border-2 border-gray-200 hover:border-brand-300 transition-colors">
-            <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">{item.program}</div>
-            <div class="text-3xl font-extrabold text-navy-700 mb-3">{item.castka}</div>
-            <p class="text-sm text-charcoal-500 leading-relaxed">{item.desc}</p>
-          </div>
-        ))}
+      <!-- Upozornění -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-12">
+        <div class="flex gap-3">
+          <svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-sm text-amber-800 leading-relaxed">{data.intro}</p>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+
+        <!-- Co zatím víme -->
         <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.conditions_headline}</h2>
-          <div class="space-y-4">
-            {[
-              { title: data.condition1_title, desc: data.condition1_desc },
-              { title: data.condition2_title, desc: data.condition2_desc },
-              { title: data.condition3_title, desc: data.condition3_desc },
-              { title: data.condition4_title, desc: data.condition4_desc },
-            ].map(item => (
-              <div class="flex gap-4">
-                <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.what_we_know_headline}</h2>
+          <div class="space-y-3">
+            {data.what_we_know.map(item => (
+              <div class="flex gap-3 items-start">
+                <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
-                <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
-                  <div class="text-sm text-charcoal-500 mt-0.5">{item.desc}</div>
-                </div>
+                <span class="text-sm text-charcoal-600 leading-relaxed">{item}</span>
               </div>
             ))}
           </div>
         </div>
 
+        <!-- Jak se připravit -->
         <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.process_headline}</h2>
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.how_to_prepare_headline}</h2>
           <div class="space-y-5">
-            {[
-              { krok: data.step1_krok, title: data.step1_title, desc: data.step1_desc },
-              { krok: data.step2_krok, title: data.step2_title, desc: data.step2_desc },
-              { krok: data.step3_krok, title: data.step3_title, desc: data.step3_desc },
-              { krok: data.step4_krok, title: data.step4_title, desc: data.step4_desc },
-            ].map(item => (
+            {data.steps.map(step => (
               <div class="flex gap-4">
-                <div class="w-8 h-8 bg-navy-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{item.krok}</div>
+                <div class="w-8 h-8 bg-navy-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{step.krok}</div>
                 <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
-                  <div class="text-sm text-charcoal-500 mt-0.5">{item.desc}</div>
+                  <div class="font-semibold text-charcoal-900 text-sm">{step.title}</div>
+                  <div class="text-sm text-charcoal-500 mt-0.5">{step.desc}</div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      <!-- Předchozí programy -->
+      <div>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.previous_headline}</h2>
+        <p class="text-sm text-charcoal-500 mb-6">Pro orientaci uvádíme přehled dotací z předchozích let. Nový program bude pravděpodobně podobný.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {data.previous_programs.map(item => (
+            <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
+              <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{item.program}</div>
+              <div class="text-3xl font-extrabold text-navy-700 mb-3">{item.castka}</div>
+              <p class="text-sm text-charcoal-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

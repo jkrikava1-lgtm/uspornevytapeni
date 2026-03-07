@@ -1,38 +1,57 @@
 {
-  "hero_title": "Dotace na tepelné čerpadlo",
-  "hero_subtitle": "Stát přispívá na výměnu zastaralého zdroje tepla. Dotace až 200 000 Kč — pomůžeme vám celý proces zvládnout bez stresu.",
-  "program1_name": "Nová zelená úsporám",
-  "program1_castka": "až 200 000 Kč",
-  "program1_desc": "Hlavní dotační program pro rodinné domy. Pokrývá tepelné čerpadlo vzduch-voda i země-voda.",
-  "program2_name": "OPŽP — Kotlíkové dotace",
-  "program2_castka": "až 180 000 Kč",
-  "program2_desc": "Pro domácnosti s nízkými příjmy. Výměna kotle za tepelné čerpadlo nebo jiný ekologický zdroj.",
-  "program3_name": "Kombinace programů",
-  "program3_castka": "až 380 000 Kč",
-  "program3_desc": "Za určitých podmínek lze čerpat z více programů najednou. Pomůžeme zjistit nárok.",
-  "conditions_headline": "Podmínky pro získání dotace",
-  "condition1_title": "Rodinný nebo bytový dům",
-  "condition1_desc": "Objekt musí být v ČR a sloužit k trvalému bydlení.",
-  "condition2_title": "Výměna za zastaralý zdroj",
-  "condition2_desc": "Nahrazujete kotel na fosilní paliva, elektrický kotel nebo jinou neefektivní technologii.",
-  "condition3_title": "Certifikované zařízení",
-  "condition3_desc": "Tepelné čerpadlo musí být na Seznamu výrobků a technologií (SVT) — vše, co dodáváme, splňuje podmínky.",
-  "condition4_title": "Odborná instalace",
-  "condition4_desc": "Instalaci musí provést certifikovaná firma — to jsme my.",
-  "process_headline": "Jak probíhá proces",
-  "step1_krok": "1",
-  "step1_title": "Zjistíme váš nárok",
-  "step1_desc": "Bezplatně posoudíme, na jaké dotace máte nárok a v jaké výši.",
-  "step2_krok": "2",
-  "step2_title": "Navrhneme systém",
-  "step2_desc": "Připravíme technickou dokumentaci, která je součástí žádosti.",
-  "step3_krok": "3",
-  "step3_title": "Podáme žádost",
-  "step3_desc": "Pomůžeme vyplnit a podat žádost na SFŽP nebo krajský úřad.",
-  "step4_krok": "4",
-  "step4_title": "Instalace a doklady",
-  "step4_desc": "Po schválení provedeme instalaci a doložíme vše potřebné pro vyplacení dotace.",
-  "cta_headline": "Zjistěte svůj nárok zdarma",
-  "cta_text": "Zavolejte nebo pošlete poptávku — vyhodnotíme dotační možnosti do 24 hodin.",
+  "hero_title": "Dotace na tepelná čerpadla",
+  "hero_subtitle": "Tepelná čerpadla v programu „Nová zelená úsporám 2026"",
+  "intro": "V současné době čekáme na zahájení nové formy dotačního programu Nová zelená úsporám. Jakmile budou známy podrobnosti, aktualizujeme tuto stránku. Mezitím pro vás shrnujeme, co zatím víme a jak se připravit.",
+  "what_we_know_headline": "Co zatím víme",
+  "what_we_know": [
+    "Program Nová zelená úsporám pokračuje i v roce 2026",
+    "Dotace se budou vztahovat na výměnu starých zdrojů tepla za tepelná čerpadla",
+    "Podporovány budou systémy vzduch-voda, země-voda i voda-voda",
+    "Očekává se podpora i pro novostavby s tepelným čerpadlem",
+    "Certifikované zařízení na Seznamu výrobků a technologií (SVT) bude podmínkou — vše, co dodáváme, splňuje"
+  ],
+  "how_to_prepare_headline": "Jak se připravit už teď",
+  "steps": [
+    {
+      "krok": "1",
+      "title": "Nechte si zdarma posoudit dům",
+      "desc": "Vyhodnotíme stav vytápění a navrhneme optimální řešení s tepelným čerpadlem."
+    },
+    {
+      "krok": "2",
+      "title": "Připravíme projekt",
+      "desc": "Technická dokumentace je základ každé žádosti — budete mít náskok."
+    },
+    {
+      "krok": "3",
+      "title": "Podáme žádost hned po startu",
+      "desc": "Jakmile se program otevře, podáme žádost jako jedni z prvních."
+    },
+    {
+      "krok": "4",
+      "title": "Instalace a vyplacení dotace",
+      "desc": "Provedeme instalaci a doložíme vše potřebné pro vyplacení dotace."
+    }
+  ],
+  "previous_headline": "Dotace v předchozích programech",
+  "previous_programs": [
+    {
+      "program": "Nová zelená úsporám",
+      "castka": "až 200 000 Kč",
+      "desc": "Hlavní dotační program pro rodinné domy. Pokrýval tepelné čerpadlo vzduch-voda i země-voda."
+    },
+    {
+      "program": "OPŽP — Kotlíkové dotace",
+      "castka": "až 180 000 Kč",
+      "desc": "Pro domácnosti s nízkými příjmy. Výměna kotle za tepelné čerpadlo nebo jiný ekologický zdroj."
+    },
+    {
+      "program": "Kombinace programů",
+      "castka": "až 380 000 Kč",
+      "desc": "Za určitých podmínek bylo možné čerpat z více programů najednou."
+    }
+  ],
+  "cta_headline": "Chcete být připraveni?",
+  "cta_text": "Pošlete poptávku — připravíme vám projekt, abyste mohli žádat hned po otevření programu.",
   "cta_button": "Odeslat poptávku"
 }
