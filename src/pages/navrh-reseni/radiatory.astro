@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Radiátory pro tepelné čerpadlo" description="Radiátory pro tepelné čerpadlo — správné dimenzování pro nízkoteplotní provoz. Výpočet výkonu zdarma.">
+  <PageHero
+    title="Radiátory"
+    subtitle="Správné dimenzování pro maximální úsporu."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Radiátory', href: '/navrh-reseni/radiatory' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Radiátory se dříve běžně dimenzovaly na teplotu topné vody 75 °C i vyšší. Moderní topné systémy pracují jako nízkoteplotní, teplota topné vody se pak pohybuje maximálně do 55 °C.
+        </p>
+        <p class="text-charcoal-600 leading-relaxed">
+          Nízkoteplotní radiátory nejsou nijak zvláštní, pouze jsou větší. Je třeba proto systém nadimenzovat přesně a účelně tak, aby velikost radiátorů byla dostatečná.
+        </p>
+
+        <div class="bg-navy-700 rounded-xl p-6 text-white">
+          <p class="font-semibold">
+            Při použití tepelného čerpadla platí, že na čím nižší teplotu topíte topnou vodu, tím máte ekonomičtější provoz. Tedy čím větší radiátory, tím lepší.
+          </p>
+        </div>
+
+        <p class="text-charcoal-600 leading-relaxed">
+          V moderních domech, které mají výborné izolační vlastnosti, se nemusíte bát, že radiátor bude obrovský. Výpočtem vám zajistíme správné dimenzování i rozumnou velikost radiátorů.
+        </p>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

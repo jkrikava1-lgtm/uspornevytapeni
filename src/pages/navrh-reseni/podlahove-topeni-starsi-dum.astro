@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Podlahové topení ve starším domě" description="Podlahové topení ve starším domě — jak doinstalovat podlahovku při rekonstrukci. Postup krok za krokem.">
+  <PageHero
+    title="Podlahové topení ve starším domě"
+    subtitle="Jak doinstalovat podlahovku, když máte podlahy hotové."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/stavajici-dum' }, { label: 'Podlahové topení ve starším domě', href: '/navrh-reseni/podlahove-topeni-starsi-dum' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Podlahové topení je, díky teplotám topné vody se kterými pracuje, pro tepelné čerpadlo nejvhodnější.
+        </p>
+        <p class="text-charcoal-700 font-semibold">
+          Jak ale podlahové topení dodělat, když mám podlahy už hotové? Není to úplně jednoduché, ale lze to:
+        </p>
+
+        <div class="space-y-5 mt-8">
+          {[
+            'Pokud není známé přesné složení podlahy, udělá se do podlahy sonda – otvor. Díky této sondě zjistíme skladbu podlahy a její výšku.',
+            'Pro podlahové topení je ideální výška cca 22 cm. Skladba: hydroizolace (1 cm), tepelná izolace (10 cm polystyrenu, nebo 6 cm polyuretanu), systémová deska s topením (32–55 mm), betonový potěr (5–6 cm) nebo anhydrit (3–4 cm), krytina.',
+            'Pak je potřeba to nejtěžší — celou stávající podlahu vybourat. Cca 80 m² nám stavební firma vybourala za jeden den.',
+            'Položí se nová hydroizolace. Pokud v domě byla, je bouráním určitě poškozena.',
+            'Položí se tepelná izolace a podlahový topný systém. 80 m² opět jeden den.',
+            'Vše se zalije betonem nebo anhydridem. 80 m², půl dne.',
+            'Po vyschnutí se položí krytina.',
+            'Ekonomické a pohodové vytápění je hotovo.',
+          ].map((item, i) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
+              <p class="text-charcoal-600 text-sm leading-relaxed pt-1">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-brand-50 rounded-xl p-6 border border-brand-100 mt-8">
+          <p class="text-charcoal-700 text-sm leading-relaxed">
+            Ne každý se do rekonstrukce tohoto typu pustí, nicméně jde to a budete odměněni příjemnou a rovnoměrně rozvrstvenou teplotou v domě.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

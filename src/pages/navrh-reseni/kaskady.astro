@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Kaskády tepelných čerpadel" description="Kaskádní zapojení tepelných čerpadel pro výkony nad 35 kW. Řízení Master-Slave, vyrovnané provozní hodiny.">
+  <PageHero
+    title="Kaskády tepelných čerpadel"
+    subtitle="Pro výkony nad 35 kW — prakticky bez omezení."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/velky-vykon' }, { label: 'Kaskády TČ', href: '/navrh-reseni/kaskady' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Pokud potřebujete výkon nad 35 kW, je řešením kaskádní zapojení tepelných čerpadel. Kaskáda pokryje prakticky jakýkoliv požadovaný výkon — jednotky se připojují přes hlavní potrubí k akumulační nádobě.
+        </p>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak kaskáda funguje?</h2>
+
+        <div class="space-y-5">
+          {[
+            'Více tepelných čerpadel je propojeno do společného systému s akumulační nádobou.',
+            'Jedno čerpadlo je nastaveno jako „Master" — řídí parametry celé soustavy a rozhoduje o připínání dalších jednotek.',
+            'Ostatní čerpadla pracují jako „Slave" — zapínají se podle aktuální potřeby tepla.',
+            'Master jednotka vyrovnává provozní hodiny všech čerpadel — střídá je tak, aby žádné nebylo přetěžováno.',
+            'Výsledkem je dlouhá životnost, vysoká spolehlivost a optimální účinnost celého systému.',
+          ].map((item, i) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
+              <p class="text-charcoal-600 text-sm leading-relaxed pt-1">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Výhody kaskádního zapojení</h2>
+
+        <div class="space-y-3">
+          {[
+            'Prakticky neomezený celkový výkon — lze zapojit libovolný počet jednotek',
+            'Vysoká spolehlivost — výpadek jedné jednotky neznačí výpadek celého systému',
+            'Vyrovnané provozní hodiny prodlužují životnost všech kompresorů',
+            'Při nízké zátěži pracuje jen část jednotek — úspora energie',
+            'Vhodné pro bytové domy, administrativní budovy, školy, hotely a průmyslové objekty',
+          ].map(item => (
+            <div class="flex gap-2 items-start">
+              <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-charcoal-600 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-navy-700 rounded-xl p-6 text-white mt-8">
+          <p class="font-semibold text-sm">
+            Kaskádní zapojení je profesionální řešení pro velké objekty. Navrhneme vám optimální počet a typ tepelných čerpadel přesně podle potřeb vašeho objektu.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

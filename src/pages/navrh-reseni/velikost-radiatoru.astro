@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Je velikost radiátorů dostatečná?" description="Jak upravit starší radiátorový systém pro tepelné čerpadlo. Posouzení a úprava zdarma.">
+  <PageHero
+    title="Je velikost radiátorů dostatečná?"
+    subtitle="Jak upravit starší radiátorový systém pro tepelné čerpadlo."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/stavajici-dum' }, { label: 'Velikost radiátorů', href: '/navrh-reseni/velikost-radiatoru' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Není důležité, jaký mají vaše radiátory tvar nebo z jakého jsou materiálu, ale jaký mají výkon. A výkon radiátoru = jeho plocha. Jednoduše řečeno, čím větší radiátor, tím lepší.
+        </p>
+        <p class="text-charcoal-600 leading-relaxed">
+          Váš stávající zdroj tepla (plynový kotel, elektrokotel, kotel na tuhá paliva…) umí natopit vodu v radiátoru na poměrně velké teploty (70–80 °C). Tepelné čerpadlo umí natopit vodu většinou na maximálně 55 °C. Navíc platí, že čím je teplota topné vody nižší, tím je jeho provoz ekonomičtější. Velikost radiátoru musí být tedy dostatečná, aby i při teplotě topné vody 55 °C nebo nižší byl schopen vytopit místnost, ve které je umístěn.
+        </p>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Topný systém vám zdarma zkontrolujeme. Jak na to?</h2>
+
+        <div class="space-y-5">
+          {[
+            'Nejdříve je třeba vypočítat tepelnou ztrátu objektu. To dělá projektant vytápění na základě rozměrů domu a materiálů použitých na stavbě. Vyzkoušeného projektanta máme po ruce — výpočet provede rychle a přesně.',
+            'Když máme výpočet tepelné ztráty, víme, kolik tepla je potřeba dodat každé místnosti. Příklad: obývací pokoj má tepelnou ztrátu 800 W. Radiátor musí tedy při 55 °C a venkovní teplotě −15 °C mít výkon minimálně 800 W. Pokud je výkon dostatečný, radiátor zůstává. Pokud je menší — je zkrátka malý a musíme jej zvětšit.',
+            'Pokud máte moderní deskové radiátory (např. Korado), musí se vyměnit za větší. Lze navýšit výšku, délku, nebo změnit typ — jednodeskový za dvojdeskový, dvojdeskový za trojdeskový. Při změně typu je radiátor na výšku a šířku stejný, jen se o cca 5 cm změní jeho hloubka.',
+            'Pokud máte žebrové radiátory, lze jejich plochu bez problémů navýšit přidáním žeber.',
+            'Výměna nebo úprava radiátoru je většinou nenáročná a není třeba se obávat velkého nepořádku.',
+            'Do místnosti můžeme samozřejmě doplnit i další radiátor.',
+          ].map((item, i) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
+              <p class="text-charcoal-600 text-sm leading-relaxed pt-1">{item}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Nechcete do systému zasahovat?</h2>
+        <p class="text-charcoal-600 leading-relaxed mb-4">
+          Pokud zjistíme, že výkon radiátorů je nižší, ale nechcete do systému zasahovat, máme také řešení:
+        </p>
+        <div class="space-y-3">
+          {[
+            'Tepelná čerpadla topí tak dlouho, dokud je teplota topné vody vyhovující a radiátory dům vytopí.',
+            'Jakmile zjistíte, že teplota radiátorů je nevyhovující, sepnete původní kotel, který teplotu zvýší. Tepelné čerpadlo se automaticky uzavře.',
+            'Tento způsob je ekonomický jen pokud se vysokoteplotní zdroj spouští minimálně, při teplotách −10 °C nebo nižších.',
+          ].map(item => (
+            <div class="flex gap-2 items-start">
+              <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <span class="text-charcoal-600 text-sm">{item}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-navy-700 rounded-xl p-6 text-white mt-8">
+          <p class="font-semibold text-sm">
+            Je lepší a ekonomičtější přizpůsobit radiátorový systém tepelnému čerpadlu než provozovat tepelné čerpadlo v jeho hraničních možnostech.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200 mt-6">
+          <h3 class="font-bold text-charcoal-900 mb-3 text-sm">Příklad:</h3>
+          <div class="text-sm text-charcoal-600 space-y-1">
+            <p>1. Venkovní teplota −7 °C, topná voda 35 °C → topný faktor TČ = <strong>3,0</strong></p>
+            <p>2. Venkovní teplota −7 °C, topná voda 50 °C → topný faktor TČ = <strong>2,4</strong></p>
+            <p class="text-charcoal-500 italic mt-2">Za stejné peníze za elektřinu dostáváte výrazně nižší výkon tepelného čerpadla.</p>
+          </div>
+        </div>
+
+        <p class="text-charcoal-600 text-sm mt-6">
+          Úpravy radiátorového systému řešíme za režijní ceny. Nechceme, aby se instalace tepelného čerpadla zbytečně prodražovala.
+        </p>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

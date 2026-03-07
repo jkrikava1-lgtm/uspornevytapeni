@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Chlazení domu tepelným čerpadlem" description="Chlazení domu tepelným čerpadlem — podlahovým systémem nebo fancoily. Jednoduchá a levná instalace.">
+  <PageHero
+    title="Chlazení"
+    subtitle="Komfortní chlazení domu tepelným čerpadlem."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Chlazení', href: '/navrh-reseni/chlazeni' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Chceme bydlet komfortně a chlazení domu ke komfortnímu bydlení patří. Obzvlášť, pokud je instalace chlazení jednoduchá a levná.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Chlazení podlahovým systémem</h2>
+            <div class="space-y-3">
+              {[
+                'podlahový systém dokáže ochladit místnosti o několik stupňů',
+                'jeden systém pro vytápění i chlazení',
+                'kondenzaci hlídají čidla rosného bodu',
+                'podlaha musí být kompatibilní (dlažba, kámen, vinyl, plovoucí podlahy)',
+              ].map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <div class="mt-4 bg-brand-50 rounded-lg p-4 border border-brand-100">
+              <p class="text-sm text-charcoal-700 italic">
+                „Při venkovní teplotě 35 °C jsem udržel podlahovým chlazením vnitřní teplotu v domě na 23 °C."
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Chlazení fancoilovými jednotkami</h2>
+            <div class="space-y-3">
+              {[
+                'nejúčinnější způsob chlazení',
+                'udržuje stabilní teplotu i při extrémních vedrech',
+                'vestavěný ventilátor pro cirkulaci vzduchu',
+                'vyžaduje odvod kondenzátu',
+                'investice cca 20 000 Kč za místnost',
+              ].map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>

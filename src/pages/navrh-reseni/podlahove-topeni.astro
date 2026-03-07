@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+---
+
+<Layout title="Podlahové topení pro tepelné čerpadlo" description="Podlahové topení je ideální systém pro tepelná čerpadla. Nízkoteplotní provoz, záruka 25 let, instalace na klíč.">
+  <PageHero
+    title="Podlahové topení"
+    subtitle="Perfektní systém pro nízkoteplotní zdroje tepla."
+    breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Podlahové topení', href: '/navrh-reseni/podlahove-topeni' }]}
+  />
+
+  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="prose-custom space-y-6">
+        <p class="text-charcoal-600 leading-relaxed">
+          Podlahovka je perfektní systém pro nízkoteplotní zdroje tepla, u kterých platí: <strong>na čím nižší teplotu topíte topnou vodu, tím máte ekonomičtější provoz.</strong>
+        </p>
+        <p class="text-charcoal-600 leading-relaxed">
+          Naše podlahové systémy pracují většinou i v −15 °C s teplotou topné vody 35 °C.
+        </p>
+
+        <div class="bg-brand-50 rounded-xl p-6 border border-brand-100">
+          <p class="text-charcoal-800 font-semibold">Na podlahový topný systém poskytujeme záruku 25 let.</p>
+        </div>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak probíhá instalace</h2>
+
+        <div class="space-y-4">
+          {[
+            'Na základovou desku nám připravíte hydroizolaci a tepelnou izolaci.',
+            'Okolo stěn instalujeme dilatační pásku, která oddělí podlahovou desku od stěn.',
+            'Zasekáme rozdělovač okruhů podlahového topení do stěny.',
+            'Položíme systémovou desku s výstupky, mezi které namotáme plastovou trubku.',
+            'Systém natlakujeme a zůstane natlakovaný do úplného dokončení betonáže.',
+            'Po dokončení lití podlahy pomalu a postupně natápíme.',
+          ].map((item, i) => (
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
+              <p class="text-charcoal-600 text-sm leading-relaxed pt-1">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+      </div>
+    </div>
+  </section>
+</Layout>
