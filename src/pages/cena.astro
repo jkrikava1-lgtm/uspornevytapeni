@@ -118,6 +118,45 @@ import data from '../data/cena.json';
     </div>
   </section>
 
+  <!-- Související stránky -->
+  <section class="py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl font-extrabold text-charcoal-900 mb-5">Užitečné nástroje</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <a href="/cenova-kalkulace" class="group bg-white rounded-xl p-7 border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all">
+          <div class="w-11 h-11 bg-brand-50 group-hover:bg-brand-500 rounded-lg flex items-center justify-center mb-4 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Cenová kalkulace</h3>
+          <p class="text-sm text-charcoal-500 leading-relaxed mb-3">Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu.</p>
+          <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
+            Spočítat cenu
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+        <a href="/porovnani-nakladu" class="group bg-white rounded-xl p-7 border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all">
+          <div class="w-11 h-11 bg-brand-50 group-hover:bg-brand-500 rounded-lg flex items-center justify-center mb-4 transition-colors">
+            <svg class="w-5 h-5 text-brand-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Porovnání nákladů</h3>
+          <p class="text-sm text-charcoal-500 leading-relaxed mb-3">Srovnání ročních nákladů — tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.</p>
+          <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
+            Porovnat náklady
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
