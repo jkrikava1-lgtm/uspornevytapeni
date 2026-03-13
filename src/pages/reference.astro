@@ -33,11 +33,7 @@ import ref from '../data/reference.json';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ref.references.map(item => (
           <div class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
-            <div class="bg-gray-100 h-44 flex items-center justify-center text-charcoal-300">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-            </div>
+            <img src={['/images/instalace/technik-u-domu.jpg', '/images/instalace/servis-zahrada.jpg', '/images/instalace/technik-usmev.jpg', '/images/instalace/pes-u-tc.jpg', '/images/instalace/technik-dodavka.jpg', '/images/produkty/boxair-kompakt-dum.jpg', '/images/instalace/montaz-zebrik.jpg', '/images/produkty/boxair-split-drevo.jpg', '/images/instalace/diagnostika.jpg'][ref.references.indexOf(item) % 9]} alt={`Instalace ${item.system}`} class="h-44 w-full object-cover" loading="lazy" />
             <div class="p-6">
               <div class="flex items-center justify-between mb-3">
                 <span class="text-xs font-semibold text-brand-500 uppercase tracking-wider">{item.lokalita}</span>
