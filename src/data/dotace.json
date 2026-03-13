@@ -1,56 +1,74 @@
 {
   "hero_title": "Dotace na tepelná čerpadla",
-  "hero_subtitle": "Tepelná čerpadla v programu Nová zelená úsporám 2026",
-  "intro": "V současné době čekáme na zahájení nové formy dotačního programu Nová zelená úsporám. Jakmile budou známy podrobnosti, aktualizujeme tuto stránku. Mezitím pro vás shrnujeme, co zatím víme a jak se připravit.",
-  "what_we_know_headline": "Co zatím víme",
-  "what_we_know": [
-    "Program Nová zelená úsporám pokračuje i v roce 2026",
-    "Dotace se budou vztahovat na výměnu starých zdrojů tepla za tepelná čerpadla",
-    "Podporovány budou systémy vzduch-voda, země-voda i voda-voda",
-    "Očekává se podpora i pro novostavby s tepelným čerpadlem",
-    "Certifikované zařízení na Seznamu výrobků a technologií (SVT) bude podmínkou — vše, co dodáváme, splňuje"
-  ],
-  "how_to_prepare_headline": "Jak se připravit už teď",
-  "steps": [
+  "hero_subtitle": "Nová zelená úsporám 2026 — od přímých dotací k bezúročným úvěrům. Přehled změn, podmínek a harmonogramu.",
+
+  "intro": "Program Nová zelená úsporám (NZÚ) 2026 prochází zásadní transformací. Stát mění strategii: od plošných dotací přechází k <strong>bezúročným úvěrům</strong> pro běžné domácnosti, zatímco přímou finanční podporu soustředí primárně na nízkopříjmové skupiny.",
+
+  "harmonogram_headline": "Harmonogram spouštění v roce 2026",
+  "harmonogram_intro": "Program se neotevře naráz, ale v několika vlnách:",
+  "harmonogram": [
     {
-      "krok": "1",
-      "title": "Nechte si zdarma posoudit dům",
-      "desc": "Vyhodnotíme stav vytápění a navrhneme optimální řešení s tepelným čerpadlem."
+      "datum": "25. březen 2026",
+      "popis": "Spuštění žádostí o kompenzace za projektovou přípravu (pro ty, kteří měli projekt v roce 2025, ale nestihli podat žádost)."
     },
     {
-      "krok": "2",
-      "title": "Připravíme projekt",
-      "desc": "Technická dokumentace je základ každé žádosti — budete mít náskok."
+      "datum": "Duben 2026",
+      "popis": "Start sítě energetických poradců a zavedení renovačních pasů."
     },
     {
-      "krok": "3",
-      "title": "Podáme žádost hned po startu",
-      "desc": "Jakmile se program otevře, podáme žádost jako jedni z prvních."
+      "datum": "Červen 2026",
+      "popis": "Otevření příjmu žádostí pro rodinné a bytové domy (technická kontrola projektů) a start nové etapy NZÚ Light."
     },
     {
-      "krok": "4",
-      "title": "Instalace a vyplacení dotace",
-      "desc": "Provedeme instalaci a doložíme vše potřebné pro vyplacení dotace."
+      "datum": "Září 2026",
+      "popis": "Banky a stavební spořitelny začínají nabízet bezúročné úvěry."
     }
   ],
-  "previous_headline": "Dotace v předchozích programech",
-  "previous_programs": [
-    {
-      "program": "Nová zelená úsporám",
-      "castka": "až 200 000 Kč",
-      "desc": "Hlavní dotační program pro rodinné domy. Pokrýval tepelné čerpadlo vzduch-voda i země-voda."
-    },
-    {
-      "program": "OPŽP — Kotlíkové dotace",
-      "castka": "až 180 000 Kč",
-      "desc": "Pro domácnosti s nízkými příjmy. Výměna kotle za tepelné čerpadlo nebo jiný ekologický zdroj."
-    },
-    {
-      "program": "Kombinace programů",
-      "castka": "až 380 000 Kč",
-      "desc": "Za určitých podmínek bylo možné čerpat z více programů najednou."
-    }
+
+  "zmena_headline": "Hlavní změna: Dotace vs. Úvěry",
+  "zmena_intro": "Největší novinkou je rozdělení žadatelů do dvou hlavních kategorií:",
+
+  "bezne_title": "Běžné domácnosti",
+  "bezne_subtitle": "středně a vysokopříjmové",
+  "bezne_desc": "Místo přímé hotovosti na účet bude stát podporovat renovace formou <strong>bezúročného úvěru</strong>.",
+  "bezne_jak": "<strong>Jak to funguje:</strong> Půjčíte si v bance (např. 1 milion Kč), stát za vás bance uhradí veškeré úroky a vy splácíte pouze jistinu.",
+  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspořeno statisíce dopředu — získáte levné financování na celou rekonstrukci.",
+  "bezne_nevyhoda": "<strong>Nevýhoda:</strong> Pro získání úvěru musíte projít posouzením bonity v bance (scoringem).",
+
+  "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
+  "zranitelne_subtitle": "nízkopříjmové — senioři, příspěvek na bydlení, superdávka",
+  "zranitelne_desc": "Nízkopříjmové domácnosti mají stále nárok na <strong>přímou dotaci</strong>.",
+  "zranitelne_body": [
+    { "label": "Zateplení", "value": "až 250 000 Kč" },
+    { "label": "Výměna zdroje tepla / OZE", "value": "až 150 000 Kč" },
+    { "label": "Bonus", "value": "peníze lze čerpat i zálohově (předem)" }
   ],
+
+  "opatreni_headline": "Na co lze podporu získat?",
+  "opatreni_intro": "Podporovaná opatření zůstávají v zásadě stejná, ale nově budou navázána na doporučení z tzv. Renovačního pasu.",
+  "opatreni": [
+    { "nazev": "Zateplení", "popis": "Fasáda, střecha, podlahy, výměna oken a dveří." },
+    { "nazev": "Fotovoltaika (FVE)", "popis": "Až 140 000 Kč při sdílení energie, jinak standardně cca 100 000 Kč." },
+    { "nazev": "Tepelná čerpadla", "popis": "Vzduch-voda (cca 75 000 Kč), biomasa (65–90 000 Kč)." },
+    { "nazev": "Ostatní", "popis": "Rekuperace, zelené střechy, ohřev vody, stínicí technika." }
+  ],
+
+  "renovacni_headline": "Energetické poradenství a Renovační pas",
+  "renovacni_intro": "Stát chce zabránit neefektivním dílčím úpravám.",
+  "renovacni_body": [
+    "<strong>Energetické poradenství:</strong> Bude k dispozici zdarma na kontaktních místech (EKIS, MAS).",
+    "<strong>Renovační pas:</strong> Dokument, který vám řekne, v jakém pořadí a jak dům opravit, aby dával ekonomický smysl. Pro zranitelné domácnosti bude jeho vypracování zdarma (dotováno až 50 000 Kč u RD)."
+  ],
+
+  "kompenzace_headline": "Kompenzace pro projekty z roku 2025",
+  "kompenzace_intro": "Pokud jste v roce 2025 investovali do projektu, ale kvůli zastavení programu jste nestihli zažádat, můžete od <strong>25. března 2026</strong> žádat o kompenzaci:",
+  "kompenzace_body": [
+    { "label": "Rodinné domy", "value": "až 50 000 Kč" },
+    { "label": "Bytové domy", "value": "až 100 000 Kč" }
+  ],
+
+  "tip_box": "Než začnete cokoli podepisovat s realizační firmou, počkejte na duben, kdy budou zveřejněny přesné seznamy certifikovaných poradců. Bez konzultace a renovačního pasu může být získání bezúročného úvěru v září komplikované.",
+
   "cta_headline": "Chcete být připraveni?",
   "cta_text": "Pošlete poptávku — připravíme vám projekt, abyste mohli žádat hned po otevření programu.",
   "cta_button": "Odeslat poptávku"

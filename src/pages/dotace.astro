@@ -4,79 +4,171 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/dotace.json';
 ---
 
-<Layout title="Dotace na tepelné čerpadlo" description="Dotace na tepelná čerpadla — Nová zelená úsporám 2026. Informace o programu, podmínky, jak se připravit. Pomůžeme vám celý proces zvládnout.">
+<Layout title="Dotace na tepelné čerpadlo" description="Dotace na tepelná čerpadla — Nová zelená úsporám 2026. Bezúročné úvěry, NZÚ Light, harmonogram, podporovaná opatření. Pomůžeme vám celý proces zvládnout.">
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Dotace', href: '/dotace' }]}
   />
 
-  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Intro -->
+  <section class="pt-10 pb-12 lg:pt-12 lg:pb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-charcoal-600 text-lg leading-relaxed" set:html={data.intro} />
+    </div>
+  </section>
 
-      <!-- Upozornění -->
-      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-12">
-        <div class="flex gap-3">
-          <svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          <p class="text-sm text-amber-800 leading-relaxed">{data.intro}</p>
-        </div>
-      </div>
+  <!-- Harmonogram -->
+  <section class="bg-gray-50 py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.harmonogram_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-8">{data.harmonogram_intro}</p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
-
-        <!-- Co zatím víme -->
-        <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.what_we_know_headline}</h2>
-          <div class="space-y-3">
-            {data.what_we_know.map(item => (
-              <div class="flex gap-3 items-start">
-                <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </div>
-                <span class="text-sm text-charcoal-600 leading-relaxed">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <!-- Jak se připravit -->
-        <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.how_to_prepare_headline}</h2>
-          <div class="space-y-5">
-            {data.steps.map(step => (
-              <div class="flex gap-4">
-                <div class="w-8 h-8 bg-navy-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{step.krok}</div>
-                <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{step.title}</div>
-                  <div class="text-sm text-charcoal-500 mt-0.5">{step.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <!-- Předchozí programy -->
-      <div>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.previous_headline}</h2>
-        <p class="text-sm text-charcoal-500 mb-6">Pro orientaci uvádíme přehled dotací z předchozích let. Nový program bude pravděpodobně podobný.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {data.previous_programs.map(item => (
-            <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
-              <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{item.program}</div>
-              <div class="text-3xl font-extrabold text-navy-700 mb-3">{item.castka}</div>
-              <p class="text-sm text-charcoal-500 leading-relaxed">{item.desc}</p>
+      <div class="space-y-0">
+        {data.harmonogram.map((item, i) => (
+          <div class="flex gap-5 items-start relative">
+            <div class="flex flex-col items-center">
+              <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 z-10">{i + 1}</div>
+              {i < data.harmonogram.length - 1 && <div class="w-0.5 bg-navy-200 flex-1 min-h-8"></div>}
             </div>
-          ))}
+            <div class="pb-8">
+              <div class="font-bold text-charcoal-900 text-sm">{item.datum}</div>
+              <p class="text-charcoal-600 text-sm mt-1 leading-relaxed">{item.popis}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Hlavní změna: Dotace vs Úvěry -->
+  <section class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.zmena_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-10">{data.zmena_intro}</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Běžné domácnosti -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-charcoal-900 text-lg">{data.bezne_title}</h3>
+              <p class="text-charcoal-400 text-xs">{data.bezne_subtitle}</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 mt-6">
+            <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_desc} />
+            <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_jak} />
+            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+              <p class="text-green-800 text-sm" set:html={data.bezne_vyhoda} />
+            </div>
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+              <p class="text-amber-800 text-sm" set:html={data.bezne_nevyhoda} />
+            </div>
+          </div>
+        </div>
+
+        <!-- Zranitelné domácnosti -->
+        <div class="bg-navy-700 text-white rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-lg">{data.zranitelne_title}</h3>
+              <p class="text-navy-300 text-xs">{data.zranitelne_subtitle}</p>
+            </div>
+          </div>
+
+          <p class="text-navy-200 text-sm leading-relaxed mt-6 mb-6" set:html={data.zranitelne_desc} />
+
+          <div class="space-y-3">
+            {data.zranitelne_body.map(item => (
+              <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
+                <span class="text-sm text-navy-300">{item.label}</span>
+                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Podporovaná opatření -->
+  <section class="bg-gray-50 py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.opatreni_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-8">{data.opatreni_intro}</p>
+
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
+        {data.opatreni.map((item, i) => (
+          <div class:list={["flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-6 py-5", i < data.opatreni.length - 1 && "border-b border-gray-100"]}>
+            <div class="font-bold text-charcoal-900 text-sm sm:w-48 flex-shrink-0">{item.nazev}</div>
+            <p class="text-charcoal-600 text-sm leading-relaxed">{item.popis}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Renovační pas -->
+  <section class="py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.renovacni_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-6">{data.renovacni_intro}</p>
+
+      <div class="space-y-4">
+        {data.renovacni_body.map(item => (
+          <div class="flex gap-3 items-start">
+            <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="text-charcoal-600 text-sm leading-relaxed" set:html={item} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Kompenzace -->
+  <section class="bg-amber-50 py-14 lg:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.kompenzace_headline}</h2>
+      <p class="text-charcoal-600 text-sm leading-relaxed mb-6" set:html={data.kompenzace_intro} />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        {data.kompenzace_body.map(item => (
+          <div class="bg-white rounded-xl p-6 border border-amber-200">
+            <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{item.label}</div>
+            <div class="text-2xl font-extrabold text-navy-700">{item.value}</div>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-white rounded-xl p-6 border border-amber-200">
+        <div class="flex gap-3">
+          <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-sm text-amber-800 leading-relaxed">{data.tip_box}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="bg-brand-500 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
