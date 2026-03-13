@@ -1,85 +1,149 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import data from '../../data/ovladani-systemu.json';
 ---
 
-<Layout title="Ovládání systému s tepelným čerpadlem" description="Jak se ovládá systém s tepelným čerpadlem? Regulace, programování, ekvitermní křivka, zónové vytápění.">
+<Layout title="Ovládání systému s tepelným čerpadlem" description="Jak se ovládá tepelné čerpadlo Master Therm? Terminál PGDx, ekvitermní regulace, zónové vytápění, ohřev bojleru.">
   <PageHero
-    title={data.hero_title}
-    subtitle={data.hero_subtitle}
-    breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce/ovladani-systemu' }, { label: 'Ovládání systému', href: '/chytre-funkce/ovladani-systemu' }]}
+    title="Ovládání systému s tepelným čerpadlem"
+    subtitle="Jak vlastně budu tepelné čerpadlo ovládat? Ekvitermní regulace, prostorový termostat, zónové řízení — vše přes terminál PGDx."
+    breadcrumb={[{ label: 'Chytré funkce', href: '/chytre-funkce' }, { label: 'Ovládání systému', href: '/chytre-funkce/ovladani-systemu' }]}
   />
 
-  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+  <!-- Intro + obrázek PGDx -->
+  <section class="pt-10 pb-12 lg:pt-12 lg:pb-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
+          <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-6">Jak vlastně budu tepelné čerpadlo ovládat?</h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>{data.intro_text1}</p>
-            <p>{data.intro_text2}</p>
-          </div>
-
-          <div class="mt-8 space-y-4">
-            {[
-              { title: data.feat1_title, desc: data.feat1_desc },
-              { title: data.feat2_title, desc: data.feat2_desc },
-              { title: data.feat3_title, desc: data.feat3_desc },
-              { title: data.feat4_title, desc: data.feat4_desc },
-            ].map(item => (
-              <div class="flex gap-4">
-                <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </div>
-                <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
-                  <div class="text-sm text-charcoal-500">{item.desc}</div>
-                </div>
-              </div>
-            ))}
+            <p>Regulaci tepelného čerpadla budete ovládat přes terminál – displej, který je u všech tepelných čerpadel Master Therm stejný. Tento terminál je buď přímo v tepelném čerpadle nebo na zdi v interiéru. Ovládací terminál je označen jako <strong class="text-charcoal-900">PGDx</strong>.</p>
           </div>
         </div>
-
-        <div class="space-y-6">
-          <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-5">{data.functions_label}</div>
-            <div class="grid grid-cols-2 gap-3">
-              {[
-                data.function1, data.function2, data.function3, data.function4,
-                data.function5, data.function6, data.function7, data.function8,
-              ].map(item => (
-                <div class="flex items-center gap-2 bg-navy-600 rounded-lg px-3 py-2">
-                  <div class="w-1.5 h-1.5 bg-brand-400 rounded-full flex-shrink-0"></div>
-                  <span class="text-xs text-navy-200">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-3">{data.panel_headline}</h3>
-            <p class="text-sm text-charcoal-500 leading-relaxed">{data.panel_text}</p>
-            <a href="/chytre-funkce/online-ovladani" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 mt-3">
-              {data.panel_link}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
+        <div class="flex justify-center">
+          <img src="/images/pgdx-terminal.png" alt="Ovládací terminál PGDx" class="rounded-2xl shadow-lg max-w-full h-auto" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Q&A sekce -->
+  <section class="pb-16 lg:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-12">
+
+        <!-- Teplota v prostoru -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Jak budu ovládat teplotu v prostoru?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Terminál <strong class="text-charcoal-900">PGDx</strong> neslouží jen jako hlavní ovládací terminál, ale i jako prostorový termostat, který doplňuje ekvitermní regulaci. Stačí tedy šipkou nahoru (nebo dolů) přidat (nebo ubrat) teplotu.</p>
+          </div>
+        </div>
+
+        <!-- Ekvitermní regulace -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Co je ekvitermní regulace?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Ekvitermní regulace řídí teplotu topné vody v závislosti na venkovní teplotě. Čím je venku nižší teplota, máte teplejší radiátor (nebo podlahovku) a naopak. Díky ekvitermní regulaci pracuje tepelné čerpadlo vždy s co nejnižší teplotou topné vody a jeho provoz je tak maximálně ekonomický.</p>
+          </div>
+        </div>
+
+        <!-- Ladění křivky -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Musím ekvitermní křivku dlouhodobě „ladit"?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Nemusíte, stačí do interiéru nainstalovat terminál <strong class="text-charcoal-900">PGDx</strong> a regulace tepelného čerpadla Master Therm se postará o zbytek. Vy si prostě jen přidáváte nebo ubíráte teplotu prostoru a tepelné čerpadlo řídí teplotu topné vody tak, aby byla co nejníže, ale zároveň tak, aby teplota v prostoru byla taková, jakou chcete.</p>
+            <p>Optimalizací teploty topné vody podle teploty v prostoru dosáhnete maximální efektivity chodu tepelného čerpadla. Máte tak jistotu, že provoz vašeho tepelného čerpadla je maximálně levný.</p>
+            <div class="bg-brand-50 border border-brand-200 rounded-xl p-5 mt-2">
+              <p class="text-sm text-brand-800 font-semibold">Tepelná čerpadla bez této funkce nedoporučujeme.</p>
+            </div>
+            <p>Terminálů <strong class="text-charcoal-900">PGDx</strong> lze umístit i více, podle počtu topných okruhů v objektu.</p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mt-2">
+              <p class="text-sm text-charcoal-700"><strong>Příklad:</strong> Máte v přízemí podlahové topení a v patře radiátory? Můžete tedy mít dva terminály PGDx.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bez terminálu -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Co když nechci mít terminál v interiéru domu?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Tepelné čerpadlo bude samozřejmě také fungovat, jen je obtížnější vyladit jeho funkci k nejvyšší možné efektivitě.</p>
+          </div>
+        </div>
+
+        <!-- Chlazení -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            A co až začnu chladit?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Terminál PGDx je vybavený čidlem vlhkosti. Používá se v instalacích, kde chladíme podlahovým topením. Při chlazení pak terminál PGDx nedovolí, aby teplota chladící vody klesla tak nízko, že by došlo ke srážení vody na podlaze.</p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 mt-2">
+              <p class="text-sm text-charcoal-700"><strong>Příklad:</strong> Jakmile PGDx zjistí, že vlhkost v místnosti stoupla na 90 %, zvedne teplotu topné vody o cca 3 °C.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Více okruhů -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Co když mám víc topných okruhů?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Tepelné čerpadlo pak připravuje topnou vodu na hodnotu požadovanou nejteplejším okruhem. Do ostatních topných okruhů se topná voda míchá směšovacím ventilem. Pokud chceme řídit další okruh prostorovou teplotou, přidáme terminál PGDx.</p>
+          </div>
+        </div>
+
+        <!-- Ohřev bojleru -->
+        <div>
+          <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
+            <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            Jak se ohřívá bojler?
+          </h2>
+          <div class="pl-11 space-y-4 text-charcoal-600 leading-relaxed">
+            <p>Ohřev vody v bojleru má přednost před topením či chlazením. Jakmile poklesne teplota vody v bojleru, regulace tepelného čerpadla vypne topné (chladící) okruhy a naplno topí do bojleru. Jakmile se v bojleru dosáhne požadované teploty (tu si nastavujete vy), vrátí se tepelné čerpadlo zpět k vytápění (chlazení).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta_headline}</h2>
-      <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Chcete systém ovládání vysvětlit osobně?</h2>
+      <p class="text-charcoal-500 mb-8">Stačí vyplnit náš kontaktní formulář — konzultace je zdarma.</p>
+      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
     </div>
   </section>
 </Layout>
