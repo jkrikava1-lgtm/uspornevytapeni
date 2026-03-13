@@ -1,0 +1,42 @@
+{
+  "meta_title": "Chytré funkce tepelných čerpadel",
+  "meta_description": "Moderní tepelná čerpadla nabízejí více než jen topení. Inverter, fotovoltaika, online ovládání, desuperheater a další.",
+  "hero_title": "Chytré funkce",
+  "hero_subtitle": "Moderní tepelná čerpadla toho umí mnohem víc než jen topit. Poznejte technologie, které šetří energii a zvyšují komfort.",
+  "cards": [
+    {
+      "href": "/chytre-funkce/inverter",
+      "title": "Technologie Inverter",
+      "desc": "Plynulá regulace výkonu podle aktuální potřeby. Nižší spotřeba, tišší provoz, delší životnost.",
+      "icon": "M13 10V3L4 14h7v7l9-11h-7z"
+    },
+    {
+      "href": "/chytre-funkce/fotovoltaika",
+      "title": "Spolupráce s fotovoltaikou",
+      "desc": "Tepelné čerpadlo využije přebytky ze solárních panelů — maximální úspora na energiích.",
+      "icon": "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+    },
+    {
+      "href": "/chytre-funkce/online-ovladani",
+      "title": "Online ovládání",
+      "desc": "Ovládejte vytápění odkudkoliv přes mobilní aplikaci. Nastavení teploty, režimů i sledování spotřeby.",
+      "icon": "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+    },
+    {
+      "href": "/chytre-funkce/ovladani-systemu",
+      "title": "Ovládání systému",
+      "desc": "Podrobný přehled o řízení a regulaci celého systému vytápění a chlazení.",
+      "icon": "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+    },
+    {
+      "href": "/chytre-funkce/desuperheater",
+      "title": "Desuperheater",
+      "desc": "Využití odpadního tepla z kompresoru pro ohřev teplé vody — zdarma jako bonus k vytápění.",
+      "icon": "M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+    }
+  ],
+  "card_link_text": "Zjistit více",
+  "cta_headline": "Chcete vědět, co vám ušetří nejvíc?",
+  "cta_text": "Pošlete poptávku a navrhneme systém přesně podle vašich potřeb.",
+  "cta_button": "Odeslat poptávku"
+}

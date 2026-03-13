@@ -1,31 +1,46 @@
 {
-  "hero_title": "Ovládání systému",
-  "hero_subtitle": "Moderní tepelné čerpadlo řídí vytápění automaticky. Vy nastavíte požadavky — zbytek obstará systém sám.",
-  "intro_label": "Inteligentní regulace",
-  "intro_headline": "Systém, který myslí za vás",
-  "intro_text1": "Tepelné čerpadlo Master Therm je vybaveno vlastní řídicí jednotkou, která průběžně vyhodnocuje venkovní teplotu, požadovanou teplotu v místnostech a aktuální stav systému — a automaticky přizpůsobuje výkon.",
-  "intro_text2": "Výsledkem je optimální komfort při minimální spotřebě elektřiny. Systém sám pozná, kdy přitlačit a kdy zvolnit.",
-  "feat1_title": "Ekvitermní regulace",
-  "feat1_desc": "Teplota topné vody se automaticky mění podle venkovní teploty — žádné přetápění, žádné mráz.",
-  "feat2_title": "Zónové vytápění",
-  "feat2_desc": "Různé teploty v různých místnostech nebo patrech — každá zóna se řídí samostatně.",
-  "feat3_title": "Týdenní program",
-  "feat3_desc": "Nižší teplota přes den nebo v noci, vyšší ráno — nastavíte jednou a zapomenete.",
-  "feat4_title": "Dohled na spotřebu",
-  "feat4_desc": "Řídicí jednotka zaznamenává spotřebu a výkon — vždy víte, co se děje.",
-  "functions_label": "Co umí řídicí jednotka",
-  "function1": "Ekvitermní regulace",
-  "function2": "Zónové vytápění",
-  "function3": "Ohřev TUV",
-  "function4": "Chlazení",
-  "function5": "Týdenní program",
-  "function6": "Úsporný režim",
-  "function7": "Protimrazová ochrana",
-  "function8": "HDO tarif",
-  "panel_headline": "Ovládací panel",
-  "panel_text": "Každé tepelné čerpadlo Master Therm je dodáváno s intuitivním dotykovým displejem. Vše nastavíte přímo na jednotce nebo přes mobilní aplikaci.",
-  "panel_link": "Online ovládání přes internet",
-  "cta_headline": "Chcete systém, který pracuje za vás?",
-  "cta_text": "Konzultace je zdarma.",
+  "meta_title": "Ovládání systému s tepelným čerpadlem",
+  "meta_description": "Jak se ovládá tepelné čerpadlo Master Therm? Terminál PGDx, ekvitermní regulace, zónové vytápění, ohřev bojleru.",
+  "hero_title": "Ovládání systému s tepelným čerpadlem",
+  "hero_subtitle": "Jak vlastně budu tepelné čerpadlo ovládat? Ekvitermní regulace, prostorový termostat, zónové řízení — vše přes terminál PGDx.",
+  "intro_headline": "Jak vlastně budu tepelné čerpadlo ovládat?",
+  "intro_text": "Regulaci tepelného čerpadla budete ovládat přes terminál – displej, který je u všech tepelných čerpadel Master Therm stejný. Tento terminál je buď přímo v tepelném čerpadle nebo na zdi v interiéru. Ovládací terminál je označen jako <strong class=\"text-charcoal-900\">PGDx</strong>.",
+  "intro_image_src": "/images/pgdx-terminal.png",
+  "intro_image_alt": "Ovládací terminál PGDx",
+  "questions": [
+    {
+      "question": "Jak budu ovládat teplotu v prostoru?",
+      "answer": "Terminál <strong class=\"text-charcoal-900\">PGDx</strong> neslouží jen jako hlavní ovládací terminál, ale i jako prostorový termostat, který doplňuje ekvitermní regulaci. Stačí tedy šipkou nahoru (nebo dolů) přidat (nebo ubrat) teplotu."
+    },
+    {
+      "question": "Co je ekvitermní regulace?",
+      "answer": "Ekvitermní regulace řídí teplotu topné vody v závislosti na venkovní teplotě. Čím je venku nižší teplota, máte teplejší radiátor (nebo podlahovku) a naopak. Díky ekvitermní regulaci pracuje tepelné čerpadlo vždy s co nejnižší teplotou topné vody a jeho provoz je tak maximálně ekonomický."
+    },
+    {
+      "question": "Musím ekvitermní křivku dlouhodobě \u201Eladit\u201C?",
+      "answer": "Nemusíte, stačí do interiéru nainstalovat terminál <strong class=\"text-charcoal-900\">PGDx</strong> a regulace tepelného čerpadla Master Therm se postará o zbytek. Vy si prostě jen přidáváte nebo ubíráte teplotu prostoru a tepelné čerpadlo řídí teplotu topné vody tak, aby byla co nejníže, ale zároveň tak, aby teplota v prostoru byla taková, jakou chcete.",
+      "answer2": "Optimalizací teploty topné vody podle teploty v prostoru dosáhnete maximální efektivity chodu tepelného čerpadla. Máte tak jistotu, že provoz vašeho tepelného čerpadla je maximálně levný.",
+      "callout": "Tepelná čerpadla bez této funkce nedoporučujeme."
+    },
+    {
+      "question": "Co když nechci mít terminál v interiéru domu?",
+      "answer": "Tepelné čerpadlo bude samozřejmě také fungovat, jen je obtížnější vyladit jeho funkci k nejvyšší možné efektivitě."
+    },
+    {
+      "question": "A co až začnu chladit?",
+      "answer": "Terminál PGDx je vybavený čidlem vlhkosti. Používá se v instalacích, kde chladíme podlahovým topením. Při chlazení pak terminál PGDx nedovolí, aby teplota chladící vody klesla tak nízko, že by došlo ke srážení vody na podlaze.",
+      "example": "Jakmile PGDx zjistí, že vlhkost v místnosti stoupla na 90 %, zvedne teplotu topné vody o cca 3 °C."
+    },
+    {
+      "question": "Co když mám víc topných okruhů?",
+      "answer": "Tepelné čerpadlo pak připravuje topnou vodu na hodnotu požadovanou nejteplejším okruhem. Do ostatních topných okruhů se topná voda míchá směšovacím ventilem. Pokud chceme řídit další okruh prostorovou teplotou, přidáme terminál PGDx."
+    },
+    {
+      "question": "Jak se ohřívá bojler?",
+      "answer": "Ohřev vody v bojleru má přednost před topením či chlazením. Jakmile poklesne teplota vody v bojleru, regulace tepelného čerpadla vypne topné (chladící) okruhy a naplno topí do bojleru. Jakmile se v bojleru dosáhne požadované teploty (tu si nastavujete vy), vrátí se tepelné čerpadlo zpět k vytápění (chlazení)."
+    }
+  ],
+  "cta_headline": "Chcete systém ovládání vysvětlit osobně?",
+  "cta_text": "Stačí vyplnit náš kontaktní formulář — konzultace je zdarma.",
   "cta_button": "Odeslat poptávku"
 }
