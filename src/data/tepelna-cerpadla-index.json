@@ -1,0 +1,31 @@
+{
+  "hero_title": "Tepelná čerpadla",
+  "hero_subtitle": "Dodáváme tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění, servis přímo od výrobce.",
+  "cards": [
+    {
+      "emoji": "🌬️",
+      "title": "Vzduch – voda",
+      "desc": "Nejrozšířenější typ. Snadná instalace za 2–3 dny, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
+      "href": "/tepelna-cerpadla/vzduch-voda",
+      "gradient": "from-navy-700 to-navy-900"
+    },
+    {
+      "emoji": "🌱",
+      "title": "Země – voda",
+      "desc": "Nejvyšší účinnost i v mrazivých zimách. Plošný kolektor nebo hloubkový vrt podle pozemku.",
+      "href": "/tepelna-cerpadla/zeme-voda",
+      "gradient": "from-green-700 to-green-900"
+    },
+    {
+      "emoji": "💧",
+      "title": "Voda – voda",
+      "desc": "Maximální výkon a účinnost využívající podzemní vodu. Ideální tam, kde je dostatek spodní vody.",
+      "href": "/tepelna-cerpadla/voda-voda",
+      "gradient": "from-cyan-700 to-cyan-900"
+    }
+  ],
+  "card_link_text": "Zjistit více",
+  "cta_headline": "Nevíte, který typ zvolit?",
+  "cta_text": "Poradíme vám s výběrem — zdarma a nezávazně.",
+  "cta_button": "Odeslat poptávku"
+}
