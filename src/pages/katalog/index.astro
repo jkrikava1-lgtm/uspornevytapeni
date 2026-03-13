@@ -1,53 +1,32 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/katalog-index.json';
 ---
 
-<Layout title="Katalog tepelných čerpadel" description="Katalog tepelných čerpadel Master Therm — vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění.">
+<Layout title={data.meta.title} description={data.meta.description}>
   <PageHero
-    title="Katalog tepelných čerpadel"
-    subtitle="Tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění."
-    breadcrumb={[{ label: 'Katalog', href: '/katalog' }]}
+    title={data.hero.title}
+    subtitle={data.hero.subtitle}
+    breadcrumb={[{ label: data.hero.breadcrumbLabel, href: '/katalog' }]}
   />
 
   <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <a href="/katalog/vzduch-voda" class="group relative rounded-xl overflow-hidden hover:shadow-xl transition-all">
-          <div class="relative h-44 bg-gradient-to-br from-navy-700 to-navy-900 overflow-hidden">
-
-            <div class="absolute inset-0 bg-gradient-to-r from-navy-800 via-navy-800/60 to-transparent"></div>
-          </div>
-          <div class="bg-white border border-gray-200 border-t-0 rounded-b-xl p-6 text-center">
-            <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Vzduch – voda</h2>
-            <p class="text-sm text-charcoal-500 mb-4">Nejoblíbenější řešení pro rodinné domy. Rychlá instalace, nízké pořizovací náklady.</p>
-            <span class="text-sm font-semibold text-brand-500 group-hover:text-brand-600">Zobrazit modely →</span>
-          </div>
-        </a>
-
-        <a href="/katalog/zeme-voda" class="group relative rounded-xl overflow-hidden hover:shadow-xl transition-all">
-          <div class="relative h-44 bg-gradient-to-br from-green-700 to-green-900 overflow-hidden">
-
-            <div class="absolute inset-0 bg-gradient-to-r from-green-800 via-green-800/60 to-transparent"></div>
-          </div>
-          <div class="bg-white border border-gray-200 border-t-0 rounded-b-xl p-6 text-center">
-            <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Země – voda</h2>
-            <p class="text-sm text-charcoal-500 mb-4">Nejvyšší účinnost díky stabilní teplotě zemského povrchu. Plošný kolektor nebo vrt.</p>
-            <span class="text-sm font-semibold text-brand-500 group-hover:text-brand-600">Zobrazit modely →</span>
-          </div>
-        </a>
-
-        <a href="/katalog/voda-voda" class="group relative rounded-xl overflow-hidden hover:shadow-xl transition-all">
-          <div class="relative h-44 bg-gradient-to-br from-cyan-700 to-cyan-900 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-r from-cyan-800 via-cyan-800/60 to-transparent"></div>
-          </div>
-          <div class="bg-white border border-gray-200 border-t-0 rounded-b-xl p-6 text-center">
-            <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Voda – voda</h2>
-            <p class="text-sm text-charcoal-500 mb-4">Špičková účinnost využívající podzemní vodu. Ideální tam, kde je dostatek spodní vody.</p>
-            <span class="text-sm font-semibold text-brand-500 group-hover:text-brand-600">Zobrazit modely →</span>
-          </div>
-        </a>
+        {data.cards.map(card => (
+          <a href={card.href} class="group relative rounded-xl overflow-hidden hover:shadow-xl transition-all">
+            <div class={`relative h-44 bg-gradient-to-br from-${card.gradientFrom} to-${card.gradientTo} overflow-hidden`}>
+              <div class={`absolute inset-0 bg-gradient-to-r from-${card.overlayColor} via-${card.overlayColor}/60 to-transparent`}></div>
+            </div>
+            <div class="bg-white border border-gray-200 border-t-0 rounded-b-xl p-6 text-center">
+              <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{card.title}</h2>
+              <p class="text-sm text-charcoal-500 mb-4">{card.description}</p>
+              <span class="text-sm font-semibold text-brand-500 group-hover:text-brand-600">{card.linkText}</span>
+            </div>
+          </a>
+        ))}
 
       </div>
     </div>
@@ -55,9 +34,9 @@ import PageHero from '../../components/PageHero.astro';
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Nevíte, který model vybrat?</h2>
-      <p class="text-charcoal-500 mb-8">Pomůžeme vám vybrat správný výkon i typ — zdarma.</p>
-      <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Odeslat poptávku</a>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta.headline}</h2>
+      <p class="text-charcoal-500 mb-8">{data.cta.text}</p>
+      <a href={data.cta.href} class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta.button}</a>
     </div>
   </section>
 </Layout>
