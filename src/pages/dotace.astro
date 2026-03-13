@@ -104,20 +104,24 @@ import data from '../data/dotace.json';
     </div>
   </section>
 
-  <!-- Podporovaná opatření -->
+  <!-- Podpora tepelných čerpadel -->
   <section class="bg-gray-50 py-14 lg:py-20">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.opatreni_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-8">{data.opatreni_intro}</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.tc_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-8">{data.tc_intro}</p>
 
-      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-        {data.opatreni.map((item, i) => (
-          <div class:list={["flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 px-6 py-5", i < data.opatreni.length - 1 && "border-b border-gray-100"]}>
-            <div class="font-bold text-charcoal-900 text-sm sm:w-48 flex-shrink-0">{item.nazev}</div>
-            <p class="text-charcoal-600 text-sm leading-relaxed">{item.popis}</p>
-          </div>
-        ))}
+      <div class="bg-navy-700 rounded-2xl p-6 text-white mb-6">
+        <div class="space-y-3">
+          {data.tc_body.map(item => (
+            <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
+              <span class="text-sm text-navy-300">{item.label}</span>
+              <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+            </div>
+          ))}
+        </div>
       </div>
+
+      <p class="text-charcoal-600 text-sm leading-relaxed">{data.tc_note}</p>
     </div>
   </section>
 
@@ -139,25 +143,8 @@ import data from '../data/dotace.json';
           </div>
         ))}
       </div>
-    </div>
-  </section>
 
-  <!-- Kompenzace -->
-  <section class="bg-amber-50 py-14 lg:py-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.kompenzace_headline}</h2>
-      <p class="text-charcoal-600 text-sm leading-relaxed mb-6" set:html={data.kompenzace_intro} />
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        {data.kompenzace_body.map(item => (
-          <div class="bg-white rounded-xl p-6 border border-amber-200">
-            <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{item.label}</div>
-            <div class="text-2xl font-extrabold text-navy-700">{item.value}</div>
-          </div>
-        ))}
-      </div>
-
-      <div class="bg-white rounded-xl p-6 border border-amber-200">
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8">
         <div class="flex gap-3">
           <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
