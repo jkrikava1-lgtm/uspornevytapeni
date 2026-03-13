@@ -1,0 +1,26 @@
+{
+  "hero_title": "Velká jednokompresorová tepelná čerpadla",
+  "hero_subtitle": "Nižší cena, levnější instalace.",
+  "intro": "Klasické tepelné čerpadlo vzduch-voda s jedním kompresorem pracuje v rozsahu výkonů 3\u201318 kW. Pro větší objekty nabízíme jednotky s výkonem 22, 25 nebo 30 kW. Výhodou jednokompresorového řešení je nižší cena a levnější instalace.",
+  "cards": [
+    {
+      "title": "Vzduch \u2013 voda",
+      "desc": "Jednokompresorové jednotky s výkonem 22, 25 nebo 30 kW.",
+      "models_label": "Doporučené modely:",
+      "models": ["BoxAir 45 Inverter", "EasyMaster 70Z", "EasyMaster 75Z"]
+    },
+    {
+      "title": "Země \u2013 voda",
+      "desc": "Jednokompresorové jednotky s výkonem až 33 kW.",
+      "models_label": "Doporučený model:",
+      "models": ["AquaMaster"]
+    },
+    {
+      "title": "Voda \u2013 voda",
+      "desc": "Jednokompresorové jednotky s výkonem až 45 kW.",
+      "models_label": "Doporučený model:",
+      "models": ["AquaMaster"]
+    }
+  ],
+  "cta_button": "Zpracujte mi nabídku"
+}

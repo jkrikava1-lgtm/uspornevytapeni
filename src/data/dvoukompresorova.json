@@ -1,0 +1,18 @@
+{
+  "hero_title": "Dvoukompresorová tepelná čerpadla",
+  "hero_subtitle": "Prakticky dvě tepelná čerpadla v jedné konstrukci.",
+  "intro": "Dvoukompresorové jednotky mají dva kompresory — prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádovitě připíná podle potřeby. Výhodou je úspora prostoru a vyvážený provoz obou kompresorů.",
+  "how_it_works_title": "Jak to funguje?",
+  "how_it_works": [
+    "Při běžném provozu (přechodné období, ohřev TUV) pracuje pouze jeden kompresor.",
+    "Když potřeba tepla vzroste (mrazy), kaskádovitě se připne druhý kompresor.",
+    "Řídící jednotka střídá kompresory tak, aby měly vyrovnaný počet provozních hodin.",
+    "Úspora prostoru oproti dvěma samostatným jednotkám."
+  ],
+  "models_title": "Doporučené modely",
+  "models": [
+    { "title": "AirMaster 2", "desc": "Dvoukompresorové tepelné čerpadlo vzduch-voda." },
+    { "title": "AquaMaster", "desc": "Dvoukompresorové tepelné čerpadlo země-voda." }
+  ],
+  "cta_button": "Zpracujte mi nabídku"
+}

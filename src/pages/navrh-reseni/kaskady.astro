@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/kaskady.json';
 ---
 
 <Layout title="Kaskády tepelných čerpadel" description="Kaskádní zapojení tepelných čerpadel pro výkony větší než 35 kW. Řízení Master-Slave, vyrovnaný počet motohodin.">
   <PageHero
-    title="Kaskády tepelných čerpadel"
-    subtitle="Pro výkony větší než 35 kW."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/velky-vykon' }, { label: 'Kaskády TČ', href: '/navrh-reseni/kaskady' }]}
   />
 
@@ -15,19 +16,13 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Pro výkony větší než 35 kW se tepelná čerpadla umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby. Kaskáda pokryje prakticky jakýkoliv požadovaný výkon.
+          {data.intro}
         </p>
 
-        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak kaskáda funguje?</h2>
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.how_it_works_title}</h2>
 
         <div class="space-y-3">
-          {[
-            'Tepelná čerpadla se umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby.',
-            'Jedno čerpadlo je nastaveno jako „Master" — nastavuje parametry regulace a řídí celou soustavu.',
-            'Ostatní čerpadla pracují jako „Slave" — zapínají se podle aktuální potřeby tepla.',
-            'Master zajišťuje vyrovnaný počet motohodin všech jednotek, aby žádná nebyla přetěžována.',
-            'Lze kombinovat různé typy tepelných čerpadel (vzduch-voda, země-voda, voda-voda).',
-          ].map(item => (
+          {data.how_it_works.map(item => (
             <div class="flex gap-2 items-start">
               <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,7 +36,7 @@ import PageHero from '../../components/PageHero.astro';
       </div>
 
       <div class="mt-12 text-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
       </div>
     </div>
   </section>

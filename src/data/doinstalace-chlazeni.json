@@ -1,0 +1,23 @@
+{
+  "hero_title": "Jak doinstalovat chlazení",
+  "hero_subtitle": "Zdroj tepla se může změnit ve zdroj chladu.",
+  "intro": "Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše. Pokud máte topný systém s tepelným čerpadlem jako zdrojem tepla, máte k dispozici i chlazení. Stačí chlazení objednat a tepelné čerpadlo dokáže vyrobit z topné vody vodu chladící.",
+  "podlaha_title": "Máte podlahové topení?",
+  "podlaha_intro": "Pokud máte podlahové topení, je to jednoduché a můžete chladit přímo podlahovým topným systémem. Díky velké ploše podlahy dokáže snížit teplotu o několik stupňů.",
+  "podlaha_points": [
+    "Jedním systémem řešíte vytápění i chlazení",
+    "Prostorové termostaty s čidlem rosného bodu hlídají kondenzaci",
+    "Vhodné krytiny: dlažba, kámen, lino, vinyl, plovoucí podlahy"
+  ],
+  "fancoil_title": "Nemáte podlahové topení?",
+  "fancoil_intro": "Pokud podlahové topení nemáte, lze chladit speciálními radiátory — fancoily. Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru.",
+  "fancoil_points": [
+    "Nejefektivnější metoda pro plnohodnotné chlazení",
+    "Lze umístit nad dveře nebo zabudovat v podhledu",
+    "Měděné potrubí ke každému fancoilu, vlastní oběhové čerpadlo",
+    "Malé odpadní potrubí pro odvod kondenzované vlhkosti",
+    "Investice cca 20 000 Kč za místnost"
+  ],
+  "tip_box": "Nechte si navrhnout komfortní chlazení. Posoudíme váš dům a navrhneme optimální řešení — ať už podlahovým systémem, fancoily, nebo jejich kombinací.",
+  "cta_button": "Zpracujte mi nabídku"
+}

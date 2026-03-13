@@ -1,0 +1,14 @@
+{
+  "hero_title": "Kaskády tepelných čerpadel",
+  "hero_subtitle": "Pro výkony větší než 35 kW.",
+  "intro": "Pro výkony větší než 35 kW se tepelná čerpadla umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby. Kaskáda pokryje prakticky jakýkoliv požadovaný výkon.",
+  "how_it_works_title": "Jak kaskáda funguje?",
+  "how_it_works": [
+    "Tepelná čerpadla se umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby.",
+    "Jedno čerpadlo je nastaveno jako \u201eMaster\u201c — nastavuje parametry regulace a řídí celou soustavu.",
+    "Ostatní čerpadla pracují jako \u201eSlave\u201c — zapínají se podle aktuální potřeby tepla.",
+    "Master zajišťuje vyrovnaný počet motohodin všech jednotek, aby žádná nebyla přetěžována.",
+    "Lze kombinovat různé typy tepelných čerpadel (vzduch-voda, země-voda, voda-voda)."
+  ],
+  "cta_button": "Zpracujte mi nabídku"
+}

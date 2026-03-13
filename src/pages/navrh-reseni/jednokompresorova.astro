@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/jednokompresorova.json';
 ---
 
 <Layout title="Velká jednokompresorová tepelná čerpadla" description="Jednokompresorová tepelná čerpadla s výkonem až 45 kW. Vzduch-voda, země-voda i voda-voda. Nižší cena, levnější instalace.">
   <PageHero
-    title="Velká jednokompresorová tepelná čerpadla"
-    subtitle="Nižší cena, levnější instalace."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/velky-vykon' }, { label: 'Jednokompresorová TČ', href: '/navrh-reseni/jednokompresorova' }]}
   />
 
@@ -15,51 +16,29 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Klasické tepelné čerpadlo vzduch-voda s jedním kompresorem pracuje v rozsahu výkonů 3–18 kW. Pro větší objekty nabízíme jednotky s výkonem 22, 25 nebo 30 kW. Výhodou jednokompresorového řešení je nižší cena a levnější instalace.
+          {data.intro}
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h2 class="text-lg font-extrabold text-charcoal-900 mb-3">Vzduch – voda</h2>
-            <p class="text-charcoal-600 text-sm leading-relaxed mb-3">
-              Jednokompresorové jednotky s výkonem 22, 25 nebo 30 kW.
-            </p>
-            <h3 class="text-sm font-bold text-charcoal-800 mb-2">Doporučené modely:</h3>
-            <ul class="space-y-1 text-sm text-charcoal-600">
-              <li>BoxAir 45 Inverter</li>
-              <li>EasyMaster 70Z</li>
-              <li>EasyMaster 75Z</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h2 class="text-lg font-extrabold text-charcoal-900 mb-3">Země – voda</h2>
-            <p class="text-charcoal-600 text-sm leading-relaxed mb-3">
-              Jednokompresorové jednotky s výkonem až 33 kW.
-            </p>
-            <h3 class="text-sm font-bold text-charcoal-800 mb-2">Doporučený model:</h3>
-            <ul class="space-y-1 text-sm text-charcoal-600">
-              <li>AquaMaster</li>
-            </ul>
-          </div>
-
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h2 class="text-lg font-extrabold text-charcoal-900 mb-3">Voda – voda</h2>
-            <p class="text-charcoal-600 text-sm leading-relaxed mb-3">
-              Jednokompresorové jednotky s výkonem až 45 kW.
-            </p>
-            <h3 class="text-sm font-bold text-charcoal-800 mb-2">Doporučený model:</h3>
-            <ul class="space-y-1 text-sm text-charcoal-600">
-              <li>AquaMaster</li>
-            </ul>
-          </div>
-
+          {data.cards.map(card => (
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h2 class="text-lg font-extrabold text-charcoal-900 mb-3">{card.title}</h2>
+              <p class="text-charcoal-600 text-sm leading-relaxed mb-3">
+                {card.desc}
+              </p>
+              <h3 class="text-sm font-bold text-charcoal-800 mb-2">{card.models_label}</h3>
+              <ul class="space-y-1 text-sm text-charcoal-600">
+                {card.models.map(model => (
+                  <li>{model}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 
       <div class="mt-12 text-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
       </div>
     </div>
   </section>

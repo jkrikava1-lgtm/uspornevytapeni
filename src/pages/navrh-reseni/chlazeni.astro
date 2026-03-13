@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/chlazeni.json';
 ---
 
 <Layout title="Chlazení domu tepelným čerpadlem" description="Chlazení domu tepelným čerpadlem — podlahovým systémem nebo fancoily. Jednoduchá a levná instalace.">
   <PageHero
-    title="Jak na chlazení domu tepelným čerpadlem"
-    subtitle="Komfortní chlazení domu tepelným čerpadlem."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/novostavba' }, { label: 'Chlazení', href: '/navrh-reseni/chlazeni' }]}
   />
 
@@ -15,23 +16,18 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Chceme bydlet komfortně a chlazení domu ke komfortnímu bydlení patří. Obzvlášť, pokud je instalace chlazení jednoduchá a levná. Pokud máte topný systém s tepelným čerpadlem jako zdrojem tepla, máte k dispozici i chlazení.
+          {data.intro1}
         </p>
         <p class="text-charcoal-600 leading-relaxed">
-          Stačí chlazení objednat a tepelné čerpadlo dokáže vyrobit z topné vody vodu chladící a předat ji do domu. Moderní dům by měl umožňovat letní chlazení — nejčastěji se používá chladící temperace podlahovým systémem, ale rozšiřuje se i plnohodnotné chladící řešení.
+          {data.intro2}
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Chlazení podlahovým systémem</h2>
+            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">{data.podlaha_title}</h2>
             <div class="space-y-3">
-              {[
-                'Lze využít stejný systém jako při topení — jedním systémem řešíte vytápění i chlazení',
-                'Funguje díky velké ploše podlahy — dokáže snížit teplotu o několik stupňů',
-                'Nutné sledovat rosný bod — prostorové termostaty mají čidlo rosného bodu a při zvýšené vlhkosti automaticky zvýší teplotu chladící vody',
-                'Podlahová krytina musí být vhodná pro chlazení: dlažba, kámen, lino, vinyl, lze i plovoucí podlahy',
-              ].map(item => (
+              {data.podlaha_points.map(item => (
                 <div class="flex gap-2 items-start">
                   <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,23 +40,15 @@ import PageHero from '../../components/PageHero.astro';
             </div>
             <div class="mt-4 bg-brand-50 rounded-lg p-4 border border-brand-100">
               <p class="text-sm text-charcoal-700 italic">
-                „Při venkovní teplotě 35 °C jsem udržel podlahovým chlazením vnitřní teplotu v domě na 23 °C."
+                {data.podlaha_quote}
               </p>
             </div>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">Chlazení fancoilovými jednotkami</h2>
+            <h2 class="text-lg font-extrabold text-charcoal-900 mb-4">{data.fancoil_title}</h2>
             <div class="space-y-3">
-              {[
-                'Nejefektivnější metoda pro plnohodnotné chlazení — stabilní teplota i v největších vedrech',
-                'Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru',
-                'Lze je umístit nad dveře nebo zabudovat v podhledu',
-                'Pro cirkulaci chladící vody se použije měděné potrubí ke každému fancoilu',
-                'Každý chladící okruh má vlastní oběhové čerpadlo',
-                'Potřebné malé odpadní potrubí pro odvod kondenzované vlhkosti',
-                'Investice cca 20 000 Kč za místnost',
-              ].map(item => (
+              {data.fancoil_points.map(item => (
                 <div class="flex gap-2 items-start">
                   <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +65,7 @@ import PageHero from '../../components/PageHero.astro';
       </div>
 
       <div class="mt-12 text-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
       </div>
     </div>
   </section>

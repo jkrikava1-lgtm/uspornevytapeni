@@ -1,0 +1,29 @@
+{
+  "hero_title": "Je velikost radiátorů dostatečná?",
+  "hero_subtitle": "Jak upravit starší radiátorový systém pro tepelné čerpadlo.",
+  "intro1": "Není důležité, jaký mají vaše radiátory tvar nebo z jakého jsou materiálu, ale jaký mají výkon. A výkon radiátoru = jeho plocha. Jednoduše řečeno, čím větší radiátor, tím lepší.",
+  "intro2": "Váš stávající zdroj tepla (plynový kotel, elektrokotel, kotel na tuhá paliva\u2026) umí natopit vodu v radiátoru na poměrně velké teploty (70–80 °C). Tepelné čerpadlo umí natopit vodu většinou na maximálně 55 °C. Navíc platí, že čím je teplota topné vody nižší, tím je jeho provoz ekonomičtější. Velikost radiátoru musí být tedy dostatečná, aby i při teplotě topné vody 55 °C nebo nižší byl schopen vytopit místnost, ve které je umístěn.",
+  "check_title": "Topný systém vám zdarma zkontrolujeme. Jak na to?",
+  "check_steps": [
+    "Nejdříve je třeba vypočítat tepelnou ztrátu objektu. To dělá projektant vytápění na základě rozměrů domu a materiálů použitých na stavbě. Vyzkoušeného projektanta máme po ruce — výpočet provede rychle a přesně.",
+    "Když máme výpočet tepelné ztráty, víme, kolik tepla je potřeba dodat každé místnosti. Příklad: obývací pokoj má tepelnou ztrátu 800 W. Radiátor musí tedy při 55 °C a venkovní teplotě −15 °C mít výkon minimálně 800 W. Pokud je výkon dostatečný, radiátor zůstává. Pokud je menší — je zkrátka malý a musíme jej zvětšit.",
+    "Pokud máte moderní deskové radiátory (např. Korado), musí se vyměnit za větší. Lze navýšit výšku, délku, nebo změnit typ — jednodeskový za dvojdeskový, dvojdeskový za trojdeskový. Při změně typu je radiátor na výšku a šířku stejný, jen se o cca 5 cm změní jeho hloubka.",
+    "Pokud máte žebrové radiátory, lze jejich plochu bez problémů navýšit přidáním žeber.",
+    "Výměna nebo úprava radiátoru je většinou nenáročná a není třeba se obávat velkého nepořádku.",
+    "Do místnosti můžeme samozřejmě doplnit i další radiátor."
+  ],
+  "alt_title": "Nechcete do systému zasahovat?",
+  "alt_intro": "Pokud zjistíme, že výkon radiátorů je nižší, ale nechcete do systému zasahovat, máme také řešení:",
+  "alt_points": [
+    "Tepelná čerpadla topí tak dlouho, dokud je teplota topné vody vyhovující a radiátory dům vytopí.",
+    "Jakmile zjistíte, že teplota radiátorů je nevyhovující, sepnete původní kotel, který teplotu zvýší. Tepelné čerpadlo se automaticky uzavře.",
+    "Tento způsob je ekonomický jen pokud se vysokoteplotní zdroj spouští minimálně, při teplotách −10 °C nebo nižších."
+  ],
+  "tip_box": "Je lepší a ekonomičtější přizpůsobit radiátorový systém tepelnému čerpadlu než provozovat tepelné čerpadlo v jeho hraničních možnostech.",
+  "example_title": "Příklad:",
+  "example_line1": "1. Venkovní teplota −7 °C, topná voda 35 °C \u2192 topný faktor TČ = <strong>3,0</strong>",
+  "example_line2": "2. Venkovní teplota −7 °C, topná voda 50 °C \u2192 topný faktor TČ = <strong>2,4</strong>",
+  "example_note": "Za stejné peníze za elektřinu dostáváte výrazně nižší výkon tepelného čerpadla.",
+  "outro": "Úpravy radiátorového systému řešíme za režijní ceny. Nechceme, aby se instalace tepelného čerpadla zbytečně prodražovala.",
+  "cta_button": "Zpracujte mi nabídku"
+}

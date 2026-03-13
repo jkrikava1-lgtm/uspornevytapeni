@@ -1,12 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import data from '../../data/dvoukompresorova.json';
 ---
 
 <Layout title="Dvoukompresorová tepelná čerpadla" description="Dvoukompresorová tepelná čerpadla — prakticky dvě tepelná čerpadla v jedné konstrukci. Kaskádovité spínání, úspora prostoru.">
   <PageHero
-    title="Dvoukompresorová tepelná čerpadla"
-    subtitle="Prakticky dvě tepelná čerpadla v jedné konstrukci."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/velky-vykon' }, { label: 'Dvoukompresorová TČ', href: '/navrh-reseni/dvoukompresorova' }]}
   />
 
@@ -15,18 +16,13 @@ import PageHero from '../../components/PageHero.astro';
 
       <div class="space-y-6">
         <p class="text-charcoal-600 leading-relaxed">
-          Dvoukompresorové jednotky mají dva kompresory — prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádovitě připíná podle potřeby. Výhodou je úspora prostoru a vyvážený provoz obou kompresorů.
+          {data.intro}
         </p>
 
-        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Jak to funguje?</h2>
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.how_it_works_title}</h2>
 
         <div class="space-y-3">
-          {[
-            'Při běžném provozu (přechodné období, ohřev TUV) pracuje pouze jeden kompresor.',
-            'Když potřeba tepla vzroste (mrazy), kaskádovitě se připne druhý kompresor.',
-            'Řídící jednotka střídá kompresory tak, aby měly vyrovnaný počet provozních hodin.',
-            'Úspora prostoru oproti dvěma samostatným jednotkám.',
-          ].map(item => (
+          {data.how_it_works.map(item => (
             <div class="flex gap-2 items-start">
               <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,22 +34,20 @@ import PageHero from '../../components/PageHero.astro';
           ))}
         </div>
 
-        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">Doporučené modely</h2>
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.models_title}</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="text-lg font-bold text-charcoal-900 mb-2">AirMaster 2</h3>
-            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo vzduch-voda.</p>
-          </div>
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="text-lg font-bold text-charcoal-900 mb-2">AquaMaster</h3>
-            <p class="text-charcoal-600 text-sm">Dvoukompresorové tepelné čerpadlo země-voda.</p>
-          </div>
+          {data.models.map(model => (
+            <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h3 class="text-lg font-bold text-charcoal-900 mb-2">{model.title}</h3>
+              <p class="text-charcoal-600 text-sm">{model.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 
       <div class="mt-12 text-center">
-        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">Zpracujte mi nabídku</a>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
       </div>
     </div>
   </section>

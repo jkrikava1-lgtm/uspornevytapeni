@@ -1,0 +1,32 @@
+{
+  "hero_title": "Kombinace topných okruhů",
+  "hero_subtitle": "Topné a chladící okruhy lze libovolně kombinovat.",
+  "intro": "Topné a chladící okruhy lze kombinovat. Například můžete současně chladit dům a vytápět bazén, nebo kombinovat radiátory s podlahovým topením v různých částech domu.",
+  "how_it_works_title": "Jak to funguje?",
+  "how_it_works": [
+    "Akumulační nádoba pojímá teplo z více zdrojů — tepelné čerpadlo, kotel, krb, plynový kotel.",
+    "Každý topný nebo chladící okruh má vlastní oběhové čerpadlo.",
+    "Elektronický regulátor řídí jednotlivé okruhy nezávisle na sobě.",
+    "Systém automaticky rozhoduje, který okruh je aktivní podle aktuální potřeby."
+  ],
+  "examples_title": "Příklady kombinací",
+  "examples": [
+    {
+      "title": "Podlahové topení + radiátory",
+      "desc": "V přízemí podlahové topení, v patře radiátory. Každý okruh pracuje s jinou teplotou topné vody — regulátor je řídí nezávisle."
+    },
+    {
+      "title": "Chlazení + ohřev bazénu",
+      "desc": "V létě tepelné čerpadlo chladí dům a současně ohřívá bazén. Odpadní teplo z chlazení se využije pro ohřev vody v bazénu."
+    },
+    {
+      "title": "Tepelné čerpadlo + krb",
+      "desc": "Teplo z krbové vložky se ukládá do akumulační nádoby a doplňuje tepelné čerpadlo. Systém automaticky přepíná mezi zdroji."
+    },
+    {
+      "title": "Více zdrojů tepla",
+      "desc": "Akumulační nádoba pojímá teplo z tepelného čerpadla, kotle i krbu. Regulátor vybírá nejekonomičtější zdroj podle aktuálních podmínek."
+    }
+  ],
+  "cta_button": "Zpracujte mi nabídku"
+}
