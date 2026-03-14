@@ -372,7 +372,7 @@ import site from '../data/site.json';
   const dots = document.querySelectorAll('[data-hero-dot]');
   if (slides.length > 1) {
     let current = 0;
-    let timer = setInterval(next, 5000);
+    let timer = setInterval(next, 3000);
 
     function goTo(i) {
       slides[current].classList.replace('opacity-100', 'opacity-0');
@@ -388,7 +388,7 @@ import site from '../data/site.json';
       dot.addEventListener('click', () => {
         clearInterval(timer);
         goTo(Number(dot.dataset.heroDot));
-        timer = setInterval(next, 5000);
+        timer = setInterval(next, 3000);
       });
     });
   }
