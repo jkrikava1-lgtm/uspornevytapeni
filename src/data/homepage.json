@@ -48,15 +48,15 @@
   ],
 
   "chart_label": "Roční náklady na vytápění",
-  "chart_highlight_number": "57 %",
-  "chart_highlight_text": "nižší náklady oproti plynu",
+  "chart_highlight_number": "43 %",
+  "chart_highlight_text": "ni\u017e\u0161\u00ed n\u00e1klady oproti plynu",
   "chart_items": [
-    { "label": "Elektřina přímotop", "value": 108000, "color": "gray-400" },
-    { "label": "Zemní plyn", "value": 65000, "color": "gray-400" },
-    { "label": "Dřevní pelety", "value": 50000, "color": "amber-400" },
-    { "label": "Hnědé uhlí", "value": 35000, "color": "gray-500" },
-    { "label": "Tepelné čerpadlo", "value": 28000, "color": "brand-500" },
-    { "label": "Palivové dřevo", "value": 23000, "color": "amber-500" }
+    { "label": "Elekt\u0159ina p\u0159\u00edmotop", "value": 106000, "color": "gray-400" },
+    { "label": "Zemn\u00ed plyn", "value": 65000, "color": "gray-400" },
+    { "label": "D\u0159evn\u00ed pelety", "value": 58000, "color": "amber-400" },
+    { "label": "Hn\u011bd\u00e9 uhl\u00ed", "value": 50000, "color": "gray-500" },
+    { "label": "Tepeln\u00e9 \u010derpadlo", "value": 37000, "color": "brand-500" },
+    { "label": "Palivov\u00e9 d\u0159evo", "value": 22000, "color": "amber-500" }
   ],
   "chart_footnote": "* Roční náklady pro dům s tepelnou ztrátou 13 kW a ohřevem teplé vody pro 4 osoby (TZB-info, 2026)",
 
