@@ -117,7 +117,8 @@ import ref from '../data/reference.json';
     </div>
   </div>
 
-  <script define:vars={{ references: ref.references }}>
+  <script is:inline set:html={`
+    const references = ${JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })))};
     const lightbox = document.getElementById('lightbox');
     const lbImage = document.getElementById('lb-image');
     const lbTitle = document.getElementById('lb-title');
@@ -126,23 +127,22 @@ import ref from '../data/reference.json';
     let currentGallery = [];
     let currentIndex = 0;
 
-    function openLightbox(refIdx, imgIdx = 0) {
-      const ref = references[refIdx];
+    function openLightbox(refIdx, imgIdx) {
+      imgIdx = imgIdx || 0;
+      var ref = references[refIdx];
       currentGallery = ref.gallery;
-      lbTitle.textContent = ref.lokalita + ' — ' + ref.system;
+      lbTitle.textContent = ref.lokalita + ' \\u2014 ' + ref.system;
       showImage(imgIdx);
       lightbox.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
-
-      // Build thumbnails
       lbThumbs.innerHTML = '';
-      currentGallery.forEach((src, i) => {
-        const thumb = document.createElement('img');
+      currentGallery.forEach(function(src, i) {
+        var thumb = document.createElement('img');
         thumb.src = src;
         thumb.alt = '';
         thumb.className = 'w-16 h-12 object-cover rounded cursor-pointer border-2 transition-all ' +
           (i === imgIdx ? 'border-white opacity-100' : 'border-transparent opacity-50 hover:opacity-80');
-        thumb.addEventListener('click', () => showImage(i));
+        thumb.addEventListener('click', function() { showImage(i); });
         lbThumbs.appendChild(thumb);
       });
     }
@@ -151,10 +151,8 @@ import ref from '../data/reference.json';
       currentIndex = idx;
       lbImage.src = currentGallery[idx];
       lbCounter.textContent = (idx + 1) + ' / ' + currentGallery.length;
-
-      // Update thumb highlights
-      const thumbs = lbThumbs.querySelectorAll('img');
-      thumbs.forEach((t, i) => {
+      var thumbs = lbThumbs.querySelectorAll('img');
+      thumbs.forEach(function(t, i) {
         if (i === idx) {
           t.className = t.className.replace('border-transparent opacity-50 hover:opacity-80', 'border-white opacity-100');
         } else {
@@ -168,28 +166,26 @@ import ref from '../data/reference.json';
       document.body.style.overflow = '';
     }
 
-    // Event listeners
-    document.querySelectorAll('[data-gallery-trigger]').forEach(card => {
-      card.addEventListener('click', () => {
+    document.querySelectorAll('[data-gallery-trigger]').forEach(function(card) {
+      card.addEventListener('click', function() {
         openLightbox(parseInt(card.dataset.galleryTrigger));
       });
     });
 
     document.getElementById('lb-close').addEventListener('click', closeLightbox);
     document.getElementById('lb-backdrop').addEventListener('click', closeLightbox);
-    document.getElementById('lb-prev').addEventListener('click', () => {
+    document.getElementById('lb-prev').addEventListener('click', function() {
       showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
     });
-    document.getElementById('lb-next').addEventListener('click', () => {
+    document.getElementById('lb-next').addEventListener('click', function() {
       showImage((currentIndex + 1) % currentGallery.length);
     });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', function(e) {
       if (lightbox.classList.contains('hidden')) return;
       if (e.key === 'Escape') closeLightbox();
       if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
       if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentGallery.length);
     });
-  </script>
+  `} />
 </Layout>
