@@ -44,7 +44,8 @@
   "nav_cena": "Cena",
   "nav_cena_items": [
     { "href": "/cena", "label": "Cena tepelného čerpadla" },
-    { "href": "/cenova-kalkulace", "label": "Cenová kalkulace" }
+    { "href": "/cenova-kalkulace", "label": "Cenová kalkulace" },
+    { "href": "/porovnani-nakladu", "label": "Porovn\u00e1n\u00ed n\u00e1klad\u016f" }
   ],
   "nav_cena_mobile_extra": [
     { "href": "/porovnani-nakladu", "label": "Porovnání nákladů" }
