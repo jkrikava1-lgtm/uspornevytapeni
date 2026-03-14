@@ -37,6 +37,7 @@
   "variant1_model_label": "Používaný model",
   "variant1_model_name": "BoxAir Inverter",
   "variant1_model_desc": "od firmy Master Therm — nejprodávanější model skvělého českého výrobce",
+  "variant1_catalog_link": "Katalog vzduch–voda",
   "variant1_cta_text": "Nechte si navrhnout venkovní kompakt na míru:",
   "variant1_cta_button": "Zpracujte mi nabídku",
   "variant2_title": "Vzduch – voda: Dělená konstrukce neboli Split",
@@ -72,6 +73,7 @@
     "BoxAir Inverter Split Combi"
   ],
   "variant2_model_desc": "špičkové modely od společnosti Master Therm",
+  "variant2_catalog_link": "Katalog vzduch–voda",
   "variant2_cta_text": "Vše navrhneme individuálně podle vašeho domu. Nechte si navrhnout dělený systém na míru:",
   "variant2_cta_button": "Zpracujte mi nabídku",
   "cta_headline": "Nejste si jistí, která varianta je pro vás vhodná?",

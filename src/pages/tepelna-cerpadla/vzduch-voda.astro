@@ -94,7 +94,11 @@ import data from '../../data/vzduch-voda.json';
           <div class="bg-white rounded-xl p-6 border border-gray-200">
             <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{data.variant1_model_label}</div>
             <div class="font-bold text-charcoal-900 text-base mb-1">{data.variant1_model_name}</div>
-            <div class="text-sm text-charcoal-500">{data.variant1_model_desc}</div>
+            <div class="text-sm text-charcoal-500 mb-3">{data.variant1_model_desc}</div>
+            <a href="/katalog/vzduch-voda" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">
+              {data.variant1_catalog_link}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
           </div>
 
           <div class="bg-white rounded-xl p-6 border border-gray-200">
@@ -123,7 +127,7 @@ import data from '../../data/vzduch-voda.json';
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
 
-        <img src="/images/produkty/split-konzole-majitel.jpg" alt="Venkovní jednotka tepelného čerpadla na konzoli s majitelem" class="rounded-2xl w-full h-full object-cover" loading="lazy" />
+        <img src="/images/produkty/split-konzole-majitel.jpg" alt="Venkovní jednotka tepelného čerpadla na konzoli s majitelem" class="rounded-2xl w-full object-cover lg:h-full lg:max-h-[32rem]" loading="lazy" />
 
         <div class="space-y-4">
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
@@ -204,7 +208,11 @@ import data from '../../data/vzduch-voda.json';
                 <div class="font-bold text-charcoal-900 text-sm">{name}</div>
               ))}
             </div>
-            <div class="text-xs text-charcoal-500">{data.variant2_model_desc}</div>
+            <div class="text-xs text-charcoal-500 mb-3">{data.variant2_model_desc}</div>
+            <a href="/katalog/vzduch-voda" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">
+              {data.variant2_catalog_link}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
