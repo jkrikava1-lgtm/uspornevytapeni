@@ -32,7 +32,7 @@ import data from '../data/porovnani-nakladu.json';
           { zdroj: data.source6_zdroj, icon: '🪨', rocni: data.source6_rocni, poznamka: data.source6_poznamka, highlight: false, uspory: data.source6_uspory },
         ].map(item => (
           <div class={`rounded-xl p-7 border-2 ${item.highlight ? 'border-brand-500 bg-brand-50' : 'border-gray-200 bg-white'}`}>
-            {item.highlight && <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">Nejnižší spotřeba</div>}
+            {item.highlight && <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-2">Nejnižší náklady</div>}
             <div class="text-3xl mb-3">{item.icon}</div>
             <h3 class="font-bold text-charcoal-900 mb-2">{item.zdroj}</h3>
             <div class={`text-2xl font-extrabold mb-1 ${item.highlight ? 'text-brand-600' : 'text-charcoal-800'}`}>{item.rocni}</div>
@@ -51,17 +51,17 @@ import data from '../data/porovnani-nakladu.json';
         <h2 class="text-xl font-extrabold text-charcoal-900 mb-8">{data.chart_headline}</h2>
         <div class="space-y-5">
           {[
-            { label: 'Tepelné čerpadlo', hodnota: 5000, max: 36000, barva: 'bg-brand-500' },
-            { label: 'Elektřina přímotop', hodnota: 28000, max: 36000, barva: 'bg-gray-400' },
-            { label: 'Dřevní pelety', hodnota: 33000, max: 36000, barva: 'bg-amber-400' },
-            { label: 'Zemní plyn', hodnota: 34000, max: 36000, barva: 'bg-gray-400' },
-            { label: 'Palivové dřevo', hodnota: 35000, max: 36000, barva: 'bg-amber-500' },
-            { label: 'Hnědé uhlí', hodnota: 36000, max: 36000, barva: 'bg-gray-500' },
+            { label: 'Palivové dřevo', hodnota: 23000, max: 108000, barva: 'bg-amber-500' },
+            { label: 'Tepelné čerpadlo', hodnota: 28000, max: 108000, barva: 'bg-brand-500' },
+            { label: 'Hnědé uhlí', hodnota: 35000, max: 108000, barva: 'bg-gray-500' },
+            { label: 'Dřevní pelety', hodnota: 50000, max: 108000, barva: 'bg-amber-400' },
+            { label: 'Zemní plyn', hodnota: 65000, max: 108000, barva: 'bg-gray-400' },
+            { label: 'Elektřina přímotop', hodnota: 108000, max: 108000, barva: 'bg-gray-400' },
           ].map(item => (
             <div>
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-charcoal-800">{item.label}</span>
-                <span class="text-sm font-bold text-charcoal-600">{item.hodnota.toLocaleString('cs-CZ')} kWh/rok</span>
+                <span class="text-sm font-bold text-charcoal-600">{item.hodnota.toLocaleString('cs-CZ')} Kč/rok</span>
               </div>
               <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
                 <div class={`h-3 ${item.barva} rounded-full transition-all`} style={`width:${Math.round(item.hodnota/item.max*100)}%`}></div>
