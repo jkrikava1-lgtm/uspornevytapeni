@@ -1,26 +1,109 @@
 {
-  "meta_title": "Tepelná čerpadla a úsporné vytápění",
-  "meta_description": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění na míru. Novostavby i rekonstrukce. Bezplatná konzultace.",
   "hero_badge": "Dodáváme tepelná čerpadla Master Therm — česká výroba od 1998",
-  "hero_experience_badge": "20 let zkušeností",
   "hero_h1_line1": "Tepelná čerpadla a vytápění",
   "hero_h1_highlight": "řešíme každý den",
   "hero_h1_line3": "Smysluplný systém navrhneme i vám",
   "hero_text": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2006. Bezobslužný provoz, online ovládání, záruka kvality.",
   "hero_cta_primary": "Chci bezplatnou konzultaci",
   "hero_cta_secondary": "Prohlédnout reference",
-  "hero_slides": [
-    { "src": "/images/hero/novostavba-deti.jpg", "label": "Tepeln\u00e9 \u010derpadlo vzduch-voda", "desc": "Novostavba s tepeln\u00fdm \u010derpadlem \u2014 komfort pro celou rodinu" },
-    { "src": "/images/produkty/aquamaster-pracovna.jpg", "label": "Tepelné čerpadlo země-voda", "desc": "AquaMaster Inverter — kompaktní vnitřní jednotka" },
-    { "src": "/images/hero/monter-dodavka.jpg", "label": "Profesionální instalace", "desc": "Montáž a servis po celé ČR" }
-  ],
   "stat1_number": "40+",
   "stat1_label": "instalací ročně",
   "stat2_number": "20+",
   "stat2_label": "let zkušeností",
   "stat3_number": "98 %",
   "stat3_label": "spokojených klientů",
-
+  "savings_headline": "Nejúspornější způsob vytápění dnes dostupný",
+  "savings_text": "Tepelné čerpadlo vytváří ze 1 kWh elektrické energie 3–5 kWh tepla. Oproti elektrickému kotli ušetříte průměrně cca 70 % ročních nákladů na vytápění.",
+  "why_us_headline": "Solidní práce, žádné kompromisy",
+  "testimonial_text": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
+  "testimonial_name": "Roman Vojtek",
+  "testimonial_location": "Praha — tepelné čerpadlo vzduch-voda",
+  "dotace_headline": "Získejte dotaci",
+  "dotace_text": "Pomůžeme vám s celým procesem žádosti — od poradenství po schválení.",
+  "cta_headline": "Připraveni začít?",
+  "cta_text": "Zavolejte nám nebo vyplňte poptávkový formulář. Konzultace je zdarma, bez závazků.",
+  "cta_button": "Odeslat poptávku",
+  "dotace_cta": "Zjistit nárok na dotaci",
+  "dotace_label": "Nová zelená úsporám",
+  "products": [
+    {
+      "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
+      "title": "Vzduch – voda",
+      "emoji": "🌬️",
+      "href": "/tepelna-cerpadla/vzduch-voda"
+    },
+    {
+      "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
+      "title": "Země – voda",
+      "emoji": "🌱",
+      "href": "/tepelna-cerpadla/zeme-voda"
+    },
+    {
+      "desc": "Maximální výkon a účinnost. Pro objekty s přístupem k podzemní vodě nebo vodnímu zdroji.",
+      "title": "Voda – voda",
+      "emoji": "💧",
+      "href": "/tepelna-cerpadla/voda-voda"
+    }
+  ],
+  "products_cta": "Zjistit více",
+  "products_headline": "Tepelná čerpadla pro každou situaci",
+  "products_label": "Naše produkty",
+  "chart_footnote": "* Roční náklady pro dům s tepelnou ztrátou 13 kW a ohřevem teplé vody pro 4 osoby (TZB-info, 2026)",
+  "chart_items": [
+    {
+      "color": "gray-400",
+      "value": 106000,
+      "label": "Elektřina přímotop"
+    },
+    {
+      "color": "gray-400",
+      "value": 65000,
+      "label": "Zemní plyn"
+    },
+    {
+      "color": "amber-400",
+      "value": 58000,
+      "label": "Dřevní pelety"
+    },
+    {
+      "color": "gray-500",
+      "value": 50000,
+      "label": "Hnědé uhlí"
+    },
+    {
+      "color": "brand-500",
+      "value": 37000,
+      "label": "Tepelné čerpadlo"
+    },
+    {
+      "color": "amber-500",
+      "value": 22000,
+      "label": "Palivové dřevo"
+    }
+  ],
+  "chart_highlight_text": "nižší náklady oproti plynu",
+  "chart_highlight_number": "43 %",
+  "chart_label": "Roční náklady na vytápění",
+  "meta_title": "Tepelná čerpadla a úsporné vytápění",
+  "meta_description": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění na míru. Novostavby i rekonstrukce. Bezplatná konzultace.",
+  "hero_experience_badge": "20 let zkušeností",
+  "hero_slides": [
+    {
+      "src": "/images/hero/novostavba-deti.jpg",
+      "label": "Tepelné čerpadlo vzduch-voda",
+      "desc": "Novostavba s tepelným čerpadlem — komfort pro celou rodinu"
+    },
+    {
+      "src": "/images/produkty/aquamaster-pracovna.jpg",
+      "label": "Tepelné čerpadlo země-voda",
+      "desc": "AquaMaster Inverter — kompaktní vnitřní jednotka"
+    },
+    {
+      "src": "/images/hero/monter-dodavka.jpg",
+      "label": "Profesionální instalace",
+      "desc": "Montáž a servis po celé ČR"
+    }
+  ],
   "cards_headline": "Jak vám můžeme pomoci?",
   "cards_subtitle": "Vyberte situaci, která odpovídá vaší potřebě.",
   "cards_cta": "Více informací",
@@ -36,58 +119,42 @@
   "card3_desc": "Pro bytové domy, komerční objekty i průmysl. Navrhujeme kaskádové systémy s výkonem od 20 do 200 kW.",
   "card3_href": "/navrh-reseni/velky-vykon",
   "card3_img": "/images/hero/kaskada-bytovak.jpg",
-
   "savings_label": "Proč tepelné čerpadlo",
-  "savings_headline": "Nejúspornější způsob vytápění dnes dostupný",
-  "savings_text": "Tepelné čerpadlo vytváří ze 1 kWh elektrické energie 3–5 kWh tepla. Oproti elektrickému kotli ušetříte průměrně cca 70 % ročních nákladů na vytápění.",
   "savings_benefits": [
-    { "title": "Úspora 60–70 % nákladů", "desc": "Průměrná roční úspora oproti plynovému kotli při cenách energií 2024." },
-    { "title": "100% bezobslužný provoz", "desc": "Žádné přikládání, žádná obsluha. Systém funguje sám, vy se jen zahříváte." },
-    { "title": "Topení i chlazení v jednom", "desc": "V létě zařízení obrátí chod a funguje jako klimatizace. Dvě funkce za cenu jedné." },
-    { "title": "Online ovládání odkudkoliv", "desc": "Přes mobilní aplikaci nastavíte teplotu z kanceláře, z dovolené, kdekoliv." }
+    {
+      "title": "Úspora 60–70 % nákladů",
+      "desc": "Průměrná roční úspora oproti plynovému kotli při cenách energií 2024."
+    },
+    {
+      "title": "100% bezobslužný provoz",
+      "desc": "Žádné přikládání, žádná obsluha. Systém funguje sám, vy se jen zahříváte."
+    },
+    {
+      "title": "Topení i chlazení v jednom",
+      "desc": "V létě zařízení obrátí chod a funguje jako klimatizace. Dvě funkce za cenu jedné."
+    },
+    {
+      "title": "Online ovládání odkudkoliv",
+      "desc": "Přes mobilní aplikaci nastavíte teplotu z kanceláře, z dovolené, kdekoliv."
+    }
   ],
-
-  "chart_label": "Roční náklady na vytápění",
-  "chart_highlight_number": "43 %",
-  "chart_highlight_text": "ni\u017e\u0161\u00ed n\u00e1klady oproti plynu",
-  "chart_items": [
-    { "label": "Elekt\u0159ina p\u0159\u00edmotop", "value": 106000, "color": "gray-400" },
-    { "label": "Zemn\u00ed plyn", "value": 65000, "color": "gray-400" },
-    { "label": "D\u0159evn\u00ed pelety", "value": 58000, "color": "amber-400" },
-    { "label": "Hn\u011bd\u00e9 uhl\u00ed", "value": 50000, "color": "gray-500" },
-    { "label": "Tepeln\u00e9 \u010derpadlo", "value": 37000, "color": "brand-500" },
-    { "label": "Palivov\u00e9 d\u0159evo", "value": 22000, "color": "amber-500" }
-  ],
-  "chart_footnote": "* Roční náklady pro dům s tepelnou ztrátou 13 kW a ohřevem teplé vody pro 4 osoby (TZB-info, 2026)",
-
   "why_us_label": "Proč Úsporné vytápění",
-  "why_us_headline": "Solidní práce, žádné kompromisy",
   "why_us_items": [
-    { "title": "Ověřená kvalita", "desc": "Dodáváme výhradně certifikované produkty od prověřených výrobců. Žádné experimentování na vašem domě." },
-    { "title": "Master Therm", "desc": "Autorizovaný partner výrobce Master Therm — česká tepelná čerpadla s mezinárodním oceněním." },
-    { "title": "Servis od výrobce", "desc": "Servis zajišťujeme přímo — bez prostředníků, bez čekání. Rychlá odezva a náhradní díly skladem." },
-    { "title": "Podpora po celou dobu", "desc": "Od prvního hovoru přes instalaci až po servisní prohlídku. Jsme tu pro vás, ne jen při prodeji." }
-  ],
-
-  "testimonial_text": "Firma Úsporné vytápění nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
-  "testimonial_name": "Roman Vojtek",
-  "testimonial_location": "Praha — tepelné čerpadlo vzduch-voda",
-
-  "products_label": "Naše produkty",
-  "products_headline": "Tepelná čerpadla pro každou situaci",
-  "products_cta": "Zjistit více",
-  "products": [
-    { "href": "/tepelna-cerpadla/vzduch-voda", "emoji": "🌬️", "title": "Vzduch – voda", "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností." },
-    { "href": "/tepelna-cerpadla/zeme-voda", "emoji": "🌱", "title": "Země – voda", "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory." },
-    { "href": "/tepelna-cerpadla/voda-voda", "emoji": "💧", "title": "Voda – voda", "desc": "Maximální výkon a účinnost. Pro objekty s přístupem k podzemní vodě nebo vodnímu zdroji." }
-  ],
-
-  "dotace_label": "Nová zelená úsporám",
-  "dotace_headline": "Získejte dotaci",
-  "dotace_text": "Pomůžeme vám s celým procesem žádosti — od poradenství po schválení.",
-  "dotace_cta": "Zjistit nárok na dotaci",
-
-  "cta_headline": "Připraveni začít?",
-  "cta_text": "Zavolejte nám nebo vyplňte poptávkový formulář. Konzultace je zdarma, bez závazků.",
-  "cta_button": "Odeslat poptávku"
+    {
+      "title": "Ověřená kvalita",
+      "desc": "Dodáváme výhradně certifikované produkty od prověřených výrobců. Žádné experimentování na vašem domě."
+    },
+    {
+      "title": "Master Therm",
+      "desc": "Autorizovaný partner výrobce Master Therm — česká tepelná čerpadla s mezinárodním oceněním."
+    },
+    {
+      "title": "Servis od výrobce",
+      "desc": "Servis zajišťujeme přímo — bez prostředníků, bez čekání. Rychlá odezva a náhradní díly skladem."
+    },
+    {
+      "title": "Podpora po celou dobu",
+      "desc": "Od prvního hovoru přes instalaci až po servisní prohlídku. Jsme tu pro vás, ne jen při prodeji."
+    }
+  ]
 }
