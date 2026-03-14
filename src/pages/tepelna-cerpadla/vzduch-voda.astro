@@ -121,55 +121,57 @@ import data from '../../data/vzduch-voda.json';
         </div>
       </div>
 
-      <img src="/images/produkty/split-konzole-majitel.jpg" alt="Venkovní jednotka tepelného čerpadla na konzoli s majitelem" class="rounded-2xl w-full max-w-lg mx-auto object-cover mb-10" loading="lazy" />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10">
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        <img src="/images/produkty/split-konzole-majitel.jpg" alt="Venkovní jednotka tepelného čerpadla na konzoli s majitelem" class="rounded-2xl w-full h-full object-cover" loading="lazy" />
 
-        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">{data.variant2_outdoor_title}</h3>
-          <div class="space-y-2">
-            {data.variant2_outdoor_bullets.map(item => (
-              <div class="flex gap-2 items-start">
-                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                  </svg>
+        <div class="space-y-4">
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-3 text-sm uppercase tracking-wide">{data.variant2_outdoor_title}</h3>
+            <div class="space-y-2">
+              {data.variant2_outdoor_bullets.map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
                 </div>
-                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">{data.variant2_connection_title}</h3>
-          <div class="space-y-2">
-            {data.variant2_connection_bullets.map(item => (
-              <div class="flex gap-2 items-start">
-                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                  </svg>
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-3 text-sm uppercase tracking-wide">{data.variant2_connection_title}</h3>
+            <div class="space-y-2">
+              {data.variant2_connection_bullets.map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
                 </div>
-                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-          <h3 class="font-bold text-charcoal-900 mb-4 text-sm uppercase tracking-wide">{data.variant2_indoor_title}</h3>
-          <div class="space-y-2">
-            {data.variant2_indoor_bullets.map(item => (
-              <div class="flex gap-2 items-start">
-                <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                  </svg>
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <h3 class="font-bold text-charcoal-900 mb-3 text-sm uppercase tracking-wide">{data.variant2_indoor_title}</h3>
+            <div class="space-y-2">
+              {data.variant2_indoor_bullets.map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
                 </div>
-                <span class="text-charcoal-600 text-xs leading-relaxed">{item}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
