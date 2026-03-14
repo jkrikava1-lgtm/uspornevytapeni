@@ -5,82 +5,184 @@
   "email": "info@uspornevytapeni.cz",
   "address_line1": "Dělnická 395",
   "address_line2": "506 01 Jičín",
-  "founded": "2008",
+  "founded": "2006",
   "tagline": "Tepelná čerpadla a úsporné vytápění na míru.",
-
+  "aria_expand_sub": "Rozbalit podstránky",
+  "aria_open_menu": "Otevřít menu",
+  "breadcrumb_home": "Úvod",
+  "footer_made_in": "Vyrobeno v České republice",
+  "footer_copyright": "© 2025 Úsporné vytápění s.r.o. Všechna práva vyhrazena.",
+  "footer_col3_items": [
+    {
+      "label": "O nás",
+      "href": "/o-nas"
+    },
+    {
+      "label": "Kontakty",
+      "href": "/kontakty"
+    },
+    {
+      "label": "Poptávka",
+      "href": "/poptavka"
+    }
+  ],
+  "footer_col3_title": "Firma",
+  "footer_col2_items": [
+    {
+      "label": "Cena tepelného čerpadla",
+      "href": "/cena"
+    },
+    {
+      "label": "Cenová kalkulace",
+      "href": "/cenova-kalkulace"
+    },
+    {
+      "label": "Dotace",
+      "href": "/dotace"
+    },
+    {
+      "label": "Porovnání nákladů",
+      "href": "/porovnani-nakladu"
+    },
+    {
+      "label": "Reference",
+      "href": "/reference"
+    },
+    {
+      "label": "Katalog vzduch–voda",
+      "href": "/katalog/vzduch-voda"
+    },
+    {
+      "label": "Katalog země–voda",
+      "href": "/katalog/zeme-voda"
+    },
+    {
+      "label": "Katalog voda–voda",
+      "href": "/katalog/voda-voda"
+    }
+  ],
+  "footer_col2_title": "Informace",
+  "footer_col1_items": [
+    {
+      "label": "Novostavba",
+      "href": "/navrh-reseni/novostavba"
+    },
+    {
+      "label": "Stávající dům",
+      "href": "/navrh-reseni/stavajici-dum"
+    },
+    {
+      "label": "Velký výkon",
+      "href": "/navrh-reseni/velky-vykon"
+    },
+    {
+      "label": "Vzduch – voda",
+      "href": "/tepelna-cerpadla/vzduch-voda"
+    },
+    {
+      "label": "Země – voda",
+      "href": "/tepelna-cerpadla/zeme-voda"
+    },
+    {
+      "label": "Voda – voda",
+      "href": "/tepelna-cerpadla/voda-voda"
+    }
+  ],
+  "footer_col1_title": "Návrh řešení",
+  "footer_desc": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2008.",
   "nav_poptavka": "Poptávka",
   "nav_poptavka_mobile": "Nezávazná poptávka",
   "nav_o_nas": "O nás",
   "nav_kontakty": "Kontakty",
   "nav_reference": "Reference",
   "nav_dotace": "Dotace",
-
   "nav_navrh": "Návrh řešení",
   "nav_navrh_items": [
-    { "href": "/navrh-reseni/novostavba", "label": "Novostavba" },
-    { "href": "/navrh-reseni/stavajici-dum", "label": "Stávající dům" },
-    { "href": "/navrh-reseni/velky-vykon", "label": "Velký výkon" }
+    {
+      "href": "/navrh-reseni/novostavba",
+      "label": "Novostavba"
+    },
+    {
+      "href": "/navrh-reseni/stavajici-dum",
+      "label": "Stávající dům"
+    },
+    {
+      "href": "/navrh-reseni/velky-vykon",
+      "label": "Velký výkon"
+    }
   ],
   "nav_tc": "Tepelná čerpadla",
   "nav_tc_items": [
-    { "href": "/tepelna-cerpadla/vzduch-voda", "label": "Vzduch – voda" },
-    { "href": "/tepelna-cerpadla/zeme-voda", "label": "Země – voda" },
-    { "href": "/tepelna-cerpadla/voda-voda", "label": "Voda – voda" }
+    {
+      "href": "/tepelna-cerpadla/vzduch-voda",
+      "label": "Vzduch – voda"
+    },
+    {
+      "href": "/tepelna-cerpadla/zeme-voda",
+      "label": "Země – voda"
+    },
+    {
+      "href": "/tepelna-cerpadla/voda-voda",
+      "label": "Voda – voda"
+    }
   ],
   "nav_funkce": "Chytré funkce",
   "nav_funkce_items": [
-    { "href": "/chytre-funkce/ovladani-systemu", "label": "Ovládání systému" },
-    { "href": "/chytre-funkce/online-ovladani", "label": "Online ovládání" },
-    { "href": "/chytre-funkce/inverter", "label": "Technologie inverter" },
-    { "href": "/chytre-funkce/desuperheater", "label": "Desuperheater" },
-    { "href": "/chytre-funkce/fotovoltaika", "label": "Spolupráce s fotovoltaikou" }
+    {
+      "href": "/chytre-funkce/ovladani-systemu",
+      "label": "Ovládání systému"
+    },
+    {
+      "href": "/chytre-funkce/online-ovladani",
+      "label": "Online ovládání"
+    },
+    {
+      "href": "/chytre-funkce/inverter",
+      "label": "Technologie inverter"
+    },
+    {
+      "href": "/chytre-funkce/desuperheater",
+      "label": "Desuperheater"
+    },
+    {
+      "href": "/chytre-funkce/fotovoltaika",
+      "label": "Spolupráce s fotovoltaikou"
+    }
   ],
   "nav_katalog": "Katalog",
   "nav_katalog_items": [
-    { "href": "/katalog/vzduch-voda", "label": "Vzduch – voda" },
-    { "href": "/katalog/zeme-voda", "label": "Země – voda" },
-    { "href": "/katalog/voda-voda", "label": "Voda – voda" }
+    {
+      "href": "/katalog/vzduch-voda",
+      "label": "Vzduch – voda"
+    },
+    {
+      "href": "/katalog/zeme-voda",
+      "label": "Země – voda"
+    },
+    {
+      "href": "/katalog/voda-voda",
+      "label": "Voda – voda"
+    }
   ],
   "nav_cena": "Cena",
   "nav_cena_items": [
-    { "href": "/cena", "label": "Cena tepelného čerpadla" },
-    { "href": "/cenova-kalkulace", "label": "Cenová kalkulace" },
-    { "href": "/porovnani-nakladu", "label": "Porovn\u00e1n\u00ed n\u00e1klad\u016f" }
+    {
+      "href": "/cena",
+      "label": "Cena tepelného čerpadla"
+    },
+    {
+      "href": "/cenova-kalkulace",
+      "label": "Cenová kalkulace"
+    },
+    {
+      "href": "/porovnani-nakladu",
+      "label": "Porovnání nákladů"
+    }
   ],
   "nav_cena_mobile_extra": [
-    { "href": "/porovnani-nakladu", "label": "Porovnání nákladů" }
-  ],
-
-  "footer_desc": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2008.",
-  "footer_col1_title": "Návrh řešení",
-  "footer_col1_items": [
-    { "href": "/navrh-reseni/novostavba", "label": "Novostavba" },
-    { "href": "/navrh-reseni/stavajici-dum", "label": "Stávající dům" },
-    { "href": "/navrh-reseni/velky-vykon", "label": "Velký výkon" },
-    { "href": "/tepelna-cerpadla/vzduch-voda", "label": "Vzduch – voda" },
-    { "href": "/tepelna-cerpadla/zeme-voda", "label": "Země – voda" },
-    { "href": "/tepelna-cerpadla/voda-voda", "label": "Voda – voda" }
-  ],
-  "footer_col2_title": "Informace",
-  "footer_col2_items": [
-    { "href": "/cena", "label": "Cena tepelného čerpadla" },
-    { "href": "/cenova-kalkulace", "label": "Cenová kalkulace" },
-    { "href": "/dotace", "label": "Dotace" },
-    { "href": "/porovnani-nakladu", "label": "Porovnání nákladů" },
-    { "href": "/reference", "label": "Reference" },
-    { "href": "/katalog/vzduch-voda", "label": "Katalog vzduch–voda" },
-    { "href": "/katalog/zeme-voda", "label": "Katalog země–voda" },
-    { "href": "/katalog/voda-voda", "label": "Katalog voda–voda" }
-  ],
-  "footer_col3_title": "Firma",
-  "footer_col3_items": [
-    { "href": "/o-nas", "label": "O nás" },
-    { "href": "/kontakty", "label": "Kontakty" },
-    { "href": "/poptavka", "label": "Poptávka" }
-  ],
-  "footer_copyright": "© 2025 Úsporné vytápění s.r.o. Všechna práva vyhrazena.",
-  "footer_made_in": "Vyrobeno v České republice",
-  "breadcrumb_home": "\u00davod",
-  "aria_open_menu": "Otev\u0159\u00edt menu",
-  "aria_expand_sub": "Rozbalit podstr\u00e1nky"
+    {
+      "href": "/porovnani-nakladu",
+      "label": "Porovnání nákladů"
+    }
+  ]
 }
