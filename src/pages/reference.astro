@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import ref from '../data/reference.json';
+const galleryData = JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })));
 ---
 
 <Layout title={ref.meta_title} description={ref.meta_description}>
@@ -87,6 +88,7 @@ import ref from '../data/reference.json';
   </section>
 
   <!-- Lightbox -->
+  <div id="lightbox-data" data-references={galleryData} class="hidden"></div>
   <div id="lightbox" class="fixed inset-0 z-50 hidden">
     <div class="absolute inset-0 bg-black/90" id="lightbox-backdrop"></div>
     <div class="relative z-10 flex flex-col h-full">
@@ -117,75 +119,77 @@ import ref from '../data/reference.json';
     </div>
   </div>
 
-  <Fragment set:html={`<script>
-    var references = ${JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })))};
-    var lightbox = document.getElementById('lightbox');
-    var lbImage = document.getElementById('lb-image');
-    var lbTitle = document.getElementById('lb-title');
-    var lbCounter = document.getElementById('lb-counter');
-    var lbThumbs = document.getElementById('lb-thumbs');
-    var currentGallery = [];
-    var currentIndex = 0;
+  <script is:inline>
+    (function() {
+      var references = JSON.parse(document.getElementById('lightbox-data').dataset.references);
+      var lightbox = document.getElementById('lightbox');
+      var lbImage = document.getElementById('lb-image');
+      var lbTitle = document.getElementById('lb-title');
+      var lbCounter = document.getElementById('lb-counter');
+      var lbThumbs = document.getElementById('lb-thumbs');
+      var currentGallery = [];
+      var currentIndex = 0;
 
-    function openLightbox(refIdx, imgIdx) {
-      imgIdx = imgIdx || 0;
-      var r = references[refIdx];
-      currentGallery = r.gallery;
-      lbTitle.textContent = r.lokalita + ' \\u2014 ' + r.system;
-      showImage(imgIdx);
-      lightbox.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      lbThumbs.innerHTML = '';
-      currentGallery.forEach(function(src, i) {
-        var thumb = document.createElement('img');
-        thumb.src = src;
-        thumb.alt = '';
-        thumb.className = 'w-16 h-12 object-cover rounded cursor-pointer border-2 transition-all ' +
-          (i === imgIdx ? 'border-white opacity-100' : 'border-transparent opacity-50 hover:opacity-80');
-        thumb.addEventListener('click', function() { showImage(i); });
-        lbThumbs.appendChild(thumb);
+      function openLightbox(refIdx, imgIdx) {
+        imgIdx = imgIdx || 0;
+        var r = references[refIdx];
+        currentGallery = r.gallery;
+        lbTitle.textContent = r.lokalita + ' \u2014 ' + r.system;
+        showImage(imgIdx);
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        lbThumbs.innerHTML = '';
+        currentGallery.forEach(function(src, i) {
+          var thumb = document.createElement('img');
+          thumb.src = src;
+          thumb.alt = '';
+          thumb.className = 'w-16 h-12 object-cover rounded cursor-pointer border-2 transition-all ' +
+            (i === imgIdx ? 'border-white opacity-100' : 'border-transparent opacity-50 hover:opacity-80');
+          thumb.addEventListener('click', function() { showImage(i); });
+          lbThumbs.appendChild(thumb);
+        });
+      }
+
+      function showImage(idx) {
+        currentIndex = idx;
+        lbImage.src = currentGallery[idx];
+        lbCounter.textContent = (idx + 1) + ' / ' + currentGallery.length;
+        var thumbs = lbThumbs.querySelectorAll('img');
+        thumbs.forEach(function(t, i) {
+          if (i === idx) {
+            t.className = t.className.replace('border-transparent opacity-50 hover:opacity-80', 'border-white opacity-100');
+          } else {
+            t.className = t.className.replace('border-white opacity-100', 'border-transparent opacity-50 hover:opacity-80');
+          }
+        });
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('[data-gallery-trigger]').forEach(function(card) {
+        card.addEventListener('click', function() {
+          openLightbox(parseInt(card.dataset.galleryTrigger));
+        });
       });
-    }
 
-    function showImage(idx) {
-      currentIndex = idx;
-      lbImage.src = currentGallery[idx];
-      lbCounter.textContent = (idx + 1) + ' / ' + currentGallery.length;
-      var thumbs = lbThumbs.querySelectorAll('img');
-      thumbs.forEach(function(t, i) {
-        if (i === idx) {
-          t.className = t.className.replace('border-transparent opacity-50 hover:opacity-80', 'border-white opacity-100');
-        } else {
-          t.className = t.className.replace('border-white opacity-100', 'border-transparent opacity-50 hover:opacity-80');
-        }
+      document.getElementById('lb-close').addEventListener('click', closeLightbox);
+      document.getElementById('lb-backdrop').addEventListener('click', closeLightbox);
+      document.getElementById('lb-prev').addEventListener('click', function() {
+        showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
       });
-    }
-
-    function closeLightbox() {
-      lightbox.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    document.querySelectorAll('[data-gallery-trigger]').forEach(function(card) {
-      card.addEventListener('click', function() {
-        openLightbox(parseInt(card.dataset.galleryTrigger));
+      document.getElementById('lb-next').addEventListener('click', function() {
+        showImage((currentIndex + 1) % currentGallery.length);
       });
-    });
 
-    document.getElementById('lb-close').addEventListener('click', closeLightbox);
-    document.getElementById('lb-backdrop').addEventListener('click', closeLightbox);
-    document.getElementById('lb-prev').addEventListener('click', function() {
-      showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
-    });
-    document.getElementById('lb-next').addEventListener('click', function() {
-      showImage((currentIndex + 1) % currentGallery.length);
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (lightbox.classList.contains('hidden')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
-      if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentGallery.length);
-    });
-  <\\/script>`} />
+      document.addEventListener('keydown', function(e) {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
+        if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentGallery.length);
+      });
+    })();
+  </script>
 </Layout>
