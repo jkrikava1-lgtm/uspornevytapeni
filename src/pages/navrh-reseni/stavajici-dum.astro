@@ -47,19 +47,22 @@ import data from '../../data/stavajici-dum.json';
         <div class="space-y-6">
           <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
             <h3 class="font-bold text-charcoal-900 mb-5">{data.comparison_headline}</h3>
-            <div class="space-y-4">
+            <div class="space-y-3">
               {[
-                { zdroj: data.comp1_zdroj, naklady: data.comp1_naklady, barva: 'bg-gray-300' },
-                { zdroj: data.comp2_zdroj, naklady: data.comp2_naklady, barva: 'bg-gray-400' },
-                { zdroj: data.comp3_zdroj, naklady: data.comp3_naklady, barva: 'bg-brand-500' },
+                { zdroj: data.comp6_zdroj, naklady: data.comp6_naklady, barva: 'bg-brand-500', width: '14%' },
+                { zdroj: data.comp2_zdroj, naklady: data.comp2_naklady, barva: 'bg-gray-400', width: '78%' },
+                { zdroj: data.comp3_zdroj, naklady: data.comp3_naklady, barva: 'bg-amber-400', width: '92%' },
+                { zdroj: data.comp1_zdroj, naklady: data.comp1_naklady, barva: 'bg-gray-400', width: '94%' },
+                { zdroj: data.comp4_zdroj, naklady: data.comp4_naklady, barva: 'bg-amber-500', width: '97%' },
+                { zdroj: data.comp5_zdroj, naklady: data.comp5_naklady, barva: 'bg-gray-500', width: '100%' },
               ].map(item => (
                 <div>
-                  <div class="flex justify-between text-sm mb-1.5">
+                  <div class="flex justify-between text-sm mb-1">
                     <span class="font-semibold text-charcoal-800">{item.zdroj}</span>
-                    <span class="text-charcoal-500">{item.naklady}</span>
+                    <span class="text-charcoal-500 text-xs">{item.naklady}</span>
                   </div>
                   <div class="h-2 bg-gray-100 rounded-full">
-                    <div class={`h-2 ${item.barva} rounded-full`} style={item.zdroj === data.comp3_zdroj ? 'width:25%' : item.zdroj === data.comp1_zdroj ? 'width:65%' : 'width:90%'}></div>
+                    <div class={`h-2 ${item.barva} rounded-full`} style={`width:${item.width}`}></div>
                   </div>
                 </div>
               ))}
