@@ -78,5 +78,8 @@
     { "href": "/poptavka", "label": "Poptávka" }
   ],
   "footer_copyright": "© 2025 Úsporné vytápění s.r.o. Všechna práva vyhrazena.",
-  "footer_made_in": "Vyrobeno v České republice"
+  "footer_made_in": "Vyrobeno v České republice",
+  "breadcrumb_home": "\u00davod",
+  "aria_open_menu": "Otev\u0159\u00edt menu",
+  "aria_expand_sub": "Rozbalit podstr\u00e1nky"
 }

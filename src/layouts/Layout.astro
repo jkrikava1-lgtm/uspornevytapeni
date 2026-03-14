@@ -43,7 +43,7 @@ const navGroups = [
             <a href="/poptavka" class="inline-flex items-center px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
               {site.nav_poptavka}
             </a>
-            <button id="mobile-menu-toggle" class="relative w-9 h-9 flex items-center justify-center text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md" aria-label="Otevřít menu" aria-expanded="false">
+            <button id="mobile-menu-toggle" class="relative w-9 h-9 flex items-center justify-center text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md" aria-label={site.aria_open_menu} aria-expanded="false">
               <span class="sr-only">Menu</span>
               <svg id="icon-hamburger" class="w-5 h-5 transition-opacity duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -111,7 +111,7 @@ const navGroups = [
             <div class="border-b border-gray-100" data-mobile-accordion>
               <div class="flex items-center justify-between" data-mobile-trigger>
                 <a href={group.href} class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">{group.label}</a>
-                <button class="px-3 py-3" aria-label="Rozbalit podstránky">
+                <button class="px-3 py-3" aria-label={site.aria_expand_sub}>
                   <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                   </svg>

@@ -27,5 +27,7 @@
   "billing_ico_label": "IČO:",
   "billing_ico": "28783115",
   "billing_dico_label": "DIČ:",
-  "billing_dico": "CZ28783115"
+  "billing_dico": "CZ28783115",
+  "address_label": "Adresa",
+  "map_title": "Mapa \u2014 \u00dasporn\u00e9 vyt\u00e1p\u011bn\u00ed s.r.o., Ji\u010d\u00edn"
 }

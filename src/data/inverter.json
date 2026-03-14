@@ -16,7 +16,21 @@
   "stat3_popis": "tichý provoz při částečném výkonu",
   "box_headline": "Všechna naše čerpadla jsou inverterová",
   "box_text": "Celý aktuální sortiment Master Therm je vybaven inverterovou technologií jako standard. Není to příplatek — je to základ.",
-  "cta_headline": "Chcete inverterové tepelné čerpadlo?",
-  "cta_text": "Konzultace a návrh jsou zdarma.",
-  "cta_button": "Odeslat poptávku"
+  "onoff_title": "On/Off syst\u00e9m",
+  "onoff_items": [
+    "Pln\u00fd v\u00fdkon nebo stop",
+    "\u010cast\u00e9 starty",
+    "Vy\u0161\u0161\u00ed opot\u0159eben\u00ed",
+    "V\u00fdkyvy teploty"
+  ],
+  "inverter_title": "Inverter syst\u00e9m",
+  "inverter_items": [
+    "Plynul\u00e1 regulace 30\u2013100 %",
+    "M\u00e9n\u011b start\u016f kompresoru",
+    "Del\u0161\u00ed \u017eivotnost",
+    "Stabiln\u00ed teplota"
+  ],
+  "cta_headline": "Chcete inverterov\u00e9 tepeln\u00e9 \u010derpadlo?",
+  "cta_text": "Konzultace a n\u00e1vrh jsou zdarma.",
+  "cta_button": "Odeslat popt\u00e1vku"
 }

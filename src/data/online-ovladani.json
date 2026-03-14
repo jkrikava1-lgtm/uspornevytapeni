@@ -16,6 +16,14 @@
   "feat4_title": "Vzdálená diagnostika",
   "feat4_desc": "Náš servisní tým může zkontrolovat stav systému vzdáleně — rychlejší servis.",
   "app_label": "Funkce aplikace",
+  "app_features": [
+    { "icon": "\ud83c\udf21\ufe0f", "text": "Aktu\u00e1ln\u00ed teplota v ka\u017ed\u00e9 z\u00f3n\u011b" },
+    { "icon": "\u26a1", "text": "Spot\u0159eba elekt\u0159iny v re\u00e1ln\u00e9m \u010dase" },
+    { "icon": "\ud83d\udcca", "text": "Grafy spot\u0159eby a v\u00fdkonu" },
+    { "icon": "\ud83d\udcc5", "text": "Spr\u00e1va t\u00fddenn\u00edho programu" },
+    { "icon": "\ud83d\udd14", "text": "Push notifikace p\u0159i poruch\u00e1ch" },
+    { "icon": "\ud83d\udd27", "text": "Vzd\u00e1len\u00fd p\u0159\u00edstup pro servis" }
+  ],
   "box_headline": "Součástí standardní dodávky",
   "box_text": "Wi-Fi modul a přístup do cloudové platformy je součástí každého tepelného čerpadla Master Therm bez příplatku. Žádné měsíční poplatky.",
   "cta_headline": "Chcete mít dům pod kontrolou odkudkoliv?",

@@ -24,21 +24,19 @@ import data from '../../data/inverter.json';
 
           <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-3">On/Off systém</div>
+              <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-3">{data.onoff_title}</div>
               <div class="space-y-2 text-sm text-charcoal-600">
-                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Plný výkon nebo stop</div>
-                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Časté starty</div>
-                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Vyšší opotřebení</div>
-                <div class="flex items-center gap-2"><span class="text-red-400">✗</span> Výkyvy teploty</div>
+                {data.onoff_items.map(item => (
+                  <div class="flex items-center gap-2"><span class="text-red-400">✗</span> {item}</div>
+                ))}
               </div>
             </div>
             <div class="bg-brand-50 rounded-xl p-6 border border-brand-200">
-              <div class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-3">Inverter systém</div>
+              <div class="text-xs font-bold text-brand-600 uppercase tracking-wider mb-3">{data.inverter_title}</div>
               <div class="space-y-2 text-sm text-charcoal-700">
-                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Plynulá regulace 30–100 %</div>
-                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Méně startů kompresoru</div>
-                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Delší životnost</div>
-                <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> Stabilní teplota</div>
+                {data.inverter_items.map(item => (
+                  <div class="flex items-center gap-2"><span class="text-brand-500">✓</span> {item}</div>
+                ))}
               </div>
             </div>
           </div>

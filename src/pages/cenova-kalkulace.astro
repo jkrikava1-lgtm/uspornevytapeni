@@ -17,7 +17,7 @@ import data from '../data/cenova-kalkulace.json';
       <!-- Progress bar -->
       <div id="progress-wrap" class="mb-10">
         <div class="flex items-center justify-between text-xs text-charcoal-400 mb-2">
-          <span id="progress-label">Krok 1 ze 6</span>
+          <span id="progress-label" data-template={data.progress_template}>{data.progress_template.replace('{n}', '1').replace('{total}', '6')}</span>
           <span id="progress-pct">17 %</span>
         </div>
         <div class="h-1.5 bg-gray-100 rounded-full overflow-hidden">
@@ -189,7 +189,12 @@ import data from '../data/cenova-kalkulace.json';
             <label for="f-souhlas" class="text-xs text-charcoal-500 leading-relaxed cursor-pointer">{data.step6_souhlas}</label>
           </div>
         </div>
-        <div id="form-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-md text-sm text-red-700"></div>
+        <div id="form-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-md text-sm text-red-700"
+          data-error-required={data.error_required}
+          data-error-send={data.error_send}
+          data-submit-loading={data.submit_loading}
+          data-submit-label={data.submit_button}
+        ></div>
         <button id="btn-submit" class="mt-8 inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors w-full sm:w-auto">
           <span id="btn-submit-label">{data.submit_button}</span>
           <svg id="btn-submit-icon" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -241,7 +246,8 @@ import data from '../data/cenova-kalkulace.json';
     if (n <= TOTAL_STEPS) {
       const pct = Math.round((n / TOTAL_STEPS) * 100);
       (document.getElementById('progress-fill') as HTMLElement).style.width = pct + '%';
-      (document.getElementById('progress-label') as HTMLElement).textContent = `Krok ${n} ze ${TOTAL_STEPS}`;
+      const tpl = (document.getElementById('progress-label') as HTMLElement).dataset.template || '';
+      (document.getElementById('progress-label') as HTMLElement).textContent = tpl.replace('{n}', String(n)).replace('{total}', String(TOTAL_STEPS));
       (document.getElementById('progress-pct') as HTMLElement).textContent = pct + ' %';
       document.getElementById('progress-wrap')!.classList.remove('hidden');
     } else {
@@ -310,7 +316,7 @@ import data from '../data/cenova-kalkulace.json';
     const errorEl = document.getElementById('form-error')!;
     errorEl.classList.add('hidden');
     if (!jmeno || !email || !telefon || !obec) {
-      errorEl.textContent = 'Vyplňte prosím všechna povinná pole.';
+      errorEl.textContent = errorEl.dataset.errorRequired || '';
       errorEl.classList.remove('hidden');
       return;
     }
@@ -319,7 +325,7 @@ import data from '../data/cenova-kalkulace.json';
     const iconEl = document.getElementById('btn-submit-icon')!;
     const spinEl = document.getElementById('btn-submit-spin')!;
     submitBtn.disabled = true;
-    labelEl.textContent = 'Odesílám…';
+    labelEl.textContent = errorEl.dataset.submitLoading || '';
     iconEl.classList.add('hidden');
     spinEl.classList.remove('hidden');
     try {
@@ -328,10 +334,10 @@ import data from '../data/cenova-kalkulace.json';
       showStep(99);
       document.getElementById('step-success')!.classList.remove('hidden');
     } catch {
-      errorEl.textContent = 'Odeslání se nezdařilo. Zavolejte nám na +420 777 724 573.';
+      errorEl.textContent = errorEl.dataset.errorSend || '';
       errorEl.classList.remove('hidden');
       submitBtn.disabled = false;
-      labelEl.textContent = 'Odeslat kalkulaci';
+      labelEl.textContent = errorEl.dataset.submitLabel || '';
       iconEl.classList.remove('hidden');
       spinEl.classList.add('hidden');
     }

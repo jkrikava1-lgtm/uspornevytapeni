@@ -52,7 +52,7 @@ import data from '../data/kontakty.json';
                 </svg>
               </div>
               <div>
-                <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">Adresa</div>
+                <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">{data.address_label}</div>
                 <div class="font-bold text-charcoal-900">{site.address_line1}<br />{site.address_line2}</div>
               </div>
             </div>
@@ -79,7 +79,7 @@ import data from '../data/kontakty.json';
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa — Úsporné vytápění s.r.o., Jičín"
+            title={data.map_title}
           ></iframe>
         </div>
       </div>
