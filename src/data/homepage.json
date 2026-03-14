@@ -10,7 +10,7 @@
   "hero_cta_primary": "Chci bezplatnou konzultaci",
   "hero_cta_secondary": "Prohlédnout reference",
   "hero_slides": [
-    { "src": "/images/hero/boxair-dum-drevo.jpg", "label": "Tepelné čerpadlo vzduch-voda", "desc": "BoxAir Inverter u moderního rodinného domu" },
+    { "src": "/images/hero/novostavba-deti.jpg", "label": "Tepeln\u00e9 \u010derpadlo vzduch-voda", "desc": "Novostavba s tepeln\u00fdm \u010derpadlem \u2014 komfort pro celou rodinu" },
     { "src": "/images/produkty/aquamaster-pracovna.jpg", "label": "Tepelné čerpadlo země-voda", "desc": "AquaMaster Inverter — kompaktní vnitřní jednotka" },
     { "src": "/images/hero/monter-dodavka.jpg", "label": "Profesionální instalace", "desc": "Montáž a servis po celé ČR" }
   ],
