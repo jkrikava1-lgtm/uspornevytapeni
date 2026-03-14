@@ -7,7 +7,7 @@
   "stat2_label": "Let zkušeností",
   "stat3_num": "98 %",
   "stat3_label": "Spokojených klientů",
-  "stat4_num": "ČR",
+  "stat4_num": "\u010cR",
   "stat4_label": "Celá republika",
   "map_headline": "Mapa realizac\u00ed",
   "map_subtitle": "Pod\u00edvejte se, kde v\u0161ude jsme instalovali tepeln\u00e1 \u010derpadla.",
@@ -16,67 +16,140 @@
   "cta_button": "Odeslat poptávku",
   "references": [
     {
-      "lokalita": "Praha",
-      "typ": "Rodinný dům",
-      "system": "Vzduch-voda Master Therm AQ 17",
-      "popis": "Výměna plynového kotle za tepelné čerpadlo. Roční úspora přes 35 000 Kč.",
-      "rok": "2024"
+      "lokalita": "Studenec",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 26I PLUS",
+      "popis": "V\u00fdm\u011bna star\u00e9ho zdroje vyt\u00e1p\u011bn\u00ed za tepeln\u00e9 \u010derpadlo vzduch-voda.",
+      "rok": "2025",
+      "image": "/images/reference/studenec.jpg"
     },
     {
-      "lokalita": "Brno",
-      "typ": "Rodinný dům — novostavba",
-      "system": "Vzduch-voda Master Therm AQ 22",
-      "popis": "Kompletní systém vytápění novostavby — podlahové vytápění, TUV a chlazení.",
-      "rok": "2024"
+      "lokalita": "Sta\u0148kova Lhota",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 37I NEW PLUS",
+      "popis": "Modernizace vyt\u00e1p\u011bn\u00ed star\u0161\u00edho rodinn\u00e9ho domu s tepeln\u00fdm \u010derpadlem.",
+      "rok": "2024",
+      "image": "/images/reference/stankova-lhota.jpg"
     },
     {
-      "lokalita": "Jičín",
-      "typ": "Starší rodinný dům",
-      "system": "Země-voda Master Therm GW 14",
-      "popis": "Rekonstrukce vytápění — výměna kotle na tuhá paliva. Vrty 2× 100 m.",
-      "rok": "2023"
+      "lokalita": "Doln\u00ed Bousov",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 30I NEW PLUS",
+      "popis": "N\u00e1hrada p\u016fvodn\u00edho kotle za tepeln\u00e9 \u010derpadlo vzduch-voda.",
+      "rok": "2024",
+      "image": "/images/reference/dolni-bousov.jpg"
     },
     {
-      "lokalita": "Liberec",
-      "typ": "Bytový dům (8 bytů)",
-      "system": "Kaskáda vzduch-voda 3× AQ 28",
-      "popis": "Centrální tepelné čerpadlo pro bytový dům. Výkon 84 kW, roční úspora přes 120 000 Kč.",
-      "rok": "2023"
+      "lokalita": "Kopidlno",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo pro star\u0161\u00ed rodinn\u00fd d\u016fm s vy\u0161\u0161\u00ed tepelnou ztr\u00e1tou.",
+      "rok": "2024",
+      "image": "/images/reference/kopidlno.jpg"
     },
     {
-      "lokalita": "Hradec Králové",
-      "typ": "Rodinný dům",
-      "system": "Vzduch-voda Master Therm AQ 17",
-      "popis": "Výměna elektrického kotle. Kombinace s fotovoltaikou — minimální provozní náklady.",
-      "rok": "2023"
+      "lokalita": "Sobotka",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 26I NEW PLUS",
+      "popis": "Kompletn\u00ed v\u00fdm\u011bna zdroje vyt\u00e1p\u011bn\u00ed v\u010detn\u011b p\u0159\u00edpravy tepl\u00e9 vody.",
+      "rok": "2024",
+      "image": "/images/reference/sobotka-2.jpg"
     },
     {
-      "lokalita": "Pardubice",
-      "typ": "Komerční objekt",
-      "system": "Voda-voda Master Therm WW 35",
-      "popis": "Vytápění a chlazení administrativní budovy. Výkon 35 kW, COP 6,2.",
-      "rok": "2022"
+      "lokalita": "Kocl\u00ed\u0159ov",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 37I NEW PLUS",
+      "popis": "Instalace tepeln\u00e9ho \u010derpadla s napojen\u00edm na st\u00e1vaj\u00edc\u00ed otopnou soustavu.",
+      "rok": "2022",
+      "image": "/images/reference/koclirov.jpg"
     },
     {
-      "lokalita": "Mladá Boleslav",
-      "typ": "Rodinný dům — novostavba",
-      "system": "Vzduch-voda Master Therm AQ 14",
-      "popis": "Nízkoenergetický dům A+. Tepelné čerpadlo pokrývá 100 % energetické potřeby objektu.",
-      "rok": "2022"
+      "lokalita": "Chuchelna",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo vzduch-voda se z\u00e1sobn\u00edkem tepl\u00e9 vody.",
+      "rok": "2022",
+      "image": "/images/reference/chuchelna.jpg"
     },
     {
-      "lokalita": "Plzeň",
-      "typ": "Starší rodinný dům",
-      "system": "Vzduch-voda Master Therm AQ 22 Inverter",
-      "popis": "Výměna plynového kotle. Inverterová technologie — tichý provoz, nízká spotřeba.",
-      "rok": "2022"
+      "lokalita": "B\u00fdkev",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 26I NEW PLUS",
+      "popis": "Kompaktn\u00ed tepeln\u00e9 \u010derpadlo ide\u00e1ln\u00ed pro men\u0161\u00ed rodinn\u00fd d\u016fm.",
+      "rok": "2022",
+      "image": "/images/reference/bykev.jpg"
     },
     {
-      "lokalita": "České Budějovice",
-      "typ": "Zemědělský objekt",
-      "system": "Kaskáda země-voda 2× GW 22",
-      "popis": "Vytápění provozní haly a zázemí. Zemní kolektory 3 000 m² na vlastním pozemku.",
-      "rok": "2021"
+      "lokalita": "Hradec Kr\u00e1lov\u00e9",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "V\u00fdm\u011bna p\u016fvodn\u00edho zdroje vyt\u00e1p\u011bn\u00ed za modern\u00ed tepeln\u00e9 \u010derpadlo.",
+      "rok": "2022",
+      "image": "/images/reference/hradec-kralove.jpg"
+    },
+    {
+      "lokalita": "Pecka",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "Tepeln\u00e9 \u010derpadlo vzduch-voda pro celodom\u00e1c\u00ed vyt\u00e1p\u011bn\u00ed a TUV.",
+      "rok": "2022",
+      "image": "/images/reference/pecka.jpg"
+    },
+    {
+      "lokalita": "Pr\u016fhonice",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 26I NEW PLUS",
+      "popis": "Efektivn\u00ed \u0159e\u0161en\u00ed vyt\u00e1p\u011bn\u00ed s n\u00edzk\u00fdmi provozn\u00edmi n\u00e1klady.",
+      "rok": "2022",
+      "image": "/images/reference/pruhonice.jpg"
+    },
+    {
+      "lokalita": "P\u0159epe\u0159e",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 37I NEW PLUS",
+      "popis": "Instalace tepeln\u00e9ho \u010derpadla v\u010detn\u011b nov\u00e9ho rozvodu vyt\u00e1p\u011bn\u00ed.",
+      "rok": "2022",
+      "image": "/images/reference/prepere.jpg"
+    },
+    {
+      "lokalita": "Sobotka",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I STANDARD",
+      "popis": "Spolehliv\u00e9 tepeln\u00e9 \u010derpadlo pro star\u0161\u00ed d\u016fm s radi\u00e1torov\u00fdm vyt\u00e1p\u011bn\u00edm.",
+      "rok": "2022",
+      "image": "/images/reference/sobotka-1.jpg"
+    },
+    {
+      "lokalita": "Tuklaty",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "Modernizace vyt\u00e1p\u011bn\u00ed se z\u00e1sobn\u00edkem tepl\u00e9 vody.",
+      "rok": "2022",
+      "image": "/images/reference/tuklaty.jpg"
+    },
+    {
+      "lokalita": "Volanice",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 30I PLUS",
+      "popis": "Tepeln\u00e9 \u010derpadlo s nov\u00fdm otopn\u00fdm syst\u00e9mem pro cel\u00fd d\u016fm.",
+      "rok": "2022",
+      "image": "/images/reference/volanice.jpg"
+    },
+    {
+      "lokalita": "Jesenice",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 45I NEW PLUS",
+      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo se z\u00e1sobn\u00edkem a kompletn\u00edm napojen\u00edm.",
+      "rok": "2021",
+      "image": "/images/reference/jesenice.jpg"
+    },
+    {
+      "lokalita": "Kosteln\u00ed Lhota",
+      "typ": "Rekonstrukce rodinn\u00e9ho domu",
+      "system": "BoxAir 30I",
+      "popis": "N\u00e1hrada star\u00e9ho kotle tepeln\u00fdm \u010derpadlem vzduch-voda.",
+      "rok": "2019",
+      "image": "/images/reference/kostelni-lhota.jpg"
     }
   ],
   "meta_title": "Reference",
