@@ -19,129 +19,129 @@
       "lokalita": "Studenec",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 26I PLUS",
-      "popis": "V\u00fdm\u011bna star\u00e9ho zdroje vyt\u00e1p\u011bn\u00ed za tepeln\u00e9 \u010derpadlo vzduch-voda.",
       "rok": "2025",
-      "image": "/images/reference/studenec.jpg"
+      "image": "/images/reference/studenec-1.jpg",
+      "gallery": ["/images/reference/studenec-1.jpg", "/images/reference/studenec-2.jpg", "/images/reference/studenec-3.jpg"]
     },
     {
       "lokalita": "Sta\u0148kova Lhota",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 37I NEW PLUS",
-      "popis": "Modernizace vyt\u00e1p\u011bn\u00ed star\u0161\u00edho rodinn\u00e9ho domu s tepeln\u00fdm \u010derpadlem.",
       "rok": "2024",
-      "image": "/images/reference/stankova-lhota.jpg"
+      "image": "/images/reference/stankova-lhota-1.jpg",
+      "gallery": ["/images/reference/stankova-lhota-1.jpg", "/images/reference/stankova-lhota-2.jpg", "/images/reference/stankova-lhota-3.jpg", "/images/reference/stankova-lhota-4.jpg"]
     },
     {
       "lokalita": "Doln\u00ed Bousov",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 30I NEW PLUS",
-      "popis": "N\u00e1hrada p\u016fvodn\u00edho kotle za tepeln\u00e9 \u010derpadlo vzduch-voda.",
       "rok": "2024",
-      "image": "/images/reference/dolni-bousov.jpg"
+      "image": "/images/reference/dolni-bousov-1.jpg",
+      "gallery": ["/images/reference/dolni-bousov-1.jpg", "/images/reference/dolni-bousov-2.jpg", "/images/reference/dolni-bousov-3.jpg", "/images/reference/dolni-bousov-4.jpg", "/images/reference/dolni-bousov-5.jpg", "/images/reference/dolni-bousov-6.jpg", "/images/reference/dolni-bousov-7.jpg", "/images/reference/dolni-bousov-8.jpg", "/images/reference/dolni-bousov-9.jpg", "/images/reference/dolni-bousov-10.jpg"]
     },
     {
       "lokalita": "Kopidlno",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo pro star\u0161\u00ed rodinn\u00fd d\u016fm s vy\u0161\u0161\u00ed tepelnou ztr\u00e1tou.",
       "rok": "2024",
-      "image": "/images/reference/kopidlno.jpg"
+      "image": "/images/reference/kopidlno-1.jpg",
+      "gallery": ["/images/reference/kopidlno-1.jpg", "/images/reference/kopidlno-2.jpg", "/images/reference/kopidlno-3.jpg", "/images/reference/kopidlno-4.jpg", "/images/reference/kopidlno-5.jpg"]
     },
     {
       "lokalita": "Sobotka",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 26I NEW PLUS",
-      "popis": "Kompletn\u00ed v\u00fdm\u011bna zdroje vyt\u00e1p\u011bn\u00ed v\u010detn\u011b p\u0159\u00edpravy tepl\u00e9 vody.",
       "rok": "2024",
-      "image": "/images/reference/sobotka-2.jpg"
+      "image": "/images/reference/sobotka-2-1.jpg",
+      "gallery": ["/images/reference/sobotka-2-1.jpg", "/images/reference/sobotka-2-2.jpg", "/images/reference/sobotka-2-3.jpg"]
     },
     {
       "lokalita": "Kocl\u00ed\u0159ov",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 37I NEW PLUS",
-      "popis": "Instalace tepeln\u00e9ho \u010derpadla s napojen\u00edm na st\u00e1vaj\u00edc\u00ed otopnou soustavu.",
       "rok": "2022",
-      "image": "/images/reference/koclirov.jpg"
+      "image": "/images/reference/koclirov-1.jpg",
+      "gallery": ["/images/reference/koclirov-1.jpg", "/images/reference/koclirov-2.jpg", "/images/reference/koclirov-3.jpg"]
     },
     {
       "lokalita": "Chuchelna",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo vzduch-voda se z\u00e1sobn\u00edkem tepl\u00e9 vody.",
       "rok": "2022",
-      "image": "/images/reference/chuchelna.jpg"
+      "image": "/images/reference/chuchelna-1.jpg",
+      "gallery": ["/images/reference/chuchelna-1.jpg", "/images/reference/chuchelna-2.jpg", "/images/reference/chuchelna-3.jpg", "/images/reference/chuchelna-4.jpg"]
     },
     {
       "lokalita": "B\u00fdkev",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 26I NEW PLUS",
-      "popis": "Kompaktn\u00ed tepeln\u00e9 \u010derpadlo ide\u00e1ln\u00ed pro men\u0161\u00ed rodinn\u00fd d\u016fm.",
       "rok": "2022",
-      "image": "/images/reference/bykev.jpg"
+      "image": "/images/reference/bykev-1.jpg",
+      "gallery": ["/images/reference/bykev-1.jpg", "/images/reference/bykev-2.jpg", "/images/reference/bykev-3.jpg"]
     },
     {
       "lokalita": "Hradec Kr\u00e1lov\u00e9",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "V\u00fdm\u011bna p\u016fvodn\u00edho zdroje vyt\u00e1p\u011bn\u00ed za modern\u00ed tepeln\u00e9 \u010derpadlo.",
       "rok": "2022",
-      "image": "/images/reference/hradec-kralove.jpg"
+      "image": "/images/reference/hradec-kralove-1.jpg",
+      "gallery": ["/images/reference/hradec-kralove-1.jpg", "/images/reference/hradec-kralove-2.jpg"]
     },
     {
       "lokalita": "Pecka",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "Tepeln\u00e9 \u010derpadlo vzduch-voda pro celodom\u00e1c\u00ed vyt\u00e1p\u011bn\u00ed a TUV.",
       "rok": "2022",
-      "image": "/images/reference/pecka.jpg"
+      "image": "/images/reference/pecka-1.jpg",
+      "gallery": ["/images/reference/pecka-1.jpg", "/images/reference/pecka-2.jpg", "/images/reference/pecka-3.jpg"]
     },
     {
       "lokalita": "Pr\u016fhonice",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 26I NEW PLUS",
-      "popis": "Efektivn\u00ed \u0159e\u0161en\u00ed vyt\u00e1p\u011bn\u00ed s n\u00edzk\u00fdmi provozn\u00edmi n\u00e1klady.",
       "rok": "2022",
-      "image": "/images/reference/pruhonice.jpg"
+      "image": "/images/reference/pruhonice-1.jpg",
+      "gallery": ["/images/reference/pruhonice-1.jpg", "/images/reference/pruhonice-2.jpg", "/images/reference/pruhonice-3.jpg", "/images/reference/pruhonice-4.jpg"]
     },
     {
       "lokalita": "P\u0159epe\u0159e",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 37I NEW PLUS",
-      "popis": "Instalace tepeln\u00e9ho \u010derpadla v\u010detn\u011b nov\u00e9ho rozvodu vyt\u00e1p\u011bn\u00ed.",
       "rok": "2022",
-      "image": "/images/reference/prepere.jpg"
+      "image": "/images/reference/prepere-1.jpg",
+      "gallery": ["/images/reference/prepere-1.jpg", "/images/reference/prepere-2.jpg", "/images/reference/prepere-3.jpg", "/images/reference/prepere-4.jpg"]
     },
     {
       "lokalita": "Sobotka",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I STANDARD",
-      "popis": "Spolehliv\u00e9 tepeln\u00e9 \u010derpadlo pro star\u0161\u00ed d\u016fm s radi\u00e1torov\u00fdm vyt\u00e1p\u011bn\u00edm.",
       "rok": "2022",
-      "image": "/images/reference/sobotka-1.jpg"
+      "image": "/images/reference/sobotka-1-1.jpg",
+      "gallery": ["/images/reference/sobotka-1-1.jpg", "/images/reference/sobotka-1-2.jpg", "/images/reference/sobotka-1-3.jpg"]
     },
     {
       "lokalita": "Tuklaty",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "Modernizace vyt\u00e1p\u011bn\u00ed se z\u00e1sobn\u00edkem tepl\u00e9 vody.",
       "rok": "2022",
-      "image": "/images/reference/tuklaty.jpg"
+      "image": "/images/reference/tuklaty-1.jpg",
+      "gallery": ["/images/reference/tuklaty-1.jpg", "/images/reference/tuklaty-2.jpg", "/images/reference/tuklaty-3.jpg", "/images/reference/tuklaty-4.jpg"]
     },
     {
       "lokalita": "Jesenice",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 45I NEW PLUS",
-      "popis": "V\u00fdkonn\u00e9 tepeln\u00e9 \u010derpadlo se z\u00e1sobn\u00edkem a kompletn\u00edm napojen\u00edm.",
       "rok": "2021",
-      "image": "/images/reference/jesenice.jpg"
+      "image": "/images/reference/jesenice-1.jpg",
+      "gallery": ["/images/reference/jesenice-1.jpg", "/images/reference/jesenice-2.jpg", "/images/reference/jesenice-3.jpg", "/images/reference/jesenice-4.jpg"]
     },
     {
       "lokalita": "Kosteln\u00ed Lhota",
       "typ": "Rekonstrukce rodinn\u00e9ho domu",
       "system": "BoxAir 30I",
-      "popis": "N\u00e1hrada star\u00e9ho kotle tepeln\u00fdm \u010derpadlem vzduch-voda.",
       "rok": "2019",
-      "image": "/images/reference/kostelni-lhota.jpg"
+      "image": "/images/reference/kostelni-lhota-1.jpg",
+      "gallery": ["/images/reference/kostelni-lhota-1.jpg", "/images/reference/kostelni-lhota-2.jpg", "/images/reference/kostelni-lhota-3.jpg", "/images/reference/kostelni-lhota-4.jpg", "/images/reference/kostelni-lhota-5.jpg"]
     }
   ],
   "meta_title": "Reference",
