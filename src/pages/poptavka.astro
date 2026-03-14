@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import data from '../data/poptavka.json';
+import site from '../data/site.json';
 ---
 
 <Layout title="Poptávka" description="Poptejte tepelné čerpadlo nebo úsporné vytápění. Bezplatná konzultace a návrh řešení na míru.">
   <PageHero
-    title="Nezávazná poptávka"
-    subtitle="Vyplňte formulář a my se vám ozveme do 24 hodin. Konzultace i návrh řešení jsou zcela zdarma."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Poptávka', href: '/poptavka' }]}
   />
 
@@ -14,75 +16,56 @@ import PageHero from '../components/PageHero.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-        <!-- Formulář -->
         <div class="lg:col-span-2">
           <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-xl p-6 text-center">
             <svg class="w-12 h-12 text-green-500 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            <h3 class="text-lg font-bold text-charcoal-900 mb-1">Poptávka odeslána!</h3>
-            <p class="text-sm text-charcoal-600">Ozveme se vám do 24 hodin.</p>
+            <h3 class="text-lg font-bold text-charcoal-900 mb-1">{data.success_title}</h3>
+            <p class="text-sm text-charcoal-600">{data.success_text}</p>
           </div>
           <div id="form-error" class="hidden bg-red-50 border border-red-200 rounded-xl p-4 mb-4 text-sm text-red-700">
-            Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.
+            {data.error_text}
           </div>
           <form id="poptavka-form" class="space-y-6" method="POST" action="/api/poptavka">
-
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label class="block text-sm font-semibold text-charcoal-800 mb-2">Jméno a příjmení *</label>
-                <input type="text" name="jmeno" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder="Jan Novák" />
+                <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_jmeno}</label>
+                <input type="text" name="jmeno" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_jmeno} />
               </div>
               <div>
-                <label class="block text-sm font-semibold text-charcoal-800 mb-2">Telefon *</label>
-                <input type="tel" name="telefon" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder="+420 777 123 456" />
+                <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_telefon}</label>
+                <input type="tel" name="telefon" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_telefon} />
               </div>
             </div>
-
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">E-mail *</label>
-              <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder="jan@example.cz" />
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_email}</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_email} />
             </div>
-
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Typ objektu</label>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_objekt}</label>
               <select name="objekt" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-charcoal-700">
-                <option value="">Vyberte typ objektu</option>
-                <option>Rodinný dům — novostavba</option>
-                <option>Rodinný dům — rekonstrukce</option>
-                <option>Bytový dům</option>
-                <option>Komerční objekt</option>
-                <option>Jiné</option>
+                <option value="">{data.placeholder_objekt}</option>
+                {data.options_objekt.map(opt => (<option>{opt}</option>))}
               </select>
             </div>
-
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Čím vytápíte nyní?</label>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_vytapeni}</label>
               <select name="vytapeni" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-charcoal-700">
-                <option value="">Vyberte stávající zdroj</option>
-                <option>Plynový kotel</option>
-                <option>Elektrický kotel</option>
-                <option>Kotel na tuhá paliva</option>
-                <option>Tepelné čerpadlo (výměna)</option>
-                <option>Novostavba — zatím nic</option>
-                <option>Jiné</option>
+                <option value="">{data.placeholder_vytapeni}</option>
+                {data.options_vytapeni.map(opt => (<option>{opt}</option>))}
               </select>
             </div>
-
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Zpráva</label>
-              <textarea name="zprava" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none" placeholder="Popište svou situaci, plochu domu, lokalitu nebo jakékoliv další informace..."></textarea>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_zprava}</label>
+              <textarea name="zprava" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none" placeholder={data.placeholder_zprava}></textarea>
             </div>
-
             <div class="flex items-start gap-3">
               <input type="checkbox" name="souhlas" id="souhlas" required class="mt-1 w-4 h-4 accent-brand-500" />
-              <label for="souhlas" class="text-xs text-charcoal-500 leading-relaxed">
-                Souhlasím se zpracováním osobních údajů za účelem vyřízení mé poptávky. Údaje nebudou předány třetím stranám.
-              </label>
+              <label for="souhlas" class="text-xs text-charcoal-500 leading-relaxed">{data.souhlas_text}</label>
             </div>
-
             <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-base">
-              Odeslat poptávku
+              {data.submit_button}
               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
@@ -90,56 +73,45 @@ import PageHero from '../components/PageHero.astro';
           </form>
         </div>
 
-        <!-- Sidebar -->
         <div class="space-y-6">
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-4">Kontakt</h3>
+            <h3 class="font-bold text-charcoal-900 mb-4">{data.sidebar_title}</h3>
             <div class="space-y-3 text-sm text-charcoal-600">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                  </svg>
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 </div>
                 <div>
-                  <div class="text-xs text-charcoal-400">Telefon</div>
-                  <a href="tel:+420777724573" class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">+420 777 724 573</a>
+                  <div class="text-xs text-charcoal-400">{data.sidebar_telefon_label}</div>
+                  <a href={site.phone_href} class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.phone}</a>
                 </div>
               </div>
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
                 <div>
-                  <div class="text-xs text-charcoal-400">E-mail</div>
-                  <a href="mailto:info@uspornevytapeni.cz" class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">info@uspornevytapeni.cz</a>
+                  <div class="text-xs text-charcoal-400">{data.sidebar_email_label}</div>
+                  <a href={`mailto:${site.email}`} class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.email}</a>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 </div>
                 <div>
-                  <div class="text-xs text-charcoal-400">Adresa</div>
-                  <div class="font-semibold text-charcoal-900">Dělnická 395<br>506 01 Jičín</div>
+                  <div class="text-xs text-charcoal-400">{data.sidebar_adresa_label}</div>
+                  <div class="font-semibold text-charcoal-900" set:html={data.sidebar_adresa}></div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="bg-navy-700 rounded-xl p-6 text-white">
-            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-3">Proč nás kontaktovat</div>
+            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-3">{data.sidebar_why_label}</div>
             <ul class="space-y-3 text-sm text-navy-200">
-              {['Konzultace zdarma, bez závazků', 'Odpovíme do 24 hodin', 'Návrh řešení na míru', 'Pomůžeme s dotací'].map(item => (
+              {data.sidebar_why_items.map(item => (
                 <li class="flex items-center gap-2">
-                  <svg class="w-4 h-4 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                  </svg>
+                  <svg class="w-4 h-4 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                   {item}
                 </li>
               ))}

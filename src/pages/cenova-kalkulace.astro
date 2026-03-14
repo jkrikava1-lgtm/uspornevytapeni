@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
+import data from '../data/cenova-kalkulace.json';
 ---
 
 <Layout title="Cenová kalkulace tepelného čerpadla" description="Zjistěte orientační cenu tepelného čerpadla pro váš dům. Stačí odpovědět na 6 otázek a do 24 hodin vám zašleme nabídku.">
   <PageHero
-    title="Cenová kalkulace"
-    subtitle="Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu."
+    title={data.hero_title}
+    subtitle={data.hero_subtitle}
     breadcrumb={[{ label: 'Cenová kalkulace', href: '/cenova-kalkulace' }]}
   />
 
@@ -24,99 +25,85 @@ import PageHero from '../components/PageHero.astro';
         </div>
       </div>
 
-      <!-- ── STEP 1 – Typ objektu ── -->
+      <!-- STEP 1 -->
       <div id="step-1" class="step-panel">
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Typ vašeho objektu</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Vyberte, zda se jedná o novostavbu nebo stávající dům.</p>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.step1_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step1_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-            </span>
-            <span class="choice-label">Novostavba</span>
-            <span class="choice-desc">Dům teprve stavíte nebo je po kolaudaci</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>
+            <span class="choice-label">{data.step1_opt1_label}</span>
+            <span class="choice-desc">{data.step1_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
-            </span>
-            <span class="choice-label">Stávající dům</span>
-            <span class="choice-desc">Rekonstrukce nebo výměna stávajícího zdroje</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span>
+            <span class="choice-label">{data.step1_opt2_label}</span>
+            <span class="choice-desc">{data.step1_opt2_desc}</span>
           </button>
         </div>
       </div>
 
-      <!-- ── STEP 2 – Ohřev TUV ── -->
+      <!-- STEP 2 -->
       <div id="step-2" class="step-panel hidden">
-        <button class="back-btn" data-target="1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Ohřev teplé vody?</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Má tepelné čerpadlo zajišťovat i ohřev užitkové vody (TUV)?</p>
+        <button class="back-btn" data-target="1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.back_button}</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">{data.step2_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step2_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="ohrev_tuv" data-value="Ano">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </span>
-            <span class="choice-label">Ano, i TUV</span>
-            <span class="choice-desc">Čerpadlo bude ohřívat i vodu pro sprchy a kuchyň</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+            <span class="choice-label">{data.step2_opt1_label}</span>
+            <span class="choice-desc">{data.step2_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="ohrev_tuv" data-value="Ne">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
-            </span>
-            <span class="choice-label">Ne, jen vytápění</span>
-            <span class="choice-desc">TUV zajišťuje jiný zdroj</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg></span>
+            <span class="choice-label">{data.step2_opt2_label}</span>
+            <span class="choice-desc">{data.step2_opt2_desc}</span>
           </button>
         </div>
       </div>
 
-      <!-- ── STEP 3 – Topný systém ── -->
+      <!-- STEP 3 -->
       <div id="step-3" class="step-panel hidden">
-        <button class="back-btn" data-target="2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Typ topného systému</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Jakým způsobem je v domě rozváděno teplo?</p>
+        <button class="back-btn" data-target="2"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.back_button}</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">{data.step3_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step3_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <button class="choice-card" data-field="topny_system" data-value="Podlahové topení">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
-            </span>
-            <span class="choice-label">Podlahové topení</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></span>
+            <span class="choice-label">{data.step3_opt1_label}</span>
           </button>
           <button class="choice-card" data-field="topny_system" data-value="Radiátory">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg>
-            </span>
-            <span class="choice-label">Radiátory</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span>
+            <span class="choice-label">{data.step3_opt2_label}</span>
           </button>
           <button class="choice-card" data-field="topny_system" data-value="Více topných okruhů">
-            <span class="choice-icon">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            </span>
-            <span class="choice-label">Více okruhů</span>
+            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span>
+            <span class="choice-label">{data.step3_opt3_label}</span>
           </button>
         </div>
       </div>
 
-      <!-- ── STEP 4 – Typ TČ ── -->
+      <!-- STEP 4 -->
       <div id="step-4" class="step-panel hidden">
-        <button class="back-btn" data-target="3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Preferovaný typ tepelného čerpadla</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Pokud nejste si jisti, vyberte „Nevím" a poradíme vám.</p>
+        <button class="back-btn" data-target="3"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.back_button}</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">{data.step4_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step4_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="typ_tc" data-value="Vzduch–voda">
-            <span class="choice-label">Vzduch – voda</span>
-            <span class="choice-desc">Nejrozšířenější, bez zemních prací</span>
+            <span class="choice-label">{data.step4_opt1_label}</span>
+            <span class="choice-desc">{data.step4_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Voda–voda">
-            <span class="choice-label">Voda – voda</span>
-            <span class="choice-desc">Studna nebo jiný vodní zdroj</span>
+            <span class="choice-label">{data.step4_opt2_label}</span>
+            <span class="choice-desc">{data.step4_opt2_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Země–voda, vrt">
-            <span class="choice-label">Země – voda, vrt</span>
-            <span class="choice-desc">Geotermální vrty, nejvyšší COP</span>
+            <span class="choice-label">{data.step4_opt3_label}</span>
+            <span class="choice-desc">{data.step4_opt3_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Země–voda, plošný kolektor">
-            <span class="choice-label">Země – voda, kolektor</span>
-            <span class="choice-desc">Horizontální kolektor v zemi</span>
+            <span class="choice-label">{data.step4_opt4_label}</span>
+            <span class="choice-desc">{data.step4_opt4_desc}</span>
           </button>
         </div>
         <div class="mt-4 pt-4 border-t border-gray-100">
@@ -125,118 +112,100 @@ import PageHero from '../components/PageHero.astro';
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </span>
             <span class="text-left">
-              <span class="choice-label block">Nevím – poraďte mi</span>
-              <span class="choice-desc">Doporučíme nejvhodnější variantu pro váš dům a pozemek</span>
+              <span class="choice-label block">{data.step4_help_label}</span>
+              <span class="choice-desc">{data.step4_help_desc}</span>
             </span>
             <svg class="w-4 h-4 text-gray-300 ml-auto flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </button>
         </div>
       </div>
 
-      <!-- ── STEP 5 – Parametry domu ── -->
+      <!-- STEP 5 -->
       <div id="step-5" class="step-panel hidden">
-        <button class="back-btn" data-target="4"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Parametry domu</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Přibližné hodnoty jsou v pořádku. Pokud tepelnou ztrátu neznáte, zaškrtněte „Nevím".</p>
-
+        <button class="back-btn" data-target="4"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.back_button}</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">{data.step5_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step5_desc}</p>
         <div class="space-y-8">
-          <!-- Tepelná ztráta -->
           <div>
             <div class="flex items-center justify-between mb-3">
-              <label class="text-sm font-semibold text-charcoal-800">Tepelná ztráta objektu</label>
+              <label class="text-sm font-semibold text-charcoal-800">{data.step5_ztrata_label}</label>
               <label id="nevis-toggle" for="ztrata-nevis" style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.25rem 0.75rem;border-radius:9999px;border:2px solid #e5e7eb;font-size:0.8125rem;font-weight:500;color:#6b7280;cursor:pointer;transition:all 150ms;user-select:none;">
                 <input type="checkbox" id="ztrata-nevis" class="sr-only" />
                 <svg style="width:0.875rem;height:0.875rem;flex-shrink:0;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                Nevím
+                {data.step5_nevis_label}
               </label>
             </div>
             <div id="ztrata-wrap" class="space-y-2">
               <div class="flex items-center gap-4">
-                <input type="range" id="ztrata-slider" min="2" max="30" value="10" step="1"
-                  class="flex-1 accent-brand-500 cursor-pointer" />
+                <input type="range" id="ztrata-slider" min="2" max="30" value="10" step="1" class="flex-1 accent-brand-500 cursor-pointer" />
                 <div class="w-20 text-right">
                   <span id="ztrata-val" class="text-2xl font-extrabold text-brand-500">10</span>
                   <span class="text-sm text-charcoal-400 ml-1">kW</span>
                 </div>
               </div>
-              <div class="flex justify-between text-xs text-charcoal-400">
-                <span>2 kW</span><span>30 kW</span>
-              </div>
+              <div class="flex justify-between text-xs text-charcoal-400"><span>2 kW</span><span>30 kW</span></div>
             </div>
           </div>
-
-          <!-- Vytápěná plocha – zobrazí se jen když neví tepelnou ztrátu -->
           <div id="plocha-wrap" class="hidden">
-            <label class="block text-sm font-semibold text-charcoal-800 mb-3">Zadejte vytápěnou plochu</label>
+            <label class="block text-sm font-semibold text-charcoal-800 mb-3">{data.step5_plocha_label}</label>
             <div class="flex items-center gap-3">
-              <input type="number" id="plocha-input" min="20" max="2000" placeholder="150"
-                class="w-32 px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-center text-lg font-bold" />
+              <input type="number" id="plocha-input" min="20" max="2000" placeholder="150" class="w-32 px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors text-center text-lg font-bold" />
               <span class="text-charcoal-500 font-medium">m²</span>
             </div>
           </div>
         </div>
-
         <button id="btn-step5" class="mt-10 inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors w-full sm:w-auto">
-          Pokračovat
+          {data.step5_continue}
           <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </button>
       </div>
 
-      <!-- ── STEP 6 – Kontakt ── -->
+      <!-- STEP 6 -->
       <div id="step-6" class="step-panel hidden">
-        <button class="back-btn" data-target="5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět</button>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">Vaše kontaktní údaje</h2>
-        <p class="text-charcoal-500 text-sm mb-8">Do 24 hodin vám zašleme návrh systému a orientační cenu.</p>
-
+        <button class="back-btn" data-target="5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.back_button}</button>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2 mt-4">{data.step6_title}</h2>
+        <p class="text-charcoal-500 text-sm mb-8">{data.step6_desc}</p>
         <div class="space-y-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Jméno a příjmení *</label>
-              <input type="text" id="f-jmeno" required placeholder="Jan Novák"
-                class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_jmeno}</label>
+              <input type="text" id="f-jmeno" required placeholder={data.step6_placeholder_jmeno} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
             </div>
             <div>
-              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Telefon *</label>
-              <input type="tel" id="f-telefon" required placeholder="+420 777 000 111"
-                class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_telefon}</label>
+              <input type="tel" id="f-telefon" required placeholder={data.step6_placeholder_telefon} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
             </div>
           </div>
           <div>
-            <label class="block text-sm font-semibold text-charcoal-800 mb-2">E-mail *</label>
-            <input type="email" id="f-email" required placeholder="jan@example.cz"
-              class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_email}</label>
+            <input type="email" id="f-email" required placeholder={data.step6_placeholder_email} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
           </div>
           <div>
-            <label class="block text-sm font-semibold text-charcoal-800 mb-2">Obec / město *</label>
-            <input type="text" id="f-obec" required placeholder="Praha"
-              class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_obec}</label>
+            <input type="text" id="f-obec" required placeholder={data.step6_placeholder_obec} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
           </div>
           <div class="flex items-start gap-3 pt-2">
             <input type="checkbox" id="f-souhlas" class="mt-1 w-4 h-4 accent-brand-500 flex-shrink-0" />
-            <label for="f-souhlas" class="text-xs text-charcoal-500 leading-relaxed cursor-pointer">
-              Souhlasím se zasíláním obchodních sdělení firmy Úsporné vytápění s.r.o.
-            </label>
+            <label for="f-souhlas" class="text-xs text-charcoal-500 leading-relaxed cursor-pointer">{data.step6_souhlas}</label>
           </div>
         </div>
-
         <div id="form-error" class="hidden mt-4 p-3 bg-red-50 border border-red-200 rounded-md text-sm text-red-700"></div>
-
         <button id="btn-submit" class="mt-8 inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors w-full sm:w-auto">
-          <span id="btn-submit-label">Odeslat kalkulaci</span>
+          <span id="btn-submit-label">{data.submit_button}</span>
           <svg id="btn-submit-icon" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           <svg id="btn-submit-spin" class="hidden w-4 h-4 ml-2 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/></svg>
         </button>
       </div>
 
-      <!-- ── SUCCESS ── -->
+      <!-- SUCCESS -->
       <div id="step-success" class="step-panel hidden text-center py-8">
         <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-6">
           <svg class="w-8 h-8 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
         </div>
-        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">Kalkulace odeslána!</h2>
-        <p class="text-charcoal-500 mb-8 max-w-sm mx-auto">Ozve se vám náš specialista do 24 hodin s návrhem systému a orientační cenou.</p>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.success_title}</h2>
+        <p class="text-charcoal-500 mb-8 max-w-sm mx-auto">{data.success_text}</p>
         <a href="/" class="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-charcoal-700 font-semibold rounded-md transition-colors text-sm">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> Zpět na hlavní stránku
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg> {data.success_back}
         </a>
       </div>
 
@@ -249,46 +218,15 @@ import PageHero from '../components/PageHero.astro';
   .choice-card {
     @apply flex flex-col items-center text-center gap-3 p-6 rounded-xl border-2 border-gray-200 bg-white hover:border-brand-400 hover:bg-brand-50 transition-all duration-150 cursor-pointer;
   }
-  .choice-card.selected {
-    @apply border-brand-500 bg-brand-50;
-  }
-  .choice-icon {
-    @apply w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-charcoal-500;
-  }
-  .choice-card.selected .choice-icon {
-    @apply bg-brand-100 text-brand-600;
-  }
-  .choice-label {
-    @apply font-bold text-charcoal-900 text-sm;
-  }
-  .choice-desc {
-    @apply text-xs text-charcoal-400 leading-snug;
-  }
-  .back-btn {
-    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer border border-gray-200 hover:border-gray-300;
-  }
-  .choice-card--help {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-    border-radius: 0.75rem;
-    border: 2px dashed #fde68a;
-    background-color: rgba(255, 251, 235, 0.5);
-    transition: all 150ms;
-    cursor: pointer;
-    text-align: left;
-  }
-  .choice-card--help:hover {
-    border-color: #f59e0b;
-    background-color: #fffbeb;
-  }
-  .choice-card--help.selected {
-    border-color: #f59e0b;
-    background-color: #fffbeb;
-  }
+  .choice-card.selected { @apply border-brand-500 bg-brand-50; }
+  .choice-icon { @apply w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-charcoal-500; }
+  .choice-card.selected .choice-icon { @apply bg-brand-100 text-brand-600; }
+  .choice-label { @apply font-bold text-charcoal-900 text-sm; }
+  .choice-desc { @apply text-xs text-charcoal-400 leading-snug; }
+  .back-btn { @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer border border-gray-200 hover:border-gray-300; }
+  .choice-card--help { width:100%; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1rem 1.25rem; border-radius:0.75rem; border:2px dashed #fde68a; background-color:rgba(255,251,235,0.5); transition:all 150ms; cursor:pointer; text-align:left; }
+  .choice-card--help:hover { border-color:#f59e0b; background-color:#fffbeb; }
+  .choice-card--help.selected { border-color:#f59e0b; background-color:#fffbeb; }
 </style>
 
 <script>
@@ -300,7 +238,6 @@ import PageHero from '../components/PageHero.astro';
     document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
     const el = document.getElementById(`step-${n}`);
     if (el) el.classList.remove('hidden');
-
     if (n <= TOTAL_STEPS) {
       const pct = Math.round((n / TOTAL_STEPS) * 100);
       (document.getElementById('progress-fill') as HTMLElement).style.width = pct + '%';
@@ -314,18 +251,13 @@ import PageHero from '../components/PageHero.astro';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Choice cards
   document.querySelectorAll<HTMLButtonElement>('.choice-card, .choice-card--help').forEach(card => {
     card.addEventListener('click', () => {
       const field = card.dataset.field!;
       const value = card.dataset.value!;
       answers[field] = value;
-
-      // Mark selected within the same step
       card.closest('.step-panel')!.querySelectorAll('.choice-card, .choice-card--help').forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
-
-      // Auto-advance after short delay (redirect to poptavka if "Nevím" in step 4)
       if (field === 'typ_tc' && value === 'Nevím') {
         setTimeout(() => { window.location.href = '/poptavka'; }, 260);
         return;
@@ -334,12 +266,10 @@ import PageHero from '../components/PageHero.astro';
     });
   });
 
-  // Back buttons
   document.querySelectorAll<HTMLButtonElement>('.back-btn').forEach(btn => {
     btn.addEventListener('click', () => showStep(Number(btn.dataset.target)));
   });
 
-  // Step 5 slider
   const slider = document.getElementById('ztrata-slider') as HTMLInputElement;
   const ztrataVal = document.getElementById('ztrata-val')!;
   slider?.addEventListener('input', () => { ztrataVal.textContent = slider.value; });
@@ -350,13 +280,9 @@ import PageHero from '../components/PageHero.astro';
   const nevisToggle = document.getElementById('nevis-toggle') as HTMLElement;
   const updateNevisToggle = () => {
     if (ztrataNevis.checked) {
-      nevisToggle.style.borderColor = '#f59e0b';
-      nevisToggle.style.color = '#b45309';
-      nevisToggle.style.backgroundColor = '#fffbeb';
+      nevisToggle.style.borderColor = '#f59e0b'; nevisToggle.style.color = '#b45309'; nevisToggle.style.backgroundColor = '#fffbeb';
     } else {
-      nevisToggle.style.borderColor = '#e5e7eb';
-      nevisToggle.style.color = '#6b7280';
-      nevisToggle.style.backgroundColor = '';
+      nevisToggle.style.borderColor = '#e5e7eb'; nevisToggle.style.color = '#6b7280'; nevisToggle.style.backgroundColor = '';
     }
   };
   ztrataNevis?.addEventListener('change', () => {
@@ -368,33 +294,26 @@ import PageHero from '../components/PageHero.astro';
   document.getElementById('btn-step5')?.addEventListener('click', () => {
     if (ztrataNevis.checked) {
       const plocha = (document.getElementById('plocha-input') as HTMLInputElement).value;
-      if (!plocha) {
-        (document.getElementById('plocha-input') as HTMLInputElement).focus();
-        return;
-      }
+      if (!plocha) { (document.getElementById('plocha-input') as HTMLInputElement).focus(); return; }
       answers['plocha'] = plocha + ' m²';
     }
     answers['tepelna_ztrata'] = ztrataNevis.checked ? 'Nevím' : slider.value + ' kW';
     showStep(6);
   });
 
-  // Submit
   document.getElementById('btn-submit')?.addEventListener('click', async () => {
     const jmeno = (document.getElementById('f-jmeno') as HTMLInputElement).value.trim();
     const email = (document.getElementById('f-email') as HTMLInputElement).value.trim();
     const telefon = (document.getElementById('f-telefon') as HTMLInputElement).value.trim();
     const obec = (document.getElementById('f-obec') as HTMLInputElement).value.trim();
     const souhlas = (document.getElementById('f-souhlas') as HTMLInputElement).checked;
-
     const errorEl = document.getElementById('form-error')!;
     errorEl.classList.add('hidden');
-
     if (!jmeno || !email || !telefon || !obec) {
       errorEl.textContent = 'Vyplňte prosím všechna povinná pole.';
       errorEl.classList.remove('hidden');
       return;
     }
-
     const submitBtn = document.getElementById('btn-submit') as HTMLButtonElement;
     const labelEl = document.getElementById('btn-submit-label')!;
     const iconEl = document.getElementById('btn-submit-icon')!;
@@ -403,14 +322,8 @@ import PageHero from '../components/PageHero.astro';
     labelEl.textContent = 'Odesílám…';
     iconEl.classList.add('hidden');
     spinEl.classList.remove('hidden');
-
     try {
-      const res = await fetch('/api/kalkulace', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...answers, jmeno, email, telefon, obec, souhlas_obchodni: souhlas }),
-      });
-
+      const res = await fetch('/api/kalkulace', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...answers, jmeno, email, telefon, obec, souhlas_obchodni: souhlas }) });
       if (!res.ok) throw new Error('server error');
       showStep(99);
       document.getElementById('step-success')!.classList.remove('hidden');

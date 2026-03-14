@@ -1,0 +1,49 @@
+{
+  "hero_title": "Nezávazná poptávka",
+  "hero_subtitle": "Vyplňte formulář a my se vám ozveme do 24 hodin. Konzultace i návrh řešení jsou zcela zdarma.",
+  "success_title": "Poptávka odeslána!",
+  "success_text": "Ozveme se vám do 24 hodin.",
+  "error_text": "Odeslání se nezdařilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.",
+  "label_jmeno": "Jméno a příjmení *",
+  "placeholder_jmeno": "Jan Novák",
+  "label_telefon": "Telefon *",
+  "placeholder_telefon": "+420 777 123 456",
+  "label_email": "E-mail *",
+  "placeholder_email": "jan@example.cz",
+  "label_objekt": "Typ objektu",
+  "placeholder_objekt": "Vyberte typ objektu",
+  "options_objekt": [
+    "Rodinný dům — novostavba",
+    "Rodinný dům — rekonstrukce",
+    "Bytový dům",
+    "Komerční objekt",
+    "Jiné"
+  ],
+  "label_vytapeni": "Čím vytápíte nyní?",
+  "placeholder_vytapeni": "Vyberte stávající zdroj",
+  "options_vytapeni": [
+    "Plynový kotel",
+    "Elektrický kotel",
+    "Kotel na tuhá paliva",
+    "Tepelné čerpadlo (výměna)",
+    "Novostavba — zatím nic",
+    "Jiné"
+  ],
+  "label_zprava": "Zpráva",
+  "placeholder_zprava": "Popište svou situaci, plochu domu, lokalitu nebo jakékoliv další informace...",
+  "souhlas_text": "Souhlasím se zpracováním osobních údajů za účelem vyřízení mé poptávky. Údaje nebudou předány třetím stranám.",
+  "submit_button": "Odeslat poptávku",
+  "submit_loading": "Odesílám…",
+  "sidebar_title": "Kontakt",
+  "sidebar_telefon_label": "Telefon",
+  "sidebar_email_label": "E-mail",
+  "sidebar_adresa_label": "Adresa",
+  "sidebar_adresa": "Dělnická 395<br>506 01 Jičín",
+  "sidebar_why_label": "Proč nás kontaktovat",
+  "sidebar_why_items": [
+    "Konzultace zdarma, bez závazků",
+    "Odpovíme do 24 hodin",
+    "Návrh řešení na míru",
+    "Pomůžeme s dotací"
+  ]
+}
