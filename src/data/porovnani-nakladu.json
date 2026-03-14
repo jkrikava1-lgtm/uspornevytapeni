@@ -8,12 +8,12 @@
   "savings_prefix": "\u00daspora s T\u010c: ",
   "chart_headline": "Roční náklady na vytápění — vizuální srovnání",
   "chart_items": [
-    { "label": "Palivov\u00e9 d\u0159evo", "value": 22000, "color": "bg-amber-300", "poznamka": "Zply\u0148ovac\u00ed kotel, \u00fa\u010dinnost 86 %", "uspory": "levn\u011bj\u0161\u00ed palivo, ale pracn\u00e9" },
-    { "label": "Tepeln\u00e9 \u010derpadlo", "value": 37000, "color": "bg-green-500", "poznamka": "Vzduch/voda, COP 3,3, tarif D5", "uspory": null, "highlight": true },
-    { "label": "Hn\u011bd\u00e9 uhl\u00ed", "value": 50000, "color": "bg-amber-800", "poznamka": "Automatick\u00fd kotel, \u00fa\u010dinnost 86 %", "uspory": "~13 000 K\u010d/rok" },
-    { "label": "D\u0159evn\u00ed pelety", "value": 58000, "color": "bg-teal-400", "poznamka": "Automatick\u00fd peletov\u00fd kotel, \u00fa\u010dinnost 92 %", "uspory": "~21 000 K\u010d/rok" },
-    { "label": "Zemn\u00ed plyn", "value": 65000, "color": "bg-yellow-400", "poznamka": "Kondenza\u010dn\u00ed kotel, \u00fa\u010dinnost 102 %", "uspory": "~28 000 K\u010d/rok" },
-    { "label": "Elekt\u0159ina p\u0159\u00edmotop", "value": 106000, "color": "bg-red-500", "poznamka": "Podlahov\u00e9 roho\u017ee a f\u00f3lie, tarif D5", "uspory": "~69 000 K\u010d/rok" }
+    { "label": "Palivov\u00e9 d\u0159evo", "value": 22000, "color": "bg-amber-500", "poznamka": "Zply\u0148ovac\u00ed kotel, \u00fa\u010dinnost 86 %", "uspory": "levn\u011bj\u0161\u00ed palivo, ale pracn\u00e9" },
+    { "label": "Tepeln\u00e9 \u010derpadlo", "value": 37000, "color": "bg-emerald-500", "poznamka": "Vzduch/voda, COP 3,3, tarif D5", "uspory": null, "highlight": true },
+    { "label": "Hn\u011bd\u00e9 uhl\u00ed", "value": 50000, "color": "bg-stone-600", "poznamka": "Automatick\u00fd kotel, \u00fa\u010dinnost 86 %", "uspory": "~13 000 K\u010d/rok" },
+    { "label": "D\u0159evn\u00ed pelety", "value": 58000, "color": "bg-cyan-600", "poznamka": "Automatick\u00fd peletov\u00fd kotel, \u00fa\u010dinnost 92 %", "uspory": "~21 000 K\u010d/rok" },
+    { "label": "Zemn\u00ed plyn", "value": 65000, "color": "bg-yellow-500", "poznamka": "Kondenza\u010dn\u00ed kotel, \u00fa\u010dinnost 102 %", "uspory": "~28 000 K\u010d/rok" },
+    { "label": "Elekt\u0159ina p\u0159\u00edmotop", "value": 106000, "color": "bg-rose-600", "poznamka": "Podlahov\u00e9 roho\u017ee a f\u00f3lie, tarif D5", "uspory": "~69 000 K\u010d/rok" }
   ],
   "tools_headline": "Užitečné nástroje",
   "tool1_title": "Cenová kalkulace",
