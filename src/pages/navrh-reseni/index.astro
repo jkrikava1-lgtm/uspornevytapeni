@@ -18,20 +18,18 @@ import data from '../../data/navrh-reseni-index.json';
       <h2 class="text-xl font-extrabold text-charcoal-900 mb-5">{data.section_typ_objektu}</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
         {data.typ_objektu_cards.map(item => (
-          <a href={item.href} class="group bg-white rounded-xl p-7 border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all">
-            <div class="w-11 h-11 bg-brand-50 group-hover:bg-brand-500 rounded-lg flex items-center justify-center mb-4 transition-colors">
-              <svg class="w-5 h-5 text-brand-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
-              </svg>
+          <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all overflow-hidden">
+            <img src={item.img} alt={item.title} class="w-full h-44 object-cover" loading="lazy" />
+            <div class="p-7">
+              <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
+              <p class="text-sm text-charcoal-500 leading-relaxed mb-3">{item.desc}</p>
+              <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
+                {data.link_more}
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
             </div>
-            <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
-            <p class="text-sm text-charcoal-500 leading-relaxed mb-3">{item.desc}</p>
-            <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
-              {data.link_more}
-              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
           </a>
         ))}
       </div>
