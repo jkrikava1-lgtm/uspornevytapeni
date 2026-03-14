@@ -22,7 +22,7 @@ import data from '../data/kontakty.json';
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {data.contacts.map(contact => (
               <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                <img src={contact.img} alt={contact.name} class="w-20 h-20 rounded-full object-cover mb-4" loading="lazy" />
+                <img src={contact.img} alt={contact.name} class="w-20 h-20 rounded-full object-cover mb-4 cursor-pointer hover:ring-4 hover:ring-brand-200 transition-all" loading="lazy" data-lightbox />
                 <div class="font-bold text-charcoal-900 text-base mb-0.5">{contact.name}</div>
                 <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-4">{contact.role}</div>
                 <div class="space-y-2">
@@ -86,4 +86,24 @@ import data from '../data/kontakty.json';
       </div>
     </div>
   </section>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer">
+    <img id="lightbox-img" src="" alt="" class="max-w-sm max-h-[80vh] rounded-2xl shadow-2xl object-contain" />
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-lightbox]').forEach(img => {
+      img.addEventListener('click', () => {
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lb.classList.remove('hidden');
+      });
+    });
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      e.currentTarget.classList.add('hidden');
+    });
+  </script>
 </Layout>
