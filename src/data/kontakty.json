@@ -5,15 +5,17 @@
   "hero_subtitle": "Jsme v Jičíně, pracujeme po celé České republice.",
   "contacts": [
     {
-      "name": "Jakub Křikava",
-      "role": "Obchod a technická podpora",
+      "name": "Jakub K\u0159ikava",
+      "role": "Obchod a technick\u00e1 podpora",
+      "img": "/images/team/kuba.jpg",
       "phone": "777 724 573",
       "phone_href": "tel:+420777724573",
       "email": "j.krikava@uspornevytapeni.cz"
     },
     {
-      "name": "Ing. Jana Křikavová",
+      "name": "Ing. Jana K\u0159ikavov\u00e1",
       "role": "Ekonom",
+      "img": "/images/team/janicka.jpg",
       "phone": "604 208 853",
       "phone_href": "tel:+420604208853",
       "email": "j.krikavova@uspornevytapeni.cz"
