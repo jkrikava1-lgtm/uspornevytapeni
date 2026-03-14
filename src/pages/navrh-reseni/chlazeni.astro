@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/chlazeni.json';
 ---
 
-<Layout title="Chlazení domu tepelným čerpadlem" description="Chlazení domu tepelným čerpadlem — podlahovým systémem nebo fancoily. Jednoduchá a levná instalace.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

@@ -6,7 +6,7 @@ import data from '../data/porovnani-nakladu.json';
 const maxChart = Math.max(...data.chart_items.map(i => i.value));
 ---
 
-<Layout title="Porovnání nákladů na vytápění" description="Srovnání roční spotřeby energie — tepelné čerpadlo vs. plyn vs. elektřina vs. pelety vs. dřevo vs. uhlí.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

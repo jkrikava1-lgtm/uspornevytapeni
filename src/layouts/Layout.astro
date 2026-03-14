@@ -8,6 +8,14 @@ interface Props {
 }
 
 const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.' } = Astro.props;
+
+const navGroups = [
+  { label: site.nav_navrh, href: '/navrh-reseni', items: site.nav_navrh_items, width: 'w-64' },
+  { label: site.nav_tc, href: '/tepelna-cerpadla', items: site.nav_tc_items, width: 'w-56' },
+  { label: site.nav_funkce, href: '/chytre-funkce', items: site.nav_funkce_items, width: 'w-72' },
+  { label: site.nav_katalog, href: '/katalog', items: site.nav_katalog_items, width: 'w-52' },
+  { label: site.nav_cena, href: '/cena', items: site.nav_cena_items, width: 'w-52' },
+];
 ---
 
 <!doctype html>
@@ -19,7 +27,7 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <title>{title} | Úsporné vytápění</title>
+    <title>{title} | {site.name}</title>
   </head>
   <body class="antialiased">
 
@@ -29,11 +37,11 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
         <!-- Mobile layout -->
         <div class="flex items-center justify-between h-16 lg:hidden">
           <a href="/" class="flex items-center flex-shrink-0">
-            <img src="/logo-cropped.png" alt="Úsporné vytápění s.r.o." class="h-10 w-auto" />
+            <img src="/logo-cropped.png" alt={site.name} class="h-10 w-auto" />
           </a>
           <div class="flex items-center gap-2">
             <a href="/poptavka" class="inline-flex items-center px-3 py-2 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-md transition-colors">
-              Poptávka
+              {site.nav_poptavka}
             </a>
             <button id="mobile-menu-toggle" class="relative w-9 h-9 flex items-center justify-center text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md" aria-label="Otevřít menu" aria-expanded="false">
               <span class="sr-only">Menu</span>
@@ -52,7 +60,7 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
 
           <!-- Logo: vyplňuje celou výšku -->
           <a href="/" class="flex items-center flex-shrink-0 pr-6 border-r border-gray-100">
-            <img src="/logo-cropped.png" alt="Úsporné vytápění s.r.o." style="height:56px;width:auto;" />
+            <img src="/logo-cropped.png" alt={site.name} style="height:56px;width:auto;" />
           </a>
 
           <!-- Nav sloupec: dva řádky -->
@@ -60,86 +68,32 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
 
             <!-- Řádek 1: sekundární nav -->
             <div class="flex items-center justify-end gap-1 h-10 border-b border-gray-100">
-              <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">O nás</a>
-              <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">Kontakty</a>
+              <a href="/o-nas" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">{site.nav_o_nas}</a>
+              <a href="/kontakty" class="px-3 py-1 text-xs text-charcoal-500 hover:text-brand-500 rounded hover:bg-gray-50 transition-colors">{site.nav_kontakty}</a>
             </div>
 
             <!-- Řádek 2: hlavní nav -->
             <nav class="flex items-center justify-end gap-1 h-10">
 
-          <div class="relative" data-nav-group>
-            <a href="/navrh-reseni" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
-              Návrh řešení
-              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
-              <a href="/navrh-reseni/novostavba" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Novostavba</a>
-              <a href="/navrh-reseni/stavajici-dum" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Stávající dům</a>
-              <a href="/navrh-reseni/velky-vykon" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Velký výkon</a>
+          {navGroups.map(group => (
+            <div class="relative" data-nav-group>
+              <a href={group.href} class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
+                {group.label}
+                <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </a>
+              <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class={`absolute top-full left-0 mt-1 ${group.width} bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50`}>
+                {group.items.map(item => (
+                  <a href={item.href} class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">{item.label}</a>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div class="relative" data-nav-group>
-            <a href="/tepelna-cerpadla" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
-              Tepelná čerpadla
-              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
-              <a href="/tepelna-cerpadla/vzduch-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Vzduch – voda</a>
-              <a href="/tepelna-cerpadla/zeme-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Země – voda</a>
-              <a href="/tepelna-cerpadla/voda-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Voda – voda</a>
-            </div>
-          </div>
-
-          <div class="relative" data-nav-group>
-            <a href="/chytre-funkce" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
-              Chytré funkce
-              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
-              <a href="/chytre-funkce/ovladani-systemu" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Ovládání systému</a>
-              <a href="/chytre-funkce/online-ovladani" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Online ovládání</a>
-              <a href="/chytre-funkce/inverter" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Technologie inverter</a>
-              <a href="/chytre-funkce/desuperheater" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Desuperheater</a>
-              <a href="/chytre-funkce/fotovoltaika" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Spolupráce s fotovoltaikou</a>
-            </div>
-          </div>
-
-          <div class="relative" data-nav-group>
-            <a href="/katalog" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
-              Katalog
-              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
-              <a href="/katalog/vzduch-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Vzduch – voda</a>
-              <a href="/katalog/zeme-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Země – voda</a>
-              <a href="/katalog/voda-voda" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Voda – voda</a>
-            </div>
-          </div>
-          <div class="relative" data-nav-group>
-            <a href="/cena" class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">
-              Cena
-              <svg class="w-3.5 h-3.5 text-gray-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </a>
-            <div data-nav-dropdown style="opacity:0;visibility:hidden;pointer-events:none;" class="absolute top-full left-0 mt-1 w-52 bg-white rounded-lg shadow-lg border border-gray-100 transition-opacity duration-150 py-1 z-50">
-              <a href="/cena" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Cena tepelného čerpadla</a>
-              <a href="/cenova-kalkulace" class="block px-4 py-2.5 text-sm text-charcoal-700 hover:bg-gray-50 hover:text-brand-500">Cenová kalkulace</a>
-            </div>
-          </div>
-          <a href="/reference" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Reference</a>
-          <a href="/dotace" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">Dotace</a>
+          ))}
+          <a href="/reference" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">{site.nav_reference}</a>
+          <a href="/dotace" class="px-3 py-2 text-sm font-medium text-charcoal-700 hover:text-brand-500 rounded-md hover:bg-gray-50 transition-colors">{site.nav_dotace}</a>
           <a href="/poptavka" class="inline-flex items-center px-3 py-1.5 bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold rounded-md transition-colors whitespace-nowrap">
-            Poptávka
+            {site.nav_poptavka}
           </a>
             </nav>
 
@@ -153,102 +107,37 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
       <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white overflow-y-auto" style="max-height:calc(100dvh - 64px);">
         <nav class="max-w-7xl mx-auto px-4 py-3">
 
-          <!-- Návrh řešení -->
-          <div class="border-b border-gray-100" data-mobile-accordion>
-            <div class="flex items-center justify-between" data-mobile-trigger>
-              <a href="/navrh-reseni" class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">Návrh řešení</a>
-              <button class="px-3 py-3" aria-label="Rozbalit podstránky">
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
+          {navGroups.map(group => (
+            <div class="border-b border-gray-100" data-mobile-accordion>
+              <div class="flex items-center justify-between" data-mobile-trigger>
+                <a href={group.href} class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">{group.label}</a>
+                <button class="px-3 py-3" aria-label="Rozbalit podstránky">
+                  <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="hidden pb-2 pl-3" data-mobile-panel>
+                {group.items.map(item => (
+                  <a href={item.href} class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">{item.label}</a>
+                ))}
+                {group.label === site.nav_cena && site.nav_cena_mobile_extra.map(item => (
+                  <a href={item.href} class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">{item.label}</a>
+                ))}
+              </div>
             </div>
-            <div class="hidden pb-2 pl-3" data-mobile-panel>
-              <a href="/navrh-reseni/novostavba" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Novostavba</a>
-              <a href="/navrh-reseni/stavajici-dum" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Stávající dům</a>
-              <a href="/navrh-reseni/velky-vykon" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Velký výkon</a>
-            </div>
-          </div>
-
-          <!-- Tepelná čerpadla -->
-          <div class="border-b border-gray-100" data-mobile-accordion>
-            <div class="flex items-center justify-between" data-mobile-trigger>
-              <a href="/tepelna-cerpadla" class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">Tepelná čerpadla</a>
-              <button class="px-3 py-3" aria-label="Rozbalit podstránky">
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-            </div>
-            <div class="hidden pb-2 pl-3" data-mobile-panel>
-              <a href="/tepelna-cerpadla/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
-              <a href="/tepelna-cerpadla/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
-              <a href="/tepelna-cerpadla/voda-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
-            </div>
-          </div>
-
-          <!-- Chytré funkce -->
-          <div class="border-b border-gray-100" data-mobile-accordion>
-            <div class="flex items-center justify-between" data-mobile-trigger>
-              <a href="/chytre-funkce" class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">Chytré funkce</a>
-              <button class="px-3 py-3" aria-label="Rozbalit podstránky">
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-            </div>
-            <div class="hidden pb-2 pl-3" data-mobile-panel>
-              <a href="/chytre-funkce/ovladani-systemu" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Ovládání systému</a>
-              <a href="/chytre-funkce/online-ovladani" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Online ovládání</a>
-              <a href="/chytre-funkce/inverter" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Technologie inverter</a>
-              <a href="/chytre-funkce/desuperheater" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Desuperheater</a>
-              <a href="/chytre-funkce/fotovoltaika" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Spolupráce s fotovoltaikou</a>
-            </div>
-          </div>
-
-          <!-- Katalog -->
-          <div class="border-b border-gray-100" data-mobile-accordion>
-            <div class="flex items-center justify-between" data-mobile-trigger>
-              <a href="/katalog" class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">Katalog</a>
-              <button class="px-3 py-3" aria-label="Rozbalit podstránky">
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-            </div>
-            <div class="hidden pb-2 pl-3" data-mobile-panel>
-              <a href="/katalog/vzduch-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Vzduch – voda</a>
-              <a href="/katalog/zeme-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Země – voda</a>
-              <a href="/katalog/voda-voda" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Voda – voda</a>
-            </div>
-          </div>
-
-          <!-- Cena -->
-          <div class="border-b border-gray-100" data-mobile-accordion>
-            <div class="flex items-center justify-between" data-mobile-trigger>
-              <a href="/cena" class="flex-1 px-3 py-3 text-sm font-semibold text-charcoal-800 hover:text-brand-500">Cena</a>
-              <button class="px-3 py-3" aria-label="Rozbalit podstránky">
-                <svg class="w-4 h-4 text-gray-400 transition-transform duration-200" data-mobile-chevron fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-            </div>
-            <div class="hidden pb-2 pl-3" data-mobile-panel>
-              <a href="/cenova-kalkulace" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Cenová kalkulace</a>
-              <a href="/porovnani-nakladu" class="block px-3 py-2 text-sm text-charcoal-600 hover:text-brand-500 hover:bg-gray-50 rounded-md">Porovnání nákladů</a>
-            </div>
-          </div>
+          ))}
 
           <!-- Přímé odkazy -->
-          <a href="/reference" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Reference</a>
-          <a href="/dotace" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Dotace</a>
-          <a href="/o-nas" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">O nás</a>
-          <a href="/kontakty" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">Kontakty</a>
+          <a href="/reference" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">{site.nav_reference}</a>
+          <a href="/dotace" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">{site.nav_dotace}</a>
+          <a href="/o-nas" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">{site.nav_o_nas}</a>
+          <a href="/kontakty" class="block px-3 py-3 text-sm font-semibold text-charcoal-800 border-b border-gray-100 hover:text-brand-500">{site.nav_kontakty}</a>
 
           <!-- CTA -->
           <div class="pt-4 pb-2">
             <a href="/poptavka" class="block w-full text-center px-4 py-3 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-colors">
-              Nezávazná poptávka
+              {site.nav_poptavka_mobile}
             </a>
           </div>
         </nav>
@@ -265,10 +154,10 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
 
           <div class="lg:col-span-1">
             <div class="mb-5">
-              <img src="/logo-white.png" alt="Úsporné vytápění s.r.o." class="h-10 w-auto brightness-0 invert" />
+              <img src="/logo-white.png" alt={site.name} class="h-10 w-auto brightness-0 invert" />
             </div>
             <p class="text-sm text-navy-300 leading-relaxed mb-6">
-              Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2008.
+              {site.footer_desc}
             </p>
             <div class="space-y-2 text-sm text-navy-300">
               <div class="flex items-center gap-2">
@@ -281,50 +170,42 @@ const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhu
                 <svg class="w-4 h-4 text-brand-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
-                <a href="mailto:info@uspornevytapeni.cz" class="hover:text-white transition-colors">info@uspornevytapeni.cz</a>
+                <a href={`mailto:${site.email}`} class="hover:text-white transition-colors">{site.email}</a>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Návrh řešení</h4>
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">{site.footer_col1_title}</h4>
             <ul class="space-y-2 text-sm text-navy-300">
-              <li><a href="/navrh-reseni/novostavba" class="hover:text-white transition-colors">Novostavba</a></li>
-              <li><a href="/navrh-reseni/stavajici-dum" class="hover:text-white transition-colors">Stávající dům</a></li>
-              <li><a href="/navrh-reseni/velky-vykon" class="hover:text-white transition-colors">Velký výkon</a></li>
-              <li><a href="/tepelna-cerpadla/vzduch-voda" class="hover:text-white transition-colors">Vzduch – voda</a></li>
-              <li><a href="/tepelna-cerpadla/zeme-voda" class="hover:text-white transition-colors">Země – voda</a></li>
-              <li><a href="/tepelna-cerpadla/voda-voda" class="hover:text-white transition-colors">Voda – voda</a></li>
+              {site.footer_col1_items.map(item => (
+                <li><a href={item.href} class="hover:text-white transition-colors">{item.label}</a></li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Informace</h4>
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">{site.footer_col2_title}</h4>
             <ul class="space-y-2 text-sm text-navy-300">
-              <li><a href="/cena" class="hover:text-white transition-colors">Cena tepelného čerpadla</a></li>
-              <li><a href="/cenova-kalkulace" class="hover:text-white transition-colors">Cenová kalkulace</a></li>
-              <li><a href="/dotace" class="hover:text-white transition-colors">Dotace</a></li>
-              <li><a href="/porovnani-nakladu" class="hover:text-white transition-colors">Porovnání nákladů</a></li>
-              <li><a href="/reference" class="hover:text-white transition-colors">Reference</a></li>
-              <li><a href="/katalog/vzduch-voda" class="hover:text-white transition-colors">Katalog vzduch–voda</a></li>
-              <li><a href="/katalog/zeme-voda" class="hover:text-white transition-colors">Katalog země–voda</a></li>
-              <li><a href="/katalog/voda-voda" class="hover:text-white transition-colors">Katalog voda–voda</a></li>
+              {site.footer_col2_items.map(item => (
+                <li><a href={item.href} class="hover:text-white transition-colors">{item.label}</a></li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Firma</h4>
+            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">{site.footer_col3_title}</h4>
             <ul class="space-y-2 text-sm text-navy-300">
-              <li><a href="/o-nas" class="hover:text-white transition-colors">O nás</a></li>
-              <li><a href="/kontakty" class="hover:text-white transition-colors">Kontakty</a></li>
-              <li><a href="/poptavka" class="hover:text-white transition-colors">Poptávka</a></li>
+              {site.footer_col3_items.map(item => (
+                <li><a href={item.href} class="hover:text-white transition-colors">{item.label}</a></li>
+              ))}
             </ul>
           </div>
         </div>
 
         <div class="mt-12 pt-8 border-t border-navy-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-navy-400">
-          <p>© 2025 Úsporné vytápění s.r.o. Všechna práva vyhrazena.</p>
-          <p>Vyrobeno v České republice</p>
+          <p>{site.footer_copyright}</p>
+          <p>{site.footer_made_in}</p>
         </div>
       </div>
     </footer>

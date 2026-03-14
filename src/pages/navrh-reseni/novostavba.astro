@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/novostavba.json';
 ---
 
-<Layout title="Úsporné vytápění novostavby" description="Navrhujeme optimální systém vytápění pro novostavby. Tepelné čerpadlo, podlahové vytápění, chlazení — vše v jednom projektu na míru.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
@@ -85,22 +85,12 @@ import data from '../../data/novostavba.json';
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6 text-center">{data.related_headline}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/navrh-reseni/podlahove-topeni" class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
-          <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Podlahové topení</h3>
-          <p class="text-sm text-charcoal-500">Jak instalujeme podlahové topení. 6 kroků, 25 let záruka.</p>
-        </a>
-        <a href="/navrh-reseni/radiatory" class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
-          <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Radiátory</h3>
-          <p class="text-sm text-charcoal-500">Správné dimenzování radiátorů pro nízkoteplotní systém.</p>
-        </a>
-        <a href="/navrh-reseni/chlazeni" class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
-          <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Chlazení</h3>
-          <p class="text-sm text-charcoal-500">Podlahové chlazení nebo fancoily — komfort v létě.</p>
-        </a>
-        <a href="/navrh-reseni/kombinace-topnych-okruhu" class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
-          <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">Kombinace okruhů</h3>
-          <p class="text-sm text-charcoal-500">Kombinace podlahového topení, radiátorů, chlazení a dalších zdrojů.</p>
-        </a>
+        {data.related_items.map(item => (
+          <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
+            <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
+            <p class="text-sm text-charcoal-500">{item.desc}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>

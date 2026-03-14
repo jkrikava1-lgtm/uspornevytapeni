@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/dvoukompresorova.json';
 ---
 
-<Layout title="Dvoukompresorová tepelná čerpadla" description="Dvoukompresorová tepelná čerpadla — prakticky dvě tepelná čerpadla v jedné konstrukci. Kaskádovité spínání, úspora prostoru.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

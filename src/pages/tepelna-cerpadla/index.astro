@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/tepelna-cerpadla-index.json';
 ---
 
-<Layout title="Tepelná čerpadla" description="Tepelná čerpadla Master Therm — vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění, servis od výrobce.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

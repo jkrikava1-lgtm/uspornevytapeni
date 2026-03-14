@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/fotovoltaika.json';
 ---
 
-<Layout title="Tepelné čerpadlo a fotovoltaika" description="Kombinace tepelného čerpadla s fotovoltaikou — jak funguje, jak moc ušetříte a proč je to nejlepší investice do vašeho domu.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

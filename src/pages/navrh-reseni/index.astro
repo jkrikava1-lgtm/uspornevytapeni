@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/navrh-reseni-index.json';
 ---
 
-<Layout title="Návrh řešení vytápění" description="Najděte optimální řešení vytápění pro váš dům. Novostavby, rekonstrukce, podlahové topení, chlazení i kaskádové systémy.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

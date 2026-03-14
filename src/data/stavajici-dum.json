@@ -1,4 +1,6 @@
 {
+  "meta_title": "Úsporné vytápění stávajícího domu",
+  "meta_description": "Výměna kotle za tepelné čerpadlo v rodinném domě. Jak to funguje, co to obnáší a kolik ušetříte.",
   "hero_title": "Úsporné vytápění stávajícího domu",
   "hero_subtitle": "Jak změnit nekomfortní a drahé vytápění? Bude stávající systém snadno adaptovatelný? Můžu změnit i ohřev vody? Budu opravdu šetřit?",
   "intro_label": "Jak vám pomůžeme",
@@ -33,5 +35,10 @@
   "cta_headline": "Zjistěte, kolik ušetříte",
   "cta_text": "Připravíme konkrétní výpočet úspory pro váš dům zdarma.",
   "cta_button": "Chci výpočet zdarma",
-  "related_headline": "Více o úpravě topného systému"
+  "related_headline": "Více o úpravě topného systému",
+  "related_items": [
+    { "href": "/navrh-reseni/podlahove-topeni-starsi-dum", "title": "Podlahové topení ve starším domě", "desc": "Jak instalujeme podlahové topení při rekonstrukci." },
+    { "href": "/navrh-reseni/velikost-radiatoru", "title": "Úprava radiátorů", "desc": "Jak upravit starší radiátorový systém pro tepelné čerpadlo." },
+    { "href": "/navrh-reseni/doinstalace-chlazeni", "title": "Doinstalace chlazení", "desc": "Jak jednoduše doinstalovat chlazení do stávajícího domu." }
+  ]
 }

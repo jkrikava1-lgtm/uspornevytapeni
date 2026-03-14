@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/cena.json';
 ---
 
-<Layout title="Cena tepelného čerpadla" description="Kolik stojí tepelné čerpadlo? Orientační ceny včetně instalace, faktory ovlivňující cenu a návratnost investice.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

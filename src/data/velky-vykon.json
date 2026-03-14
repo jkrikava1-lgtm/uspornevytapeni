@@ -1,4 +1,6 @@
 {
+  "meta_title": "Tepelné čerpadlo velkého výkonu",
+  "meta_description": "Kaskádové systémy tepelných čerpadel pro bytové domy, komerční objekty a průmysl. Výkon 20–200 kW a více.",
   "hero_title": "Chci tepelné čerpadlo s velkým výkonem",
   "hero_subtitle": "Čím větší objekt, tím větší náklady na vytápění a větší úspora po instalaci tepelného čerpadla. Návratnost investice 3–7 let.",
   "intro_label": "Proč to stojí za to",
@@ -35,5 +37,10 @@
   "cta_text": "Kontaktujte nás — připravíme technickou studii a ekonomický výpočet zdarma.",
   "cta_button1": "Odeslat poptávku",
   "cta_button2": "+420 777 724 573",
-  "related_headline": "Typy velkých tepelných čerpadel"
+  "related_headline": "Typy velkých tepelných čerpadel",
+  "related_items": [
+    { "href": "/navrh-reseni/jednokompresorova", "title": "Jednokompresorová TČ", "desc": "Výkonné jednotky až 45 kW v jednokompresorovém provedení." },
+    { "href": "/navrh-reseni/dvoukompresorova", "title": "Dvoukompresorová TČ", "desc": "Prakticky dvě čerpadla v jednom — kaskádní provoz kompresorů." },
+    { "href": "/navrh-reseni/kaskady", "title": "Kaskády TČ", "desc": "Pro výkony nad 35 kW — prakticky bez omezení." }
+  ]
 }

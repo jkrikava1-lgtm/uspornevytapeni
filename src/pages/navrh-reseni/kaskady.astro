@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/kaskady.json';
 ---
 
-<Layout title="Kaskády tepelných čerpadel" description="Kaskádní zapojení tepelných čerpadel pro výkony větší než 35 kW. Řízení Master-Slave, vyrovnaný počet motohodin.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

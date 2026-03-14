@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/podlahove-topeni.json';
 ---
 
-<Layout title="Podlahové topení pro tepelné čerpadlo" description="Podlahové topení je ideální systém pro tepelná čerpadla. Nízkoteplotní provoz, záruka 25 let, instalace na klíč.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

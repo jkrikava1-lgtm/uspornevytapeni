@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/kombinace-topnych-okruhu.json';
 ---
 
-<Layout title="Kombinace topných okruhů" description="Topné a chladící okruhy lze kombinovat — podlahové topení s radiátory, chlazení s ohřevem bazénu. Každý okruh řídí elektronický regulátor.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

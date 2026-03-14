@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/radiatory.json';
 ---
 
-<Layout title="Radiátory pro tepelné čerpadlo" description="Radiátory pro tepelné čerpadlo — správné dimenzování pro nízkoteplotní provoz. Výpočet výkonu zdarma.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

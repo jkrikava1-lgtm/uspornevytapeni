@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/doinstalace-chlazeni.json';
 ---
 
-<Layout title="Jak doinstalovat chlazení" description="Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

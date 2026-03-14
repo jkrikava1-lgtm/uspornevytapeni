@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/dotace.json';
 ---
 
-<Layout title="Dotace na tepelné čerpadlo" description="Dotace na tepelná čerpadla — Nová zelená úsporám 2026. Bezúročné úvěry, NZÚ Light, harmonogram, podporovaná opatření. Pomůžeme vám celý proces zvládnout.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/o-nas.json';
 ---
 
-<Layout title="O nás" description="Jsme specialisté na tepelná čerpadla a úsporné vytápění. Pracujeme od roku 2008, máme za sebou stovky instalací po celé ČR.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

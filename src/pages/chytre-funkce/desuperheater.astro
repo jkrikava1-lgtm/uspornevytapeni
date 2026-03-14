@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/desuperheater.json';
 ---
 
-<Layout title="Desuperheater — ohřev teplé vody" description="Desuperheater využívá odpadní teplo kompresoru k ohřevu teplé užitkové vody. Výsledek: TUV zdarma v létě a výrazná úspora celoročně.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

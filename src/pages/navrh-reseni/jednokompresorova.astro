@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/jednokompresorova.json';
 ---
 
-<Layout title="Velká jednokompresorová tepelná čerpadla" description="Jednokompresorová tepelná čerpadla s výkonem až 45 kW. Vzduch-voda, země-voda i voda-voda. Nižší cena, levnější instalace.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

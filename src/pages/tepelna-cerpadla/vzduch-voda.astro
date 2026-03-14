@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/vzduch-voda.json';
 ---
 
-<Layout title="Tepelná čerpadla vzduch-voda" description="Tepelná čerpadla vzduch-voda Master Therm. Dvě varianty — venkovní kompakt nebo split. Rychlá montáž 2–3 dny, ověřené řešení pro české klima.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/podlahove-topeni-starsi-dum.json';
 ---
 
-<Layout title="Podlahové topení ve starším domě" description="Podlahové topení ve starším domě — jak doinstalovat podlahovku při rekonstrukci. Postup krok za krokem.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

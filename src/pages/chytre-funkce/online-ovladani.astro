@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/online-ovladani.json';
 ---
 
-<Layout title="Online ovládání tepelného čerpadla" description="Ovládejte tepelné čerpadlo přes internet z mobilu nebo počítače. Vzdálený přístup, monitoring spotřeby, nastavení programu odkudkoliv.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

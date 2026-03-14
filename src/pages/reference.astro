@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import ref from '../data/reference.json';
 ---
 
-<Layout title="Reference" description="Realizované instalace tepelných čerpadel po celé ČR. Rodinné domy, bytové domy, komerční objekty.">
+<Layout title={data.meta_title} description={data.meta_description}>
   <PageHero
     title={ref.hero_title}
     subtitle={ref.hero_subtitle}
