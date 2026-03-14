@@ -36,7 +36,7 @@ import data from '../../data/navrh-reseni-index.json';
 
       <!-- Topný systém -->
       <h2 class="text-xl font-extrabold text-charcoal-900 mb-5">{data.section_topny_system}</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-14">
         {data.topny_system_links.map(item => (
           <a href={item.href} class="group bg-gray-50 rounded-lg p-5 border border-gray-200 hover:border-brand-300 hover:bg-white hover:shadow transition-all">
             <h3 class="font-bold text-charcoal-900 text-sm mb-1.5 group-hover:text-brand-500 transition-colors">{item.title}</h3>
