@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import ref from '../data/reference.json';
-const galleryData = JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })));
 ---
 
 <Layout title={ref.meta_title} description={ref.meta_description}>
@@ -32,8 +31,12 @@ const galleryData = JSON.stringify(ref.references.map(r => ({ lokalita: r.lokali
 
       <!-- Reference grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {ref.references.map((item, idx) => (
-          <div class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer" data-gallery-trigger={idx}>
+        {ref.references.map((item) => (
+          <div
+            class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer js-gallery-card"
+            data-title={`${item.lokalita} — ${item.system}`}
+            data-gallery={JSON.stringify(item.gallery)}
+          >
             <div class="relative">
               <img src={item.image} alt={`Instalace ${item.system} — ${item.lokalita}`} class="h-56 w-full object-cover" loading="lazy" />
               <div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md flex items-center gap-1">
@@ -87,108 +90,91 @@ const galleryData = JSON.stringify(ref.references.map(r => ({ lokalita: r.lokali
     </div>
   </section>
 
-  <!-- Lightbox -->
-  <div id="lightbox-data" data-references={galleryData} class="hidden"></div>
-  <div id="lightbox" class="fixed inset-0 z-50 hidden">
-    <div class="absolute inset-0 bg-black/90" id="lightbox-backdrop"></div>
-    <div class="relative z-10 flex flex-col h-full">
-      <!-- Header -->
-      <div class="flex items-center justify-between px-4 py-3 text-white">
-        <div>
-          <span id="lb-title" class="font-bold text-sm"></span>
-          <span id="lb-counter" class="text-white/60 text-sm ml-2"></span>
-        </div>
-        <button id="lb-close" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+  <!-- Lightbox overlay -->
+  <div id="lb" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92);">
+    <div style="position:absolute; top:0; left:0; right:0; display:flex; align-items:center; justify-content:space-between; padding:12px 16px; color:#fff;">
+      <div>
+        <span id="lb-title" style="font-weight:700; font-size:14px;"></span>
+        <span id="lb-counter" style="opacity:0.6; font-size:14px; margin-left:8px;"></span>
       </div>
-      <!-- Image -->
-      <div class="flex-1 flex items-center justify-center px-12 pb-4 relative">
-        <button id="lb-prev" class="absolute left-2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <img id="lb-image" src="" alt="" class="max-h-full max-w-full object-contain rounded-lg" />
-        <button id="lb-next" class="absolute right-2 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-      <!-- Thumbnails -->
-      <div class="px-4 pb-4">
-        <div id="lb-thumbs" class="flex gap-2 justify-center overflow-x-auto py-2"></div>
-      </div>
+      <button id="lb-close" style="background:none; border:none; color:#fff; font-size:28px; cursor:pointer; padding:4px 8px;">&times;</button>
     </div>
+    <div style="position:absolute; top:50px; bottom:90px; left:0; right:0; display:flex; align-items:center; justify-content:center;">
+      <button id="lb-prev" style="position:absolute; left:8px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; cursor:pointer; width:44px; height:44px; border-radius:50%;">&#8249;</button>
+      <img id="lb-img" src="" alt="" style="max-height:100%; max-width:calc(100% - 100px); object-fit:contain; border-radius:8px;" />
+      <button id="lb-next" style="position:absolute; right:8px; background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:24px; cursor:pointer; width:44px; height:44px; border-radius:50%;">&#8250;</button>
+    </div>
+    <div id="lb-thumbs" style="position:absolute; bottom:0; left:0; right:0; display:flex; gap:6px; justify-content:center; padding:12px; overflow-x:auto;"></div>
   </div>
 
   <script is:inline>
     (function() {
-      var references = JSON.parse(document.getElementById('lightbox-data').dataset.references);
-      var lightbox = document.getElementById('lightbox');
-      var lbImage = document.getElementById('lb-image');
-      var lbTitle = document.getElementById('lb-title');
-      var lbCounter = document.getElementById('lb-counter');
-      var lbThumbs = document.getElementById('lb-thumbs');
-      var currentGallery = [];
-      var currentIndex = 0;
+      var lb = document.getElementById('lb');
+      var img = document.getElementById('lb-img');
+      var title = document.getElementById('lb-title');
+      var counter = document.getElementById('lb-counter');
+      var thumbs = document.getElementById('lb-thumbs');
+      var gallery = [];
+      var idx = 0;
 
-      function openLightbox(refIdx, imgIdx) {
-        imgIdx = imgIdx || 0;
-        var r = references[refIdx];
-        currentGallery = r.gallery;
-        lbTitle.textContent = r.lokalita + ' \u2014 ' + r.system;
-        showImage(imgIdx);
-        lightbox.classList.remove('hidden');
+      function show(i) {
+        idx = i;
+        img.src = gallery[i];
+        counter.textContent = (i + 1) + ' / ' + gallery.length;
+        var ts = thumbs.querySelectorAll('img');
+        for (var j = 0; j < ts.length; j++) {
+          ts[j].style.opacity = j === i ? '1' : '0.4';
+          ts[j].style.borderColor = j === i ? '#fff' : 'transparent';
+        }
+      }
+
+      function open(card) {
+        gallery = JSON.parse(card.dataset.gallery);
+        title.textContent = card.dataset.title;
+        thumbs.innerHTML = '';
+        for (var i = 0; i < gallery.length; i++) {
+          var t = document.createElement('img');
+          t.src = gallery[i];
+          t.style.cssText = 'width:60px;height:44px;object-fit:cover;border-radius:4px;cursor:pointer;border:2px solid transparent;';
+          t.dataset.i = i;
+          t.addEventListener('click', function(e) {
+            e.stopPropagation();
+            show(parseInt(this.dataset.i));
+          });
+          thumbs.appendChild(t);
+        }
+        show(0);
+        lb.style.display = 'block';
         document.body.style.overflow = 'hidden';
-        lbThumbs.innerHTML = '';
-        currentGallery.forEach(function(src, i) {
-          var thumb = document.createElement('img');
-          thumb.src = src;
-          thumb.alt = '';
-          thumb.className = 'w-16 h-12 object-cover rounded cursor-pointer border-2 transition-all ' +
-            (i === imgIdx ? 'border-white opacity-100' : 'border-transparent opacity-50 hover:opacity-80');
-          thumb.addEventListener('click', function() { showImage(i); });
-          lbThumbs.appendChild(thumb);
-        });
       }
 
-      function showImage(idx) {
-        currentIndex = idx;
-        lbImage.src = currentGallery[idx];
-        lbCounter.textContent = (idx + 1) + ' / ' + currentGallery.length;
-        var thumbs = lbThumbs.querySelectorAll('img');
-        thumbs.forEach(function(t, i) {
-          if (i === idx) {
-            t.className = t.className.replace('border-transparent opacity-50 hover:opacity-80', 'border-white opacity-100');
-          } else {
-            t.className = t.className.replace('border-white opacity-100', 'border-transparent opacity-50 hover:opacity-80');
-          }
-        });
-      }
-
-      function closeLightbox() {
-        lightbox.classList.add('hidden');
+      function close() {
+        lb.style.display = 'none';
         document.body.style.overflow = '';
       }
 
-      document.querySelectorAll('[data-gallery-trigger]').forEach(function(card) {
-        card.addEventListener('click', function() {
-          openLightbox(parseInt(card.dataset.galleryTrigger));
-        });
+      // Card clicks
+      var cards = document.querySelectorAll('.js-gallery-card');
+      for (var c = 0; c < cards.length; c++) {
+        cards[c].addEventListener('click', function() { open(this); });
+      }
+
+      // Navigation
+      document.getElementById('lb-close').addEventListener('click', function(e) { e.stopPropagation(); close(); });
+      document.getElementById('lb-prev').addEventListener('click', function(e) { e.stopPropagation(); show((idx - 1 + gallery.length) % gallery.length); });
+      document.getElementById('lb-next').addEventListener('click', function(e) { e.stopPropagation(); show((idx + 1) % gallery.length); });
+
+      // Close on background click
+      lb.addEventListener('click', function(e) {
+        if (e.target === lb) close();
       });
 
-      document.getElementById('lb-close').addEventListener('click', closeLightbox);
-      document.getElementById('lb-backdrop').addEventListener('click', closeLightbox);
-      document.getElementById('lb-prev').addEventListener('click', function() {
-        showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
-      });
-      document.getElementById('lb-next').addEventListener('click', function() {
-        showImage((currentIndex + 1) % currentGallery.length);
-      });
-
+      // Keyboard
       document.addEventListener('keydown', function(e) {
-        if (lightbox.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
-        if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentGallery.length);
+        if (lb.style.display === 'none') return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') show((idx - 1 + gallery.length) % gallery.length);
+        if (e.key === 'ArrowRight') show((idx + 1) % gallery.length);
       });
     })();
   </script>
