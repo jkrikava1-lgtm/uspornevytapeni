@@ -117,21 +117,21 @@ import ref from '../data/reference.json';
     </div>
   </div>
 
-  <script is:inline set:html={`
-    const references = ${JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })))};
-    const lightbox = document.getElementById('lightbox');
-    const lbImage = document.getElementById('lb-image');
-    const lbTitle = document.getElementById('lb-title');
-    const lbCounter = document.getElementById('lb-counter');
-    const lbThumbs = document.getElementById('lb-thumbs');
-    let currentGallery = [];
-    let currentIndex = 0;
+  <Fragment set:html={`<script>
+    var references = ${JSON.stringify(ref.references.map(r => ({ lokalita: r.lokalita, system: r.system, gallery: r.gallery })))};
+    var lightbox = document.getElementById('lightbox');
+    var lbImage = document.getElementById('lb-image');
+    var lbTitle = document.getElementById('lb-title');
+    var lbCounter = document.getElementById('lb-counter');
+    var lbThumbs = document.getElementById('lb-thumbs');
+    var currentGallery = [];
+    var currentIndex = 0;
 
     function openLightbox(refIdx, imgIdx) {
       imgIdx = imgIdx || 0;
-      var ref = references[refIdx];
-      currentGallery = ref.gallery;
-      lbTitle.textContent = ref.lokalita + ' \\u2014 ' + ref.system;
+      var r = references[refIdx];
+      currentGallery = r.gallery;
+      lbTitle.textContent = r.lokalita + ' \\u2014 ' + r.system;
       showImage(imgIdx);
       lightbox.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
@@ -187,5 +187,5 @@ import ref from '../data/reference.json';
       if (e.key === 'ArrowLeft') showImage((currentIndex - 1 + currentGallery.length) % currentGallery.length);
       if (e.key === 'ArrowRight') showImage((currentIndex + 1) % currentGallery.length);
     });
-  `} />
+  <\\/script>`} />
 </Layout>
