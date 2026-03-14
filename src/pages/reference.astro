@@ -49,6 +49,28 @@ import ref from '../data/reference.json';
     </div>
   </section>
 
+  <!-- Mapa realizací -->
+  <section class="pb-16 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{ref.map_headline}</h2>
+        <p class="text-charcoal-500">{ref.map_subtitle}</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1IsvhYr_QxHViLa4fSGC-nyo_iN4&hl=cs&ll=50.1575730464532%2C15.42214604453126&z=8"
+          width="100%"
+          height="520"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa realizací tepelných čerpadel"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{ref.cta_headline}</h2>
