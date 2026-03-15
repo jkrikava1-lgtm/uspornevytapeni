@@ -59,23 +59,29 @@ import ref from '../data/reference.json';
   </section>
 
   <!-- Mapa realizací -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
   <section class="pb-16 lg:pb-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
+      <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{ref.map_headline}</h2>
         <p class="text-charcoal-500">{ref.map_subtitle}</p>
       </div>
       <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
-        <iframe
-          src="https://www.google.com/maps/d/embed?mid=1IsvhYr_QxHViLa4fSGC-nyo_iN4&hl=cs&ll=50.1575730464532%2C15.42214604453126&z=8"
-          width="100%"
-          height="520"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Mapa realizací tepelných čerpadel"
-        ></iframe>
+        <div style="background:#1B3A5C;color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+          <div style="font-size:0.82rem;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+            <strong>Typ čerpadla:</strong>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#2a7d3f;border:2px solid white;display:inline-block;"></span>vzduch–voda (405)</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#a0521e;border:2px solid white;display:inline-block;"></span>země–voda (28)</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#1464a0;border:2px solid white;display:inline-block;"></span>voda–voda (6)</span>
+          </div>
+          <div style="display:flex;gap:16px;text-align:right;">
+            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">439</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">instalací</div></div>
+            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">279</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">obcí</div></div>
+          </div>
+        </div>
+        <div id="ref-map" style="height:520px;width:100%;"></div>
       </div>
     </div>
   </section>
@@ -89,6 +95,52 @@ import ref from '../data/reference.json';
       </a>
     </div>
   </section>
+
+  <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script is:inline>
+    (function() {
+      fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
+        var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false });
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '\u00a9 OpenStreetMap \u00a9 CartoDB', maxZoom: 19
+        }).addTo(map);
+        var cluster = L.markerClusterGroup({
+          maxClusterRadius: 45,
+          iconCreateFunction: function(c) {
+            var n = c.getChildCount(), s = n<5?32:n<20?40:50;
+            return L.divIcon({
+              html: '<div style="background:#1B3A5C;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.3);width:'+s+'px;height:'+s+'px;font-size:'+(n<10?13:11)+'px">'+n+'</div>',
+              className: '', iconSize: [s,s], iconAnchor: [s/2,s/2]
+            });
+          }
+        });
+        function clr(d) {
+          var m = Math.max(d.vzduch, d.zeme, d.voda);
+          return d.vzduch===m ? '#2a7d3f' : d.zeme===m ? '#a0521e' : '#1464a0';
+        }
+        function pop(d) {
+          var b = [];
+          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d4edda;color:#1a5e2a">vzduch\u2013voda: '+d.vzduch+'\u00d7</span>');
+          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#f3e0cc;color:#7b3e0e">zem\u011b\u2013voda: '+d.zeme+'\u00d7</span>');
+          if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda\u2013voda: '+d.voda+'\u00d7</span>');
+          return '<div style="font-weight:700;font-size:1rem;color:#1a2e12;margin-bottom:6px">'+d.city+'</div>'+
+            '<div style="font-size:0.82rem;color:#555;margin:2px 0">\ud83d\udce6 Instalac\u00ed: <strong>'+d.count+'</strong></div>'+
+            '<div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px">'+b.join('')+'</div>';
+        }
+        CITIES.forEach(function(d) {
+          var r = d.count===1?7:d.count<=3?9:d.count<=7?12:16;
+          var m = L.circleMarker([d.lat, d.lng], {
+            radius:r, fillColor:clr(d), color:'white', weight:2, opacity:1, fillOpacity:0.87
+          });
+          m.bindPopup(pop(d), {maxWidth:270});
+          cluster.addLayer(m);
+        });
+        map.addLayer(cluster);
+        map.on('click', function() { map.scrollWheelZoom.enable(); });
+      });
+    })();
+  </script>
 
   <!-- Lightbox overlay -->
   <div id="lb" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92);">
