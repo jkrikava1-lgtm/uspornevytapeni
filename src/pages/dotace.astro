@@ -130,8 +130,27 @@ import data from '../data/dotace.json';
     </div>
   </section>
 
-  <!-- Renovační pas -->
+  <!-- Další podporovaná opatření -->
   <section class="py-10 lg:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.dalsi_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-6">{data.dalsi_intro}</p>
+
+      <div class="bg-white border border-gray-200 rounded-xl p-5">
+        <div class="space-y-0">
+          {data.dalsi_body.map(item => (
+            <div class="flex justify-between py-2.5 border-b border-gray-100 last:border-0 gap-4">
+              <span class="text-sm text-charcoal-600">{item.label}</span>
+              <span class="text-sm font-bold text-navy-700 flex-shrink-0">{item.value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Renovační pas -->
+  <section class="bg-gray-50 py-10 lg:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.renovacni_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-5">{data.renovacni_intro}</p>
