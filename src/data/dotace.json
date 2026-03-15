@@ -37,9 +37,7 @@
   "zranitelne_subtitle": "senio\u0159i, invalidn\u00ed d\u016fchod 3. stupn\u011b, p\u0159\u00edsp\u011bvek na bydlen\u00ed",
   "zranitelne_desc": "N\u00edzkopr\u00edjmov\u00e9 dom\u00e1cnosti maj\u00ed st\u00e1le n\u00e1rok na <strong>p\u0159\u00edmou dotaci</strong>. Podm\u00ednkou je vlastnictv\u00ed max. 2 nemovitost\u00ed ur\u010den\u00fdch k bydlen\u00ed a budova kolaudovan\u00e1 do 1. 7. 2013.",
   "zranitelne_body": [
-    { "label": "Tepeln\u00e1 \u010derpadla", "value": "a\u017e 150 000 K\u010d" },
-    { "label": "Kotle na biomasu", "value": "a\u017e 110 000 K\u010d" },
-    { "label": "Zateplen\u00ed", "value": "a\u017e 250 000 K\u010d" },
+    { "label": "Dotace na tepeln\u00e9 \u010derpadlo", "value": "a\u017e 150 000 K\u010d" },
     { "label": "Renova\u010dn\u00ed pas zdarma", "value": "a\u017e 50 000 K\u010d" },
     { "label": "\u010cerp\u00e1n\u00ed", "value": "mo\u017en\u00e9 z\u00e1lohov\u011b (p\u0159edem)" }
   ],
@@ -53,16 +51,6 @@
     { "label": "Bonus za kombinaci T\u010c + fotovoltaika", "value": "30 000 K\u010d" }
   ],
   "tc_note": "Podm\u00ednkou je certifikovan\u00e9 za\u0159\u00edzen\u00ed na Seznamu v\u00fdrobk\u016f a technologi\u00ed (SVT) \u2014 v\u0161e, co dod\u00e1v\u00e1me, spl\u0148uje. \u017d\u00e1dost se pod\u00e1v\u00e1 elektronicky p\u0159es port\u00e1l zadosti.sfzp.cz.",
-
-  "dalsi_headline": "Dal\u0161\u00ed podporovan\u00e1 opat\u0159en\u00ed",
-  "dalsi_intro": "Krom\u011b tepeln\u00fdch \u010derpadel program podporuje i dal\u0161\u00ed energetick\u00e1 opat\u0159en\u00ed:",
-  "dalsi_body": [
-    { "label": "Fotovoltaick\u00e9 syst\u00e9my", "value": "40 000\u2013140 000 K\u010d" },
-    { "label": "Oh\u0159ev tepl\u00e9 vody (sol\u00e1rn\u00ed / T\u010c)", "value": "35 000\u201360 000 K\u010d" },
-    { "label": "V\u011btr\u00e1n\u00ed s rekuperac\u00ed", "value": "90 000 K\u010d" },
-    { "label": "Zelen\u00e1 st\u0159echa", "value": "a\u017e 100 000 K\u010d" },
-    { "label": "Hospoda\u0159en\u00ed s de\u0161\u0165ovou vodou", "value": "26 000\u2013100 000 K\u010d" }
-  ],
 
   "renovacni_headline": "Energetick\u00e9 poradenstv\u00ed a Renova\u010dn\u00ed pas",
   "renovacni_intro": "Pro z\u00edsk\u00e1n\u00ed bez\u00faro\u010dn\u00e9ho \u00fav\u011bru bude vy\u017eadov\u00e1n Renova\u010dn\u00ed pas.",
