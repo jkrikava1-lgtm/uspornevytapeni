@@ -179,10 +179,5 @@
       "label": "Porovnání nákladů"
     }
   ],
-  "nav_cena_mobile_extra": [
-    {
-      "href": "/porovnani-nakladu",
-      "label": "Porovnání nákladů"
-    }
-  ]
+  "nav_cena_mobile_extra": []
 }
