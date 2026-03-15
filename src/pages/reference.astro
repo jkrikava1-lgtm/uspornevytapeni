@@ -102,7 +102,7 @@ import ref from '../data/reference.json';
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
         var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false });
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           attribution: '\u00a9 OpenStreetMap \u00a9 CartoDB', maxZoom: 19
         }).addTo(map);
         var cluster = L.markerClusterGroup({
