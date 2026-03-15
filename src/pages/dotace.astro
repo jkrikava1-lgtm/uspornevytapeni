@@ -12,9 +12,9 @@ import data from '../data/dotace.json';
   />
 
   <!-- Intro -->
-  <section class="pt-10 pb-12 lg:pt-12 lg:pb-16">
+  <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="mb-8">
+      <div class="mb-6">
         <a href="https://novazelenausporam.cz/" target="_blank" rel="noopener noreferrer">
           <img src="/images/nzu-logo.png" alt="Nová zelená úsporám" class="h-10 w-auto" />
         </a>
@@ -24,21 +24,21 @@ import data from '../data/dotace.json';
   </section>
 
   <!-- Harmonogram -->
-  <section class="bg-gray-50 py-14 lg:py-20">
+  <section class="bg-gray-50 py-10 lg:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.harmonogram_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-8">{data.harmonogram_intro}</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.harmonogram_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
 
       <div class="space-y-0">
         {data.harmonogram.map((item, i) => (
-          <div class="flex gap-5 items-start relative">
+          <div class="flex gap-4 items-start relative">
             <div class="flex flex-col items-center">
-              <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 z-10">{i + 1}</div>
-              {i < data.harmonogram.length - 1 && <div class="w-0.5 bg-navy-200 flex-1 min-h-8"></div>}
+              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 z-10">{i + 1}</div>
+              {i < data.harmonogram.length - 1 && <div class="w-0.5 bg-navy-200 flex-1 min-h-6"></div>}
             </div>
-            <div class="pb-8">
+            <div class="pb-5">
               <div class="font-bold text-charcoal-900 text-sm">{item.datum}</div>
-              <p class="text-charcoal-600 text-sm mt-1 leading-relaxed">{item.popis}</p>
+              <p class="text-charcoal-600 text-sm mt-0.5 leading-relaxed">{item.popis}</p>
             </div>
           </div>
         ))}
@@ -47,58 +47,58 @@ import data from '../data/dotace.json';
   </section>
 
   <!-- Hlavní změna: Dotace vs Úvěry -->
-  <section class="py-14 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.zmena_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-10">{data.zmena_intro}</p>
+  <section class="py-10 lg:py-14">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         <!-- Běžné domácnosti -->
-        <div class="bg-white border border-gray-200 rounded-2xl p-8">
+        <div class="bg-white border border-gray-200 rounded-xl p-6">
           <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-9 h-9 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
               </svg>
             </div>
             <div>
-              <h3 class="font-extrabold text-charcoal-900 text-lg">{data.bezne_title}</h3>
+              <h3 class="font-extrabold text-charcoal-900">{data.bezne_title}</h3>
               <p class="text-charcoal-400 text-xs">{data.bezne_subtitle}</p>
             </div>
           </div>
 
-          <div class="space-y-4 mt-6">
+          <div class="space-y-3 mt-4">
             <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_desc} />
             <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_jak} />
-            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+            <div class="bg-green-50 border border-green-200 rounded-lg p-3">
               <p class="text-green-800 text-sm" set:html={data.bezne_vyhoda} />
             </div>
-            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-3">
               <p class="text-amber-800 text-sm" set:html={data.bezne_nevyhoda} />
             </div>
           </div>
         </div>
 
         <!-- Zranitelné domácnosti -->
-        <div class="bg-navy-700 text-white rounded-2xl p-8">
+        <div class="bg-navy-700 text-white rounded-xl p-6">
           <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-9 h-9 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
               </svg>
             </div>
             <div>
-              <h3 class="font-extrabold text-lg">{data.zranitelne_title}</h3>
+              <h3 class="font-extrabold">{data.zranitelne_title}</h3>
               <p class="text-navy-300 text-xs">{data.zranitelne_subtitle}</p>
             </div>
           </div>
 
-          <p class="text-navy-200 text-sm leading-relaxed mt-6 mb-6" set:html={data.zranitelne_desc} />
+          <p class="text-navy-200 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
 
-          <div class="space-y-3">
+          <div class="space-y-0">
             {data.zranitelne_body.map(item => (
-              <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
+              <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
                 <span class="text-sm text-navy-300">{item.label}</span>
                 <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
               </div>
@@ -110,15 +110,15 @@ import data from '../data/dotace.json';
   </section>
 
   <!-- Podpora tepelných čerpadel -->
-  <section class="bg-gray-50 py-14 lg:py-20">
+  <section class="bg-gray-50 py-10 lg:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.tc_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-8">{data.tc_intro}</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.tc_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-6">{data.tc_intro}</p>
 
-      <div class="bg-navy-700 rounded-2xl p-6 text-white mb-6">
-        <div class="space-y-3">
+      <div class="bg-navy-700 rounded-xl p-5 text-white mb-4">
+        <div class="space-y-0">
           {data.tc_body.map(item => (
-            <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
+            <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
               <span class="text-sm text-navy-300">{item.label}</span>
               <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
             </div>
@@ -131,14 +131,14 @@ import data from '../data/dotace.json';
   </section>
 
   <!-- Renovační pas -->
-  <section class="py-14 lg:py-20">
+  <section class="py-10 lg:py-14">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.renovacni_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-6">{data.renovacni_intro}</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.renovacni_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-5">{data.renovacni_intro}</p>
 
-      <div class="space-y-4">
+      <div class="space-y-3">
         {data.renovacni_body.map(item => (
-          <div class="flex gap-3 items-start">
+          <div class="flex gap-2.5 items-start">
             <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
               <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
@@ -149,8 +149,8 @@ import data from '../data/dotace.json';
         ))}
       </div>
 
-      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8">
-        <div class="flex gap-3">
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-6">
+        <div class="flex gap-2.5">
           <svg class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
@@ -161,10 +161,10 @@ import data from '../data/dotace.json';
   </section>
 
   <!-- CTA -->
-  <section class="bg-brand-500 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+  <section class="bg-brand-500 py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
       <div>
-        <h3 class="text-2xl font-extrabold text-white">{data.cta_headline}</h3>
+        <h3 class="text-xl font-extrabold text-white">{data.cta_headline}</h3>
         <p class="text-white/80 text-sm mt-1">{data.cta_text}</p>
       </div>
       <a href="/poptavka" class="flex-shrink-0 inline-flex items-center px-6 py-3 bg-white text-brand-600 font-semibold rounded-md hover:bg-brand-50 transition-colors text-sm">
