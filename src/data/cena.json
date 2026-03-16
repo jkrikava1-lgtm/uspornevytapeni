@@ -3,7 +3,11 @@
   "meta_description": "Kolik stojí tepelné čerpadlo? Orientační ceny včetně instalace, faktory ovlivňující cenu a návratnost investice.",
   "hero_title": "Cena tepelného čerpadla",
   "hero_subtitle": "Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat — přesnou nabídku připravíme zdarma.",
-  "price1_typ": "Vzduch – voda",
+  "intro_headline": "Cena syst\u00e9mu, ne jen \u010derpadla",
+  "intro_text": "Nemluvme o cen\u011b tepeln\u00e9ho \u010derpadla, ale o <strong>cen\u011b syst\u00e9mu s tepeln\u00fdm \u010derpadlem</strong>. Cena zahrnuje kompletn\u00ed realizaci \u201ena kl\u00ed\u010d\u201c \u2014 dod\u00e1vku, mont\u00e1\u017e, zapojen\u00ed, uveden\u00ed do provozu a za\u0161kolen\u00ed. Ka\u017ed\u00fd d\u016fm je jin\u00fd, proto cenu stanovujeme v\u017edy individu\u00e1ln\u011b.",
+  "intro_highlight": "Nejlep\u0161\u00ed pom\u011br cena/v\u00fdkon nab\u00edz\u00ed tepeln\u00e9 \u010derpadlo <strong>vzduch-voda</strong>. Po\u0159izovac\u00ed cena je nejni\u017e\u0161\u00ed ze v\u0161ech typ\u016f, d\u00edky dlouh\u00e9 topn\u00e9 sez\u00f3n\u011b v \u010cesku je provoz velmi ekonomick\u00fd a pr\u016fm\u011brn\u00fd topn\u00fd faktor (COP) se pohybuje kolem 3.",
+
+  "price1_typ": "Vzduch \u2013 voda",
   "price1_rozsah": "200 000 – 400 000 Kč",
   "price1_poznamka": "Včetně montáže, zásobníku TUV a uvedení do provozu",
   "price1_body1": "Nejnižší pořizovací náklady",
