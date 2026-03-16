@@ -72,8 +72,8 @@ import ref from '../data/reference.json';
         <div style="background:#1B3A5C;color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
           <div style="font-size:0.82rem;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
             <strong>Typ čerpadla:</strong>
-            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#2a7d3f;border:2px solid white;display:inline-block;"></span>vzduch–voda (405)</span>
-            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#a0521e;border:2px solid white;display:inline-block;"></span>země–voda (28)</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#C41E2A;border:2px solid white;display:inline-block;"></span>vzduch–voda (405)</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#27AE60;border:2px solid white;display:inline-block;"></span>země–voda (28)</span>
             <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#1464a0;border:2px solid white;display:inline-block;"></span>voda–voda (6)</span>
           </div>
           <div style="display:flex;gap:16px;text-align:right;">
@@ -117,12 +117,12 @@ import ref from '../data/reference.json';
         });
         function clr(d) {
           var m = Math.max(d.vzduch, d.zeme, d.voda);
-          return d.vzduch===m ? '#2a7d3f' : d.zeme===m ? '#a0521e' : '#1464a0';
+          return d.vzduch===m ? '#C41E2A' : d.zeme===m ? '#27AE60' : '#1464a0';
         }
         function pop(d) {
           var b = [];
-          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d4edda;color:#1a5e2a">vzduch\u2013voda: '+d.vzduch+'\u00d7</span>');
-          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#f3e0cc;color:#7b3e0e">zem\u011b\u2013voda: '+d.zeme+'\u00d7</span>');
+          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#fad7d3;color:#7b1a1a">vzduch\u2013voda: '+d.vzduch+'\u00d7</span>');
+          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d5f5e3;color:#1a6b3a">zem\u011b\u2013voda: '+d.zeme+'\u00d7</span>');
           if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda\u2013voda: '+d.voda+'\u00d7</span>');
           return '<div style="font-weight:700;font-size:1rem;color:#1a2e12;margin-bottom:6px">'+d.city+'</div>'+
             '<div style="font-size:0.82rem;color:#555;margin:2px 0">\ud83d\udce6 Instalac\u00ed: <strong>'+d.count+'</strong></div>'+
