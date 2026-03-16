@@ -20,6 +20,7 @@
   "quickNav": [
     { "label": "AquaMaster", "anchor": "#aquamaster" },
     { "label": "AquaMaster Inverter", "anchor": "#aquamaster-inverter" },
+    { "label": "AquaMaster Inverter P", "anchor": "#aquamaster-inverter-p" },
     { "label": "AquaMaster Inverter Combi", "anchor": "#aquamaster-combi" }
   ],
   "tableHeaders": {
@@ -87,8 +88,32 @@
       ]
     },
     {
-      "id": "aquamaster-combi",
+      "id": "aquamaster-inverter-p",
       "number": 3,
+      "numberStyle": "white",
+      "title": "AquaMaster Inverter P",
+      "subtitle": "Propanov\u00e9 (R290) \u00b7 1\u201317 kW",
+      "bannerGradient": "from-green-700 to-green-900",
+      "bannerOverlay": "from-green-800 via-green-800/80",
+      "subtitleColor": "text-green-100",
+      "description": "AquaMaster Inverter P je propanov\u00e1 \u0159ada tepeln\u00fdch \u010derpadel zem\u011b-voda s chladivem R290. P\u0159\u00edrodn\u00ed chladivo s minim\u00e1ln\u00edm dopadem na \u017eivotn\u00ed prost\u0159ed\u00ed (GWP = 3). Max. teplota topn\u00e9 vody 75 \u00b0C. SCOP a\u017e 5,13 p\u0159i 35 \u00b0C, energetick\u00e1 t\u0159\u00edda A+++.",
+      "features": [
+        "p\u0159\u00edrodn\u00ed chladivo R290 (propan) \u2014 GWP = 3, ekologicky \u0161etrn\u00e9",
+        "SCOP a\u017e 5,13 \u2014 nejvy\u0161\u0161\u00ed \u00fa\u010dinnost v nab\u00eddce zem\u011b-voda",
+        "max. teplota topn\u00e9 vody 75 \u00b0C \u2014 vhodn\u00e9 i pro radi\u00e1torov\u00e9 syst\u00e9my",
+        "energetick\u00e1 t\u0159\u00edda A+++ u v\u0161ech model\u016f"
+      ],
+      "footnote": "* SCOP p\u0159i 35 \u00b0C",
+      "products": [
+        { "model": "AquaMaster 17IP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "" },
+        { "model": "AquaMaster 22IP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "" },
+        { "model": "AquaMaster 30IP", "vykon": "3\u201312 kW", "cop": "5,13", "pdf": "" },
+        { "model": "AquaMaster 37IP", "vykon": "4\u201317 kW", "cop": "4,93", "pdf": "" }
+      ]
+    },
+    {
+      "id": "aquamaster-combi",
+      "number": 4,
       "numberStyle": "brand",
       "title": "AquaMaster Inverter Combi",
       "subtitle": "All-in-one s integrovaným bojlerem · 2–15 kW",
