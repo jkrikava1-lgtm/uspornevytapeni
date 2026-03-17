@@ -81,12 +81,12 @@
       "powerGridLabel": "Dostupn\u00e9 v\u00fdkony",
       "powerValues": ["2\u20137 kW", "4\u201314 kW", "6\u201320 kW", "8\u201325 kW", "7\u201330 kW", "12\u201350 kW"],
       "products": [
-        { "model": "BoxAir 22IP", "vykon": "2\u20137 kW", "cop": "4,85", "pdf": "https://www.mastertherm.cz/s-doc/1/1776/638993147930933333/special_vzduch-voda_R290_03.pdf" },
-        { "model": "BoxAir 26IP", "vykon": "4\u201314 kW", "cop": "5,14", "pdf": "https://www.mastertherm.cz/s-doc/1/1776/638993147930933333/special_vzduch-voda_R290_03.pdf" },
-        { "model": "BoxAir 37IP", "vykon": "6\u201320 kW", "cop": "4,93", "pdf": "https://www.mastertherm.cz/s-doc/1/1776/638993147930933333/special_vzduch-voda_R290_03.pdf" },
-        { "model": "BoxAir 45IP", "vykon": "8\u201325 kW", "cop": "4,74", "pdf": "https://www.mastertherm.cz/s-doc/1/1776/638993147930933333/special_vzduch-voda_R290_03.pdf" },
-        { "model": "BoxAir 60IP", "vykon": "7\u201330 kW", "cop": "4,89", "pdf": "https://www.mastertherm.cz/s-doc/1/1778/638993149358066667/special_velke_objekty_VZDUCH_R290_03.pdf" },
-        { "model": "BoxAir 90IP", "vykon": "12\u201350 kW", "cop": "4,68", "pdf": "https://www.mastertherm.cz/s-doc/1/1778/638993149358066667/special_velke_objekty_VZDUCH_R290_03.pdf" }
+        { "model": "BoxAir 22IP", "vykon": "2\u20137 kW", "cop": "4,85", "pdf": "https://www.mastertherm.cz/s-doc/1/1506/638980250843166667/BA22IP.pdf" },
+        { "model": "BoxAir 26IP", "vykon": "4\u201314 kW", "cop": "5,14", "pdf": "https://www.mastertherm.cz/s-doc/1/1505/638980250919666667/BA26IP.pdf" },
+        { "model": "BoxAir 37IP", "vykon": "6\u201320 kW", "cop": "4,93", "pdf": "https://www.mastertherm.cz/s-doc/1/1504/638980250987366667/BA37IP.pdf" },
+        { "model": "BoxAir 45IP", "vykon": "8\u201325 kW", "cop": "4,74", "pdf": "https://www.mastertherm.cz/s-doc/1/1503/638980251049533333/BA45IP.pdf" },
+        { "model": "BoxAir 60IP", "vykon": "7\u201330 kW", "cop": "4,89", "pdf": "https://www.mastertherm.cz/s-doc/1/1531/638980251139133333/BA60IP.pdf" },
+        { "model": "BoxAir 90IP", "vykon": "12\u201350 kW", "cop": "4,68", "pdf": "https://www.mastertherm.cz/s-doc/1/1532/638980251213733333/BA90IP.pdf" }
       ]
     },
     {
@@ -157,8 +157,8 @@
       "products": [
         { "model": "BoxAir 60I (Inverter)", "vykon": "10\u201335 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf" },
         { "model": "BoxAir 60IS (Inverter Split)", "vykon": "10\u201335 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technick\u00fd_list_ba60is_14511_ehpa.pdf" },
-        { "model": "BoxAir 60IP (R290)", "vykon": "7\u201330 kW", "cop": "4,89", "pdf": "https://www.mastertherm.cz/s-doc/1/1778/638993149358066667/special_velke_objekty_VZDUCH_R290_03.pdf" },
-        { "model": "BoxAir 90IP (R290)", "vykon": "12\u201350 kW", "cop": "4,68", "pdf": "https://www.mastertherm.cz/s-doc/1/1778/638993149358066667/special_velke_objekty_VZDUCH_R290_03.pdf" },
+        { "model": "BoxAir 60IP (R290)", "vykon": "7\u201330 kW", "cop": "4,89", "pdf": "https://www.mastertherm.cz/s-doc/1/1531/638980251139133333/BA60IP.pdf" },
+        { "model": "BoxAir 90IP (R290)", "vykon": "12\u201350 kW", "cop": "4,68", "pdf": "https://www.mastertherm.cz/s-doc/1/1532/638980251213733333/BA90IP.pdf" },
         { "model": "BoxAir 75Z", "vykon": "30,8 kW", "cop": "4,0", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba75z_14511_032018.pdf" },
         { "model": "EasyMaster 60Z", "vykon": "24,6 kW", "cop": "4,1", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em60z_14511.pdf" },
         { "model": "EasyMaster 75Z", "vykon": "30,8 kW", "cop": "4,0", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em75z_14511.pdf" }
