@@ -20,6 +20,7 @@
   "quickNav": [
     { "label": "BoxAir Inverter", "anchor": "#boxair-inverter" },
     { "label": "BoxAir Inverter P", "anchor": "#boxair-inverter-p" },
+    { "label": "BoxAir 60/90 Inverter P", "anchor": "#boxair-6090-inverter-p" },
     { "label": "BoxAir Inverter Split", "anchor": "#boxair-split" },
     { "label": "BoxAir Inverter Split Combi", "anchor": "#boxair-split-combi" },
     { "label": "Velk\u00e9 objekty", "anchor": "#velke-objekty" }
@@ -88,8 +89,32 @@
       ]
     },
     {
-      "id": "boxair-split",
+      "id": "boxair-6090-inverter-p",
       "number": 3,
+      "numberStyle": "brand",
+      "title": "BoxAir 60/90 Inverter P",
+      "subtitle": "Propanov\u00e9 (R290) pro velk\u00e9 objekty \u00b7 7\u201350 kW",
+      "bannerImage": "/images/produkty/boxair-velke-banner.jpg",
+      "bannerGradient": "from-green-700 to-green-900",
+      "bannerOverlay": "from-green-800 via-green-800/80",
+      "subtitleColor": "text-green-200",
+      "description": "BoxAir 60/90 Inverter P je propanov\u00e1 \u0159ada pro komer\u010dn\u00ed a pr\u016fmyslov\u00e9 objekty s chladivem R290. Kompaktn\u00ed jednotky bez vnit\u0159n\u00ed \u010d\u00e1sti, integrovan\u00fd software MasterLAN umo\u017e\u0148uje propojen\u00ed a\u017e 16 jednotek do kask\u00e1d s v\u00fdkonem a\u017e 1000 kW. Z\u00e1lo\u017en\u00ed elektrick\u00e9 kotle 15 + 15 kW, regulace PLUS (pCO5) pro v\u00edcekruhov\u00e9 syst\u00e9my a\u017e 6 topn\u00fdch okruh\u016f.",
+      "features": [
+        "p\u0159\u00edrodn\u00ed chladivo R290 (propan) \u2014 GWP = 3",
+        "kask\u00e1dov\u00e9 zapojen\u00ed a\u017e 16 jednotek \u2014 v\u00fdkon do 1000 kW",
+        "max. teplota topn\u00e9 vody 75 \u00b0C, energetick\u00e1 t\u0159\u00edda A+++",
+        "integrovan\u00fd MasterLAN pro online monitoring a \u0159\u00edzen\u00ed"
+      ],
+      "showPowerGrid": false,
+      "footnote": "* SCOP p\u0159i 35 \u00b0C",
+      "products": [
+        { "model": "BoxAir 60IP", "vykon": "7\u201330 kW", "cop": "4,89", "pdf": "" },
+        { "model": "BoxAir 90IP", "vykon": "12\u201350 kW", "cop": "4,68", "pdf": "" }
+      ]
+    },
+    {
+      "id": "boxair-split",
+      "number": 4,
       "numberStyle": "white",
       "title": "BoxAir Inverter Split",
       "subtitle": "D\u011blen\u00e1 konstrukce \u00b7 2\u201335 kW",
@@ -114,7 +139,7 @@
     },
     {
       "id": "boxair-split-combi",
-      "number": 4,
+      "number": 5,
       "numberStyle": "brand",
       "title": "BoxAir Inverter Split Combi",
       "subtitle": "S integrovan\u00fdm bojlerem \u00b7 2\u201317 kW",
@@ -137,7 +162,7 @@
     },
     {
       "id": "velke-objekty",
-      "number": 5,
+      "number": 6,
       "numberStyle": "white",
       "title": "Tepeln\u00e1 \u010derpadla pro velk\u00e9 objekty",
       "subtitle": "V\u00fdkon 10\u201335 kW \u00b7 Mo\u017enost kask\u00e1d",
