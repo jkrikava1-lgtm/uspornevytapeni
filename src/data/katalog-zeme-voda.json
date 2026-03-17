@@ -76,10 +76,10 @@
       ],
       "footnote": "* SCOP p\u0159i 35 \u00b0C",
       "products": [
-        { "model": "AquaMaster 17IP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "" },
-        { "model": "AquaMaster 22IP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "" },
-        { "model": "AquaMaster 30IP", "vykon": "3\u201312 kW", "cop": "5,13", "pdf": "" },
-        { "model": "AquaMaster 37IP", "vykon": "4\u201317 kW", "cop": "4,93", "pdf": "" }
+        { "model": "AquaMaster 17IP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "https://www.mastertherm.cz/s-doc/1/1777/638993148011400000/special_zeme-voda_R290_03.pdf" },
+        { "model": "AquaMaster 22IP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "https://www.mastertherm.cz/s-doc/1/1777/638993148011400000/special_zeme-voda_R290_03.pdf" },
+        { "model": "AquaMaster 30IP", "vykon": "3\u201312 kW", "cop": "5,13", "pdf": "https://www.mastertherm.cz/s-doc/1/1777/638993148011400000/special_zeme-voda_R290_03.pdf" },
+        { "model": "AquaMaster 37IP", "vykon": "4\u201317 kW", "cop": "4,93", "pdf": "https://www.mastertherm.cz/s-doc/1/1777/638993148011400000/special_zeme-voda_R290_03.pdf" }
       ]
     },
     {
