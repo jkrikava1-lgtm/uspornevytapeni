@@ -71,14 +71,14 @@ import ref from '../data/reference.json';
       <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
         <div style="background:#1B3A5C;color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
           <div style="font-size:0.82rem;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
-            <strong>Typ čerpadla:</strong>
-            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#C41E2A;border:2px solid white;display:inline-block;"></span>vzduch–voda (405)</span>
-            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#27AE60;border:2px solid white;display:inline-block;"></span>země–voda (28)</span>
-            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#1464a0;border:2px solid white;display:inline-block;"></span>voda–voda (6)</span>
+            <strong>{ref.map_legend_label}</strong>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#C41E2A;border:2px solid white;display:inline-block;"></span>{ref.map_legend_vzduch}</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#27AE60;border:2px solid white;display:inline-block;"></span>{ref.map_legend_zeme}</span>
+            <span style="display:flex;align-items:center;gap:5px;"><span style="width:12px;height:12px;border-radius:50%;background:#1464a0;border:2px solid white;display:inline-block;"></span>{ref.map_legend_voda}</span>
           </div>
           <div style="display:flex;gap:16px;text-align:right;">
-            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">439</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">instalací</div></div>
-            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">279</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">obcí</div></div>
+            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">{ref.map_stat1_num}</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">{ref.map_stat1_label}</div></div>
+            <div><div style="font-size:1.3rem;font-weight:700;line-height:1;">{ref.map_stat2_num}</div><div style="font-size:0.65rem;opacity:0.6;text-transform:uppercase;letter-spacing:0.05em;">{ref.map_stat2_label}</div></div>
           </div>
         </div>
         <div id="ref-map" style="height:520px;width:100%;"></div>

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import data from '../data/o-nas.json';
+import site from '../data/site.json';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
@@ -82,7 +83,7 @@ import data from '../data/o-nas.json';
       <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
-        <a href="tel:+420777724573" class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-gray-200 hover:border-gray-400 text-charcoal-700 font-semibold rounded-md transition-colors">+420 777 724 573</a>
+        <a href={site.phone_href} class="inline-flex items-center justify-center px-6 py-3.5 border-2 border-gray-200 hover:border-gray-400 text-charcoal-700 font-semibold rounded-md transition-colors">{site.phone}</a>
       </div>
     </div>
   </section>

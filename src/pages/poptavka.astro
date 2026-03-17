@@ -64,7 +64,7 @@ import site from '../data/site.json';
               <input type="checkbox" name="souhlas" id="souhlas" required class="mt-1 w-4 h-4 accent-brand-500" />
               <label for="souhlas" class="text-xs text-charcoal-500 leading-relaxed">{data.souhlas_text}</label>
             </div>
-            <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-base">
+            <button type="submit" data-label={data.submit_button} data-loading={data.submit_loading} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-base">
               {data.submit_button}
               <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -134,7 +134,7 @@ import site from '../data/site.json';
 
     const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
     btn.disabled = true;
-    btn.textContent = 'Odesílám…';
+    btn.textContent = btn.dataset.loading || 'Odesílám…';
 
     try {
       const res = await fetch('/api/poptavka', {
@@ -148,7 +148,7 @@ import site from '../data/site.json';
       } else {
         errorBox.classList.remove('hidden');
         btn.disabled = false;
-        btn.textContent = 'Odeslat poptávku';
+        btn.textContent = btn.dataset.label || 'Odeslat poptávku';
       }
     } catch {
       errorBox.classList.remove('hidden');
