@@ -19,7 +19,7 @@
     },
     {
       "title": "Chlazení + ohřev bazénu",
-      "desc": "V létě tepelné čerpadlo chladí dům a současně ohřívá bazén. Odpadní teplo z chlazení se využije pro ohřev vody v bazénu."
+      "desc": "V létě tepelné čerpadlo chladí dům a současně ohřívá bazén."
     },
     {
       "title": "Tepelné čerpadlo + krb",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Více zdrojů tepla",
-      "desc": "Akumulační nádoba pojímá teplo z tepelného čerpadla, kotle i krbu. Regulátor vybírá nejekonomičtější zdroj podle aktuálních podmínek."
+      "desc": "Akumulační nádoba pojímá teplo z tepelného čerpadla, kotle i krbu. Topi ti ohřívat vodu můžeme tím zdrojem, chterý zrovna chceme používat."
     }
   ],
   "cta_button": "Zpracujte mi nabídku"
