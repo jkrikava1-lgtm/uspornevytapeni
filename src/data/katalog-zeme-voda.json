@@ -76,10 +76,10 @@
       ],
       "footnote": "* SCOP p\u0159i 35 \u00b0C",
       "products": [
-        { "model": "AquaMaster 17IP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "https://www.mastertherm.cz/s-doc/1/1525/638980252542566667/AQ17ICP.pdf" },
-        { "model": "AquaMaster 22IP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "https://www.mastertherm.cz/s-doc/1/1527/638980252320766667/AQ22IP.pdf" },
-        { "model": "AquaMaster 30IP", "vykon": "3\u201312 kW", "cop": "5,13", "pdf": "https://www.mastertherm.cz/s-doc/1/1528/638980252388066667/AQ30IP.pdf" },
-        { "model": "AquaMaster 37IP", "vykon": "4\u201317 kW", "cop": "4,93", "pdf": "https://www.mastertherm.cz/s-doc/1/1529/638980252451333333/AQ37IP.pdf" }
+        { "model": "AquaMaster 17IP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "/pdf/AQ17ICP.pdf" },
+        { "model": "AquaMaster 22IP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "/pdf/AQ22IP.pdf" },
+        { "model": "AquaMaster 30IP", "vykon": "3\u201312 kW", "cop": "5,13", "pdf": "/pdf/AQ30IP.pdf" },
+        { "model": "AquaMaster 37IP", "vykon": "4\u201317 kW", "cop": "4,93", "pdf": "/pdf/AQ37IP.pdf" }
       ]
     },
     {
