@@ -39,6 +39,7 @@
   "related_items": [
     { "href": "/navrh-reseni/podlahove-topeni-starsi-dum", "title": "Podlahov\u00e9 topen\u00ed ve star\u0161\u00edm dom\u011b", "desc": "Jak instalujeme podlahov\u00e9 topen\u00ed p\u0159i rekonstrukci.", "emoji": "\u2668\ufe0f" },
     { "href": "/navrh-reseni/velikost-radiatoru", "title": "\u00daprava radi\u00e1tor\u016f", "desc": "Jak upravit star\u0161\u00ed radi\u00e1torov\u00fd syst\u00e9m pro tepeln\u00e9 \u010derpadlo.", "emoji": "\ud83d\udd27" },
-    { "href": "/navrh-reseni/doinstalace-chlazeni", "title": "Doinstalace chlazen\u00ed", "desc": "Jak jednodu\u0161e doinstalovat chlazen\u00ed do st\u00e1vaj\u00edc\u00edho domu.", "emoji": "\u2744\ufe0f" }
+    { "href": "/navrh-reseni/doinstalace-chlazeni", "title": "Doinstalace chlazen\u00ed", "desc": "Jak jednodu\u0161e doinstalovat chlazen\u00ed do st\u00e1vaj\u00edc\u00edho domu.", "emoji": "\u2744\ufe0f" },
+    { "href": "/navrh-reseni/kombinace-topnych-okruhu", "title": "Kombinace okruh\u016f", "desc": "Podlahovka + radi\u00e1tory v jednom syst\u00e9mu \u2014 b\u011b\u017en\u00e9 a funk\u010dn\u00ed \u0159e\u0161en\u00ed.", "emoji": "\ud83d\udd00" }
   ]
 }
