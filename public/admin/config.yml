@@ -11,70 +11,417 @@ public_folder: /images
 locale: cs
 
 collections:
+  # ============================================================
+  # NASTAVENÍ WEBU (site.json)
+  # ============================================================
   - name: settings
-    label: Nastavení webu
+    label: "Nastavení webu"
     files:
       - name: site
-        label: Kontaktní údaje a firma
+        label: "Kontaktní údaje a firma"
         file: src/data/site.json
         format: json
         fields:
-          - { label: Název firmy, name: name, widget: string }
+          # --- Základní údaje ---
+          - { label: "Název firmy", name: name, widget: string }
           - { label: "Telefon (zobrazený, např. +420 777 724 573)", name: phone, widget: string }
           - { label: "Telefon (odkaz, např. tel:+420777724573)", name: phone_href, widget: string }
-          - { label: E-mail, name: email, widget: string }
+          - { label: "E-mail", name: email, widget: string }
           - { label: "Adresa — ulice a číslo", name: address_line1, widget: string }
           - { label: "Adresa — PSČ a město", name: address_line2, widget: string }
-          - { label: Rok založení, name: founded, widget: string }
-          - { label: Tagline (krátký popis firmy), name: tagline, widget: string }
+          - { label: "Rok založení", name: founded, widget: string }
+          - { label: "Tagline (krátký popis firmy)", name: tagline, widget: string }
 
+          # --- Přístupnost ---
+          - { label: "Aria — rozbalit podstránky", name: aria_expand_sub, widget: string }
+          - { label: "Aria — otevřít menu", name: aria_open_menu, widget: string }
+          - { label: "Drobečková navigace — Úvod", name: breadcrumb_home, widget: string }
+
+          # --- Patička ---
+          - { label: "Patička — popis firmy", name: footer_desc, widget: text }
+          - { label: "Patička — vyrobeno v ČR", name: footer_made_in, widget: string }
+          - { label: "Patička — copyright", name: footer_copyright, widget: string }
+          - { label: "Patička — sloupec 1 nadpis", name: footer_col1_title, widget: string }
+          - label: "Patička — sloupec 1 odkazy"
+            name: footer_col1_items
+            widget: list
+            fields:
+              - { label: "Text odkazu", name: label, widget: string }
+              - { label: "URL", name: href, widget: string }
+          - { label: "Patička — sloupec 2 nadpis", name: footer_col2_title, widget: string }
+          - label: "Patička — sloupec 2 odkazy"
+            name: footer_col2_items
+            widget: list
+            fields:
+              - { label: "Text odkazu", name: label, widget: string }
+              - { label: "URL", name: href, widget: string }
+          - { label: "Patička — sloupec 3 nadpis", name: footer_col3_title, widget: string }
+          - label: "Patička — sloupec 3 odkazy"
+            name: footer_col3_items
+            widget: list
+            fields:
+              - { label: "Text odkazu", name: label, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+          # --- Navigace ---
+          - { label: "Nav — Poptávka", name: nav_poptavka, widget: string }
+          - { label: "Nav — Poptávka (mobil)", name: nav_poptavka_mobile, widget: string }
+          - { label: "Nav — O nás", name: nav_o_nas, widget: string }
+          - { label: "Nav — Kontakty", name: nav_kontakty, widget: string }
+          - { label: "Nav — Reference", name: nav_reference, widget: string }
+          - { label: "Nav — Dotace", name: nav_dotace, widget: string }
+          - { label: "Nav — Návrh řešení", name: nav_navrh, widget: string }
+          - label: "Nav — Návrh řešení položky"
+            name: nav_navrh_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - { label: "Nav — Tepelná čerpadla", name: nav_tc, widget: string }
+          - label: "Nav — Tepelná čerpadla položky"
+            name: nav_tc_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - { label: "Nav — Chytré funkce", name: nav_funkce, widget: string }
+          - label: "Nav — Chytré funkce položky"
+            name: nav_funkce_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - { label: "Nav — Katalog", name: nav_katalog, widget: string }
+          - label: "Nav — Katalog položky"
+            name: nav_katalog_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - { label: "Nav — Cena", name: nav_cena, widget: string }
+          - label: "Nav — Cena položky"
+            name: nav_cena_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+          - label: "Nav — Cena mobilní extra"
+            name: nav_cena_mobile_extra
+            widget: list
+            required: false
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Text", name: label, widget: string }
+
+  # ============================================================
+  # ÚVODNÍ STRÁNKA (homepage.json)
+  # ============================================================
   - name: homepage
-    label: Obsah úvodní stránky
+    label: "Úvodní stránka"
     files:
       - name: hp
-        label: Úvodní stránka
+        label: "Úvodní stránka"
         file: src/data/homepage.json
         format: json
         fields:
+          # --- SEO ---
+          - { label: "SEO — titulek stránky", name: meta_title, widget: string }
+          - { label: "SEO — popis stránky", name: meta_description, widget: text }
+
+          # --- Hero sekce ---
           - { label: "Hero — malý text nad nadpisem", name: hero_badge, widget: string }
           - { label: "Hero — nadpis řádek 1", name: hero_h1_line1, widget: string }
           - { label: "Hero — zvýrazněná část nadpisu", name: hero_h1_highlight, widget: string }
           - { label: "Hero — nadpis řádek 3", name: hero_h1_line3, widget: string }
           - { label: "Hero — popis pod nadpisem", name: hero_text, widget: text }
-          - { label: "Hero — tlačítko poptávka", name: hero_cta_primary, widget: string }
-          - { label: "Hero — tlačítko reference", name: hero_cta_secondary, widget: string }
+          - { label: "Hero — hlavní CTA tlačítko", name: hero_cta_primary, widget: string }
+          - { label: "Hero — vedlejší CTA tlačítko", name: hero_cta_secondary, widget: string }
+          - { label: "Hero — badge zkušenosti", name: hero_experience_badge, widget: string }
+          - label: "Hero — slideshow obrázky"
+            name: hero_slides
+            widget: list
+            fields:
+              - { label: "Obrázek", name: src, widget: image }
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Podrobný popis", name: desc, widget: string }
+
+          # --- Statistiky ---
           - { label: "Statistika 1 — číslo", name: stat1_number, widget: string }
           - { label: "Statistika 1 — popis", name: stat1_label, widget: string }
           - { label: "Statistika 2 — číslo", name: stat2_number, widget: string }
           - { label: "Statistika 2 — popis", name: stat2_label, widget: string }
           - { label: "Statistika 3 — číslo", name: stat3_number, widget: string }
           - { label: "Statistika 3 — popis", name: stat3_label, widget: string }
-          - { label: "Proč TČ — nadpis", name: savings_headline, widget: string }
-          - { label: "Proč TČ — text", name: savings_text, widget: text }
+
+          # --- Karty "Jak vám můžeme pomoci" ---
+          - { label: "Karty — nadpis sekce", name: cards_headline, widget: string }
+          - { label: "Karty — podnadpis", name: cards_subtitle, widget: string }
+          - { label: "Karty — CTA text", name: cards_cta, widget: string }
+          - { label: "Karta 1 — název", name: card1_title, widget: string }
+          - { label: "Karta 1 — popis", name: card1_desc, widget: text }
+          - { label: "Karta 1 — URL", name: card1_href, widget: string }
+          - { label: "Karta 1 — obrázek", name: card1_img, widget: image }
+          - { label: "Karta 2 — název", name: card2_title, widget: string }
+          - { label: "Karta 2 — popis", name: card2_desc, widget: text }
+          - { label: "Karta 2 — URL", name: card2_href, widget: string }
+          - { label: "Karta 2 — obrázek", name: card2_img, widget: image }
+          - { label: "Karta 3 — název", name: card3_title, widget: string }
+          - { label: "Karta 3 — popis", name: card3_desc, widget: text }
+          - { label: "Karta 3 — URL", name: card3_href, widget: string }
+          - { label: "Karta 3 — obrázek", name: card3_img, widget: image }
+
+          # --- Produkty ---
+          - { label: "Produkty — štítek sekce", name: products_label, widget: string }
+          - { label: "Produkty — nadpis sekce", name: products_headline, widget: string }
+          - { label: "Produkty — CTA tlačítko", name: products_cta, widget: string }
+          - label: "Produkty — typy čerpadel"
+            name: products
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji", name: emoji, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+          # --- Úspory / graf ---
+          - { label: "Úspory — štítek sekce", name: savings_label, widget: string }
+          - { label: "Úspory — nadpis", name: savings_headline, widget: string }
+          - { label: "Úspory — text", name: savings_text, widget: text }
+          - label: "Úspory — výhody"
+            name: savings_benefits
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+          - { label: "Graf — štítek sekce", name: chart_label, widget: string }
+          - { label: "Graf — poznámka pod grafem", name: chart_footnote, widget: text }
+          - { label: "Graf — zvýrazněné číslo", name: chart_highlight_number, widget: string }
+          - { label: "Graf — zvýrazněný text", name: chart_highlight_text, widget: string }
+          - label: "Graf — položky"
+            name: chart_items
+            widget: list
+            fields:
+              - { label: "Palivo", name: label, widget: string }
+              - { label: "Roční náklad (Kč)", name: value, widget: number }
+              - { label: "Barva (CSS třída)", name: color, widget: string }
+
+          # --- Proč my ---
+          - { label: "Proč my — štítek sekce", name: why_us_label, widget: string }
           - { label: "Proč my — nadpis", name: why_us_headline, widget: string }
-          - { label: "Citát — text", name: testimonial_text, widget: text }
-          - { label: "Citát — jméno", name: testimonial_name, widget: string }
-          - { label: "Citát — lokalita a typ", name: testimonial_location, widget: string }
+          - label: "Proč my — položky"
+            name: why_us_items
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+
+          # --- Reference / testimonial ---
+          - { label: "Testimonial — citace", name: testimonial_text, widget: text }
+          - { label: "Testimonial — jméno", name: testimonial_name, widget: string }
+          - { label: "Testimonial — lokalita", name: testimonial_location, widget: string }
+
+          # --- Dotace ---
+          - { label: "Dotace — štítek", name: dotace_label, widget: string }
           - { label: "Dotace — nadpis", name: dotace_headline, widget: string }
-          - { label: "Dotace — text", name: dotace_text, widget: string }
+          - { label: "Dotace — text", name: dotace_text, widget: text }
+          - { label: "Dotace — CTA tlačítko", name: dotace_cta, widget: string }
+
+          # --- CTA sekce ---
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
 
-  - name: subpages
-    label: Podstránky
+  # ============================================================
+  # CENA TEPELNÉHO ČERPADLA (cena.json)
+  # ============================================================
+  - name: cena
+    label: "Stránka Cena"
     files:
-      - name: o_nas
-        label: O nás
-        file: src/data/o-nas.json
+      - name: cena
+        label: "Cena tepelného čerpadla"
+        file: src/data/cena.json
         format: json
         fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
           - { label: "Hero — nadpis", name: hero_title, widget: string }
           - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Filozofie — štítek", name: philosophy_label, widget: string }
-          - { label: "Filozofie — nadpis", name: philosophy_headline, widget: string }
-          - { label: "Filozofie — odstavec 1", name: philosophy_text1, widget: text }
-          - { label: "Filozofie — odstavec 2", name: philosophy_text2, widget: text }
-          - { label: "Filozofie — odstavec 3", name: philosophy_text3, widget: text }
+
+          # --- Úvod ---
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text (HTML)", name: intro_text, widget: markdown }
+          - { label: "Úvod — zvýrazněný text (HTML)", name: intro_highlight, widget: markdown }
+
+          # --- Ceníky ---
+          - { label: "Badge nejoblíbenější", name: highlight_badge, widget: string }
+
+          - { label: "Ceník 1 — typ", name: price1_typ, widget: string }
+          - { label: "Ceník 1 — cenový rozsah", name: price1_rozsah, widget: string }
+          - { label: "Ceník 1 — poznámka", name: price1_poznamka, widget: string }
+          - { label: "Ceník 1 — bod 1", name: price1_body1, widget: string }
+          - { label: "Ceník 1 — bod 2", name: price1_body2, widget: string }
+          - { label: "Ceník 1 — bod 3", name: price1_body3, widget: string }
+
+          - { label: "Ceník 2 — typ", name: price2_typ, widget: string }
+          - { label: "Ceník 2 — cenový rozsah", name: price2_rozsah, widget: string }
+          - { label: "Ceník 2 — poznámka", name: price2_poznamka, widget: string }
+          - { label: "Ceník 2 — bod 1", name: price2_body1, widget: string }
+          - { label: "Ceník 2 — bod 2", name: price2_body2, widget: string }
+          - { label: "Ceník 2 — bod 3", name: price2_body3, widget: string }
+
+          - { label: "Ceník 3 — typ", name: price3_typ, widget: string }
+          - { label: "Ceník 3 — cenový rozsah", name: price3_rozsah, widget: string }
+          - { label: "Ceník 3 — poznámka", name: price3_poznamka, widget: string }
+          - { label: "Ceník 3 — bod 1", name: price3_body1, widget: string }
+          - { label: "Ceník 3 — bod 2", name: price3_body2, widget: string }
+          - { label: "Ceník 3 — bod 3", name: price3_body3, widget: string }
+
+          # --- Faktory ovlivňující cenu ---
+          - { label: "Faktory — nadpis", name: factors_headline, widget: string }
+          - { label: "Faktor 1 — název", name: factor1_title, widget: string }
+          - { label: "Faktor 1 — popis", name: factor1_desc, widget: text }
+          - { label: "Faktor 2 — název", name: factor2_title, widget: string }
+          - { label: "Faktor 2 — popis", name: factor2_desc, widget: text }
+          - { label: "Faktor 3 — název", name: factor3_title, widget: string }
+          - { label: "Faktor 3 — popis", name: factor3_desc, widget: text }
+          - { label: "Faktor 4 — název", name: factor4_title, widget: string }
+          - { label: "Faktor 4 — popis", name: factor4_desc, widget: text }
+
+          # --- Návratnost investice ---
+          - { label: "Návratnost — štítek", name: roi_label, widget: string }
+          - { label: "Návratnost — nadpis", name: roi_headline, widget: string }
+          - { label: "Návratnost — popisek roční úspory", name: roi_annual_savings_label, widget: string }
+          - { label: "Návratnost — roční úspora", name: roi_annual_savings, widget: string }
+          - { label: "Návratnost — popisek ceny", name: roi_price_label, widget: string }
+          - { label: "Návratnost — cena", name: roi_price, widget: string }
+          - { label: "Návratnost — popisek dotace", name: roi_dotace_label, widget: string }
+          - { label: "Návratnost — dotace", name: roi_dotace, widget: string }
+          - { label: "Návratnost — popisek čisté investice", name: roi_net_label, widget: string }
+          - { label: "Návratnost — čistá investice", name: roi_net, widget: string }
+          - { label: "Návratnost — popisek doby návratnosti", name: roi_payback_label, widget: string }
+          - { label: "Návratnost — doba návratnosti", name: roi_payback, widget: string }
+          - { label: "Návratnost — poznámka pod čarou", name: roi_footnote, widget: text }
+
+          # --- Užitečné nástroje ---
+          - { label: "Nástroje — nadpis", name: tools_headline, widget: string }
+          - { label: "Nástroj 1 — název", name: tool1_title, widget: string }
+          - { label: "Nástroj 1 — popis", name: tool1_desc, widget: text }
+          - { label: "Nástroj 1 — CTA", name: tool1_cta, widget: string }
+          - { label: "Nástroj 2 — název", name: tool2_title, widget: string }
+          - { label: "Nástroj 2 — popis", name: tool2_desc, widget: text }
+          - { label: "Nástroj 2 — CTA", name: tool2_cta, widget: string }
+
+          # --- CTA ---
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # DOTACE (dotace.json)
+  # ============================================================
+  - name: dotace
+    label: "Stránka Dotace"
+    files:
+      - name: dotace
+        label: "Dotace na tepelná čerpadla"
+        file: src/data/dotace.json
+        format: json
+        fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+
+          # --- Úvod ---
+          - { label: "Úvod — text (HTML)", name: intro, widget: markdown }
+
+          # --- Harmonogram ---
+          - { label: "Harmonogram — nadpis", name: harmonogram_headline, widget: string }
+          - { label: "Harmonogram — úvod", name: harmonogram_intro, widget: text }
+          - label: "Harmonogram — termíny"
+            name: harmonogram
+            widget: list
+            fields:
+              - { label: "Datum", name: datum, widget: string }
+              - { label: "Popis", name: popis, widget: text }
+
+          # --- Změna dotace vs. úvěry ---
+          - { label: "Změna — nadpis", name: zmena_headline, widget: string }
+          - { label: "Změna — úvod", name: zmena_intro, widget: text }
+
+          # --- Běžné domácnosti ---
+          - { label: "Běžné — nadpis", name: bezne_title, widget: string }
+          - { label: "Běžné — podnadpis", name: bezne_subtitle, widget: string }
+          - { label: "Běžné — popis (HTML)", name: bezne_desc, widget: markdown }
+          - { label: "Běžné — jak to funguje (HTML)", name: bezne_jak, widget: markdown }
+          - { label: "Běžné — výhoda (HTML)", name: bezne_vyhoda, widget: markdown }
+          - { label: "Běžné — nevýhoda (HTML)", name: bezne_nevyhoda, widget: markdown }
+
+          # --- Zranitelné domácnosti ---
+          - { label: "Zranitelné — nadpis", name: zranitelne_title, widget: string }
+          - { label: "Zranitelné — podnadpis", name: zranitelne_subtitle, widget: string }
+          - { label: "Zranitelné — popis (HTML)", name: zranitelne_desc, widget: markdown }
+          - label: "Zranitelné — přehled podpory"
+            name: zranitelne_body
+            widget: list
+            fields:
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Hodnota", name: value, widget: string }
+
+          # --- Podpora TČ ---
+          - { label: "Podpora TČ — nadpis", name: tc_headline, widget: string }
+          - { label: "Podpora TČ — úvod", name: tc_intro, widget: text }
+          - label: "Podpora TČ — položky"
+            name: tc_body
+            widget: list
+            fields:
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Hodnota", name: value, widget: string }
+          - { label: "Podpora TČ — poznámka", name: tc_note, widget: text }
+
+          # --- Renovační pas ---
+          - { label: "Renovační pas — nadpis", name: renovacni_headline, widget: string }
+          - { label: "Renovační pas — úvod", name: renovacni_intro, widget: text }
+          - label: "Renovační pas — body (HTML)"
+            name: renovacni_body
+            widget: list
+            field:
+              { label: "Text (HTML)", name: text, widget: markdown }
+
+          # --- Tip box ---
+          - { label: "Tip — zvýrazněný text", name: tip_box, widget: text }
+
+          # --- CTA ---
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # REFERENCE (reference.json)
+  # ============================================================
+  - name: reference
+    label: "Stránka Reference"
+    files:
+      - name: reference
+        label: "Reference"
+        file: src/data/reference.json
+        format: json
+        fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+
+          # --- Statistiky ---
           - { label: "Statistika 1 — číslo", name: stat1_num, widget: string }
           - { label: "Statistika 1 — popis", name: stat1_label, widget: string }
           - { label: "Statistika 2 — číslo", name: stat2_num, widget: string }
@@ -83,10 +430,83 @@ collections:
           - { label: "Statistika 3 — popis", name: stat3_label, widget: string }
           - { label: "Statistika 4 — číslo", name: stat4_num, widget: string }
           - { label: "Statistika 4 — popis", name: stat4_label, widget: string }
-          - { label: "Citát — text", name: testimonial_quote, widget: text }
-          - { label: "Citát — jméno", name: testimonial_name, widget: string }
-          - { label: "Citát — firma", name: testimonial_company, widget: string }
-          - { label: "Postup — nadpis", name: process_headline, widget: string }
+
+          # --- Mapa ---
+          - { label: "Mapa — nadpis", name: map_headline, widget: string }
+          - { label: "Mapa — podnadpis", name: map_subtitle, widget: string }
+          - { label: "Mapa — popisek legendy", name: map_legend_label, widget: string }
+          - { label: "Mapa — legenda vzduch", name: map_legend_vzduch, widget: string }
+          - { label: "Mapa — legenda země", name: map_legend_zeme, widget: string }
+          - { label: "Mapa — legenda voda", name: map_legend_voda, widget: string }
+          - { label: "Mapa — stat 1 číslo", name: map_stat1_num, widget: string }
+          - { label: "Mapa — stat 1 popis", name: map_stat1_label, widget: string }
+          - { label: "Mapa — stat 2 číslo", name: map_stat2_num, widget: string }
+          - { label: "Mapa — stat 2 popis", name: map_stat2_label, widget: string }
+
+          # --- Reference / realizace ---
+          - label: "Reference — seznam realizací"
+            name: references
+            widget: list
+            fields:
+              - { label: "Lokalita", name: lokalita, widget: string }
+              - { label: "Typ projektu", name: typ, widget: string }
+              - { label: "Model čerpadla", name: system, widget: string }
+              - { label: "Rok realizace", name: rok, widget: string }
+              - { label: "Hlavní foto", name: image, widget: image }
+              - label: "Galerie fotek"
+                name: gallery
+                widget: list
+                field:
+                  { label: "Foto", name: photo, widget: image }
+
+          # --- CTA ---
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # O NÁS (o-nas.json)
+  # ============================================================
+  - name: o-nas
+    label: "Stránka O nás"
+    files:
+      - name: o-nas
+        label: "O nás"
+        file: src/data/o-nas.json
+        format: json
+        fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+
+          # --- Filozofie ---
+          - { label: "Filozofie — štítek", name: philosophy_label, widget: string }
+          - { label: "Filozofie — nadpis (HTML)", name: philosophy_headline, widget: markdown }
+          - { label: "Filozofie — odstavec 1", name: philosophy_text1, widget: text }
+          - { label: "Filozofie — odstavec 2", name: philosophy_text2, widget: text }
+          - { label: "Filozofie — odstavec 3", name: philosophy_text3, widget: text }
+
+          # --- Statistiky ---
+          - { label: "Statistika 1 — číslo", name: stat1_num, widget: string }
+          - { label: "Statistika 1 — popis", name: stat1_label, widget: string }
+          - { label: "Statistika 2 — číslo", name: stat2_num, widget: string }
+          - { label: "Statistika 2 — popis", name: stat2_label, widget: string }
+          - { label: "Statistika 3 — číslo", name: stat3_num, widget: string }
+          - { label: "Statistika 3 — popis", name: stat3_label, widget: string }
+          - { label: "Statistika 4 — číslo", name: stat4_num, widget: string }
+          - { label: "Statistika 4 — popis", name: stat4_label, widget: string }
+
+          # --- Testimonial ---
+          - { label: "Reference — citace", name: testimonial_quote, widget: text }
+          - { label: "Reference — jméno", name: testimonial_name, widget: string }
+          - { label: "Reference — firma", name: testimonial_company, widget: string }
+
+          # --- Jak pracujeme ---
+          - { label: "Proces — nadpis", name: process_headline, widget: string }
           - { label: "Krok 1 — číslo", name: step1_num, widget: string }
           - { label: "Krok 1 — název", name: step1_title, widget: string }
           - { label: "Krok 1 — popis", name: step1_desc, widget: text }
@@ -99,177 +519,162 @@ collections:
           - { label: "Krok 4 — číslo", name: step4_num, widget: string }
           - { label: "Krok 4 — název", name: step4_title, widget: string }
           - { label: "Krok 4 — popis", name: step4_desc, widget: text }
+
+          # --- CTA ---
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
           - { label: "CTA — tlačítko", name: cta_button, widget: string }
 
+  # ============================================================
+  # KONTAKTY (kontakty.json)
+  # ============================================================
+  - name: kontakty
+    label: "Stránka Kontakty"
+    files:
       - name: kontakty
-        label: Kontakt
+        label: "Kontakty"
         file: src/data/kontakty.json
         format: json
         fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Fakturace — nadpis", name: billing_headline, widget: string }
-          - { label: "Fakturace — název firmy (štítek)", name: billing_name_label, widget: string }
-          - { label: "Fakturace — název firmy", name: billing_name, widget: string }
-          - { label: "Fakturace — adresa (štítek)", name: billing_address_label, widget: string }
-          - { label: "Fakturace — adresa", name: billing_address, widget: string }
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
 
-      - name: cena
-        label: Cena tepelného čerpadla
-        file: src/data/cena.json
-        format: json
-        fields:
+          # --- Hero ---
           - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Cena 1 — typ", name: price1_typ, widget: string }
-          - { label: "Cena 1 — rozsah", name: price1_rozsah, widget: string }
-          - { label: "Cena 1 — poznámka", name: price1_poznamka, widget: string }
-          - { label: "Cena 1 — výhoda 1", name: price1_body1, widget: string }
-          - { label: "Cena 1 — výhoda 2", name: price1_body2, widget: string }
-          - { label: "Cena 1 — výhoda 3", name: price1_body3, widget: string }
-          - { label: "Cena 2 — typ", name: price2_typ, widget: string }
-          - { label: "Cena 2 — rozsah", name: price2_rozsah, widget: string }
-          - { label: "Cena 2 — poznámka", name: price2_poznamka, widget: string }
-          - { label: "Cena 2 — výhoda 1", name: price2_body1, widget: string }
-          - { label: "Cena 2 — výhoda 2", name: price2_body2, widget: string }
-          - { label: "Cena 2 — výhoda 3", name: price2_body3, widget: string }
-          - { label: "Cena 3 — typ", name: price3_typ, widget: string }
-          - { label: "Cena 3 — rozsah", name: price3_rozsah, widget: string }
-          - { label: "Cena 3 — poznámka", name: price3_poznamka, widget: string }
-          - { label: "Cena 3 — výhoda 1", name: price3_body1, widget: string }
-          - { label: "Cena 3 — výhoda 2", name: price3_body2, widget: string }
-          - { label: "Cena 3 — výhoda 3", name: price3_body3, widget: string }
-          - { label: "Faktory — nadpis", name: factors_headline, widget: string }
-          - { label: "Faktor 1 — název", name: factor1_title, widget: string }
-          - { label: "Faktor 1 — popis", name: factor1_desc, widget: text }
-          - { label: "Faktor 2 — název", name: factor2_title, widget: string }
-          - { label: "Faktor 2 — popis", name: factor2_desc, widget: text }
-          - { label: "Faktor 3 — název", name: factor3_title, widget: string }
-          - { label: "Faktor 3 — popis", name: factor3_desc, widget: text }
-          - { label: "Faktor 4 — název", name: factor4_title, widget: string }
-          - { label: "Faktor 4 — popis", name: factor4_desc, widget: text }
-          - { label: "Návratnost — štítek", name: roi_label, widget: string }
-          - { label: "Návratnost — nadpis", name: roi_headline, widget: string }
-          - { label: "Návratnost — roční úspora (štítek)", name: roi_annual_savings_label, widget: string }
-          - { label: "Návratnost — roční úspora", name: roi_annual_savings, widget: string }
-          - { label: "Návratnost — cena (štítek)", name: roi_price_label, widget: string }
-          - { label: "Návratnost — cena", name: roi_price, widget: string }
-          - { label: "Návratnost — dotace (štítek)", name: roi_dotace_label, widget: string }
-          - { label: "Návratnost — dotace", name: roi_dotace, widget: string }
-          - { label: "Návratnost — čistá investice (štítek)", name: roi_net_label, widget: string }
-          - { label: "Návratnost — čistá investice", name: roi_net, widget: string }
-          - { label: "Návratnost — období (štítek)", name: roi_payback_label, widget: string }
-          - { label: "Návratnost — období", name: roi_payback, widget: string }
-          - { label: "Návratnost — poznámka", name: roi_footnote, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
 
-      - name: dotace
-        label: Dotace
-        file: src/data/dotace.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Program 1 — název", name: program1_name, widget: string }
-          - { label: "Program 1 — částka", name: program1_castka, widget: string }
-          - { label: "Program 1 — popis", name: program1_desc, widget: text }
-          - { label: "Program 2 — název", name: program2_name, widget: string }
-          - { label: "Program 2 — částka", name: program2_castka, widget: string }
-          - { label: "Program 2 — popis", name: program2_desc, widget: text }
-          - { label: "Program 3 — název", name: program3_name, widget: string }
-          - { label: "Program 3 — částka", name: program3_castka, widget: string }
-          - { label: "Program 3 — popis", name: program3_desc, widget: text }
-          - { label: "Podmínky — nadpis", name: conditions_headline, widget: string }
-          - { label: "Podmínka 1 — název", name: condition1_title, widget: string }
-          - { label: "Podmínka 1 — popis", name: condition1_desc, widget: text }
-          - { label: "Podmínka 2 — název", name: condition2_title, widget: string }
-          - { label: "Podmínka 2 — popis", name: condition2_desc, widget: text }
-          - { label: "Podmínka 3 — název", name: condition3_title, widget: string }
-          - { label: "Podmínka 3 — popis", name: condition3_desc, widget: text }
-          - { label: "Podmínka 4 — název", name: condition4_title, widget: string }
-          - { label: "Podmínka 4 — popis", name: condition4_desc, widget: text }
-          - { label: "Proces — nadpis", name: process_headline, widget: string }
-          - { label: "Krok 1 — číslo", name: step1_krok, widget: string }
-          - { label: "Krok 1 — název", name: step1_title, widget: string }
-          - { label: "Krok 1 — popis", name: step1_desc, widget: text }
-          - { label: "Krok 2 — číslo", name: step2_krok, widget: string }
-          - { label: "Krok 2 — název", name: step2_title, widget: string }
-          - { label: "Krok 2 — popis", name: step2_desc, widget: text }
-          - { label: "Krok 3 — číslo", name: step3_krok, widget: string }
-          - { label: "Krok 3 — název", name: step3_title, widget: string }
-          - { label: "Krok 3 — popis", name: step3_desc, widget: text }
-          - { label: "Krok 4 — číslo", name: step4_krok, widget: string }
-          - { label: "Krok 4 — název", name: step4_title, widget: string }
-          - { label: "Krok 4 — popis", name: step4_desc, widget: text }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
-
-      - name: reference
-        label: Reference
-        file: src/data/reference.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Statistika 1 — číslo", name: stat1_num, widget: string }
-          - { label: "Statistika 1 — popis", name: stat1_label, widget: string }
-          - { label: "Statistika 2 — číslo", name: stat2_num, widget: string }
-          - { label: "Statistika 2 — popis", name: stat2_label, widget: string }
-          - { label: "Statistika 3 — číslo", name: stat3_num, widget: string }
-          - { label: "Statistika 3 — popis", name: stat3_label, widget: string }
-          - { label: "Statistika 4 — číslo", name: stat4_num, widget: string }
-          - { label: "Statistika 4 — popis", name: stat4_label, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
-          - label: "Reference"
-            name: references
+          # --- Kontaktní osoby ---
+          - label: "Kontaktní osoby"
+            name: contacts
             widget: list
             fields:
-              - { label: "Lokalita", name: lokalita, widget: string }
-              - { label: "Typ objektu", name: typ, widget: string }
-              - { label: "Systém", name: system, widget: string }
-              - { label: "Popis", name: popis, widget: text }
-              - { label: "Rok", name: rok, widget: string }
+              - { label: "Jméno", name: name, widget: string }
+              - { label: "Pozice / role", name: role, widget: string }
+              - { label: "Fotka", name: img, widget: image }
+              - { label: "Telefon (zobrazený)", name: phone, widget: string }
+              - { label: "Telefon (odkaz)", name: phone_href, widget: string }
+              - { label: "E-mail", name: email, widget: string }
 
-      - name: porovnani_nakladu
-        label: Porovnání nákladů
+          # --- Fakturační údaje ---
+          - { label: "Fakturace — nadpis", name: billing_headline, widget: string }
+          - { label: "Fakturace — popisek názvu", name: billing_name_label, widget: string }
+          - { label: "Fakturace — název firmy", name: billing_name, widget: string }
+          - { label: "Fakturace — popisek adresy", name: billing_address_label, widget: string }
+          - { label: "Fakturace — adresa", name: billing_address, widget: string }
+          - { label: "Fakturace — popisek IČO", name: billing_ico_label, widget: string }
+          - { label: "Fakturace — IČO", name: billing_ico, widget: string }
+          - { label: "Fakturace — popisek DIČ", name: billing_dico_label, widget: string }
+          - { label: "Fakturace — DIČ", name: billing_dico, widget: string }
+
+          # --- Adresa a mapa ---
+          - { label: "Popisek adresy", name: address_label, widget: string }
+          - { label: "Mapa — titulek", name: map_title, widget: string }
+
+  # ============================================================
+  # POPTÁVKA (poptavka.json)
+  # ============================================================
+  - name: poptavka
+    label: "Stránka Poptávka"
+    files:
+      - name: poptavka
+        label: "Poptávkový formulář"
+        file: src/data/poptavka.json
+        format: json
+        fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+
+          # --- Formulář — popisky a placeholdery ---
+          - { label: "Pole Jméno — popisek", name: label_jmeno, widget: string }
+          - { label: "Pole Jméno — placeholder", name: placeholder_jmeno, widget: string }
+          - { label: "Pole Telefon — popisek", name: label_telefon, widget: string }
+          - { label: "Pole Telefon — placeholder", name: placeholder_telefon, widget: string }
+          - { label: "Pole E-mail — popisek", name: label_email, widget: string }
+          - { label: "Pole E-mail — placeholder", name: placeholder_email, widget: string }
+          - { label: "Pole Objekt — popisek", name: label_objekt, widget: string }
+          - { label: "Pole Objekt — placeholder", name: placeholder_objekt, widget: string }
+          - label: "Pole Objekt — možnosti"
+            name: options_objekt
+            widget: list
+            field:
+              { label: "Možnost", name: option, widget: string }
+          - { label: "Pole Vytápění — popisek", name: label_vytapeni, widget: string }
+          - { label: "Pole Vytápění — placeholder", name: placeholder_vytapeni, widget: string }
+          - label: "Pole Vytápění — možnosti"
+            name: options_vytapeni
+            widget: list
+            field:
+              { label: "Možnost", name: option, widget: string }
+          - { label: "Pole Zpráva — popisek", name: label_zprava, widget: string }
+          - { label: "Pole Zpráva — placeholder", name: placeholder_zprava, widget: text }
+
+          # --- Souhlas a tlačítka ---
+          - { label: "Text souhlasu GDPR", name: souhlas_text, widget: text }
+          - { label: "Tlačítko odeslat", name: submit_button, widget: string }
+          - { label: "Tlačítko — stav odesílání", name: submit_loading, widget: string }
+
+          # --- Stav po odeslání ---
+          - { label: "Úspěch — nadpis", name: success_title, widget: string }
+          - { label: "Úspěch — text", name: success_text, widget: string }
+          - { label: "Chyba — text", name: error_text, widget: text }
+
+          # --- Sidebar ---
+          - { label: "Sidebar — nadpis", name: sidebar_title, widget: string }
+          - { label: "Sidebar — popisek telefonu", name: sidebar_telefon_label, widget: string }
+          - { label: "Sidebar — popisek e-mailu", name: sidebar_email_label, widget: string }
+          - { label: "Sidebar — popisek adresy", name: sidebar_adresa_label, widget: string }
+          - { label: "Sidebar — adresa (HTML)", name: sidebar_adresa, widget: markdown }
+          - { label: "Sidebar — nadpis výhod", name: sidebar_why_label, widget: string }
+          - label: "Sidebar — výhody"
+            name: sidebar_why_items
+            widget: list
+            field:
+              { label: "Výhoda", name: item, widget: string }
+
+  # ============================================================
+  # POROVNÁNÍ NÁKLADŮ (porovnani-nakladu.json)
+  # ============================================================
+  - name: porovnani-nakladu
+    label: "Stránka Porovnání nákladů"
+    files:
+      - name: porovnani-nakladu
+        label: "Porovnání nákladů na vytápění"
         file: src/data/porovnani-nakladu.json
         format: json
         fields:
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+
+          # --- Hero ---
           - { label: "Hero — nadpis", name: hero_title, widget: string }
           - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Poznámka", name: note_text, widget: text }
-          - { label: "Zdroj 1 — název", name: source1_zdroj, widget: string }
-          - { label: "Zdroj 1 — roční náklady", name: source1_rocni, widget: string }
-          - { label: "Zdroj 1 — poznámka", name: source1_poznamka, widget: string }
-          - { label: "Zdroj 2 — název", name: source2_zdroj, widget: string }
-          - { label: "Zdroj 2 — roční náklady", name: source2_rocni, widget: string }
-          - { label: "Zdroj 2 — poznámka", name: source2_poznamka, widget: string }
-          - { label: "Zdroj 2 — úspora s TČ", name: source2_uspory, widget: string }
-          - { label: "Zdroj 3 — název", name: source3_zdroj, widget: string }
-          - { label: "Zdroj 3 — roční náklady", name: source3_rocni, widget: string }
-          - { label: "Zdroj 3 — poznámka", name: source3_poznamka, widget: string }
-          - { label: "Zdroj 3 — úspora s TČ", name: source3_uspory, widget: string }
-          - { label: "Zdroj 4 — název", name: source4_zdroj, widget: string }
-          - { label: "Zdroj 4 — roční náklady", name: source4_rocni, widget: string }
-          - { label: "Zdroj 4 — poznámka", name: source4_poznamka, widget: string }
-          - { label: "Zdroj 4 — úspora s TČ", name: source4_uspory, widget: string }
+
+          # --- Poznámka ---
+          - { label: "Metodická poznámka", name: note_text, widget: text }
+          - { label: "Badge nejnižší náklady", name: highlight_badge, widget: string }
+          - { label: "Prefix úspory", name: savings_prefix, widget: string }
+
+          # --- Graf ---
           - { label: "Graf — nadpis", name: chart_headline, widget: string }
-          - { label: "10 let — štítek", name: tenyear_label, widget: string }
-          - { label: "10 let — nadpis", name: tenyear_headline, widget: string }
-          - { label: "10 let — položka 1 (popis)", name: tenyear1_label, widget: string }
-          - { label: "10 let — položka 1 (hodnota)", name: tenyear1_hodnota, widget: string }
-          - { label: "10 let — položka 2 (popis)", name: tenyear2_label, widget: string }
-          - { label: "10 let — položka 2 (hodnota)", name: tenyear2_hodnota, widget: string }
-          - { label: "10 let — položka 3 (popis)", name: tenyear3_label, widget: string }
-          - { label: "10 let — položka 3 (hodnota)", name: tenyear3_hodnota, widget: string }
-          - { label: "10 let — poznámka", name: tenyear_footnote, widget: string }
+          - label: "Graf — položky"
+            name: chart_items
+            widget: list
+            fields:
+              - { label: "Palivo", name: label, widget: string }
+              - { label: "Roční náklad (Kč)", name: value, widget: number }
+              - { label: "CSS barva", name: color, widget: string }
+              - { label: "Poznámka", name: poznamka, widget: string }
+              - { label: "Úspora oproti TČ", name: uspory, widget: string, required: false }
+              - { label: "Zvýraznit?", name: highlight, widget: boolean, required: false }
+
+          # --- Faktory ---
           - { label: "Faktory — nadpis", name: factors_headline, widget: string }
           - { label: "Faktor 1 — název", name: factor1_title, widget: string }
           - { label: "Faktor 1 — popis", name: factor1_desc, widget: text }
@@ -279,428 +684,107 @@ collections:
           - { label: "Faktor 3 — popis", name: factor3_desc, widget: text }
           - { label: "Faktor 4 — název", name: factor4_title, widget: string }
           - { label: "Faktor 4 — popis", name: factor4_desc, widget: text }
+
+          # --- Nástroje ---
+          - { label: "Nástroje — nadpis", name: tools_headline, widget: string }
+          - { label: "Nástroj 1 — název", name: tool1_title, widget: string }
+          - { label: "Nástroj 1 — popis", name: tool1_desc, widget: text }
+          - { label: "Nástroj 1 — CTA", name: tool1_cta, widget: string }
+          - { label: "Nástroj 2 — název", name: tool2_title, widget: string }
+          - { label: "Nástroj 2 — popis", name: tool2_desc, widget: text }
+          - { label: "Nástroj 2 — CTA", name: tool2_cta, widget: string }
+
+          # --- CTA ---
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
           - { label: "CTA — tlačítko", name: cta_button, widget: string }
 
-      - name: katalog
-        label: Katalog tepelných čerpadel
-        file: src/data/katalog.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Tabulka — poznámka", name: table_footnote, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
-          - label: "Produkty"
-            name: produkty
-            widget: list
-            fields:
-              - { label: "Model", name: model, widget: string }
-              - { label: "Typ", name: typ, widget: string }
-              - { label: "Výkon", name: vykon, widget: string }
-              - { label: "COP", name: cop, widget: string }
-              - { label: "Vhodnost", name: vhodnost, widget: string }
-              - { label: "Cena", name: cena, widget: string }
-
-  - name: tepelna_cerpadla
-    label: Tepelná čerpadla
+  # ============================================================
+  # CENOVÁ KALKULACE (cenova-kalkulace.json)
+  # ============================================================
+  - name: cenova-kalkulace
+    label: "Stránka Cenová kalkulace"
     files:
-      - name: vzduch_voda
-        label: Vzduch – voda
-        file: src/data/vzduch-voda.json
+      - name: cenova-kalkulace
+        label: "Cenová kalkulace — formulář"
+        file: src/data/cenova-kalkulace.json
         format: json
         fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Jak funguje — štítek", name: how_label, widget: string }
-          - { label: "Jak funguje — nadpis", name: how_headline, widget: string }
-          - { label: "Jak funguje — odstavec 1", name: how_text1, widget: text }
-          - { label: "Jak funguje — odstavec 2", name: how_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Parametry — štítek", name: params_label, widget: string }
-          - { label: "Parametr 1 — název", name: param1_label, widget: string }
-          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
-          - { label: "Parametr 2 — název", name: param2_label, widget: string }
-          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
-          - { label: "Parametr 3 — název", name: param3_label, widget: string }
-          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
-          - { label: "Parametr 4 — název", name: param4_label, widget: string }
-          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
-          - { label: "Parametr 5 — název", name: param5_label, widget: string }
-          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
-          - { label: "Parametr 6 — název", name: param6_label, widget: string }
-          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
-          - { label: "Cena — nadpis", name: price_headline, widget: string }
-          - { label: "Cena — hodnota", name: price_value, widget: string }
-          - { label: "Cena — poznámka", name: price_note, widget: string }
-          - { label: "Cena — odkaz na dotace", name: price_dotace_link, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko 1", name: cta_button1, widget: string }
-          - { label: "CTA — tlačítko 2", name: cta_button2, widget: string }
+          # --- SEO ---
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
 
-      - name: zeme_voda
-        label: Země – voda
-        file: src/data/zeme-voda.json
-        format: json
-        fields:
+          # --- Hero ---
           - { label: "Hero — nadpis", name: hero_title, widget: string }
           - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Jak funguje — štítek", name: how_label, widget: string }
-          - { label: "Jak funguje — nadpis", name: how_headline, widget: string }
-          - { label: "Jak funguje — odstavec 1", name: how_text1, widget: text }
-          - { label: "Jak funguje — odstavec 2", name: how_text2, widget: text }
-          - { label: "Možnost 1 — název", name: option1_title, widget: string }
-          - { label: "Možnost 1 — popis", name: option1_desc, widget: text }
-          - { label: "Možnost 2 — název", name: option2_title, widget: string }
-          - { label: "Možnost 2 — popis", name: option2_desc, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Parametry — štítek", name: params_label, widget: string }
-          - { label: "Parametr 1 — název", name: param1_label, widget: string }
-          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
-          - { label: "Parametr 2 — název", name: param2_label, widget: string }
-          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
-          - { label: "Parametr 3 — název", name: param3_label, widget: string }
-          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
-          - { label: "Parametr 4 — název", name: param4_label, widget: string }
-          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
-          - { label: "Parametr 5 — název", name: param5_label, widget: string }
-          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
-          - { label: "Parametr 6 — název", name: param6_label, widget: string }
-          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
-          - { label: "Cena — nadpis", name: price_headline, widget: string }
-          - { label: "Cena — hodnota", name: price_value, widget: string }
-          - { label: "Cena — poznámka", name: price_note, widget: string }
-          - { label: "Cena — odkaz na dotace", name: price_dotace_link, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
 
-      - name: voda_voda
-        label: Voda – voda
-        file: src/data/voda-voda.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Jak funguje — štítek", name: how_label, widget: string }
-          - { label: "Jak funguje — nadpis", name: how_headline, widget: string }
-          - { label: "Jak funguje — odstavec 1", name: how_text1, widget: text }
-          - { label: "Jak funguje — odstavec 2", name: how_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Parametry — štítek", name: params_label, widget: string }
-          - { label: "Parametr 1 — název", name: param1_label, widget: string }
-          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
-          - { label: "Parametr 2 — název", name: param2_label, widget: string }
-          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
-          - { label: "Parametr 3 — název", name: param3_label, widget: string }
-          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
-          - { label: "Parametr 4 — název", name: param4_label, widget: string }
-          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
-          - { label: "Parametr 5 — název", name: param5_label, widget: string }
-          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
-          - { label: "Parametr 6 — název", name: param6_label, widget: string }
-          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
-          - { label: "Upozornění — nadpis", name: warning_title, widget: string }
-          - { label: "Upozornění — text", name: warning_text, widget: text }
-          - { label: "Cena — nadpis", name: price_headline, widget: string }
-          - { label: "Cena — hodnota", name: price_value, widget: string }
-          - { label: "Cena — poznámka", name: price_note, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Průběh ---
+          - { label: "Progress — šablona (použijte {n} a {total})", name: progress_template, widget: string }
+          - { label: "Tlačítko Zpět", name: back_button, widget: string }
 
-  - name: navrh_reseni
-    label: Návrh řešení
-    files:
-      - name: novostavba
-        label: Novostavba
-        file: src/data/novostavba.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Proč hned — štítek", name: why_label, widget: string }
-          - { label: "Proč hned — nadpis", name: why_headline, widget: string }
-          - { label: "Proč hned — odstavec 1", name: why_text1, widget: text }
-          - { label: "Proč hned — odstavec 2", name: why_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Doporučení — nadpis", name: recommended_headline, widget: string }
-          - { label: "Prvek 1 — číslo", name: rec1_cislo, widget: string }
-          - { label: "Prvek 1 — název", name: rec1_nazev, widget: string }
-          - { label: "Prvek 1 — popis", name: rec1_popis, widget: text }
-          - { label: "Prvek 2 — číslo", name: rec2_cislo, widget: string }
-          - { label: "Prvek 2 — název", name: rec2_nazev, widget: string }
-          - { label: "Prvek 2 — popis", name: rec2_popis, widget: text }
-          - { label: "Prvek 3 — číslo", name: rec3_cislo, widget: string }
-          - { label: "Prvek 3 — název", name: rec3_nazev, widget: string }
-          - { label: "Prvek 3 — popis", name: rec3_popis, widget: text }
-          - { label: "Prvek 4 — číslo", name: rec4_cislo, widget: string }
-          - { label: "Prvek 4 — název", name: rec4_nazev, widget: string }
-          - { label: "Prvek 4 — popis", name: rec4_popis, widget: text }
-          - { label: "Tip — štítek", name: tip_label, widget: string }
-          - { label: "Tip — text", name: tip_text, widget: text }
-          - { label: "Tip — odkaz", name: tip_link, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Krok 1: Typ objektu ---
+          - { label: "Krok 1 — nadpis", name: step1_title, widget: string }
+          - { label: "Krok 1 — popis", name: step1_desc, widget: text }
+          - { label: "Krok 1 — možnost 1 název", name: step1_opt1_label, widget: string }
+          - { label: "Krok 1 — možnost 1 popis", name: step1_opt1_desc, widget: string }
+          - { label: "Krok 1 — možnost 2 název", name: step1_opt2_label, widget: string }
+          - { label: "Krok 1 — možnost 2 popis", name: step1_opt2_desc, widget: string }
 
-      - name: stavajici_dum
-        label: Stávající dům
-        file: src/data/stavajici-dum.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Porovnání — nadpis", name: comparison_headline, widget: string }
-          - { label: "Porovnání 1 — zdroj", name: comp1_zdroj, widget: string }
-          - { label: "Porovnání 1 — náklady", name: comp1_naklady, widget: string }
-          - { label: "Porovnání 2 — zdroj", name: comp2_zdroj, widget: string }
-          - { label: "Porovnání 2 — náklady", name: comp2_naklady, widget: string }
-          - { label: "Porovnání 3 — zdroj", name: comp3_zdroj, widget: string }
-          - { label: "Porovnání 3 — náklady", name: comp3_naklady, widget: string }
-          - { label: "Porovnání — poznámka", name: comparison_footnote, widget: string }
-          - { label: "Tip — štítek", name: tip_label, widget: string }
-          - { label: "Tip — text", name: tip_text, widget: text }
-          - { label: "Tip — odkaz", name: tip_link, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Krok 2: Ohřev TUV ---
+          - { label: "Krok 2 — nadpis", name: step2_title, widget: string }
+          - { label: "Krok 2 — popis", name: step2_desc, widget: text }
+          - { label: "Krok 2 — možnost 1 název", name: step2_opt1_label, widget: string }
+          - { label: "Krok 2 — možnost 1 popis", name: step2_opt1_desc, widget: string }
+          - { label: "Krok 2 — možnost 2 název", name: step2_opt2_label, widget: string }
+          - { label: "Krok 2 — možnost 2 popis", name: step2_opt2_desc, widget: string }
 
-      - name: velky_vykon
-        label: Velký výkon
-        file: src/data/velky-vykon.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Segment 1 — typ", name: segment1_typ, widget: string }
-          - { label: "Segment 1 — popis", name: segment1_popis, widget: text }
-          - { label: "Segment 2 — typ", name: segment2_typ, widget: string }
-          - { label: "Segment 2 — popis", name: segment2_popis, widget: text }
-          - { label: "Segment 3 — typ", name: segment3_typ, widget: string }
-          - { label: "Segment 3 — popis", name: segment3_popis, widget: text }
-          - { label: "Parametry — štítek", name: params_label, widget: string }
-          - { label: "Parametr 1 — název", name: param1_label, widget: string }
-          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
-          - { label: "Parametr 2 — název", name: param2_label, widget: string }
-          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
-          - { label: "Parametr 3 — název", name: param3_label, widget: string }
-          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
-          - { label: "Parametr 4 — název", name: param4_label, widget: string }
-          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
-          - { label: "Parametr 5 — název", name: param5_label, widget: string }
-          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
-          - { label: "Parametr 6 — název", name: param6_label, widget: string }
-          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
-          - { label: "Nabídka — nadpis", name: offer_headline, widget: string }
-          - { label: "Nabídka — položka 1", name: offer_item1, widget: string }
-          - { label: "Nabídka — položka 2", name: offer_item2, widget: string }
-          - { label: "Nabídka — položka 3", name: offer_item3, widget: string }
-          - { label: "Nabídka — položka 4", name: offer_item4, widget: string }
-          - { label: "Nabídka — položka 5", name: offer_item5, widget: string }
-          - { label: "Nabídka — položka 6", name: offer_item6, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko 1", name: cta_button1, widget: string }
-          - { label: "CTA — tlačítko 2 (telefon)", name: cta_button2, widget: string }
+          # --- Krok 3: Topný systém ---
+          - { label: "Krok 3 — nadpis", name: step3_title, widget: string }
+          - { label: "Krok 3 — popis", name: step3_desc, widget: text }
+          - { label: "Krok 3 — možnost 1", name: step3_opt1_label, widget: string }
+          - { label: "Krok 3 — možnost 2", name: step3_opt2_label, widget: string }
+          - { label: "Krok 3 — možnost 3", name: step3_opt3_label, widget: string }
 
-  - name: chytre_funkce
-    label: Chytré funkce
-    files:
-      - name: ovladani_systemu
-        label: Ovládání systému
-        file: src/data/ovladani-systemu.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Funkce řídicí jednotky — štítek", name: functions_label, widget: string }
-          - { label: "Funkce 1", name: function1, widget: string }
-          - { label: "Funkce 2", name: function2, widget: string }
-          - { label: "Funkce 3", name: function3, widget: string }
-          - { label: "Funkce 4", name: function4, widget: string }
-          - { label: "Funkce 5", name: function5, widget: string }
-          - { label: "Funkce 6", name: function6, widget: string }
-          - { label: "Funkce 7", name: function7, widget: string }
-          - { label: "Funkce 8", name: function8, widget: string }
-          - { label: "Ovládací panel — nadpis", name: panel_headline, widget: string }
-          - { label: "Ovládací panel — text", name: panel_text, widget: text }
-          - { label: "Ovládací panel — odkaz", name: panel_link, widget: string }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Krok 4: Typ TČ ---
+          - { label: "Krok 4 — nadpis", name: step4_title, widget: string }
+          - { label: "Krok 4 — popis", name: step4_desc, widget: text }
+          - { label: "Krok 4 — možnost 1 název", name: step4_opt1_label, widget: string }
+          - { label: "Krok 4 — možnost 1 popis", name: step4_opt1_desc, widget: string }
+          - { label: "Krok 4 — možnost 2 název", name: step4_opt2_label, widget: string }
+          - { label: "Krok 4 — možnost 2 popis", name: step4_opt2_desc, widget: string }
+          - { label: "Krok 4 — možnost 3 název", name: step4_opt3_label, widget: string }
+          - { label: "Krok 4 — možnost 3 popis", name: step4_opt3_desc, widget: string }
+          - { label: "Krok 4 — možnost 4 název", name: step4_opt4_label, widget: string }
+          - { label: "Krok 4 — možnost 4 popis", name: step4_opt4_desc, widget: string }
+          - { label: "Krok 4 — nápověda název", name: step4_help_label, widget: string }
+          - { label: "Krok 4 — nápověda popis", name: step4_help_desc, widget: string }
 
-      - name: fotovoltaika
-        label: Fotovoltaika
-        file: src/data/fotovoltaika.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Příklad — štítek", name: example_label, widget: string }
-          - { label: "Příklad 1 — popis", name: example1_label, widget: string }
-          - { label: "Příklad 1 — hodnota", name: example1_value, widget: string }
-          - { label: "Příklad 2 — popis", name: example2_label, widget: string }
-          - { label: "Příklad 2 — hodnota", name: example2_value, widget: string }
-          - { label: "Příklad 3 — popis", name: example3_label, widget: string }
-          - { label: "Příklad 3 — hodnota", name: example3_value, widget: string }
-          - { label: "Příklad — poznámka", name: example_footnote, widget: string }
-          - { label: "Připravenost — nadpis", name: ready_headline, widget: string }
-          - { label: "Připravenost — text", name: ready_text, widget: text }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Krok 5: Parametry domu ---
+          - { label: "Krok 5 — nadpis", name: step5_title, widget: string }
+          - { label: "Krok 5 — popis", name: step5_desc, widget: text }
+          - { label: "Krok 5 — popisek tepelné ztráty", name: step5_ztrata_label, widget: string }
+          - { label: "Krok 5 — text 'Nevím'", name: step5_nevis_label, widget: string }
+          - { label: "Krok 5 — popisek plochy", name: step5_plocha_label, widget: string }
+          - { label: "Krok 5 — tlačítko pokračovat", name: step5_continue, widget: string }
 
-      - name: online_ovladani
-        label: Online ovládání
-        file: src/data/online-ovladani.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "Aplikace — štítek", name: app_label, widget: string }
-          - { label: "Box — nadpis", name: box_headline, widget: string }
-          - { label: "Box — text", name: box_text, widget: text }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Krok 6: Kontaktní údaje ---
+          - { label: "Krok 6 — nadpis", name: step6_title, widget: string }
+          - { label: "Krok 6 — popis", name: step6_desc, widget: text }
+          - { label: "Krok 6 — popisek jméno", name: step6_label_jmeno, widget: string }
+          - { label: "Krok 6 — placeholder jméno", name: step6_placeholder_jmeno, widget: string }
+          - { label: "Krok 6 — popisek telefon", name: step6_label_telefon, widget: string }
+          - { label: "Krok 6 — placeholder telefon", name: step6_placeholder_telefon, widget: string }
+          - { label: "Krok 6 — popisek e-mail", name: step6_label_email, widget: string }
+          - { label: "Krok 6 — placeholder e-mail", name: step6_placeholder_email, widget: string }
+          - { label: "Krok 6 — popisek obec", name: step6_label_obec, widget: string }
+          - { label: "Krok 6 — placeholder obec", name: step6_placeholder_obec, widget: string }
+          - { label: "Krok 6 — souhlas", name: step6_souhlas, widget: text }
 
-      - name: inverter
-        label: Technologie Inverter
-        file: src/data/inverter.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Statistiky — štítek", name: stats_label, widget: string }
-          - { label: "Statistika 1 — hodnota", name: stat1_hodnota, widget: string }
-          - { label: "Statistika 1 — popis", name: stat1_popis, widget: string }
-          - { label: "Statistika 2 — hodnota", name: stat2_hodnota, widget: string }
-          - { label: "Statistika 2 — popis", name: stat2_popis, widget: string }
-          - { label: "Statistika 3 — hodnota", name: stat3_hodnota, widget: string }
-          - { label: "Statistika 3 — popis", name: stat3_popis, widget: string }
-          - { label: "Box — nadpis", name: box_headline, widget: string }
-          - { label: "Box — text", name: box_text, widget: text }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
-
-      - name: desuperheater
-        label: Desuperheater
-        file: src/data/desuperheater.json
-        format: json
-        fields:
-          - { label: "Hero — nadpis", name: hero_title, widget: string }
-          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
-          - { label: "Úvod — štítek", name: intro_label, widget: string }
-          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
-          - { label: "Úvod — odstavec 1", name: intro_text1, widget: text }
-          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
-          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
-          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
-          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
-          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
-          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
-          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
-          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
-          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
-          - { label: "ROI — štítek", name: roi_label, widget: string }
-          - { label: "ROI — roční úspora (štítek)", name: roi_savings_label, widget: string }
-          - { label: "ROI — roční úspora", name: roi_savings, widget: string }
-          - { label: "ROI — letní měsíce (štítek)", name: roi_summer_label, widget: string }
-          - { label: "ROI — letní měsíce", name: roi_summer, widget: string }
-          - { label: "ROI — příplatek (štítek)", name: roi_cost_label, widget: string }
-          - { label: "ROI — příplatek", name: roi_cost, widget: string }
-          - { label: "ROI — návratnost (štítek)", name: roi_payback_label, widget: string }
-          - { label: "ROI — návratnost", name: roi_payback, widget: string }
-          - { label: "Box — nadpis", name: box_headline, widget: string }
-          - { label: "Box — text", name: box_text, widget: text }
-          - { label: "CTA — nadpis", name: cta_headline, widget: string }
-          - { label: "CTA — text", name: cta_text, widget: text }
-          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          # --- Odeslání a výsledek ---
+          - { label: "Tlačítko odeslat", name: submit_button, widget: string }
+          - { label: "Tlačítko — stav odesílání", name: submit_loading, widget: string }
+          - { label: "Chyba — povinná pole", name: error_required, widget: string }
+          - { label: "Chyba — odeslání", name: error_send, widget: text }
+          - { label: "Úspěch — nadpis", name: success_title, widget: string }
+          - { label: "Úspěch — text", name: success_text, widget: text }
+          - { label: "Úspěch — odkaz zpět", name: success_back, widget: string }
