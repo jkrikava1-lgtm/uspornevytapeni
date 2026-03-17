@@ -81,6 +81,9 @@ import data from '../../data/velky-vykon.json';
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         {data.related_items.map(item => (
           <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
+            <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-3 group-hover:bg-gray-100 transition-colors text-2xl">
+              {item.emoji}
+            </div>
             <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
             <p class="text-sm text-charcoal-500">{item.desc}</p>
           </a>

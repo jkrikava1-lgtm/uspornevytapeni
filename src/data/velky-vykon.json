@@ -39,8 +39,8 @@
   "cta_button2": "+420 777 724 573",
   "related_headline": "Typy velkých tepelných čerpadel",
   "related_items": [
-    { "href": "/navrh-reseni/jednokompresorova", "title": "Jednokompresorová TČ", "desc": "Výkonné jednotky až 45 kW v jednokompresorovém provedení." },
-    { "href": "/navrh-reseni/dvoukompresorova", "title": "Dvoukompresorová TČ", "desc": "Prakticky dvě čerpadla v jednom — kaskádní provoz kompresorů." },
-    { "href": "/navrh-reseni/kaskady", "title": "Kaskády TČ", "desc": "Pro výkony nad 35 kW — prakticky bez omezení." }
+    { "href": "/navrh-reseni/jednokompresorova", "title": "Jednokompresorov\u00e1 T\u010c", "desc": "V\u00fdkonn\u00e9 jednotky a\u017e 45 kW v jednokompresorov\u00e9m proveden\u00ed.", "emoji": "1\ufe0f\u20e3" },
+    { "href": "/navrh-reseni/dvoukompresorova", "title": "Dvoukompresorov\u00e1 T\u010c", "desc": "Prakticky dv\u011b \u010derpadla v jednom \u2014 kask\u00e1dn\u00ed provoz kompresor\u016f.", "emoji": "2\ufe0f\u20e3" },
+    { "href": "/navrh-reseni/kaskady", "title": "Kask\u00e1dy T\u010c", "desc": "Pro v\u00fdkony nad 35 kW \u2014 prakticky bez omezen\u00ed.", "emoji": "\ud83d\udd17" }
   ]
 }
