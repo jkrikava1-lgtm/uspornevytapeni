@@ -67,61 +67,27 @@ import data from '../data/cena.json';
         ))}
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.factors_headline}</h2>
-          <div class="space-y-4">
-            {[
-              { title: data.factor1_title, desc: data.factor1_desc },
-              { title: data.factor2_title, desc: data.factor2_desc },
-              { title: data.factor3_title, desc: data.factor3_desc },
-              { title: data.factor4_title, desc: data.factor4_desc },
-            ].map(item => (
-              <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
-                <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
-                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                </div>
-                <div>
-                  <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
-                  <div class="text-sm text-charcoal-500 mt-0.5">{item.desc}</div>
-                </div>
+      <div>
+        <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.factors_headline}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            { title: data.factor1_title, desc: data.factor1_desc },
+            { title: data.factor2_title, desc: data.factor2_desc },
+            { title: data.factor3_title, desc: data.factor3_desc },
+            { title: data.factor4_title, desc: data.factor4_desc },
+          ].map(item => (
+            <div class="flex gap-4 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="w-8 h-8 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div class="bg-navy-700 rounded-2xl p-8 text-white">
-          <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.roi_label}</div>
-          <h3 class="text-xl font-extrabold mb-6">{data.roi_headline}</h3>
-          <div class="space-y-5">
-            <div>
-              <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">{data.roi_annual_savings_label}</span>
-                <span class="font-bold">{data.roi_annual_savings}</span>
-              </div>
-              <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">{data.roi_price_label}</span>
-                <span class="font-bold">{data.roi_price}</span>
-              </div>
-              <div class="flex justify-between text-sm mb-2">
-                <span class="text-navy-300">{data.roi_dotace_label}</span>
-                <span class="font-bold text-brand-400">{data.roi_dotace}</span>
-              </div>
-              <div class="border-t border-navy-600 pt-3 mt-3">
-                <div class="flex justify-between text-sm">
-                  <span class="text-navy-300">{data.roi_net_label}</span>
-                  <span class="font-bold text-white">{data.roi_net}</span>
-                </div>
-                <div class="flex justify-between text-sm mt-1">
-                  <span class="text-navy-300">{data.roi_payback_label}</span>
-                  <span class="font-extrabold text-brand-400 text-lg">{data.roi_payback}</span>
-                </div>
+              <div>
+                <div class="font-semibold text-charcoal-900 text-sm">{item.title}</div>
+                <div class="text-sm text-charcoal-500 mt-0.5">{item.desc}</div>
               </div>
             </div>
-          </div>
-          <p class="text-xs text-navy-400 mt-6">{data.roi_footnote}</p>
+          ))}
         </div>
       </div>
     </div>
