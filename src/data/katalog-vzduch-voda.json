@@ -153,11 +153,8 @@
       ],
       "showPowerGrid": false,
       "products": [
-        { "model": "BoxAir 60I (Inverter)", "vykon": "10–35 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf" },
-        { "model": "BoxAir 60IS (Inverter)", "vykon": "10–35 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technick\u00fd_list_ba60is_14511_ehpa.pdf" },
-        { "model": "BoxAir 75Z", "vykon": "30,8 kW", "cop": "4,0", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba75z_14511_032018.pdf" },
-        { "model": "EasyMaster 60Z", "vykon": "24,6 kW", "cop": "4,1", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em60z_14511.pdf" },
-        { "model": "EasyMaster 75Z", "vykon": "30,8 kW", "cop": "4,0", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em75z_14511.pdf" }
+        { "model": "BoxAir 60I (Inverter)", "vykon": "10\u201335 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf" },
+        { "model": "BoxAir 60IS (Inverter Split)", "vykon": "10\u201335 kW", "cop": "4,8", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technick\u00fd_list_ba60is_14511_ehpa.pdf" }
       ]
     }
   ],
