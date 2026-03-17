@@ -12,7 +12,7 @@
     "Nutné sledovat rosný bod — prostorové termostaty mají čidlo rosného bodu a při zvýšené vlhkosti automaticky zvýší teplotu chladící vody",
     "Podlahová krytina musí být vhodná pro chlazení: dlažba, kámen, lino, vinyl, lze i plovoucí podlahy"
   ],
-  "podlaha_quote": "\u201ePři venkovní teplotě 35 °C jsem udržel podlahovým chlazením vnitřní teplotu v domě na 23 °C.\u201c",
+  "podlaha_quote": "„Při venkovní teplotě 35 °C jsem udržel podlahovým chlazením vnitřní teplotu v domě na 23 °C.“",
   "fancoil_title": "Chlazení fancoilovými jednotkami",
   "fancoil_points": [
     "Nejefektivnější metoda pro plnohodnotné chlazení — stabilní teplota i v největších vedrech",
@@ -21,7 +21,7 @@
     "Pro cirkulaci chladící vody se použije měděné potrubí ke každému fancoilu",
     "Každý chladící okruh má vlastní oběhové čerpadlo",
     "Potřebné malé odpadní potrubí pro odvod kondenzované vlhkosti",
-    "Investice cca 20 000 Kč za místnost"
+    "Investice cca 30 000 Kč na místnost"
   ],
   "cta_button": "Zpracujte mi nabídku"
 }
