@@ -788,3 +788,1314 @@ collections:
           - { label: "Úspěch — nadpis", name: success_title, widget: string }
           - { label: "Úspěch — text", name: success_text, widget: text }
           - { label: "Úspěch — odkaz zpět", name: success_back, widget: string }
+
+  # ============================================================
+  # TEPELNÁ ČERPADLA — index (tepelna-cerpadla-index.json)
+  # ============================================================
+  - name: tepelna-cerpadla-index
+    label: "Tepelná čerpadla — rozcestník"
+    files:
+      - name: tepelna-cerpadla-index
+        label: "Tepelná čerpadla — rozcestník"
+        file: src/data/tepelna-cerpadla-index.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - label: "Karty typů TČ"
+            name: cards
+            widget: list
+            fields:
+              - { label: "Emoji", name: emoji, widget: string }
+              - { label: "Obrázek", name: image, widget: image }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "URL", name: href, widget: string }
+              - { label: "Gradient (CSS)", name: gradient, widget: string }
+          - { label: "Text odkazu na kartě", name: card_link_text, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # TEPELNÁ ČERPADLA — vzduch-voda (vzduch-voda.json)
+  # ============================================================
+  - name: vzduch-voda
+    label: "TČ Vzduch–voda"
+    files:
+      - name: vzduch-voda
+        label: "Tepelná čerpadla vzduch–voda"
+        file: src/data/vzduch-voda.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod — odstavec 1 (HTML)", name: intro_text1, widget: markdown }
+          - { label: "Úvod — odstavec 2", name: intro_text2, widget: text }
+          - label: "Úvod — odrážky"
+            name: intro_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Úvod — shrnutí", name: intro_summary, widget: text }
+          - { label: "Parametry — štítek", name: params_label, widget: string }
+          - label: "Parametry"
+            name: params
+            widget: list
+            fields:
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Hodnota", name: value, widget: string }
+          # --- Varianta 1: Venkovní kompakt ---
+          - { label: "Varianta 1 — název", name: variant1_title, widget: string }
+          - { label: "Varianta 1 — podnadpis", name: variant1_subtitle, widget: string }
+          - { label: "Varianta 1 — otázka", name: variant1_question, widget: string }
+          - label: "Varianta 1 — odrážky"
+            name: variant1_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 1 — umístění nadpis", name: variant1_placement_title, widget: string }
+          - { label: "Varianta 1 — umístění text", name: variant1_placement_text, widget: text }
+          - { label: "Varianta 1 — štítek modelu", name: variant1_model_label, widget: string }
+          - { label: "Varianta 1 — název modelu", name: variant1_model_name, widget: string }
+          - { label: "Varianta 1 — popis modelu", name: variant1_model_desc, widget: string }
+          - { label: "Varianta 1 — odkaz katalog", name: variant1_catalog_link, widget: string }
+          - { label: "Varianta 1 — CTA text", name: variant1_cta_text, widget: string }
+          - { label: "Varianta 1 — CTA tlačítko", name: variant1_cta_button, widget: string }
+          # --- Varianta 2: Split ---
+          - { label: "Varianta 2 — název", name: variant2_title, widget: string }
+          - { label: "Varianta 2 — podnadpis", name: variant2_subtitle, widget: string }
+          - { label: "Varianta 2 — venkovní nadpis", name: variant2_outdoor_title, widget: string }
+          - label: "Varianta 2 — venkovní odrážky"
+            name: variant2_outdoor_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 2 — propojení nadpis", name: variant2_connection_title, widget: string }
+          - label: "Varianta 2 — propojení odrážky"
+            name: variant2_connection_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 2 — vnitřní nadpis", name: variant2_indoor_title, widget: string }
+          - label: "Varianta 2 — vnitřní odrážky"
+            name: variant2_indoor_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 2 — extra nadpis", name: variant2_extra_title, widget: string }
+          - { label: "Varianta 2 — extra podnadpis", name: variant2_extra_subtitle, widget: string }
+          - label: "Varianta 2 — extra odrážky"
+            name: variant2_extra_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 2 — štítek modelů", name: variant2_model_label, widget: string }
+          - label: "Varianta 2 — názvy modelů"
+            name: variant2_model_names
+            widget: list
+            field:
+              { label: "Model", name: model, widget: string }
+          - { label: "Varianta 2 — popis modelů", name: variant2_model_desc, widget: string }
+          - { label: "Varianta 2 — odkaz katalog", name: variant2_catalog_link, widget: string }
+          - { label: "Varianta 2 — CTA text", name: variant2_cta_text, widget: string }
+          - { label: "Varianta 2 — CTA tlačítko", name: variant2_cta_button, widget: string }
+          # --- CTA ---
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — podtext", name: cta_subtext, widget: string }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # TEPELNÁ ČERPADLA — země-voda (zeme-voda.json)
+  # ============================================================
+  - name: zeme-voda
+    label: "TČ Země–voda"
+    files:
+      - name: zeme-voda
+        label: "Tepelná čerpadla země–voda"
+        file: src/data/zeme-voda.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - label: "Úvod — odrážky"
+            name: intro_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Úvod — shrnutí", name: intro_summary, widget: text }
+          # --- Varianta 1: Plošný kolektor ---
+          - { label: "Varianta 1 — název", name: variant1_title, widget: string }
+          - { label: "Varianta 1 — podnadpis", name: variant1_subtitle, widget: string }
+          - label: "Varianta 1 — odrážky"
+            name: variant1_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 1 — štítek parametrů", name: variant1_params_label, widget: string }
+          - label: "Varianta 1 — parametry"
+            name: variant1_params
+            widget: list
+            fields:
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Hodnota", name: value, widget: string }
+          - { label: "Varianta 1 — CTA text", name: variant1_cta_text, widget: string }
+          - { label: "Varianta 1 — CTA tlačítko", name: variant1_cta_button, widget: string }
+          # --- Varianta 2: Vrt ---
+          - { label: "Varianta 2 — název", name: variant2_title, widget: string }
+          - { label: "Varianta 2 — podnadpis", name: variant2_subtitle, widget: string }
+          - label: "Varianta 2 — odrážky"
+            name: variant2_bullets
+            widget: list
+            field:
+              { label: "Odrážka", name: bullet, widget: string }
+          - { label: "Varianta 2 — štítek parametrů", name: variant2_params_label, widget: string }
+          - label: "Varianta 2 — parametry"
+            name: variant2_params
+            widget: list
+            fields:
+              - { label: "Popisek", name: label, widget: string }
+              - { label: "Hodnota", name: value, widget: string }
+          - { label: "Varianta 2 — CTA text", name: variant2_cta_text, widget: string }
+          - { label: "Varianta 2 — CTA tlačítko", name: variant2_cta_button, widget: string }
+          # --- CTA ---
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # TEPELNÁ ČERPADLA — voda-voda (voda-voda.json)
+  # ============================================================
+  - name: voda-voda
+    label: "TČ Voda–voda"
+    files:
+      - name: voda-voda
+        label: "Tepelná čerpadla voda–voda"
+        file: src/data/voda-voda.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Jak to funguje — štítek", name: how_label, widget: string }
+          - { label: "Jak to funguje — nadpis", name: how_headline, widget: string }
+          - { label: "Jak to funguje — text 1", name: how_text1, widget: text }
+          - { label: "Jak to funguje — text 2", name: how_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Parametry — štítek", name: params_label, widget: string }
+          - { label: "Parametr 1 — popisek", name: param1_label, widget: string }
+          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
+          - { label: "Parametr 2 — popisek", name: param2_label, widget: string }
+          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
+          - { label: "Parametr 3 — popisek", name: param3_label, widget: string }
+          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
+          - { label: "Parametr 4 — popisek", name: param4_label, widget: string }
+          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
+          - { label: "Parametr 5 — popisek", name: param5_label, widget: string }
+          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
+          - { label: "Parametr 6 — popisek", name: param6_label, widget: string }
+          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
+          - { label: "Upozornění — nadpis", name: warning_title, widget: string }
+          - { label: "Upozornění — text", name: warning_text, widget: text }
+          - { label: "Cena vrtu — nadpis", name: price_headline, widget: string }
+          - { label: "Cena vrtu — hodnota", name: price_value, widget: string }
+          - { label: "Cena vrtu — poznámka", name: price_note, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — index (chytre-funkce-index.json)
+  # ============================================================
+  - name: chytre-funkce-index
+    label: "Chytré funkce — rozcestník"
+    files:
+      - name: chytre-funkce-index
+        label: "Chytré funkce — rozcestník"
+        file: src/data/chytre-funkce-index.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - label: "Karty funkcí"
+            name: cards
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Ikona (SVG path)", name: icon, widget: string }
+          - { label: "Text odkazu na kartě", name: card_link_text, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — ovládání systému (ovladani-systemu.json)
+  # ============================================================
+  - name: ovladani-systemu
+    label: "Chytré funkce — Ovládání systému"
+    files:
+      - name: ovladani-systemu
+        label: "Ovládání systému"
+        file: src/data/ovladani-systemu.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text (HTML)", name: intro_text, widget: markdown }
+          - { label: "Úvod — obrázek src", name: intro_image_src, widget: image }
+          - { label: "Úvod — obrázek alt", name: intro_image_alt, widget: string }
+          - label: "Otázky a odpovědi"
+            name: questions
+            widget: list
+            fields:
+              - { label: "Otázka", name: question, widget: string }
+              - { label: "Odpověď (HTML)", name: answer, widget: markdown }
+              - { label: "Odpověď 2 (volitelná)", name: answer2, widget: text, required: false }
+              - { label: "Callout (volitelný)", name: callout, widget: string, required: false }
+              - { label: "Příklad (volitelný)", name: example, widget: string, required: false }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — online ovládání (online-ovladani.json)
+  # ============================================================
+  - name: online-ovladani
+    label: "Chytré funkce — Online ovládání"
+    files:
+      - name: online-ovladani
+        label: "Online ovládání"
+        file: src/data/online-ovladani.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Aplikace — štítek", name: app_label, widget: string }
+          - label: "Funkce aplikace"
+            name: app_features
+            widget: list
+            fields:
+              - { label: "Ikona (emoji)", name: icon, widget: string }
+              - { label: "Text", name: text, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — inverter (inverter.json)
+  # ============================================================
+  - name: inverter
+    label: "Chytré funkce — Inverter"
+    files:
+      - name: inverter
+        label: "Technologie Inverter"
+        file: src/data/inverter.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Statistiky — štítek", name: stats_label, widget: string }
+          - { label: "Stat 1 — hodnota", name: stat1_hodnota, widget: string }
+          - { label: "Stat 1 — popis", name: stat1_popis, widget: string }
+          - { label: "Stat 2 — hodnota", name: stat2_hodnota, widget: string }
+          - { label: "Stat 2 — popis", name: stat2_popis, widget: string }
+          - { label: "Stat 3 — hodnota", name: stat3_hodnota, widget: string }
+          - { label: "Stat 3 — popis", name: stat3_popis, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "On/Off — nadpis", name: onoff_title, widget: string }
+          - label: "On/Off — body"
+            name: onoff_items
+            widget: list
+            field:
+              { label: "Bod", name: item, widget: string }
+          - { label: "Inverter — nadpis", name: inverter_title, widget: string }
+          - label: "Inverter — body"
+            name: inverter_items
+            widget: list
+            field:
+              { label: "Bod", name: item, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — desuperheater (desuperheater.json)
+  # ============================================================
+  - name: desuperheater
+    label: "Chytré funkce — Desuperheater"
+    files:
+      - name: desuperheater
+        label: "Desuperheater"
+        file: src/data/desuperheater.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "ROI — štítek", name: roi_label, widget: string }
+          - { label: "ROI — popisek úspory", name: roi_savings_label, widget: string }
+          - { label: "ROI — úspora", name: roi_savings, widget: string }
+          - { label: "ROI — popisek letní měsíce", name: roi_summer_label, widget: string }
+          - { label: "ROI — letní měsíce", name: roi_summer, widget: string }
+          - { label: "ROI — popisek ceny", name: roi_cost_label, widget: string }
+          - { label: "ROI — cena", name: roi_cost, widget: string }
+          - { label: "ROI — popisek návratnosti", name: roi_payback_label, widget: string }
+          - { label: "ROI — návratnost", name: roi_payback, widget: string }
+          - { label: "Box — nadpis", name: box_headline, widget: string }
+          - { label: "Box — text", name: box_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # CHYTRÉ FUNKCE — fotovoltaika (fotovoltaika.json)
+  # ============================================================
+  - name: fotovoltaika
+    label: "Chytré funkce — Fotovoltaika"
+    files:
+      - name: fotovoltaika
+        label: "Spolupráce s fotovoltaikou"
+        file: src/data/fotovoltaika.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Příklad — štítek", name: example_label, widget: string }
+          - { label: "Příklad 1 — popisek", name: example1_label, widget: string }
+          - { label: "Příklad 1 — hodnota", name: example1_value, widget: string }
+          - { label: "Příklad 2 — popisek", name: example2_label, widget: string }
+          - { label: "Příklad 2 — hodnota", name: example2_value, widget: string }
+          - { label: "Příklad 3 — popisek", name: example3_label, widget: string }
+          - { label: "Příklad 3 — hodnota", name: example3_value, widget: string }
+          - { label: "Příklad — poznámka", name: example_footnote, widget: string }
+          - { label: "Připraveni — nadpis", name: ready_headline, widget: string }
+          - { label: "Připraveni — text", name: ready_text, widget: text }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KATALOG — index (katalog-index.json)
+  # ============================================================
+  - name: katalog-index
+    label: "Katalog — rozcestník"
+    files:
+      - name: katalog-index
+        label: "Katalog tepelných čerpadel"
+        file: src/data/katalog-index.json
+        format: json
+        fields:
+          - label: "SEO"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Titulek", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Breadcrumb popisek", name: breadcrumbLabel, widget: string }
+          - label: "Karty kategorií"
+            name: cards
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+              - { label: "URL", name: href, widget: string }
+              - { label: "Obrázek", name: image, widget: image }
+              - { label: "Text odkazu", name: linkText, widget: string }
+              - { label: "Gradient od", name: gradientFrom, widget: string }
+              - { label: "Gradient do", name: gradientTo, widget: string }
+              - { label: "Barva overlay", name: overlayColor, widget: string }
+          - label: "CTA"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Nadpis", name: headline, widget: string }
+              - { label: "Text", name: text, widget: string }
+              - { label: "Tlačítko", name: button, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+  # ============================================================
+  # KATALOG — vzduch-voda (katalog-vzduch-voda.json)
+  # ============================================================
+  - name: katalog-vzduch-voda
+    label: "Katalog — Vzduch-voda"
+    files:
+      - name: katalog-vzduch-voda
+        label: "Katalog vzduch–voda"
+        file: src/data/katalog-vzduch-voda.json
+        format: json
+        fields:
+          - label: "SEO"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Titulek", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - label: "Breadcrumb"
+                name: breadcrumb
+                widget: list
+                fields:
+                  - { label: "Text", name: label, widget: string }
+                  - { label: "URL", name: href, widget: string }
+          - label: "Záložky kategorií"
+            name: categoryTabs
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "URL (null = aktivní)", name: href, widget: string, required: false }
+              - { label: "Aktivní?", name: active, widget: boolean }
+              - { label: "CSS třída aktivní", name: activeClass, widget: string, required: false }
+          - { label: "Rychlá navigace — štítek", name: quickNavLabel, widget: string }
+          - label: "Rychlá navigace"
+            name: quickNav
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "Kotva (#id)", name: anchor, widget: string }
+          - label: "Hlavičky tabulky"
+            name: tableHeaders
+            widget: object
+            fields:
+              - { label: "Model", name: model, widget: string }
+              - { label: "Výkon", name: vykon, widget: string }
+              - { label: "COP", name: cop, widget: string }
+              - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - label: "Sekce produktů"
+            name: sections
+            widget: list
+            fields:
+              - { label: "ID (kotva)", name: id, widget: string }
+              - { label: "Číslo", name: number, widget: number }
+              - { label: "Styl čísla (brand/white)", name: numberStyle, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Banner obrázek", name: bannerImage, widget: image, required: false }
+              - { label: "Banner gradient", name: bannerGradient, widget: string }
+              - { label: "Banner overlay", name: bannerOverlay, widget: string }
+              - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - { label: "Popis", name: description, widget: text }
+              - label: "Vlastnosti"
+                name: features
+                widget: list
+                field:
+                  { label: "Vlastnost", name: feature, widget: string }
+              - { label: "Zobrazit mřížku výkonů?", name: showPowerGrid, widget: boolean }
+              - { label: "Mřížka — popisek", name: powerGridLabel, widget: string, required: false }
+              - label: "Mřížka — hodnoty výkonů"
+                name: powerValues
+                widget: list
+                required: false
+                field:
+                  { label: "Výkon", name: power, widget: string }
+              - { label: "Poznámka pod čarou", name: footnote, widget: string, required: false }
+              - label: "Produkty"
+                name: products
+                widget: list
+                fields:
+                  - { label: "Model", name: model, widget: string }
+                  - { label: "Výkon", name: vykon, widget: string }
+                  - { label: "COP", name: cop, widget: string }
+                  - { label: "PDF odkaz", name: pdf, widget: string }
+          - label: "Odkaz více info"
+            name: moreLink
+            widget: object
+            fields:
+              - { label: "Text", name: text, widget: string }
+              - { label: "URL", name: href, widget: string }
+          - label: "CTA"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Nadpis", name: headline, widget: string }
+              - { label: "Text", name: text, widget: string }
+              - { label: "Tlačítko", name: button, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+  # ============================================================
+  # KATALOG — země-voda (katalog-zeme-voda.json)
+  # ============================================================
+  - name: katalog-zeme-voda
+    label: "Katalog — Země-voda"
+    files:
+      - name: katalog-zeme-voda
+        label: "Katalog země–voda"
+        file: src/data/katalog-zeme-voda.json
+        format: json
+        fields:
+          - label: "SEO"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Titulek", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - label: "Breadcrumb"
+                name: breadcrumb
+                widget: list
+                fields:
+                  - { label: "Text", name: label, widget: string }
+                  - { label: "URL", name: href, widget: string }
+          - label: "Záložky kategorií"
+            name: categoryTabs
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "URL (null = aktivní)", name: href, widget: string, required: false }
+              - { label: "Aktivní?", name: active, widget: boolean }
+              - { label: "CSS třída aktivní", name: activeClass, widget: string, required: false }
+          - { label: "Rychlá navigace — štítek", name: quickNavLabel, widget: string }
+          - label: "Rychlá navigace"
+            name: quickNav
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "Kotva (#id)", name: anchor, widget: string }
+          - label: "Hlavičky tabulky"
+            name: tableHeaders
+            widget: object
+            fields:
+              - { label: "Model", name: model, widget: string }
+              - { label: "Výkon", name: vykon, widget: string }
+              - { label: "COP", name: cop, widget: string }
+              - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - label: "Sekce produktů"
+            name: sections
+            widget: list
+            fields:
+              - { label: "ID (kotva)", name: id, widget: string }
+              - { label: "Číslo", name: number, widget: number }
+              - { label: "Styl čísla (brand/white)", name: numberStyle, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Banner obrázek", name: bannerImage, widget: image, required: false }
+              - { label: "Banner gradient", name: bannerGradient, widget: string }
+              - { label: "Banner overlay", name: bannerOverlay, widget: string }
+              - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - { label: "Popis", name: description, widget: text }
+              - label: "Vlastnosti"
+                name: features
+                widget: list
+                field:
+                  { label: "Vlastnost", name: feature, widget: string }
+              - { label: "Poznámka pod čarou", name: footnote, widget: string, required: false }
+              - label: "Produkty"
+                name: products
+                widget: list
+                fields:
+                  - { label: "Model", name: model, widget: string }
+                  - { label: "Výkon", name: vykon, widget: string }
+                  - { label: "COP", name: cop, widget: string }
+                  - { label: "PDF odkaz", name: pdf, widget: string }
+          - label: "Odkaz více info"
+            name: moreLink
+            widget: object
+            fields:
+              - { label: "Text", name: text, widget: string }
+              - { label: "URL", name: href, widget: string }
+          - label: "CTA"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Nadpis", name: headline, widget: string }
+              - { label: "Text", name: text, widget: string }
+              - { label: "Tlačítko", name: button, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+  # ============================================================
+  # KATALOG — voda-voda (katalog-voda-voda.json)
+  # ============================================================
+  - name: katalog-voda-voda
+    label: "Katalog — Voda-voda"
+    files:
+      - name: katalog-voda-voda
+        label: "Katalog voda–voda"
+        file: src/data/katalog-voda-voda.json
+        format: json
+        fields:
+          - label: "SEO"
+            name: meta
+            widget: object
+            fields:
+              - { label: "Titulek", name: title, widget: string }
+              - { label: "Popis", name: description, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - label: "Breadcrumb"
+                name: breadcrumb
+                widget: list
+                fields:
+                  - { label: "Text", name: label, widget: string }
+                  - { label: "URL", name: href, widget: string }
+          - label: "Záložky kategorií"
+            name: categoryTabs
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "URL (null = aktivní)", name: href, widget: string, required: false }
+              - { label: "Aktivní?", name: active, widget: boolean }
+              - { label: "CSS třída aktivní", name: activeClass, widget: string, required: false }
+          - { label: "Rychlá navigace — štítek", name: quickNavLabel, widget: string }
+          - label: "Rychlá navigace"
+            name: quickNav
+            widget: list
+            fields:
+              - { label: "Text", name: label, widget: string }
+              - { label: "Kotva (#id)", name: anchor, widget: string }
+          - label: "Hlavičky tabulky"
+            name: tableHeaders
+            widget: object
+            fields:
+              - { label: "Model", name: model, widget: string }
+              - { label: "Výkon", name: vykon, widget: string }
+              - { label: "COP", name: cop, widget: string }
+              - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - label: "Sekce produktů"
+            name: sections
+            widget: list
+            fields:
+              - { label: "ID (kotva)", name: id, widget: string }
+              - { label: "Číslo", name: number, widget: number }
+              - { label: "Styl čísla (brand/white)", name: numberStyle, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Banner gradient", name: bannerGradient, widget: string }
+              - { label: "Banner overlay", name: bannerOverlay, widget: string }
+              - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - { label: "Popis", name: description, widget: text }
+              - label: "Vlastnosti"
+                name: features
+                widget: list
+                field:
+                  { label: "Vlastnost", name: feature, widget: string }
+              - { label: "Poznámka pod čarou", name: footnote, widget: string, required: false }
+              - label: "Produkty"
+                name: products
+                widget: list
+                fields:
+                  - { label: "Model", name: model, widget: string }
+                  - { label: "Výkon", name: vykon, widget: string }
+                  - { label: "COP", name: cop, widget: string }
+                  - { label: "PDF odkaz", name: pdf, widget: string }
+          - label: "Odkaz více info"
+            name: moreLink
+            widget: object
+            fields:
+              - { label: "Text", name: text, widget: string }
+              - { label: "URL", name: href, widget: string }
+          - label: "CTA"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Nadpis", name: headline, widget: string }
+              - { label: "Text", name: text, widget: string }
+              - { label: "Tlačítko", name: button, widget: string }
+              - { label: "URL", name: href, widget: string }
+
+  # ============================================================
+  # NÁVRH ŘEŠENÍ — index (navrh-reseni-index.json)
+  # ============================================================
+  - name: navrh-reseni-index
+    label: "Návrh řešení — rozcestník"
+    files:
+      - name: navrh-reseni-index
+        label: "Návrh řešení — rozcestník"
+        file: src/data/navrh-reseni-index.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Sekce — typ objektu nadpis", name: section_typ_objektu, widget: string }
+          - label: "Karty typu objektu"
+            name: typ_objektu_cards
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Obrázek", name: img, widget: image }
+              - { label: "Ikona (SVG path)", name: icon, widget: string }
+          - { label: "Text odkazu Více", name: link_more, widget: string }
+          - { label: "Sekce — topný systém nadpis", name: section_topny_system, widget: string }
+          - label: "Odkazy topný systém"
+            name: topny_system_links
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Ikona (SVG path)", name: icon, widget: string }
+          - { label: "Sekce — chlazení nadpis", name: section_chlazeni, widget: string }
+          - label: "Odkazy chlazení"
+            name: chlazeni_links
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Ikona (SVG path)", name: icon, widget: string }
+          - { label: "Sekce — konfigurace nadpis", name: section_konfigurace, widget: string }
+          - label: "Odkazy konfigurace"
+            name: konfigurace_links
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Ikona (SVG path)", name: icon, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # NÁVRH ŘEŠENÍ — novostavba (novostavba.json)
+  # ============================================================
+  - name: novostavba
+    label: "Návrh řešení — Novostavba"
+    files:
+      - name: novostavba
+        label: "Úsporné vytápění novostavby"
+        file: src/data/novostavba.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Proč — štítek", name: why_label, widget: string }
+          - { label: "Proč — nadpis", name: why_headline, widget: string }
+          - { label: "Proč — text 1", name: why_text1, widget: text }
+          - { label: "Proč — text 2", name: why_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Doporučení — nadpis", name: recommended_headline, widget: string }
+          - { label: "Doporučení 1 — číslo", name: rec1_cislo, widget: string }
+          - { label: "Doporučení 1 — název", name: rec1_nazev, widget: string }
+          - { label: "Doporučení 1 — popis", name: rec1_popis, widget: text }
+          - { label: "Doporučení 2 — číslo", name: rec2_cislo, widget: string }
+          - { label: "Doporučení 2 — název", name: rec2_nazev, widget: string }
+          - { label: "Doporučení 2 — popis", name: rec2_popis, widget: text }
+          - { label: "Doporučení 3 — číslo", name: rec3_cislo, widget: string }
+          - { label: "Doporučení 3 — název", name: rec3_nazev, widget: string }
+          - { label: "Doporučení 3 — popis", name: rec3_popis, widget: text }
+          - { label: "Doporučení 4 — číslo", name: rec4_cislo, widget: string }
+          - { label: "Doporučení 4 — název", name: rec4_nazev, widget: string }
+          - { label: "Doporučení 4 — popis", name: rec4_popis, widget: text }
+          - { label: "Tip — štítek", name: tip_label, widget: string }
+          - { label: "Tip — text", name: tip_text, widget: text }
+          - { label: "Tip — odkaz", name: tip_link, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          - { label: "Související — nadpis", name: related_headline, widget: string }
+          - label: "Související položky"
+            name: related_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+
+  # ============================================================
+  # NÁVRH ŘEŠENÍ — stávající dům (stavajici-dum.json)
+  # ============================================================
+  - name: stavajici-dum
+    label: "Návrh řešení — Stávající dům"
+    files:
+      - name: stavajici-dum
+        label: "Úsporné vytápění stávajícího domu"
+        file: src/data/stavajici-dum.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Vlastnost 1 — název", name: feat1_title, widget: string }
+          - { label: "Vlastnost 1 — popis", name: feat1_desc, widget: text }
+          - { label: "Vlastnost 2 — název", name: feat2_title, widget: string }
+          - { label: "Vlastnost 2 — popis", name: feat2_desc, widget: text }
+          - { label: "Vlastnost 3 — název", name: feat3_title, widget: string }
+          - { label: "Vlastnost 3 — popis", name: feat3_desc, widget: text }
+          - { label: "Vlastnost 4 — název", name: feat4_title, widget: string }
+          - { label: "Vlastnost 4 — popis", name: feat4_desc, widget: text }
+          - { label: "Porovnání — nadpis", name: comparison_headline, widget: string }
+          - { label: "Porovnání 1 — zdroj", name: comp1_zdroj, widget: string }
+          - { label: "Porovnání 1 — náklady", name: comp1_naklady, widget: string }
+          - { label: "Porovnání 2 — zdroj", name: comp2_zdroj, widget: string }
+          - { label: "Porovnání 2 — náklady", name: comp2_naklady, widget: string }
+          - { label: "Porovnání 3 — zdroj", name: comp3_zdroj, widget: string }
+          - { label: "Porovnání 3 — náklady", name: comp3_naklady, widget: string }
+          - { label: "Porovnání 4 — zdroj", name: comp4_zdroj, widget: string }
+          - { label: "Porovnání 4 — náklady", name: comp4_naklady, widget: string }
+          - { label: "Porovnání 5 — zdroj", name: comp5_zdroj, widget: string }
+          - { label: "Porovnání 5 — náklady", name: comp5_naklady, widget: string }
+          - { label: "Porovnání 6 — zdroj", name: comp6_zdroj, widget: string }
+          - { label: "Porovnání 6 — náklady", name: comp6_naklady, widget: string }
+          - { label: "Porovnání — poznámka", name: comparison_footnote, widget: text }
+          - { label: "Tip — štítek", name: tip_label, widget: string }
+          - { label: "Tip — text", name: tip_text, widget: text }
+          - { label: "Tip — odkaz", name: tip_link, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+          - { label: "Související — nadpis", name: related_headline, widget: string }
+          - label: "Související položky"
+            name: related_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+
+  # ============================================================
+  # NÁVRH ŘEŠENÍ — velký výkon (velky-vykon.json)
+  # ============================================================
+  - name: velky-vykon
+    label: "Návrh řešení — Velký výkon"
+    files:
+      - name: velky-vykon
+        label: "Tepelné čerpadlo velkého výkonu"
+        file: src/data/velky-vykon.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — štítek", name: intro_label, widget: string }
+          - { label: "Úvod — nadpis", name: intro_headline, widget: string }
+          - { label: "Úvod — text 1", name: intro_text1, widget: text }
+          - { label: "Úvod — text 2", name: intro_text2, widget: text }
+          - { label: "Segment 1 — typ", name: segment1_typ, widget: string }
+          - { label: "Segment 1 — popis", name: segment1_popis, widget: text }
+          - { label: "Segment 2 — typ", name: segment2_typ, widget: string }
+          - { label: "Segment 2 — popis", name: segment2_popis, widget: text }
+          - { label: "Segment 3 — typ", name: segment3_typ, widget: string }
+          - { label: "Segment 3 — popis", name: segment3_popis, widget: text }
+          - { label: "Parametry — štítek", name: params_label, widget: string }
+          - { label: "Parametr 1 — popisek", name: param1_label, widget: string }
+          - { label: "Parametr 1 — hodnota", name: param1_value, widget: string }
+          - { label: "Parametr 2 — popisek", name: param2_label, widget: string }
+          - { label: "Parametr 2 — hodnota", name: param2_value, widget: string }
+          - { label: "Parametr 3 — popisek", name: param3_label, widget: string }
+          - { label: "Parametr 3 — hodnota", name: param3_value, widget: string }
+          - { label: "Parametr 4 — popisek", name: param4_label, widget: string }
+          - { label: "Parametr 4 — hodnota", name: param4_value, widget: string }
+          - { label: "Parametr 5 — popisek", name: param5_label, widget: string }
+          - { label: "Parametr 5 — hodnota", name: param5_value, widget: string }
+          - { label: "Parametr 6 — popisek", name: param6_label, widget: string }
+          - { label: "Parametr 6 — hodnota", name: param6_value, widget: string }
+          - { label: "Nabídka — nadpis", name: offer_headline, widget: string }
+          - { label: "Nabídka — bod 1", name: offer_item1, widget: string }
+          - { label: "Nabídka — bod 2", name: offer_item2, widget: string }
+          - { label: "Nabídka — bod 3", name: offer_item3, widget: string }
+          - { label: "Nabídka — bod 4", name: offer_item4, widget: string }
+          - { label: "Nabídka — bod 5", name: offer_item5, widget: string }
+          - { label: "Nabídka — bod 6", name: offer_item6, widget: string }
+          - { label: "CTA — nadpis", name: cta_headline, widget: string }
+          - { label: "CTA — text", name: cta_text, widget: text }
+          - { label: "CTA — tlačítko 1", name: cta_button1, widget: string }
+          - { label: "CTA — tlačítko 2", name: cta_button2, widget: string }
+          - { label: "Související — nadpis", name: related_headline, widget: string }
+          - label: "Související položky"
+            name: related_items
+            widget: list
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+
+  # ============================================================
+  # KONFIGURACE — podlahové topení (podlahove-topeni.json)
+  # ============================================================
+  - name: podlahove-topeni
+    label: "Konfigurace — Podlahové topení"
+    files:
+      - name: podlahove-topeni
+        label: "Podlahové topení"
+        file: src/data/podlahove-topeni.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod — odstavec 1 (HTML)", name: intro1, widget: markdown }
+          - { label: "Úvod — odstavec 2", name: intro2, widget: text }
+          - { label: "Záruka", name: warranty, widget: string }
+          - { label: "Instalace — nadpis", name: installation_title, widget: string }
+          - label: "Kroky instalace"
+            name: installation_steps
+            widget: list
+            field:
+              { label: "Krok", name: step, widget: string }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — podlahové topení starší dům (podlahove-topeni-starsi-dum.json)
+  # ============================================================
+  - name: podlahove-topeni-starsi-dum
+    label: "Konfigurace — Podlahovka ve starším domě"
+    files:
+      - name: podlahove-topeni-starsi-dum
+        label: "Podlahové topení ve starším domě"
+        file: src/data/podlahove-topeni-starsi-dum.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro2, widget: text }
+          - label: "Kroky postupu"
+            name: steps
+            widget: list
+            field:
+              { label: "Krok", name: step, widget: string }
+          - { label: "Poznámka", name: note, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — radiátory (radiatory.json)
+  # ============================================================
+  - name: radiatory
+    label: "Konfigurace — Radiátory"
+    files:
+      - name: radiatory
+        label: "Radiátory"
+        file: src/data/radiatory.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro2, widget: text }
+          - { label: "Zvýrazněný text", name: highlight, widget: text }
+          - { label: "Závěrečný text", name: outro, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — velikost radiátorů (velikost-radiatoru.json)
+  # ============================================================
+  - name: velikost-radiatoru
+    label: "Konfigurace — Úprava radiátorů"
+    files:
+      - name: velikost-radiatoru
+        label: "Jak upravit radiátorový systém"
+        file: src/data/velikost-radiatoru.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: text }
+          - { label: "Úvod — odstavec 1", name: intro1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro2, widget: text }
+          - { label: "Kontrola — nadpis", name: check_title, widget: string }
+          - label: "Kontrola — kroky"
+            name: check_steps
+            widget: list
+            field:
+              { label: "Krok", name: step, widget: text }
+          - { label: "Alternativa — nadpis", name: alt_title, widget: string }
+          - { label: "Alternativa — úvod", name: alt_intro, widget: text }
+          - label: "Alternativa — body"
+            name: alt_points
+            widget: list
+            field:
+              { label: "Bod", name: point, widget: text }
+          - { label: "Tip box", name: tip_box, widget: text }
+          - { label: "Příklad — nadpis", name: example_title, widget: string }
+          - { label: "Příklad — řádek 1 (HTML)", name: example_line1, widget: markdown }
+          - { label: "Příklad — řádek 2 (HTML)", name: example_line2, widget: markdown }
+          - { label: "Příklad — poznámka", name: example_note, widget: text }
+          - { label: "Závěrečný text", name: outro, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — kombinace topných okruhů (kombinace-topnych-okruhu.json)
+  # ============================================================
+  - name: kombinace-topnych-okruhu
+    label: "Konfigurace — Kombinace okruhů"
+    files:
+      - name: kombinace-topnych-okruhu
+        label: "Kombinace topných okruhů"
+        file: src/data/kombinace-topnych-okruhu.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod", name: intro, widget: text }
+          - { label: "Jak to funguje — nadpis", name: how_it_works_title, widget: string }
+          - label: "Jak to funguje — body"
+            name: how_it_works
+            widget: list
+            field:
+              { label: "Bod", name: item, widget: string }
+          - { label: "Příklady — nadpis", name: examples_title, widget: string }
+          - label: "Příklady kombinací"
+            name: examples
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — chlazení (chlazeni.json)
+  # ============================================================
+  - name: chlazeni
+    label: "Konfigurace — Chlazení"
+    files:
+      - name: chlazeni
+        label: "Chlazení tepelným čerpadlem"
+        file: src/data/chlazeni.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod — odstavec 1", name: intro1, widget: text }
+          - { label: "Úvod — odstavec 2", name: intro2, widget: text }
+          - { label: "Podlaha — nadpis", name: podlaha_title, widget: string }
+          - label: "Podlaha — body"
+            name: podlaha_points
+            widget: list
+            field:
+              { label: "Bod", name: point, widget: string }
+          - { label: "Podlaha — citace", name: podlaha_quote, widget: text }
+          - { label: "Fancoil — nadpis", name: fancoil_title, widget: string }
+          - label: "Fancoil — body"
+            name: fancoil_points
+            widget: list
+            field:
+              { label: "Bod", name: point, widget: string }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — doinstalace chlazení (doinstalace-chlazeni.json)
+  # ============================================================
+  - name: doinstalace-chlazeni
+    label: "Konfigurace — Doinstalace chlazení"
+    files:
+      - name: doinstalace-chlazeni
+        label: "Doinstalace chlazení"
+        file: src/data/doinstalace-chlazeni.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod", name: intro, widget: text }
+          - { label: "Podlaha — nadpis", name: podlaha_title, widget: string }
+          - { label: "Podlaha — úvod", name: podlaha_intro, widget: text }
+          - label: "Podlaha — body"
+            name: podlaha_points
+            widget: list
+            field:
+              { label: "Bod", name: point, widget: string }
+          - { label: "Fancoil — nadpis", name: fancoil_title, widget: string }
+          - { label: "Fancoil — úvod", name: fancoil_intro, widget: text }
+          - label: "Fancoil — body"
+            name: fancoil_points
+            widget: list
+            field:
+              { label: "Bod", name: point, widget: string }
+          - { label: "Tip box", name: tip_box, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — jednokompresorová (jednokompresorova.json)
+  # ============================================================
+  - name: jednokompresorova
+    label: "Konfigurace — Jednokompresorová TČ"
+    files:
+      - name: jednokompresorova
+        label: "Jednokompresorová tepelná čerpadla"
+        file: src/data/jednokompresorova.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod", name: intro, widget: text }
+          - label: "Karty typů"
+            name: cards
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+              - { label: "Popisek modelů", name: models_label, widget: string }
+              - label: "Modely"
+                name: models
+                widget: list
+                field:
+                  { label: "Model", name: model, widget: string }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — dvoukompresorová (dvoukompresorova.json)
+  # ============================================================
+  - name: dvoukompresorova
+    label: "Konfigurace — Dvoukompresorová TČ"
+    files:
+      - name: dvoukompresorova
+        label: "Dvoukompresorová tepelná čerpadla"
+        file: src/data/dvoukompresorova.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod", name: intro, widget: text }
+          - { label: "Jak to funguje — nadpis", name: how_it_works_title, widget: string }
+          - label: "Jak to funguje — body"
+            name: how_it_works
+            widget: list
+            field:
+              { label: "Bod", name: item, widget: string }
+          - { label: "Modely — nadpis", name: models_title, widget: string }
+          - label: "Doporučené modely"
+            name: models
+            widget: list
+            fields:
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: text }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
+
+  # ============================================================
+  # KONFIGURACE — kaskády (kaskady.json)
+  # ============================================================
+  - name: kaskady
+    label: "Konfigurace — Kaskády TČ"
+    files:
+      - name: kaskady
+        label: "Kaskády tepelných čerpadel"
+        file: src/data/kaskady.json
+        format: json
+        fields:
+          - { label: "SEO — titulek", name: meta_title, widget: string }
+          - { label: "SEO — popis", name: meta_description, widget: text }
+          - { label: "Hero — nadpis", name: hero_title, widget: string }
+          - { label: "Hero — podnadpis", name: hero_subtitle, widget: string }
+          - { label: "Úvod", name: intro, widget: text }
+          - { label: "Jak to funguje — nadpis", name: how_it_works_title, widget: string }
+          - label: "Jak to funguje — body"
+            name: how_it_works
+            widget: list
+            field:
+              { label: "Bod", name: item, widget: string }
+          - { label: "CTA — tlačítko", name: cta_button, widget: string }
