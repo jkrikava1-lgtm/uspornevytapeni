@@ -1041,6 +1041,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Text odkazu na kartě", name: card_link_text, widget: string }
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
@@ -1606,6 +1607,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
               - { label: "Obrázek", name: img, widget: image }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Text odkazu Více", name: link_more, widget: string }
@@ -1617,6 +1619,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Sekce — chlazení nadpis", name: section_chlazeni, widget: string }
           - label: "Odkazy chlazení"
@@ -1626,6 +1629,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Sekce — konfigurace nadpis", name: section_konfigurace, widget: string }
           - label: "Odkazy konfigurace"
@@ -1635,6 +1639,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
@@ -1694,6 +1699,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
 
   # ============================================================
   # NÁVRH ŘEŠENÍ — stávající dům (stavajici-dum.json)
@@ -1750,6 +1756,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
 
   # ============================================================
   # NÁVRH ŘEŠENÍ — velký výkon (velky-vykon.json)
@@ -1808,6 +1815,7 @@ collections:
               - { label: "URL", name: href, widget: string }
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
+              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
 
   # ============================================================
   # KONFIGURACE — podlahové topení (podlahove-topeni.json)

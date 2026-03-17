@@ -38,23 +38,27 @@
   "related_items": [
     {
       "href": "/navrh-reseni/podlahove-topeni",
-      "title": "Podlahové topení",
-      "desc": "Jak instalujeme podlahové topení. 6 kroků, 25 let záruka."
+      "title": "Podlahov\u00e9 topen\u00ed",
+      "desc": "Jak instalujeme podlahov\u00e9 topen\u00ed. 6 krok\u016f, 25 let z\u00e1ruka.",
+      "emoji": "\ud83c\udfe0"
     },
     {
       "href": "/navrh-reseni/radiatory",
-      "title": "Radiátory",
-      "desc": "Správné dimenzování radiátorů pro nízkoteplotní systém."
+      "title": "Radi\u00e1tory",
+      "desc": "Spr\u00e1vn\u00e9 dimenzov\u00e1n\u00ed radi\u00e1tor\u016f pro n\u00edzkoteplotn\u00ed syst\u00e9m.",
+      "emoji": "\ud83c\udf21\ufe0f"
     },
     {
       "href": "/navrh-reseni/chlazeni",
-      "title": "Chlazení",
-      "desc": "Podlahové chlazení nebo fancoily — komfort v létě."
+      "title": "Chlazen\u00ed",
+      "desc": "Podlahov\u00e9 chlazen\u00ed nebo fancoily \u2014 komfort v l\u00e9t\u011b.",
+      "emoji": "\u2744\ufe0f"
     },
     {
       "href": "/navrh-reseni/kombinace-topnych-okruhu",
-      "title": "Kombinace okruhů",
-      "desc": "Kombinace podlahového topení, radiátorů, chlazení a dalších zdrojů."
+      "title": "Kombinace okruh\u016f",
+      "desc": "Kombinace podlahov\u00e9ho topen\u00ed, radi\u00e1tor\u016f, chlazen\u00ed a dal\u0161\u00edch zdroj\u016f.",
+      "emoji": "\ud83d\udd00"
     }
   ]
 }
