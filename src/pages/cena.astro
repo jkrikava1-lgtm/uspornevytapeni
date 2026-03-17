@@ -17,10 +17,7 @@ import data from '../data/cena.json';
       <!-- Úvod -->
       <div class="max-w-3xl mb-6">
         <h2 class="text-xl font-extrabold text-charcoal-900 mb-3">{data.intro_headline}</h2>
-        <p class="text-charcoal-600 text-sm leading-relaxed mb-4" set:html={data.intro_text} />
-        <div class="bg-brand-50 border border-brand-200 rounded-lg p-4">
-          <p class="text-sm text-brand-800 leading-relaxed" set:html={data.intro_highlight} />
-        </div>
+        <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
       </div>
 
       <!-- Cenové tabulky -->
