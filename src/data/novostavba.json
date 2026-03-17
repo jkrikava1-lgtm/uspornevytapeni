@@ -12,8 +12,8 @@
   "feat2_title": "Minimální provozní náklady",
   "feat2_desc": "Z 1 kW elektřiny získáte průměrně 3–4 kW tepla.",
   "feat3_title": "Ovládání přes internet",
-  "feat3_desc": "Regulace podle plánu, počasí, přítomnosti — automaticky nebo přes telefon.",
-  "feat4_title": "Chlazení domu v ceně",
+  "feat3_desc": "100% parametrů tepelného čerpadla můžeme ovládat po síti. Nadstandardní diagnostika.",
+  "feat4_title": "Chlazení domu jednou technologií",
   "feat4_desc": "Tepelné čerpadlo umí v létě chladit — podlahou nebo fancoily.",
   "recommended_headline": "Doporučené řešení pro novostavbu",
   "rec1_cislo": "1",
@@ -36,9 +36,25 @@
   "cta_button": "Odeslat poptávku",
   "related_headline": "Více o topném systému novostavby",
   "related_items": [
-    { "href": "/navrh-reseni/podlahove-topeni", "title": "Podlahov\u00e9 topen\u00ed", "desc": "Jak instalujeme podlahov\u00e9 topen\u00ed. 6 krok\u016f, 25 let z\u00e1ruka.", "emoji": "\ud83c\udfe0", "color": "brand" },
-    { "href": "/navrh-reseni/radiatory", "title": "Radi\u00e1tory", "desc": "Spr\u00e1vn\u00e9 dimenzov\u00e1n\u00ed radi\u00e1tor\u016f pro n\u00edzkoteplotn\u00ed syst\u00e9m.", "emoji": "\ud83c\udf21\ufe0f", "color": "navy" },
-    { "href": "/navrh-reseni/chlazeni", "title": "Chlazen\u00ed", "desc": "Podlahov\u00e9 chlazen\u00ed nebo fancoily \u2014 komfort v l\u00e9t\u011b.", "emoji": "\u2744\ufe0f", "color": "sky" },
-    { "href": "/navrh-reseni/kombinace-topnych-okruhu", "title": "Kombinace okruh\u016f", "desc": "Kombinace podlahov\u00e9ho topen\u00ed, radi\u00e1tor\u016f, chlazen\u00ed a dal\u0161\u00edch zdroj\u016f.", "emoji": "\ud83d\udd00", "color": "green" }
+    {
+      "href": "/navrh-reseni/podlahove-topeni",
+      "title": "Podlahové topení",
+      "desc": "Jak instalujeme podlahové topení. 6 kroků, 25 let záruka."
+    },
+    {
+      "href": "/navrh-reseni/radiatory",
+      "title": "Radiátory",
+      "desc": "Správné dimenzování radiátorů pro nízkoteplotní systém."
+    },
+    {
+      "href": "/navrh-reseni/chlazeni",
+      "title": "Chlazení",
+      "desc": "Podlahové chlazení nebo fancoily — komfort v létě."
+    },
+    {
+      "href": "/navrh-reseni/kombinace-topnych-okruhu",
+      "title": "Kombinace okruhů",
+      "desc": "Kombinace podlahového topení, radiátorů, chlazení a dalších zdrojů."
+    }
   ]
 }
