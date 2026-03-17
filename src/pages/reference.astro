@@ -11,11 +11,11 @@ import ref from '../data/reference.json';
     breadcrumb={[{ label: 'Reference', href: '/reference' }]}
   />
 
-  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+  <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Stats -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         {[
           { num: ref.stat1_num, label: ref.stat1_label },
           { num: ref.stat2_num, label: ref.stat2_label },
@@ -62,7 +62,7 @@ import ref from '../data/reference.json';
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
-  <section class="pb-16 lg:pb-24">
+  <section class="pb-10 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-6">
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{ref.map_headline}</h2>

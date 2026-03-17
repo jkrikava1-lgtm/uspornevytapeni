@@ -11,12 +11,12 @@ import data from '../../data/navrh-reseni-index.json';
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni' }]}
   />
 
-  <section class="pt-10 pb-16 lg:pt-12 lg:pb-24">
+  <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Typ objektu -->
       <h2 class="text-xl font-extrabold text-charcoal-900 mb-5">{data.section_typ_objektu}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
         {data.typ_objektu_cards.map(item => (
           <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all overflow-hidden">
             <img src={item.img} alt={item.title} class="w-full h-44 object-cover" loading="lazy" />
@@ -44,7 +44,7 @@ import data from '../../data/navrh-reseni-index.json';
         </div>
         <h2 class="text-xl font-extrabold text-charcoal-900">{data.section_topny_system}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-10">
         {data.topny_system_links.map(item => (
           <a href={item.href} class="group bg-gray-50 rounded-xl p-5 border border-gray-200 hover:bg-white hover:shadow-md hover:border-brand-300 transition-all">
             <div class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center mb-3 group-hover:bg-brand-100 transition-colors">
@@ -67,7 +67,7 @@ import data from '../../data/navrh-reseni-index.json';
         </div>
         <h2 class="text-xl font-extrabold text-charcoal-900">{data.section_chlazeni}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
         {data.chlazeni_links.map(item => (
           <a href={item.href} class="group bg-gray-50 rounded-xl p-5 border border-gray-200 hover:bg-white hover:shadow-md hover:border-sky-300 transition-all">
             <div class="w-8 h-8 bg-sky-50 rounded-lg flex items-center justify-center mb-3 group-hover:bg-sky-100 transition-colors">
