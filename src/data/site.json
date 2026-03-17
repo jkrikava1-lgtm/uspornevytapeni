@@ -153,15 +153,15 @@
   "nav_katalog_items": [
     {
       "href": "/katalog/vzduch-voda",
-      "label": "Vzduch – voda"
+      "label": "Katalog vzduch \u2013 voda"
     },
     {
       "href": "/katalog/zeme-voda",
-      "label": "Země – voda"
+      "label": "Katalog zem\u011b \u2013 voda"
     },
     {
       "href": "/katalog/voda-voda",
-      "label": "Voda – voda"
+      "label": "Katalog voda \u2013 voda"
     }
   ],
   "nav_cena": "Cena",
