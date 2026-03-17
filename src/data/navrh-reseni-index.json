@@ -30,72 +30,22 @@
   "link_more": "Více informací",
   "section_topny_system": "Topný systém",
   "topny_system_links": [
-    {
-      "href": "/navrh-reseni/podlahove-topeni",
-      "title": "Podlahové topení",
-      "desc": "Ideální kombinace s tepelným čerpadlem. Rovnoměrné teplo v celém domě.",
-      "icon": "M4 20h16M4 20V10l8-6 8 6v10M9 20v-4h6v4"
-    },
-    {
-      "href": "/navrh-reseni/podlahove-topeni-starsi-dum",
-      "title": "Podlahovka ve starším domě",
-      "desc": "Ano, jde to. Vysvětlíme kdy a jak.",
-      "icon": "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m0-7h14"
-    },
-    {
-      "href": "/navrh-reseni/radiatory",
-      "title": "Radiátory",
-      "desc": "Tepelné čerpadlo funguje i s radiátory — záleží na typu a velikosti.",
-      "icon": "M4 6h16M4 10h16M4 14h16M4 18h16"
-    },
-    {
-      "href": "/navrh-reseni/velikost-radiatoru",
-      "title": "Úprava radiátorů",
-      "desc": "Jak upravit starší radiátorový systém pro tepelné čerpadlo.",
-      "icon": "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z"
-    },
-    {
-      "href": "/navrh-reseni/kombinace-topnych-okruhu",
-      "title": "Kombinace okruhů",
-      "desc": "Podlahovka + radiátory v jednom systému — běžné a funkční řešení.",
-      "icon": "M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
-    }
+    { "href": "/navrh-reseni/podlahove-topeni", "title": "Podlahov\u00e9 topen\u00ed", "desc": "Ide\u00e1ln\u00ed kombinace s tepeln\u00fdm \u010derpadlem. Rovnom\u011brn\u00e9 teplo v cel\u00e9m dom\u011b.", "icon": "M4 20h16M4 20V10l8-6 8 6v10M9 20v-4h6v4", "emoji": "\ud83c\udfe0" },
+    { "href": "/navrh-reseni/podlahove-topeni-starsi-dum", "title": "Podlahovka ve star\u0161\u00edm dom\u011b", "desc": "Ano, jde to. Vysv\u011btl\u00edme kdy a jak.", "icon": "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m0-7h14", "emoji": "\ud83c\udfd7\ufe0f" },
+    { "href": "/navrh-reseni/radiatory", "title": "Radi\u00e1tory", "desc": "Tepeln\u00e9 \u010derpadlo funguje i s radi\u00e1tory \u2014 z\u00e1le\u017e\u00ed na typu a velikosti.", "icon": "M4 6h16M4 10h16M4 14h16M4 18h16", "emoji": "\ud83c\udf21\ufe0f" },
+    { "href": "/navrh-reseni/velikost-radiatoru", "title": "\u00daprava radi\u00e1tor\u016f", "desc": "Jak upravit star\u0161\u00ed radi\u00e1torov\u00fd syst\u00e9m pro tepeln\u00e9 \u010derpadlo.", "icon": "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065zM15 12a3 3 0 11-6 0 3 3 0 016 0z", "emoji": "\ud83d\udd27" },
+    { "href": "/navrh-reseni/kombinace-topnych-okruhu", "title": "Kombinace okruh\u016f", "desc": "Podlahovka + radi\u00e1tory v jednom syst\u00e9mu \u2014 b\u011b\u017en\u00e9 a funk\u010dn\u00ed \u0159e\u0161en\u00ed.", "icon": "M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01", "emoji": "\ud83d\udd00" }
   ],
   "section_chlazeni": "Chlazení",
   "chlazeni_links": [
-    {
-      "href": "/navrh-reseni/chlazeni",
-      "title": "Chlazení tepelným čerpadlem",
-      "desc": "Tepelné čerpadlo v létě chladí — dvě funkce za cenu jedné.",
-      "icon": "M12 3v1m0 16v1m-8-9H3m18 0h-1m-2.636-5.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"
-    },
-    {
-      "href": "/navrh-reseni/doinstalace-chlazeni",
-      "title": "Doinstalace chlazení",
-      "desc": "Máte už tepelné čerpadlo a chcete přidat chlazení? Poradíme, jak na to.",
-      "icon": "M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-    }
+    { "href": "/navrh-reseni/chlazeni", "title": "Chlazen\u00ed tepeln\u00fdm \u010derpadlem", "desc": "Tepeln\u00e9 \u010derpadlo v l\u00e9t\u011b chlad\u00ed \u2014 dv\u011b funkce za cenu jedn\u00e9.", "icon": "M12 3v1m0 16v1m-8-9H3m18 0h-1m-2.636-5.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z", "emoji": "\u2744\ufe0f" },
+    { "href": "/navrh-reseni/doinstalace-chlazeni", "title": "Doinstalace chlazen\u00ed", "desc": "M\u00e1te u\u017e tepeln\u00e9 \u010derpadlo a chcete p\u0159idat chlazen\u00ed? Porad\u00edme, jak na to.", "icon": "M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z", "emoji": "\u2795" }
   ],
   "section_konfigurace": "Velké výkony",
   "konfigurace_links": [
-    {
-      "href": "/navrh-reseni/jednokompresorova",
-      "title": "Jednokompresorová sestava",
-      "desc": "Standardní řešení pro běžný rodinný dům.",
-      "icon": "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-    },
-    {
-      "href": "/navrh-reseni/dvoukompresorova",
-      "title": "Dvoukompresorová sestava",
-      "desc": "Vyšší výkon a spolehlivost pro náročnější objekty.",
-      "icon": "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-    },
-    {
-      "href": "/navrh-reseni/kaskady",
-      "title": "Kaskádové zapojení",
-      "desc": "Více jednotek pro bytové domy a komerční budovy.",
-      "icon": "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-    }
+    { "href": "/navrh-reseni/jednokompresorova", "title": "Jednokompresorov\u00e1 sestava", "desc": "Standardn\u00ed \u0159e\u0161en\u00ed pro b\u011b\u017en\u00fd rodinn\u00fd d\u016fm.", "icon": "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4", "emoji": "1\ufe0f\u20e3" },
+    { "href": "/navrh-reseni/dvoukompresorova", "title": "Dvoukompresorov\u00e1 sestava", "desc": "Vy\u0161\u0161\u00ed v\u00fdkon a spolehlivost pro n\u00e1ro\u010dn\u011bj\u0161\u00ed objekty.", "icon": "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z", "emoji": "2\ufe0f\u20e3" },
+    { "href": "/navrh-reseni/kaskady", "title": "Kask\u00e1dov\u00e9 zapojen\u00ed", "desc": "V\u00edce jednotek pro bytov\u00e9 domy a komer\u010dn\u00ed budovy.", "icon": "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10", "emoji": "\ud83d\udd17" }
   ],
   "cta_headline": "Nevíte si rady?",
   "cta_text": "Pošlete poptávku a navrhneme řešení přesně pro váš dům — zdarma.",
