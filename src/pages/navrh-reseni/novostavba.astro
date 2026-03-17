@@ -44,38 +44,27 @@ import data from '../../data/novostavba.json';
           </div>
         </div>
 
-        <div class="space-y-6">
-          <img src="/images/hero/novostavba-vizual.jpg" alt="Tepelné čerpadlo u moderní novostavby" class="rounded-2xl w-full object-cover max-h-72" loading="lazy" />
-          <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
-            <h3 class="font-bold text-charcoal-900 mb-5">{data.recommended_headline}</h3>
-            <div class="space-y-4">
-              {[
-                { cislo: data.rec1_cislo, nazev: data.rec1_nazev, popis: data.rec1_popis },
-                { cislo: data.rec2_cislo, nazev: data.rec2_nazev, popis: data.rec2_popis },
-                { cislo: data.rec3_cislo, nazev: data.rec3_nazev, popis: data.rec3_popis },
-                { cislo: data.rec4_cislo, nazev: data.rec4_nazev, popis: data.rec4_popis },
-              ].map(item => (
-                <div class="flex gap-4">
-                  <div class="w-7 h-7 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0 text-white font-bold text-xs">{item.cislo}</div>
-                  <div>
-                    <div class="font-semibold text-charcoal-900 text-sm">{item.nazev}</div>
-                    <div class="text-xs text-charcoal-500 mt-0.5">{item.popis}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <img src="/images/hero/novostavba-vizual.jpg" alt="Tepelné čerpadlo u moderní novostavby" class="rounded-2xl w-full object-cover max-h-80" loading="lazy" />
+      </div>
 
-          <div class="bg-navy-700 rounded-xl p-6 text-white">
-            <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-2">{data.tip_label}</div>
-            <p class="text-sm text-navy-200 leading-relaxed">{data.tip_text}</p>
-            <a href="/dotace" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-400 hover:text-brand-300 mt-3">
-              {data.tip_link}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
+      <!-- Doporučená sestava -->
+      <div class="mt-12 bg-gray-50 rounded-xl p-7 border border-gray-200">
+        <h3 class="font-bold text-charcoal-900 mb-5">{data.recommended_headline}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { cislo: data.rec1_cislo, nazev: data.rec1_nazev, popis: data.rec1_popis },
+            { cislo: data.rec2_cislo, nazev: data.rec2_nazev, popis: data.rec2_popis },
+            { cislo: data.rec3_cislo, nazev: data.rec3_nazev, popis: data.rec3_popis },
+            { cislo: data.rec4_cislo, nazev: data.rec4_nazev, popis: data.rec4_popis },
+          ].map(item => (
+            <div class="flex gap-3">
+              <div class="w-7 h-7 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0 text-white font-bold text-xs">{item.cislo}</div>
+              <div>
+                <div class="font-semibold text-charcoal-900 text-sm">{item.nazev}</div>
+                <div class="text-xs text-charcoal-500 mt-0.5">{item.popis}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
