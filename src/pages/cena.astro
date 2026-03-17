@@ -15,9 +15,12 @@ import data from '../data/cena.json';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Úvod -->
-      <div class="max-w-3xl mb-6">
-        <h2 class="text-xl font-extrabold text-charcoal-900 mb-3">{data.intro_headline}</h2>
-        <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-6">
+        <div>
+          <h2 class="text-xl font-extrabold text-charcoal-900 mb-3">{data.intro_headline}</h2>
+          <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
+        </div>
+        <img src="/images/ilustrace/tc-pes-u-domu.jpg" alt="Tepelné čerpadlo u rodinného domu" class="rounded-2xl w-full max-h-64 object-cover" loading="lazy" />
       </div>
 
       <!-- Cenové tabulky -->

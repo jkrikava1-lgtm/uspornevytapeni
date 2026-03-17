@@ -5,23 +5,26 @@
   "hero_subtitle": "Dodáváme tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění, servis přímo od výrobce.",
   "cards": [
     {
-      "emoji": "🌬️",
-      "title": "Vzduch – voda",
-      "desc": "Nejrozšířenější typ. Snadná instalace za 2–3 dny, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
+      "emoji": "\ud83c\udf2c\ufe0f",
+      "image": "/images/ilustrace/technik-u-tc-usmevy.jpg",
+      "title": "Vzduch \u2013 voda",
+      "desc": "Nejroz\u0161\u00ed\u0159en\u011bj\u0161\u00ed typ. Snadn\u00e1 instalace za 2\u20133 dny, v\u00fdborn\u00fd pom\u011br cena/v\u00fdkon. Vhodn\u00e9 pro 95 % dom\u00e1cnost\u00ed.",
       "href": "/tepelna-cerpadla/vzduch-voda",
       "gradient": "from-navy-700 to-navy-900"
     },
     {
-      "emoji": "🌱",
-      "title": "Země – voda",
-      "desc": "Nejvyšší účinnost i v mrazivých zimách. Plošný kolektor nebo hloubkový vrt podle pozemku.",
+      "emoji": "\ud83c\udf31",
+      "image": "/images/produkty/aquamaster-inverter-banner.jpg",
+      "title": "Zem\u011b \u2013 voda",
+      "desc": "Nejvy\u0161\u0161\u00ed \u00fa\u010dinnost i v mraziv\u00fdch zim\u00e1ch. Plo\u0161n\u00fd kolektor nebo hloubkov\u00fd vrt podle pozemku.",
       "href": "/tepelna-cerpadla/zeme-voda",
       "gradient": "from-green-700 to-green-900"
     },
     {
-      "emoji": "💧",
-      "title": "Voda – voda",
-      "desc": "Maximální výkon a účinnost využívající podzemní vodu. Ideální tam, kde je dostatek spodní vody.",
+      "emoji": "\ud83d\udca7",
+      "image": "/images/ilustrace/montaz-strecha.jpg",
+      "title": "Voda \u2013 voda",
+      "desc": "Maxim\u00e1ln\u00ed v\u00fdkon a \u00fa\u010dinnost vyu\u017e\u00edvaj\u00edc\u00ed podzemn\u00ed vodu. Ide\u00e1ln\u00ed tam, kde je dostatek spodn\u00ed vody.",
       "href": "/tepelna-cerpadla/voda-voda",
       "gradient": "from-cyan-700 to-cyan-900"
     }
