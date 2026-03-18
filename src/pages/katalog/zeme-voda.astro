@@ -49,13 +49,14 @@ import data from '../../data/katalog-zeme-voda.json';
             </div>
           </div>
 
-          {section.productImage && (
-            <div class="flex justify-center my-6">
-              <img src={section.productImage} alt={section.title} class="h-48 object-contain" loading="lazy" />
-            </div>
-          )}
-
-          <div class="mb-6">
+          <div class="mb-6 overflow-hidden">
+            {section.productImages && (
+              <div class="float-right ml-6 mb-4 flex gap-3">
+                {section.productImages.map(img => (
+                  <img src={img} alt={section.title} class="h-36 lg:h-48 object-contain" loading="lazy" />
+                ))}
+              </div>
+            )}
             <p class="text-charcoal-600 text-sm leading-relaxed mb-4">{section.description}</p>
             <div class="space-y-2">
               {section.features.map(item => (

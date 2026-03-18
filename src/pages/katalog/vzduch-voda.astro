@@ -51,55 +51,38 @@ import data from '../../data/katalog-vzduch-voda.json';
             </div>
           </div>
 
-          {section.productImage && (
-            <div class="flex justify-center my-6">
-              <img src={section.productImage} alt={section.title} class="h-48 object-contain" loading="lazy" />
-            </div>
-          )}
-
-          {section.showPowerGrid ? (
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-              <div class="lg:col-span-2">
-                <p class="text-charcoal-600 text-sm leading-relaxed mb-4">{section.description}</p>
-                <div class="space-y-2">
-                  {section.features.map(item => (
-                    <div class="flex gap-2 items-start">
-                      <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                        </svg>
-                      </div>
-                      <span class="text-charcoal-600 text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
+          <div class="mb-6 overflow-hidden">
+            {section.productImages && (
+              <div class="float-right ml-6 mb-4 flex gap-3">
+                {section.productImages.map(img => (
+                  <img src={img} alt={section.title} class="h-36 lg:h-48 object-contain" loading="lazy" />
+                ))}
               </div>
-              <div class="bg-navy-700 rounded-xl p-5 text-white text-sm">
+            )}
+            <p class="text-charcoal-600 text-sm leading-relaxed mb-4">{section.description}</p>
+            <div class="space-y-2 mb-4">
+              {section.features.map(item => (
+                <div class="flex gap-2 items-start">
+                  <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </div>
+                  <span class="text-charcoal-600 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            {section.showPowerGrid && (
+              <div class="bg-navy-700 rounded-xl p-5 text-white text-sm clear-both">
                 <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-3">{section.powerGridLabel}</div>
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
                   {section.powerValues.map(v => (
                     <div class="bg-navy-600 rounded-lg px-3 py-2 text-center text-xs font-semibold">{v}</div>
                   ))}
                 </div>
               </div>
-            </div>
-          ) : (
-            <div class="mb-6">
-              <p class="text-charcoal-600 text-sm leading-relaxed mb-4">{section.description}</p>
-              <div class="space-y-2 mb-4">
-                {section.features.map(item => (
-                  <div class="flex gap-2 items-start">
-                    <div class="w-4 h-4 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-                      </svg>
-                    </div>
-                    <span class="text-charcoal-600 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            )}
+          </div>
 
           <div class="overflow-x-auto rounded-xl border border-gray-200">
             <table class="w-full text-sm">
