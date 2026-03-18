@@ -146,14 +146,12 @@
       "productImages": [
         "/images/produkty/aqip.png"
       ],
-      "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel země-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. SCOP až 5,13 při 35 °C, energetická třída A+++.",
+      "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel země-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
         "přírodní chladivo R290 (propan) — GWP = 3, ekologicky šetrné",
-        "SCOP až 5,13 — nejvyšší účinnost v nabídce země-voda",
         "max. teplota topné vody 75 °C — vhodné i pro radiátorové systémy",
         "energetická třída A+++ u všech modelů"
       ],
-      "footnote": "* SCOP při 35 °C",
       "products": [
         {
           "model": "AquaMaster 17IP",
@@ -246,10 +244,8 @@
         "přírodní chladivo R290 (propan) — GWP = 3",
         "all-in-one s integrovaným nerezovým bojlerem 150 l",
         "minimální nároky na prostor — pouze 0,3 m²",
-        "SCOP až 4,75 — energetická třída A+++",
         "online 24/7 monitoring a chytrá domácnost"
       ],
-      "footnote": "* SCOP při 35 °C",
       "products": [
         {
           "model": "AquaMaster 17ICP",
