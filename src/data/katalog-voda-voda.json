@@ -25,9 +25,10 @@
   "tableHeaders": {
     "model": "Model",
     "vykon": "Výkon",
-    "cop": "COP",
-    "pdfLabel": "Technický list"
+    "cop": "Topn\u00fd faktor (COP)*",
+    "pdfLabel": "Technick\u00fd list"
   },
+  "copFootnote": "* COP (Coefficient of Performance) = pom\u011br vyroben\u00e9ho tepla k spot\u0159ebovan\u00e9 elekt\u0159in\u011b. Nap\u0159. COP 5,0 znamen\u00e1, \u017ee z 1 kWh elekt\u0159iny z\u00edsk\u00e1te 5 kWh tepla. Uveden\u00e9 hodnoty plat\u00ed pro podm\u00ednky W10W35 (teplota zdroje 10 \u00b0C, v\u00fdstupn\u00ed voda 35 \u00b0C).",
   "sections": [
     {
       "id": "aquamaster",

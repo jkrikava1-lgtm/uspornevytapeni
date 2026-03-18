@@ -114,6 +114,12 @@ import data from '../../data/katalog-zeme-voda.json';
     </div>
   </section>
 
+  {data.copFootnote && (
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
+      <p class="text-xs text-charcoal-400 leading-relaxed">{data.copFootnote}</p>
+    </div>
+  )}
+
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-3">{data.cta.headline}</h2>
