@@ -134,7 +134,7 @@
       "number": 2,
       "numberStyle": "white",
       "title": "AquaMaster Inverter P",
-      "subtitle": "Propanové (R290) · 1–17 kW",
+      "subtitle": "Propanové (R290) · 3–16 kW",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
@@ -148,24 +148,24 @@
         "max. teplota topné vody 75 °C — vhodné i pro radiátorové systémy",
         "energetická třída A+++ u všech modelů"
       ],
-      "footnote": "* SCOP při 35 °C",
+      "footnote": "* Podmínky W10W35, COP při 60 Hz",
       "products": [
         {
           "model": "AquaMaster 22IP",
-          "vykon": "2–8 kW",
-          "cop": "4,8",
+          "vykon": "3–10 kW",
+          "cop": "5,7",
           "pdf": "/pdf/AQ22IP.pdf"
         },
         {
           "model": "AquaMaster 30IP",
-          "vykon": "3–12 kW",
-          "cop": "5,1",
+          "vykon": "4–14 kW",
+          "cop": "6,0",
           "pdf": "/pdf/AQ30IP.pdf"
         },
         {
           "model": "AquaMaster 37IP",
-          "vykon": "4–17 kW",
-          "cop": "4,9",
+          "vykon": "6–16 kW",
+          "cop": "5,5",
           "pdf": "/pdf/AQ37IP.pdf"
         }
       ]
@@ -218,7 +218,7 @@
       "number": 4,
       "numberStyle": "brand",
       "title": "AquaMaster Inverter Combi P",
-      "subtitle": "Propanové all-in-one (R290) · 1–8 kW",
+      "subtitle": "Propanové all-in-one (R290) · 2–10 kW",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
@@ -232,18 +232,18 @@
         "minimální nároky na prostor — pouze 0,3 m²",
         "SCOP až 4,75 — energetická třída A+++"
       ],
-      "footnote": "* SCOP při 35 °C",
+      "footnote": "* Podmínky W10W35, COP při 60 Hz",
       "products": [
         {
           "model": "AquaMaster 17ICP",
-          "vykon": "1–5 kW",
-          "cop": "4,6",
+          "vykon": "2–7 kW",
+          "cop": "5,8",
           "pdf": "/pdf/AQ17ICP.pdf"
         },
         {
           "model": "AquaMaster 22ICP",
-          "vykon": "2–8 kW",
-          "cop": "4,8",
+          "vykon": "3–10 kW",
+          "cop": "5,7",
           "pdf": "/pdf/AQ22ICP.pdf"
         }
       ]
