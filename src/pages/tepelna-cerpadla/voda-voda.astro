@@ -46,7 +46,7 @@ import data from '../../data/voda-voda.json';
 
         <div class="space-y-6">
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.params_label}</div>
+            <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-4">{data.params_label}</div>
             <div class="space-y-3">
               {[
                 { label: data.param1_label, value: data.param1_value },
@@ -57,7 +57,7 @@ import data from '../../data/voda-voda.json';
                 { label: data.param6_label, value: data.param6_value },
               ].map(item => (
                 <div class="flex justify-between py-2 border-b border-navy-600 last:border-0">
-                  <span class="text-sm text-navy-300">{item.label}</span>
+                  <span class="text-sm text-navy-100">{item.label}</span>
                   <span class="text-sm font-semibold">{item.value}</span>
                 </div>
               ))}

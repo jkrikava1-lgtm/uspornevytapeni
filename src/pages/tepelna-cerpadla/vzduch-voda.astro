@@ -40,11 +40,11 @@ import data from '../../data/vzduch-voda.json';
         </div>
 
         <div class="bg-navy-700 rounded-2xl p-8 text-white">
-          <div class="text-brand-400 text-xs font-semibold uppercase tracking-wider mb-5">{data.params_label}</div>
+          <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-5">{data.params_label}</div>
           <div class="space-y-4">
             {data.params.map(item => (
               <div class="flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4">
-                <span class="text-sm text-navy-300">{item.label}</span>
+                <span class="text-sm text-navy-100">{item.label}</span>
                 <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
               </div>
             ))}

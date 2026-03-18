@@ -32,18 +32,18 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 bg-navy-600 text-navy-200 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+          <div class="inline-flex items-center gap-2 bg-navy-600 text-navy-100 text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
             <span class="w-1.5 h-1.5 bg-brand-500 rounded-full"></span>
             {hp.hero_badge}
           </div>
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
             {hp.hero_h1_line1}<br>
-            <span class="text-brand-400">{hp.hero_h1_highlight}</span>
+            <span class="text-brand-300">{hp.hero_h1_highlight}</span>
           </h1>
-          <p class="text-xl sm:text-2xl font-semibold text-navy-200 mb-6 max-w-xl">
+          <p class="text-xl sm:text-2xl font-semibold text-navy-100 mb-6 max-w-xl">
             {hp.hero_h1_line3}
           </p>
-          <p class="text-base text-navy-300 mb-10 max-w-xl leading-relaxed">
+          <p class="text-base text-navy-100 mb-10 max-w-xl leading-relaxed">
             {hp.hero_text}
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
@@ -53,7 +53,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </a>
-            <a href="/reference" class="inline-flex items-center justify-center px-6 py-3.5 border border-navy-500 hover:border-navy-300 text-navy-200 hover:text-white font-semibold rounded-md transition-colors text-base">
+            <a href="/reference" class="inline-flex items-center justify-center px-6 py-3.5 border border-navy-500 hover:border-navy-300 text-navy-100 hover:text-white font-semibold rounded-md transition-colors text-base">
               {hp.hero_cta_secondary}
             </a>
           </div>
@@ -62,15 +62,15 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
           <div class="mt-12 pt-10 border-t border-navy-600 grid grid-cols-3 gap-6 max-w-lg">
             <div>
               <div class="text-2xl font-extrabold text-white">{hp.stat1_number}</div>
-              <div class="text-xs text-navy-300 mt-0.5">{hp.stat1_label}</div>
+              <div class="text-xs text-navy-100 mt-0.5">{hp.stat1_label}</div>
             </div>
             <div>
               <div class="text-2xl font-extrabold text-white">{hp.stat2_number}</div>
-              <div class="text-xs text-navy-300 mt-0.5">{hp.stat2_label}</div>
+              <div class="text-xs text-navy-100 mt-0.5">{hp.stat2_label}</div>
             </div>
             <div>
               <div class="text-2xl font-extrabold text-white">{hp.stat3_number}</div>
-              <div class="text-xs text-navy-300 mt-0.5">{hp.stat3_label}</div>
+              <div class="text-xs text-navy-100 mt-0.5">{hp.stat3_label}</div>
             </div>
           </div>
         </div>
@@ -101,7 +101,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
             </div>
             <!-- Badge -->
             <div class="absolute top-5 left-5 inline-flex items-center gap-2 bg-black/50 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
-              <svg class="w-3.5 h-3.5 text-brand-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-3.5 h-3.5 text-brand-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
               {hp.hero_experience_badge}
             </div>
           </div>
@@ -177,13 +177,13 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
           <div class="absolute -right-8 -top-8 w-40 h-40 bg-navy-600 rounded-full opacity-60"></div>
           <div class="absolute -left-4 -bottom-4 w-28 h-28 bg-brand-500 rounded-full opacity-15"></div>
           <div class="relative">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{hp.chart_label}</div>
+            <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-4">{hp.chart_label}</div>
             <div class="text-5xl font-extrabold mb-2">{hp.chart_highlight_number}</div>
-            <div class="text-navy-300 text-sm mb-8">{hp.chart_highlight_text}</div>
+            <div class="text-navy-100 text-sm mb-8">{hp.chart_highlight_text}</div>
             <div class="space-y-3">
               {hp.chart_items.map(item => (
                 <div>
-                  <div class="flex justify-between text-xs text-navy-300 mb-1.5">
+                  <div class="flex justify-between text-xs text-navy-100 mb-1.5">
                     <span>{item.label}</span><span>~{item.value.toLocaleString('cs-CZ')} Kč/rok</span>
                   </div>
                   <div class="h-2 bg-navy-600 rounded-full">
@@ -192,7 +192,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
                 </div>
               ))}
             </div>
-            <div class="mt-8 pt-6 border-t border-navy-600 text-xs text-navy-400">
+            <div class="mt-8 pt-6 border-t border-navy-600 text-xs text-navy-200">
               {hp.chart_footnote}
             </div>
           </div>
@@ -227,7 +227,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   <!-- TESTIMONIAL -->
   <section class="py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <svg class="w-10 h-10 text-brand-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 32 32">
+      <svg class="w-10 h-10 text-brand-300 mx-auto mb-6" fill="currentColor" viewBox="0 0 32 32">
         <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
       </svg>
       <blockquote class="text-xl lg:text-2xl font-medium text-charcoal-800 leading-relaxed mb-8">
@@ -247,7 +247,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   <section class="bg-navy-700 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-3">{hp.products_label}</div>
+        <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-3">{hp.products_label}</div>
         <h2 class="text-3xl font-extrabold text-white">{hp.products_headline}</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -256,8 +256,8 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
             {item.image && <img src={item.image} alt={item.title} class="w-full h-36 object-cover" loading="lazy" />}
             <div class="p-7">
             <h3 class="text-lg font-bold text-white mb-2">{item.title}</h3>
-            <p class="text-sm text-navy-200 leading-relaxed mb-4">{item.desc}</p>
-            <span class="text-sm font-semibold text-brand-400 group-hover:text-brand-300 flex items-center gap-1">
+            <p class="text-sm text-navy-100 leading-relaxed mb-4">{item.desc}</p>
+            <span class="text-sm font-semibold text-brand-300 group-hover:text-brand-300 flex items-center gap-1">
               {hp.products_cta}
               <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>

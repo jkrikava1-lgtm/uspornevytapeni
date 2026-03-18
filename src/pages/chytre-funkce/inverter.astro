@@ -45,7 +45,7 @@ import data from '../../data/inverter.json';
         <div class="space-y-6">
           <img src="/images/ilustrace/servis-tc-venku.jpg" alt="Servis tepelného čerpadla" class="rounded-2xl w-full max-h-56 object-cover" loading="lazy" />
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-400 text-sm font-semibold uppercase tracking-wider mb-4">{data.stats_label}</div>
+            <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-4">{data.stats_label}</div>
             <div class="space-y-5">
               {[
                 { hodnota: data.stat1_hodnota, popis: data.stat1_popis },
@@ -53,8 +53,8 @@ import data from '../../data/inverter.json';
                 { hodnota: data.stat3_hodnota, popis: data.stat3_popis },
               ].map(item => (
                 <div class="border-b border-navy-600 pb-4 last:border-0 last:pb-0">
-                  <div class="text-3xl font-extrabold text-brand-400 mb-1">{item.hodnota}</div>
-                  <div class="text-sm text-navy-300">{item.popis}</div>
+                  <div class="text-3xl font-extrabold text-brand-300 mb-1">{item.hodnota}</div>
+                  <div class="text-sm text-navy-100">{item.popis}</div>
                 </div>
               ))}
             </div>
