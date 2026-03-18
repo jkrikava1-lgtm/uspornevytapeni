@@ -54,19 +54,22 @@
     {
       "title": "Vzduch – voda",
       "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
-      "emoji": "🌬️",
+      "emoji": "\ud83c\udf2c\ufe0f",
+      "image": "/images/produkty/tc-vzduch-voda-card.jpg",
       "href": "/tepelna-cerpadla/vzduch-voda"
     },
     {
       "title": "Země – voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
-      "emoji": "🌱",
+      "emoji": "\ud83c\udf31",
+      "image": "/images/produkty/tc-zeme-voda-card.jpg",
       "href": "/tepelna-cerpadla/zeme-voda"
     },
     {
       "title": "Voda – voda",
       "desc": "Maximální výkon a účinnost. Pro objekty, které mají studnu s vydatným zdrojem vody.",
-      "emoji": "💧",
+      "emoji": "\ud83d\udca7",
+      "image": "/images/produkty/tc-voda-voda-card.jpg",
       "href": "/tepelna-cerpadla/voda-voda"
     }
   ],

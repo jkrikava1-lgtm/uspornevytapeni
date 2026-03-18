@@ -17,9 +17,8 @@ import data from '../../data/katalog-index.json';
 
         {data.cards.map(card => (
           <a href={card.href} class="group relative rounded-xl overflow-hidden hover:shadow-xl transition-all">
-            <div class={`relative h-44 bg-gradient-to-br from-${card.gradientFrom} to-${card.gradientTo} overflow-hidden`}>
-              {card.image && <img src={card.image} alt={card.title} class="absolute inset-0 w-full h-full object-cover opacity-50" loading="lazy" />}
-              <div class={`absolute inset-0 bg-gradient-to-r from-${card.overlayColor} via-${card.overlayColor}/60 to-transparent`}></div>
+            <div class="h-48 bg-gray-50 overflow-hidden">
+              {card.image && <img src={card.image} alt={card.title} class="w-full h-full object-cover" loading="lazy" />}
             </div>
             <div class="bg-white border border-gray-200 border-t-0 rounded-b-xl p-6 text-center">
               <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{card.title}</h2>

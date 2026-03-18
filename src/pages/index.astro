@@ -252,8 +252,9 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {hp.products.map(item => (
-          <a href={item.href} class="group bg-navy-600 hover:bg-navy-500 rounded-xl p-7 transition-colors">
-            <div class="text-4xl mb-4">{item.emoji}</div>
+          <a href={item.href} class="group bg-navy-600 hover:bg-navy-500 rounded-xl overflow-hidden transition-colors">
+            {item.image && <img src={item.image} alt={item.title} class="w-full h-36 object-cover" loading="lazy" />}
+            <div class="p-7">
             <h3 class="text-lg font-bold text-white mb-2">{item.title}</h3>
             <p class="text-sm text-navy-200 leading-relaxed mb-4">{item.desc}</p>
             <span class="text-sm font-semibold text-brand-400 group-hover:text-brand-300 flex items-center gap-1">
@@ -262,6 +263,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </span>
+            </div>
           </a>
         ))}
       </div>
