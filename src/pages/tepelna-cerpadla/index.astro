@@ -17,8 +17,8 @@ import data from '../../data/tepelna-cerpadla-index.json';
 
         {data.cards.map(card => (
           <a href={card.href} class="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-brand-300 hover:shadow-xl transition-all">
-            <div class="h-48 bg-gray-50 relative overflow-hidden flex items-center justify-center">
-              {card.image ? <img src={card.image} alt={card.title} class="w-3/4 h-3/4 object-contain" loading="lazy" /> : <span class="text-5xl">{card.emoji}</span>}
+            <div class="h-48 bg-gray-50 relative overflow-hidden">
+              {card.image ? <img src={card.image} alt={card.title} class="w-full h-full object-cover" loading="lazy" /> : <div class="flex items-center justify-center h-full"><span class="text-5xl">{card.emoji}</span></div>}
             </div>
             <div class="p-6">
               <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{card.title}</h2>
