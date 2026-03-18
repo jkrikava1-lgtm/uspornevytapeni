@@ -169,37 +169,37 @@
         {
           "model": "BoxAir 22IP",
           "vykon": "2–7 kW",
-          "cop": "4,85",
+          "cop": "4,8",
           "pdf": "/pdf/BA22IP.pdf"
         },
         {
           "model": "BoxAir 26IP",
           "vykon": "4–14 kW",
-          "cop": "5,14",
+          "cop": "5,1",
           "pdf": "/pdf/BA26IP.pdf"
         },
         {
           "model": "BoxAir 37IP",
           "vykon": "6–20 kW",
-          "cop": "4,93",
+          "cop": "4,9",
           "pdf": "/pdf/BA37IP.pdf"
         },
         {
           "model": "BoxAir 45IP",
           "vykon": "8–25 kW",
-          "cop": "4,74",
+          "cop": "4,7",
           "pdf": "/pdf/BA45IP.pdf"
         },
         {
           "model": "BoxAir 60IP",
           "vykon": "7–30 kW",
-          "cop": "4,89",
+          "cop": "4,9",
           "pdf": "/pdf/BA60IP.pdf"
         },
         {
           "model": "BoxAir 90IP",
           "vykon": "12–50 kW",
-          "cop": "4,68",
+          "cop": "4,7",
           "pdf": "/pdf/BA90IP.pdf"
         }
       ]
@@ -336,13 +336,13 @@
         {
           "model": "BoxAir 60IP (R290)",
           "vykon": "7–30 kW",
-          "cop": "4,89",
+          "cop": "4,9",
           "pdf": "/pdf/BA60IP.pdf"
         },
         {
           "model": "BoxAir 90IP (R290)",
           "vykon": "12–50 kW",
-          "cop": "4,68",
+          "cop": "4,7",
           "pdf": "/pdf/BA90IP.pdf"
         },
         {
