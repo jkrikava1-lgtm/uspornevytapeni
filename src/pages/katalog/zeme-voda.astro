@@ -49,6 +49,12 @@ import data from '../../data/katalog-zeme-voda.json';
             </div>
           </div>
 
+          {section.productImage && (
+            <div class="flex justify-center my-6">
+              <img src={section.productImage} alt={section.title} class="h-48 object-contain" loading="lazy" />
+            </div>
+          )}
+
           <div class="mb-6">
             <p class="text-charcoal-600 text-sm leading-relaxed mb-4">{section.description}</p>
             <div class="space-y-2">

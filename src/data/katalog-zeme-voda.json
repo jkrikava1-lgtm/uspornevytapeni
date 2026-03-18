@@ -39,6 +39,7 @@
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
+      "productImage": "/images/produkty/aq-all.png",
       "description": "AquaMaster Inverter s plynulou regulací výkonu podle potřeby domu. Ocenění FOR ARCH Grand Prix 2008. Optimální provozní ekonomika díky inverterové technologii.",
       "features": [
         "inverterová technologie — plynulá regulace výkonu",
@@ -67,6 +68,7 @@
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
+      "productImage": "/images/produkty/aq-all.png",
       "description": "AquaMaster Inverter P je propanov\u00e1 \u0159ada tepeln\u00fdch \u010derpadel zem\u011b-voda s chladivem R290. P\u0159\u00edrodn\u00ed chladivo s minim\u00e1ln\u00edm dopadem na \u017eivotn\u00ed prost\u0159ed\u00ed (GWP = 3). Max. teplota topn\u00e9 vody 75 \u00b0C. SCOP a\u017e 5,13 p\u0159i 35 \u00b0C, energetick\u00e1 t\u0159\u00edda A+++.",
       "features": [
         "p\u0159\u00edrodn\u00ed chladivo R290 (propan) \u2014 GWP = 3, ekologicky \u0161etrn\u00e9",
@@ -92,6 +94,7 @@
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
+      "productImage": "/images/produkty/aq-all.png",
       "description": "Konstrukce \u201eall in one\u201c s integrovaným nerezovým zásobníkem TUV, solárním výměníkem a inverterovým kompresorem. Moderní BLDC kompresor s variabilními oběhovými čerpadly a unikátním řídicím systémem. Volitelný modul pasivního chlazení.",
       "features": [
         "all-in-one — integrovaný nerezový bojler a solární výměník",

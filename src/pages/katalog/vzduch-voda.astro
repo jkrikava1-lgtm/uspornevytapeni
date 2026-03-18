@@ -51,6 +51,12 @@ import data from '../../data/katalog-vzduch-voda.json';
             </div>
           </div>
 
+          {section.productImage && (
+            <div class="flex justify-center my-6">
+              <img src={section.productImage} alt={section.title} class="h-48 object-contain" loading="lazy" />
+            </div>
+          )}
+
           {section.showPowerGrid ? (
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
               <div class="lg:col-span-2">

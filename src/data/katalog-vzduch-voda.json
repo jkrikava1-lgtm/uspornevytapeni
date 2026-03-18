@@ -41,6 +41,7 @@
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
+      "productImage": "/images/produkty/ba-small.png",
       "description": "BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.",
       "features": [
         "nenáročná instalace a excelentní výkon bez poruch při zachování rozumné ceny",
@@ -70,6 +71,7 @@
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-200",
+      "productImage": "/images/produkty/ba-medium.png",
       "description": "BoxAir Inverter P je propanov\u00e1 \u0159ada tepeln\u00fdch \u010derpadel vzduch-voda s chladivem R290. P\u0159\u00edrodn\u00ed chladivo s minim\u00e1ln\u00edm dopadem na \u017eivotn\u00ed prost\u0159ed\u00ed (GWP = 3). Celoaluminiov\u00e1 sk\u0159\u00ed\u0148, barva antracit RAL 7016. Max. teplota topn\u00e9 vody 75 \u00b0C, provoz p\u0159i venkovn\u00edch teplot\u00e1ch od \u221220 do +40 \u00b0C.",
       "features": [
         "p\u0159\u00edrodn\u00ed chladivo R290 (propan) \u2014 GWP = 3, ekologicky \u0161etrn\u00e9",
@@ -99,6 +101,7 @@
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
       "subtitleColor": "text-brand-100",
+      "productImage": "/images/produkty/ba-small.png",
       "description": "BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.",
       "features": [
         "velmi variabilní systém s možností instalace rozsáhlé výbavy — potenciál TČ využit na 100 %",
@@ -124,6 +127,7 @@
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
+      "productImage": "/images/produkty/ba-small.png",
       "description": "BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.",
       "features": [
         "výhodné řešení dělené konstrukce pro malé strojovny",
@@ -147,6 +151,7 @@
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
       "subtitleColor": "text-brand-100",
+      "productImage": "/images/produkty/ba-60ip.jpg",
       "description": "Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.",
       "features": [
         "kompaktní i split verze",
