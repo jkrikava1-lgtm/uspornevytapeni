@@ -20,7 +20,8 @@
   "quickNav": [
     { "label": "AquaMaster Inverter", "anchor": "#aquamaster-inverter" },
     { "label": "AquaMaster Inverter P", "anchor": "#aquamaster-inverter-p" },
-    { "label": "AquaMaster Inverter Combi", "anchor": "#aquamaster-combi" }
+    { "label": "AquaMaster Inverter Combi", "anchor": "#aquamaster-combi" },
+    { "label": "AquaMaster Inverter Combi P", "anchor": "#aquamaster-combi-p" }
   ],
   "tableHeaders": {
     "model": "Model",
@@ -108,6 +109,31 @@
         { "model": "AquaMaster 26IC", "vykon": "3–9 kW", "cop": "4,5", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq26ic_bldc_14511_ehpa_062014.pdf" },
         { "model": "AquaMaster 30IC", "vykon": "4–12 kW", "cop": "4,6", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30ic_bldc_14511.pdf" },
         { "model": "AquaMaster 37IC", "vykon": "5–15 kW", "cop": "4,7", "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq37ic_bldc_14511_ehpa_062014.pdf" }
+      ]
+    },
+    {
+      "id": "aquamaster-combi-p",
+      "number": 4,
+      "numberStyle": "white",
+      "title": "AquaMaster Inverter Combi P",
+      "subtitle": "Propanov\u00e9 all-in-one (R290) \u00b7 1\u20138 kW",
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg",
+      "bannerGradient": "from-green-700 to-green-900",
+      "bannerOverlay": "from-green-800 via-green-800/80",
+      "subtitleColor": "text-green-100",
+      "productImages": ["/images/produkty/aq17icp.png"],
+      "description": "Ultra kompaktn\u00ed jednotka zem\u011b\u2013voda s p\u0159\u00edrodn\u00edm chladivem R290 a integrovan\u00fdm nerezov\u00fdm z\u00e1sobn\u00edkem TUV 150 litr\u016f. Zabere pouze 0,3 m\u00b2 podlahov\u00e9 plochy. Max. teplota topn\u00e9 vody 75 \u00b0C, ochrana proti legionelle bez doh\u0159\u00edv\u00e1n\u00ed.",
+      "features": [
+        "p\u0159\u00edrodn\u00ed chladivo R290 (propan) \u2014 GWP = 3",
+        "all-in-one s integrovan\u00fdm nerezov\u00fdm bojlerem 150 l",
+        "minim\u00e1ln\u00ed n\u00e1roky na prostor \u2014 pouze 0,3 m\u00b2",
+        "SCOP a\u017e 4,75 \u2014 energetick\u00e1 t\u0159\u00edda A+++",
+        "online 24/7 monitoring a chytr\u00e1 dom\u00e1cnost"
+      ],
+      "footnote": "* SCOP p\u0159i 35 \u00b0C",
+      "products": [
+        { "model": "AquaMaster 17ICP", "vykon": "1\u20135 kW", "cop": "4,59", "pdf": "/pdf/AQ17ICP.pdf" },
+        { "model": "AquaMaster 22ICP", "vykon": "2\u20138 kW", "cop": "4,75", "pdf": "/pdf/AQ22ICP.pdf" }
       ]
     }
   ],
