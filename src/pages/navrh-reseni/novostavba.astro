@@ -47,33 +47,13 @@ import data from '../../data/novostavba.json';
         <img src="/images/hero/novostavba-vizual.jpg" alt="Tepelné čerpadlo u moderní novostavby" class="rounded-2xl w-full object-cover max-h-80" loading="lazy" />
       </div>
 
-      <!-- Doporučená sestava -->
-      <div class="mt-12 bg-gray-50 rounded-xl p-7 border border-gray-200">
-        <h3 class="font-bold text-charcoal-900 mb-5">{data.recommended_headline}</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { cislo: data.rec1_cislo, nazev: data.rec1_nazev, popis: data.rec1_popis },
-            { cislo: data.rec2_cislo, nazev: data.rec2_nazev, popis: data.rec2_popis },
-            { cislo: data.rec3_cislo, nazev: data.rec3_nazev, popis: data.rec3_popis },
-            { cislo: data.rec4_cislo, nazev: data.rec4_nazev, popis: data.rec4_popis },
-          ].map(item => (
-            <div class="flex gap-3">
-              <div class="w-7 h-7 bg-navy-700 rounded-md flex items-center justify-center flex-shrink-0 text-white font-bold text-xs">{item.cislo}</div>
-              <div>
-                <div class="font-semibold text-charcoal-900 text-sm">{item.nazev}</div>
-                <div class="text-xs text-charcoal-500 mt-0.5">{item.popis}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   </section>
 
   <section class="py-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6 text-center">{data.related_headline}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {data.related_items.map(item => (
           <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
             <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-3 group-hover:bg-gray-100 transition-colors text-2xl">
