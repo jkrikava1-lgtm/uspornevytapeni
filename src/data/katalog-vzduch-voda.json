@@ -247,6 +247,12 @@
           "vykon": "7–22 kW",
           "cop": "4,7",
           "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba45is_14511_ehpa.pdf"
+        },
+        {
+          "model": "BoxAir 60IS",
+          "vykon": "10–35 kW",
+          "cop": "4,8",
+          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technický_list_ba60is_14511_ehpa.pdf"
         }
       ]
     },
