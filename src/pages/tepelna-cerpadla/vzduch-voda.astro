@@ -91,15 +91,15 @@ import data from '../../data/vzduch-voda.json';
 
         <div class="space-y-6">
           <img src="/images/produkty/boxair-kompakt-dum.jpg" alt="Tepelné čerpadlo BoxAir Inverter u rodinného domu" class="rounded-2xl w-full object-cover max-h-72" loading="lazy" />
-          <div class="bg-white rounded-xl p-6 border border-gray-200">
+          <a href="/katalog/vzduch-voda" class="group bg-white rounded-xl p-6 border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all block">
             <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{data.variant1_model_label}</div>
-            <div class="font-bold text-charcoal-900 text-base mb-1">{data.variant1_model_name}</div>
-            <div class="text-sm text-charcoal-500 mb-3">{data.variant1_model_desc}</div>
-            <a href="/katalog/vzduch-voda" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">
+            <h3 class="font-bold text-charcoal-900 text-base mb-1 group-hover:text-brand-500 transition-colors">{data.variant1_model_name}</h3>
+            <p class="text-sm text-charcoal-500 mb-3">{data.variant1_model_desc}</p>
+            <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
               {data.variant1_catalog_link}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </a>
         </div>
 
       </div>
@@ -171,19 +171,19 @@ import data from '../../data/vzduch-voda.json';
             </div>
           </div>
 
-          <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <a href="/katalog/vzduch-voda" class="group bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-brand-300 hover:shadow-lg hover:bg-white transition-all block">
             <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-2">{data.variant2_model_label}</div>
             <div class="space-y-1 mb-2">
               {data.variant2_model_names.map(name => (
-                <div class="font-bold text-charcoal-900 text-sm">{name}</div>
+                <div class="font-bold text-charcoal-900 text-sm group-hover:text-brand-500 transition-colors">{name}</div>
               ))}
             </div>
-            <div class="text-xs text-charcoal-500 mb-3">{data.variant2_model_desc}</div>
-            <a href="/katalog/vzduch-voda" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">
+            <p class="text-xs text-charcoal-500 mb-3">{data.variant2_model_desc}</p>
+            <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
               {data.variant2_catalog_link}
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
-          </div>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </span>
+          </a>
         </div>
 
       </div>
