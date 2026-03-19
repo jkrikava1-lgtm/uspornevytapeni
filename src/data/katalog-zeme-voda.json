@@ -160,12 +160,6 @@
           "pdf": "/pdf/AQ17IP.pdf"
         },
         {
-          "model": "AquaMaster 17IP",
-          "vykon": "1–5 kW",
-          "cop": "4,6",
-          "pdf": "/pdf/AQ17ICP.pdf"
-        },
-        {
           "model": "AquaMaster 22IP",
           "vykon": "2–8 kW",
           "cop": "4,8",
