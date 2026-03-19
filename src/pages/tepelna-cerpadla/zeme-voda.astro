@@ -43,18 +43,16 @@ import data from '../../data/zeme-voda.json';
   <section class="bg-gray-50 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
-        <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900">{data.variant1_title}</h2>
-          <p class="text-charcoal-500 text-sm mt-0.5">{data.variant1_subtitle}</p>
-        </div>
-      </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
         <div>
-          <div class="space-y-3 mb-8">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-charcoal-900">{data.variant1_title}</h2>
+              <p class="text-charcoal-500 text-sm mt-0.5">{data.variant1_subtitle}</p>
+            </div>
+          </div>
+          <div class="space-y-3">
             {data.variant1_bullets.map(item => (
               <div class="flex gap-3 items-start">
                 <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -68,20 +66,17 @@ import data from '../../data/zeme-voda.json';
           </div>
         </div>
 
-        <div class="space-y-6">
-          <div class="bg-navy-700 rounded-2xl p-6 text-white">
-            <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant1_params_label}</div>
-            <div class="space-y-3">
-              {data.variant1_params.map(item => (
-                <div class="flex justify-between py-2 border-b border-navy-600 last:border-0 gap-4">
-                  <span class="text-sm text-navy-100">{item.label}</span>
-                  <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
-                </div>
-              ))}
-            </div>
+        <div class="bg-navy-700 rounded-2xl p-6 text-white">
+          <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant1_params_label}</div>
+          <div class="space-y-3">
+            {data.variant1_params.map(item => (
+              <div class="flex justify-between py-2 border-b border-navy-600 last:border-0 gap-4">
+                <span class="text-sm text-navy-100">{item.label}</span>
+                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -90,18 +85,16 @@ import data from '../../data/zeme-voda.json';
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="flex items-center gap-4 mb-6">
-        <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
-        <div>
-          <h2 class="text-2xl font-extrabold text-charcoal-900">{data.variant2_title}</h2>
-          <p class="text-charcoal-500 text-sm mt-0.5">{data.variant2_subtitle}</p>
-        </div>
-      </div>
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
         <div>
-          <div class="space-y-3 mb-8">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-10 h-10 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">2</div>
+            <div>
+              <h2 class="text-2xl font-extrabold text-charcoal-900">{data.variant2_title}</h2>
+              <p class="text-charcoal-500 text-sm mt-0.5">{data.variant2_subtitle}</p>
+            </div>
+          </div>
+          <div class="space-y-3">
             {data.variant2_bullets.map(item => (
               <div class="flex gap-3 items-start">
                 <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -115,21 +108,17 @@ import data from '../../data/zeme-voda.json';
           </div>
         </div>
 
-        <div class="space-y-6">
-          <div class="bg-navy-700 rounded-2xl p-6 text-white">
-            <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant2_params_label}</div>
-            <div class="space-y-3">
-              {data.variant2_params.map(item => (
-                <div class="flex justify-between py-2 border-b border-navy-600 last:border-0 gap-4">
-                  <span class="text-sm text-navy-100">{item.label}</span>
-                  <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
-                </div>
-              ))}
-            </div>
+        <div class="bg-navy-700 rounded-2xl p-6 text-white">
+          <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant2_params_label}</div>
+          <div class="space-y-3">
+            {data.variant2_params.map(item => (
+              <div class="flex justify-between py-2 border-b border-navy-600 last:border-0 gap-4">
+                <span class="text-sm text-navy-100">{item.label}</span>
+                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+              </div>
+            ))}
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
