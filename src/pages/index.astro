@@ -227,11 +227,15 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   <!-- ZNAČKA KVALITY -->
   <section class="py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center gap-8 justify-center bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
-        <img src="/images/znacka-kvality.png" alt="Značka kvality AVTČ" class="h-28 object-contain" loading="lazy" />
-        <p class="text-charcoal-600 leading-relaxed text-center sm:text-left max-w-lg">
-          Jsme členy <strong class="text-charcoal-900">Asociace pro využití tepelných čerpadel</strong> a nositeli <strong class="text-charcoal-900">Značky kvality AVTČ</strong>.
-        </p>
+      <div class="flex flex-col sm:flex-row items-stretch bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+        <div class="sm:w-48 flex-shrink-0 bg-gray-50 flex items-center justify-center p-6">
+          <img src="/images/znacka-kvality.png" alt="Značka kvality AVTČ" class="w-full object-contain" loading="lazy" />
+        </div>
+        <div class="p-8 flex items-center">
+          <p class="text-charcoal-600 leading-relaxed">
+            Jsme členy <strong class="text-charcoal-900">Asociace pro využití tepelných čerpadel</strong> a nositeli <strong class="text-charcoal-900">Značky kvality AVTČ</strong>.
+          </p>
+        </div>
       </div>
     </div>
   </section>
