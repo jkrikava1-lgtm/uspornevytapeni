@@ -2,13 +2,13 @@
   "meta_title": "Online ovládání tepelného čerpadla",
   "meta_description": "Ovládejte tepelné čerpadlo přes internet z mobilu nebo počítače. Vzdálený přístup, monitoring spotřeby, nastavení programu odkudkoliv.",
   "hero_title": "Online ovládání přes internet",
-  "hero_subtitle": "Nastavte teplotu z kanceláře, z dovolené, odkudkoliv. Váš dům bude vyhřátý přesně tehdy, kdy potřebujete.",
+  "hero_subtitle": "Nastavte teplotu z kanceláře, z dovolené, odkudkoliv. Ve vašem domě bude teplo přesně tehdy, kdy to potřebujete.",
   "intro_label": "Vzdálený přístup",
   "intro_headline": "Plná kontrola z telefonu",
-  "intro_text1": "Tepelná čerpadla Master Therm jsou standardně vybavena Wi-Fi modulem a vlastní cloudovou platformou. Připojení k internetu zpřístupní kompletní ovládání z mobilní aplikace nebo webového rozhraní.",
+  "intro_text1": "Tepelná čerpadla Master Therm jsou standardně vybavena připojením přes Wi-Fi nebo internetový kabel. Připojení k internetu zpřístupní kompletní ovládání z mobilní aplikace nebo webového rozhraní.",
   "intro_text2": "Zapomněli jste snížit teplotu před odjezdem na chatu? Žádný problém — upravíte to odkudkoliv za pár sekund.",
   "feat1_title": "Nastavení teploty odkudkoliv",
-  "feat1_desc": "Okamžitá změna požadované teploty v každé zóně přes mobil nebo web.",
+  "feat1_desc": "Okamžitá změna požadované teploty v každém topném okruhu přes mobil nebo web.",
   "feat2_title": "Monitoring spotřeby",
   "feat2_desc": "Přehled spotřeby elektřiny, topného faktoru COP a provozních hodin v reálném čase.",
   "feat3_title": "Notifikace a alarmy",
@@ -17,12 +17,30 @@
   "feat4_desc": "Náš servisní tým může zkontrolovat stav systému vzdáleně — rychlejší servis.",
   "app_label": "Funkce aplikace",
   "app_features": [
-    { "icon": "\ud83c\udf21\ufe0f", "text": "Aktu\u00e1ln\u00ed teplota v ka\u017ed\u00e9 z\u00f3n\u011b" },
-    { "icon": "\u26a1", "text": "Spot\u0159eba elekt\u0159iny v re\u00e1ln\u00e9m \u010dase" },
-    { "icon": "\ud83d\udcca", "text": "Grafy spot\u0159eby a v\u00fdkonu" },
-    { "icon": "\ud83d\udcc5", "text": "Spr\u00e1va t\u00fddenn\u00edho programu" },
-    { "icon": "\ud83d\udd14", "text": "Push notifikace p\u0159i poruch\u00e1ch" },
-    { "icon": "\ud83d\udd27", "text": "Vzd\u00e1len\u00fd p\u0159\u00edstup pro servis" }
+    {
+      "icon": "🌡️",
+      "text": "Aktuální teplota v každé zóně"
+    },
+    {
+      "icon": "⚡",
+      "text": "Spotřeba elektřiny v reálném čase"
+    },
+    {
+      "icon": "📊",
+      "text": "Grafy spotřeby a výkonu"
+    },
+    {
+      "icon": "📅",
+      "text": "Správa týdenního programu"
+    },
+    {
+      "icon": "🔔",
+      "text": "Push notifikace při poruchách"
+    },
+    {
+      "icon": "🔧",
+      "text": "Vzdálený přístup pro servis"
+    }
   ],
   "box_headline": "Součástí standardní dodávky",
   "box_text": "Wi-Fi modul a přístup do cloudové platformy je součástí každého tepelného čerpadla Master Therm bez příplatku. Žádné měsíční poplatky.",
