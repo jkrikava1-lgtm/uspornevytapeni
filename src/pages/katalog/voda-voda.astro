@@ -53,7 +53,7 @@ import data from '../../data/katalog-voda-voda.json';
             {section.productImages && (
               <div class="float-left mr-6 mb-4 flex gap-3">
                 {section.productImages.map(img => (
-                  <div class="rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 catalog-zoom">
+                  <div class="rounded-2xl overflow-hidden shadow-md cursor-pointer" data-catalog-img>
                     <img src={img} alt={section.title} class="h-36 lg:h-48 object-contain" loading="lazy" />
                   </div>
                 ))}
@@ -128,13 +128,23 @@ import data from '../../data/katalog-voda-voda.json';
   </section>
 </Layout>
 
+
+<div id="catalog-lightbox" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer">
+  <img id="catalog-lightbox-img" src="" alt="" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />
+</div>
+
 <script>
-  document.querySelectorAll('.catalog-zoom').forEach(el => {
-    el.addEventListener('click', () => {
-      el.classList.toggle('scale-[3]');
-      el.classList.toggle('z-20');
-      el.classList.toggle('relative');
-      el.classList.toggle('shadow-2xl');
+  document.querySelectorAll("[data-catalog-img]").forEach(el => {
+    el.addEventListener("click", () => {
+      const img = el.querySelector("img");
+      const lb = document.getElementById("catalog-lightbox");
+      const lbImg = document.getElementById("catalog-lightbox-img");
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.remove("hidden");
     });
+  });
+  document.getElementById("catalog-lightbox").addEventListener("click", (e) => {
+    e.currentTarget.classList.add("hidden");
   });
 </script>
