@@ -21,16 +21,18 @@
     {
       "label": "Vzduch-voda",
       "href": "/katalog/vzduch-voda",
-      "active": false
+      "active": false,
+      "activeClass": ""
     },
     {
       "label": "Země-voda",
       "href": "/katalog/zeme-voda",
-      "active": false
+      "active": false,
+      "activeClass": ""
     },
     {
       "label": "Voda-voda",
-      "href": null,
+      "href": "",
       "active": true,
       "activeClass": "bg-cyan-100 text-cyan-700"
     }
@@ -81,7 +83,7 @@
       "products": [
         {
           "model": "AquaMaster 17I",
-          "vykon": "1–5 kW",
+          "vykon": "2–5 kW",
           "cop": "4,3",
           "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq17i_bldc_14511_ehpa.pdf"
         },
@@ -123,7 +125,7 @@
         },
         {
           "model": "AquaMaster 90I",
-          "vykon": "24–54 kW",
+          "vykon": "27–54 kW",
           "cop": "4,6",
           "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/MTTC_aq90i_bldc_14511_ehpa_072015.pdf"
         }
