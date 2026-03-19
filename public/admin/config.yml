@@ -1344,6 +1344,7 @@ collections:
               - { label: "Výkon", name: vykon, widget: string }
               - { label: "COP", name: cop, widget: string }
               - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - { label: "Vysvětlivka COP", name: copFootnote, widget: text, required: false }
           - label: "Sekce produktů"
             name: sections
             widget: list
@@ -1357,6 +1358,12 @@ collections:
               - { label: "Banner gradient", name: bannerGradient, widget: string }
               - { label: "Banner overlay", name: bannerOverlay, widget: string }
               - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - label: "Obrázky produktu"
+                name: productImages
+                widget: list
+                required: false
+                field:
+                  { label: "Cesta k obrázku", name: image, widget: string }
               - { label: "Popis", name: description, widget: text }
               - label: "Vlastnosti"
                 name: features
@@ -1447,6 +1454,7 @@ collections:
               - { label: "Výkon", name: vykon, widget: string }
               - { label: "COP", name: cop, widget: string }
               - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - { label: "Vysvětlivka COP", name: copFootnote, widget: text, required: false }
           - label: "Sekce produktů"
             name: sections
             widget: list
@@ -1460,6 +1468,12 @@ collections:
               - { label: "Banner gradient", name: bannerGradient, widget: string }
               - { label: "Banner overlay", name: bannerOverlay, widget: string }
               - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - label: "Obrázky produktu"
+                name: productImages
+                widget: list
+                required: false
+                field:
+                  { label: "Cesta k obrázku", name: image, widget: string }
               - { label: "Popis", name: description, widget: text }
               - label: "Vlastnosti"
                 name: features
@@ -1542,6 +1556,7 @@ collections:
               - { label: "Výkon", name: vykon, widget: string }
               - { label: "COP", name: cop, widget: string }
               - { label: "Popisek PDF", name: pdfLabel, widget: string }
+          - { label: "Vysvětlivka COP", name: copFootnote, widget: text, required: false }
           - label: "Sekce produktů"
             name: sections
             widget: list
@@ -1554,6 +1569,12 @@ collections:
               - { label: "Banner gradient", name: bannerGradient, widget: string }
               - { label: "Banner overlay", name: bannerOverlay, widget: string }
               - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
+              - label: "Obrázky produktu"
+                name: productImages
+                widget: list
+                required: false
+                field:
+                  { label: "Cesta k obrázku", name: image, widget: string }
               - { label: "Popis", name: description, widget: text }
               - label: "Vlastnosti"
                 name: features
