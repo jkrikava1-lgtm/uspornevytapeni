@@ -153,19 +153,19 @@
       "products": [
         {
           "model": "AquaMaster 22IP",
-          "vykon": "3–10 kW",
+          "vykon": "3–11 kW",
           "cop": "5,7",
           "pdf": "/pdf/AQ22IP.pdf"
         },
         {
           "model": "AquaMaster 30IP",
-          "vykon": "4–14 kW",
+          "vykon": "4–15 kW",
           "cop": "6,0",
           "pdf": "/pdf/AQ30IP.pdf"
         },
         {
           "model": "AquaMaster 37IP",
-          "vykon": "6–16 kW",
+          "vykon": "7–22 kW",
           "cop": "5,5",
           "pdf": "/pdf/AQ37IP.pdf"
         }
