@@ -136,7 +136,7 @@
       "number": 2,
       "numberStyle": "white",
       "title": "AquaMaster Inverter P",
-      "subtitle": "Propanové (R290) · 3–16 kW",
+      "subtitle": "Propanové (R290) · 2–80 kW",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
@@ -151,6 +151,12 @@
       ],
       "footnote": "* Podmínky W10W35, COP při 60 Hz",
       "products": [
+        {
+          "model": "AquaMaster 17IP",
+          "vykon": "2–6 kW",
+          "cop": "5,6",
+          "pdf": "/pdf/AQ17IP.pdf"
+        },
         {
           "model": "AquaMaster 22IP",
           "vykon": "3–11 kW",
@@ -168,6 +174,18 @@
           "vykon": "7–22 kW",
           "cop": "5,5",
           "pdf": "/pdf/AQ37IP.pdf"
+        },
+        {
+          "model": "AquaMaster 45IP",
+          "vykon": "8–40 kW",
+          "cop": "5,7",
+          "pdf": "/pdf/AQ45IP.pdf"
+        },
+        {
+          "model": "AquaMaster 90IP",
+          "vykon": "18–80 kW",
+          "cop": "6,0",
+          "pdf": "/pdf/AQ90IP.pdf"
         }
       ]
     },
@@ -188,6 +206,12 @@
       ],
       "footnote": "* Podmínky W10W35",
       "products": [
+        {
+          "model": "AquaMaster 17IC",
+          "vykon": "1–5 kW",
+          "cop": "4,6",
+          "pdf": "/pdf/AQ17IC.pdf"
+        },
         {
           "model": "AquaMaster 22IC",
           "vykon": "3–9 kW",

@@ -138,7 +138,7 @@
       "number": 2,
       "numberStyle": "white",
       "title": "AquaMaster Inverter P",
-      "subtitle": "Propanové (R290) · 1–17 kW",
+      "subtitle": "Propanové (R290) · 1–70 kW",
       "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.jpg",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
@@ -153,6 +153,12 @@
         "energetická třída A+++ u všech modelů"
       ],
       "products": [
+        {
+          "model": "AquaMaster 17IP",
+          "vykon": "1–5 kW",
+          "cop": "4,3",
+          "pdf": "/pdf/AQ17IP.pdf"
+        },
         {
           "model": "AquaMaster 17IP",
           "vykon": "1–5 kW",
@@ -176,6 +182,18 @@
           "vykon": "4–17 kW",
           "cop": "4,9",
           "pdf": "/pdf/AQ37IP.pdf"
+        },
+        {
+          "model": "AquaMaster 45IP",
+          "vykon": "5–35 kW",
+          "cop": "4,4",
+          "pdf": "/pdf/AQ45IP.pdf"
+        },
+        {
+          "model": "AquaMaster 90IP",
+          "vykon": "10–70 kW",
+          "cop": "4,6",
+          "pdf": "/pdf/AQ90IP.pdf"
         }
       ]
     },
@@ -200,6 +218,12 @@
       ],
       "footnote": "* Podmínky B0W35",
       "products": [
+        {
+          "model": "AquaMaster 17IC",
+          "vykon": "1–5 kW",
+          "cop": "4,6",
+          "pdf": "/pdf/AQ17IC.pdf"
+        },
         {
           "model": "AquaMaster 22IC",
           "vykon": "2–7 kW",
