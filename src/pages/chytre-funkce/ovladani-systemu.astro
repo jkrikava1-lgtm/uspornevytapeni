@@ -31,11 +31,13 @@ import data from '../../data/ovladani-systemu.json';
   <!-- Q&A sekce -->
   <section class="pb-10 lg:pb-12">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-12 overflow-hidden">
-        <img src="/images/ilustrace/bojler.png" alt="Bojler" class="float-right ml-6 mb-4 w-48 lg:w-56 object-contain rounded-2xl" loading="lazy" />
+      <div class="space-y-12">
 
-        {data.questions.map((q) => (
-          <div>
+        {data.questions.map((q, i) => (
+          <div class={i === 5 ? 'overflow-hidden' : ''}>
+            {i === 5 && (
+              <img src="/images/ilustrace/bojler.png" alt="Bojler" class="float-right ml-6 mb-4 w-48 lg:w-56 object-contain rounded-2xl" loading="lazy" />
+            )}
             <h2 class="text-xl lg:text-2xl font-bold text-charcoal-900 mb-4 flex items-start gap-3">
               <span class="w-8 h-8 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
