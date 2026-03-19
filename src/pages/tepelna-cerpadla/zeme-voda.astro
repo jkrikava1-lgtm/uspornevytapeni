@@ -14,7 +14,8 @@ import data from '../../data/zeme-voda.json';
   <!-- Intro sekce -->
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div>
 
         <div class="space-y-3 mb-8">
           {data.intro_bullets.map(item => (
@@ -32,6 +33,8 @@ import data from '../../data/zeme-voda.json';
         <p class="text-charcoal-700 font-semibold">
           {data.intro_summary}
         </p>
+      </div>
+      <img src="/images/produkty/aquamaster-technicka.jpg" alt="Tepelné čerpadlo AquaMaster Inverter v technické místnosti" class="rounded-2xl w-full object-cover" loading="lazy" />
       </div>
     </div>
   </section>
@@ -66,7 +69,6 @@ import data from '../../data/zeme-voda.json';
         </div>
 
         <div class="space-y-6">
-          <img src="/images/produkty/aquamaster-technicka.jpg" alt="Tepelné čerpadlo AquaMaster Inverter v technické místnosti" class="rounded-2xl w-full object-cover" loading="lazy" />
           <div class="bg-navy-700 rounded-2xl p-6 text-white">
             <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant1_params_label}</div>
             <div class="space-y-3">
@@ -114,7 +116,6 @@ import data from '../../data/zeme-voda.json';
         </div>
 
         <div class="space-y-6">
-          <img src="/images/produkty/aquamaster-interier-cerveny.jpg" alt="Tepelné čerpadlo AquaMaster v technické místnosti" class="rounded-2xl w-full object-cover" loading="lazy" />
           <div class="bg-navy-700 rounded-2xl p-6 text-white">
             <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-4">{data.variant2_params_label}</div>
             <div class="space-y-3">
