@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tepelné čerpadlo vzduch-voda – Výkonové údaje</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e1117;
+    --surface: #161b27;
+    --surface2: #1e2535;
+    --border: #2a3347;
+    --accent: #00c2a8;
+    --accent2: #ff6b35;
+    --accent3: #6c8eff;
+    --text: #e8edf5;
+    --muted: #7a8899;
+    --cop-low: #ff4d4d;
+    --cop-mid: #ffaa00;
+    --cop-high: #00c2a8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Sora', sans-serif;
+    min-height: 100vh;
+    padding: 32px 24px 60px;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .model-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    background: rgba(0,194,168,0.1);
+    border: 1px solid rgba(0,194,168,0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 4px;
+  }
+
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ctrl-label {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .btn-group { display: flex; gap: 4px; }
+  .btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 7px 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.18s;
+    letter-spacing: 0.05em;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn.active { background: rgba(0,194,168,0.15); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+
+  .view-toggle { margin-left: auto; }
+
+  /* Metric cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: #3a4560; }
+  .card-label {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .card-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .card-value span { font-size: 12px; color: var(--muted); margin-left: 3px; }
+  .card-sub { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .card.accent-card { border-color: rgba(0,194,168,0.3); background: rgba(0,194,168,0.05); }
+  .card.accent-card .card-value { color: var(--accent); }
+
+  /* Table */
+  .table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .table-header {
+    padding: 16px 20px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .table-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .rps-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(0,194,168,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(0,194,168,0.25);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  thead th {
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: rgba(255,255,255,0.02);
+    font-weight: 400;
+    border-bottom: 1px solid var(--border);
+  }
+  thead th.col-ta { text-align: left; padding-left: 20px; }
+  thead .group-header {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  tbody tr {
+    border-bottom: 1px solid rgba(42,51,71,0.6);
+    transition: background 0.12s;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.025); }
+
+  td {
+    padding: 10px 14px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+  }
+  td.col-ta {
+    text-align: left;
+    padding-left: 20px;
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+  }
+  td.col-ta .db { font-weight: 600; color: var(--text); }
+  td.col-ta .wb { font-size: 11px; color: var(--muted); }
+
+  .kwt { color: #6c8eff; font-weight: 500; }
+  .kwe { color: var(--muted); }
+  .cop-cell {
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: inline-block;
+    min-width: 36px;
+  }
+
+  /* Chart */
+  .chart-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 20px;
+  }
+  canvas { width: 100% !important; }
+
+  .legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* View toggle */
+  #view-chart { display: none; }
+  body.chart-view #view-table { display: none; }
+  body.chart-view #view-chart { display: block; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="model-tag">TEPELNÉ ČERPADLO VZDUCH-VODA · VYTÁPĚNÍ</div>
+    <h1>Tepelné čerpadlo vzduch-voda</h1>
+    <div class="subtitle">Topný výkon · Příkon · COP při otáčkách 30 / 60 / 90 rps</div>
+  </div>
+</div>
+
+<!-- Legend of abbreviations -->
+<div style="display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:28px;padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:11px;">
+  <div style="color:var(--muted)"><span style="font-family:'DM Mono',monospace;color:var(--text);font-weight:500">Venkovní teplota</span> &nbsp;teplota suchého teploměru</div>
+  <div style="color:var(--muted)"><span style="font-family:'DM Mono',monospace;color:var(--text);font-weight:500">Topná voda</span> &nbsp;výstupní teplota vody/glykolu</div>
+  <div style="color:var(--muted)"><span style="font-family:'DM Mono',monospace;color:var(--text);font-weight:500">Výkon (kW)</span> &nbsp;topný výkon — odtávání není zahrnuto</div>
+  <div style="color:var(--muted)"><span style="font-family:'DM Mono',monospace;color:var(--text);font-weight:500">Příkon (kW)</span> &nbsp;elektrický příkon</div>
+</div>
+
+<!-- Summary cards -->
+<div class="cards" id="summary-cards">
+  <div class="card">
+    <div class="card-label">Max. topný výkon</div>
+    <div class="card-value" id="s-kwt-max">—</div>
+    <div class="card-sub" id="s-kwt-max-cond">—</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Min. topný výkon</div>
+    <div class="card-value" id="s-kwt-min">—</div>
+    <div class="card-sub" id="s-kwt-min-cond">—</div>
+  </div>
+  <div class="card accent-card">
+    <div class="card-label">Nejlepší COP</div>
+    <div class="card-value" id="s-cop-max">—</div>
+    <div class="card-sub" id="s-cop-max-cond">—</div>
+  </div>
+  <div class="card">
+    <div class="card-label">Průměrný COP</div>
+    <div class="card-value" id="s-cop-avg">—</div>
+    <div class="card-sub">přes všechny podmínky</div>
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="controls">
+  <span class="ctrl-label">Otáčky</span>
+  <div class="btn-group" id="rps-btns">
+    <button class="btn active" onclick="setRps(30)">30 rps</button>
+    <button class="btn" onclick="setRps(60)">60 rps</button>
+    <button class="btn" onclick="setRps(90)">90 rps</button>
+    <button class="btn" onclick="setRps('all')">Vše</button>
+  </div>
+  <div class="btn-group view-toggle">
+    <button class="btn active" id="btn-table" onclick="setView('table')">Tabulka</button>
+    <button class="btn" id="btn-chart" onclick="setView('chart')">Graf</button>
+  </div>
+</div>
+
+<!-- Table view -->
+<div id="view-table">
+  <div class="table-wrap">
+    <div class="table-header">
+      <span class="table-title">Výkonová tabulka</span>
+      <span class="rps-badge" id="rps-badge">30 rps</span>
+    </div>
+    <div id="table-container"></div>
+  </div>
+</div>
+
+<!-- Chart view -->
+<div id="view-chart">
+  <div class="chart-wrap">
+    <canvas id="myChart" height="380"></canvas>
+    <div class="legend" id="chart-legend"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<script>
+const DATA = {
+  30: [
+    { db:15, wb:11, tv35:{kwt:10.3,kwe:1.5}, tv45:{kwt:9.7,kwe:1.9},  tv55:{kwt:9.0,kwe:2.4} },
+    { db:10, wb:8,  tv35:{kwt:9.1,kwe:1.6},  tv45:{kwt:8.6,kwe:1.9},  tv55:{kwt:8.0,kwe:2.4} },
+    { db:7,  wb:6,  tv35:{kwt:8.3,kwe:1.6},  tv45:{kwt:7.8,kwe:1.9},  tv55:{kwt:7.3,kwe:2.3} },
+    { db:2,  wb:1,  tv35:{kwt:6.3,kwe:1.5},  tv45:{kwt:6.0,kwe:1.9},  tv55:{kwt:5.7,kwe:2.2} },
+    { db:-5, wb:-6, tv35:{kwt:4.9,kwe:1.5},  tv45:{kwt:5.0,kwe:1.8},  tv55:{kwt:4.6,kwe:2.1} },
+    { db:-10,wb:-11,tv35:{kwt:4.2,kwe:1.4},  tv45:{kwt:4.3,kwe:1.7},  tv55:{kwt:4.1,kwe:2.0} },
+    { db:-15,wb:-16,tv35:{kwt:3.5,kwe:1.4},  tv45:{kwt:3.8,kwe:1.6},  tv55:{kwt:3.6,kwe:1.9} },
+    { db:-20,wb:-21,tv35:{kwt:2.9,kwe:1.3},  tv45:{kwt:3.3,kwe:1.5},  tv55:{kwt:3.2,kwe:1.7} },
+  ],
+  60: [
+    { db:15, wb:11, tv35:{kwt:19.1,kwe:3.2}, tv45:{kwt:17.9,kwe:3.9}, tv55:{kwt:16.6,kwe:4.6} },
+    { db:10, wb:8,  tv35:{kwt:16.9,kwe:3.2}, tv45:{kwt:15.9,kwe:3.8}, tv55:{kwt:14.8,kwe:4.5} },
+    { db:7,  wb:6,  tv35:{kwt:15.4,kwe:3.2}, tv45:{kwt:14.5,kwe:3.8}, tv55:{kwt:13.6,kwe:4.5} },
+    { db:2,  wb:1,  tv35:{kwt:10.6,kwe:3.0}, tv45:{kwt:10.3,kwe:3.6}, tv55:{kwt:9.9,kwe:4.2} },
+    { db:-5, wb:-6, tv35:{kwt:8.3,kwe:2.9},  tv45:{kwt:8.2,kwe:3.4},  tv55:{kwt:8.1,kwe:3.9} },
+    { db:-10,wb:-11,tv35:{kwt:7.2,kwe:2.8},  tv45:{kwt:7.2,kwe:3.2},  tv55:{kwt:7.2,kwe:3.7} },
+    { db:-15,wb:-16,tv35:{kwt:6.2,kwe:2.6},  tv45:{kwt:6.3,kwe:3.0},  tv55:{kwt:6.3,kwe:3.4} },
+    { db:-20,wb:-21,tv35:{kwt:5.3,kwe:2.5},  tv45:{kwt:5.6,kwe:2.8},  tv55:{kwt:5.9,kwe:3.1} },
+  ],
+  90: [
+    { db:15, wb:11, tv35:{kwt:27.6,kwe:5.6}, tv45:{kwt:26.0,kwe:6.6}, tv55:{kwt:21.7,kwe:6.9} },
+    { db:10, wb:8,  tv35:{kwt:24.6,kwe:5.5}, tv45:{kwt:23.1,kwe:6.5}, tv55:{kwt:19.4,kwe:6.7} },
+    { db:7,  wb:6,  tv35:{kwt:23.1,kwe:5.5}, tv45:{kwt:21.8,kwe:6.4}, tv55:{kwt:18.3,kwe:6.6} },
+    { db:2,  wb:1,  tv35:{kwt:16.2,kwe:5.2}, tv45:{kwt:15.6,kwe:6.1}, tv55:{kwt:13.4,kwe:6.2} },
+    { db:-5, wb:-6, tv35:{kwt:12.9,kwe:5.0}, tv45:{kwt:12.6,kwe:5.8}, tv55:{kwt:10.1,kwe:5.7} },
+    { db:-10,wb:-11,tv35:{kwt:11.3,kwe:4.7}, tv45:{kwt:11.0,kwe:5.4}, tv55:{kwt:9.7,kwe:5.5} },
+    { db:-15,wb:-16,tv35:{kwt:9.7,kwe:4.5},  tv45:{kwt:9.6,kwe:5.2},  tv55:{kwt:8.3,kwe:5.2} },
+    { db:-20,wb:-21,tv35:{kwt:8.4,kwe:4.3},  tv45:{kwt:8.5,kwe:4.9},  tv55:{kwt:7.6,kwe:4.9} },
+  ]
+};
+
+const TV_KEYS = ['tv35','tv45','tv55'];
+const TV_LABELS = ['Topná voda 35°C','Topná voda 45°C','Topná voda 55°C'];
+const TV_COLORS = ['#6c8eff','#00c2a8','#ff6b35'];
+
+let currentRps = 30;
+let currentView = 'table';
+let chartInstance = null;
+
+function cop(kwt, kwe) { return (kwt / kwe).toFixed(2); }
+function copNum(kwt, kwe) { return kwt / kwe; }
+
+function copColor(c) {
+  if (c >= 5) return '#00c2a8';
+  if (c >= 3.5) return '#6c8eff';
+  if (c >= 2.5) return '#ffaa00';
+  return '#ff6b35';
+}
+
+function setRps(rps) {
+  currentRps = rps;
+  document.querySelectorAll('#rps-btns .btn').forEach((b,i) => {
+    b.classList.toggle('active', [30,60,90,'all'][i] === rps);
+  });
+  document.getElementById('rps-badge').textContent = rps === 'all' ? 'Všechny otáčky' : rps + ' rps';
+  updateSummary();
+  if (currentView === 'table') renderTable();
+  else renderChart();
+}
+
+function setView(v) {
+  currentView = v;
+  document.body.classList.toggle('chart-view', v === 'chart');
+  document.getElementById('btn-table').classList.toggle('active', v === 'table');
+  document.getElementById('btn-chart').classList.toggle('active', v === 'chart');
+  if (v === 'chart') renderChart();
+  else renderTable();
+}
+
+function getAllRows() {
+  const rpsKeys = currentRps === 'all' ? [30,60,90] : [currentRps];
+  return rpsKeys.flatMap(r => DATA[r].map(row => ({...row, rps: r})));
+}
+
+function updateSummary() {
+  const rows = getAllRows();
+  let maxKwt = -Infinity, minKwt = Infinity, maxCop = -Infinity;
+  let maxKwtCond = '', minKwtCond = '', maxCopCond = '';
+  let sumCop = 0, count = 0;
+
+  rows.forEach(row => {
+    TV_KEYS.forEach((tv, ti) => {
+      const kwt = row[tv].kwt, kwe = row[tv].kwe;
+      const c = copNum(kwt, kwe);
+      const cond = `Venkovní teplota ${row.db}°C · ${TV_LABELS[ti]}${currentRps==='all'?' · '+row.rps+'rps':''}`;
+      if (kwt > maxKwt) { maxKwt = kwt; maxKwtCond = cond; }
+      if (kwt < minKwt) { minKwt = kwt; minKwtCond = cond; }
+      if (c > maxCop) { maxCop = c; maxCopCond = cond; }
+      sumCop += c; count++;
+    });
+  });
+
+  document.getElementById('s-kwt-max').innerHTML = `${maxKwt} <span>kW</span>`;
+  document.getElementById('s-kwt-max-cond').textContent = maxKwtCond;
+  document.getElementById('s-kwt-min').innerHTML = `${minKwt} <span>kW</span>`;
+  document.getElementById('s-kwt-min-cond').textContent = minKwtCond;
+  document.getElementById('s-cop-max').textContent = maxCop.toFixed(2);
+  document.getElementById('s-cop-max-cond').textContent = maxCopCond;
+  document.getElementById('s-cop-avg').textContent = (sumCop/count).toFixed(2);
+}
+
+function renderTable() {
+  const container = document.getElementById('table-container');
+  const rpsKeys = currentRps === 'all' ? [30,60,90] : [currentRps];
+
+  let html = '';
+  rpsKeys.forEach(rps => {
+    const rows = DATA[rps];
+    if (currentRps === 'all') {
+      html += `<div style="padding:10px 20px 4px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--border);background:rgba(255,255,255,0.015)">${rps} rps</div>`;
+    }
+    html += `<table><thead>
+      <tr>
+        <th class="col-ta">Venkovní teplota (°C)</th>
+        <th colspan="3" style="color:#6c8eff;border-left:1px solid var(--border)">Topná voda 35°C</th>
+        <th colspan="3" style="color:#00c2a8;border-left:1px solid var(--border)">Topná voda 45°C</th>
+        <th colspan="3" style="color:#ff6b35;border-left:1px solid var(--border)">Topná voda 55°C</th>
+      </tr>
+      <tr>
+        <th class="col-ta"></th>
+        <th style="border-left:1px solid var(--border)">Výkon (kW)</th><th>Příkon (kW)</th><th>COP</th>
+        <th style="border-left:1px solid var(--border)">Výkon (kW)</th><th>Příkon (kW)</th><th>COP</th>
+        <th style="border-left:1px solid var(--border)">Výkon (kW)</th><th>Příkon (kW)</th><th>COP</th>
+      </tr>
+    </thead><tbody>`;
+
+    rows.forEach(row => {
+      html += `<tr>
+        <td class="col-ta"><span class="db">${row.db}°C</span></td>`;
+      TV_KEYS.forEach((tv, ti) => {
+        const kwt = row[tv].kwt, kwe = row[tv].kwe;
+        const c = copNum(kwt, kwe);
+        const cc = copColor(c);
+        html += `<td style="border-left:1px solid var(--border)" class="kwt">${kwt}</td>
+                 <td class="kwe">${kwe}</td>
+                 <td><span class="cop-cell" style="color:${cc};background:${cc}22">${(c).toFixed(2)}</span></td>`;
+      });
+      html += `</tr>`;
+    });
+    html += `</tbody></table>`;
+  });
+  container.innerHTML = html;
+}
+
+function renderChart() {
+  const ctx = document.getElementById('myChart').getContext('2d');
+  if (chartInstance) chartInstance.destroy();
+
+  const rpsKeys = currentRps === 'all' ? [30,60,90] : [currentRps];
+  const labels = DATA[30].map(r => `${r.db}°C`);
+  const datasets = [];
+
+  rpsKeys.forEach(rps => {
+    TV_KEYS.forEach((tv, ti) => {
+      const color = TV_COLORS[ti];
+      const dash = rps === 30 ? [] : rps === 60 ? [6,3] : [2,2];
+      const opacity = rps === 30 ? 'ff' : rps === 60 ? 'cc' : '99';
+      datasets.push({
+        label: `${TV_LABELS[ti]} · ${rps}rps`,
+        data: DATA[rps].map(r => r[tv].kwt),
+        borderColor: color + opacity,
+        backgroundColor: color + '18',
+        borderWidth: 2,
+        borderDash: dash,
+        pointRadius: 3,
+        tension: 0.3,
+        yAxisID: 'y',
+      });
+    });
+  });
+
+  chartInstance = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e2535',
+          borderColor: '#2a3347',
+          borderWidth: 1,
+          titleColor: '#e8edf5',
+          bodyColor: '#7a8899',
+          padding: 12,
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#2a3347' },
+          ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } }
+        },
+        y: {
+          grid: { color: '#2a3347' },
+          ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } },
+          title: { display: true, text: 'Topný výkon (kW) — odtávání nezahrnuto', color: '#7a8899', font: { size: 12 } }
+        }
+      }
+    }
+  });
+
+  // Legend
+  const legendEl = document.getElementById('chart-legend');
+  legendEl.innerHTML = datasets.map(ds => `
+    <div class="legend-item">
+      <div class="legend-dot" style="background:${ds.borderColor}"></div>
+      ${ds.label}
+    </div>`).join('');
+}
+
+// Init
+updateSummary();
+renderTable();
+</script>
+</body>
+</html>

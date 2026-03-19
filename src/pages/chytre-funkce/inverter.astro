@@ -43,7 +43,6 @@ import data from '../../data/inverter.json';
         </div>
 
         <div class="space-y-6">
-          <img src="/images/ilustrace/servis-tc-venku.jpg" alt="Servis tepelného čerpadla" class="rounded-2xl w-full max-h-56 object-cover" loading="lazy" />
           <div class="bg-navy-700 rounded-2xl p-8 text-white">
             <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-4">{data.stats_label}</div>
             <div class="space-y-5">
@@ -65,6 +64,16 @@ import data from '../../data/inverter.json';
             <p class="text-sm text-charcoal-500 leading-relaxed">{data.box_text}</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Výkonová tabulka TČ -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6 text-center">Výkonové údaje tepelného čerpadla vzduch–voda</h2>
+      <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+        <iframe src="/tools/vykon-tc.html" class="w-full" style="height:900px;border:0;" loading="lazy" title="Výkonová tabulka tepelného čerpadla"></iframe>
       </div>
     </div>
   </section>
