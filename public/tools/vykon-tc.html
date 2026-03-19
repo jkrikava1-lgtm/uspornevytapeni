@@ -283,9 +283,9 @@
 <div class="controls">
   <span class="ctrl-label">Otáčky</span>
   <div class="btn-group" id="rps-btns">
-    <button class="btn active" onclick="setRps(30)">30 rps</button>
-    <button class="btn" onclick="setRps(60)">60 rps</button>
-    <button class="btn" onclick="setRps(90)">90 rps</button>
+    <button class="btn active" onclick="setRps(30)">30 ot/s</button>
+    <button class="btn" onclick="setRps(60)">60 ot/s</button>
+    <button class="btn" onclick="setRps(90)">90 ot/s</button>
     <button class="btn" onclick="setRps('all')">Vše</button>
   </div>
   <div class="btn-group view-toggle">
@@ -299,7 +299,7 @@
   <div class="table-wrap">
     <div class="table-header">
       <span class="table-title">Výkonová tabulka</span>
-      <span class="rps-badge" id="rps-badge">30 rps</span>
+      <span class="rps-badge" id="rps-badge">30 ot/s</span>
     </div>
     <div id="table-container"></div>
   </div>
@@ -371,7 +371,7 @@ function setRps(rps) {
   document.querySelectorAll('#rps-btns .btn').forEach((b,i) => {
     b.classList.toggle('active', [30,60,90,'all'][i] === rps);
   });
-  document.getElementById('rps-badge').textContent = rps === 'all' ? 'Všechny otáčky' : rps + ' rps';
+  document.getElementById('rps-badge').textContent = rps === 'all' ? 'Všechny otáčky' : rps + 'all';
   updateSummary();
   if (currentView === 'table') renderTable();
   else renderChart();
@@ -401,7 +401,7 @@ function updateSummary() {
     TV_KEYS.forEach((tv, ti) => {
       const kwt = row[tv].kwt, kwe = row[tv].kwe;
       const c = copNum(kwt, kwe);
-      const cond = `Venkovní teplota ${row.db}°C · ${TV_LABELS[ti]}${currentRps==='all'?' · '+row.rps+'rps':''}`;
+      const cond = `Venkovní teplota ${row.db}°C · ${TV_LABELS[ti]}${currentRps==='all'?' · '+row.rps+' ot/s':''}`;
       if (kwt > maxKwt) { maxKwt = kwt; maxKwtCond = cond; }
       if (kwt < minKwt) { minKwt = kwt; minKwtCond = cond; }
       if (c > maxCop) { maxCop = c; maxCopCond = cond; }
@@ -426,7 +426,7 @@ function renderTable() {
   rpsKeys.forEach(rps => {
     const rows = DATA[rps];
     if (currentRps === 'all') {
-      html += `<div style="padding:10px 20px 4px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--border);background:rgba(255,255,255,0.015)">${rps} rps</div>`;
+      html += `<div style="padding:10px 20px 4px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--border);background:rgba(255,255,255,0.015)">${rps} ot/s</div>`;
     }
     html += `<table><thead>
       <tr>
