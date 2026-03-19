@@ -45,22 +45,24 @@ import data from '../../data/online-ovladani.json';
         </div>
 
         <div class="space-y-6">
-          <div class="bg-navy-700 rounded-2xl p-8 text-white">
-            <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-5">{data.app_label}</div>
-            <div class="space-y-3">
-              {data.app_features.map(item => (
-                <div class="flex items-center gap-3 bg-navy-600 rounded-lg px-4 py-3">
-                  <span class="text-lg">{item.icon}</span>
-                  <span class="text-sm text-navy-100">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <img src="/images/ilustrace/touch.jpg" alt="Master Therm Touch ovládací panel" class="rounded-2xl w-full shadow-md" loading="lazy" />
 
           <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
             <h3 class="font-bold text-charcoal-900 mb-2">{data.box_headline}</h3>
             <p class="text-sm text-charcoal-500 leading-relaxed">{data.box_text}</p>
           </div>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-navy-700 rounded-2xl p-8 text-white">
+        <div class="text-brand-300 text-sm font-semibold uppercase tracking-wider mb-5">{data.app_label}</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {data.app_features.map(item => (
+            <div class="flex items-center gap-3 bg-navy-600 rounded-lg px-4 py-3">
+              <span class="text-lg">{item.icon}</span>
+              <span class="text-sm text-navy-100">{item.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
