@@ -493,6 +493,8 @@ function renderChart() {
     data: { labels, datasets },
     options: {
       responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.5,
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { display: false },
@@ -511,9 +513,11 @@ function renderChart() {
           ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } }
         },
         y: {
+          min: 0,
+          max: 30,
           grid: { color: '#2a3347' },
           ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } },
-          title: { display: true, text: 'Topný výkon (kW) — odtávání nezahrnuto', color: '#7a8899', font: { size: 12 } }
+          title: { display: true, text: 'Topný výkon (kW)', color: '#7a8899', font: { size: 11 } }
         }
       }
     }
