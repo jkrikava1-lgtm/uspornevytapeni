@@ -19,15 +19,15 @@
   "app_features": [
     {
       "icon": "🌡️",
-      "text": "Aktuální teplota v každé zóně"
+      "text": "Aktuální teplota v každém okruhu"
     },
     {
       "icon": "⚡",
-      "text": "Spotřeba elektřiny v reálném čase"
+      "text": "Spotřeba elektřiny (volitelné)"
     },
     {
       "icon": "📊",
-      "text": "Grafy spotřeby a výkonu"
+      "text": "Načítání dat kažých 60 sekund"
     },
     {
       "icon": "📅",
@@ -35,7 +35,7 @@
     },
     {
       "icon": "🔔",
-      "text": "Push notifikace při poruchách"
+      "text": "Notifikace při poruchách"
     },
     {
       "icon": "🔧",
@@ -43,7 +43,7 @@
     }
   ],
   "box_headline": "Součástí standardní dodávky",
-  "box_text": "Wi-Fi modul a přístup do cloudové platformy je součástí každého tepelného čerpadla Master Therm bez příplatku. Žádné měsíční poplatky.",
+  "box_text": "Internetový modul a přístup do on-line správy je součástí každého tepelného čerpadla Master Therm. Aktivace je volitelná. Žádné měsíční poplatky.",
   "cta_headline": "Chcete mít dům pod kontrolou odkudkoliv?",
   "cta_text": "Poptejte tepelné čerpadlo s online ovládáním zdarma.",
   "cta_button": "Odeslat poptávku"
