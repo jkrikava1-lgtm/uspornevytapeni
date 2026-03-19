@@ -53,7 +53,7 @@ import data from '../../data/katalog-voda-voda.json';
             {section.productImages && (
               <div class="float-left mr-6 mb-4 flex gap-3">
                 {section.productImages.map(img => (
-                  <div class="rounded-2xl overflow-hidden shadow-md">
+                  <div class="rounded-2xl overflow-hidden shadow-md cursor-pointer transition-transform duration-300 catalog-zoom">
                     <img src={img} alt={section.title} class="h-36 lg:h-48 object-contain" loading="lazy" />
                   </div>
                 ))}
@@ -127,3 +127,14 @@ import data from '../../data/katalog-voda-voda.json';
     </div>
   </section>
 </Layout>
+
+<script>
+  document.querySelectorAll('.catalog-zoom').forEach(el => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('scale-150');
+      el.classList.toggle('z-20');
+      el.classList.toggle('relative');
+      el.classList.toggle('shadow-2xl');
+    });
+  });
+</script>
