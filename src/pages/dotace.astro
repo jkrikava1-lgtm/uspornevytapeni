@@ -93,16 +93,16 @@ import data from '../data/dotace.json';
             </div>
             <div>
               <h3 class="font-extrabold">{data.zranitelne_title}</h3>
-              <p class="text-navy-100 text-xs">{data.zranitelne_subtitle}</p>
+              <p class="text-white/70 text-xs">{data.zranitelne_subtitle}</p>
             </div>
           </div>
 
-          <p class="text-navy-100 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
+          <p class="text-white/90 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
 
           <div class="space-y-0">
             {data.zranitelne_body.map(item => (
               <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
-                <span class="text-sm text-navy-100">{item.label}</span>
+                <span class="text-sm text-white/80">{item.label}</span>
                 <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
               </div>
             ))}
