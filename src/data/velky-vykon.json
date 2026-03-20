@@ -1,12 +1,12 @@
 {
   "meta_title": "Tepelné čerpadlo velkého výkonu",
-  "meta_description": "Kaskádové systémy tepelných čerpadel pro bytové domy, komerční objekty a průmysl. Výkon 20–200 kW a více.",
+  "meta_description": "Tepelná čerpadla pro bytové domy, hotely, komerční objekty a průmysl. Výkon až 1000+ kW v kaskádách. Řízení MasterLAN, online monitoring 24/7.",
   "hero_title": "Chci tepelné čerpadlo s velkým výkonem",
   "hero_subtitle": "Čím větší objekt, tím větší náklady na vytápění a větší úspora po instalaci tepelného čerpadla. Návratnost investice 3–7 let.",
   "intro_label": "Proč to stojí za to",
   "intro_headline": "Velký objekt = velká úspora",
-  "intro_text1": "Čím větší objekt, tím větší náklady na vytápění — a tím větší úspora po instalaci systému s tepelným čerpadlem. Návratnost investice se pohybuje mezi 3–7 lety v závislosti na typu stávajícího vytápění.",
-  "intro_text2": "Systém zaručuje minimální údržbu nebo zcela bezobslužný provoz. Každý projekt začíná důkladnou analýzou vašeho objektu.",
+  "intro_text1": "Čím větší objekt, tím větší náklady na vytápění — a tím větší úspora po instalaci systému s tepelným čerpadlem. Návratnost investice se pohybuje mezi 3–7 lety v závislosti na typu stávajícího vytápění. Kaskádní řízení MasterLAN umožňuje propojit až 16 jednotek s celkovým výkonem přes 1000 kW.",
+  "intro_text2": "Systém zaručuje minimální údržbu nebo zcela bezobslužný provoz s online monitoringem 24/7. Komunikace přes Modbus RTU pro napojení na systémy řízení budov (BMS). Každý projekt začíná důkladnou analýzou vašeho objektu.",
   "segment1_typ": "Hotely a penziony",
   "segment1_popis": "Hosté nechávají radiátory na maximum a otevírají okna. Četné sprchy, zásobování palivem v horských lokalitách, potřeba wellness služeb. TČ řeší vše.",
   "segment2_typ": "Komerční objekty",
@@ -15,9 +15,9 @@
   "segment3_popis": "Lisovny plastů, kalírny — odebíráme teplo z chladících smyček. Jedním zařízením chladíme co potřebujete a odebraným teplem topíme.",
   "params_label": "Parametry systémů",
   "param1_label": "Výkonový rozsah",
-  "param1_value": "20 – 500+ kW",
+  "param1_value": "20 – 1000+ kW",
   "param2_label": "Počet jednotek v kaskádě",
-  "param2_value": "2 – 10+",
+  "param2_value": "2 – 16",
   "param3_label": "Topný faktor COP",
   "param3_value": "3,5 – 5,5",
   "param4_label": "Redundance",
@@ -39,8 +39,8 @@
   "cta_button2": "+420 777 724 573",
   "konfigurace_headline": "Typy konfigurace velkých tepelných čerpadel",
   "konfig_jedno_title": "Jednokompresorová tepelná čerpadla",
-  "konfig_jedno_desc": "Klasické tepelné čerpadlo s jedním kompresorem pracuje v rozsahu výkonů 3–18 kW. Pro větší objekty nabízíme jednotky s výkonem 22, 25 nebo 30 kW. Výhodou jednokompresorového řešení je nižší cena a levnější instalace.",
-  "konfig_jedno_modely": "BoxAir 45 Inverter, AquaMaster 45I/60I/90I",
+  "konfig_jedno_desc": "Jednotky s jedním kompresorem s výkonem až 50 kW na kompresorový okruh (vzduch-voda) nebo až 64 kW (země/voda-voda). Výhodou je nižší cena a jednodušší instalace.",
+  "konfig_jedno_modely": "BoxAir 60/90 Inverter P (R290), AquaMaster 45/90 Inverter P (R290)",
   "konfig_dvou_title": "Dvoukompresorová tepelná čerpadla",
   "konfig_dvou_desc": "Dvoukompresorové jednotky mají dva kompresory — prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádovitě připíná podle potřeby.",
   "konfig_dvou_body": [
@@ -50,11 +50,16 @@
     "Úspora prostoru oproti dvěma samostatným jednotkám"
   ],
   "konfig_kaskady_title": "Kaskády tepelných čerpadel",
-  "konfig_kaskady_desc": "Pro výkony větší než 35 kW se tepelná čerpadla umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby. Kaskáda pokryje prakticky jakýkoliv požadovaný výkon.",
+  "konfig_kaskady_desc": "Pro výkony nad 50 kW se tepelná čerpadla propojují do kaskád pomocí řídicího systému MasterLAN. Celkový výkon kaskády může přesáhnout 1000 kW.",
   "konfig_kaskady_body": [
-    "Jedno čerpadlo je nastaveno jako Master — řídí celou soustavu",
-    "Ostatní pracují jako Slave — zapínají se podle potřeby tepla",
+    "Řízení MasterLAN — součást dodávky, propojení až 16 jednotek",
+    "Master/Slave architektura — automatické řízení podle potřeby tepla",
     "Vyrovnaný počet motohodin všech jednotek",
-    "Lze kombinovat různé typy TČ (vzduch-voda, země-voda, voda-voda)"
-  ]
+    "Lze kombinovat různé typy TČ (vzduch-voda, země-voda, voda-voda)",
+    "Komunikace Modbus RTU pro napojení na BMS"
+  ],
+  "segment4_typ": "Bytové domy",
+  "segment4_popis": "Společné vytápění a ohřev TUV pro desítky bytů. Kaskáda tepelných čerpadel nahradí plynovou kotelnu s minimální údržbou.",
+  "segment5_typ": "Školy a sportovní areály",
+  "segment5_popis": "Bazény, tělocvičny, školní budovy — vysoká spotřeba tepla a teplé vody, ideální pro kombinaci vytápění a chlazení."
 }

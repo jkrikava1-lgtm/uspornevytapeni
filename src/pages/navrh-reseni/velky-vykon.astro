@@ -22,11 +22,13 @@ import data from '../../data/velky-vykon.json';
             <p>{data.intro_text2}</p>
           </div>
 
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
               { typ: data.segment1_typ, popis: data.segment1_popis },
               { typ: data.segment2_typ, popis: data.segment2_popis },
               { typ: data.segment3_typ, popis: data.segment3_popis },
+              { typ: data.segment4_typ, popis: data.segment4_popis },
+              { typ: data.segment5_typ, popis: data.segment5_popis },
             ].map(item => (
               <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
                 <h4 class="font-bold text-charcoal-900 text-sm mb-2">{item.typ}</h4>
