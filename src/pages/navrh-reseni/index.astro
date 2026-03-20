@@ -63,13 +63,39 @@ import data from '../../data/navrh-reseni-index.json';
         ))}
       </div>
 
-      <!-- Sdílený blok Kombinace okruhů — uprostřed -->
+      <!-- Sdílený blok Kombinace okruhů — mezi sloupci 1 a 2 -->
       {data.shared_link && (
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-1">
-          <div></div>
-          <div class="flex flex-col items-center">
-            <div class="w-0.5 h-5 bg-brand-200"></div>
-            <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
+        <div class="hidden md:flex justify-center -mt-1">
+          <div class="flex items-end gap-0" style="width: 66.666%">
+            <!-- Vlákno z 1. sloupce -->
+            <div class="flex-1 flex justify-center">
+              <div class="w-0.5 h-5 bg-brand-200"></div>
+            </div>
+            <!-- Vlákno z 2. sloupce -->
+            <div class="flex-1 flex justify-center">
+              <div class="w-0.5 h-5 bg-brand-200"></div>
+            </div>
+          </div>
+        </div>
+      )}
+      {data.shared_link && (
+        <div class="flex justify-center">
+          <div class="hidden md:flex items-center" style="width: 66.666%">
+            <div class="flex-1 h-0.5 bg-brand-200"></div>
+            <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all flex-shrink-0 mx-3">
+              <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
+                <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                </svg>
+              </div>
+              <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors">{data.shared_link.title}</span>
+              <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <div class="flex-1 h-0.5 bg-brand-200"></div>
+          </div>
+          <!-- Mobile: jednoduchý blok -->
+          <div class="md:hidden w-full mt-4">
+            <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all">
               <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
                 <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
@@ -79,7 +105,6 @@ import data from '../../data/navrh-reseni-index.json';
               <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
-          <div></div>
         </div>
       )}
 
