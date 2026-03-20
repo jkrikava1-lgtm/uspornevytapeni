@@ -17,34 +17,29 @@ import data from '../data/dotace.json';
       <div class="mb-6">
         <img src="/images/nzu-logo.png" alt="Nová zelená úsporám" class="h-10 w-auto" />
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-        <div class="lg:col-span-2">
-          <p class="text-charcoal-600 text-lg leading-relaxed" set:html={data.intro} />
-        </div>
-        <img src="/images/ilustrace/dotace.jpg" alt="Dotace na tepelné čerpadlo" class="rounded-2xl w-full shadow-md" loading="lazy" />
-      </div>
-    </div>
-  </section>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-charcoal-600 text-lg leading-relaxed mb-8" set:html={data.intro} />
 
-  <!-- Harmonogram -->
-  <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.harmonogram_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
+          <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.harmonogram_headline}</h2>
+          <p class="text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
 
-      <div class="space-y-0">
-        {data.harmonogram.map((item, i) => (
-          <div class="flex gap-4 items-start relative">
-            <div class="flex flex-col items-center">
-              <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 z-10">{i + 1}</div>
-              {i < data.harmonogram.length - 1 && <div class="w-0.5 bg-navy-200 flex-1 min-h-6"></div>}
-            </div>
-            <div class="pb-5">
-              <div class="font-bold text-charcoal-900 text-sm">{item.datum}</div>
-              <p class="text-charcoal-600 text-sm mt-0.5 leading-relaxed">{item.popis}</p>
-            </div>
+          <div class="space-y-0">
+            {data.harmonogram.map((item, i) => (
+              <div class="flex gap-4 items-start relative">
+                <div class="flex flex-col items-center">
+                  <div class="w-8 h-8 bg-navy-700 text-white rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 z-10">{i + 1}</div>
+                  {i < data.harmonogram.length - 1 && <div class="w-0.5 bg-navy-200 flex-1 min-h-6"></div>}
+                </div>
+                <div class="pb-5">
+                  <div class="font-bold text-charcoal-900 text-sm">{item.datum}</div>
+                  <p class="text-charcoal-600 text-sm mt-0.5 leading-relaxed">{item.popis}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <img src="/images/ilustrace/dotace.jpg" alt="Dotace na tepelné čerpadlo" class="rounded-2xl w-full shadow-md sticky top-24" loading="lazy" />
       </div>
     </div>
   </section>
