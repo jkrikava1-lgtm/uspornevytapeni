@@ -14,11 +14,12 @@ import data from '../../data/navrh-reseni-index.json';
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+      <!-- 3 hlavní karty -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {data.typ_objektu_cards.map(card => (
-          <div class="flex flex-col">
+        {data.typ_objektu_cards.map((card, ci) => (
+          <div class="flex flex-col items-center">
             <!-- Hlavní karta -->
-            <a href={card.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all overflow-hidden flex-shrink-0">
+            <a href={card.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all overflow-hidden w-full">
               <img src={card.img} alt={card.title} class="w-full h-52 object-cover object-[center_15%]" loading="lazy" />
               <div class="p-7">
                 <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{card.title}</h3>
@@ -32,45 +33,57 @@ import data from '../../data/navrh-reseni-index.json';
               </div>
             </a>
 
-            <!-- Spojovací čára -->
+            <!-- Spojovací vlákno dolů -->
             {card.children && card.children.length > 0 && (
-              <div class="flex flex-col items-center">
-                <div class="w-0.5 h-6 bg-gray-300"></div>
-              </div>
+              <div class="w-0.5 h-5 bg-brand-200"></div>
             )}
 
             <!-- Podstrom -->
             {card.children && card.children.length > 0 && (
-              <div class="space-y-2">
+              <div class="space-y-2 w-full">
                 {card.children.map(child => (
-                  <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-lg px-4 py-3 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-sm transition-all">
-                    <div class="w-1.5 h-1.5 bg-brand-400 rounded-full flex-shrink-0"></div>
+                  <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all">
+                    <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
+                      <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={child.icon || "M9 5l7 7-7 7"}/>
+                      </svg>
+                    </div>
                     <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{child.title}</span>
-                    <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 transition-colors group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                   </a>
                 ))}
               </div>
+            )}
+
+            <!-- Vlákno dolů ke kombinaci (jen pro první dva sloupce) -->
+            {card.children && card.children.length > 0 && (
+              <div class="w-0.5 h-5 bg-brand-200"></div>
             )}
           </div>
         ))}
       </div>
 
-      <!-- Sdílený odkaz uprostřed -->
+      <!-- Sdílený blok Kombinace okruhů — uprostřed -->
       {data.shared_link && (
-        <div class="flex flex-col items-center mt-8">
-          <div class="w-0.5 h-6 bg-gray-300"></div>
-          <a href={data.shared_link.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all px-8 py-5 flex items-center gap-4 max-w-lg w-full">
-            <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
-              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-              </svg>
+        <div class="flex justify-center -mt-1">
+          <div class="flex flex-col items-center">
+            <div class="flex items-center gap-0">
+              <div class="w-[calc(33.33vw-2rem)] max-w-[280px] h-0.5 bg-brand-200 hidden md:block"></div>
+              <div class="w-0.5 h-5 bg-brand-200 md:hidden"></div>
             </div>
-            <div class="flex-1">
-              <h3 class="font-bold text-charcoal-900 group-hover:text-brand-500 transition-colors">{data.shared_link.title}</h3>
-              <p class="text-xs text-charcoal-500">{data.shared_link.desc}</p>
-            </div>
-            <svg class="w-4 h-4 text-charcoal-300 group-hover:text-brand-400 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
+            <a href={data.shared_link.href} class="group bg-brand-50 rounded-xl border border-brand-200 hover:border-brand-400 hover:shadow-lg transition-all px-8 py-5 flex items-center gap-4 max-w-md w-full">
+              <div class="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-200 transition-colors">
+                <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors">{data.shared_link.title}</h3>
+                <p class="text-xs text-charcoal-500">{data.shared_link.desc}</p>
+              </div>
+              <svg class="w-4 h-4 text-brand-400 group-hover:text-brand-600 group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       )}
 
