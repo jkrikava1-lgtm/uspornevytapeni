@@ -37,10 +37,24 @@
   "cta_text": "Kontaktujte nás — připravíme technickou studii a ekonomický výpočet zdarma.",
   "cta_button1": "Odeslat poptávku",
   "cta_button2": "+420 777 724 573",
-  "related_headline": "Typy velkých tepelných čerpadel",
-  "related_items": [
-    { "href": "/navrh-reseni/jednokompresorova", "title": "Jednokompresorov\u00e1 T\u010c", "desc": "V\u00fdkonn\u00e9 jednotky a\u017e 45 kW v jednokompresorov\u00e9m proveden\u00ed.", "emoji": "1\ufe0f\u20e3" },
-    { "href": "/navrh-reseni/dvoukompresorova", "title": "Dvoukompresorov\u00e1 T\u010c", "desc": "Prakticky dv\u011b \u010derpadla v jednom \u2014 kask\u00e1dn\u00ed provoz kompresor\u016f.", "emoji": "2\ufe0f\u20e3" },
-    { "href": "/navrh-reseni/kaskady", "title": "Kask\u00e1dy T\u010c", "desc": "Pro v\u00fdkony nad 35 kW \u2014 prakticky bez omezen\u00ed.", "emoji": "\ud83d\udd17" }
+  "konfigurace_headline": "Typy konfigurace velkých tepelných čerpadel",
+  "konfig_jedno_title": "Jednokompresorová tepelná čerpadla",
+  "konfig_jedno_desc": "Klasické tepelné čerpadlo s jedním kompresorem pracuje v rozsahu výkonů 3–18 kW. Pro větší objekty nabízíme jednotky s výkonem 22, 25 nebo 30 kW. Výhodou jednokompresorového řešení je nižší cena a levnější instalace.",
+  "konfig_jedno_modely": "BoxAir 45 Inverter, AquaMaster 45I/60I/90I",
+  "konfig_dvou_title": "Dvoukompresorová tepelná čerpadla",
+  "konfig_dvou_desc": "Dvoukompresorové jednotky mají dva kompresory — prakticky dvě tepelná čerpadla v jedné konstrukci. Druhý kompresor se kaskádovitě připíná podle potřeby.",
+  "konfig_dvou_body": [
+    "Při běžném provozu pracuje pouze jeden kompresor",
+    "V mrazech se kaskádovitě připne druhý kompresor",
+    "Řídící jednotka střídá kompresory pro vyrovnaný počet provozních hodin",
+    "Úspora prostoru oproti dvěma samostatným jednotkám"
+  ],
+  "konfig_kaskady_title": "Kaskády tepelných čerpadel",
+  "konfig_kaskady_desc": "Pro výkony větší než 35 kW se tepelná čerpadla umisťují vedle sebe a propojují se páteřním vedením do akumulační nádoby. Kaskáda pokryje prakticky jakýkoliv požadovaný výkon.",
+  "konfig_kaskady_body": [
+    "Jedno čerpadlo je nastaveno jako Master — řídí celou soustavu",
+    "Ostatní pracují jako Slave — zapínají se podle potřeby tepla",
+    "Vyrovnaný počet motohodin všech jednotek",
+    "Lze kombinovat různé typy TČ (vzduch-voda, země-voda, voda-voda)"
   ]
 }
