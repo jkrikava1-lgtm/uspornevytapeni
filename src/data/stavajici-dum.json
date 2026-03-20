@@ -16,18 +16,18 @@
   "feat4_title": "Chlazení domu",
   "feat4_desc": "Tepelné čerpadlo umí v létě chladit — podlahou nebo fancoily.",
   "comparison_headline": "Porovnání ročních nákladů na vytápění",
-  "comp1_zdroj": "Zemn\u00ed plyn",
-  "comp1_naklady": "~65 000 K\u010d/rok",
-  "comp2_zdroj": "Elekt\u0159ina p\u0159\u00edmotop",
-  "comp2_naklady": "~106 000 K\u010d/rok",
-  "comp3_zdroj": "D\u0159evn\u00ed pelety",
-  "comp3_naklady": "~58 000 K\u010d/rok",
-  "comp4_zdroj": "Palivov\u00e9 d\u0159evo",
-  "comp4_naklady": "~22 000 K\u010d/rok",
-  "comp5_zdroj": "Hn\u011bd\u00e9 uhl\u00ed",
-  "comp5_naklady": "~50 000 K\u010d/rok",
-  "comp6_zdroj": "Tepeln\u00e9 \u010derpadlo",
-  "comp6_naklady": "~37 000 K\u010d/rok",
+  "comp1_zdroj": "Zemní plyn",
+  "comp1_naklady": "~65 000 Kč/rok",
+  "comp2_zdroj": "Elektřina přímotop",
+  "comp2_naklady": "~106 000 Kč/rok",
+  "comp3_zdroj": "Dřevní pelety",
+  "comp3_naklady": "~58 000 Kč/rok",
+  "comp4_zdroj": "Palivové dřevo",
+  "comp4_naklady": "~22 000 Kč/rok",
+  "comp5_zdroj": "Hnědé uhlí",
+  "comp5_naklady": "~50 000 Kč/rok",
+  "comp6_zdroj": "Tepelné čerpadlo",
+  "comp6_naklady": "~37 000 Kč/rok",
   "comparison_footnote": "* Roční náklady pro dům s tepelnou ztrátou 13 kW a ohřevem teplé vody pro 4 osoby (TZB-info, 2026)",
   "tip_label": "Stávající systém vám posoudíme",
   "tip_text": "Vodní topný systém (radiátory nebo podlahové topení) je předpokladem pro instalaci tepelného čerpadla. Tepelné čerpadlo se dá napojit do jakéhokoli radiátorového systému. Velký objem vody ve starším systému s žebrovými radiátory je přínosem, ne nedostatkem.",
@@ -37,9 +37,35 @@
   "cta_button": "Chci výpočet zdarma",
   "related_headline": "Více o úpravě topného systému",
   "related_items": [
-    { "href": "/navrh-reseni/podlahove-topeni-starsi-dum", "title": "Podlahov\u00e9 topen\u00ed ve star\u0161\u00edm dom\u011b", "desc": "Jak instalujeme podlahov\u00e9 topen\u00ed p\u0159i rekonstrukci.", "emoji": "\u2668\ufe0f" },
-    { "href": "/navrh-reseni/velikost-radiatoru", "title": "\u00daprava radi\u00e1tor\u016f", "desc": "Jak upravit star\u0161\u00ed radi\u00e1torov\u00fd syst\u00e9m pro tepeln\u00e9 \u010derpadlo.", "emoji": "\ud83d\udd27" },
-    { "href": "/navrh-reseni/doinstalace-chlazeni", "title": "Doinstalace chlazen\u00ed", "desc": "Jak jednodu\u0161e doinstalovat chlazen\u00ed do st\u00e1vaj\u00edc\u00edho domu.", "emoji": "\u2744\ufe0f" },
-    { "href": "/navrh-reseni/kombinace-topnych-okruhu", "title": "Kombinace okruh\u016f", "desc": "Podlahovka + radi\u00e1tory v jednom syst\u00e9mu \u2014 b\u011b\u017en\u00e9 a funk\u010dn\u00ed \u0159e\u0161en\u00ed.", "emoji": "\ud83d\udd00" }
+    {
+      "href": "/tepelna-cerpadla/vzduch-voda",
+      "title": "Tepelné čerpadlo",
+      "desc": "Zdroj tepla bez konkurence. Zajistí vytápění, chlazení i ohřev teplé vody.",
+      "emoji": "🔥"
+    },
+    {
+      "href": "/navrh-reseni/podlahove-topeni-starsi-dum",
+      "title": "Podlahové topení ve starším domě",
+      "desc": "Jak instalujeme podlahové topení při rekonstrukci.",
+      "emoji": "♨️"
+    },
+    {
+      "href": "/navrh-reseni/velikost-radiatoru",
+      "title": "Úprava radiátorů",
+      "desc": "Jak upravit starší radiátorový systém pro tepelné čerpadlo.",
+      "emoji": "🔧"
+    },
+    {
+      "href": "/navrh-reseni/doinstalace-chlazeni",
+      "title": "Doinstalace chlazení",
+      "desc": "Jak jednoduše doinstalovat chlazení do stávajícího domu.",
+      "emoji": "❄️"
+    },
+    {
+      "href": "/navrh-reseni/kombinace-topnych-okruhu",
+      "title": "Kombinace okruhů",
+      "desc": "Podlahovka + radiátory v jednom systému — běžné a funkční řešení.",
+      "emoji": "🔀"
+    }
   ]
 }
