@@ -17,12 +17,12 @@
           "title": "Podlahové topení"
         },
         {
-          "href": "/navrh-reseni/chlazeni",
-          "title": "Chlazení"
+          "href": "/navrh-reseni/radiatory",
+          "title": "Radiátory"
         },
         {
-          "href": "/navrh-reseni/kombinace-topnych-okruhu",
-          "title": "Kombinace okruhů"
+          "href": "/navrh-reseni/chlazeni",
+          "title": "Chlazení"
         }
       ]
     },
@@ -35,15 +35,11 @@
       "children": [
         {
           "href": "/navrh-reseni/podlahove-topeni-starsi-dum",
-          "title": "Podlahové topení"
-        },
-        {
-          "href": "/navrh-reseni/radiatory",
-          "title": "Radiátory"
+          "title": "Podlahové topení do staršího domu"
         },
         {
           "href": "/navrh-reseni/velikost-radiatoru",
-          "title": "Velikost radiátorů"
+          "title": "Úprava radiátorů"
         },
         {
           "href": "/navrh-reseni/doinstalace-chlazeni",
@@ -128,5 +124,10 @@
   ],
   "cta_headline": "Nevíte si rady?",
   "cta_text": "Pošlete poptávku a navrhneme řešení přesně pro váš dům — zdarma.",
-  "cta_button": "Odeslat poptávku"
+  "cta_button": "Odeslat poptávku",
+  "shared_link": {
+    "href": "/navrh-reseni/kombinace-topnych-okruhu",
+    "title": "Kombinace topných okruhů",
+    "desc": "Pro novostavby i rekonstrukce"
+  }
 }

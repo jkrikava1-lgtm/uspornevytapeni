@@ -55,6 +55,25 @@ import data from '../../data/navrh-reseni-index.json';
         ))}
       </div>
 
+      <!-- Sdílený odkaz uprostřed -->
+      {data.shared_link && (
+        <div class="flex flex-col items-center mt-8">
+          <div class="w-0.5 h-6 bg-gray-300"></div>
+          <a href={data.shared_link.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all px-8 py-5 flex items-center gap-4 max-w-lg w-full">
+            <div class="w-10 h-10 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
+              <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-bold text-charcoal-900 group-hover:text-brand-500 transition-colors">{data.shared_link.title}</h3>
+              <p class="text-xs text-charcoal-500">{data.shared_link.desc}</p>
+            </div>
+            <svg class="w-4 h-4 text-charcoal-300 group-hover:text-brand-400 transition-all group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      )}
+
     </div>
   </section>
 
