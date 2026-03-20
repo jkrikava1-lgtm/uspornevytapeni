@@ -33,31 +33,26 @@ import data from '../../data/navrh-reseni-index.json';
               </div>
             </a>
 
-            <!-- Spojovací vlákno dolů -->
+            <!-- Podstrom s vlákny -->
             {card.children && card.children.length > 0 && (
-              <div class="w-0.5 h-4 bg-brand-200"></div>
-            )}
-
-            <!-- Podstrom -->
-            {card.children && card.children.length > 0 && (
-              <div class="space-y-4 w-full">
-                {card.children.map(child => (
-                  <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all">
-                    <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
-                      <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={child.icon || "M9 5l7 7-7 7"}/>
-                      </svg>
-                    </div>
-                    <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{child.title}</span>
-                    <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                  </a>
+              <div class="flex flex-col items-center w-full">
+                {card.children.map((child, i) => (
+                  <Fragment>
+                    <div class="w-px h-4 bg-gray-200"></div>
+                    <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
+                      <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
+                        <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={child.icon || "M9 5l7 7-7 7"}/>
+                        </svg>
+                      </div>
+                      <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{child.title}</span>
+                      <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                  </Fragment>
                 ))}
+                <!-- Vlákno dolů ke kombinaci -->
+                <div class="w-px h-4 bg-gray-200"></div>
               </div>
-            )}
-
-            <!-- Vlákno dolů ke kombinaci (jen pro první dva sloupce) -->
-            {card.children && card.children.length > 0 && (
-              <div class="w-0.5 h-4 bg-brand-200"></div>
             )}
           </div>
         ))}
