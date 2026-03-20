@@ -11,14 +11,14 @@
   "hero_experience_badge": "20 let zkušeností",
   "hero_slides": [
     {
-      "src": "/images/hero/novostavba-deti.jpg",
-      "label": "Tepelné čerpadlo vzduch-voda",
-      "desc": "Novostavba s tepelným čerpadlem — komfort pro celou rodinu"
+      "src": "/images/hero/boxairy-strecha.jpg",
+      "label": "Tepelná čerpadla vzduch-voda",
+      "desc": "BoxAir Inverter — spolehlivý provoz na střeše i u domu"
     },
     {
-      "src": "/images/produkty/aquamaster-pracovna.jpg",
-      "label": "Tepelné čerpadlo země-voda",
-      "desc": "AquaMaster Inverter — kompaktní vnitřní jednotka"
+      "src": "/images/hero/boxair-snezka.jpg",
+      "label": "Vytápění i v drsných podmínkách",
+      "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i v horách"
     },
     {
       "src": "/images/hero/monter-dodavka.jpg",
