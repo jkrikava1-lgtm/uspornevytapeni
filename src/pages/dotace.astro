@@ -13,18 +13,20 @@ import data from '../data/dotace.json';
 
   <!-- Intro -->
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-6">
         <img src="/images/nzu-logo.png" alt="Nová zelená úsporám" class="h-10 w-auto" />
       </div>
-      <p class="text-charcoal-600 text-lg leading-relaxed mb-6" set:html={data.intro} />
-      <img src="/images/ilustrace/technik-montaz-dodavka.jpg" alt="Montáž tepelného čerpadla" class="rounded-xl w-full max-h-56 object-cover" loading="lazy" />
+      <div class="overflow-hidden">
+        <img src="/images/ilustrace/dotace.jpg" alt="Dotace na tepelné čerpadlo" class="float-right ml-8 mb-4 w-64 lg:w-80 rounded-2xl shadow-md" loading="lazy" />
+        <p class="text-charcoal-600 text-lg leading-relaxed mb-6" set:html={data.intro} />
+      </div>
     </div>
   </section>
 
   <!-- Harmonogram -->
   <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.harmonogram_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
 
@@ -47,7 +49,7 @@ import data from '../data/dotace.json';
 
   <!-- Hlavní změna: Dotace vs Úvěry -->
   <section class="py-10 lg:py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
 
@@ -110,7 +112,7 @@ import data from '../data/dotace.json';
 
   <!-- Podpora tepelných čerpadel -->
   <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.tc_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-6">{data.tc_intro}</p>
 
@@ -131,7 +133,7 @@ import data from '../data/dotace.json';
 
   <!-- Renovační pas -->
   <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.renovacni_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-5">{data.renovacni_intro}</p>
 
@@ -161,7 +163,7 @@ import data from '../data/dotace.json';
 
   <!-- CTA -->
   <section class="bg-brand-500 py-10">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
       <div>
         <h3 class="text-xl font-extrabold text-white">{data.cta_headline}</h3>
         <p class="text-white/80 text-sm mt-1">{data.cta_text}</p>
