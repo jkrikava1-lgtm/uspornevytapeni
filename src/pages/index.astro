@@ -126,7 +126,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
         ].map(card => (
           <a href={card.href} class="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all duration-200">
             <div class="h-52 overflow-hidden">
-              <img src={card.img} alt={card.alt} class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <img src={card.img} alt={card.alt} class="w-full h-full object-cover object-[center_15%] group-hover:scale-105 transition-transform duration-500" loading="lazy" />
             </div>
             <div class="p-8 pt-5">
               <h3 class="text-lg font-bold text-charcoal-900 mb-2">{card.title}</h3>
