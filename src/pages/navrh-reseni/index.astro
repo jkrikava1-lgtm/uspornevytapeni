@@ -63,24 +63,10 @@ import data from '../../data/navrh-reseni-index.json';
         ))}
       </div>
 
-      <!-- Vlákna z obou sloupců + horizontální propojení -->
-      <div class="hidden md:grid grid-cols-3 gap-8 -mt-1">
-        <div class="flex justify-center"><div class="w-0.5 h-6 bg-brand-200"></div></div>
-        <div class="flex justify-center"><div class="w-0.5 h-6 bg-brand-200"></div></div>
-        <div></div>
-      </div>
-      <div class="hidden md:grid grid-cols-3 gap-8">
-        <div class="col-span-2 relative">
-          <div class="absolute top-0 left-[calc(50%/2)] right-[calc(50%/2)] h-0.5 bg-brand-200"></div>
-        </div>
-        <div></div>
-      </div>
-
       <!-- Sdílený blok Kombinace okruhů — přes dva sloupce -->
       {data.shared_link && (
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-2">
           <div class="md:col-span-2">
-            <div class="hidden md:flex justify-center"><div class="w-0.5 h-5 bg-brand-200"></div></div>
             <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
               <div class="w-7 h-7 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-100 transition-colors">
                 <svg class="w-3.5 h-3.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +74,6 @@ import data from '../../data/navrh-reseni-index.json';
                 </svg>
               </div>
               <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{data.shared_link.title}</span>
-              <span class="text-xs text-charcoal-400 hidden sm:block">{data.shared_link.desc}</span>
               <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>
           </div>
