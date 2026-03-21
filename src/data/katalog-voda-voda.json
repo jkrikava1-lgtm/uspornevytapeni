@@ -132,7 +132,8 @@
       ],
       "productImages": [
         "/images/produkty/aqi-sedy.jpg"
-      ]
+      ],
+      "bannerImage": "/images/produkty/aquamaster-inverter-banner.jpg"
     },
     {
       "id": "aquamaster-inverter-p",
@@ -190,7 +191,8 @@
           "cop": "6,0",
           "pdf": "/pdf/AQ90IP.pdf"
         }
-      ]
+      ],
+      "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.jpg"
     },
     {
       "id": "aquamaster-combi",
@@ -242,7 +244,8 @@
       ],
       "productImages": [
         "/images/produkty/aqic.jpg"
-      ]
+      ],
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg"
     },
     {
       "id": "aquamaster-combi-p",
@@ -276,7 +279,8 @@
           "cop": "5,7",
           "pdf": "/pdf/AQ22ICP.pdf"
         }
-      ]
+      ],
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg"
     }
   ],
   "moreLink": {
