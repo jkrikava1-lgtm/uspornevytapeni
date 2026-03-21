@@ -31,12 +31,12 @@ import data from '../data/cenova-kalkulace.json';
         <p class="text-charcoal-500 text-sm mb-8">{data.step1_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/tepelne-cerpadlo.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step1_opt1_label}</span>
             <span class="choice-desc">{data.step1_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/uprava-radiatoru.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step1_opt2_label}</span>
             <span class="choice-desc">{data.step1_opt2_desc}</span>
           </button>
@@ -50,12 +50,12 @@ import data from '../data/cenova-kalkulace.json';
         <p class="text-charcoal-500 text-sm mb-8">{data.step2_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="ohrev_tuv" data-value="Ano">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/desuperheater.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step2_opt1_label}</span>
             <span class="choice-desc">{data.step2_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="ohrev_tuv" data-value="Ne">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg></span>
+            <span class="choice-icon"><svg class="w-8 h-8 text-charcoal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg></span>
             <span class="choice-label">{data.step2_opt2_label}</span>
             <span class="choice-desc">{data.step2_opt2_desc}</span>
           </button>
@@ -69,15 +69,15 @@ import data from '../data/cenova-kalkulace.json';
         <p class="text-charcoal-500 text-sm mb-8">{data.step3_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <button class="choice-card" data-field="topny_system" data-value="Podlahové topení">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/podlahove-topeni.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step3_opt1_label}</span>
           </button>
           <button class="choice-card" data-field="topny_system" data-value="Radiátory">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/radiatory.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step3_opt2_label}</span>
           </button>
           <button class="choice-card" data-field="topny_system" data-value="Více topných okruhů">
-            <span class="choice-icon"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span>
+            <span class="choice-icon"><img src="/images/ikony/kombinace-okruhu.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step3_opt3_label}</span>
           </button>
         </div>
