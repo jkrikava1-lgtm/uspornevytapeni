@@ -37,13 +37,27 @@ import site from '../data/site.json';
             </div>
           </div>
 
-          <div class="flex items-center gap-4 bg-gray-50 rounded-xl p-4 border border-gray-200">
-            <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-20 h-20 object-contain flex-shrink-0 rounded-lg" />
-            <div>
+          <div class="flex items-stretch gap-4 bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
+            <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-28 object-cover flex-shrink-0 cursor-pointer" data-lightbox-img />
+            <div class="py-4 pr-4 flex flex-col justify-center">
               <div class="text-sm font-bold text-charcoal-900">Značka kvality AVTČ</div>
               <p class="text-xs text-charcoal-500 leading-relaxed">Jsme členy Asociace pro využití tepelných čerpadel a nositeli Značky kvality.</p>
             </div>
           </div>
+
+          <div id="onas-lightbox" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer">
+            <img id="onas-lightbox-img" src="" alt="" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />
+          </div>
+          <script>
+            document.querySelector('[data-lightbox-img]')?.addEventListener('click', (e) => {
+              const lb = document.getElementById('onas-lightbox');
+              document.getElementById('onas-lightbox-img').src = e.target.src;
+              lb.classList.remove('hidden');
+            });
+            document.getElementById('onas-lightbox')?.addEventListener('click', (e) => {
+              e.currentTarget.classList.add('hidden');
+            });
+          </script>
         </div>
 
         <div class="space-y-4">
