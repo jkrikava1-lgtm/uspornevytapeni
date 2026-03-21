@@ -15,13 +15,26 @@ import site from '../data/site.json';
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div>
+        <div class="space-y-6">
           <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.philosophy_label}</div>
           <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6" set:html={data.philosophy_headline}></h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
             <p>{data.philosophy_text1}</p>
             <p>{data.philosophy_text2}</p>
             <p>{data.philosophy_text3}</p>
+          </div>
+
+          <div class="bg-navy-700 rounded-xl p-6 text-white">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">JS</div>
+              <div>
+                <blockquote class="text-sm text-navy-100 leading-relaxed italic mb-3">
+                  "{data.testimonial_quote}"
+                </blockquote>
+                <div class="text-sm font-semibold text-white">{data.testimonial_name}</div>
+                <div class="text-xs text-navy-100">{data.testimonial_company}</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -40,19 +53,6 @@ import site from '../data/site.json';
                 <div class="text-xs text-charcoal-500">{item.label}</div>
               </div>
             ))}
-          </div>
-
-          <div class="bg-navy-700 rounded-xl p-6 text-white">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">JS</div>
-              <div>
-                <blockquote class="text-sm text-navy-100 leading-relaxed italic mb-3">
-                  "{data.testimonial_quote}"
-                </blockquote>
-                <div class="text-sm font-semibold text-white">{data.testimonial_name}</div>
-                <div class="text-xs text-navy-100">{data.testimonial_company}</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
