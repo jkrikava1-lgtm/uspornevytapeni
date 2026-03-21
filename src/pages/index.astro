@@ -226,19 +226,21 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
 
   <!-- ZNAČKA KVALITY -->
   <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-stretch bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-        <div class="sm:w-64 flex-shrink-0 cursor-pointer" data-lightbox-zk>
-          <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-full h-full object-cover" loading="lazy" />
-        </div>
-        <div class="p-8 flex items-center">
-          <p class="text-charcoal-600 leading-relaxed">
-            Jsme členy <strong class="text-charcoal-900">Asociace pro využití tepelných čerpadel</strong> a nositeli <strong class="text-charcoal-900">Značky kvality AVTČ</strong>.
-          </p>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-stretch gap-4 bg-gray-50 rounded-xl overflow-hidden border border-gray-200 cursor-pointer hover:shadow-md hover:border-brand-200 transition-all group" data-hp-lightbox-img>
+        <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-28 object-cover flex-shrink-0" />
+        <div class="py-4 pr-4 flex flex-col justify-center">
+          <div class="text-sm font-bold text-charcoal-900">Značka kvality AVTČ</div>
+          <p class="text-xs text-charcoal-500 leading-relaxed">Jsme členy Asociace pro využití tepelných čerpadel a nositeli Značky kvality.</p>
+          <span class="text-xs text-brand-500 font-semibold mt-2 flex items-center gap-1 group-hover:gap-2 transition-all">Zobrazit detail <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg></span>
         </div>
       </div>
     </div>
   </section>
+
+  <div id="hp-zk-lightbox" class="fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer">
+    <img src="" alt="" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />
+  </div>
 
   <!-- TESTIMONIAL -->
   <section class="py-12">
@@ -352,13 +354,11 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   }
 
   // Lightbox pro Značku kvality
-  const zkEl = document.querySelector('[data-lightbox-zk]');
-  if (zkEl) {
-    const lb = document.createElement('div');
-    lb.className = 'fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer';
-    lb.innerHTML = '<img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />';
-    document.body.appendChild(lb);
-    zkEl.addEventListener('click', () => lb.classList.remove('hidden'));
-    lb.addEventListener('click', () => lb.classList.add('hidden'));
+  const zkEl = document.querySelector('[data-hp-lightbox-img]');
+  const zkLb = document.getElementById('hp-zk-lightbox');
+  if (zkEl && zkLb) {
+    zkLb.querySelector('img').src = '/images/znacka-kvality.jpg';
+    zkEl.addEventListener('click', () => zkLb.classList.remove('hidden'));
+    zkLb.addEventListener('click', () => zkLb.classList.add('hidden'));
   }
 </script>
