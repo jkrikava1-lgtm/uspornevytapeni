@@ -48,7 +48,8 @@
       "href": "/navrh-reseni/podlahove-topeni-starsi-dum",
       "title": "Podlahové topení ve starším domě",
       "desc": "Jak instalujeme podlahové topení při rekonstrukci.",
-      "emoji": "♨️"
+      "emoji": "♨️",
+      "icon_img": "/images/ikony/podlahove-topeni-starsi.png"
     },
     {
       "href": "/navrh-reseni/velikost-radiatoru",
