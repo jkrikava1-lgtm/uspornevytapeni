@@ -18,7 +18,7 @@
     {
       "src": "/images/hero/boxair-snezka.jpg",
       "label": "Vytápění i v drsných podmínkách",
-      "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i v horách"
+      "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i na horách"
     },
     {
       "src": "/images/hero/monter-dodavka.jpg",
@@ -46,7 +46,7 @@
   "card3_title": "Potřebuji velký výkon",
   "card3_desc": "Pro bytové domy, komerční objekty i průmysl. Navrhujeme systémy s výkonem od 20 do stovek kW.",
   "card3_href": "/navrh-reseni/velky-vykon",
-  "card3_img": "/images/ilustrace/velky-vykon.jpg",
+  "card3_img": "/images/hero/kaskada-bytovak.jpg",
   "products_label": "Naše produkty",
   "products_headline": "Tepelná čerpadla pro každou situaci",
   "products_cta": "Zjistit více",
@@ -54,23 +54,23 @@
     {
       "title": "Vzduch – voda",
       "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
-      "emoji": "\ud83c\udf2c\ufe0f",
-      "image": "/images/produkty/tc-vzduch-voda-card.jpg",
-      "href": "/tepelna-cerpadla/vzduch-voda"
+      "emoji": "🌬️",
+      "href": "/tepelna-cerpadla/vzduch-voda",
+      "image": "/images/produkty/tc-vzduch-voda-card.jpg"
     },
     {
       "title": "Země – voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
-      "emoji": "\ud83c\udf31",
-      "image": "/images/produkty/tc-zeme-voda-card.jpg",
-      "href": "/tepelna-cerpadla/zeme-voda"
+      "emoji": "🌱",
+      "href": "/tepelna-cerpadla/zeme-voda",
+      "image": "/images/produkty/tc-zeme-voda-card.jpg"
     },
     {
       "title": "Voda – voda",
       "desc": "Maximální výkon a účinnost. Pro objekty, které mají studnu s vydatným zdrojem vody.",
-      "emoji": "\ud83d\udca7",
-      "image": "/images/produkty/tc-voda-voda-card.jpg",
-      "href": "/tepelna-cerpadla/voda-voda"
+      "emoji": "💧",
+      "href": "/tepelna-cerpadla/voda-voda",
+      "image": "/images/produkty/tc-voda-voda-card.jpg"
     }
   ],
   "savings_label": "Proč tepelné čerpadlo",
