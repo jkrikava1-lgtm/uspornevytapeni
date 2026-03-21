@@ -330,7 +330,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   const dots = document.querySelectorAll('[data-hero-dot]');
   if (slides.length > 1) {
     let current = 0;
-    let timer = setInterval(next, 3000);
+    let timer = setInterval(next, 4000);
 
     function goTo(i) {
       slides[current].classList.replace('opacity-100', 'opacity-0');
@@ -346,7 +346,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
       dot.addEventListener('click', () => {
         clearInterval(timer);
         goTo(Number(dot.dataset.heroDot));
-        timer = setInterval(next, 3000);
+        timer = setInterval(next, 4000);
       });
     });
   }

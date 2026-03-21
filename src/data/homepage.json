@@ -11,6 +11,11 @@
   "hero_experience_badge": "20 let zkušeností",
   "hero_slides": [
     {
+      "src": "/images/hero/monter-dodavka.jpg",
+      "label": "Profesionální instalace",
+      "desc": "Montáž a servis po celé ČR"
+    },
+    {
       "src": "/images/hero/boxairy-strecha.jpg",
       "label": "Tepelná čerpadla vzduch-voda",
       "desc": "BoxAir Inverter — spolehlivý provoz na střeše i u domu"
@@ -19,11 +24,6 @@
       "src": "/images/hero/boxair-snezka.jpg",
       "label": "Vytápění i v drsných podmínkách",
       "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i na horách: 1040 m n. m."
-    },
-    {
-      "src": "/images/hero/monter-dodavka.jpg",
-      "label": "Profesionální instalace",
-      "desc": "Montáž a servis po celé ČR"
     }
   ],
   "stat1_number": "40+",
