@@ -31,12 +31,12 @@ import data from '../data/cenova-kalkulace.json';
         <p class="text-charcoal-500 text-sm mb-8">{data.step1_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
-            <span class="choice-icon"><img src="/images/ikony/tepelne-cerpadlo.png" alt="" class="w-10 h-10 object-contain" /></span>
+            <span class="choice-icon"><img src="/images/ikony/novostavba.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step1_opt1_label}</span>
             <span class="choice-desc">{data.step1_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
-            <span class="choice-icon"><img src="/images/ikony/uprava-radiatoru.png" alt="" class="w-10 h-10 object-contain" /></span>
+            <span class="choice-icon"><img src="/images/ikony/stavajici-dum.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step1_opt2_label}</span>
             <span class="choice-desc">{data.step1_opt2_desc}</span>
           </button>
@@ -90,18 +90,22 @@ import data from '../data/cenova-kalkulace.json';
         <p class="text-charcoal-500 text-sm mb-8">{data.step4_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button class="choice-card" data-field="typ_tc" data-value="Vzduch–voda">
+            <span class="choice-icon"><img src="/images/ikony/vzduch-voda.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step4_opt1_label}</span>
             <span class="choice-desc">{data.step4_opt1_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Voda–voda">
+            <span class="choice-icon"><img src="/images/ikony/voda-voda.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step4_opt2_label}</span>
             <span class="choice-desc">{data.step4_opt2_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Země–voda, vrt">
+            <span class="choice-icon"><img src="/images/ikony/vrt.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step4_opt3_label}</span>
             <span class="choice-desc">{data.step4_opt3_desc}</span>
           </button>
           <button class="choice-card" data-field="typ_tc" data-value="Země–voda, plošný kolektor">
+            <span class="choice-icon"><img src="/images/ikony/plosny-kolektor.png" alt="" class="w-10 h-10 object-contain" /></span>
             <span class="choice-label">{data.step4_opt4_label}</span>
             <span class="choice-desc">{data.step4_opt4_desc}</span>
           </button>
