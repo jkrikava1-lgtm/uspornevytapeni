@@ -229,7 +229,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-stretch bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
         <div class="sm:w-64 flex-shrink-0 cursor-pointer" data-lightbox-zk>
-          <img src="/images/znacka-kvality.png" alt="Značka kvality AVTČ" class="w-full h-full object-cover" loading="lazy" />
+          <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-full h-full object-cover" loading="lazy" />
         </div>
         <div class="p-8 flex items-center">
           <p class="text-charcoal-600 leading-relaxed">
@@ -247,7 +247,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
         "{hp.testimonial_text}"
       </blockquote>
       <div class="flex items-center justify-center gap-5">
-        <img src="/images/vojtek.gif" alt={hp.testimonial_name} class="w-36 h-36 rounded-full object-cover object-top border-3 border-brand-100 shadow-lg" />
+        <img src="/images/vojtek.jpg" alt={hp.testimonial_name} class="w-36 h-36 rounded-full object-cover object-top border-3 border-brand-100 shadow-lg" />
         <div class="text-left">
           <div class="font-bold text-charcoal-900">{hp.testimonial_name}</div>
           <div class="text-sm text-charcoal-500">{hp.testimonial_location}</div>
@@ -356,7 +356,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   if (zkEl) {
     const lb = document.createElement('div');
     lb.className = 'fixed inset-0 z-50 bg-black/70 flex items-center justify-center hidden cursor-pointer';
-    lb.innerHTML = '<img src="/images/znacka-kvality.png" alt="Značka kvality AVTČ" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />';
+    lb.innerHTML = '<img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="max-w-2xl max-h-[80vh] rounded-2xl shadow-2xl object-contain" />';
     document.body.appendChild(lb);
     zkEl.addEventListener('click', () => lb.classList.remove('hidden'));
     lb.addEventListener('click', () => lb.classList.add('hidden'));

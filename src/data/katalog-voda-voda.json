@@ -131,7 +131,7 @@
         }
       ],
       "productImages": [
-        "/images/produkty/aqi-sedy.png"
+        "/images/produkty/aqi-sedy.jpg"
       ]
     },
     {
@@ -144,7 +144,7 @@
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqip-oba.png"
+        "/images/produkty/aqip-oba.jpg"
       ],
       "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
@@ -241,7 +241,7 @@
         }
       ],
       "productImages": [
-        "/images/produkty/aqic.png"
+        "/images/produkty/aqic.jpg"
       ]
     },
     {
@@ -254,7 +254,7 @@
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqicp.png"
+        "/images/produkty/aqicp.jpg"
       ],
       "description": "Ultra kompaktní jednotka s přírodním chladivem R290 a integrovaným nerezovým zásobníkem TUV 150 litrů. Zabere pouze 0,3 m² podlahové plochy. Max. teplota topné vody 75 °C, ochrana proti legionelle bez dohřívání.",
       "features": [
