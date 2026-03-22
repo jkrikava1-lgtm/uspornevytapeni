@@ -31,8 +31,55 @@ const navGroups = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <title>{title} | {site.name}</title>
+    <!-- GA4 - načte se až po souhlasu s cookies -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+    </script>
   </head>
   <body class="antialiased">
+
+    <!-- Cookies lišta -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-lg p-4 sm:p-6 hidden">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <p class="text-sm text-charcoal-600 flex-1">
+          Tento web používá cookies pro měření návštěvnosti (Google Analytics). Pokračováním souhlasíte s jejich použitím.
+          <a href="/gdpr" class="text-brand-500 hover:underline ml-1">Více informací</a>
+        </p>
+        <div class="flex gap-3 flex-shrink-0">
+          <button id="cookie-reject" class="px-4 py-2 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Odmítnout</button>
+          <button id="cookie-accept" class="px-4 py-2 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">Přijmout</button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function() {
+        var consent = localStorage.getItem('cookie-consent');
+        if (consent === 'accepted') {
+          loadGA();
+        } else if (consent !== 'rejected') {
+          document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+        document.getElementById('cookie-accept')?.addEventListener('click', function() {
+          localStorage.setItem('cookie-consent', 'accepted');
+          document.getElementById('cookie-banner').classList.add('hidden');
+          loadGA();
+        });
+        document.getElementById('cookie-reject')?.addEventListener('click', function() {
+          localStorage.setItem('cookie-consent', 'rejected');
+          document.getElementById('cookie-banner').classList.add('hidden');
+        });
+        function loadGA() {
+          var s = document.createElement('script');
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QYVPWZ4YR7';
+          s.async = true;
+          document.head.appendChild(s);
+          gtag('js', new Date());
+          gtag('config', 'G-QYVPWZ4YR7');
+        }
+      })();
+    </script>
 
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 transition-shadow duration-300">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
