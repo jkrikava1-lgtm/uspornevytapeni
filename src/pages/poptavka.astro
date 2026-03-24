@@ -148,9 +148,13 @@ import site from '../data/site.json';
     btn.textContent = btn.dataset.loading || 'Odesílám…';
 
     try {
+      const formData = new FormData(form);
+      const jsonData: Record<string, string> = {};
+      formData.forEach((val, key) => { jsonData[key] = String(val); });
       const res = await fetch('/api/poptavka', {
         method: 'POST',
-        body: new FormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(jsonData),
       });
 
       if (res.ok) {

@@ -3,7 +3,7 @@ export const prerender = false;
 import nodemailer from 'nodemailer';
 
 export async function POST({ request }: { request: Request }) {
-  const data = await request.formData();
+  const data = await request.json();
 
   const host = import.meta.env.SMTP_HOST;
   const port = Number(import.meta.env.SMTP_PORT);
@@ -15,12 +15,12 @@ export async function POST({ request }: { request: Request }) {
     return Response.json({ error: 'SMTP not configured' }, { status: 500 });
   }
 
-  const jmeno    = data.get('jmeno')    ?? '—';
-  const telefon  = data.get('telefon')  ?? '—';
-  const email    = data.get('email')    ?? '—';
-  const objekt   = data.get('objekt')   ?? '—';
-  const vytapeni = data.get('vytapeni') ?? '—';
-  const zprava   = data.get('zprava')   ?? '—';
+  const jmeno    = data.jmeno    ?? '—';
+  const telefon  = data.telefon  ?? '—';
+  const email    = data.email    ?? '—';
+  const objekt   = data.objekt   ?? '—';
+  const vytapeni = data.vytapeni ?? '—';
+  const zprava   = data.zprava   ?? '—';
 
   const body = `
 Nová nezávazná poptávka z webu
