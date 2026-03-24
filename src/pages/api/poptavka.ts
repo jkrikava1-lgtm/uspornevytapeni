@@ -1,11 +1,18 @@
 export const prerender = false;
 
+import nodemailer from 'nodemailer';
+
 export async function POST({ request }: { request: Request }) {
   const data = await request.formData();
 
-  const resendKey = import.meta.env.RESEND_API_KEY;
-  if (!resendKey) {
-    return Response.json({ error: 'RESEND_API_KEY not configured' }, { status: 500 });
+  const host = import.meta.env.SMTP_HOST;
+  const port = Number(import.meta.env.SMTP_PORT);
+  const user = import.meta.env.SMTP_USER;
+  const pass = import.meta.env.SMTP_PASS;
+  const from = import.meta.env.SMTP_FROM;
+
+  if (!host || !user || !pass) {
+    return Response.json({ error: 'SMTP not configured' }, { status: 500 });
   }
 
   const jmeno    = data.get('jmeno')    ?? '—';
@@ -28,24 +35,23 @@ Zpráva:
 ${zprava}
 `.trim();
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${resendKey}`,
-    },
-    body: JSON.stringify({
-      from: 'web@uspornevytapeni.cz',
-      to: 'j.krikava@uspornevytapeni.cz',
-      reply_to: email,
-      subject: `Poptávka: ${jmeno} — ${objekt}`,
-      text: body,
-    }),
+  const transporter = nodemailer.createTransport({
+    host,
+    port,
+    secure: port === 465,
+    auth: { user, pass },
   });
 
-  if (!res.ok) {
-    const err = await res.text();
-    console.error('Resend error:', err);
+  try {
+    await transporter.sendMail({
+      from: `"Úsporné vytápění" <${from}>`,
+      to: 'info@uspornevytapeni.cz',
+      replyTo: String(email),
+      subject: `Poptávka: ${jmeno} — ${objekt}`,
+      text: body,
+    });
+  } catch (err) {
+    console.error('SMTP error:', err);
     return Response.json({ error: 'Email send failed' }, { status: 500 });
   }
 
