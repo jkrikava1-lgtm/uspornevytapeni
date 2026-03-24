@@ -86,6 +86,17 @@
     { "source": "/plosny-kolektor", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
     { "source": "/plosny-kolektor/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
     { "source": "/fotovoltaika", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
-    { "source": "/fotovoltaika/", "destination": "/chytre-funkce/fotovoltaika", "permanent": true }
+    { "source": "/fotovoltaika/", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
+    { "source": "/fotovoltaika-a-tepelne-cerpadlo", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
+    { "source": "/fotovoltaika-a-tepelne-cerpadlo/", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-vzduch-voda", "destination": "/katalog/vzduch-voda", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-vzduch-voda/", "destination": "/katalog/vzduch-voda", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-zeme-voda", "destination": "/katalog/zeme-voda", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-zeme-voda/", "destination": "/katalog/zeme-voda", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop", "destination": "/katalog/voda-voda", "permanent": true },
+    { "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop/", "destination": "/katalog/voda-voda", "permanent": true },
+    { "source": "/kontaktni-formular/", "destination": "/poptavka", "permanent": true },
+    { "source": "/kombinace-topnych-okruhu", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
+    { "source": "/kombinace-topnych-okruhu/", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true }
   ]
 }
