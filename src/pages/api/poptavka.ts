@@ -42,14 +42,24 @@ ${zprava}
     auth: { user, pass },
   });
 
+  const mailOptions: any = {
+    from: `"Úsporné vytápění" <${from}>`,
+    to: 'info@uspornevytapeni.cz',
+    replyTo: String(email),
+    subject: `Poptávka: ${jmeno} — ${objekt}`,
+    text: body,
+  };
+
+  if (data.priloha?.data) {
+    mailOptions.attachments = [{
+      filename: data.priloha.name,
+      content: Buffer.from(data.priloha.data, 'base64'),
+      contentType: data.priloha.type,
+    }];
+  }
+
   try {
-    await transporter.sendMail({
-      from: `"Úsporné vytápění" <${from}>`,
-      to: 'info@uspornevytapeni.cz',
-      replyTo: String(email),
-      subject: `Poptávka: ${jmeno} — ${objekt}`,
-      text: body,
-    });
+    await transporter.sendMail(mailOptions);
   } catch (err) {
     console.error('SMTP error:', err);
     return Response.json({ error: 'Email send failed' }, { status: 500 });

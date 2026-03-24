@@ -60,6 +60,11 @@ import site from '../data/site.json';
               <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_zprava}</label>
               <textarea name="zprava" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none" placeholder={data.placeholder_zprava}></textarea>
             </div>
+            <div>
+              <label class="block text-sm font-semibold text-charcoal-800 mb-2">Příloha <span class="font-normal text-charcoal-400">(nepovinné)</span></label>
+              <input type="file" name="priloha" id="priloha" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx" class="w-full text-sm text-charcoal-600 file:mr-4 file:py-2.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-charcoal-700 hover:file:bg-gray-200 file:cursor-pointer file:transition-colors" />
+              <p class="text-xs text-charcoal-400 mt-1">Max. 5 MB — PDF, obrázky, dokumenty</p>
+            </div>
             <div class="flex items-start gap-3">
               <input type="checkbox" name="souhlas" id="souhlas" required class="mt-1 w-4 h-4 accent-brand-500" />
               <label for="souhlas" class="text-xs text-charcoal-500 leading-relaxed">{data.souhlas_text}</label>
@@ -149,8 +154,27 @@ import site from '../data/site.json';
 
     try {
       const formData = new FormData(form);
-      const jsonData: Record<string, string> = {};
-      formData.forEach((val, key) => { jsonData[key] = String(val); });
+      const jsonData: Record<string, any> = {};
+      formData.forEach((val, key) => { if (key !== 'priloha') jsonData[key] = String(val); });
+
+      const fileInput = document.getElementById('priloha') as HTMLInputElement;
+      const file = fileInput?.files?.[0];
+      if (file) {
+        if (file.size > 5 * 1024 * 1024) {
+          errorBox.textContent = 'Soubor je příliš velký (max. 5 MB).';
+          errorBox.classList.remove('hidden');
+          btn.disabled = false;
+          btn.textContent = btn.dataset.label || 'Odeslat poptávku';
+          return;
+        }
+        const reader = new FileReader();
+        const base64 = await new Promise<string>((resolve) => {
+          reader.onload = () => resolve((reader.result as string).split(',')[1]);
+          reader.readAsDataURL(file);
+        });
+        jsonData.priloha = { name: file.name, type: file.type, data: base64 };
+      }
+
       const res = await fetch('/api/poptavka', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
