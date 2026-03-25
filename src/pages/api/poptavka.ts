@@ -2,7 +2,31 @@ export const prerender = false;
 
 import nodemailer from 'nodemailer';
 
+// Rate limiting: max 5 požadavků za 10 minut per IP
+const rateMap = new Map<string, number[]>();
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const window = 10 * 60 * 1000; // 10 minut
+  const max = 5;
+  const hits = (rateMap.get(ip) || []).filter(t => now - t < window);
+  hits.push(now);
+  rateMap.set(ip, hits);
+  // Cleanup starých IP (každých 100 požadavků)
+  if (rateMap.size > 1000) {
+    for (const [key, times] of rateMap) {
+      if (times.every(t => now - t > window)) rateMap.delete(key);
+    }
+  }
+  return hits.length > max;
+}
+
 export async function POST({ request }: { request: Request }) {
+  // Rate limiting
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+  if (isRateLimited(ip)) {
+    return Response.json({ error: 'Příliš mnoho požadavků. Zkuste to za chvíli.' }, { status: 429 });
+  }
+
   const data = await request.json();
 
   // Anti-spam: honeypot
