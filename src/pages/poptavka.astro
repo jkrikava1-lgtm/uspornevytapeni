@@ -28,6 +28,11 @@ import site from '../data/site.json';
             {data.error_text}
           </div>
           <form id="poptavka-form" class="space-y-6" method="POST" action="/api/poptavka">
+            <!-- Honeypot - skryté pole proti botům -->
+            <div class="absolute -left-[9999px]" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <input type="hidden" name="_loaded" id="_loaded" value="" />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_jmeno}</label>
@@ -140,6 +145,9 @@ import site from '../data/site.json';
 </Layout>
 
 <script>
+  // Anti-spam: timestamp při načtení
+  document.getElementById('_loaded')?.setAttribute('value', String(Date.now()));
+
   const form = document.getElementById('poptavka-form') as HTMLFormElement;
   const successBox = document.getElementById('form-success')!;
   const errorBox = document.getElementById('form-error')!;

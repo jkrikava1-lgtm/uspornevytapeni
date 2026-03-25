@@ -5,6 +5,17 @@ import nodemailer from 'nodemailer';
 export async function POST({ request }: { request: Request }) {
   const data = await request.json();
 
+  // Anti-spam: honeypot
+  if (data.website) {
+    return Response.json({ success: true }); // Tiše přijmi, ale neposílej
+  }
+
+  // Anti-spam: formulář odeslán příliš rychle (pod 3 sekundy = bot)
+  const loaded = Number(data._loaded);
+  if (loaded && Date.now() - loaded < 3000) {
+    return Response.json({ success: true }); // Tiše přijmi, ale neposílej
+  }
+
   const host = import.meta.env.SMTP_HOST;
   const port = Number(import.meta.env.SMTP_PORT);
   const user = import.meta.env.SMTP_USER;
