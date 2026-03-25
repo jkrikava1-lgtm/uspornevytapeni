@@ -40,7 +40,7 @@ import data from '../../data/navrh-reseni-index.json';
                   <Fragment>
                     <div class="w-px h-4 bg-gray-200"></div>
                     <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
-                      <img src={child.icon_img} alt="" class="w-8 h-8 object-contain flex-shrink-0" />
+                      <img src={child.icon_img} alt={child.title} class="w-8 h-8 object-contain flex-shrink-0" />
                       <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{child.title}</span>
                       <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -59,7 +59,7 @@ import data from '../../data/navrh-reseni-index.json';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="md:col-span-2">
             <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
-              <img src={data.shared_link.icon_img} alt="" class="w-8 h-8 object-contain flex-shrink-0" />
+              <img src={data.shared_link.icon_img} alt={data.shared_link.title} class="w-8 h-8 object-contain flex-shrink-0" />
               <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{data.shared_link.title}</span>
               <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </a>

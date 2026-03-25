@@ -18,7 +18,7 @@ import data from '../../data/chytre-funkce-index.json';
 
         {data.cards.map(item => (
           <a href={item.href} class="group bg-white rounded-xl p-7 border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all">
-            <img src={item.icon_img} alt="" class="w-12 h-12 object-contain mb-4" />
+            <img src={item.icon_img} alt={item.title} class="w-12 h-12 object-contain mb-4" />
             <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
             <p class="text-sm text-charcoal-500 leading-relaxed mb-3">{item.desc}</p>
             <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">

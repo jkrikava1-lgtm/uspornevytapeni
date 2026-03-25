@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uspornevytapeni.cz/sitemap-index.xml

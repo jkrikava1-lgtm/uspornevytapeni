@@ -56,7 +56,7 @@ import data from '../../data/novostavba.json';
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {data.related_items.map(item => (
           <a href={item.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all p-6">
-            <img src={item.icon_img} alt="" class="w-12 h-12 object-contain mb-3" />
+            <img src={item.icon_img} alt={item.title} class="w-12 h-12 object-contain mb-3" />
             <h3 class="font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{item.title}</h3>
             <p class="text-sm text-charcoal-500 mb-3">{item.desc}</p>
             <span class="text-xs font-semibold text-brand-500 flex items-center gap-1">

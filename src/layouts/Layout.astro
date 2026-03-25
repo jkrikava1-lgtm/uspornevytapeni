@@ -8,6 +8,8 @@ interface Props {
 }
 
 const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, 'https://uspornevytapeni.cz');
+const ogImage = 'https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg';
 
 const navGroups = [
   { label: site.nav_navrh, href: '/navrh-reseni', items: site.nav_navrh_items, width: 'w-64' },
@@ -29,8 +31,42 @@ const navGroups = [
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <title>{title} | {site.name}</title>
+    <link rel="canonical" href={canonicalURL} />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={`${title} | ${site.name}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:site_name" content={site.name} />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | ${site.name}`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Úsporné vytápění s.r.o.",
+      "description": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2006.",
+      "url": "https://uspornevytapeni.cz",
+      "telephone": "+420777724573",
+      "email": "info@uspornevytapeni.cz",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CZ"
+      },
+      "foundingDate": "2006",
+      "areaServed": "CZ",
+      "priceRange": "$$",
+      "image": "https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg",
+      "sameAs": []
+    })} />
     <!-- GA4 - načte se až po souhlasu s cookies -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
@@ -204,7 +240,7 @@ const navGroups = [
 
           <div class="lg:col-span-1">
             <div class="mb-5 flex items-center gap-3">
-              <img src="/images/logo-icon.png" alt="" class="w-10 h-10 rounded-lg flex-shrink-0" />
+              <img src="/images/logo-icon.png" alt="Úsporné vytápění logo" class="w-10 h-10 rounded-lg flex-shrink-0" />
               <div>
                 <div class="font-extrabold text-white text-sm leading-tight">{site.name}</div>
                 <div class="text-[10px] text-navy-200 font-semibold tracking-widest uppercase">Tepelná čerpadla</div>
