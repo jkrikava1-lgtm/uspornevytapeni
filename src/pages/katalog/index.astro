@@ -11,8 +11,9 @@ import data from '../../data/katalog-index.json';
     breadcrumb={[{ label: data.hero.breadcrumbLabel, href: '/katalog' }]}
   />
 
-  <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
+  <article class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-charcoal-600 text-sm leading-relaxed max-w-3xl mb-10">Nabízíme tepelná čerpadla Master Therm — českého výrobce s více než 30 lety zkušeností. V katalogu najdete kompletní přehled modelů vzduch-voda, země-voda i voda-voda včetně technických parametrů a dokumentace ke stažení.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {data.cards.map(card => (
@@ -31,7 +32,7 @@ import data from '../../data/katalog-index.json';
 
       </div>
     </div>
-  </section>
+  </article>
 
   <section class="bg-gray-50 py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
