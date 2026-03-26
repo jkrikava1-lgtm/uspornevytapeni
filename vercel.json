@@ -13,6 +13,8 @@
     }
   ],
   "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.uspornevytapeni.cz" }], "destination": "https://uspornevytapeni.cz/$1", "permanent": true },
+    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
     { "source": "/kontakt", "destination": "/kontakty", "permanent": true },
     { "source": "/kontakt/", "destination": "/kontakty", "permanent": true },
     { "source": "/kontaktni-formular", "destination": "/poptavka", "permanent": true },

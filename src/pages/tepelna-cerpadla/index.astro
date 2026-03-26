@@ -5,6 +5,44 @@ import data from '../../data/tepelna-cerpadla-index.json';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Jaký typ tepelného čerpadla je pro můj dům nejvhodnější?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pro rodinné domy bez velkého pozemku je nejčastější volbou čerpadlo vzduch–voda — instalace trvá 2–3 dny a nevyžaduje zemní práce. Pokud máte zahradní pozemek alespoň 400 m² nebo je možný vrt, doporučujeme zemní čerpadlo pro vyšší efektivitu v zimě. Čerpadlo voda–voda se hodí tam, kde je dostatek podzemní vody. Správný typ vždy doporučujeme po konzultaci a prohlídce objektu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Funguje tepelné čerpadlo i při velkých mrazech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moderní inverterová tepelná čerpadla vzduch–voda fungují spolehlivě až do –20 °C. Zemní čerpadla jsou zcela nezávislá na venkovní teplotě, protože čerpají teplo z hloubky, kde je celoroční teplota kolem 10–12 °C. Všechna naše čerpadla Master Therm mají integrovanou elektrickou dotopovou spirálu pro extrémní mrazy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Lze tepelné čerpadlo kombinovat se stávajícím kotlem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ano. Takzvaný bivalentní provoz — kdy čerpadlo pokrývá většinu sezóny a záložní kotel pouze nejstudenější dny — je zcela běžný. Umožňuje levnější investici a rychlou návratnost. Stávající radiátorové otopné soustavy většinou není nutné předělávat, optimalizujeme pouze provozní teplotu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kolik stojí tepelné čerpadlo a jaká je návratnost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pořizovací cena včetně instalace se pohybuje od 300 000 do 600 000 Kč podle typu a výkonu. Po odečtení dotace Nová zelená úsporám (která může pokrýt až 50 % nákladů) vychází návratnost investice typicky na 5–8 let. Po celou dobu životnosti (20–25 let) platíte pouze za elektřinu."
+        }
+      }
+    ]
+  })} />
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
