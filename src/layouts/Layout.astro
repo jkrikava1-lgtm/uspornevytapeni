@@ -94,6 +94,11 @@ const navGroups = [
 
     <script is:inline>
       (function() {
+        if (window.location.search.indexOf('reset-cookies') !== -1) {
+          localStorage.removeItem('cookie-consent');
+          window.location.href = window.location.pathname;
+          return;
+        }
         var consent = localStorage.getItem('cookie-consent');
         if (consent === 'accepted') {
           loadGA();
