@@ -222,25 +222,25 @@
           "model": "AquaMaster 22IC",
           "vykon": "2–7 kW",
           "cop": "4,5",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq22ic_bldc_14511.pdf"
+          "pdf": "/pdf/AQ22IC.pdf"
         },
         {
           "model": "AquaMaster 26IC",
           "vykon": "3–9 kW",
           "cop": "4,5",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq26ic_bldc_14511_ehpa_062014.pdf"
+          "pdf": "/pdf/AQ26IC.pdf"
         },
         {
           "model": "AquaMaster 30IC",
           "vykon": "4–12 kW",
           "cop": "4,6",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30ic_bldc_14511.pdf"
+          "pdf": "/pdf/AQ30IC.pdf"
         },
         {
           "model": "AquaMaster 37IC",
           "vykon": "5–15 kW",
           "cop": "4,7",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2015/11/aq37ic_bldc_14511_ehpa_062014.pdf"
+          "pdf": "/pdf/AQ37IC.pdf"
         }
       ]
     },
