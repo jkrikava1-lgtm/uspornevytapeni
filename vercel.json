@@ -106,9 +106,13 @@
     { "source": "/kombinace-topnych-okruhu", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
     { "source": "/kombinace-topnych-okruhu/", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
 
+    { "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*/", "destination": "/katalog/voda-voda/", "permanent": true },
     { "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*", "destination": "/katalog/voda-voda/", "permanent": true },
+    { "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*/", "destination": "/katalog/vzduch-voda/", "permanent": true },
     { "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*", "destination": "/katalog/vzduch-voda/", "permanent": true },
+    { "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*/", "destination": "/katalog/zeme-voda/", "permanent": true },
     { "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*", "destination": "/katalog/zeme-voda/", "permanent": true },
+    { "source": "/produkt/:path*/", "destination": "/katalog/", "permanent": true },
     { "source": "/produkt/:path*", "destination": "/katalog/", "permanent": true },
     { "source": "/tepelne-cerpadlo-boxair", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
     { "source": "/tepelne-cerpadlo-boxair/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
