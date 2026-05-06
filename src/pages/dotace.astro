@@ -158,6 +158,54 @@ import data from '../data/dotace.json';
     </div>
   </section>
 
+  <!-- FAQ schema markup -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kolik je dotace na tepelné čerpadlo v roce 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Záleží na kategorii žadatele. Běžné domácnosti získají bezúročný úvěr — stát hradí úroky, podpora na tepelné čerpadlo vzduch-voda nebo země-voda činí 40 000–130 000 Kč. Zranitelné domácnosti (NZÚ Light) mají nárok na přímou dotaci až 150 000 Kč. Navíc jsou bonusy 30 000 Kč za kombinaci tepelného čerpadla s fotovoltaikou nebo zateplením."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kdy se otevře příjem žádostí o dotaci NZÚ v roce 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Příjem žádostí byl dočasně uzavřen kvůli vyčerpání alokace. Nová etapa pro rodinné a bytové domy se otevře v červnu 2026. Bezúročné úvěry přes banky a stavební spořitelny budou dostupné od září 2026. Síť certifikovaných energetických poradců (EKIS) zahájí provoz v dubnu 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kdo má nárok na dotaci na tepelné čerpadlo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Přímou dotaci (NZÚ Light) mají nárok zranitelné domácnosti — senioři, osoby s invalidním důchodem 3. stupně a příjemci příspěvku na bydlení. Podmínkou je vlastnictví max. 2 nemovitostí k bydlení a budova kolaudovaná do 1. 7. 2013. Běžné středně a vysokopříjmové domácnosti mohou od června 2026 čerpat bezúročný úvěr."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak funguje bezúročný úvěr na tepelné čerpadlo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Půjčíte si v bance nebo stavební spořitelně a stát uhradí veškeré úroky po celou dobu splatnosti. Splácíte pouze jistinu. Renovaci nemusíte provést najednou — lze postupovat po etapách. Podmínkou je projít posouzením bonity (scoring) v bance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co je Renovační pas a potřebuji ho pro dotaci?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renovační pas je dokument stanovující optimální postup energetické renovace domu. Pro získání bezúročného úvěru v NZÚ bude vyžadován. Pro zranitelné domácnosti je jeho vypracování dotováno až 50 000 Kč. Energetické poradenství bude k dispozici zdarma na kontaktních místech EKIS."
+        }
+      }
+    ]
+  })} />
+
   <!-- CTA -->
   <section class="bg-brand-500 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
