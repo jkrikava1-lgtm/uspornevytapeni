@@ -93,6 +93,125 @@ import data from '../data/cena.json';
     </div>
   </section>
 
+  <!-- Co zahrnuje cena montáže -->
+  <section class="py-10 lg:py-14 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Co zahrnuje cena montáže tepelného čerpadla?</h2>
+      <p class="text-charcoal-500 text-sm mb-8">Naše cena je vždy za kompletní realizaci na klíč — žádné skryté náklady.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {[
+          { icon: "M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18", title: "Tepelné čerpadlo", desc: "Dodávka jednotky Master Therm včetně zásobníku TUV a příslušenství." },
+          { icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z", title: "Montáž a zapojení", desc: "Instalace venkovní i vnitřní jednotky, propojení trubkami, elektroinstalace." },
+          { icon: "M13 10V3L4 14h7v7l9-11h-7z", title: "Elektroinstalace", desc: "Zapojení na HDO tarif, jistič, případné posílení přípojky." },
+          { icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 4a2 2 0 100 4m0-4a2 2 0 110 4m6-4a2 2 0 100 4m0-4a2 2 0 110 4", title: "Uvedení do provozu", desc: "Nastavení regulace, napojení na otopnou soustavu, první spuštění a seřízení." },
+          { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", title: "Zaškolení", desc: "Obsluhu vás naučíme pracovat s regulací a ovládáním přes mobil." },
+          { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", title: "Dokumentace", desc: "Revizní zpráva, protokol o uvedení do provozu, podklady pro dotaci NZÚ." },
+        ].map(item => (
+          <div class="flex gap-3 p-5 bg-white rounded-xl border border-gray-200">
+            <div class="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-charcoal-900 text-sm mb-0.5">{item.title}</div>
+              <div class="text-sm text-charcoal-500 leading-relaxed">{item.desc}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Návratnost investice -->
+  <section class="py-10 lg:py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.roi_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-8">Modelový příklad pro rodinný dům 150 m², přechod z plynového kotle.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="bg-navy-700 rounded-xl p-6 text-white">
+          <div class="space-y-0">
+            {[
+              { label: data.roi_price_label, value: data.roi_price, highlight: false },
+              { label: data.roi_dotace_label, value: data.roi_dotace, highlight: false },
+              { label: data.roi_net_label, value: data.roi_net, highlight: true },
+              { label: data.roi_annual_savings_label, value: data.roi_annual_savings, highlight: false },
+              { label: data.roi_payback_label, value: data.roi_payback, highlight: true },
+            ].map(row => (
+              <div class={`flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4 ${row.highlight ? 'pt-4' : ''}`}>
+                <span class={`text-sm ${row.highlight ? 'text-white font-semibold' : 'text-navy-200'}`}>{row.label}</span>
+                <span class={`text-sm font-bold flex-shrink-0 ${row.highlight ? 'text-brand-400 text-base' : 'text-white'}`}>{row.value}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-navy-300 text-xs mt-4 leading-relaxed">{data.roi_footnote}</p>
+        </div>
+        <div class="space-y-4">
+          <div class="p-5 bg-green-50 border border-green-200 rounded-xl">
+            <h3 class="font-bold text-green-800 mb-2 text-sm">Roční úspora oproti plynovému kotli</h3>
+            <p class="text-green-700 text-sm leading-relaxed">Tepelné čerpadlo vzduch-voda s COP 3,3 vyjde na 1 kWh tepla zhruba za 1,50 Kč (při ceně elektřiny 5 Kč/kWh). Plynový kotel vychází na 2,50–3,50 Kč/kWh. Při roční spotřebě 20 000 kWh ušetříte <strong>20 000–40 000 Kč ročně</strong>.</p>
+          </div>
+          <div class="p-5 bg-blue-50 border border-blue-200 rounded-xl">
+            <h3 class="font-bold text-blue-800 mb-2 text-sm">Délka záruky a životnost</h3>
+            <p class="text-blue-700 text-sm leading-relaxed">Master Therm nabízí <strong>7 let záruky</strong> na kompresor (s modulem ICON). Životnost tepelného čerpadla je 20–25 let — po splacení se vytápění prakticky zadarmo.</p>
+          </div>
+          <div class="p-5 bg-amber-50 border border-amber-200 rounded-xl">
+            <h3 class="font-bold text-amber-800 mb-2 text-sm">Jak dlouho trvá montáž?</h3>
+            <p class="text-amber-700 text-sm leading-relaxed">Vzduch-voda: <strong>2–3 dny</strong>. Země-voda s vrty: <strong>5–7 dní</strong> (z toho 1–2 dny vrtné práce). Voda-voda: <strong>5–7 dní</strong> podle podmínek studní.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kolik stojí montáž tepelného čerpadla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cena montáže je součástí celkové ceny systému na klíč. Vzduch-voda od 349 000 Kč, země-voda od 429 000 Kč (včetně vrtů nebo kolektoru), voda-voda od 379 000 Kč. Cena zahrnuje dodávku, montáž, elektroinstalaci, uvedení do provozu, zaškolení a dokumentaci pro dotaci."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kolik stojí instalace tepelného čerpadla vzduch-voda?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kompletní instalace tepelného čerpadla vzduch-voda včetně zásobníku TUV, montáže, elektroinstalace a uvedení do provozu začíná od 349 000 Kč. Přesná cena závisí na výkonu čerpadla, stávající otopné soustavě a potřebách objektu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak dlouho trvá montáž tepelného čerpadla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vzduch-voda: 2–3 dny. Země-voda s vrty: 5–7 dní (z toho 1–2 dny vrtné práce). Voda-voda: 5–7 dní podle podmínek studní. Po montáži probíhá uvedení do provozu a zaškolení obsluhy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jaká je návratnost investice do tepelného čerpadla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pro rodinný dům 150 m² s přechodem z plynu vychází roční úspora 20 000–40 000 Kč. Po odečtení dotace NZÚ (až 150 000 Kč pro zranitelné domácnosti, nebo bezúročný úvěr pro ostatní) je čistá investice od cca 199 000 Kč a návratnost 4–7 let. Životnost čerpadla je 20–25 let."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co je zahrnuto v ceně tepelného čerpadla?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Naše cena zahrnuje: dodávku tepelného čerpadla Master Therm, zásobník TUV, montáž venkovní i vnitřní jednotky, propojení trubkami, elektroinstalaci a zapojení na HDO tarif, uvedení do provozu, zaškolení obsluhy a veškerou dokumentaci včetně podkladů pro dotaci NZÚ."
+        }
+      }
+    ]
+  })} />
+
   <!-- Související stránky -->
   <section class="py-6">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

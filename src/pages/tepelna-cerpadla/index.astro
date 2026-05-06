@@ -76,8 +76,48 @@ import data from '../../data/tepelna-cerpadla-index.json';
     </div>
   </article>
 
-  <!-- Proč tepelné čerpadlo -->
+  <!-- Srovnávací tabulka typů -->
   <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Porovnání typů tepelných čerpadel</h2>
+      <p class="text-charcoal-500 text-sm mb-8">Který typ se hodí pro váš dům?</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-gray-200">
+              <th class="text-left py-3 pr-4 text-charcoal-500 font-medium w-36"></th>
+              <th class="text-center py-3 px-3 text-navy-700 font-bold">Vzduch – voda</th>
+              <th class="text-center py-3 px-3 text-green-700 font-bold">Země – voda</th>
+              <th class="text-center py-3 px-3 text-cyan-700 font-bold">Voda – voda</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {[
+              { label: "Cena systému", a: "od 349 000 Kč", b: "od 429 000 Kč", c: "od 379 000 Kč" },
+              { label: "COP (účinnost)", a: "~3,3", b: "až 5,0", c: "až 7,0" },
+              { label: "Zemní práce", a: "žádné", b: "vrt nebo kolektor", c: "dvě studny" },
+              { label: "Hlučnost", a: "mírná (venk. j.)", b: "tichý", c: "tichý" },
+              { label: "Funkce v mrazech", a: "do −20 °C", b: "bez omezení", c: "bez omezení" },
+              { label: "Pasivní chlazení", a: "ne", b: "ano (téměř zdarma)", c: "ano" },
+              { label: "Délka montáže", a: "2–3 dny", b: "5–7 dní", c: "5–7 dní" },
+              { label: "Pro koho", a: "95 % domů", b: "pozemek min. 200 m²", c: "dostatek spodní vody" },
+            ].map(row => (
+              <tr>
+                <td class="py-3 pr-4 text-charcoal-500 font-medium">{row.label}</td>
+                <td class="py-3 px-3 text-center text-charcoal-700">{row.a}</td>
+                <td class="py-3 px-3 text-center text-charcoal-700">{row.b}</td>
+                <td class="py-3 px-3 text-center text-charcoal-700">{row.c}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-charcoal-400 text-xs mt-4">* COP při podmínkách W10W35 (teplota zdroje 10 °C, výstupní voda 35 °C). Ceny jsou orientační, závisí na výkonu a konkrétním objektu.</p>
+    </div>
+  </section>
+
+  <!-- Proč tepelné čerpadlo -->
+  <section class="py-12 lg:py-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">Proč zvolit tepelné čerpadlo?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-charcoal-600 leading-relaxed">
