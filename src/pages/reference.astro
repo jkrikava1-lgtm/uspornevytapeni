@@ -62,6 +62,7 @@ import ref from '../data/reference.json';
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.fullscreen@3.0.2/Control.FullScreen.css"/>
   <section class="pb-10 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-6">
@@ -98,10 +99,11 @@ import ref from '../data/reference.json';
 
   <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script is:inline src="https://unpkg.com/leaflet.fullscreen@3.0.2/Control.FullScreen.js"></script>
   <script is:inline>
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
-        var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false });
+        var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false, fullscreenControl: true, fullscreenControlOptions: { position: 'topleft' } });
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           attribution: '\u00a9 OpenStreetMap \u00a9 CartoDB', maxZoom: 19
         }).addTo(map);
