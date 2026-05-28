@@ -103,7 +103,7 @@ import ref from '../data/reference.json';
   <script is:inline>
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
-        var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false, fullscreenControl: true, fullscreenControlOptions: { position: 'topleft' } });
+        var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, fullscreenControl: true, fullscreenControlOptions: { position: 'topleft' } });
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           attribution: '\u00a9 OpenStreetMap \u00a9 CartoDB', maxZoom: 19
         }).addTo(map);
@@ -139,7 +139,6 @@ import ref from '../data/reference.json';
           cluster.addLayer(m);
         });
         map.addLayer(cluster);
-        map.on('click', function() { map.scrollWheelZoom.enable(); });
       });
     })();
   </script>
