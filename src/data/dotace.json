@@ -1,67 +1,69 @@
 {
   "meta_title": "Dotace na tepelné čerpadlo 2026 | NZÚ — kompletní průvodce",
-  "meta_description": "Dotace na tepelné čerpadlo z Nové zelené úsporám 2026. Harmonogram, podmínky, bezúročné úvěry, NZÚ Light. Celou žádost zpracujeme za vás — 20 let zkušeností.",
-  "hero_title": "Dotace na tepeln\u00e1 \u010derpadla",
-  "hero_subtitle": "Nov\u00e1 zelen\u00e1 \u00faspor\u00e1m 2026 \u2014 od p\u0159\u00edm\u00fdch dotac\u00ed k bez\u00faro\u010dn\u00fdm \u00fav\u011br\u016fm. P\u0159ehled zm\u011bn, podm\u00ednek a harmonogramu.",
+  "meta_description": "Dotace na tepelné čerpadlo z Nové zelené úsporám 2026. Bezúročné úvěry pro běžné domácnosti, přímé dotace NZÚ Light. Celou žádost zpracujeme za vás — 20 let zkušeností.",
+  "hero_title": "Dotace na tepelná čerpadla",
+  "hero_subtitle": "Nová zelená úsporám 2026+ je otevřena — bezúročné úvěry pro běžné domácnosti, přímé dotace NZÚ Light. Přehled podmínek a výše podpory.",
 
-  "intro": "Program <strong>Nov\u00e1 zelen\u00e1 \u00faspor\u00e1m</strong> (NZ\u00da) Ministerstva \u017eivotn\u00edho prost\u0159ed\u00ed administrovan\u00fd St\u00e1tn\u00edm fondem \u017eivotn\u00edho prost\u0159ed\u00ed dosud podpo\u0159il p\u0159es <strong>409 tis\u00edc projekt\u016f</strong> a vyplatil <strong>95 miliard K\u010d</strong>. V roce 2026 p\u0159ich\u00e1z\u00ed se z\u00e1sadn\u00ed zm\u011bnou: b\u011b\u017en\u00e9 dom\u00e1cnosti z\u00edskaj\u00ed <strong>bez\u00faro\u010dn\u00e9 \u00fav\u011bry</strong>, p\u0159\u00edmou dotaci si udr\u017e\u00ed n\u00edzkop\u0159\u00edjmov\u00e9 skupiny.",
+  "intro": "Program <strong>Nová zelená úsporám</strong> (NZÚ) Ministerstva životního prostředí administrovaný Státním fondem životního prostředí dosud podpořil přes <strong>409 tisíc projektů</strong> a vyplatil <strong>95 miliard Kč</strong>. V roce 2026 přišla zásadní změna: běžné domácnosti získávají <strong>bezúročné úvěry</strong> (stát hradí veškeré úroky), přímou dotaci si zachovávají nízkopříjmové skupiny v rámci NZÚ Light.",
 
-  "harmonogram_headline": "Harmonogram spu\u0161t\u011bn\u00ed v roce 2026",
-  "harmonogram_intro": "P\u0159\u00edjem \u017e\u00e1dost\u00ed byl v listopadu 2025 do\u010dasn\u011b uzav\u0159en kv\u016fli vy\u010derp\u00e1n\u00ed alokace. Program se znovu otev\u0159e v n\u011bkolika vln\u00e1ch:",
+  "harmonogram_headline": "Aktuální stav programu (2026)",
+  "harmonogram_intro": "Po dočasném uzavření v listopadu 2025 se nová etapa programu otevřela v březnu 2026. Žádosti lze podávat nyní:",
   "harmonogram": [
     {
+      "datum": "25. března 2026",
+      "popis": "Spuštění nové etapy NZÚ 2026+ — otevřen příjem žádostí pro rodinné i bytové domy (bezúročné úvěry i NZÚ Light)."
+    },
+    {
       "datum": "Duben 2026",
-      "popis": "Start s\u00edt\u011b certifikovan\u00fdch energetick\u00fdch poradc\u016f a zaveden\u00ed renova\u010dn\u00edch pas\u016f."
+      "popis": "Zahájení nového systému energetického poradenství — síť certifikovaných poradců EKIS a renovační pasy jsou v provozu."
     },
     {
-      "datum": "\u010cerven 2026",
-      "popis": "Otev\u0159en\u00ed p\u0159\u00edjmu \u017e\u00e1dost\u00ed pro rodinn\u00e9 a bytov\u00e9 domy a start nov\u00e9 etapy NZ\u00da Light."
-    },
-    {
-      "datum": "Z\u00e1\u0159\u00ed 2026",
-      "popis": "Banky a stavebn\u00ed spo\u0159itelny za\u010d\u00ednaj\u00ed nab\u00edzet bez\u00faro\u010dn\u00e9 \u00fav\u011bry."
+      "datum": "Nyní otevřeno",
+      "popis": "Žádosti se podávají elektronicky přes portál zadosti.sfzp.cz. Lze žádat před zahájením, v průběhu i po dokončení prací."
     }
   ],
 
-  "zmena_headline": "Hlavn\u00ed zm\u011bna: Dotace vs. \u00dav\u011bry",
-  "zmena_intro": "Nejv\u011bt\u0161\u00ed novinkou je rozd\u011blen\u00ed \u017eadatel\u016f do dvou hlavn\u00edch kategori\u00ed:",
+  "zmena_headline": "Hlavní změna: Dotace vs. Úvěry",
+  "zmena_intro": "Největší novinkou NZÚ 2026+ je rozdělení žadatelů do dvou kategorií:",
 
-  "bezne_title": "B\u011b\u017en\u00e9 dom\u00e1cnosti",
-  "bezne_subtitle": "st\u0159edn\u011b a vysokop\u0159\u00edjmov\u00e9",
-  "bezne_desc": "M\u00edsto p\u0159\u00edm\u00e9 hotovosti bude st\u00e1t podporovat po\u0159\u00edzen\u00ed tepeln\u00e9ho \u010derpadla formou <strong>bez\u00faro\u010dn\u00e9ho \u00fav\u011bru</strong>. \u00daroky za dom\u00e1cnost zaplat\u00ed st\u00e1t po celou dobu splatnosti.",
-  "bezne_jak": "<strong>Jak to funguje:</strong> P\u016fj\u010d\u00edte si v bance nebo stavebn\u00ed spo\u0159iteln\u011b, st\u00e1t uhrad\u00ed ve\u0161ker\u00e9 \u00faroky a vy spl\u00e1c\u00edte pouze jistinu. Renovaci nemus\u00edte prov\u00e9st najednou \u2014 lze postupovat po etap\u00e1ch.",
-  "bezne_vyhoda": "<strong>V\u00fdhoda:</strong> Nemus\u00edte m\u00edt naspo\u0159eno statis\u00edce dop\u0159edu \u2014 z\u00edsk\u00e1te levn\u00e9 financov\u00e1n\u00ed na celou instalaci.",
-  "bezne_nevyhoda": "<strong>Nev\u00fdhoda:</strong> Pro z\u00edsk\u00e1n\u00ed \u00fav\u011bru mus\u00edte proj\u00edt posouzen\u00edm bonity v bance (scoringem).",
+  "bezne_title": "Běžné domácnosti",
+  "bezne_subtitle": "středně a vysokopříjmové",
+  "bezne_desc": "Stát podporuje pořízení tepelného čerpadla formou <strong>bezúročného úvěru</strong>. Úroky za domácnost zaplatí stát po celou dobu splatnosti — RPSN 0%.",
+  "bezne_jak": "<strong>Jak to funguje:</strong> Půjčíte si v bance nebo stavební spořitelně, stát uhradí veškeré úroky a vy splácíte pouze jistinu. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10–15 let.",
+  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspoř eno statisíce dopředu — získáte levné financování na celou instalaci s RPSN 0%.",
+  "bezne_nevyhoda": "<strong>Nevýhoda:</strong> Pro získání úvěru musíte projít posouzením bonity v bance (scoringem).",
 
-  "zranitelne_title": "Zraniteln\u00e9 dom\u00e1cnosti (NZ\u00da Light)",
-  "zranitelne_subtitle": "senio\u0159i, invalidn\u00ed d\u016fchod 3. stupn\u011b, p\u0159\u00edsp\u011bvek na bydlen\u00ed",
-  "zranitelne_desc": "N\u00edzkopr\u00edjmov\u00e9 dom\u00e1cnosti maj\u00ed st\u00e1le n\u00e1rok na <strong>p\u0159\u00edmou dotaci</strong>. Podm\u00ednkou je vlastnictv\u00ed max. 2 nemovitost\u00ed ur\u010den\u00fdch k bydlen\u00ed a budova kolaudovan\u00e1 do 1. 7. 2013.",
+  "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
+  "zranitelne_subtitle": "příjemci dávek, starobní důchodci, osoby s invalidním důchodem 3. stupně",
+  "zranitelne_desc": "Nízkopříjmové domácnosti mají stále nárok na <strong>přímou dotaci</strong>. Podmínkou je vlastnictví max. 1 nemovitosti určené k bydlení a budova kolaudovaná do 1. 7. 2013.",
   "zranitelne_body": [
-    { "label": "Dotace na tepeln\u00e9 \u010derpadlo", "value": "a\u017e 150 000 K\u010d" },
-    { "label": "Renova\u010dn\u00ed pas zdarma", "value": "a\u017e 50 000 K\u010d" },
-    { "label": "\u010cerp\u00e1n\u00ed", "value": "mo\u017en\u00e9 z\u00e1lohov\u011b (p\u0159edem)" }
+    { "label": "Dotace na TČ vzduch-voda / země-voda", "value": "150 000 Kč" },
+    { "label": "Dotace na TČ vzduch-vzduch", "value": "100 000 Kč" },
+    { "label": "Renovační pas zdarma", "value": "až 50 000 Kč" },
+    { "label": "Čerpání", "value": "možné zálohově (předem)" }
   ],
 
-  "tc_headline": "Podpora tepeln\u00fdch \u010derpadel",
-  "tc_intro": "Tepeln\u00e1 \u010derpadla pat\u0159\u00ed mezi kl\u00ed\u010dov\u00e1 podporovan\u00e1 opat\u0159en\u00ed. V\u00fd\u0161e podpory z\u00e1le\u017e\u00ed na kategorii \u017eadatele:",
+  "tc_headline": "Podpora tepelných čerpadel",
+  "tc_intro": "Tepelná čerpadla patří mezi klíčová podporovaná opatření. Výše podpory závisí na kategorii žadatele a typu čerpadla:",
   "tc_body": [
-    { "label": "B\u011b\u017en\u00e9 dom\u00e1cnosti (vzduch-voda, zem\u011b-voda)", "value": "40 000\u2013130 000 K\u010d" },
-    { "label": "Zraniteln\u00e9 dom\u00e1cnosti (NZ\u00da Light)", "value": "a\u017e 150 000 K\u010d" },
-    { "label": "Bonus za kombinaci zateplen\u00ed + T\u010c", "value": "30 000 K\u010d" },
-    { "label": "Bonus za kombinaci T\u010c + fotovoltaika", "value": "30 000 K\u010d" }
+    { "label": "TČ vzduch-vzduch — bezúročný úvěr (běžné domácnosti)", "value": "až 200 000 Kč" },
+    { "label": "TČ vzduch-voda — bezúročný úvěr (běžné domácnosti)", "value": "až 350 000 Kč" },
+    { "label": "TČ země-voda — bezúročný úvěr (běžné domácnosti)", "value": "až 400 000 Kč" },
+    { "label": "TČ vzduch-vzduch — dotace NZÚ Light (zranitelné domácnosti)", "value": "100 000 Kč" },
+    { "label": "TČ vzduch-voda / země-voda — dotace NZÚ Light", "value": "150 000 Kč" }
   ],
-  "tc_note": "Podm\u00ednkou je certifikovan\u00e9 za\u0159\u00edzen\u00ed na Seznamu v\u00fdrobk\u016f a technologi\u00ed (SVT) \u2014 v\u0161e, co dod\u00e1v\u00e1me, spl\u0148uje. \u017d\u00e1dost se pod\u00e1v\u00e1 elektronicky p\u0159es port\u00e1l zadosti.sfzp.cz.",
+  "tc_note": "Podmínkou je certifikované zařízení na Seznamu výrobků a technologií (SVT) — vše, co dodáváme, splňuje. Žádost se podává elektronicky přes portál zadosti.sfzp.cz.",
 
-  "renovacni_headline": "Energetick\u00e9 poradenstv\u00ed a Renova\u010dn\u00ed pas",
-  "renovacni_intro": "Pro z\u00edsk\u00e1n\u00ed bez\u00faro\u010dn\u00e9ho \u00fav\u011bru bude vy\u017eadov\u00e1n Renova\u010dn\u00ed pas.",
+  "renovacni_headline": "Energetické poradenství a Renovační pas",
+  "renovacni_intro": "Od dubna 2026 funguje nový systém energetického poradenství s certifikovanými poradci.",
   "renovacni_body": [
-    "<strong>Energetick\u00e9 poradenstv\u00ed:</strong> Bude k dispozici zdarma na kontaktn\u00edch m\u00edstech (EKIS, MAS). S\u00ed\u0165 certifikovan\u00fdch poradc\u016f se otev\u0159e v dubnu 2026.",
-    "<strong>Renova\u010dn\u00ed pas:</strong> Dokument, kter\u00fd v\u00e1m \u0159ekne, v jak\u00e9m po\u0159ad\u00ed a jak d\u016fm opravit. Pro zraniteln\u00e9 dom\u00e1cnosti bude jeho vypracov\u00e1n\u00ed zdarma (dotov\u00e1no a\u017e 50 000 K\u010d)."
+    "<strong>Energetické poradenství:</strong> K dispozici zdarma na kontaktních místech (EKIS, MAS). Síť certifikovaných poradců funguje od dubna 2026.",
+    "<strong>Renovační pas:</strong> Dokument, který vám řekne, v jakém pořadí a jak dům opravit. Pro zranitelné domácnosti je jeho vypracování dotováno až 50 000 Kč."
   ],
 
-  "tip_box": "Aktu\u00e1ln\u011b je p\u0159\u00edjem \u017e\u00e1dost\u00ed do\u010dasn\u011b uzav\u0159en kv\u016fli vy\u010derp\u00e1n\u00ed alokace. Nov\u00e1 etapa se otev\u0159e v \u010dervnu 2026. Po\u0161lete n\u00e1m popt\u00e1vku u\u017e te\u010f \u2014 p\u0159iprav\u00edme v\u00e1m projekt, abyste mohli \u017e\u00e1dat hned po otev\u0159en\u00ed.",
+  "tip_box": "Program NZÚ 2026+ je otevřen a žádosti přijímá portál zadosti.sfzp.cz. Pošlete nám poptávku — připravíme vám projekt a dokumentaci potřebnou k podání žádosti.",
 
-  "cta_headline": "Chcete b\u00fdt p\u0159ipraveni?",
-  "cta_text": "Po\u0161lete popt\u00e1vku \u2014 p\u0159iprav\u00edme v\u00e1m projekt, abyste mohli \u017e\u00e1dat hned po otev\u0159en\u00ed programu.",
-  "cta_button": "Odeslat popt\u00e1vku"
+  "cta_headline": "Chcete podat žádost o podporu?",
+  "cta_text": "Pošlete poptávku — připravíme vám projekt a dokumentaci a provedeme vás celým procesem žádosti.",
+  "cta_button": "Odeslat poptávku"
 }
