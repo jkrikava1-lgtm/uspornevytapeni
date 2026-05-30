@@ -1,69 +1,69 @@
 {
-  "meta_title": "Dotace na tepelné čerpadlo 2026 | NZÚ — kompletní průvodce",
-  "meta_description": "Dotace na tepelné čerpadlo z Nové zelené úsporám 2026. Bezúročné úvěry pro běžné domácnosti, přímé dotace NZÚ Light. Celou žádost zpracujeme za vás — 20 let zkušeností.",
+  "meta_title": "Dotace na tepelné čerpadlo 2026 | NZÚ — bezúročný úvěr nebo dotace NZÚ Light",
+  "meta_description": "Tepelné čerpadlo s podporou z Nové zelené úsporám 2026. Bezúročný úvěr pro běžné domácnosti nebo přímá dotace NZÚ Light. Zpracujeme žádost za vás.",
   "hero_title": "Dotace na tepelná čerpadla",
-  "hero_subtitle": "Nová zelená úsporám 2026+ je otevřena — bezúročné úvěry pro běžné domácnosti, přímé dotace NZÚ Light. Přehled podmínek a výše podpory.",
+  "hero_subtitle": "Nová zelená úsporám 2026 — dvě cesty podpory: bezúročný úvěr pro běžné domácnosti nebo přímá dotace NZÚ Light pro nízkopříjmové.",
 
-  "intro": "Program <strong>Nová zelená úsporám</strong> (NZÚ) Ministerstva životního prostředí administrovaný Státním fondem životního prostředí dosud podpořil přes <strong>409 tisíc projektů</strong> a vyplatil <strong>95 miliard Kč</strong>. V roce 2026 přišla zásadní změna: běžné domácnosti získávají <strong>bezúročné úvěry</strong> (stát hradí veškeré úroky), přímou dotaci si zachovávají nízkopříjmové skupiny v rámci NZÚ Light.",
+  "intro": "Program <strong>Nová zelená úsporám</strong> (NZÚ) v roce 2026 funguje dvěma způsoby — záleží na příjmové skupině žadatele. <strong>Běžné domácnosti</strong> získají bezúročný úvěr: půjčí si peníze, stát zaplatí veškeré úroky a ony splácejí jen jistinu (RPSN 0 %). <strong>Zranitelné domácnosti</strong> mohou čerpat přímou dotaci NZÚ Light, kterou není třeba vracet.",
 
-  "harmonogram_headline": "Aktuální stav programu (2026)",
-  "harmonogram_intro": "Po dočasném uzavření v listopadu 2025 se nová etapa programu otevřela v březnu 2026. Žádosti lze podávat nyní:",
+  "harmonogram_headline": "Jak na to — tři kroky",
+  "harmonogram_intro": "Postup je jednoduchý. Klíčové je správně určit, do které kategorie patříte:",
   "harmonogram": [
     {
-      "datum": "25. března 2026",
-      "popis": "Spuštění nové etapy NZÚ 2026+ — otevřen příjem žádostí pro rodinné i bytové domy (bezúročné úvěry i NZÚ Light)."
+      "datum": "Zjistěte kategorii",
+      "popis": "Patříte mezi zranitelné domácnosti (NZÚ Light)? Pokud ne, máte nárok na bezúročný úvěr. Podmínky každé skupiny jsou popsány níže."
     },
     {
-      "datum": "Duben 2026",
-      "popis": "Zahájení nového systému energetického poradenství — síť certifikovaných poradců EKIS a renovační pasy jsou v provozu."
+      "datum": "Připravte podklady",
+      "popis": "U bezúročného úvěru je potřeba renovační pas (zpracuje ho certifikovaný poradce EKIS zdarma). U NZÚ Light renovační pas není podmínkou."
     },
     {
-      "datum": "Nyní otevřeno",
-      "popis": "Žádosti se podávají elektronicky přes portál zadosti.sfzp.cz. Lze žádat před zahájením, v průběhu i po dokončení prací."
+      "datum": "Podejte žádost",
+      "popis": "Žádost se podává elektronicky přes portál zadosti.sfzp.cz — před zahájením prací, v průběhu i po dokončení."
     }
   ],
 
-  "zmena_headline": "Hlavní změna: Dotace vs. Úvěry",
-  "zmena_intro": "Největší novinkou NZÚ 2026+ je rozdělení žadatelů do dvou kategorií:",
+  "zmena_headline": "Dvě skupiny žadatelů",
+  "zmena_intro": "Podpora se liší podle příjmové situace domácnosti:",
 
   "bezne_title": "Běžné domácnosti",
   "bezne_subtitle": "středně a vysokopříjmové",
-  "bezne_desc": "Stát podporuje pořízení tepelného čerpadla formou <strong>bezúročného úvěru</strong>. Úroky za domácnost zaplatí stát po celou dobu splatnosti — RPSN 0%.",
-  "bezne_jak": "<strong>Jak to funguje:</strong> Půjčíte si v bance nebo stavební spořitelně, stát uhradí veškeré úroky a vy splácíte pouze jistinu. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10–15 let.",
-  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspoř eno statisíce dopředu — získáte levné financování na celou instalaci s RPSN 0%.",
-  "bezne_nevyhoda": "<strong>Nevýhoda:</strong> Pro získání úvěru musíte projít posouzením bonity v bance (scoringem).",
+  "bezne_desc": "Stát podporuje instalaci tepelného čerpadla formou <strong>bezúročného úvěru</strong> (RPSN 0 %). Úroky po celou dobu splácení hradí stát, vy vracíte jen půjčenou částku.",
+  "bezne_jak": "<strong>Jak to funguje:</strong> Nejprve zažádáte přes SFŽP. Po schválení žádosti si půjčíte v bance nebo stavební spořitelně. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10–15 let.",
+  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspoř eny statisíce předem — finance na celou instalaci s nulovými úroky.",
+  "bezne_nevyhoda": "<strong>Podmínka:</strong> K žádosti potřebujete renovační pas (zpracuje certifikovaný poradce EKIS — zdarma). Banka pak prověří vaši bonitu.",
 
   "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
-  "zranitelne_subtitle": "příjemci dávek, starobní důchodci, osoby s invalidním důchodem 3. stupně",
-  "zranitelne_desc": "Nízkopříjmové domácnosti mají stále nárok na <strong>přímou dotaci</strong>. Podmínkou je vlastnictví max. 1 nemovitosti určené k bydlení a budova kolaudovaná do 1. 7. 2013.",
+  "zranitelne_subtitle": "příjemci dávek, starobní důchodci a lidé s invalidním důchodem 3. stupně v energeticky neúsporném domě",
+  "zranitelne_desc": "Nízkopříjmové domácnosti dostávají <strong>přímou dotaci</strong> — peníze, které nemusí vracet. Podmínkou je vlastnictví max. 1 nemovitosti určené k bydlení, kolaudace do 1. 7. 2013 a splnění příjmových kritérií. <strong>Renovační pas není podmínkou</strong> — nabízí se jako volitelná bezplatná služba.",
   "zranitelne_body": [
     { "label": "Dotace na TČ vzduch-voda / země-voda", "value": "150 000 Kč" },
     { "label": "Dotace na TČ vzduch-vzduch", "value": "100 000 Kč" },
-    { "label": "Renovační pas zdarma", "value": "až 50 000 Kč" },
-    { "label": "Čerpání", "value": "možné zálohově (předem)" }
+    { "label": "Renovační pas (volitelně, zdarma)", "value": "až 50 000 Kč" },
+    { "label": "Čerpání", "value": "možné zálohově předem" }
   ],
 
-  "tc_headline": "Podpora tepelných čerpadel",
-  "tc_intro": "Tepelná čerpadla patří mezi klíčová podporovaná opatření. Výše podpory závisí na kategorii žadatele a typu čerpadla:",
+  "tc_headline": "Kolik dostanete na tepelné čerpadlo?",
+  "tc_intro": "Výše podpory závisí na kategorii a typu čerpadla. U bezúročného úvěru se jedná o maximální půjčku, stát platí úroky — vy vracíte jen jistinu. U NZÚ Light jde o přímou dotaci:",
   "tc_body": [
-    { "label": "TČ vzduch-vzduch — bezúročný úvěr (běžné domácnosti)", "value": "až 200 000 Kč" },
-    { "label": "TČ vzduch-voda — bezúročný úvěr (běžné domácnosti)", "value": "až 350 000 Kč" },
-    { "label": "TČ země-voda — bezúročný úvěr (běžné domácnosti)", "value": "až 400 000 Kč" },
-    { "label": "TČ vzduch-vzduch — dotace NZÚ Light (zranitelné domácnosti)", "value": "100 000 Kč" },
+    { "label": "TČ vzduch-vzduch — bezúročný úvěr", "value": "až 200 000 Kč" },
+    { "label": "TČ vzduch-voda — bezúročný úvěr", "value": "až 350 000 Kč" },
+    { "label": "TČ země-voda — bezúročný úvěr", "value": "až 400 000 Kč" },
+    { "label": "TČ vzduch-vzduch — dotace NZÚ Light", "value": "100 000 Kč" },
     { "label": "TČ vzduch-voda / země-voda — dotace NZÚ Light", "value": "150 000 Kč" }
   ],
-  "tc_note": "Podmínkou je certifikované zařízení na Seznamu výrobků a technologií (SVT) — vše, co dodáváme, splňuje. Žádost se podává elektronicky přes portál zadosti.sfzp.cz.",
+  "tc_note": "Podmínkou je certifikované zařízení na Seznamu výrobků a technologií (SVT) — vše, co dodáváme, splňuje. Žádost se podává přes zadosti.sfzp.cz.",
 
-  "renovacni_headline": "Energetické poradenství a Renovační pas",
-  "renovacni_intro": "Od dubna 2026 funguje nový systém energetického poradenství s certifikovanými poradci.",
+  "renovacni_headline": "Renovační pas a energetické poradenství",
+  "renovacni_intro": "U bezúročného úvěru je renovační pas povinný. U NZÚ Light nikoli — ale je zdarma, takže se vyplatí.",
   "renovacni_body": [
-    "<strong>Energetické poradenství:</strong> K dispozici zdarma na kontaktních místech (EKIS, MAS). Síť certifikovaných poradců funguje od dubna 2026.",
-    "<strong>Renovační pas:</strong> Dokument, který vám řekne, v jakém pořadí a jak dům opravit. Pro zranitelné domácnosti je jeho vypracování dotováno až 50 000 Kč."
+    "<strong>Renovační pas:</strong> Dokument od certifikovaného poradce, který posoudí váš dům a stanoví optimální postup renovace. U dílčích renovací (bezúročný úvěr) je podmínkou žádosti.",
+    "<strong>Kde ho získat:</strong> Kontaktujte bezplatné energetické poradenské centrum EKIS — poradce pas zpracuje zdarma. Síť poradců funguje od dubna 2026."
   ],
 
-  "tip_box": "Program NZÚ 2026+ je otevřen a žádosti přijímá portál zadosti.sfzp.cz. Pošlete nám poptávku — připravíme vám projekt a dokumentaci potřebnou k podání žádosti.",
+  "tip_box": "Nejste si jisti, do které kategorie patříte? Zavolejte nám — rádi vám poradíme ještě před podáním žádosti.",
 
-  "cta_headline": "Chcete podat žádost o podporu?",
-  "cta_text": "Pošlete poptávku — připravíme vám projekt a dokumentaci a provedeme vás celým procesem žádosti.",
+  "cta_headline": "Potřebujete pomoct s žádostí?",
+  "cta_text": "Pošlete poptávku — poradíme vám, do které kategorie patříte, a připravíme projekt i dokumentaci.",
   "cta_button": "Odeslat poptávku"
 }
