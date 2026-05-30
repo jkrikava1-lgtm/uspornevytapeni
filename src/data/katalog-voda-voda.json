@@ -32,7 +32,6 @@
     },
     {
       "label": "Voda-voda",
-      "href": "",
       "active": true,
       "activeClass": "bg-cyan-100 text-cyan-700"
     }
