@@ -30,7 +30,7 @@
   "bezne_subtitle": "středně a vysokopříjmové",
   "bezne_desc": "Stát podporuje instalaci tepelného čerpadla formou <strong>bezúročného úvěru</strong> (RPSN 0 %). Úroky po celou dobu splácení hradí stát, vy vracíte jen půjčenou částku.",
   "bezne_jak": "<strong>Jak to funguje:</strong> Nejprve zažádáte přes SFŽP. Po schválení žádosti si půjčíte v bance nebo stavební spořitelně. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10–15 let.",
-  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspoř eny statisíce předem — finance na celou instalaci s nulovými úroky.",
+  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspořeny statisíce předem — finance na celou instalaci s nulovými úroky.",
   "bezne_nevyhoda": "<strong>Podmínka:</strong> K žádosti potřebujete renovační pas (zpracuje certifikovaný poradce EKIS — zdarma). Banka pak prověří vaši bonitu.",
 
   "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
@@ -63,7 +63,7 @@
 
   "tip_box": "Nejste si jisti, do které kategorie patříte? Zavolejte nám — rádi vám poradíme ještě před podáním žádosti.",
 
-  "cta_headline": "Potřebujete pomoct s žádostí?",
-  "cta_text": "Pošlete poptávku — poradíme vám, do které kategorie patříte, a připravíme projekt i dokumentaci.",
+  "cta_headline": "Nevíte, na co máte nárok?",
+  "cta_text": "Poradíme vám s kategorií i celou žádostí — zdarma a nezávazně.",
   "cta_button": "Odeslat poptávku"
 }
