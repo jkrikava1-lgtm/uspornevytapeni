@@ -75,4 +75,15 @@ import data from '../../data/novostavba.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Jaký topný systém je nejlepší pro novostavbu?", "acceptedAnswer": { "@type": "Answer", "text": "Pro novostavby doporučujeme tepelné čerpadlo vzduch-voda nebo země-voda v kombinaci s podlahovým vytápěním. Systém zajišťuje 100% bezobslužný provoz, minimální náklady (z 1 kW elektřiny 3–4 kW tepla) a možnost chlazení v létě jednou technologií. Topení navrhujeme vždy na míru konkrétnímu projektu." } },
+      { "@type": "Question", "name": "Lze v novostavbě kombinovat tepelné čerpadlo s podlahovým topením a chlazením?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Tepelné čerpadlo pokryje vytápění i chlazení jednou technologií. Podlahové topení v létě reverzně slouží k chlazení (pasivní nebo aktivní), v zimě k vytápění. Je to nejkomfortnější řešení s nejvyšší energetickou účinností." } },
+      { "@type": "Question", "name": "Kdy je nejlepší začít řešit vytápění novostavby?", "acceptedAnswer": { "@type": "Answer", "text": "Ideálně před hrubou stavbou — topný systém lze navrhnout optimálně, rozvody podlahového topení zabetonovat a vrt nebo kolektor realizovat bez dodatečných prací. Konzultaci poskytneme zdarma." } },
+      { "@type": "Question", "name": "Jaká dotace je dostupná na tepelné čerpadlo pro novostavbu?", "acceptedAnswer": { "@type": "Answer", "text": "Pro novostavby je dostupná podpora z programu Nová zelená úsporám 2026. Běžné domácnosti mohou získat bezúročný úvěr: až 400 000 Kč na zemní čerpadlo nebo až 350 000 Kč na vzduch-voda. Zranitelné domácnosti mají nárok na přímou dotaci NZÚ Light až 150 000 Kč. S žádostí pomůžeme." } }
+    ]
+  })} />
 </Layout>

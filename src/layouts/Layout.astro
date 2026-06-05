@@ -51,7 +51,7 @@ const navGroups = [
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <!-- JSON-LD -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Úsporné vytápění s.r.o.",
@@ -67,9 +67,32 @@ const navGroups = [
         "addressCountry": "CZ"
       },
       "foundingDate": "2006",
-      "areaServed": "CZ",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Česká republika"
+      },
       "priceRange": "$$",
       "image": "https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg",
+      "knowsAbout": [
+        "tepelná čerpadla vzduch-voda",
+        "tepelná čerpadla země-voda",
+        "tepelná čerpadla voda-voda",
+        "geotermální vytápění",
+        "podlahové vytápění",
+        "úsporné vytápění",
+        "Nová zelená úsporám",
+        "inverterová tepelná čerpadla",
+        "Master Therm"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Instalace tepelných čerpadel",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tepelné čerpadlo vzduch-voda", "url": "https://uspornevytapeni.cz/tepelna-cerpadla/vzduch-voda" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tepelné čerpadlo země-voda", "url": "https://uspornevytapeni.cz/tepelna-cerpadla/zeme-voda" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tepelné čerpadlo voda-voda", "url": "https://uspornevytapeni.cz/tepelna-cerpadla/voda-voda" } }
+        ]
+      },
       "sameAs": []
     })} />
     <!-- GA4 - načte se až po souhlasu s cookies -->

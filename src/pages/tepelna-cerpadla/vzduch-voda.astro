@@ -203,4 +203,15 @@ import data from '../../data/vzduch-voda.json';
       </a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Jak funguje tepelné čerpadlo vzduch-voda?", "acceptedAnswer": { "@type": "Answer", "text": "Tepelné čerpadlo vzduch-voda odebírá tepelnou energii z venkovního vzduchu a přenáší ji do topného systému nebo zásobníku teplé vody. Pracuje spolehlivě i při teplotách až −20 °C. Z 1 kW elektřiny získáte průměrně 3–4 kW tepla. Instalace nevyžaduje zemní práce ani vrt a zpravidla trvá 2–3 dny." } },
+      { "@type": "Question", "name": "Kolik stojí tepelné čerpadlo vzduch-voda na klíč?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní instalace tepelného čerpadla vzduch-voda na klíč začíná od 349 000 Kč. Cena zahrnuje dodávku, montáž, elektroinstalaci, uvedení do provozu a dokumentaci pro dotaci. S podporou z programu Nová zelená úsporám 2026 lze získat bezúročný úvěr až 350 000 Kč nebo přímou dotaci NZÚ Light až 150 000 Kč." } },
+      { "@type": "Question", "name": "Funguje tepelné čerpadlo vzduch-voda při silném mrazu?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Moderní inverterová tepelná čerpadla vzduch-voda fungují spolehlivě i při −20 °C. Čerpadla Master Therm, která instalujeme, mají integrovanou elektrickou dotopovou spirálu pro extrémní mrazy." } },
+      { "@type": "Question", "name": "Je tepelné čerpadlo vzduch-voda vhodné pro starší dům s radiátory?", "acceptedAnswer": { "@type": "Answer", "text": "Ano, za předpokladu, že radiátory jsou dostatečně dimenzovány pro nízkoteplotní provoz (topná voda 45–55 °C). Před instalací provedeme posouzení stávajícího topného systému a případně navrhneme úpravu nebo výměnu radiátorů." } }
+    ]
+  })} />
 </Layout>

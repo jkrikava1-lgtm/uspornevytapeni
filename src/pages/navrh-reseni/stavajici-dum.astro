@@ -111,4 +111,15 @@ import data from '../../data/stavajici-dum.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Lze vyměnit plynový kotel za tepelné čerpadlo?", "acceptedAnswer": { "@type": "Answer", "text": "Ano, výměna kotle za tepelné čerpadlo je nejčastějším typem rekonstrukce, který provádíme. Podmínkou je stávající vodní topný systém (radiátory nebo podlahové topení). Před instalací posoudíme váš dům a stávající topný systém. Průměrně ušetříte 60–70 % nákladů na vytápění oproti plynu." } },
+      { "@type": "Question", "name": "Funguje tepelné čerpadlo se stávajícími radiátory?", "acceptedAnswer": { "@type": "Answer", "text": "Ano, pokud jsou radiátory dostatečně dimenzovány pro nízkoteplotní provoz (topná voda 45–55 °C). Posoudíme, zda vaše radiátory postačí, nebo zda je potřeba je zvětšit. Podlahové topení je ideální — umožňuje nejnižší teploty topné vody a nejvyšší účinnost čerpadla." } },
+      { "@type": "Question", "name": "Kolik ušetřím při přechodu z plynu na tepelné čerpadlo?", "acceptedAnswer": { "@type": "Answer", "text": "Při průměrném rodinném domě s tepelnou ztrátou 13 kW jsou roční náklady na vytápění plynem přibližně 60 000 Kč, tepelným čerpadlem vzduch-voda přibližně 37 000 Kč — úspora zhruba 23 000 Kč ročně. Připravíme vám konkrétní výpočet zdarma." } },
+      { "@type": "Question", "name": "Jak dlouho trvá výměna kotle za tepelné čerpadlo?", "acceptedAnswer": { "@type": "Answer", "text": "Samotná montáž tepelného čerpadla vzduch-voda trvá 2–3 dny. U zemního čerpadla je potřeba připočítat čas na zemní práce (vrt nebo kolektor), celkově 3–5 dní. Topný systém je plně funkční ihned po dokončení montáže." } }
+    ]
+  })} />
 </Layout>
