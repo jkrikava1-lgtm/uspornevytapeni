@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const formatDate = (d: Date) => d.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Layout
+  title="Poradna — tepelná čerpadla a úsporné vytápění"
+  description="Praktické průvodce a odborné články o tepelných čerpadlech, dotacích a úsporném vytápění od specialistů Úsporného vytápění."
+  breadcrumbs={[{ label: 'Poradna', href: '/blog' }]}
+>
+  <PageHero
+    title="Poradna"
+    subtitle="Praktické průvodce a odborné články o tepelných čerpadlech a úsporném vytápění."
+    breadcrumb={[{ label: 'Poradna', href: '/blog' }]}
+  />
+
+  <section class="py-12 lg:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8">
+        {posts.map(post => (
+          <a href={`/blog/${post.slug}`} class="group block bg-white rounded-2xl border border-gray-200 overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all">
+            <div class="flex flex-col sm:flex-row">
+              {post.data.image && (
+                <div class="sm:w-56 flex-shrink-0">
+                  <img src={post.data.image} alt={post.data.title} class="w-full h-48 sm:h-full object-cover" loading="lazy" />
+                </div>
+              )}
+              <div class="p-6 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-3 mb-3">
+                    <span class="text-xs font-semibold text-brand-500 bg-brand-50 px-2.5 py-1 rounded-full">{post.data.category}</span>
+                    <span class="text-xs text-charcoal-400">{formatDate(post.data.pubDate)}</span>
+                  </div>
+                  <h2 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{post.data.title}</h2>
+                  <p class="text-sm text-charcoal-500 leading-relaxed">{post.data.description}</p>
+                </div>
+                <div class="mt-4 text-sm font-semibold text-brand-500 flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Číst článek
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

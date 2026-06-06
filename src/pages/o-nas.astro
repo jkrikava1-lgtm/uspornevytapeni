@@ -5,7 +5,7 @@ import data from '../data/o-nas.json';
 import site from '../data/site.json';
 ---
 
-<Layout title={data.meta_title} description={data.meta_description}>
+<Layout title={data.meta_title} description={data.meta_description} breadcrumbs={[{ label: 'O nás', href: '/o-nas' }]}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
@@ -112,4 +112,58 @@ import site from '../data/site.json';
       </div>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Úsporné vytápění s.r.o.",
+    "url": "https://uspornevytapeni.cz",
+    "foundingDate": "2006",
+    "description": "Specialisté na tepelná čerpadla a úsporné vytápění. Autorizovaný partner Master Therm, nositelé Značky kvality AVTČ. Od roku 2006.",
+    "telephone": "+420777724573",
+    "email": "info@uspornevytapeni.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Dělnická 395",
+      "addressLocality": "Jičín",
+      "postalCode": "506 01",
+      "addressCountry": "CZ"
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Asociace pro využití tepelných čerpadel (AVTČ)"
+    },
+    "award": "Značka kvality AVTČ",
+    "knowsAbout": ["tepelná čerpadla vzduch-voda", "tepelná čerpadla země-voda", "tepelná čerpadla voda-voda", "úsporné vytápění", "Nová zelená úsporám", "Master Therm"],
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Jakub Křikava",
+        "jobTitle": "Obchod a technická podpora",
+        "telephone": "+420777724573",
+        "email": "j.krikava@uspornevytapeni.cz"
+      },
+      {
+        "@type": "Person",
+        "name": "Ing. Jana Křikavová",
+        "jobTitle": "Ekonom"
+      }
+    ],
+    "sameAs": ["https://share.google/66F7YjcrxXkEXskH6", "https://www.firmy.cz/detail/2538489-usporne-vytapeni-s-r-o-tepelna-cerpadla-jicin-valdicke-predmesti.html"]
+  })} />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jakub Křikava",
+    "jobTitle": "Specialista na tepelná čerpadla",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Úsporné vytápění s.r.o.",
+      "url": "https://uspornevytapeni.cz"
+    },
+    "telephone": "+420777724573",
+    "email": "j.krikava@uspornevytapeni.cz",
+    "knowsAbout": ["tepelná čerpadla vzduch-voda", "tepelná čerpadla země-voda", "tepelná čerpadla voda-voda", "úsporné vytápění", "Nová zelená úsporám"]
+  })} />
 </Layout>

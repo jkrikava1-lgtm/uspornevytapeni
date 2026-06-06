@@ -1,0 +1,96 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntry('blog', slug);
+if (!post) return Astro.redirect('/blog');
+
+const { Content } = await post.render();
+const formatDate = (d: Date) => d.toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  breadcrumbs={[{ label: 'Poradna', href: '/blog' }, { label: post.data.title, href: `/blog/${slug}` }]}
+>
+  <article class="py-12 lg:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-charcoal-400 mb-8">
+        <a href="/" class="hover:text-brand-500">Úvod</a>
+        <span>/</span>
+        <a href="/blog" class="hover:text-brand-500">Poradna</a>
+        <span>/</span>
+        <span class="text-charcoal-600">{post.data.title}</span>
+      </nav>
+
+      <!-- Header -->
+      <div class="mb-8">
+        <span class="text-xs font-semibold text-brand-500 bg-brand-50 px-2.5 py-1 rounded-full">{post.data.category}</span>
+        <h1 class="text-3xl lg:text-4xl font-extrabold text-charcoal-900 mt-4 mb-3">{post.data.title}</h1>
+        <p class="text-charcoal-500 text-lg leading-relaxed mb-4">{post.data.description}</p>
+        <div class="flex items-center gap-3 text-sm text-charcoal-400">
+          <span>{post.data.author}</span>
+          <span>·</span>
+          <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+        </div>
+      </div>
+
+      {post.data.image && (
+        <img src={post.data.image} alt={post.data.title} class="rounded-2xl w-full object-cover max-h-72 mb-10" loading="lazy" />
+      )}
+
+      <!-- Content -->
+      <div class="prose prose-charcoal max-w-none
+        prose-headings:font-extrabold prose-headings:text-charcoal-900
+        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2
+        prose-p:text-charcoal-600 prose-p:leading-relaxed prose-p:my-4
+        prose-a:text-brand-500 prose-a:no-underline hover:prose-a:underline
+        prose-strong:text-charcoal-900
+        prose-ul:my-4 prose-li:text-charcoal-600
+        prose-table:text-sm prose-th:text-charcoal-700 prose-td:text-charcoal-600
+      ">
+        <Content />
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 bg-gray-50 rounded-2xl p-8 text-center border border-gray-200">
+        <h3 class="text-xl font-extrabold text-charcoal-900 mb-2">Máte zájem o tepelné čerpadlo?</h3>
+        <p class="text-charcoal-500 text-sm mb-6">Konzultace je zdarma a nezávazná — poradíme vám s výběrem i dotací.</p>
+        <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">
+          Odeslat poptávku
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "datePublished": post.data.pubDate.toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.data.author,
+      "worksFor": { "@type": "Organization", "name": "Úsporné vytápění s.r.o." }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Úsporné vytápění s.r.o.",
+      "url": "https://uspornevytapeni.cz"
+    },
+    "image": post.data.image ? `https://uspornevytapeni.cz${post.data.image}` : undefined,
+    "url": `https://uspornevytapeni.cz/blog/${slug}`
+  })} />
+</Layout>
