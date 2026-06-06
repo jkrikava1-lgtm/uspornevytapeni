@@ -85,4 +85,15 @@ import data from '../../data/inverter.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Co je inverterová technologie u tepelného čerpadla?", "acceptedAnswer": { "@type": "Answer", "text": "Inverterová technologie umožňuje tepelnému čerpadlu plynule přizpůsobovat výkon kompresoru aktuální potřebě tepla — od minimálního po maximální výkon. Starší on/off systémy buď jedou na 100 %, nebo stojí. Inverter eliminuje zbytečné starty a zastávky." } },
+      { "@type": "Question", "name": "Proč je inverterové tepelné čerpadlo lepší než on/off?", "acceptedAnswer": { "@type": "Answer", "text": "Inverterové čerpadlo šetří přibližně 20–30 % elektřiny oproti on/off systémům. Méně startů kompresoru znamená nižší opotřebení a delší životnost. Provoz je tišší a výkyvy teploty v domě jsou minimální." } },
+      { "@type": "Question", "name": "Jsou všechna tepelná čerpadla Master Therm inverterová?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Dodáváme výhradně inverterová tepelná čerpadla Master Therm. Tento český výrobce s vlastní výrobou od roku 1994 staví inverterovou technologii jako standard ve všech svých modelech." } },
+      { "@type": "Question", "name": "Jak moc šetří inverterové tepelné čerpadlo elektřinu?", "acceptedAnswer": { "@type": "Answer", "text": "Oproti on/off systémům šetří inverterové čerpadlo průměrně 20–30 % elektrické energie. Přesná úspora závisí na klimatických podmínkách a způsobu provozu. Díky plynulé regulaci je čerpadlo efektivní i při mírném mrazu, kdy je potřeba tepla nižší." } }
+    ]
+  })} />
 </Layout>

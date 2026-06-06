@@ -130,4 +130,15 @@ import data from '../../data/velky-vykon.json';
       </div>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Pro jaké objekty jsou tepelná čerpadla velkého výkonu vhodná?", "acceptedAnswer": { "@type": "Answer", "text": "Tepelná čerpadla velkého výkonu jsou vhodná pro bytové domy, hotely, penziomy, komerční objekty, průmyslové haly a zemědělské provozy. Výkon systému v kaskádovém zapojení může dosáhnout 1 000+ kW." } },
+      { "@type": "Question", "name": "Co je kaskádové zapojení tepelných čerpadel?", "acceptedAnswer": { "@type": "Answer", "text": "Kaskáda je propojení více tepelných čerpadel za sebou pro dosažení vysokého celkového výkonu. Umožňuje modulární škálování výkonu, záložní provoz při výpadku jedné jednotky a optimální regulaci dle aktuální potřeby tepla." } },
+      { "@type": "Question", "name": "Jaká je úspora při vytápění bytového domu tepelným čerpadlem?", "acceptedAnswer": { "@type": "Answer", "text": "Čím větší objekt, tím větší úspora — velké budovy typicky topí na starý způsob (plyn, elektřina) s vysokými náklady. Přechod na tepelné čerpadlo může snížit roční náklady na vytápění o 50–70 %. Zpracujeme konkrétní kalkulaci pro váš objekt." } },
+      { "@type": "Question", "name": "Lze u tepelného čerpadla pro velký objekt zajistit bezobslužný provoz?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Systém zajišťuje minimální údržbu nebo zcela bezobslužný provoz s online monitoringem 24/7. Veškeré parametry sledujeme a nastavujeme na dálku." } }
+    ]
+  })} />
 </Layout>

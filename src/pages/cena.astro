@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/cena.json';
 ---
 
-<Layout title={data.meta_title} description={data.meta_description}>
+<Layout title={data.meta_title} description={data.meta_description} breadcrumbs={[{ label: 'Cena', href: '/cena' }]}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}

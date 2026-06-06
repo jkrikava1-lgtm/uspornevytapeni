@@ -231,4 +231,15 @@ import ref from '../data/reference.json';
       });
     })();
   </script>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Reference instalací tepelných čerpadel — Úsporné vytápění s.r.o.",
+    "description": "Realizované instalace tepelných čerpadel Master Therm v rodinných domech po celé České republice.",
+    "numberOfItems": 15,
+    "itemListElement": [
+      "Studenec","Staňkova Lhota","Dolní Bousov","Kopidlno","Sobotka","Koclířov","Chuchelna","Býkev","Hradec Králové","Pecka","Průhonice","Přepeře","Tuklaty","Jesenice","Kostelní Lhota"
+    ].map((lokalita, i) => ({ "@type": "ListItem", "position": i + 1, "name": `Rekonstrukce rodinného domu — ${lokalita}` }))
+  })} />
 </Layout>

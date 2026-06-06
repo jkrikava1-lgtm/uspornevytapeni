@@ -80,4 +80,15 @@ const maxChart = Math.max(...data.chart_items.map(i => i.value));
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Kolik stojí vytápění plynem oproti tepelnému čerpadlu ročně?", "acceptedAnswer": { "@type": "Answer", "text": "Pro průměrný rodinný dům s tepelnou ztrátou 13 kW jsou roční náklady na vytápění plynem přibližně 60 000 Kč, tepelným čerpadlem vzduch-voda přibližně 37 000 Kč. Výpočty vycházejí z dat TZB-info (2026)." } },
+      { "@type": "Question", "name": "Jaká je roční úspora při přechodu z plynu na tepelné čerpadlo?", "acceptedAnswer": { "@type": "Answer", "text": "Při přechodu z plynového kotle na tepelné čerpadlo vzduch-voda ušetříte přibližně 23 000 Kč ročně (pro dům s tepelnou ztrátou 13 kW). Přesná úspora závisí na zateplení domu, způsobu vytápění a aktuálních cenách energií." } },
+      { "@type": "Question", "name": "Jaká je návratnost investice do tepelného čerpadla?", "acceptedAnswer": { "@type": "Answer", "text": "Návratnost tepelného čerpadla je typicky 5–8 let po odečtení dotace z NZÚ 2026. Po celou dobu životnosti (20–25 let) platíte pouze za elektřinu — bez fixních poplatků za plyn a bez závislosti na cenách fosilních paliv." } },
+      { "@type": "Question", "name": "Jak velký vliv má zateplení domu na náklady na vytápění?", "acceptedAnswer": { "@type": "Answer", "text": "Lépe zateplený dům má nižší tepelnou ztrátu a potřebuje méně tepla — to snižuje náklady u všech zdrojů vytápění. Zateplení a tepelné čerpadlo se vzájemně doplňují: čerpadlo pracuje efektivněji při nižších topných teplotách, které zateplený dům umožňuje." } }
+    ]
+  })} />
 </Layout>

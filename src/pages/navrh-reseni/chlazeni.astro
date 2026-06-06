@@ -70,4 +70,15 @@ import data from '../../data/chlazeni.json';
       </div>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Jak se chladí dům tepelným čerpadlem?", "acceptedAnswer": { "@type": "Answer", "text": "Tepelné čerpadlo umí pracovat reverzně — místo výroby tepla odvádí teplo z interiéru ven. Chlazení probíhá buď pasivně podlahovým systémem (cirkulace studené vody z vrtu nebo kolektoru — téměř zdarma), nebo aktivně pomocí fancoilů (klimatizační jednotky na stěně či stropu)." } },
+      { "@type": "Question", "name": "Jaký je rozdíl mezi podlahovým chlazením a fancoily?", "acceptedAnswer": { "@type": "Answer", "text": "Podlahové chlazení je pasivní — využívá stálou teplotu zemního zdroje (u zemních čerpadel). Je tiché, rovnoměrné a provozně téměř zdarma. Fancoily jsou aktivní klimatizační jednotky — reagují rychleji, jsou vhodné pro rychlé ochlazení nebo pro domy bez podlahy. Lze je kombinovat." } },
+      { "@type": "Question", "name": "Je chlazení tepelným čerpadlem drahé?", "acceptedAnswer": { "@type": "Answer", "text": "Pasivní podlahové chlazení (free cooling) je téměř zdarma — spotřebuje pouze elektřinu oběhového čerpadla. Aktivní chlazení přes fancoily spotřebuje část výkonu kompresoru, ale stále výrazně méně než klasická klimatizace." } },
+      { "@type": "Question", "name": "Lze chlazení doinstalovat k existujícímu tepelnému čerpadlu?", "acceptedAnswer": { "@type": "Answer", "text": "Ano, pokud čerpadlo podporuje reverzní chod (většina moderních jednotek). Fancoily lze přidat dodatečně. Podlahové pasivní chlazení je dostupné u zemních čerpadel. Posoudíme možnosti pro váš systém." } }
+    ]
+  })} />
 </Layout>

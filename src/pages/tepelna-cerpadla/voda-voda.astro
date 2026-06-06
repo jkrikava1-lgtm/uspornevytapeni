@@ -4,7 +4,7 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/voda-voda.json';
 ---
 
-<Layout title={data.meta_title} description={data.meta_description}>
+<Layout title={data.meta_title} description={data.meta_description} breadcrumbs={[{ label: 'Tepelná čerpadla', href: '/tepelna-cerpadla' }, { label: 'Voda – voda', href: '/tepelna-cerpadla/voda-voda' }]}>
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
@@ -104,4 +104,15 @@ import data from '../../data/voda-voda.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Jak funguje tepelné čerpadlo voda-voda?", "acceptedAnswer": { "@type": "Answer", "text": "Tepelné čerpadlo voda-voda čerpá tepelnou energii z podzemní vody pomocí dvou studní — zdrojové a vsakovací. Vodu ze zdrojové studny proženeme tepelným výměníkem, odebereme z ní teplo a ochlazenou vrátíme do vsakovací studny. Díky stálé teplotě spodní vody (cca 10 °C) dosahují tato čerpadla topného faktoru COP až 7 — nejvyšší ze všech typů tepelných čerpadel." } },
+      { "@type": "Question", "name": "Jaké podmínky jsou nutné pro instalaci tepelného čerpadla voda-voda?", "acceptedAnswer": { "@type": "Answer", "text": "Jsou potřeba dvě studny (zdrojová a vsakovací) s minimální vzdáleností danou hydrogeologem. Zdrojová studna musí mít dostatečnou vydatnost. Před instalací je nutný hydrogeologický průzkum a rozbor vody. K využívání spodní vody je třeba povolení od odboru životního prostředí." } },
+      { "@type": "Question", "name": "Kolik stojí tepelné čerpadlo voda-voda?", "acceptedAnswer": { "@type": "Answer", "text": "Cena kompletní instalace tepelného čerpadla voda-voda začíná od 379 000 Kč. Konečná cena závisí na hloubce studní a hydrogeologických podmínkách. S podporou z NZÚ 2026 lze získat bezúročný úvěr až 400 000 Kč." } },
+      { "@type": "Question", "name": "Je tepelné čerpadlo voda-voda nejúčinnější typ?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Čerpadla voda-voda dosahují COP až 7 — tedy z 1 kW elektřiny získáte až 7 kW tepla. Jsou nejefektivnějším typem tepelných čerpadel, avšak vyžadují vhodné geologické podmínky a administrativní povolení." } }
+    ]
+  })} />
 </Layout>

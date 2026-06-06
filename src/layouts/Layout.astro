@@ -5,9 +5,18 @@ import site from '../data/site.json';
 interface Props {
   title: string;
   description?: string;
+  breadcrumbs?: { label: string; href: string }[];
 }
 
-const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.' } = Astro.props;
+const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.', breadcrumbs } = Astro.props;
+const breadcrumbSchema = breadcrumbs ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Úvod", "item": "https://uspornevytapeni.cz" },
+    ...breadcrumbs.map((b, i) => ({ "@type": "ListItem", "position": i + 2, "name": b.label, "item": `https://uspornevytapeni.cz${b.href}` }))
+  ]
+} : null;
 const canonicalURL = new URL(Astro.url.pathname, 'https://uspornevytapeni.cz');
 const ogImage = 'https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg';
 
@@ -93,8 +102,9 @@ const navGroups = [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tepelné čerpadlo voda-voda", "url": "https://uspornevytapeni.cz/tepelna-cerpadla/voda-voda" } }
         ]
       },
-      "sameAs": ["https://share.google/66F7YjcrxXkEXskH6"]
+      "sameAs": ["https://share.google/66F7YjcrxXkEXskH6", "https://www.firmy.cz/detail/2538489-usporne-vytapeni-s-r-o-tepelna-cerpadla-jicin-valdicke-predmesti.html"]
     })} />
+    {breadcrumbSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
     <!-- GA4 - načte se až po souhlasu s cookies -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];

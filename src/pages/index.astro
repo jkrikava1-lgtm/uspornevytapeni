@@ -341,6 +341,20 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
     </div>
   </section>
 
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "Úsporné vytápění s.r.o.",
+      "url": "https://uspornevytapeni.cz"
+    },
+    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+    "author": { "@type": "Person", "name": "Roman Vojtek" },
+    "reviewBody": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
+    "name": "Tepelné čerpadlo vzduch-voda — Praha"
+  })} />
+
 </Layout>
 
 <script>

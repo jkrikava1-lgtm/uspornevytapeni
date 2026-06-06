@@ -87,4 +87,15 @@ import data from '../../data/fotovoltaika.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Jak spolupracuje tepelné čerpadlo s fotovoltaikou?", "acceptedAnswer": { "@type": "Answer", "text": "Řídicí systém tepelného čerpadla automaticky rozpozná, kdy je k dispozici přebytek levné sluneční elektřiny z fotovoltaiky, a přizpůsobí svůj výkon. Tepelné čerpadlo tak přednostně čerpá vlastní zelenou energii místo dražší ze sítě." } },
+      { "@type": "Question", "name": "Kolik ušetří kombinace tepelného čerpadla a fotovoltaiky?", "acceptedAnswer": { "@type": "Answer", "text": "Tepelné čerpadlo je největší spotřebič v domácnosti. Pokud ho pohání vlastní solární elektřina, klesnou provozní náklady na vytápění na minimum. Kombinace FVE + TČ je nejúspornější řešení pro moderní rodinný dům — topíte vlastní energií téměř zdarma." } },
+      { "@type": "Question", "name": "Potřebuji baterii pro kombinaci fotovoltaiky a tepelného čerpadla?", "acceptedAnswer": { "@type": "Answer", "text": "Ne nutně. Tepelné čerpadlo dokáže přizpůsobit svůj výkon aktuálně dostupné sluneční energii. Baterie zvýší využití FVE i pro večerní provoz, ale základní synergie funguje i bez ní. Baterie se vyplatí zejména při větší FVE instalaci." } },
+      { "@type": "Question", "name": "Lze tepelné čerpadlo propojit s jakoukoli fotovoltaikou?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Integrace je možná prostřednictvím chytrého řízení, které sleduje výrobu FVE a podle ní moduluje výkon čerpadla. Zajišťujeme kompletní integraci tepelného čerpadla Master Therm s fotovoltaikou." } }
+    ]
+  })} />
 </Layout>
