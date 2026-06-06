@@ -71,3 +71,114 @@
     color: var(--color-charcoal-600);
   }
 }
+
+/* Styly pro obsah článků v Poradně */
+.article-content h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-charcoal-900);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-gray-100);
+}
+
+.article-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-charcoal-900);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-content p {
+  color: var(--color-charcoal-600);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.article-content strong {
+  color: var(--color-charcoal-900);
+  font-weight: 600;
+}
+
+.article-content a {
+  color: var(--color-brand-500);
+  text-decoration: none;
+}
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.article-content ul {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+  list-style: none;
+}
+.article-content ul li {
+  color: var(--color-charcoal-600);
+  line-height: 1.7;
+  margin-bottom: 0.35rem;
+  padding-left: 0.5rem;
+  position: relative;
+}
+.article-content ul li::before {
+  content: '–';
+  position: absolute;
+  left: -1rem;
+  color: var(--color-brand-500);
+  font-weight: 700;
+}
+
+.article-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  counter-reset: ol-counter;
+  list-style: none;
+}
+.article-content ol li {
+  color: var(--color-charcoal-600);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  counter-increment: ol-counter;
+  padding-left: 0.5rem;
+  position: relative;
+}
+.article-content ol li::before {
+  content: counter(ol-counter) '.';
+  position: absolute;
+  left: -1.5rem;
+  color: var(--color-brand-500);
+  font-weight: 700;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 1px solid var(--color-gray-200);
+  margin: 2rem 0;
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+}
+.article-content th {
+  background: var(--color-navy-700);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+.article-content td {
+  padding: 0.55rem 0.9rem;
+  color: var(--color-charcoal-600);
+  border-bottom: 1px solid var(--color-gray-200);
+}
+.article-content tr:last-child td {
+  border-bottom: none;
+}
+.article-content tr:nth-child(even) td {
+  background: var(--color-gray-50);
+}
