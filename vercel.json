@@ -79,8 +79,6 @@
     { "source": "/sluzby/", "destination": "/", "permanent": true },
     { "source": "/akce", "destination": "/", "permanent": true },
     { "source": "/akce/", "destination": "/", "permanent": true },
-    { "source": "/blog", "destination": "/", "permanent": true },
-    { "source": "/blog/", "destination": "/", "permanent": true },
     { "source": "/poradna", "destination": "/kontakty", "permanent": true },
     { "source": "/poradna/", "destination": "/kontakty", "permanent": true },
     { "source": "/tepelne-cerpadlo-financovani", "destination": "/dotace", "permanent": true },
