@@ -1,53 +1,38 @@
 ---
-title: "Nová zelená úsporám 2026 — kompletní průvodce pro majitele domů"
-description: "Program NZÚ 2026+ je otevřen. Vysvětlujeme, kdo má nárok na přímou dotaci a kdo na bezúročný úvěr, jaké jsou výše podpory a jak podat žádost."
+title: "Nová zelená úsporám 2026 — kdo dostane dotaci a kdo úvěr?"
+description: "Program NZÚ 2026+ funguje dvěma cestami: přímá dotace pro nízkopříjmové, bezúročný úvěr pro ostatní. Přehled výší podpory a podmínek."
 pubDate: 2026-04-15
 author: "Jakub Křikava"
 category: "Dotace"
 image: "/images/ilustrace/dotace.jpg"
 ---
 
-Program **Nová zelená úsporám 2026+** přinesl zásadní změnu: běžné domácnosti přecházejí z přímých dotací na **bezúročné úvěry**, přímou dotaci si zachovaly jen nízkopříjmové skupiny. Jak to celé funguje?
+Od roku 2026 se podpora dělí na dvě skupiny. Nejdřív zjistěte, do které patříte.
 
-## Dvě skupiny žadatelů
+## Běžné domácnosti — bezúročný úvěr
 
-### Běžné domácnosti — bezúročný úvěr
+Půjčíte si v bance, stát zaplatí úroky. Splácíte jen jistinu, RPSN 0 %.
 
-Pokud nejste v kategorii zranitelných domácností, máte nárok na **bezúročný úvěr (RPSN 0 %)** z banky nebo stavební spořitelny. Stát hradí veškeré úroky po celou dobu splácení — vy vracíte jen půjčenou částku.
+| Typ čerpadla | Max. výše úvěru |
+|---|---|
+| Vzduch-vzduch | 200 000 Kč |
+| Vzduch-voda | 350 000 Kč |
+| Země-voda | 400 000 Kč |
 
-**Výše bezúročného úvěru na tepelné čerpadlo:**
-- Tepelné čerpadlo vzduch-vzduch: až 200 000 Kč
-- Tepelné čerpadlo vzduch-voda: až 350 000 Kč
-- Tepelné čerpadlo země-voda: až 400 000 Kč
+**Postup:** Poradce EKIS (zdarma) → renovační pas → žádost na zadosti.sfzp.cz → banka.
 
-**Jak to funguje krok za krokem:**
-1. Kontaktujte certifikovaného energetického poradce (EKIS) — zdarma
-2. Poradce zpracuje renovační pas
-3. Podejte žádost přes portál zadosti.sfzp.cz
-4. Po schválení si půjčte v bance — RPSN 0 %
+## Zranitelné domácnosti — přímá dotace NZÚ Light
 
-### Zranitelné domácnosti — přímá dotace NZÚ Light
+Příjemci dávek, starobní důchodci a osoby s invalidním důchodem 3. stupně v domě energetické třídy E–G. Max. 1 nemovitost, kolaudace do 1. 7. 2013.
 
-Na přímou dotaci mají nárok domácnosti splňující příjmová kritéria: příjemci dávek státní sociální pomoci, domácnosti s velmi nízkými příjmy (do 3. příjmového decilu) v energeticky neúsporném domě, starobní důchodci nebo osoby s invalidním důchodem 3. stupně.
+| Typ čerpadla | Dotace |
+|---|---|
+| Vzduch-voda / země-voda | 150 000 Kč |
+| Vzduch-vzduch | 100 000 Kč |
+| Renovační pas (volitelně) | až 50 000 Kč |
 
-**Výše dotace na tepelné čerpadlo:**
-- Vzduch-voda nebo země-voda: **150 000 Kč**
-- Vzduch-vzduch: **100 000 Kč**
-- Renovační pas zdarma: až 50 000 Kč navíc
+Renovační pas není podmínkou. Žádost přes zadosti.sfzp.cz — lze podat i po realizaci.
 
-Podmínkou je vlastnictví max. 1 nemovitosti a kolaudace budovy do 1. 7. 2013.
+---
 
-## Kdy a jak podat žádost
-
-NZÚ 2026+ je otevřen od dubna 2026. Žádosti se podávají **výhradně elektronicky** přes portál [zadosti.sfzp.cz](https://zadosti.sfzp.cz). Lze žádat před zahájením prací, v průběhu i po jejich dokončení.
-
-## Potřebuji renovační pas?
-
-- Pro **bezúročný úvěr**: renovační pas je podmínkou pro dílčí renovace. Zpracuje ho certifikovaný poradce EKIS zdarma.
-- Pro **NZÚ Light**: renovační pas není podmínkou, ale nabízí se jako bezplatná volitelná služba.
-
-## Pomůžeme s celou žádostí
-
-Jako autorizovaný instalátor Master Therm zpracujeme veškerou dokumentaci potřebnou k žádosti o dotaci nebo úvěr — od projektové dokumentace po předání podkladů Státnímu fondu životního prostředí.
-
-[Pošlete poptávku](/poptavka) a poradíme vám, která varianta se na vás vztahuje.
+Nevíte, kam patříte? [Zeptejte se nás](/poptavka) — poradíme zdarma.
