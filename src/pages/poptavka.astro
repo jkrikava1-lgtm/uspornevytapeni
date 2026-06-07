@@ -183,7 +183,7 @@ import site from '../data/site.json';
         jsonData.priloha = { name: file.name, type: file.type, data: base64 };
       }
 
-      const res = await fetch('/api/poptavka', {
+      const res = await fetch('/api/poptavka/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(jsonData),

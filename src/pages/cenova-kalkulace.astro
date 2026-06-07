@@ -333,7 +333,7 @@ import data from '../data/cenova-kalkulace.json';
     iconEl.classList.add('hidden');
     spinEl.classList.remove('hidden');
     try {
-      const res = await fetch('/api/kalkulace', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...answers, jmeno, email, telefon, obec, souhlas_obchodni: souhlas }) });
+      const res = await fetch('/api/kalkulace/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...answers, jmeno, email, telefon, obec, souhlas_obchodni: souhlas }) });
       if (!res.ok) throw new Error('server error');
       showStep(99);
       document.getElementById('step-success')!.classList.remove('hidden');
