@@ -19,7 +19,7 @@ console.log(`Found ${files.length} images to convert`);
 
 for (const file of files) {
   const dest = file.replace(/\.(jpe?g|png)$/i, '.webp');
-  await sharp(file).webp({ quality: 80 }).toFile(dest);
+  await sharp(file).rotate().withMetadata().webp({ quality: 80 }).toFile(dest);
   unlinkSync(file);
   console.log(`${path.relative(ROOT, file)} -> ${path.relative(ROOT, dest)}`);
 }
