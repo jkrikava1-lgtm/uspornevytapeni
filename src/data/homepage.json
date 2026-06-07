@@ -11,17 +11,17 @@
   "hero_experience_badge": "20 let zkušeností",
   "hero_slides": [
     {
-      "src": "/images/hero/monter-dodavka.jpg",
+      "src": "/images/hero/monter-dodavka.webp",
       "label": "Profesionální instalace",
       "desc": "Montáž a servis po celé ČR"
     },
     {
-      "src": "/images/hero/boxairy-strecha.jpg",
+      "src": "/images/hero/boxairy-strecha.webp",
       "label": "Tepelná čerpadla vzduch-voda",
       "desc": "BoxAir Inverter — spolehlivý provoz na střeše i u domu"
     },
     {
-      "src": "/images/hero/boxair-snezka.jpg",
+      "src": "/images/hero/boxair-snezka.webp",
       "label": "Vytápění i v drsných podmínkách",
       "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i na horách: 1040 m n. m."
     }
@@ -38,15 +38,15 @@
   "card1_title": "Stavím nový dům",
   "card1_desc": "Navrhneme optimální systém vytápění pro vaši novostavbu — tepelné čerpadlo, podlahové vytápění i chlazení v jednom.",
   "card1_href": "/navrh-reseni/novostavba",
-  "card1_img": "/images/hero/novostavba-vizual.jpg",
+  "card1_img": "/images/hero/novostavba-vizual.webp",
   "card2_title": "Rekonstruuji vytápění",
   "card2_desc": "Přecházíte z kotle na plyn nebo tuhá paliva? Vyměníme starý systém za tepelné čerpadlo bez zbytečných komplikací.",
   "card2_href": "/navrh-reseni/stavajici-dum",
-  "card2_img": "/images/hero/stary-kotel.jpg",
+  "card2_img": "/images/hero/stary-kotel.webp",
   "card3_title": "Potřebuji velký výkon",
   "card3_desc": "Pro bytové domy, komerční objekty i průmysl. Navrhujeme systémy s výkonem od 20 do stovek kW.",
   "card3_href": "/navrh-reseni/velky-vykon",
-  "card3_img": "/images/ilustrace/velky-vykon.jpg",
+  "card3_img": "/images/ilustrace/velky-vykon.webp",
   "products_label": "Naše produkty",
   "products_headline": "Tepelná čerpadla pro každou situaci",
   "products_cta": "Zjistit více",
@@ -56,21 +56,21 @@
       "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
       "emoji": "🌬️",
       "href": "/tepelna-cerpadla/vzduch-voda",
-      "image": "/images/produkty/tc-vzduch-voda-card.jpg"
+      "image": "/images/produkty/tc-vzduch-voda-card.webp"
     },
     {
       "title": "Země – voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
       "emoji": "🌱",
       "href": "/tepelna-cerpadla/zeme-voda",
-      "image": "/images/produkty/tc-zeme-voda-card.jpg"
+      "image": "/images/produkty/tc-zeme-voda-card.webp"
     },
     {
       "title": "Voda – voda",
       "desc": "Maximální výkon a účinnost. Pro objekty, které mají studnu s vydatným zdrojem vody.",
       "emoji": "💧",
       "href": "/tepelna-cerpadla/voda-voda",
-      "image": "/images/produkty/tc-voda-voda-card.jpg"
+      "image": "/images/produkty/tc-voda-voda-card.webp"
     }
   ],
   "savings_label": "Proč tepelné čerpadlo",

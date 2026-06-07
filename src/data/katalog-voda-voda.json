@@ -130,9 +130,9 @@
         }
       ],
       "productImages": [
-        "/images/produkty/aqi-sedy.jpg"
+        "/images/produkty/aqi-sedy.webp"
       ],
-      "bannerImage": "/images/produkty/aquamaster-inverter-banner.jpg"
+      "bannerImage": "/images/produkty/aquamaster-inverter-banner.webp"
     },
     {
       "id": "aquamaster-inverter-p",
@@ -144,7 +144,7 @@
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqip-oba.jpg"
+        "/images/produkty/aqip-oba.webp"
       ],
       "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
@@ -191,7 +191,7 @@
           "pdf": "/pdf/AQ90IP.pdf"
         }
       ],
-      "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.jpg"
+      "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.webp"
     },
     {
       "id": "aquamaster-combi",
@@ -242,9 +242,9 @@
         }
       ],
       "productImages": [
-        "/images/produkty/aqic.jpg"
+        "/images/produkty/aqic.webp"
       ],
-      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg"
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.webp"
     },
     {
       "id": "aquamaster-combi-p",
@@ -256,7 +256,7 @@
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqicp.jpg"
+        "/images/produkty/aqicp.webp"
       ],
       "description": "Ultra kompaktní jednotka s přírodním chladivem R290 a integrovaným nerezovým zásobníkem TUV 150 litrů. Zabere pouze 0,3 m² podlahové plochy. Max. teplota topné vody 75 °C, ochrana proti legionelle bez dohřívání.",
       "features": [
@@ -279,7 +279,7 @@
           "pdf": "/pdf/AQ22ICP.pdf"
         }
       ],
-      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg"
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.webp"
     }
   ],
   "moreLink": {

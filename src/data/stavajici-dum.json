@@ -42,35 +42,35 @@
       "title": "Tepelné čerpadlo",
       "desc": "Zdroj tepla bez konkurence. Zajistí vytápění, chlazení i ohřev teplé vody.",
       "emoji": "🔥",
-      "icon_img": "/images/ikony/tepelne-cerpadlo.png"
+      "icon_img": "/images/ikony/tepelne-cerpadlo.webp"
     },
     {
       "href": "/navrh-reseni/podlahove-topeni-starsi-dum",
       "title": "Podlahové topení ve starším domě",
       "desc": "Jak instalujeme podlahové topení při rekonstrukci.",
       "emoji": "♨️",
-      "icon_img": "/images/ikony/podlahove-topeni-starsi.png"
+      "icon_img": "/images/ikony/podlahove-topeni-starsi.webp"
     },
     {
       "href": "/navrh-reseni/velikost-radiatoru",
       "title": "Úprava radiátorů",
       "desc": "Jak upravit starší radiátorový systém pro tepelné čerpadlo.",
       "emoji": "🔧",
-      "icon_img": "/images/ikony/uprava-radiatoru.png"
+      "icon_img": "/images/ikony/uprava-radiatoru.webp"
     },
     {
       "href": "/navrh-reseni/doinstalace-chlazeni",
       "title": "Doinstalace chlazení",
       "desc": "Jak jednoduše doinstalovat chlazení do stávajícího domu.",
       "emoji": "❄️",
-      "icon_img": "/images/ikony/doinstalace-chlazeni.png"
+      "icon_img": "/images/ikony/doinstalace-chlazeni.webp"
     },
     {
       "href": "/navrh-reseni/kombinace-topnych-okruhu",
       "title": "Kombinace okruhů",
       "desc": "Podlahovka + radiátory v jednom systému — běžné a funkční řešení.",
       "emoji": "🔀",
-      "icon_img": "/images/ikony/kombinace-okruhu.png"
+      "icon_img": "/images/ikony/kombinace-okruhu.webp"
     }
   ]
 }

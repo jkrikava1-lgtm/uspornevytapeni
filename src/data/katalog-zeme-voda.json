@@ -68,12 +68,12 @@
       "numberStyle": "white",
       "title": "AquaMaster Inverter",
       "subtitle": "Inverterová technologie · 1–48 kW",
-      "bannerImage": "/images/produkty/aquamaster-inverter-banner.jpg",
+      "bannerImage": "/images/produkty/aquamaster-inverter-banner.webp",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqi-sedy.jpg"
+        "/images/produkty/aqi-sedy.webp"
       ],
       "description": "AquaMaster Inverter s plynulou regulací výkonu podle potřeby domu. Ocenění FOR ARCH Grand Prix 2008. Optimální provozní ekonomika díky inverterové technologii.",
       "features": [
@@ -139,12 +139,12 @@
       "numberStyle": "white",
       "title": "AquaMaster Inverter P",
       "subtitle": "Propanové (R290) · 1–70 kW",
-      "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.jpg",
+      "bannerImage": "/images/produkty/aquamaster-inverter-p-banner.webp",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqip-oba.jpg"
+        "/images/produkty/aqip-oba.webp"
       ],
       "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel země-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
@@ -197,12 +197,12 @@
       "numberStyle": "brand",
       "title": "AquaMaster Inverter Combi",
       "subtitle": "All-in-one s integrovaným bojlerem · 2–15 kW",
-      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg",
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.webp",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
       "productImages": [
-        "/images/produkty/aqic.jpg"
+        "/images/produkty/aqic.webp"
       ],
       "description": "Konstrukce „all in one“ s integrovaným nerezovým zásobníkem TUV, solárním výměníkem a inverterovým kompresorem. Moderní BLDC kompresor s variabilními oběhovými čerpadly a unikátním řídicím systémem. Volitelný modul pasivního chlazení.",
       "features": [
@@ -250,12 +250,12 @@
       "numberStyle": "white",
       "title": "AquaMaster Inverter Combi P",
       "subtitle": "Propanové all-in-one (R290) · 1–8 kW",
-      "bannerImage": "/images/produkty/aquamaster-combi-banner.jpg",
+      "bannerImage": "/images/produkty/aquamaster-combi-banner.webp",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
       "productImages": [
-        "/images/produkty/aqicp.jpg"
+        "/images/produkty/aqicp.webp"
       ],
       "description": "Ultra kompaktní jednotka země–voda s přírodním chladivem R290 a integrovaným nerezovým zásobníkem TUV 150 litrů. Zabere pouze 0,3 m² podlahové plochy. Max. teplota topné vody 75 °C, ochrana proti legionelle bez dohřívání.",
       "features": [

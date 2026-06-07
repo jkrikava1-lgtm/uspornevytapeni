@@ -6,7 +6,7 @@
   "cards": [
     {
       "emoji": "\ud83c\udf2c\ufe0f",
-      "image": "/images/produkty/tc-vzduch-voda-card.jpg",
+      "image": "/images/produkty/tc-vzduch-voda-card.webp",
       "title": "Vzduch \u2013 voda",
       "desc": "Nejroz\u0161\u00ed\u0159en\u011bj\u0161\u00ed typ. Snadn\u00e1 instalace za 2\u20133 dny, v\u00fdborn\u00fd pom\u011br cena/v\u00fdkon. Vhodn\u00e9 pro 95 % dom\u00e1cnost\u00ed.",
       "href": "/tepelna-cerpadla/vzduch-voda",
@@ -14,7 +14,7 @@
     },
     {
       "emoji": "\ud83c\udf31",
-      "image": "/images/produkty/tc-zeme-voda-card.jpg",
+      "image": "/images/produkty/tc-zeme-voda-card.webp",
       "title": "Zem\u011b \u2013 voda",
       "desc": "Nejvy\u0161\u0161\u00ed \u00fa\u010dinnost i v mraziv\u00fdch zim\u00e1ch. Plo\u0161n\u00fd kolektor nebo hloubkov\u00fd vrt podle pozemku.",
       "href": "/tepelna-cerpadla/zeme-voda",
@@ -22,7 +22,7 @@
     },
     {
       "emoji": "\ud83d\udca7",
-      "image": "/images/produkty/tc-voda-voda-card.jpg",
+      "image": "/images/produkty/tc-voda-voda-card.webp",
       "title": "Voda \u2013 voda",
       "desc": "Maxim\u00e1ln\u00ed v\u00fdkon a \u00fa\u010dinnost vyu\u017e\u00edvaj\u00edc\u00ed podzemn\u00ed vodu. Ide\u00e1ln\u00ed tam, kde je dostatek spodn\u00ed vody.",
       "href": "/tepelna-cerpadla/voda-voda",

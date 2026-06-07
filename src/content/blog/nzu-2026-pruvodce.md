@@ -4,7 +4,7 @@ description: "Program NZÚ 2026+ funguje dvěma cestami: přímá dotace pro ní
 pubDate: 2026-04-15
 author: "Jakub Křikava"
 category: "Dotace"
-image: "/images/ilustrace/dotace.jpg"
+image: "/images/ilustrace/dotace.webp"
 ---
 
 Od roku 2026 se podpora dělí na dvě skupiny. Nejdřív zjistěte, do které patříte.

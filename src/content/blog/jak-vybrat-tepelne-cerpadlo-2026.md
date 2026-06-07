@@ -4,7 +4,7 @@ description: "Tři typy tepelných čerpadel, tři různé situace. Rychlé srov
 pubDate: 2026-05-10
 author: "Jakub Křikava"
 category: "Průvodce"
-image: "/images/hero/boxairy-strecha.jpg"
+image: "/images/hero/boxairy-strecha.webp"
 ---
 
 | | Vzduch-voda | Země-voda | Voda-voda |

@@ -5,7 +5,7 @@
   "hero_subtitle": "Jak vlastně budu tepelné čerpadlo ovládat? Ekvitermní regulace, prostorový termostat, zónové řízení — vše přes terminál PGDx.",
   "intro_headline": "Jak vlastně budu tepelné čerpadlo ovládat?",
   "intro_text": "Regulaci tepelného čerpadla budete ovládat přes terminál – displej, který je u všech tepelných čerpadel Master Therm stejný. Tento terminál je buď přímo v tepelném čerpadle nebo na zdi v interiéru. Ovládací terminál je označen jako <strong class=\"text-charcoal-900\">PGDx</strong>.",
-  "intro_image_src": "/images/pgdx-terminal.png",
+  "intro_image_src": "/images/pgdx-terminal.webp",
   "intro_image_alt": "Ovládací terminál PGDx",
   "questions": [
     {

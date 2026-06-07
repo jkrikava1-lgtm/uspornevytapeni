@@ -231,7 +231,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
 
         <!-- Značka kvality -->
         <div class="bg-gray-50 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 cursor-pointer hover:shadow-md hover:border-brand-200 border border-gray-200 transition-all group" data-hp-lightbox-img>
-          <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-32 sm:w-36 rounded-xl object-cover flex-shrink-0 self-stretch" />
+          <img src="/images/znacka-kvality.webp" alt="Značka kvality AVTČ" class="w-32 sm:w-36 rounded-xl object-cover flex-shrink-0 self-stretch" />
           <div>
             <div class="text-sm font-bold text-charcoal-900 mb-2">Značka kvality AVTČ</div>
             <p class="text-sm text-charcoal-500 leading-relaxed mb-4">Nositeli Značky kvality se mohou stát pouze firmy splňující přísná kritéria odbornosti a kvality instalací.</p>
@@ -262,7 +262,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   <section class="py-12">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-gray-50 rounded-2xl p-8 lg:p-10 flex flex-col sm:flex-row items-center gap-6">
-        <img src="/images/ilustrace/vojtek-reference.jpg" alt={hp.testimonial_name} class="w-36 sm:w-44 rounded-xl object-cover object-top flex-shrink-0 self-stretch" />
+        <img src="/images/ilustrace/vojtek-reference.webp" alt={hp.testimonial_name} class="w-36 sm:w-44 rounded-xl object-cover object-top flex-shrink-0 self-stretch" />
         <div>
           <blockquote class="text-sm text-charcoal-600 leading-relaxed mb-4">
             „{hp.testimonial_text}"
@@ -387,7 +387,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   const zkEl = document.querySelector('[data-hp-lightbox-img]');
   const zkLb = document.getElementById('hp-zk-lightbox');
   if (zkEl && zkLb) {
-    zkLb.querySelector('img').src = '/images/znacka-kvality.jpg';
+    zkLb.querySelector('img').src = '/images/znacka-kvality.webp';
     zkEl.addEventListener('click', () => zkLb.classList.remove('hidden'));
     zkLb.addEventListener('click', () => zkLb.classList.add('hidden'));
   }

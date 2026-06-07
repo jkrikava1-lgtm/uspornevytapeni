@@ -41,35 +41,35 @@
       "title": "Tepelné čerpadlo",
       "desc": "Zdroj tepla bez konkurence. Zajistí vytápění, chlazení i ohřev teplé vody.",
       "emoji": "🔥",
-      "icon_img": "/images/ikony/tepelne-cerpadlo.png"
+      "icon_img": "/images/ikony/tepelne-cerpadlo.webp"
     },
     {
       "href": "/navrh-reseni/podlahove-topeni",
       "title": "Podlahové topení",
       "desc": "Nejkomfortnější distribuce tepla. Záruka 25 let. Stejný systém slouží i k chlazení.",
       "emoji": "🏠",
-      "icon_img": "/images/ikony/podlahove-topeni.png"
+      "icon_img": "/images/ikony/podlahove-topeni.webp"
     },
     {
       "href": "/navrh-reseni/radiatory",
       "title": "Radiátory",
       "desc": "Deskové, designové i koupelnové žebříky. Správné dimenzování pro nízkoteplotní systém.",
       "emoji": "🌡️",
-      "icon_img": "/images/ikony/radiatory.png"
+      "icon_img": "/images/ikony/radiatory.webp"
     },
     {
       "href": "/navrh-reseni/chlazeni",
       "title": "Chlazení",
       "desc": "Plnohodnotné chlazení podlahou nebo fancoily pro maximální komfort v létě.",
       "emoji": "❄️",
-      "icon_img": "/images/ikony/chlazeni.png"
+      "icon_img": "/images/ikony/chlazeni.webp"
     },
     {
       "href": "/navrh-reseni/kombinace-topnych-okruhu",
       "title": "Kombinace okruhů",
       "desc": "Kombinace podlahového topení, radiátorů, chlazení a dalších zdrojů.",
       "emoji": "🔀",
-      "icon_img": "/images/ikony/kombinace-okruhu.png"
+      "icon_img": "/images/ikony/kombinace-okruhu.webp"
     }
   ]
 }

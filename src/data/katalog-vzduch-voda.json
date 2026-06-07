@@ -72,12 +72,12 @@
       "numberStyle": "brand",
       "title": "BoxAir Inverter",
       "subtitle": "Venkovní kompakt · 2–35 kW",
-      "bannerImage": "/images/produkty/boxair-inverter-banner.jpg",
+      "bannerImage": "/images/produkty/boxair-inverter-banner.webp",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
       "productImages": [
-        "/images/produkty/bai.jpg"
+        "/images/produkty/bai.webp"
       ],
       "description": "BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.",
       "features": [
@@ -141,12 +141,12 @@
       "numberStyle": "white",
       "title": "BoxAir Inverter P",
       "subtitle": "Propanové (R290) · 2–50 kW",
-      "bannerImage": "/images/produkty/boxair-inverter-p-banner.jpg",
+      "bannerImage": "/images/produkty/boxair-inverter-p-banner.webp",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-200",
       "productImages": [
-        "/images/produkty/baip.jpg"
+        "/images/produkty/baip.webp"
       ],
       "description": "BoxAir Inverter P je propanová řada tepelných čerpadel vzduch-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Celoaluminiová skříň, barva antracit RAL 7016. Max. teplota topné vody 75 °C, provoz při venkovních teplotách od −20 do +40 °C.",
       "features": [
@@ -209,12 +209,12 @@
       "numberStyle": "white",
       "title": "BoxAir Inverter Split",
       "subtitle": "Dělená konstrukce · 2–35 kW",
-      "bannerImage": "/images/produkty/boxair-split-banner.jpg",
+      "bannerImage": "/images/produkty/boxair-split-banner.webp",
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
       "subtitleColor": "text-brand-100",
       "productImages": [
-        "/images/produkty/bai-split.jpg"
+        "/images/produkty/bai-split.webp"
       ],
       "description": "BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.",
       "features": [
@@ -262,12 +262,12 @@
       "numberStyle": "brand",
       "title": "BoxAir Inverter Split Combi",
       "subtitle": "S integrovaným bojlerem · 2–17 kW",
-      "bannerImage": "/images/produkty/boxair-split-combi-banner.jpg",
+      "bannerImage": "/images/produkty/boxair-split-combi-banner.webp",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
       "productImages": [
-        "/images/produkty/bai-split-combi.jpg"
+        "/images/produkty/bai-split-combi.webp"
       ],
       "description": "BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.",
       "features": [
@@ -303,12 +303,12 @@
       "numberStyle": "white",
       "title": "Tepelná čerpadla pro velké objekty",
       "subtitle": "Výkon 10–50 kW · Možnost kaskád",
-      "bannerImage": "/images/produkty/boxair-velke-banner.jpg",
+      "bannerImage": "/images/produkty/boxair-velke-banner.webp",
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
       "subtitleColor": "text-brand-100",
       "productImages": [
-        "/images/produkty/ba60is.jpg"
+        "/images/produkty/ba60is.webp"
       ],
       "description": "Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.",
       "features": [

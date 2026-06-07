@@ -38,7 +38,7 @@ import site from '../data/site.json';
           </div>
 
           <div class="flex items-stretch gap-4 bg-gray-50 rounded-xl overflow-hidden border border-gray-200 cursor-pointer hover:shadow-md hover:border-brand-200 transition-all group" data-lightbox-img>
-            <img src="/images/znacka-kvality.jpg" alt="Značka kvality AVTČ" class="w-28 object-cover flex-shrink-0" />
+            <img src="/images/znacka-kvality.webp" alt="Značka kvality AVTČ" class="w-28 object-cover flex-shrink-0" />
             <div class="py-4 pr-4 flex flex-col justify-center">
               <div class="text-sm font-bold text-charcoal-900">Značka kvality AVTČ</div>
               <p class="text-xs text-charcoal-500 leading-relaxed">Jsme členy Asociace pro využití tepelných čerpadel a nositeli Značky kvality.</p>
@@ -52,7 +52,7 @@ import site from '../data/site.json';
           <script>
             document.querySelector('[data-lightbox-img]')?.addEventListener('click', () => {
               const lb = document.getElementById('onas-lightbox');
-              document.getElementById('onas-lightbox-img').src = '/images/znacka-kvality.jpg';
+              document.getElementById('onas-lightbox-img').src = '/images/znacka-kvality.webp';
               lb.classList.remove('hidden');
             });
             document.getElementById('onas-lightbox')?.addEventListener('click', (e) => {
@@ -62,7 +62,7 @@ import site from '../data/site.json';
         </div>
 
         <div class="space-y-4">
-          <img src="/images/ilustrace/o-nas.jpg" alt="Technik Master Therm u tepelného čerpadla" class="rounded-xl w-full object-cover" loading="lazy" />
+          <img src="/images/ilustrace/o-nas.webp" alt="Technik Master Therm u tepelného čerpadla" class="rounded-xl w-full object-cover" loading="lazy" />
 
           <div class="grid grid-cols-2 gap-4">
             {[

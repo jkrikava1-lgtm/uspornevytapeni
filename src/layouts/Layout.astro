@@ -18,7 +18,7 @@ const breadcrumbSchema = breadcrumbs ? {
   ]
 } : null;
 const canonicalURL = new URL(Astro.url.pathname, 'https://uspornevytapeni.cz');
-const ogImage = 'https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg';
+const ogImage = 'https://uspornevytapeni.cz/images/hero/boxairy-strecha.webp';
 
 const navGroups = [
   { label: site.nav_navrh, href: '/navrh-reseni', items: site.nav_navrh_items, width: 'w-64' },
@@ -81,7 +81,7 @@ const navGroups = [
         "name": "Česká republika"
       },
       "priceRange": "$$",
-      "image": "https://uspornevytapeni.cz/images/hero/boxairy-strecha.jpg",
+      "image": "https://uspornevytapeni.cz/images/hero/boxairy-strecha.webp",
       "knowsAbout": [
         "tepelná čerpadla vzduch-voda",
         "tepelná čerpadla země-voda",
@@ -283,7 +283,7 @@ const navGroups = [
 
           <div class="lg:col-span-1">
             <div class="mb-5 flex items-center gap-3">
-              <img src="/images/logo-icon.png" alt="Úsporné vytápění logo" class="w-10 h-10 rounded-lg flex-shrink-0" />
+              <img src="/images/logo-icon.webp" alt="Úsporné vytápění logo" class="w-10 h-10 rounded-lg flex-shrink-0" />
               <div>
                 <div class="font-extrabold text-white text-sm leading-tight">{site.name}</div>
                 <div class="text-[10px] text-navy-200 font-semibold tracking-widest uppercase">Tepelná čerpadla</div>
