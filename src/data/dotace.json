@@ -63,6 +63,26 @@
 
   "tip_box": "Nejste si jisti, do které kategorie patříte? Zavolejte nám — rádi vám poradíme ještě před podáním žádosti.",
 
+  "faq_headline": "Časté dotazy",
+  "faq": [
+    {
+      "q": "Musím zateplovat dům, abych dostal bezúročný úvěr na tepelné čerpadlo?",
+      "a": "Ne. Tepelné čerpadlo je tzv. dílčí opatření — lze ho pořídit zcela samostatně bez zateplení nebo jiných stavebních úprav. Podmínkou je renovační pas (zdarma přes EKIS poradce) a posouzení vhodnosti TČ pro vaši otopnou soustavu. Zateplovat nemusíte."
+    },
+    {
+      "q": "K čemu mě zavazuje renovační pas?",
+      "a": "K ničemu konkrétnímu. Renovační pas je dokument od certifikovaného energetického poradce, který posoudí energetický stav vašeho domu a doporučí optimální postup renovace. Nezavazuje vás k žádným dalším pracím — jde jen o plán do budoucna. Zpracuje ho poradce EKIS zdarma, obvykle po jedné návštěvě."
+    },
+    {
+      "q": "Kdo má nárok na přímou dotaci NZÚ Light?",
+      "a": "Zranitelné domácnosti: příjemci dávek státní sociální pomoci, nízkopříjmové domácnosti (do 3. příjmového decilu) v energeticky náročném domě (třída E–G), starobní důchodci a invalidé 3. stupně s příjmy do 5. decilu. Podmínkou je vlastnictví max. 2 nemovitostí. Dotace na TČ vzduch-voda nebo země-voda je 150 000 Kč, na vzduch-vzduch 100 000 Kč."
+    },
+    {
+      "q": "Kdy mohu podat žádost — před instalací, nebo až po?",
+      "a": "Obojí. Žádost lze podat před zahájením prací, v průběhu i po jejich dokončení — realizace nesmí proběhnout více než 12 měsíců před podáním žádosti. Žádost se podává elektronicky přes portál zadosti.sfzp.cz."
+    }
+  ],
+
   "cta_headline": "Nevíte, na co máte nárok?",
   "cta_text": "Poradíme vám s kategorií i celou žádostí — zdarma a nezávazně.",
   "cta_button": "Odeslat poptávku"
