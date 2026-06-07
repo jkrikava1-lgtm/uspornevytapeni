@@ -50,7 +50,9 @@ import data from '../data/dotace.json';
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
 
-      <div class="max-w-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Běžné domácnosti -->
         <div class="bg-white border border-gray-200 rounded-xl p-6">
           <div class="flex items-center gap-3 mb-2">
             <div class="w-9 h-9 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
@@ -73,6 +75,32 @@ import data from '../data/dotace.json';
             <div class="bg-amber-50 border border-amber-200 rounded-lg p-3">
               <p class="text-amber-800 text-sm" set:html={data.bezne_nevyhoda} />
             </div>
+          </div>
+        </div>
+
+        <!-- Zranitelné domácnosti -->
+        <div class="bg-navy-700 text-white rounded-xl p-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-extrabold text-white">{data.zranitelne_title}</h3>
+              <p class="text-white/70 text-xs">{data.zranitelne_subtitle}</p>
+            </div>
+          </div>
+
+          <p class="text-white/90 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
+
+          <div class="space-y-0">
+            {data.zranitelne_body.map(item => (
+              <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
+                <span class="text-sm text-white/80">{item.label}</span>
+                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -140,7 +168,7 @@ import data from '../data/dotace.json';
         "name": "Kolik je dotace na tepelné čerpadlo v roce 2026?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Záleží na kategorii žadatele. Běžné domácnosti získají bezúročný úvěr (RPSN 0%) — stát hradí veškeré úroky. Maximální výše úvěru: TČ vzduch-vzduch 200 000 Kč, TČ vzduch-voda 350 000 Kč, TČ země-voda 400 000 Kč. Zranitelné domácnosti (NZÚ Light) mají nárok na přímou dotaci: TČ vzduch-vzduch 100 000 Kč, TČ vzduch-voda nebo země-voda 150 000 Kč."
+          "text": "Záleží na kategorii žadatele. Běžné domácnosti získají bezúročný úvěr (RPSN 0 %) — stát hradí veškeré úroky, splácíte jen jistinu. Maximální výše úvěru: TČ vzduch-vzduch 200 000 Kč, TČ vzduch-voda 350 000 Kč, TČ země-voda 400 000 Kč. Zranitelné domácnosti (NZÚ Light — příjemci dávek, nízkopříjmoví důchodci, invalidé 3. stupně) mají nárok na přímou nevratnou dotaci: TČ vzduch-vzduch 100 000 Kč, TČ vzduch-voda nebo země-voda 150 000 Kč."
         }
       },
       {
