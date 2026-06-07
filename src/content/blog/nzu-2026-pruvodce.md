@@ -1,17 +1,17 @@
 ---
-title: "Nová zelená úsporám 2026 — kdo dostane dotaci a kdo úvěr?"
-description: "Program NZÚ 2026+ funguje dvěma cestami: přímá dotace pro nízkopříjmové, bezúročný úvěr pro ostatní. Přehled výší podpory a podmínek."
+title: "Nová zelená úsporám 2026 — bezúročný úvěr na tepelné čerpadlo"
+description: "Program NZÚ 2026 nabízí bezúročný úvěr až 400 000 Kč — stát hradí veškeré úroky, splácíte jen jistinu. Přehled výší podpory a podmínek."
 pubDate: 2026-04-15
 author: "Jakub Křikava"
 category: "Dotace"
 image: "/images/ilustrace/dotace.webp"
 ---
 
-Od roku 2026 se podpora dělí na dvě skupiny. Nejdřív zjistěte, do které patříte.
+Program Nová zelená úsporám (NZÚ) 2026 podporuje instalaci tepelného čerpadla formou **bezúročného úvěru** — stát hradí veškeré úroky, splácíte jen jistinu (RPSN 0 %).
 
-## Běžné domácnosti — bezúročný úvěr
+## Bezúročný úvěr NZÚ
 
-Půjčíte si v bance, stát zaplatí úroky. Splácíte jen jistinu, RPSN 0 %.
+Půjčíte si v bance nebo stavební spořitelně, stát zaplatí úroky po celou dobu splatnosti.
 
 | Typ čerpadla | Max. výše úvěru |
 |---|---|
@@ -19,20 +19,10 @@ Půjčíte si v bance, stát zaplatí úroky. Splácíte jen jistinu, RPSN 0 %.
 | Vzduch-voda | 350 000 Kč |
 | Země-voda | 400 000 Kč |
 
+Dílčí renovace celkem: až 750 000 Kč · Splatnost 10–15 let.
+
 **Postup:** Poradce EKIS (zdarma) → renovační pas → žádost na zadosti.sfzp.cz → banka.
-
-## Zranitelné domácnosti — přímá dotace NZÚ Light
-
-Příjemci dávek, starobní důchodci a osoby s invalidním důchodem 3. stupně v domě energetické třídy E–G. Max. 1 nemovitost, kolaudace do 1. 7. 2013.
-
-| Typ čerpadla | Dotace |
-|---|---|
-| Vzduch-voda / země-voda | 150 000 Kč |
-| Vzduch-vzduch | 100 000 Kč |
-| Renovační pas (volitelně) | až 50 000 Kč |
-
-Renovační pas není podmínkou. Žádost přes zadosti.sfzp.cz — lze podat i po realizaci.
 
 ---
 
-Nevíte, kam patříte? [Zeptejte se nás](/poptavka) — poradíme zdarma.
+Chcete vědět, kolik vám půjčí a jaká bude měsíční splátka? [Zeptejte se nás](/poptavka) — poradíme zdarma.

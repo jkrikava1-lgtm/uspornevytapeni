@@ -50,9 +50,7 @@ import data from '../data/dotace.json';
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-        <!-- Běžné domácnosti -->
+      <div class="max-w-2xl">
         <div class="bg-white border border-gray-200 rounded-xl p-6">
           <div class="flex items-center gap-3 mb-2">
             <div class="w-9 h-9 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
@@ -75,32 +73,6 @@ import data from '../data/dotace.json';
             <div class="bg-amber-50 border border-amber-200 rounded-lg p-3">
               <p class="text-amber-800 text-sm" set:html={data.bezne_nevyhoda} />
             </div>
-          </div>
-        </div>
-
-        <!-- Zranitelné domácnosti -->
-        <div class="bg-navy-700 text-white rounded-xl p-6">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-9 h-9 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-extrabold text-white">{data.zranitelne_title}</h3>
-              <p class="text-white/70 text-xs">{data.zranitelne_subtitle}</p>
-            </div>
-          </div>
-
-          <p class="text-white/90 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
-
-          <div class="space-y-0">
-            {data.zranitelne_body.map(item => (
-              <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
-                <span class="text-sm text-white/80">{item.label}</span>
-                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -181,10 +153,10 @@ import data from '../data/dotace.json';
       },
       {
         "@type": "Question",
-        "name": "Kdo má nárok na dotaci na tepelné čerpadlo?",
+        "name": "Kdo má nárok na podporu na tepelné čerpadlo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Přímou dotaci (NZÚ Light) mají nárok zranitelné domácnosti — příjemci dávek státní sociální pomoci, domácnosti s velmi nízkými příjmy (do 3. příjmového decilu) v domě třídy E–G, starobní důchodci (do 5. decilu, třída E–G) nebo osoby s invalidním důchodem 3. stupně (do 5. decilu, třída E–G). Podmínkou je vlastnictví max. 1 nemovitosti určené k bydlení a kolaudace budovy do 1. 7. 2013. Běžné domácnosti mohou čerpat bezúročný úvěr."
+          "text": "Bezúročný úvěr z programu NZÚ 2026 může čerpat každá domácnost instalující certifikované tepelné čerpadlo. Podmínkou je renovační pas (zdarma přes poradce EKIS) a splnění podmínek banky pro úvěr. Výše úvěru: TČ vzduch-vzduch až 200 000 Kč, TČ vzduch-voda až 350 000 Kč, TČ země-voda až 400 000 Kč."
         }
       },
       {
@@ -200,7 +172,7 @@ import data from '../data/dotace.json';
         "name": "Co je Renovační pas a potřebuji ho pro dotaci?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Renovační pas je dokument od certifikovaného energetického poradce, který posoudí váš dům a stanoví optimální postup renovace. Pro bezúročný úvěr (dílčí renovace) je renovační pas povinný — zpracuje ho poradce EKIS zdarma. Pro dotaci NZÚ Light (zranitelné domácnosti) renovační pas podmínkou není, ale lze ho získat zdarma. Síť poradců EKIS funguje od dubna 2026."
+          "text": "Renovační pas je dokument od certifikovaného energetického poradce, který posoudí váš dům a stanoví optimální postup renovace. Pro bezúročný úvěr NZÚ je renovační pas povinný — zpracuje ho poradce EKIS zdarma. Síť poradců EKIS funguje od dubna 2026."
         }
       }
     ]
