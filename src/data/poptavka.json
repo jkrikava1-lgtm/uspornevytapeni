@@ -12,6 +12,8 @@
   "placeholder_telefon": "+420 777 123 456",
   "label_email": "E-mail *",
   "placeholder_email": "jan@example.cz",
+  "label_obec": "Obec / město *",
+  "placeholder_obec": "Praha, Brno, Jičín…",
   "label_objekt": "Typ objektu",
   "placeholder_objekt": "Vyberte typ objektu",
   "options_objekt": [

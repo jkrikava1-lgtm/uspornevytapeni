@@ -53,6 +53,7 @@ export async function POST({ request }: { request: Request }) {
   const jmeno    = data.jmeno    ?? '—';
   const telefon  = data.telefon  ?? '—';
   const email    = data.email    ?? '—';
+  const obec     = data.obec     ?? '—';
   const objekt   = data.objekt   ?? '—';
   const vytapeni = data.vytapeni ?? '—';
   const zprava   = data.zprava   ?? '—';
@@ -63,6 +64,7 @@ Nová nezávazná poptávka z webu
 Jméno:            ${jmeno}
 Telefon:          ${telefon}
 E-mail:           ${email}
+Obec / město:     ${obec}
 Typ objektu:      ${objekt}
 Stávající zdroj:  ${vytapeni}
 
