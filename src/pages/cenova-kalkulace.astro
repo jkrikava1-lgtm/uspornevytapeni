@@ -173,20 +173,20 @@ import data from '../data/cenova-kalkulace.json';
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div>
               <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_jmeno}</label>
-              <input type="text" id="f-jmeno" required placeholder={data.step6_placeholder_jmeno} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              <input type="text" id="f-jmeno" required autocomplete="name" placeholder={data.step6_placeholder_jmeno} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
             </div>
             <div>
               <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_telefon}</label>
-              <input type="tel" id="f-telefon" required placeholder={data.step6_placeholder_telefon} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+              <input type="tel" id="f-telefon" required autocomplete="tel" placeholder={data.step6_placeholder_telefon} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
             </div>
           </div>
           <div>
             <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_email}</label>
-            <input type="email" id="f-email" required placeholder={data.step6_placeholder_email} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            <input type="email" id="f-email" required autocomplete="email" placeholder={data.step6_placeholder_email} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
           </div>
           <div>
             <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.step6_label_obec}</label>
-            <input type="text" id="f-obec" required placeholder={data.step6_placeholder_obec} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
+            <input type="text" id="f-obec" required autocomplete="address-level2" placeholder={data.step6_placeholder_obec} class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" />
           </div>
           <div class="flex items-start gap-3 pt-2">
             <input type="checkbox" id="f-souhlas" class="mt-1 w-4 h-4 accent-brand-500 flex-shrink-0" />
