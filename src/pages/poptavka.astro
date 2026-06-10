@@ -36,21 +36,21 @@ import site from '../data/site.json';
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_jmeno}</label>
-                <input type="text" name="jmeno" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_jmeno} />
+                <input type="text" name="jmeno" required autocomplete="name" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_jmeno} />
               </div>
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_telefon}</label>
-                <input type="tel" name="telefon" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_telefon} />
+                <input type="tel" name="telefon" required autocomplete="tel" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_telefon} />
               </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_email}</label>
-                <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_email} />
+                <input type="email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_email} />
               </div>
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_obec}</label>
-                <input type="text" name="obec" required class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_obec} />
+                <input type="text" name="obec" required autocomplete="address-level2" class="w-full px-4 py-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors" placeholder={data.placeholder_obec} />
               </div>
             </div>
             <div>
