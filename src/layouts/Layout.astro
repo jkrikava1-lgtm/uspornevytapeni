@@ -102,6 +102,7 @@ const navGroups = [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tepelné čerpadlo voda-voda", "url": "https://uspornevytapeni.cz/tepelna-cerpadla/voda-voda" } }
         ]
       },
+      "openingHours": ["Mo-Fr 08:00-17:00"],
       "sameAs": ["https://share.google/66F7YjcrxXkEXskH6", "https://www.firmy.cz/detail/2538489-usporne-vytapeni-s-r-o-tepelna-cerpadla-jicin-valdicke-predmesti.html"]
     })} />
     {breadcrumbSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
@@ -114,15 +115,49 @@ const navGroups = [
   <body class="antialiased">
 
     <!-- Cookies lišta -->
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-lg p-4 sm:p-6 hidden">
-      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-lg px-4 py-4 sm:px-6 hidden">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4">
         <p class="text-sm text-charcoal-600 flex-1">
-          Tento web používá cookies pro měření návštěvnosti (Google Analytics). Pokračováním souhlasíte s jejich použitím.
-          <a href="/gdpr" class="text-brand-500 hover:underline ml-1">Více informací</a>
+          Tento web používá cookies pro měření návštěvnosti a zlepšování služeb.
+          <a href="/gdpr" class="text-gray-400 hover:text-gray-500 ml-1 underline text-xs">Více informací</a>
         </p>
-        <div class="flex gap-3 flex-shrink-0">
-          <button id="cookie-reject" class="px-4 py-2 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Odmítnout</button>
-          <button id="cookie-accept" class="px-4 py-2 text-sm font-semibold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">Přijmout</button>
+        <div class="flex items-center gap-4 flex-shrink-0">
+          <button id="cookie-settings" class="text-sm text-charcoal-400 hover:text-charcoal-600 underline underline-offset-2 transition-colors">Nastavení</button>
+          <button id="cookie-accept" class="px-7 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors whitespace-nowrap">Přijmout vše</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie modal -->
+    <div id="cookie-modal" class="fixed inset-0 z-[200] hidden">
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div class="absolute bottom-0 left-0 right-0 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-lg bg-white border border-gray-200 sm:rounded-xl shadow-2xl p-6">
+        <h3 class="text-xl font-bold text-charcoal-800 mb-1">Nastavení cookies</h3>
+        <p class="text-sm text-charcoal-500 mb-6">Vyberte, které cookies povolíte. Nezbytné jsou vždy aktivní.</p>
+        <div class="space-y-4 mb-6">
+          <div class="flex items-start justify-between gap-4 py-3 border-b border-gray-100">
+            <div>
+              <p class="text-sm font-semibold text-charcoal-700">Nezbytné</p>
+              <p class="text-xs text-gray-400 mt-0.5">Zajišťují základní funkce webu. Nelze vypnout.</p>
+            </div>
+            <div class="flex-shrink-0 w-10 h-6 bg-brand-500 rounded-full opacity-40 cursor-not-allowed relative mt-0.5">
+              <div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+            </div>
+          </div>
+          <div class="flex items-start justify-between gap-4 py-3">
+            <div>
+              <p class="text-sm font-semibold text-charcoal-700">Analytické <span class="text-xs text-brand-500 font-normal ml-1">(doporučeno)</span></p>
+              <p class="text-xs text-gray-400 mt-0.5">Google Analytics — pomáhají nám zlepšovat web.</p>
+            </div>
+            <button id="toggle-analytics" role="switch" aria-checked="true"
+              class="flex-shrink-0 w-10 h-6 rounded-full transition-colors duration-200 bg-brand-500 relative mt-0.5">
+              <div id="toggle-knob" class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-all duration-200 right-1"></div>
+            </button>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <button id="cookie-save" class="flex-1 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">Uložit nastavení</button>
+          <button id="cookie-accept-all" class="flex-1 py-2.5 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Přijmout vše</button>
         </div>
       </div>
     </div>
@@ -134,20 +169,44 @@ const navGroups = [
           window.location.href = window.location.pathname;
           return;
         }
+        var analyticsOn = true;
         var consent = localStorage.getItem('cookie-consent');
-        if (consent === 'accepted') {
-          loadGA();
-        } else if (consent !== 'rejected') {
-          document.getElementById('cookie-banner').classList.remove('hidden');
-        }
-        document.getElementById('cookie-accept')?.addEventListener('click', function() {
-          localStorage.setItem('cookie-consent', 'accepted');
+        if (consent === 'accepted' || consent === 'analytics') { loadGA(); }
+        else if (!consent) { document.getElementById('cookie-banner').classList.remove('hidden'); }
+
+        function hideBanner() {
           document.getElementById('cookie-banner').classList.add('hidden');
-          loadGA();
+          document.getElementById('cookie-modal').classList.add('hidden');
+        }
+        ['cookie-accept','cookie-accept-all'].forEach(function(id) {
+          document.getElementById(id)?.addEventListener('click', function() {
+            localStorage.setItem('cookie-consent', 'accepted');
+            hideBanner(); loadGA();
+          });
         });
+        document.getElementById('cookie-settings')?.addEventListener('click', function() {
+          document.getElementById('cookie-modal').classList.remove('hidden');
+        });
+        document.getElementById('toggle-analytics')?.addEventListener('click', function() {
+          analyticsOn = !analyticsOn;
+          this.classList.toggle('bg-brand-500', analyticsOn);
+          this.classList.toggle('bg-gray-200', !analyticsOn);
+          var k = document.getElementById('toggle-knob');
+          k.classList.toggle('right-1', analyticsOn);
+          k.classList.toggle('left-1', !analyticsOn);
+        });
+        document.getElementById('cookie-save')?.addEventListener('click', function() {
+          localStorage.setItem('cookie-consent', analyticsOn ? 'analytics' : 'rejected');
+          hideBanner();
+          if (analyticsOn) loadGA();
+        });
+        document.getElementById('cookie-modal')?.addEventListener('click', function(e) {
+          if (e.target === this || e.target === this.firstElementChild) hideBanner();
+        });
+        // legacy reject — no longer in banner but keep for safety
         document.getElementById('cookie-reject')?.addEventListener('click', function() {
           localStorage.setItem('cookie-consent', 'rejected');
-          document.getElementById('cookie-banner').classList.add('hidden');
+          hideBanner();
         });
         function loadGA() {
           var s = document.createElement('script');
