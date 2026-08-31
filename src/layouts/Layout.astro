@@ -132,7 +132,10 @@ const navGroups = [
     <div id="cookie-modal" class="fixed inset-0 z-[200] hidden">
       <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
       <div class="absolute bottom-0 left-0 right-0 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-lg bg-white border border-gray-200 sm:rounded-xl shadow-2xl p-6">
-        <h3 class="text-xl font-bold text-charcoal-800 mb-1">Nastavení cookies</h3>
+        <div class="flex items-start justify-between mb-1">
+          <h3 class="text-xl font-bold text-charcoal-800">Nastavení cookies</h3>
+          <span class="text-xs text-gray-400 pt-1.5"><span id="active-count">2</span> z 2 aktivní</span>
+        </div>
         <p class="text-sm text-charcoal-500 mb-6">Vyberte, které cookies povolíte. Nezbytné jsou vždy aktivní.</p>
         <div class="space-y-4 mb-6">
           <div class="flex items-start justify-between gap-4 py-3 border-b border-gray-100">
@@ -145,9 +148,10 @@ const navGroups = [
             </div>
           </div>
           <div class="flex items-start justify-between gap-4 py-3">
-            <div>
+            <div class="flex-1">
               <p class="text-sm font-semibold text-charcoal-700">Analytické <span class="text-xs text-brand-500 font-normal ml-1">(doporučeno)</span></p>
               <p class="text-xs text-gray-400 mt-0.5">Google Analytics — pomáhají nám zlepšovat web.</p>
+              <p id="analytics-warning" class="hidden text-xs text-orange-500 mt-1.5">Bez analytiky nemůžeme sledovat, co vám chybí, a web zlepšovat pro vás.</p>
             </div>
             <button id="toggle-analytics" role="switch" aria-checked="true"
               class="flex-shrink-0 w-10 h-6 rounded-full transition-colors duration-200 bg-brand-500 relative mt-0.5">
@@ -155,9 +159,18 @@ const navGroups = [
             </button>
           </div>
         </div>
-        <div class="flex gap-3">
-          <button id="cookie-save" class="flex-1 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors">Uložit nastavení</button>
-          <button id="cookie-accept-all" class="flex-1 py-2.5 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Přijmout vše</button>
+        <div id="normal-buttons">
+          <div class="flex gap-3">
+            <button id="cookie-save" class="flex-1 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-all">Uložit nastavení</button>
+            <button id="cookie-accept-all" class="flex-1 py-2.5 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Přijmout vše</button>
+          </div>
+        </div>
+        <div id="confirm-area" class="hidden">
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p class="text-sm text-charcoal-600 text-center mb-3">Opravdu chcete omezit naše možnosti zlepšování webu?</p>
+            <button id="confirm-accept" class="w-full py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors mb-2">Přijmout doporučené cookies</button>
+            <button id="confirm-reject" class="w-full py-1.5 text-xs text-gray-400 hover:text-gray-500 transition-colors">Pokračovat bez analytiky</button>
+          </div>
         </div>
       </div>
     </div>
@@ -170,6 +183,7 @@ const navGroups = [
           return;
         }
         var analyticsOn = true;
+        var confirmStep = false;
         var consent = localStorage.getItem('cookie-consent');
         if (consent === 'accepted' || consent === 'analytics') { loadGA(); }
         else if (!consent) { document.getElementById('cookie-banner').classList.remove('hidden'); }
@@ -189,24 +203,52 @@ const navGroups = [
         });
         document.getElementById('toggle-analytics')?.addEventListener('click', function() {
           analyticsOn = !analyticsOn;
+          confirmStep = false;
           this.classList.toggle('bg-brand-500', analyticsOn);
           this.classList.toggle('bg-gray-200', !analyticsOn);
           var k = document.getElementById('toggle-knob');
           k.classList.toggle('right-1', analyticsOn);
           k.classList.toggle('left-1', !analyticsOn);
+          this.setAttribute('aria-checked', String(analyticsOn));
+          var cnt = document.getElementById('active-count');
+          if (cnt) cnt.textContent = analyticsOn ? '2' : '1';
+          var warn = document.getElementById('analytics-warning');
+          if (warn) warn.classList.toggle('hidden', analyticsOn);
+          var saveBtn = document.getElementById('cookie-save');
+          if (saveBtn) {
+            if (analyticsOn) {
+              saveBtn.textContent = 'Uložit nastavení';
+              saveBtn.className = 'flex-1 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-all';
+            } else {
+              saveBtn.textContent = 'Uložit bez doporučených';
+              saveBtn.className = 'flex-1 py-2.5 text-sm font-semibold text-gray-400 bg-gray-100 rounded-lg transition-all';
+            }
+          }
+          document.getElementById('confirm-area').classList.add('hidden');
+          document.getElementById('normal-buttons').classList.remove('hidden');
         });
         document.getElementById('cookie-save')?.addEventListener('click', function() {
-          localStorage.setItem('cookie-consent', analyticsOn ? 'analytics' : 'rejected');
+          if (analyticsOn) {
+            localStorage.setItem('cookie-consent', 'analytics');
+            hideBanner(); loadGA();
+            return;
+          }
+          if (!confirmStep) {
+            confirmStep = true;
+            document.getElementById('normal-buttons').classList.add('hidden');
+            document.getElementById('confirm-area').classList.remove('hidden');
+          }
+        });
+        document.getElementById('confirm-accept')?.addEventListener('click', function() {
+          localStorage.setItem('cookie-consent', 'accepted');
+          hideBanner(); loadGA();
+        });
+        document.getElementById('confirm-reject')?.addEventListener('click', function() {
+          localStorage.setItem('cookie-consent', 'rejected');
           hideBanner();
-          if (analyticsOn) loadGA();
         });
         document.getElementById('cookie-modal')?.addEventListener('click', function(e) {
           if (e.target === this || e.target === this.firstElementChild) hideBanner();
-        });
-        // legacy reject — no longer in banner but keep for safety
-        document.getElementById('cookie-reject')?.addEventListener('click', function() {
-          localStorage.setItem('cookie-consent', 'rejected');
-          hideBanner();
         });
         function loadGA() {
           var s = document.createElement('script');
