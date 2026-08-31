@@ -114,16 +114,22 @@ const navGroups = [
   </head>
   <body class="antialiased">
 
-    <!-- Cookies lišta -->
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-lg px-4 py-4 sm:px-6 hidden">
-      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-4">
-        <p class="text-sm text-charcoal-600 flex-1">
-          Tento web používá cookies pro měření návštěvnosti a zlepšování služeb.
-          <a href="/gdpr" class="text-gray-400 hover:text-gray-500 ml-1 underline text-xs">Více informací</a>
+    <!-- Cookies banner — centered modal -->
+    <div id="cookie-banner" class="fixed inset-0 z-[100] hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-sm bg-white border border-gray-200 rounded-2xl shadow-2xl p-7">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h2 class="text-lg font-bold text-charcoal-800 mb-2">Tento web používá cookies</h2>
+        <p class="text-charcoal-500 text-sm leading-relaxed mb-6">
+          Analytické cookies nám pomáhají pochopit, jak web používáte, a zlepšovat ho. Žádné reklamní ani sledovací cookies nepoužíváme.
         </p>
-        <div class="flex items-center gap-4 flex-shrink-0">
-          <button id="cookie-settings" class="text-sm text-charcoal-400 hover:text-charcoal-600 underline underline-offset-2 transition-colors">Nastavení</button>
-          <button id="cookie-accept" class="px-7 py-2.5 text-sm font-bold text-white bg-brand-500 hover:bg-brand-600 rounded-lg transition-colors whitespace-nowrap">Přijmout vše</button>
+        <div class="space-y-2.5">
+          <button id="cookie-accept" class="w-full py-3 bg-brand-500 text-white text-sm font-bold rounded-lg hover:bg-brand-600 transition-all">Přijmout vše</button>
+          <button id="cookie-settings" class="w-full py-2.5 text-sm text-charcoal-400 hover:text-charcoal-600 border border-gray-200 hover:border-gray-400 rounded-lg transition-all">Nastavení</button>
         </div>
       </div>
     </div>
