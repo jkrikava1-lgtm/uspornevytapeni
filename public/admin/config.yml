@@ -403,6 +403,188 @@ collections:
           - { label: "CTA — tlačítko", name: cta_button, widget: string }
 
   # ============================================================
+  # DOPADOVÁ STRÁNKA MASTER THERM — /mastertherm (mastertherm.json)
+  # Cílová stránka PPC kampaní. Pozor: meta titulek, popis a URL
+  # jsou domluvené s DataAds kvůli skóre kvality reklam — neměnit
+  # bez konzultace.
+  # ============================================================
+  - name: mastertherm
+    label: "Dopadová stránka — Master Therm (PPC)"
+    files:
+      - name: mastertherm
+        label: "Master Therm — dopadová stránka"
+        file: src/data/mastertherm.json
+        format: json
+        fields:
+          # --- SEO (neměnit bez domluvy s DataAds) ---
+          - { label: "SEO — titulek (neměnit bez domluvy s DataAds)", name: meta_title, widget: string }
+          - { label: "SEO — popis (neměnit bez domluvy s DataAds)", name: meta_description, widget: text }
+
+          # --- Hero ---
+          - { label: "Hero — štítek nad nadpisem", name: hero_badge, widget: string }
+          - { label: "Hero — nadpis (první řádek)", name: hero_h1, widget: string }
+          - { label: "Hero — nadpis (druhý řádek, červeně)", name: hero_h1_sub, widget: string }
+          - { label: "Hero — text", name: hero_text, widget: text }
+          - { label: "Hero — hlavní tlačítko", name: hero_cta_primary, widget: string }
+          - { label: "Hero — vedlejší tlačítko", name: hero_cta_secondary, widget: string }
+          - { label: "Hero — uvození telefonu", name: hero_phone_note, widget: string }
+          - label: "Hero — odznaky pod tlačítky"
+            name: hero_chips
+            widget: list
+            field:
+              { label: "Odznak", name: chip, widget: string }
+          - { label: "Hero — fotka", name: hero_image, widget: image }
+          - { label: "Hero — popis fotky (alt)", name: hero_image_alt, widget: string }
+
+          # --- Pás důvěry ---
+          - label: "Pás důvěry — čísla"
+            name: trust
+            widget: list
+            fields:
+              - { label: "Číslo", name: num, widget: string }
+              - { label: "Popisek", name: label, widget: string }
+
+          # --- Proč Master Therm / proč od nás ---
+          - { label: "Proč — nadpis sekce", name: why_headline, widget: string }
+          - { label: "Proč — úvodní text", name: why_intro, widget: text }
+          - { label: "Proč značka — nadpis řady", name: why_brand_label, widget: string }
+          - label: "Proč značka — karty"
+            name: why_brand_cards
+            widget: list
+            fields:
+              - { label: "Nadpis karty", name: title, widget: string }
+              - { label: "Text karty", name: desc, widget: text }
+              - label: "Ikona"
+                name: icon
+                widget: select
+                options:
+                  - { label: "Továrna (výroba)", value: factory }
+                  - { label: "Štít (záruka)", value: shield }
+                  - { label: "Teploměr (teplota)", value: temp }
+                  - { label: "Vlnovka (tichý chod)", value: wave }
+                  - { label: "Fajfka v kolečku", value: check }
+                  - { label: "Ozubené kolo (servis)", value: wrench }
+                  - { label: "Dokument (návrh)", value: ruler }
+                  - { label: "Špendlík v mapě (lokalita)", value: pin }
+          - { label: "Proč od nás — nadpis řady", name: why_us_label, widget: string }
+          - label: "Proč od nás — karty"
+            name: why_us_cards
+            widget: list
+            fields:
+              - { label: "Nadpis karty", name: title, widget: string }
+              - { label: "Text karty", name: desc, widget: text }
+              - label: "Ikona"
+                name: icon
+                widget: select
+                options:
+                  - { label: "Fajfka v kolečku", value: check }
+                  - { label: "Ozubené kolo (servis)", value: wrench }
+                  - { label: "Dokument (návrh)", value: ruler }
+                  - { label: "Špendlík v mapě (lokalita)", value: pin }
+                  - { label: "Továrna (výroba)", value: factory }
+                  - { label: "Štít (záruka)", value: shield }
+                  - { label: "Teploměr (teplota)", value: temp }
+                  - { label: "Vlnovka (tichý chod)", value: wave }
+
+          # --- Rekonstrukce ---
+          - { label: "Rekonstrukce — nadpis", name: rekon_headline, widget: string }
+          - { label: "Rekonstrukce — text", name: rekon_text, widget: text }
+          - label: "Rekonstrukce — odrážky"
+            name: rekon_items
+            widget: list
+            field:
+              { label: "Odrážka", name: item, widget: string }
+          - { label: "Rekonstrukce — tlačítko", name: rekon_cta, widget: string }
+          - { label: "Rekonstrukce — velké číslo", name: rekon_big_num, widget: string }
+          - { label: "Rekonstrukce — popisek pod číslem", name: rekon_big_label, widget: text }
+
+          # --- Cena a financování ---
+          - { label: "Cena — štítek sekce", name: cena_label, widget: string }
+          - { label: "Cena — nadpis", name: cena_headline, widget: string }
+          - { label: "Cena — úvodní věta", name: cena_lead, widget: text }
+          - label: "Cena — karty s cenami"
+            name: cena_cards
+            widget: list
+            fields:
+              - { label: "Typ čerpadla", name: typ, widget: string }
+              - { label: "Cena od", name: cena, widget: string }
+              - { label: "Popis", name: desc, widget: string }
+          - { label: "Cena — poznámka pod cenami", name: cena_note, widget: text }
+          - { label: "Financování — nadpis", name: fin_headline, widget: string }
+          - label: "Financování — karty (dotace, úvěr)"
+            name: fin_cards
+            widget: list
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Částka", name: big, widget: string }
+              - { label: "Text", name: desc, widget: text }
+          - { label: "Financování — poznámka", name: fin_note, widget: text }
+          - { label: "Financování — text odkazu na /dotace", name: fin_link, widget: string }
+
+          # --- Cenová kalkulačka ---
+          - { label: "Kalkulačka — nadpis", name: calc_headline, widget: string }
+          - { label: "Kalkulačka — text", name: calc_text, widget: text }
+          - { label: "Kalkulačka — tlačítko", name: calc_cta, widget: string }
+
+          # --- Reference, mapa, hodnocení ---
+          - { label: "Reference — nadpis", name: ref_headline, widget: string }
+          - { label: "Reference — úvodní text", name: ref_lead, widget: text }
+          - label: "Reference — vybrané realizace (3 karty)"
+            name: ref_items
+            widget: list
+            fields:
+              - { label: "Lokalita", name: lokalita, widget: string }
+              - { label: "Rok", name: rok, widget: string }
+              - { label: "Typ projektu", name: typ, widget: string }
+              - { label: "Model čerpadla", name: system, widget: string }
+              - { label: "Fotka", name: image, widget: image }
+          - { label: "Citace zákazníka — text", name: quote_text, widget: text }
+          - { label: "Citace zákazníka — jméno", name: quote_name, widget: string }
+          - { label: "Citace zákazníka — lokalita a systém", name: quote_location, widget: string }
+          - { label: "Citace zákazníka — fotka", name: quote_image, widget: image }
+          - { label: "Google — hodnocení (např. 5,0)", name: gmb_score, widget: string }
+          - { label: "Google — text vedle hodnocení", name: gmb_text, widget: text }
+          - { label: "Google — text odkazu", name: gmb_cta, widget: string }
+          - { label: "Google — odkaz na profil", name: gmb_href, widget: string }
+
+          # --- Fotovoltaika ---
+          - { label: "Fotovoltaika — text proužku (lze použít HTML)", name: fve_text, widget: text }
+
+          # --- Jak to probíhá ---
+          - { label: "Kroky — nadpis", name: steps_headline, widget: string }
+          - label: "Kroky — jednotlivé kroky"
+            name: steps
+            widget: list
+            fields:
+              - { label: "Nadpis kroku", name: title, widget: string }
+              - { label: "Popis kroku", name: desc, widget: text }
+
+          # --- FAQ ---
+          - { label: "FAQ — nadpis", name: faq_headline, widget: string }
+          - label: "FAQ — otázky a odpovědi"
+            name: faq
+            widget: list
+            fields:
+              - { label: "Otázka", name: q, widget: string }
+              - { label: "Odpověď", name: a, widget: text }
+
+          # --- B2B lišta ---
+          - { label: "B2B — text lišty (lze použít HTML)", name: b2b_text, widget: text }
+          - { label: "B2B — text odkazu na velké výkony", name: b2b_link, widget: string }
+          - { label: "B2B — tlačítko", name: b2b_cta, widget: string }
+
+          # --- Formulář a kontakt ---
+          - { label: "Formulář — nadpis", name: form_headline, widget: string }
+          - { label: "Formulář — úvodní text", name: form_lead, widget: text }
+          - { label: "Kontakt — uvození", name: contact_who, widget: text }
+          - { label: "Kontakt — jméno", name: contact_name, widget: string }
+          - { label: "Kontakt — funkce", name: contact_role, widget: string }
+          - { label: "Kontakt — fotka", name: contact_image, widget: image }
+          - { label: "Kontakt — poznámka pod telefonem", name: contact_note, widget: text }
+
+          # --- Mobilní lišta ---
+          - { label: "Mobil — text lišty Zavolat", name: sticky_call, widget: string }
+  # ============================================================
   # REFERENCE (reference.json)
   # ============================================================
   - name: reference
