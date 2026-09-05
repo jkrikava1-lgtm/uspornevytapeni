@@ -13,8 +13,10 @@ export async function GET() {
     );
   }
 
-  // Musí přesně odpovídat callback URL zaregistrované v GitHub OAuth App.
-  const redirectUri = 'https://www.uspornevytapeni.cz/api/callback';
+  // Musí odpovídat callback URL zaregistrované v GitHub OAuth App a zároveň
+  // kanonické doméně webu (bez www). Kdyby tu bylo www, přesměrování na
+  // non-www změní origin vyskakovacího okna a Sveltia zprávu s tokenem zahodí.
+  const redirectUri = 'https://uspornevytapeni.cz/api/callback';
 
   const githubUrl = new URL('https://github.com/login/oauth/authorize');
   githubUrl.searchParams.set('client_id', clientId);

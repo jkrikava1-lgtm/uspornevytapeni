@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jkrikava1-lgtm/uspornevytapeni
   branch: main
-  base_url: https://www.uspornevytapeni.cz
+  base_url: https://uspornevytapeni.cz
   auth_endpoint: api/auth
 
 media_folder: public/images
