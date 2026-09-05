@@ -1,7 +1,6 @@
 {
   "meta_title": "Tepelná čerpadla Master Therm – prodej, montáž a servis",
   "meta_description": "Autorizovaný partner Master Therm už 20 let. 439 instalací, servis bez prostředníků, vyřízení dotace NZÚ. Návrh systému a orientační cena do 24 hodin zdarma.",
-
   "hero_badge": "Autorizovaný partner Master Therm od roku 2006",
   "hero_h1": "Tepelná čerpadla Master Therm",
   "hero_h1_sub": "prodej, montáž a servis",
@@ -14,16 +13,26 @@
     "Tovární záruka až 7 let",
     "Vyřídíme dotaci NZÚ"
   ],
-  "hero_image": "/images/hero/boxair-dum-kamen.webp",
-  "hero_image_alt": "Venkovní jednotka tepelného čerpadla Master Therm BoxAir u rodinného domu",
-
+  "hero_image": "/images/reference/tuklaty-2.webp",
+  "hero_image_alt": "Tepelné čerpadlo Master Therm BoxAir u rodinného domu — naše realizace v Tuklatech",
   "trust": [
-    { "num": "20+ let", "label": "s Master Therm" },
-    { "num": "439", "label": "instalací" },
-    { "num": "279", "label": "obcí" },
-    { "num": "Servis", "label": "bez prostředníků" }
+    {
+      "num": "20+ let",
+      "label": "s Master Therm"
+    },
+    {
+      "num": "439",
+      "label": "instalací"
+    },
+    {
+      "num": "279",
+      "label": "obcí"
+    },
+    {
+      "num": "Servis",
+      "label": "bez prostředníků"
+    }
   ],
-
   "why_headline": "Značka, kterou známe do posledního šroubku",
   "why_intro": "Neděláme deset značek napůl. Děláme jednu pořádně. Master Therm montujeme od roku 2006 — známe každou generaci čerpadel, kterou kdy výrobce vyrobil, a v Chýni známe lidi, kteří je vyvíjejí.",
   "why_brand_label": "Proč Master Therm",
@@ -72,7 +81,6 @@
       "icon": "pin"
     }
   ],
-
   "rekon_headline": "Měníte starý kotel? Radiátory mohou zůstat.",
   "rekon_text": "Nejčastěji instalujeme Master Therm právě do starších domů výměnou za kotel na uhlí, plyn nebo elektřinu.",
   "rekon_items": [
@@ -84,14 +92,25 @@
   "rekon_cta": "Chci nabídku na výměnu kotle",
   "rekon_big_num": "75 °C",
   "rekon_big_label": "maximální teplota topné vody u řad s chladivem R290",
-
   "cena_label": "Cena a financování",
   "cena_headline": "Kolik stojí Master Therm na klíč",
   "cena_lead": "Orientační ceny včetně montáže, zásobníku teplé vody a zprovoznění:",
   "cena_cards": [
-    { "typ": "Vzduch – voda", "cena": "od 349 000 Kč", "desc": "Nejčastější volba, vhodná pro 95 % domácností" },
-    { "typ": "Voda – voda", "cena": "od 379 000 Kč", "desc": "Pro objekty se studnou s vydatným zdrojem vody" },
-    { "typ": "Země – voda", "cena": "od 429 000 Kč", "desc": "Nejvyšší účinnost, v létě umí i úsporně chladit" }
+    {
+      "typ": "Vzduch – voda",
+      "cena": "od 349 000 Kč",
+      "desc": "Nejčastější volba, vhodná pro 95 % domácností"
+    },
+    {
+      "typ": "Voda – voda",
+      "cena": "od 379 000 Kč",
+      "desc": "Pro objekty se studnou s vydatným zdrojem vody"
+    },
+    {
+      "typ": "Země – voda",
+      "cena": "od 429 000 Kč",
+      "desc": "Nejvyšší účinnost, v létě umí i úsporně chladit"
+    }
   ],
   "cena_note": "Přesnou cenu určí návrh podle tepelné ztráty vašeho domu — proto děláme nabídky individuálně a zdarma.",
   "fin_headline": "Stát vám s pořízením pomůže",
@@ -109,39 +128,63 @@
   ],
   "fin_note": "Na co máte nárok, zjistíme v rámci nabídky. S žádostí i s renovačním pasem vám pomůžeme — pas zpracuje certifikovaný poradce EKIS zdarma.",
   "fin_link": "Podrobně o dotacích",
-
   "calc_headline": "Kolik bude Master Therm stát u vás?",
   "calc_text": "Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu. Nezávazně a zdarma.",
   "calc_cta": "Spustit cenovou kalkulaci",
-
   "ref_headline": "439 instalací. Podívejte se, kde všude",
   "ref_lead": "Rodinné domy, bytové domy i komerční objekty — Jičínsko, Liberecko, Mladoboleslavsko, Hradecko, Praha a střední Čechy.",
   "ref_items": [
-    { "lokalita": "Studenec", "rok": "2025", "typ": "Rekonstrukce rodinného domu", "system": "BoxAir 26I PLUS", "image": "/images/reference/studenec-1.webp" },
-    { "lokalita": "Dolní Bousov", "rok": "2024", "typ": "Rekonstrukce rodinného domu", "system": "BoxAir 30I PLUS", "image": "/images/reference/dolni-bousov-1.webp" },
-    { "lokalita": "Průhonice", "rok": "2022", "typ": "Rekonstrukce rodinného domu", "system": "BoxAir 26I PLUS", "image": "/images/reference/pruhonice-1.webp" }
+    {
+      "lokalita": "Studenec",
+      "rok": "2025",
+      "typ": "Rekonstrukce rodinného domu",
+      "system": "BoxAir 26I PLUS",
+      "image": "/images/reference/studenec-1.webp"
+    },
+    {
+      "lokalita": "Dolní Bousov",
+      "rok": "2024",
+      "typ": "Rekonstrukce rodinného domu",
+      "system": "BoxAir 30I PLUS",
+      "image": "/images/reference/dolni-bousov-1.webp"
+    },
+    {
+      "lokalita": "Průhonice",
+      "rok": "2022",
+      "typ": "Rekonstrukce rodinného domu",
+      "system": "BoxAir 26I PLUS",
+      "image": "/images/reference/pruhonice-1.webp"
+    }
   ],
   "ref_cta": "Zobrazit všechny reference",
   "quote_text": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
   "quote_name": "Roman Vojtek",
   "quote_location": "Praha — tepelné čerpadlo vzduch-voda",
   "quote_image": "/images/ilustrace/vojtek-reference.webp",
-
   "gmb_score": "5,0",
   "gmb_text": "Hodnocení na Googlu. Zákazníci nás chválí za rychlost, pořádek při montáži a servis, který přijede.",
   "gmb_cta": "Přečíst recenze na Googlu",
   "gmb_href": "https://share.google/66F7YjcrxXkEXskH6",
-
   "fve_text": "<strong>Máte nebo plánujete fotovoltaiku?</strong> Master Therm si s ní rozumí — topí a ohřívá vodu přednostně z vašich solárních přebytků, dům funguje jako akumulační baterie. A díky <a href=\"/chytre-funkce/desuperheater\">desuperheateru</a> ohřívá užitkovou vodu prakticky jako vedlejší produkt topení.",
-
   "steps_headline": "Od poptávky k teplu ve čtyřech krocích",
   "steps": [
-    { "title": "Pošlete poptávku", "desc": "Formulář, kalkulačka, nebo telefon. Do 24 hodin se ozveme." },
-    { "title": "Návrh a cena", "desc": "Spočítáme tepelnou ztrátu a navrhneme konkrétní model Master Therm s cenou. Připravíme i podklady pro dotaci NZÚ." },
-    { "title": "Montáž", "desc": "Instalace obvykle za 2–3 dny, včetně uvedení do provozu a zaškolení." },
-    { "title": "Servis a podpora", "desc": "Jsme autorizovaný servis — staráme se o čerpadlo po celou dobu jeho života." }
+    {
+      "title": "Pošlete poptávku",
+      "desc": "Formulář, kalkulačka, nebo telefon. Do 24 hodin se ozveme."
+    },
+    {
+      "title": "Návrh a cena",
+      "desc": "Spočítáme tepelnou ztrátu a navrhneme konkrétní model Master Therm s cenou. Připravíme i podklady pro dotaci NZÚ."
+    },
+    {
+      "title": "Montáž",
+      "desc": "Instalace obvykle za 2–3 dny, včetně uvedení do provozu a zaškolení."
+    },
+    {
+      "title": "Servis a podpora",
+      "desc": "Jsme autorizovaný servis — staráme se o čerpadlo po celou dobu jeho života."
+    }
   ],
-
   "faq_headline": "Časté dotazy",
   "faq": [
     {
@@ -181,11 +224,9 @@
       "a": "Ano. Běžné domácnosti mají nárok na bezúročný úvěr NZÚ (až 350 000 Kč na vzduch-voda, až 400 000 Kč na země-voda), zranitelné domácnosti na přímou dotaci NZÚ Light až 150 000 Kč. Vše, co dodáváme, je na Seznamu výrobků a technologií (SVT). Podrobnosti najdete na stránce o dotacích."
     }
   ],
-
   "b2b_text": "<strong>Bytový dům, firma nebo velký objekt?</strong> Master Therm staví i kaskády čerpadel o výkonu ve stovkách kW. Navrhujeme systémy od 20 kW výš.",
   "b2b_link": "Více o velkých výkonech",
   "b2b_cta": "Konzultace pro firmy",
-
   "form_headline": "Nezávazná poptávka",
   "form_lead": "Ozveme se do 24 hodin s návrhem dalšího postupu. Konzultace je zdarma a k ničemu vás nezavazuje.",
   "contact_who": "Raději si zavoláte? Poptávky vyřizuje přímo jednatel:",
@@ -193,6 +234,5 @@
   "contact_role": "jednatel — obchod a technická podpora",
   "contact_image": "/images/team/kuba.webp",
   "contact_note": "Volejte v pracovní dny 8–17 h. Když to nezvedneme, jsme na montáži — zavoláme zpět.",
-
   "sticky_call": "Zavolat: 777 724 573"
 }
