@@ -7,8 +7,14 @@ export async function GET({ url }: { url: URL }) {
     return new Response('Chybí autorizační kód.', { status: 400 });
   }
 
-  const clientId = import.meta.env.GITHUB_CLIENT_ID;
-  const clientSecret = import.meta.env.GITHUB_CLIENT_SECRET;
+  const clientId = import.meta.env.GITHUB_CLIENT_ID ?? process.env.GITHUB_CLIENT_ID;
+  const clientSecret = import.meta.env.GITHUB_CLIENT_SECRET ?? process.env.GITHUB_CLIENT_SECRET;
+
+  if (!clientId || !clientSecret) {
+    return new Response('Přihlášení do editoru není nastavené: chybí GITHUB_CLIENT_ID nebo GITHUB_CLIENT_SECRET.', {
+      status: 500, headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+    });
+  }
 
   let token: string;
   try {
