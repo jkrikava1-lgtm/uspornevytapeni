@@ -196,7 +196,7 @@
     },
     {
       "q": "Proč ne levnější čerpadlo z e-shopu?",
-      "a": "Asociace pro využití tepelných čerpadel i Ministerstvo průmyslu opakovaně varují před levnými dovozy s nekontrolovanou reálnou účinností. Čerpadlo je investice na 15–20 let — rozhoduje účinnost v mrazu, dostupnost dílů a servis. Master Therm vyrábí v ČR, díly jsou skladem a servis děláme my osobně."
+      "a": "Asociace pro využití tepelných čerpadel i Ministerstvo průmyslu opakovaně varují před levnými dovozy s nekontrolovanou reálnou účinností. Čerpadlo je investice na 15–20 let — rozhoduje účinnost v mrazu, dostupnost dílů a servis. Master Therm vyrábí v ČR, díly jsou skladem a servis vám zabezpečí my."
     },
     {
       "q": "Jak funguje záruka až 7 let?",
@@ -204,15 +204,15 @@
     },
     {
       "q": "Děláte i servis čerpadel Master Therm, která jste nemontovali vy?",
-      "a": "Ano. Jako autorizovaný servisní partner se postaráme i o čerpadla Master Therm instalovaná jinou firmou. Zavolejte a domluvíme termín."
+      "a": "Ano. Jako autorizovaný servisní partner se postaráme i o čerpadla Master Therm instalovaná jinou firmou. Zavolejte, pomůžeme."
     },
     {
       "q": "Jaký je rozdíl mezi vámi a výrobcem?",
-      "a": "Master Therm čerpadla vyrábí, my je navrhujeme, montujeme a servisujeme u vás doma. Jako autorizovaný partner dodáváme stejná čerpadla se stejnou tovární zárukou — navíc s návrhem na míru, vyřízením dotace a vlastním servisem, který k vám dojede."
+      "a": "Master Therm čerpadla vyrábí, my je navrhujeme, montujeme a servisujeme u vás doma. Jako autorizovaný partner dodáváme stejná čerpadla se stejnou tovární zárukou — navíc s návrhem na míru a vyřízením dotace."
     },
     {
       "q": "Kde všude montujete?",
-      "a": "Jičín a okolí, Liberecko, Mladoboleslavsko, Hradecko, Praha a střední Čechy. Podívejte se na mapu realizací výše."
+      "a": "Jičín a okolí, Liberecko, Mladoboleslavsko, Hradecko, Praha a střední Čechy, ale i leckde jinde Podívejte se na mapu realizací výše."
     },
     {
       "q": "Jak dlouho trvá dodání?",
@@ -228,10 +228,10 @@
   "b2b_cta": "Konzultace pro firmy",
   "form_headline": "Nezávazná poptávka",
   "form_lead": "Ozveme se do 24 hodin s návrhem dalšího postupu. Konzultace je zdarma a k ničemu vás nezavazuje.",
-  "contact_who": "Raději si zavoláte? Poptávky vyřizuje přímo jednatel:",
+  "contact_who": "Raději si zavoláte? Poptávky vyřizuje:",
   "contact_name": "Jakub Křikava",
-  "contact_role": "jednatel — obchod a technická podpora",
+  "contact_role": "obchod a technická podpora",
   "contact_image": "/images/team/kuba.webp",
-  "contact_note": "Volejte v pracovní dny 8–17 h. Když to nezvedneme, jsme na montáži — zavoláme zpět.",
+  "contact_note": "Volejte v pracovní dny 8–17 h. Když to nezvedneme, určitě zavoláme zpět.",
   "sticky_call": "Zavolat: 777 724 573"
 }
