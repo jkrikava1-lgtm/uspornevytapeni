@@ -57,10 +57,12 @@ export async function POST({ request }: { request: Request }) {
   const objekt   = data.objekt   ?? '—';
   const vytapeni = data.vytapeni ?? '—';
   const zprava   = data.zprava   ?? '—';
+  const zdroj    = data.zdroj    ?? 'Web (formulář poptávky)';
 
   const body = `
 Nová nezávazná poptávka z webu
 ================================
+Zdroj:            ${zdroj}
 Jméno:            ${jmeno}
 Telefon:          ${telefon}
 E-mail:           ${email}
