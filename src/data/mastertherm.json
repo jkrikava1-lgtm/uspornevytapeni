@@ -30,7 +30,7 @@
     },
     {
       "num": "Servis",
-      "label": "bez prostředníků"
+      "label": "zabezpečíme"
     }
   ],
   "why_headline": "Značka, kterou známe do posledního šroubku",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Tovární záruka až 7 let",
-      "desc": "Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Jednotky online má servis pod nepřetržitým dohledem — anomálii vidí dřív, než ji poznáte doma.",
+      "desc": "Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Jednotky online máme pod nepřetržitým dohledem a anomálii vidíme dřív, než ji poznáte doma.",
       "icon": "shield"
     },
     {
@@ -66,18 +66,18 @@
       "icon": "check"
     },
     {
-      "title": "Servis děláme sami",
-      "desc": "Žádné čekání na servisní síť třetí strany. Voláte nám, jedeme my. Náhradní díly skladem.",
+      "title": "Servis zabezpečíme my",
+      "desc": "Zavoláte nám (pokud už vše díky online správě nevíme předem) a už se o nic nestaráte. Vlastní výroba = náhradní díly skladem.",
       "icon": "wrench"
     },
     {
       "title": "Návrh na míru",
-      "desc": "Každý dům spočítáme individuálně — tepelnou ztrátu, zdroj, zapojení. Čerpadlo správného výkonu, ne to, co je zrovna na skladě.",
+      "desc": "Každý dům řešíme individuálně — vypočteme tepelnou ztrátu, vymyslíme schéma zapojení. Tepelné čerpadlo správného výkonu, ne to, co je zrovna na skladě.",
       "icon": "ruler"
     },
     {
       "title": "Za hodinu u vás",
-      "desc": "439 instalací ve 279 obcích mezi Jičínem, Libercem, Boleslaví a Prahou. K většině zákazníků to máme do hodiny.",
+      "desc": "439 instalací ve 279 obcích v Čechách. K většině zákazníků to máme do hodiny.",
       "icon": "pin"
     }
   ],
@@ -86,7 +86,7 @@
   "rekon_items": [
     "Topná voda až 75 °C — stávající litinové či ocelové radiátory obvykle není nutné měnit",
     "Žádná přestavba na podlahové topení, žádné bourání",
-    "Topný systém při montáži propláchneme a osadíme filtrací — starý kal nezničí nové čerpadlo",
+    "Topný systém při montáži propláchneme a osadíme filtrací — starý kal nezničí nové tepelnéčerpadlo",
     "Na výměnu neekologického kotle lze čerpat podporu NZÚ — pomůžeme s celou žádostí"
   ],
   "rekon_cta": "Chci nabídku na výměnu kotle",
