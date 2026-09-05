@@ -509,7 +509,7 @@ const icons: Record<string, string> = {
   <script is:inline>
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
-        var map = L.map('mt-map', { center: [50.0, 15.5], zoom: 8, scrollWheelZoom: false });
+        var map = L.map('mt-map', { center: [50.0, 15.5], zoom: 8 });
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
           attribution: '© OpenStreetMap © CartoDB', maxZoom: 19
         }).addTo(map);
