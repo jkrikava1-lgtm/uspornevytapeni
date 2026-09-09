@@ -243,6 +243,11 @@ import data from '../data/cenova-kalkulace.json';
   let currentStep = 1;
   const TOTAL_STEPS = 6;
 
+  // Měření (zadání č. 2). uvTrack definuje měřicí modul v Layout.astro.
+  const uvTrack = (name: string, params?: any, opts?: any) => (window as any).uvTrack?.(name, params, opts);
+  // Každý krok hlásíme jen jednou za návštěvu, i když se člověk vrátí tlačítkem zpět.
+  const odeslaneKroky = new Set<number>();
+
   function showStep(n: number) {
     document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
     const el = document.getElementById(`step-${n}`);
@@ -258,6 +263,10 @@ import data from '../data/cenova-kalkulace.json';
       document.getElementById('progress-wrap')!.classList.add('hidden');
     }
     currentStep = n;
+    if (n >= 2 && n <= TOTAL_STEPS && !odeslaneKroky.has(n)) {
+      odeslaneKroky.add(n);
+      uvTrack('kalkulace_krok_' + n, { krok: n });
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -269,6 +278,7 @@ import data from '../data/cenova-kalkulace.json';
       card.closest('.step-panel')!.querySelectorAll('.choice-card, .choice-card--help').forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
       if (field === 'typ_tc' && value === 'Nevím') {
+        uvTrack('kalkulace_odchod_na_poptavku');
         setTimeout(() => { window.location.href = '/poptavka'; }, 260);
         return;
       }
@@ -337,6 +347,14 @@ import data from '../data/cenova-kalkulace.json';
       if (!res.ok) throw new Error('server error');
       showStep(99);
       document.getElementById('step-success')!.classList.remove('hidden');
+      uvTrack('kalkulace_odeslana', {
+        typ_tc: answers['typ_tc'] || '',
+        typ_objektu: answers['typ_objektu'] || '',
+        tepelna_ztrata: answers['tepelna_ztrata'] || ''
+      }, {
+        konverze: 'kalkulace',
+        userData: { email, telefon }
+      });
     } catch {
       errorEl.textContent = errorEl.dataset.errorSend || '';
       errorEl.classList.remove('hidden');

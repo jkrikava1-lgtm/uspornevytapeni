@@ -33,6 +33,7 @@ import site from '../data/site.json';
               <input type="text" name="website" tabindex="-1" autocomplete="off" />
             </div>
             <input type="hidden" name="_loaded" id="_loaded" value="" />
+            <input type="hidden" name="zdroj" value="Poptávkový formulář (web)" />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label class="block text-sm font-semibold text-charcoal-800 mb-2">{data.label_jmeno}</label>
@@ -106,7 +107,7 @@ import site from '../data/site.json';
                 </div>
                 <div>
                   <div class="text-xs text-charcoal-400">{data.sidebar_telefon_label}</div>
-                  <a href={site.phone_href} class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.phone}</a>
+                  <a href={site.phone_href} data-place="formular" class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.phone}</a>
                 </div>
               </div>
               <div class="flex items-center gap-3">
@@ -115,7 +116,7 @@ import site from '../data/site.json';
                 </div>
                 <div>
                   <div class="text-xs text-charcoal-400">{data.sidebar_email_label}</div>
-                  <a href={`mailto:${site.email}`} class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.email}</a>
+                  <a href={`mailto:${site.email}`} data-place="formular" class="font-semibold text-charcoal-900 hover:text-brand-500 transition-colors">{site.email}</a>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -154,9 +155,21 @@ import site from '../data/site.json';
   // Anti-spam: timestamp při načtení
   document.getElementById('_loaded')?.setAttribute('value', String(Date.now()));
 
+  // Měření (zadání č. 2). uvTrack definuje měřicí modul v Layout.astro.
+  const uvTrack = (name: string, params?: any, opts?: any) => (window as any).uvTrack?.(name, params, opts);
+  const ZDROJ = 'Poptávkový formulář (web)';
+  let zapocatoVyplnovani = false;
+
   const form = document.getElementById('poptavka-form') as HTMLFormElement;
   const successBox = document.getElementById('form-success')!;
   const errorBox = document.getElementById('form-error')!;
+
+  // Začátek vyplňování — jednou za načtení stránky
+  ['input', 'focusin'].forEach(ev => form?.addEventListener(ev, () => {
+    if (zapocatoVyplnovani) return;
+    zapocatoVyplnovani = true;
+    uvTrack('poptavka_start', { zdroj: ZDROJ });
+  }));
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -198,12 +211,22 @@ import site from '../data/site.json';
       if (res.ok) {
         form.classList.add('hidden');
         successBox.classList.remove('hidden');
+        uvTrack('poptavka_odeslana', {
+          zdroj: jsonData.zdroj || ZDROJ,
+          typ_objektu: jsonData.objekt || '',
+          vytapeni: jsonData.vytapeni || ''
+        }, {
+          konverze: 'poptavka',
+          userData: { email: jsonData.email, telefon: jsonData.telefon }
+        });
       } else {
+        uvTrack('poptavka_chyba', { zdroj: ZDROJ, duvod: 'HTTP ' + res.status });
         errorBox.classList.remove('hidden');
         btn.disabled = false;
         btn.textContent = btn.dataset.label || 'Odeslat poptávku';
       }
-    } catch {
+    } catch (err) {
+      uvTrack('poptavka_chyba', { zdroj: ZDROJ, duvod: String((err as any)?.message || 'neznama') });
       errorBox.classList.remove('hidden');
       btn.disabled = false;
       btn.textContent = 'Odeslat poptávku';
