@@ -20,7 +20,10 @@ import site from '../data/site.json';
           <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6" set:html={data.philosophy_headline}></h2>
           <div class="space-y-4 text-charcoal-600 leading-relaxed">
             <p>{data.philosophy_text1}</p>
-            <p>{data.philosophy_text2}</p>
+            <p>
+              {data.philosophy_text2}{' '}
+              <a href="/mastertherm/" class="text-brand-500 font-semibold hover:text-brand-600 transition-colors whitespace-nowrap">Víc o značce Master Therm →</a>
+            </p>
             <p>{data.philosophy_text3}</p>
           </div>
 
