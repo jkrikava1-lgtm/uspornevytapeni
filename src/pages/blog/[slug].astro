@@ -20,7 +20,30 @@ const formatDate = (d: Date) => d.toLocaleDateString('cs-CZ', { day: 'numeric', 
   description={post.data.description}
   breadcrumbs={[{ label: 'Poradna', href: '/blog' }, { label: post.data.title, href: `/blog/${slug}` }]}
 >
-  <article class="py-12 lg:py-16">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "datePublished": post.data.pubDate.toISOString(),
+    "dateModified": post.data.updatedDate ? post.data.updatedDate.toISOString() : post.data.pubDate.toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.data.author,
+      "worksFor": { "@type": "Organization", "name": "Úsporné vytápění s.r.o." }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Úsporné vytápění s.r.o.",
+      "url": "https://uspornevytapeni.cz",
+      "logo": { "@type": "ImageObject", "url": "https://uspornevytapeni.cz/logo-cropped.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://uspornevytapeni.cz/blog/${slug}/` },
+    "image": post.data.image ? `https://uspornevytapeni.cz${post.data.image}` : "https://uspornevytapeni.cz/images/hero/boxairy-strecha.webp",
+    "inLanguage": "cs-CZ",
+    "about": { "@type": "Thing", "name": "Tepelná čerpadla" }
+  })} />
+  <article class="pt-24 pb-12 lg:pt-28 lg:pb-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Breadcrumb -->
