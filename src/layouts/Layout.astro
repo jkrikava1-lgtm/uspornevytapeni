@@ -10,9 +10,12 @@ interface Props {
   simpleNav?: boolean;
   /** Cíl hlavního CTA v hlavičce — u LP kotva na formulář na stránce. */
   ctaHref?: string;
+  /** Firemní podpis za titulkem. Zkrácený, aby se titulek vešel do výpisu
+   *  Googlu (~60 znaků). Stránky s domluveným zněním titulku posílají site.name. */
+  titleSuffix?: string;
 }
 
-const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.', breadcrumbs, simpleNav = false, ctaHref = '/poptavka' } = Astro.props;
+const { title, description = 'Tepelná čerpadla a úsporné vytápění. Navrhujeme, dodáváme a servisujeme systémy na míru.', breadcrumbs, simpleNav = false, ctaHref = '/poptavka', titleSuffix = site.name_short } = Astro.props;
 const breadcrumbSchema = breadcrumbs ? {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -48,19 +51,19 @@ const navGroups = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <title>{title} | {site.name}</title>
+    <title>{title} | {titleSuffix}</title>
     <link rel="canonical" href={canonicalURL} />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | ${site.name}`} />
+    <meta property="og:title" content={`${title} | ${titleSuffix}`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="cs_CZ" />
     <meta property="og:site_name" content={site.name} />
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={`${title} | ${site.name}`} />
+    <meta name="twitter:title" content={`${title} | ${titleSuffix}`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <!-- JSON-LD -->

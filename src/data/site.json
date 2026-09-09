@@ -1,5 +1,6 @@
 {
   "name": "Úsporné vytápění s.r.o.",
+  "name_short": "Úsporné vytápění",
   "phone": "+420 777 724 573",
   "phone_href": "tel:+420777724573",
   "email": "info@uspornevytapeni.cz",
@@ -157,15 +158,15 @@
   "nav_katalog_items": [
     {
       "href": "/katalog/vzduch-voda",
-      "label": "Katalog vzduch \u2013 voda"
+      "label": "Katalog vzduch – voda"
     },
     {
       "href": "/katalog/zeme-voda",
-      "label": "Katalog zem\u011b \u2013 voda"
+      "label": "Katalog země – voda"
     },
     {
       "href": "/katalog/voda-voda",
-      "label": "Katalog voda \u2013 voda"
+      "label": "Katalog voda – voda"
     }
   ],
   "nav_cena": "Cena",

@@ -1,10 +1,10 @@
 {
-  "meta_title": "Jak upravit starší radiátorový systém pro tepelné čerpadlo",
+  "meta_title": "Velikost radiátorů pro tepelné čerpadlo",
   "meta_description": "Jak upravit starší radiátorový systém pro tepelné čerpadlo. Posouzení a úprava zdarma.",
   "hero_title": "Jak upravit starší radiátorový systém pro tepelné čerpadlo",
   "hero_subtitle": "Není důležitý tvar ani materiál radiátorů, ale jejich výkon. Poradíme, jak systém přizpůsobit tepelnému čerpadlu.",
   "intro1": "Není důležité, jaký mají vaše radiátory tvar nebo z jakého jsou materiálu, ale jaký mají výkon. A výkon radiátoru = jeho plocha. Jednoduše řečeno, čím větší radiátor, tím lepší.",
-  "intro2": "Váš stávající zdroj tepla (plynový kotel, elektrokotel, kotel na tuhá paliva\u2026) umí natopit vodu v radiátoru na poměrně velké teploty (70–80 °C). Tepelné čerpadlo umí natopit vodu většinou na maximálně 55 °C. Navíc platí, že čím je teplota topné vody nižší, tím je jeho provoz ekonomičtější. Velikost radiátoru musí být tedy dostatečná, aby i při teplotě topné vody 55 °C nebo nižší byl schopen vytopit místnost, ve které je umístěn.",
+  "intro2": "Váš stávající zdroj tepla (plynový kotel, elektrokotel, kotel na tuhá paliva…) umí natopit vodu v radiátoru na poměrně velké teploty (70–80 °C). Tepelné čerpadlo umí natopit vodu většinou na maximálně 55 °C. Navíc platí, že čím je teplota topné vody nižší, tím je jeho provoz ekonomičtější. Velikost radiátoru musí být tedy dostatečná, aby i při teplotě topné vody 55 °C nebo nižší byl schopen vytopit místnost, ve které je umístěn.",
   "check_title": "Topný systém vám zdarma zkontrolujeme. Jak na to?",
   "check_steps": [
     "Nejdříve je třeba vypočítat tepelnou ztrátu objektu. To dělá projektant vytápění na základě rozměrů domu a materiálů použitých na stavbě. Vyzkoušeného projektanta máme po ruce — výpočet provede rychle a přesně.",
@@ -23,8 +23,8 @@
   ],
   "tip_box": "Je lepší a ekonomičtější přizpůsobit radiátorový systém tepelnému čerpadlu než provozovat tepelné čerpadlo v jeho hraničních možnostech.",
   "example_title": "Příklad:",
-  "example_line1": "1. Venkovní teplota −7 °C, topná voda 35 °C \u2192 topný faktor TČ = <strong>3,0</strong>",
-  "example_line2": "2. Venkovní teplota −7 °C, topná voda 50 °C \u2192 topný faktor TČ = <strong>2,4</strong>",
+  "example_line1": "1. Venkovní teplota −7 °C, topná voda 35 °C → topný faktor TČ = <strong>3,0</strong>",
+  "example_line2": "2. Venkovní teplota −7 °C, topná voda 50 °C → topný faktor TČ = <strong>2,4</strong>",
   "example_note": "Za stejné peníze za elektřinu dostáváte výrazně nižší výkon tepelného čerpadla.",
   "outro": "Úpravy radiátorového systému řešíme za režijní ceny. Nechceme, aby se instalace tepelného čerpadla zbytečně prodražovala.",
   "cta_button": "Zpracujte mi nabídku"
