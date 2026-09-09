@@ -5,6 +5,15 @@ import data from '../data/dotace.json';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description} breadcrumbs={[{ label: 'Dotace', href: '/dotace' }]}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": data.faq.map((item: {q: string, a: string}) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a }
+    }))
+  })} />
   <PageHero
     title={data.hero_title}
     subtitle={data.hero_subtitle}
@@ -173,61 +182,6 @@ import data from '../data/dotace.json';
     </div>
   </section>
 
-  <!-- FAQ schema markup -->
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Kolik je dotace na tepelné čerpadlo v roce 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Záleží na kategorii žadatele. Běžné domácnosti získají bezúročný úvěr (RPSN 0 %) — stát hradí veškeré úroky, splácíte jen jistinu. Maximální výše úvěru: TČ vzduch-vzduch 200 000 Kč, TČ vzduch-voda 350 000 Kč, TČ země-voda 400 000 Kč. Zranitelné domácnosti (NZÚ Light — příjemci dávek, nízkopříjmoví důchodci, invalidé 3. stupně) mají nárok na přímou nevratnou dotaci: TČ vzduch-vzduch 100 000 Kč, TČ vzduch-voda nebo země-voda 150 000 Kč."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kdy se otevřel příjem žádostí o podporu NZÚ v roce 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Program NZÚ byl dočasně uzavřen v listopadu 2025 kvůli vyčerpání alokace. V roce 2026 přešel do nové etapy s bezúročnými úvěry pro běžné domácnosti a přímými dotacemi NZÚ Light pro zranitelné. Žádosti se podávají přes portál zadosti.sfzp.cz. Síť certifikovaných energetických poradců (EKIS) je v provozu od dubna 2026."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kdo má nárok na podporu na tepelné čerpadlo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bezúročný úvěr z programu NZÚ 2026 může čerpat každá domácnost instalující certifikované tepelné čerpadlo. Podmínkou je renovační pas (zdarma přes poradce EKIS) a splnění podmínek banky pro úvěr. Výše úvěru: TČ vzduch-vzduch až 200 000 Kč, TČ vzduch-voda až 350 000 Kč, TČ země-voda až 400 000 Kč."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Jak funguje bezúročný úvěr na tepelné čerpadlo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Půjčíte si v bance nebo stavební spořitelně a stát uhradí veškeré úroky po celou dobu splatnosti — RPSN 0%. Splácíte pouze jistinu. Maximální výše úvěru: TČ vzduch-vzduch 200 000 Kč, TČ vzduch-voda 350 000 Kč, TČ země-voda 400 000 Kč. Dílčí renovace: až 750 000 Kč celkem, komplexní renovace: až 2 000 000 Kč. Žádost se podává přes portál zadosti.sfzp.cz."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Co je Renovační pas a potřebuji ho pro dotaci?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Renovační pas je dokument od certifikovaného energetického poradce, který posoudí váš dům a stanoví optimální postup renovace. Pro bezúročný úvěr NZÚ je renovační pas povinný — zpracuje ho poradce EKIS zdarma. Síť poradců EKIS funguje od dubna 2026."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Musím zateplovat dům, abych dostal bezúročný úvěr na tepelné čerpadlo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ne. Tepelné čerpadlo je tzv. dílčí opatření — lze ho pořídit zcela samostatně bez zateplení nebo jiných stavebních úprav. Podmínkou je renovační pas (zdarma přes EKIS poradce) a posouzení vhodnosti TČ pro vaši otopnou soustavu. Zateplovat nemusíte."
-        }
-      }
-    ]
-  })} />
 
   <!-- CTA -->
   <section class="bg-gray-50 py-12">
