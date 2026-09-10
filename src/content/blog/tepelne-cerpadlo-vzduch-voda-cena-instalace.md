@@ -13,11 +13,13 @@ Tepelné čerpadlo vzduch-voda je nejrozšířenějším typem — z našich 439
 
 Cena systému vzduch-voda zahrnuje venkovní jednotku, vnitřní část, zásobník teplé vody (TUV), propojení a uvedení do provozu.
 
-| Velikost domu | Výkon TČ | Cena systému |
-|---|---|---|
-| Do 120 m² | 6–8 kW | 334 000 – 420 000 Kč |
-| 120–200 m² | 10–14 kW | 420 000 – 520 000 Kč |
-| Nad 200 m² | 16–20 kW | od 520 000 Kč |
+| Velikost domu | Tepelná ztráta | Model | Cena systému |
+|---|---|---|---|
+| cca 120 m² | do 8,5 kW | BoxAir 26I PLUS | od 334 000 Kč |
+| cca 160 m² | do 13 kW | BoxAir 37I PLUS | od 389 000 Kč |
+| cca 220 m² | do 19 kW | BoxAir 45I PLUS | od 409 000 Kč |
+
+Jde o nejčastější situace z našich realizací — všechny tři s radiátory, tedy bez přestavby otopné soustavy. Stejné příklady i s podrobnostmi najdete na stránce [cena tepelného čerpadla](/cena).
 
 S dotací NZÚ (bezúročný úvěr až 350 000 Kč nebo přímá dotace až 150 000 Kč) klesne reálná cena výrazně.
 
