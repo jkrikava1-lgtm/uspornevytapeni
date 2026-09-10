@@ -1,6 +1,6 @@
 ---
 title: "Tepelné čerpadlo vzduch-voda: cena, instalace a provoz"
-description: "Tepelné čerpadlo vzduch-voda od 349 000 Kč s montáží. Jak probíhá instalace, kolik stojí provoz a kdy se investice vrátí. Reálná čísla z praxe."
+description: "Tepelné čerpadlo vzduch-voda od 334 000 Kč s montáží. Jak probíhá instalace, kolik stojí provoz a kdy se investice vrátí. Reálná čísla z praxe."
 pubDate: 2026-06-15
 author: "Jakub Křikava"
 category: "Průvodce"
@@ -15,7 +15,7 @@ Cena systému vzduch-voda zahrnuje venkovní jednotku, vnitřní část, zásobn
 
 | Velikost domu | Výkon TČ | Cena systému |
 |---|---|---|
-| Do 120 m² | 6–8 kW | 349 000 – 420 000 Kč |
+| Do 120 m² | 6–8 kW | 334 000 – 420 000 Kč |
 | 120–200 m² | 10–14 kW | 420 000 – 520 000 Kč |
 | Nad 200 m² | 16–20 kW | od 520 000 Kč |
 

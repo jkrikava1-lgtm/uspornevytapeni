@@ -1,6 +1,6 @@
 {
-  "meta_title": "Cena tepelného čerpadla 2026 — od 349 000 Kč",
-  "meta_description": "Vzduch-voda od 349 000 Kč, země-voda od 429 000 Kč — kompletní instalace na klíč. S dotací NZÚ ušetříte desítky tisíc. Kalkulaci zdarma připravíme do 48 h.",
+  "meta_title": "Cena tepelného čerpadla 2026 — od 334 000 Kč",
+  "meta_description": "Vzduch-voda od 334 000 Kč, země-voda od 429 000 Kč — kompletní instalace na klíč. S dotací NZÚ ušetříte desítky tisíc. Kalkulaci zdarma připravíme do 48 h.",
   "hero_title": "Cena tepelného čerpadla",
   "hero_subtitle": "Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat — přesnou nabídku připravíme zdarma.",
   "intro_headline": "Cena systému, ne jen čerpadla",
@@ -8,7 +8,7 @@
   "intro_highlight": "Nejlepší poměr cena/výkon nabízí tepelné čerpadlo <strong>vzduch-voda</strong>. Pořizovací cena je nejnižší ze všech typů, díky dlouhé topné sezóně v Česku je provoz velmi ekonomický a průměrný topný faktor (COP) se pohybuje kolem 3.",
   "highlight_badge": "Nejoblíbenější",
   "price1_typ": "Vzduch – voda",
-  "price1_rozsah": "od 349 000 Kč",
+  "price1_rozsah": "od 334 000 Kč",
   "price1_poznamka": "Včetně montáže, zásobníku TUV a uvedení do provozu",
   "price1_body1": "Nejlepší poměr cena/výkon, COP ~3,3",
   "price1_body2": "Snadná instalace bez vrtů",
@@ -30,8 +30,8 @@
   "modely_lead": "Nejčastější situace z našich realizací. Slouží k představě — přesnou cenu určí návrh podle tepelné ztráty vašeho domu.",
   "modely": [
     {
-      "plocha": "cca 120 m2",
-      "cena": "cca 334.000 Kč",
+      "plocha": "cca 120 m²",
+      "cena": "cca 334 000 Kč",
       "model": "BoxAir 26I PLUS",
       "ztrata": "do 8,5 kW",
       "system": "radiátory",
@@ -39,8 +39,8 @@
       "poznamka": ""
     },
     {
-      "plocha": "cca 160 m2",
-      "cena": "cca 389.000 Kč",
+      "plocha": "cca 160 m²",
+      "cena": "cca 389 000 Kč",
       "model": "BoxAir 37I PLUS",
       "ztrata": "do 13 kW",
       "system": "radiátory",
@@ -48,8 +48,8 @@
       "poznamka": ""
     },
     {
-      "plocha": "cca 220 m2",
-      "cena": "cca 409.000 Kč",
+      "plocha": "cca 220 m²",
+      "cena": "cca 409 000 Kč",
       "model": "BoxAir 45I PLUS",
       "ztrata": "do 19 kW",
       "system": "radiátory",
@@ -65,7 +65,7 @@
     {
       "typ": "Vzduch – voda",
       "anchor": "cena-vzduch-voda",
-      "cena": "od 349 000 Kč",
+      "cena": "od 334 000 Kč",
       "text": "Nejčastější volba, vhodná zhruba pro 95 % domácností. Teplo odebírá z venkovního vzduchu, takže nepotřebuje vrty ani zemní práce — instalace je tím pádem nejrychlejší i nejlevnější ze všech typů.",
       "ovlivnuje": [
         "Výkon čerpadla podle tepelné ztráty domu",
@@ -127,7 +127,7 @@
   "roi_annual_savings_label": "Průměrná roční úspora",
   "roi_annual_savings": "30 000 – 50 000 Kč",
   "roi_price_label": "Pořizovací cena (vzduch-voda)",
-  "roi_price": "od 349 000 Kč",
+  "roi_price": "od 334 000 Kč",
   "roi_dotace_label": "Bezúročný úvěr NZÚ (RPSN 0 %)",
   "roi_dotace": "až 350 000 Kč",
   "roi_net_label": "Vlastní prostředky předem",
