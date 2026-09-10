@@ -25,7 +25,7 @@ S dotací NZÚ (bezúročný úvěr až 350 000 Kč nebo přímá dotace až 150
 
 ## Jak probíhá instalace?
 
-Montáž trvá standardně **2–3 dny**. Nevyžaduje zemní práce, výkopy ani stavební povolení.
+Montáž trvá **2–5 dní** podle rozsahu prací. Nevyžaduje zemní práce, výkopy ani stavební povolení. Typický průběh u výměny bez zásahu do otopné soustavy:
 
 1. **Den 1** — osazení venkovní jednotky, přívod elektřiny, propojení s interiérem
 2. **Den 2** — zapojení zásobníku TUV, propojení s topným systémem (podlaha nebo radiátory)

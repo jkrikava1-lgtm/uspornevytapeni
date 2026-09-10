@@ -7,7 +7,7 @@ category: "Návrh řešení"
 image: "/images/hero/stary-kotel.webp"
 ---
 
-Výměna plynového kotle za tepelné čerpadlo je nejčastější typ zakázky, kterou realizujeme. Trvá 3–5 dní, nevyžaduje bourání a v drtivé většině domů lze zachovat stávající radiátory.
+Výměna plynového kotle za tepelné čerpadlo je nejčastější typ zakázky, kterou realizujeme. Trvá 2–5 dní, nevyžaduje bourání a v drtivé většině domů lze zachovat stávající radiátory.
 
 ## Může tepelné čerpadlo vytápět přes staré radiátory?
 

@@ -1,13 +1,13 @@
 {
   "meta_title": "Tepelná čerpadla vzduch-voda",
-  "meta_description": "Tepelná čerpadla vzduch-voda Master Therm. Dvě varianty — venkovní kompakt nebo split. Rychlá montáž 2–3 dny, ověřené řešení pro české klima.",
+  "meta_description": "Tepelná čerpadla vzduch-voda Master Therm. Dvě varianty — venkovní kompakt nebo split. Rychlá montáž 2–5 dní, ověřené řešení pro české klima.",
   "hero_title": "Tepelná čerpadla vzduch – voda",
   "hero_subtitle": "Maximální úspora. Rychlá montáž. Ověřené řešení pro české klima.",
   "intro_text1": "Díky klimatickým podmínkám České republiky je provoz tepelného čerpadla vzduch–voda mimořádně ekonomický. Průměrná teplota vzduchu v topném období se pohybuje kolem <strong>+4 °C</strong>, což znamená, že systém pracuje s velmi vysokou účinností i v zimě.",
-  "intro_text2": "Pokud m\u00e1te jeden topn\u00fd okruh (v\u011bt\u0161ina dom\u016f), instaluje se krom\u011b T\u010c pouze bojler. V p\u0159\u00edpad\u011b v\u00edce okruh\u016f (podlahov\u00e9 topen\u00ed + radi\u00e1tory nebo t\u0159eba vyt\u00e1p\u011bn\u00ed baz\u00e9nu) je t\u0159eba instalovat malou akumula\u010dn\u00ed n\u00e1dobu (50\u2013100 litr\u016f).",
-  "intro_text3": "<strong>Co bude je\u0161t\u011b uvnit\u0159 domu?</strong> Podle konkr\u00e9tn\u00edho n\u00e1vrhu zapojen\u00ed: bojler na oh\u0159ev u\u017eitkov\u00e9 vody, p\u0159\u00edpadn\u011b akumula\u010dn\u00ed n\u00e1doba (u kombinovan\u00fdch syst\u00e9m\u016f) a dal\u0161\u00ed prvky dle typu vyt\u00e1p\u011bn\u00ed.",
+  "intro_text2": "Pokud máte jeden topný okruh (většina domů), instaluje se kromě TČ pouze bojler. V případě více okruhů (podlahové topení + radiátory nebo třeba vytápění bazénu) je třeba instalovat malou akumulační nádobu (50–100 litrů).",
+  "intro_text3": "<strong>Co bude ještě uvnitř domu?</strong> Podle konkrétního návrhu zapojení: bojler na ohřev užitkové vody, případně akumulační nádoba (u kombinovaných systémů) a další prvky dle typu vytápění.",
   "intro_bullets": [
-    "rychlá montáž v rodinném domě za 2–3 dny",
+    "rychlá montáž v rodinném domě za 2–5 dní",
     "nízké provozní náklady",
     "moderní technologie s vysokou účinností",
     "řešení, kterému věříme – i majitel naší firmy má tento systém doma",
@@ -16,11 +16,26 @@
   "intro_summary": "Tepelné čerpadlo vzduch–voda dodáváme ve dvou variantách. Vybereme pro vás tu nejvhodnější podle typu domu a vašich očekávání.",
   "params_label": "Klíčové parametry",
   "params": [
-    { "label": "Průměrná teplota vzduchu v topné sezóně", "value": "+4 °C" },
-    { "label": "Doba montáže", "value": "2–3 dny" },
-    { "label": "Potřebná plocha venku", "value": "cca 0,7 m²" },
-    { "label": "Max. délka potrubí (split)", "value": "15 metrů" },
-    { "label": "Rozměry vnitřní jednotky (split)", "value": "72 × 53 cm" }
+    {
+      "label": "Průměrná teplota vzduchu v topné sezóně",
+      "value": "+4 °C"
+    },
+    {
+      "label": "Doba montáže",
+      "value": "2–5 dní"
+    },
+    {
+      "label": "Potřebná plocha venku",
+      "value": "cca 0,7 m²"
+    },
+    {
+      "label": "Max. délka potrubí (split)",
+      "value": "15 metrů"
+    },
+    {
+      "label": "Rozměry vnitřní jednotky (split)",
+      "value": "72 × 53 cm"
+    }
   ],
   "variant1_title": "Vzduch – voda: Venkovní kompakt",
   "variant1_subtitle": "Nejprodávanější řešení pro rodinné domy, jednoduché a funkční",
