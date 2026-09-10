@@ -56,5 +56,60 @@
   "tool2_cta": "Porovnat náklady",
   "cta_headline": "Chcete přesnou nabídku?",
   "cta_text": "Připravíme individuální kalkulaci zdarma — včetně odhadu provozních nákladů a dotačních možností.",
-  "cta_button": "Chci bezplatnou kalkulaci"
+  "cta_button": "Chci bezplatnou kalkulaci",
+  "typy_label": "Cena podle typu",
+  "typy_headline": "Kolik stojí jednotlivé typy tepelných čerpadel",
+  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduchu odpadají zemní práce, u vody a země je v ceně i zdroj — vrty, kolektor nebo studny. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
+  "typy": [
+    {
+      "typ": "Vzduch – voda",
+      "anchor": "cena-vzduch-voda",
+      "cena": "od 349 000 Kč",
+      "text": "Nejčastější volba, vhodná zhruba pro 95 % domácností. Teplo odebírá z venkovního vzduchu, takže nepotřebuje vrty ani zemní práce — instalace je tím pádem nejrychlejší i nejlevnější ze všech typů.",
+      "ovlivnuje": [
+        "Výkon čerpadla podle tepelné ztráty domu",
+        "Stav otopné soustavy — jestli radiátory zůstanou, nebo se mění",
+        "Způsob přípravy teplé vody (zásobník, desuperheater, průtokový ohřev)",
+        "Elektroinstalace: jistič, tarif, případně posílení přípojky"
+      ],
+      "rady": "BoxAir Inverter 2–35 kW · BoxAir Inverter P s chladivem R290 2–50 kW · Split 2–35 kW",
+      "cop": "4,6 – 5,2",
+      "katalog_href": "/katalog/vzduch-voda",
+      "katalog_label": "Katalog vzduch – voda"
+    },
+    {
+      "typ": "Voda – voda",
+      "anchor": "cena-voda-voda",
+      "cena": "od 379 000 Kč",
+      "text": "Nejvyšší účinnost ze všech typů — čerpá teplo z podzemní vody, která má přes celý rok stálou teplotu. Podmínkou je vydatný zdroj vody. Cenu nejvíc rozhýbe hydrogeologický průzkum a provedení studní.",
+      "ovlivnuje": [
+        "Výsledek hydrogeologického průzkumu",
+        "Hloubka a vydatnost čerpací a vsakovací studny",
+        "Výkon čerpadla podle tepelné ztráty domu",
+        "Elektroinstalace a zapojení do otopné soustavy"
+      ],
+      "rady": "AquaMaster Inverter 1–54 kW · AquaMaster Inverter P s chladivem R290 2–80 kW",
+      "cop": "4,3 – 6,0",
+      "katalog_href": "/katalog/voda-voda",
+      "katalog_label": "Katalog voda – voda"
+    },
+    {
+      "typ": "Země – voda",
+      "anchor": "cena-zeme-voda",
+      "cena": "od 429 000 Kč",
+      "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V ceně je i zdroj tepla — hloubkové vrty nebo plošný zemní kolektor — a právě proto je pořizovací cena nejvyšší. V létě systém umí úsporně chladit.",
+      "ovlivnuje": [
+        "Počet a hloubka vrtů, nebo plocha zemního kolektoru",
+        "Geologické podmínky pozemku a dostupnost vrtné techniky",
+        "Výkon čerpadla podle tepelné ztráty domu",
+        "Elektroinstalace a zapojení do otopné soustavy"
+      ],
+      "rady": "AquaMaster Inverter 1–48 kW · AquaMaster Inverter P s chladivem R290 1–70 kW",
+      "cop": "4,3 – 5,1",
+      "katalog_href": "/katalog/zeme-voda",
+      "katalog_label": "Katalog země – voda"
+    }
+  ],
+  "typy_note": "Uvedené hodnoty COP jsou z technických listů jednotlivých modelů. Konkrétní model i cenu určí až návrh podle tepelné ztráty vašeho domu — proto děláme nabídky individuálně a zdarma.",
+  "typy_cta": "Spočítat orientační cenu"
 }

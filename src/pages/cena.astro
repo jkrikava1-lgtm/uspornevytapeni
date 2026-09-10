@@ -94,6 +94,63 @@ import data from '../data/cena.json';
   </section>
 
   <!-- Co zahrnuje cena montáže -->
+
+  <!-- Cena podle typu — míří na dotazy „cena tepelného čerpadla vzduch voda / země voda / voda voda" -->
+  <section class="py-10 lg:py-14 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.typy_label}</div>
+      <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-4">{data.typy_headline}</h2>
+      <p class="text-charcoal-500 leading-relaxed max-w-3xl mb-10">{data.typy_lead}</p>
+
+      <div class="space-y-6">
+        {data.typy.map(t => (
+          <div id={t.anchor} class="bg-white border border-gray-200 rounded-xl p-7 lg:p-8 scroll-mt-24">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 mb-4">
+              <h3 class="text-xl font-extrabold text-charcoal-900">{t.typ}</h3>
+              <div class="text-2xl font-extrabold text-navy-700">{t.cena}</div>
+            </div>
+            <p class="text-charcoal-600 leading-relaxed mb-6 max-w-3xl">{t.text}</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+              <div>
+                <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-3">Co cenu nejvíc ovlivní</div>
+                <ul class="space-y-2">
+                  {t.ovlivnuje.map(o => (
+                    <li class="flex gap-2.5 text-sm text-charcoal-600 leading-relaxed">
+                      <svg class="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span>{o}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-5 border border-gray-200 self-start w-full">
+                <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-2">Řady, které dodáváme</div>
+                <p class="text-sm text-charcoal-600 leading-relaxed mb-4">{t.rady}</p>
+                <div class="flex items-baseline gap-2 mb-4">
+                  <span class="text-xs font-bold text-charcoal-400 uppercase tracking-wider">COP</span>
+                  <span class="text-lg font-extrabold text-navy-700">{t.cop}</span>
+                </div>
+                <a href={t.katalog_href} class="text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors inline-flex items-center gap-1">
+                  {t.katalog_label}
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5 mt-8">
+        <p class="text-sm text-charcoal-400 leading-relaxed flex-1">{data.typy_note}</p>
+        <a href="/cenova-kalkulace" data-place="cena-typy" class="flex-shrink-0 inline-flex items-center justify-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-sm">
+          {data.typy_cta}
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="py-10 lg:py-14 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Co zahrnuje cena montáže tepelného čerpadla?</h2>

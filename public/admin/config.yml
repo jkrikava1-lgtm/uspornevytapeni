@@ -279,6 +279,30 @@ collections:
           - { label: "Ceník 3 — bod 2", name: price3_body2, widget: string }
           - { label: "Ceník 3 — bod 3", name: price3_body3, widget: string }
 
+          # --- Cena podle typu ---
+          - { label: "Podle typu — štítek sekce", name: typy_label, widget: string }
+          - { label: "Podle typu — nadpis", name: typy_headline, widget: string }
+          - { label: "Podle typu — úvodní text", name: typy_lead, widget: text }
+          - label: "Podle typu — jednotlivé typy"
+            name: typy
+            widget: list
+            fields:
+              - { label: "Typ čerpadla", name: typ, widget: string }
+              - { label: "Kotva v URL (bez #)", name: anchor, widget: string }
+              - { label: "Cena od", name: cena, widget: string }
+              - { label: "Popis", name: text, widget: text }
+              - label: "Co cenu nejvíc ovlivní"
+                name: ovlivnuje
+                widget: list
+                field:
+                  { label: "Položka", name: item, widget: string }
+              - { label: "Řady, které dodáváme", name: rady, widget: string }
+              - { label: "COP (rozsah dle modelů)", name: cop, widget: string }
+              - { label: "Odkaz na katalog", name: katalog_href, widget: string }
+              - { label: "Text odkazu na katalog", name: katalog_label, widget: string }
+          - { label: "Podle typu — poznámka pod sekcí", name: typy_note, widget: text }
+          - { label: "Podle typu — tlačítko", name: typy_cta, widget: string }
+
           # --- Faktory ovlivňující cenu ---
           - { label: "Faktory — nadpis", name: factors_headline, widget: string }
           - { label: "Faktor 1 — název", name: factor1_title, widget: string }
