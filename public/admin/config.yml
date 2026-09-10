@@ -279,6 +279,25 @@ collections:
           - { label: "Ceník 3 — bod 2", name: price3_body2, widget: string }
           - { label: "Ceník 3 — bod 3", name: price3_body3, widget: string }
 
+          # --- Modelové příklady ---
+          # Dokud je seznam prázdný, sekce se na webu nezobrazí.
+          - { label: "Modelové příklady — štítek sekce", name: modely_label, widget: string }
+          - { label: "Modelové příklady — nadpis", name: modely_headline, widget: string }
+          - { label: "Modelové příklady — úvodní text", name: modely_lead, widget: text }
+          - label: "Modelové příklady — jednotlivé domy"
+            name: modely
+            widget: list
+            required: false
+            fields:
+              - { label: "Velikost domu (např. „Rodinný dům 150 m²\")", name: plocha, widget: string }
+              - { label: "Cena na klíč (např. „od 389 000 Kč\")", name: cena, widget: string }
+              - { label: "Model čerpadla (např. „BoxAir 30I PLUS\")", name: model, widget: string }
+              - { label: "Tepelná ztráta (nepovinné, např. „9 kW\")", name: ztrata, widget: string, required: false }
+              - { label: "Otopná soustava (nepovinné, např. „radiátory\")", name: system, widget: string, required: false }
+              - { label: "Co nahradilo (nepovinné, např. „plynový kotel\")", name: zdroj, widget: string, required: false }
+              - { label: "Poznámka (nepovinné)", name: poznamka, widget: text, required: false }
+          - { label: "Modelové příklady — poznámka pod sekcí", name: modely_note, widget: text }
+
           # --- Cena podle typu ---
           - { label: "Podle typu — štítek sekce", name: typy_label, widget: string }
           - { label: "Podle typu — nadpis", name: typy_headline, widget: string }

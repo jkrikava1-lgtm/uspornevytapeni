@@ -111,5 +111,10 @@
     }
   ],
   "typy_note": "Uvedené hodnoty COP jsou z technických listů jednotlivých modelů. Konkrétní model i cenu určí až návrh podle tepelné ztráty vašeho domu — proto děláme nabídky individuálně a zdarma.",
-  "typy_cta": "Spočítat orientační cenu"
+  "typy_cta": "Spočítat orientační cenu",
+  "modely_label": "Modelové příklady",
+  "modely_headline": "Kolik to vyjde u domu jako je ten váš",
+  "modely_lead": "Nejčastější situace z našich realizací. Slouží k představě — přesnou cenu určí návrh podle tepelné ztráty vašeho domu.",
+  "modely": [],
+  "modely_note": "Ceny jsou na klíč — dodávka, montáž, zásobník teplé vody, zapojení a uvedení do provozu. Nezahrnují dotaci, o kterou lze cenu ještě snížit."
 }
