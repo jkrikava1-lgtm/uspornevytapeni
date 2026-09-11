@@ -49,6 +49,6 @@ Přechod z kondenzačního plynového kotle na tepelné čerpadlo vzduch-voda:
 
 Čísla vycházejí z našeho [porovnání nákladů na vytápění](/porovnani-nakladu), kde najdete i pelety, uhlí, dřevo a elektrokotel.
 
-Při [ceně systému od 334 000 Kč](/cena) to znamená návratnost zhruba dvanáct let — proti elektrokotli podstatně rychleji. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
+Při [ceně systému od 334 000 Kč](/cena) to znamená návratnost zhruba dvanáct let. Pokud dnes topíte elektrokotlem nebo přímotopy, je to výrazně rychlejší — úspora tam vychází na 69 000 Kč ročně a investice se vrátí zhruba za pět a půl roku. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
 
 Chcete vědět, jak to vyjde u vás? [Spočítejte si to online](/cenova-kalkulace) nebo nás [kontaktujte přímo](/poptavka).

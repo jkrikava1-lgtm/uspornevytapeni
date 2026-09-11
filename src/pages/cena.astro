@@ -260,7 +260,7 @@ import data from '../data/cena.json';
               </div>
             ))}
           </div>
-          <p class="text-navy-300 text-xs mt-4 leading-relaxed">{data.roi_footnote}</p>
+          <p class="text-navy-300 text-xs mt-4 leading-relaxed [&_a]:text-white [&_a]:underline [&_a]:underline-offset-2" set:html={data.roi_footnote}></p>
         </div>
         <div class="space-y-4">
           <div class="p-5 bg-green-50 border border-green-200 rounded-xl">
