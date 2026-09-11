@@ -33,7 +33,7 @@ Výrobce, který uvede „COP 5,0", ho pravděpodobně měřil při +7 °C venku
 
 ## Co je SCOP a proč je důležitější?
 
-**SCOP (Seasonal COP)** je roční průměr přes celou topnou sezónu. Bere v úvahu chladné i teplejší dny. Je to realističtější číslo.
+**SCOP (Seasonal COP)** je průměr za celou topnou sezónu. Bere v úvahu chladné i teplejší dny, takže je to realističtější číslo než COP naměřený v jednom bodě.
 
 Dobrý SCOP pro vzduch-voda v ČR: **3,0–3,5**
 Zemní čerpadlo (země-voda): **4,0–5,0**
