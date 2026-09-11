@@ -78,7 +78,7 @@ const faq = [
           <thead>
             <tr class="border-b-2 border-gray-200">
               <th class="text-left py-3 pr-4 text-charcoal-500 font-medium w-36"></th>
-              <th class="text-center py-3 px-3 bg-brand-50 rounded-t-lg">
+              <th class="text-center py-4 px-3 bg-white rounded-t-xl border-t border-x border-gray-200">
                 <span class="block text-[10px] font-bold uppercase tracking-wider text-brand-500 mb-1">Nejčastější volba</span>
                 <span class="text-navy-700 font-bold">Vzduch – voda</span>
               </th>
@@ -96,10 +96,10 @@ const faq = [
               { label: "Pasivní chlazení", a: "ne", b: "ano (téměř zdarma)", c: "ano" },
               { label: "Délka montáže", a: "2–5 dní", b: "5–7 dní", c: "5–7 dní" },
               { label: "Pro koho", a: "95 % domů", b: "pozemek min. 200 m²", c: "dostatek spodní vody" },
-            ].map(row => (
+            ].map((row, i, arr) => (
               <tr>
                 <td class="py-3 pr-4 text-charcoal-500 font-medium">{row.label}</td>
-                <td class="py-3 px-3 text-center text-charcoal-900 font-semibold bg-brand-50">{row.a}</td>
+                <td class={`py-3 px-3 text-center text-charcoal-900 font-semibold bg-white border-x border-gray-200 ${i === arr.length - 1 ? 'border-b rounded-b-xl' : ''}`}>{row.a}</td>
                 <td class="py-3 px-3 text-center text-charcoal-700">{row.b}</td>
                 <td class="py-3 px-3 text-center text-charcoal-700">{row.c}</td>
               </tr>
