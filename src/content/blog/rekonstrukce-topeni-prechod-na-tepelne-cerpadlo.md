@@ -16,7 +16,7 @@ Ano — za podmínek. Klasické radiátory jsou navržené pro výstupní teplot
 Řešení jsou dvě:
 
 1. **Radiátory zvětšit** (desková tělesa místo článkových) — efektivní, ale nákladné
-2. **Provozovat na vyšší teplotě** — TČ to zvládne, COP klesne na 2,5–3,0 místo 3,5+
+2. **Provozovat na vyšší teplotě** — TČ to zvládne, COP klesne na 2,5–3,0 místo průměrných 3,3
 
 V praxi posoudíme každý radiátor zvlášť. Domy postavené po roce 1990 mají zpravidla předimenzované radiátory — fungují na nižší teplotě bez úprav. Starší domy většinou vyžadují výměnu alespoň části těles.
 

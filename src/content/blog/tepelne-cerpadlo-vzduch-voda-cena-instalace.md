@@ -35,7 +35,7 @@ Venkovní jednotka stojí na konzole u domu nebo na střeše — domluvíme umí
 
 ## Kolik stojí provoz?
 
-Tepelné čerpadlo vzduch-voda dosahuje podle technických listů **COP až 5,2** — to je hodnota za ideálních podmínek (venkovních 7 °C, topná voda 35 °C). V celoročním provozu vychází topný faktor níž, proto v nákladech níže počítáme konzervativně s hodnotou 3,3. Podrobně o tom, jak [COP číst správně](/blog/cop-tepelneho-cerpadla).
+Tepelné čerpadlo vzduch-voda dosahuje průměrného topného faktoru **COP 3,3** — na každou 1 kWh elektřiny tedy dodá zhruba 3,3 kWh tepla. Z téhle hodnoty vychází i náklady níže. Podrobně o tom, jak [COP číst správně](/blog/cop-tepelneho-cerpadla).
 
 **Roční náklady na vytápění rodinného domu:**
 
