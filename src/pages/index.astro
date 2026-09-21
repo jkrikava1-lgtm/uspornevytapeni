@@ -59,7 +59,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
           </div>
 
           <!-- Trust bar -->
-          <div class="mt-12 pt-10 border-t border-navy-600 grid grid-cols-3 gap-6 max-w-lg">
+          <div class="mt-12 pt-10 border-t border-navy-600 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl">
             <div>
               <div class="text-2xl font-extrabold text-white">{hp.stat1_number}</div>
               <div class="text-xs text-navy-100 mt-0.5">{hp.stat1_label}</div>
@@ -71,6 +71,10 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
             <div>
               <div class="text-2xl font-extrabold text-white">{hp.stat3_number}</div>
               <div class="text-xs text-navy-100 mt-0.5">{hp.stat3_label}</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-white whitespace-nowrap">{hp.stat4_number}</div>
+              <div class="text-xs text-navy-100 mt-0.5">{hp.stat4_label}</div>
             </div>
           </div>
         </div>
