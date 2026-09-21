@@ -5,7 +5,7 @@
   "hero_h1_line1": "Tepelná čerpadla a vytápění",
   "hero_h1_highlight": "řešíme každý den",
   "hero_h1_line3": "Smysluplný systém navrhneme i vám",
-  "hero_text": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2006. Bezobslužný provoz, online ovládání, záruka kvality.",
+  "hero_text": "Navrhujeme a instalujeme tepelná čerpadla a systémy úsporného vytápění od roku 2006. Bezobslužný provoz, online ovládání, záruka 7 let na celé čerpadlo.",
   "hero_cta_primary": "Chci bezplatnou konzultaci",
   "hero_cta_secondary": "Prohlédnout reference",
   "hero_experience_badge": "20 let zkušeností",
@@ -90,8 +90,8 @@
       "desc": "V létě zařízení obrátí chod a může chladit. Dvě funkce za cenu jedné."
     },
     {
-      "title": "Online ovládání",
-      "desc": "Přes mobilní aplikaci nastavíte teplotu z kanceláře, z dovolené, odkudkoli."
+      "title": "Online ovládání zdarma",
+      "desc": "Přes mobilní aplikaci nastavíte teplotu z kanceláře, z dovolené, odkudkoli. Modul i přístup jsou v ceně čerpadla, bez měsíčních poplatků."
     }
   ],
   "chart_label": "Roční náklady na vytápění",
@@ -134,8 +134,8 @@
   "why_us_headline": "Solidní práce, žádné kompromisy",
   "why_us_items": [
     {
-      "title": "Ověřená kvalita",
-      "desc": "Dodáváme výhradně certifikované produkty od prověřených výrobců. Žádné experimentování na vašem domě."
+      "title": "Záruka 7 let",
+      "desc": "Master Therm ručí za celé tepelné čerpadlo, ne jen za kompresor. Stačí ho nechat připojené k internetu a jednou za dvě topné sezóny nás pustit na servisní prohlídku."
     },
     {
       "title": "Master Therm",
