@@ -726,5 +726,15 @@ const navGroups = [
         dd.addEventListener('mouseleave', hide);
       });
     </script>
+
+    <!--
+      Vercel Speed Insights — měří Core Web Vitals u skutečných návštěvníků.
+      Skript servíruje sám Vercel z /_vercel/, takže projde i přes CSP
+      default-src 'self' a nepřidává žádnou závislost do package.json.
+      Balíček @vercel/speed-insights schválně nepoužíváme — jeho peer
+      závislosti počítají s Reactem, Vue nebo Svelte, Astro mezi nimi není.
+      Data se začnou sbírat, až se Speed Insights zapne i v projektu na Vercelu.
+    -->
+    <script is:inline defer src="/_vercel/speed-insights/script.js"></script>
   </body>
 </html>
