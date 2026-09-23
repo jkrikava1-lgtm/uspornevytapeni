@@ -118,6 +118,32 @@ const navGroups = [
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
 
+      /* ── Vyloučení vlastních návštěv z měření ───────────────────────
+         Zapne se otevřením libovolné stránky s ?bez-mereni=1, vypne
+         přes ?bez-mereni=0. Volba se pamatuje v prohlížeči, takže stačí
+         jednou na každém zařízení a prohlížeči.
+         GA4 a Google Ads se vypínají oficiálním přepínačem ga-disable-*,
+         Sklik a Clarity se na uvBezMereni() ptají samy níž v kódu.
+      ─────────────────────────────────────────────────────────────── */
+      window.UV_VYLOUCENI_KEY = 'uv-bez-mereni';
+      (function () {
+        try {
+          var q = new URLSearchParams(location.search).get('bez-mereni');
+          if (q === '1') localStorage.setItem(window.UV_VYLOUCENI_KEY, '1');
+          else if (q === '0') localStorage.removeItem(window.UV_VYLOUCENI_KEY);
+        } catch (e) {}
+      })();
+
+      window.uvBezMereni = function () {
+        try { return localStorage.getItem(window.UV_VYLOUCENI_KEY) === '1'; }
+        catch (e) { return false; }
+      };
+
+      if (window.uvBezMereni()) {
+        window['ga-disable-G-QYVPWZ4YR7'] = true;
+        window['ga-disable-AW-1019513575'] = true;
+      }
+
       window.CONSENT_KEY = 'uv-consent-v2';
       window.CONSENT_TTL_DAYS = 365;
 
@@ -164,12 +190,22 @@ const navGroups = [
         });
       })();
     </script>
-    <!-- gtag.js se načítá VŽDY; bez souhlasu neukládá nic a posílá jen anonymní signál -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-QYVPWZ4YR7"></script>
+    <!-- gtag.js se načítá VŽDY; bez souhlasu neukládá nic a posílá jen anonymní signál.
+         Výjimkou je vyloučení vlastních návštěv (?bez-mereni=1) — tam se
+         nenačítá vůbec. Samotný přepínač ga-disable-* totiž umlčí GA4, ale
+         NE reklamní tag: ten i tak odešle remarketingový zásah do Google Ads.
+         Jediné spolehlivé řešení je gtag.js vůbec nespustit. -->
     <script is:inline>
-      gtag('js', new Date());
-      gtag('config', 'G-QYVPWZ4YR7');
-      gtag('config', 'AW-1019513575');
+      (function () {
+        if (window.uvBezMereni && window.uvBezMereni()) return;
+        var t = document.createElement('script');
+        t.async = true;
+        t.src = 'https://www.googletagmanager.com/gtag/js?id=G-QYVPWZ4YR7';
+        document.head.appendChild(t);
+        gtag('js', new Date());
+        gtag('config', 'G-QYVPWZ4YR7');
+        gtag('config', 'AW-1019513575');
+      })();
     </script>
   </head>
   <body class="antialiased">
@@ -340,7 +376,15 @@ const navGroups = [
     </script>
 
     <!-- Měřicí kód Seznamu (Sklik) — načítá se vždy, souhlas se předává parametrem consent -->
-    <script is:inline src="https://c.seznam.cz/js/rc.js" defer></script>
+    <script is:inline>
+      (function () {
+        if (window.uvBezMereni && window.uvBezMereni()) return;
+        var t = document.createElement('script');
+        t.src = 'https://c.seznam.cz/js/rc.js';
+        t.defer = true;
+        document.head.appendChild(t);
+      })();
+    </script>
 
     <!-- ═══ Měřicí modul — všechny události chodí přes uvTrack() ═══ -->
     <script is:inline>
@@ -392,6 +436,7 @@ const navGroups = [
       }
 
       window.uvTrack = function (name, params, opts) {
+        if (window.uvBezMereni && window.uvBezMereni()) return;
         params = params || {};
         opts = opts || {};
         var k = opts.konverze ? KONVERZE[opts.konverze] : null;
@@ -435,6 +480,7 @@ const navGroups = [
 
       // ── Sklik retargeting (aktivuje se doplněním SKLIK_RTG_ID) ──
       function retargetingHit(consent) {
+        if (window.uvBezMereni && window.uvBezMereni()) return;
         if (!SKLIK_RTG_ID || !window.rc || !window.rc.retargetingHit) return;
         window.rc.retargetingHit({ rtgId: SKLIK_RTG_ID, consent: consent });
       }
@@ -468,6 +514,7 @@ const navGroups = [
 
       function nactiClarity() {
         if (nacteno || !CLARITY_ID) return;
+        if (window.uvBezMereni && window.uvBezMereni()) return;
         nacteno = true;
         (function (c, l, a, r, i, t, y) {
           c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
@@ -770,5 +817,25 @@ const navGroups = [
       Data se začnou sbírat, až se Speed Insights zapne i v projektu na Vercelu.
     -->
     <script is:inline defer src="/_vercel/speed-insights/script.js"></script>
+
+    <!-- Značka, že jsou vlastní návštěvy vyloučené z měření -->
+    <script is:inline>
+      (function () {
+        if (!(window.uvBezMereni && window.uvBezMereni())) return;
+        function zobraz() {
+          var d = document.createElement('div');
+          d.textContent = 'měření vypnuté';
+          d.title = 'Vaše návštěvy se nezapočítávají. Vypnout tuto výjimku: přidejte k adrese ?bez-mereni=0';
+          d.style.cssText = 'position:fixed;left:8px;bottom:8px;z-index:2147483647;' +
+            'background:#1C1C1C;color:#fff;font:600 11px/1 system-ui,sans-serif;' +
+            'padding:6px 9px;border-radius:6px;opacity:.65;pointer-events:none;' +
+            'letter-spacing:.02em';
+          document.body.appendChild(d);
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', zobraz);
+        } else { zobraz(); }
+      })();
+    </script>
   </body>
 </html>
