@@ -3,207 +3,944 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=60" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://unpkg.com https://c.seznam.cz https://www.googleadservices.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.google.cz https://google.com https://*.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://*.seznam.cz; frame-src 'self' https://maps.google.com https://www.google.com https://td.doubleclick.net https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=60"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://unpkg.com https://c.seznam.cz https://www.googleadservices.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com https://*.clarity.ms; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://www.google.cz https://google.com https://*.doubleclick.net https://www.googleadservices.com https://pagead2.googlesyndication.com https://*.seznam.cz https://*.clarity.ms https://c.bing.com; frame-src 'self' https://maps.google.com https://www.google.com https://td.doubleclick.net https://www.googletagmanager.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+        }
       ]
     },
     {
       "source": "/tools/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'self';" }
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'self';"
+        }
       ]
     },
     {
       "source": "/admin/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' data: blob:; connect-src 'self' blob: data: https://api.github.com https://github.com https://*.githubusercontent.com https://unpkg.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src 'self' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' data: blob:; connect-src 'self' blob: data: https://api.github.com https://github.com https://*.githubusercontent.com https://unpkg.com; worker-src 'self' blob:; child-src 'self' blob:; frame-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        }
       ]
     }
   ],
   "redirects": [
-    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.uspornevytapeni.cz" }], "destination": "https://uspornevytapeni.cz/$1", "permanent": true },
-    { "source": "/sitemap.xml", "destination": "/sitemap-index.xml", "permanent": true },
-    { "source": "/kontakt", "destination": "/kontakty", "permanent": true },
-    { "source": "/kontakt/", "destination": "/kontakty", "permanent": true },
-    { "source": "/kontaktni-formular", "destination": "/poptavka", "permanent": true },
-    { "source": "/porovnani-nakladu-na-vytapeni", "destination": "/porovnani-nakladu", "permanent": true },
-    { "source": "/porovnani-nakladu-na-vytapeni/", "destination": "/porovnani-nakladu", "permanent": true },
-    { "source": "/dotace-tepelna-cerpadla-2015", "destination": "/dotace", "permanent": true },
-    { "source": "/dotace-tepelna-cerpadla-2015/", "destination": "/dotace", "permanent": true },
-    { "source": "/tepelne-cerpadlo", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/tepelne-cerpadlo/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/usporne-vytapeni-novostavba", "destination": "/navrh-reseni/novostavba", "permanent": true },
-    { "source": "/usporne-vytapeni-novostavba/", "destination": "/navrh-reseni/novostavba", "permanent": true },
-    { "source": "/usporne-vytapeni-domu", "destination": "/navrh-reseni/stavajici-dum", "permanent": true },
-    { "source": "/usporne-vytapeni-domu/", "destination": "/navrh-reseni/stavajici-dum", "permanent": true },
-    { "source": "/tepelne-cerpadlo-ovladani-online", "destination": "/chytre-funkce/online-ovladani", "permanent": true },
-    { "source": "/tepelne-cerpadlo-ovladani-online/", "destination": "/chytre-funkce/online-ovladani", "permanent": true },
-    { "source": "/tepelne-cerpadlo-ovladani-systemu", "destination": "/chytre-funkce/ovladani-systemu", "permanent": true },
-    { "source": "/tepelne-cerpadlo-ovladani-systemu/", "destination": "/chytre-funkce/ovladani-systemu", "permanent": true },
-    { "source": "/tepelne-cerpadlo-inverter", "destination": "/chytre-funkce/inverter", "permanent": true },
-    { "source": "/tepelne-cerpadlo-inverter/", "destination": "/chytre-funkce/inverter", "permanent": true },
-    { "source": "/desuperheater", "destination": "/chytre-funkce/desuperheater", "permanent": true },
-    { "source": "/desuperheater/", "destination": "/chytre-funkce/desuperheater", "permanent": true },
-    { "source": "/katalogeshop", "destination": "/katalog", "permanent": true },
-    { "source": "/katalogeshop/", "destination": "/katalog", "permanent": true },
-    { "source": "/obchod", "destination": "/katalog", "permanent": true },
-    { "source": "/obchod/", "destination": "/katalog", "permanent": true },
-    { "source": "/referencni-instalace-tepelnych-cerpadel", "destination": "/reference", "permanent": true },
-    { "source": "/referencni-instalace-tepelnych-cerpadel/", "destination": "/reference", "permanent": true },
-    { "source": "/tepelna-cerpadla-zeme-voda", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-zeme-voda/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-vzduch-voda", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-vzduch-voda/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-voda-voda", "destination": "/tepelna-cerpadla/voda-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-voda-voda/", "destination": "/tepelna-cerpadla/voda-voda", "permanent": true },
-    { "source": "/tepelna-cerpadla-cena", "destination": "/cena", "permanent": true },
-    { "source": "/tepelna-cerpadla-cena/", "destination": "/cena", "permanent": true },
-    { "source": "/velke-vykony-tepelnych-cerpadel", "destination": "/navrh-reseni/velky-vykon", "permanent": true },
-    { "source": "/velke-vykony-tepelnych-cerpadel/", "destination": "/navrh-reseni/velky-vykon", "permanent": true },
-    { "source": "/radiatory", "destination": "/navrh-reseni/radiatory", "permanent": true },
-    { "source": "/radiatory/", "destination": "/navrh-reseni/radiatory", "permanent": true },
-    { "source": "/podlahove-topeni-ve-starsim-dome", "destination": "/navrh-reseni/podlahove-topeni-starsi-dum", "permanent": true },
-    { "source": "/podlahove-topeni-ve-starsim-dome/", "destination": "/navrh-reseni/podlahove-topeni-starsi-dum", "permanent": true },
-    { "source": "/podlahove-topeni", "destination": "/navrh-reseni/podlahove-topeni", "permanent": true },
-    { "source": "/podlahove-topeni/", "destination": "/navrh-reseni/podlahove-topeni", "permanent": true },
-    { "source": "/doinstalace-chlazeni", "destination": "/navrh-reseni/doinstalace-chlazeni", "permanent": true },
-    { "source": "/doinstalace-chlazeni/", "destination": "/navrh-reseni/doinstalace-chlazeni", "permanent": true },
-    { "source": "/chlazeni-tepelnym-cerpadlem", "destination": "/navrh-reseni/chlazeni", "permanent": true },
-    { "source": "/chlazeni-tepelnym-cerpadlem/", "destination": "/navrh-reseni/chlazeni", "permanent": true },
-    { "source": "/velikost-radiatoru", "destination": "/navrh-reseni/velikost-radiatoru", "permanent": true },
-    { "source": "/velikost-radiatoru/", "destination": "/navrh-reseni/velikost-radiatoru", "permanent": true },
-    { "source": "/podlahove-radiatorove-topeni-chlazeni", "destination": "/navrh-reseni", "permanent": true },
-    { "source": "/podlahove-radiatorove-topeni-chlazeni/", "destination": "/navrh-reseni", "permanent": true },
-    { "source": "/posouzeni-a-uprava-stavajiciho-topneho-systemu", "destination": "/navrh-reseni/stavajici-dum", "permanent": true },
-    { "source": "/posouzeni-a-uprava-stavajiciho-topneho-systemu/", "destination": "/navrh-reseni/stavajici-dum", "permanent": true },
-    { "source": "/jednokompresorove-jednotky", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/jednokompresorove-jednotky/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/dvoukompresorove-jednotky", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/dvoukompresorove-jednotky/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/kaskady-tepelnych-cerpadel", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/kaskady-tepelnych-cerpadel/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/sluzby", "destination": "/", "permanent": true },
-    { "source": "/sluzby/", "destination": "/", "permanent": true },
-    { "source": "/akce", "destination": "/", "permanent": true },
-    { "source": "/akce/", "destination": "/", "permanent": true },
-    { "source": "/poradna", "destination": "/kontakty", "permanent": true },
-    { "source": "/poradna/", "destination": "/kontakty", "permanent": true },
-    { "source": "/tepelne-cerpadlo-financovani", "destination": "/dotace", "permanent": true },
-    { "source": "/tepelne-cerpadlo-financovani/", "destination": "/dotace", "permanent": true },
-    { "source": "/delena-konstrukce", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/delena-konstrukce/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/venkovni-kompakt", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/venkovni-kompakt/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/vrt", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/vrt/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/plosny-kolektor", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/plosny-kolektor/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/fotovoltaika", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
-    { "source": "/fotovoltaika/", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
-    { "source": "/fotovoltaika-a-tepelne-cerpadlo", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
-    { "source": "/fotovoltaika-a-tepelne-cerpadlo/", "destination": "/chytre-funkce/fotovoltaika", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-vzduch-voda", "destination": "/katalog/vzduch-voda", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-vzduch-voda/", "destination": "/katalog/vzduch-voda", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-zeme-voda", "destination": "/katalog/zeme-voda", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-zeme-voda/", "destination": "/katalog/zeme-voda", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop", "destination": "/katalog/voda-voda", "permanent": true },
-    { "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop/", "destination": "/katalog/voda-voda", "permanent": true },
-    { "source": "/kontaktni-formular/", "destination": "/poptavka", "permanent": true },
-    { "source": "/kombinace-topnych-okruhu", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
-    { "source": "/kombinace-topnych-okruhu/", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
-
-    { "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*/", "destination": "/katalog/voda-voda/", "permanent": true },
-    { "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*", "destination": "/katalog/voda-voda/", "permanent": true },
-    { "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*/", "destination": "/katalog/vzduch-voda/", "permanent": true },
-    { "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*", "destination": "/katalog/vzduch-voda/", "permanent": true },
-    { "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*/", "destination": "/katalog/zeme-voda/", "permanent": true },
-    { "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*", "destination": "/katalog/zeme-voda/", "permanent": true },
-    { "source": "/produkt/:path*/", "destination": "/katalog/", "permanent": true },
-    { "source": "/produkt/:path*", "destination": "/katalog/", "permanent": true },
-    { "source": "/tepelne-cerpadlo-boxair", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelne-cerpadlo-boxair/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/rodinny-dum-praha", "destination": "/reference", "permanent": true },
-    { "source": "/rodinny-dum-praha/", "destination": "/reference", "permanent": true },
-    { "source": "/wp-content/uploads/:path*/", "destination": "/katalog/", "permanent": true },
-    { "source": "/wp-content/uploads/:path*", "destination": "/katalog/", "permanent": true },
-
-    { "source": "/asp_faq/:path*/", "destination": "/kontakty/", "permanent": true },
-    { "source": "/asp_faq/:path*", "destination": "/kontakty/", "permanent": true },
-    { "source": "/asp_faq", "destination": "/kontakty/", "permanent": true },
-    { "source": "/cerpadlo/voda-voda_:path*/", "destination": "/katalog/voda-voda/", "permanent": true },
-    { "source": "/cerpadlo/voda-voda_:path*", "destination": "/katalog/voda-voda/", "permanent": true },
-    { "source": "/cerpadlo/vzduch-voda_:path*/", "destination": "/katalog/vzduch-voda/", "permanent": true },
-    { "source": "/cerpadlo/vzduch-voda_:path*", "destination": "/katalog/vzduch-voda/", "permanent": true },
-    { "source": "/cerpadlo/zeme-voda_:path*/", "destination": "/katalog/zeme-voda/", "permanent": true },
-    { "source": "/cerpadlo/zeme-voda_:path*", "destination": "/katalog/zeme-voda/", "permanent": true },
-    { "source": "/cerpadlo/:path*/", "destination": "/katalog/", "permanent": true },
-    { "source": "/cerpadlo/:path*", "destination": "/katalog/", "permanent": true },
-    { "source": "/cerpadlo", "destination": "/katalog/", "permanent": true },
-    { "source": "/topny-system/podlahove-topeni", "destination": "/navrh-reseni/podlahove-topeni", "permanent": true },
-    { "source": "/topny-system/podlahove-topeni/", "destination": "/navrh-reseni/podlahove-topeni", "permanent": true },
-    { "source": "/topny-system/radiatory", "destination": "/navrh-reseni/radiatory", "permanent": true },
-    { "source": "/topny-system/radiatory/", "destination": "/navrh-reseni/radiatory", "permanent": true },
-    { "source": "/topny-system/vice-topnych-okruhu", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
-    { "source": "/topny-system/vice-topnych-okruhu/", "destination": "/navrh-reseni/kombinace-topnych-okruhu", "permanent": true },
-    { "source": "/topny-system/:path*/", "destination": "/navrh-reseni/", "permanent": true },
-    { "source": "/topny-system/:path*", "destination": "/navrh-reseni/", "permanent": true },
-    { "source": "/typ-cerpadla/plosny-kolektor-2", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/typ-cerpadla/plosny-kolektor-2/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/typ-cerpadla/voda-voda-2", "destination": "/tepelna-cerpadla/voda-voda", "permanent": true },
-    { "source": "/typ-cerpadla/voda-voda-2/", "destination": "/tepelna-cerpadla/voda-voda", "permanent": true },
-    { "source": "/typ-cerpadla/zeme-voda-2", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/typ-cerpadla/zeme-voda-2/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/typ-cerpadla/vzduch-vzduch", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/typ-cerpadla/vzduch-vzduch/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/typ-cerpadla/:path*/", "destination": "/tepelna-cerpadla/", "permanent": true },
-    { "source": "/typ-cerpadla/:path*", "destination": "/tepelna-cerpadla/", "permanent": true },
-    { "source": "/zalozky-hp/ceny-tc", "destination": "/cena", "permanent": true },
-    { "source": "/zalozky-hp/ceny-tc/", "destination": "/cena", "permanent": true },
-    { "source": "/zalozky-hp/proc-tc", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/zalozky-hp/proc-tc/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/zalozky-hp/proc-uv", "destination": "/", "permanent": true },
-    { "source": "/zalozky-hp/proc-uv/", "destination": "/", "permanent": true },
-    { "source": "/zalozky-hp/instalujeme", "destination": "/reference", "permanent": true },
-    { "source": "/zalozky-hp/instalujeme/", "destination": "/reference", "permanent": true },
-    { "source": "/zalozky-hp/:path*/", "destination": "/", "permanent": true },
-    { "source": "/zalozky-hp/:path*", "destination": "/", "permanent": true },
-    { "source": "/zalozky-hp", "destination": "/", "permanent": true },
-    { "source": "/dekujeme-vas-zajem", "destination": "/poptavka", "permanent": true },
-    { "source": "/dekujeme-vas-zajem/", "destination": "/poptavka", "permanent": true },
-    { "source": "/dekuji-vyplneni-naseho-formulare", "destination": "/poptavka", "permanent": true },
-    { "source": "/dekuji-vyplneni-naseho-formulare/", "destination": "/poptavka", "permanent": true },
-    { "source": "/vas-dotaz-odeslan", "destination": "/poptavka", "permanent": true },
-    { "source": "/vas-dotaz-odeslan/", "destination": "/poptavka", "permanent": true },
-    { "source": "/novostavba-5-kw", "destination": "/navrh-reseni/novostavba", "permanent": true },
-    { "source": "/novostavba-5-kw/", "destination": "/navrh-reseni/novostavba", "permanent": true },
-    { "source": "/porovnani-nakladu-vytapeni-novostavby-:path*/", "destination": "/porovnani-nakladu", "permanent": true },
-    { "source": "/porovnani-nakladu-vytapeni-novostavby-:path*", "destination": "/porovnani-nakladu", "permanent": true },
-    { "source": "/proc-tepelna-cerpadla", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/proc-tepelna-cerpadla/", "destination": "/tepelna-cerpadla", "permanent": true },
-    { "source": "/proc-usporne-vytapeni", "destination": "/", "permanent": true },
-    { "source": "/proc-usporne-vytapeni/", "destination": "/", "permanent": true },
-    { "source": "/reference-voda-voda-3", "destination": "/reference", "permanent": true },
-    { "source": "/reference-voda-voda-3/", "destination": "/reference", "permanent": true },
-    { "source": "/reference-vzduch-voda-2", "destination": "/reference", "permanent": true },
-    { "source": "/reference-vzduch-voda-2/", "destination": "/reference", "permanent": true },
-    { "source": "/rodinny-dum-kolinsko", "destination": "/reference", "permanent": true },
-    { "source": "/rodinny-dum-kolinsko/", "destination": "/reference", "permanent": true },
-    { "source": "/rodinny-dum-mladoboleslavsko", "destination": "/reference", "permanent": true },
-    { "source": "/rodinny-dum-mladoboleslavsko/", "destination": "/reference", "permanent": true },
-    { "source": "/zeme-voda-2", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/zeme-voda-2/", "destination": "/tepelna-cerpadla/zeme-voda", "permanent": true },
-    { "source": "/tepelne-cerpadlo-lwa-od-nemeckeho-vyrobce-firmy-alpha-innotec", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelne-cerpadlo-lwa-od-nemeckeho-vyrobce-firmy-alpha-innotec/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelne-cerpadlo-lwd-od-nemeckeho-vyrobce-firmy-alpha-innotec", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/tepelne-cerpadlo-lwd-od-nemeckeho-vyrobce-firmy-alpha-innotec/", "destination": "/tepelna-cerpadla/vzduch-voda", "permanent": true },
-    { "source": "/nezarazene", "destination": "/", "permanent": true },
-    { "source": "/nezarazene/", "destination": "/", "permanent": true }
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.uspornevytapeni.cz"
+        }
+      ],
+      "destination": "https://uspornevytapeni.cz/$1",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/kontakty",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt/",
+      "destination": "/kontakty",
+      "permanent": true
+    },
+    {
+      "source": "/kontaktni-formular",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/porovnani-nakladu-na-vytapeni",
+      "destination": "/porovnani-nakladu",
+      "permanent": true
+    },
+    {
+      "source": "/porovnani-nakladu-na-vytapeni/",
+      "destination": "/porovnani-nakladu",
+      "permanent": true
+    },
+    {
+      "source": "/dotace-tepelna-cerpadla-2015",
+      "destination": "/dotace",
+      "permanent": true
+    },
+    {
+      "source": "/dotace-tepelna-cerpadla-2015/",
+      "destination": "/dotace",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/usporne-vytapeni-novostavba",
+      "destination": "/navrh-reseni/novostavba",
+      "permanent": true
+    },
+    {
+      "source": "/usporne-vytapeni-novostavba/",
+      "destination": "/navrh-reseni/novostavba",
+      "permanent": true
+    },
+    {
+      "source": "/usporne-vytapeni-domu",
+      "destination": "/navrh-reseni/stavajici-dum",
+      "permanent": true
+    },
+    {
+      "source": "/usporne-vytapeni-domu/",
+      "destination": "/navrh-reseni/stavajici-dum",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-ovladani-online",
+      "destination": "/chytre-funkce/online-ovladani",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-ovladani-online/",
+      "destination": "/chytre-funkce/online-ovladani",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-ovladani-systemu",
+      "destination": "/chytre-funkce/ovladani-systemu",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-ovladani-systemu/",
+      "destination": "/chytre-funkce/ovladani-systemu",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-inverter",
+      "destination": "/chytre-funkce/inverter",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-inverter/",
+      "destination": "/chytre-funkce/inverter",
+      "permanent": true
+    },
+    {
+      "source": "/desuperheater",
+      "destination": "/chytre-funkce/desuperheater",
+      "permanent": true
+    },
+    {
+      "source": "/desuperheater/",
+      "destination": "/chytre-funkce/desuperheater",
+      "permanent": true
+    },
+    {
+      "source": "/katalogeshop",
+      "destination": "/katalog",
+      "permanent": true
+    },
+    {
+      "source": "/katalogeshop/",
+      "destination": "/katalog",
+      "permanent": true
+    },
+    {
+      "source": "/obchod",
+      "destination": "/katalog",
+      "permanent": true
+    },
+    {
+      "source": "/obchod/",
+      "destination": "/katalog",
+      "permanent": true
+    },
+    {
+      "source": "/referencni-instalace-tepelnych-cerpadel",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/referencni-instalace-tepelnych-cerpadel/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-zeme-voda",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-zeme-voda/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-vzduch-voda",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-vzduch-voda/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-voda-voda",
+      "destination": "/tepelna-cerpadla/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-voda-voda/",
+      "destination": "/tepelna-cerpadla/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-cena",
+      "destination": "/cena",
+      "permanent": true
+    },
+    {
+      "source": "/tepelna-cerpadla-cena/",
+      "destination": "/cena",
+      "permanent": true
+    },
+    {
+      "source": "/velke-vykony-tepelnych-cerpadel",
+      "destination": "/navrh-reseni/velky-vykon",
+      "permanent": true
+    },
+    {
+      "source": "/velke-vykony-tepelnych-cerpadel/",
+      "destination": "/navrh-reseni/velky-vykon",
+      "permanent": true
+    },
+    {
+      "source": "/radiatory",
+      "destination": "/navrh-reseni/radiatory",
+      "permanent": true
+    },
+    {
+      "source": "/radiatory/",
+      "destination": "/navrh-reseni/radiatory",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-topeni-ve-starsim-dome",
+      "destination": "/navrh-reseni/podlahove-topeni-starsi-dum",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-topeni-ve-starsim-dome/",
+      "destination": "/navrh-reseni/podlahove-topeni-starsi-dum",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-topeni",
+      "destination": "/navrh-reseni/podlahove-topeni",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-topeni/",
+      "destination": "/navrh-reseni/podlahove-topeni",
+      "permanent": true
+    },
+    {
+      "source": "/doinstalace-chlazeni",
+      "destination": "/navrh-reseni/doinstalace-chlazeni",
+      "permanent": true
+    },
+    {
+      "source": "/doinstalace-chlazeni/",
+      "destination": "/navrh-reseni/doinstalace-chlazeni",
+      "permanent": true
+    },
+    {
+      "source": "/chlazeni-tepelnym-cerpadlem",
+      "destination": "/navrh-reseni/chlazeni",
+      "permanent": true
+    },
+    {
+      "source": "/chlazeni-tepelnym-cerpadlem/",
+      "destination": "/navrh-reseni/chlazeni",
+      "permanent": true
+    },
+    {
+      "source": "/velikost-radiatoru",
+      "destination": "/navrh-reseni/velikost-radiatoru",
+      "permanent": true
+    },
+    {
+      "source": "/velikost-radiatoru/",
+      "destination": "/navrh-reseni/velikost-radiatoru",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-radiatorove-topeni-chlazeni",
+      "destination": "/navrh-reseni",
+      "permanent": true
+    },
+    {
+      "source": "/podlahove-radiatorove-topeni-chlazeni/",
+      "destination": "/navrh-reseni",
+      "permanent": true
+    },
+    {
+      "source": "/posouzeni-a-uprava-stavajiciho-topneho-systemu",
+      "destination": "/navrh-reseni/stavajici-dum",
+      "permanent": true
+    },
+    {
+      "source": "/posouzeni-a-uprava-stavajiciho-topneho-systemu/",
+      "destination": "/navrh-reseni/stavajici-dum",
+      "permanent": true
+    },
+    {
+      "source": "/jednokompresorove-jednotky",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/jednokompresorove-jednotky/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/dvoukompresorove-jednotky",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/dvoukompresorove-jednotky/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/kaskady-tepelnych-cerpadel",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/kaskady-tepelnych-cerpadel/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/sluzby",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sluzby/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/akce",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/akce/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/poradna",
+      "destination": "/kontakty",
+      "permanent": true
+    },
+    {
+      "source": "/poradna/",
+      "destination": "/kontakty",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-financovani",
+      "destination": "/dotace",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-financovani/",
+      "destination": "/dotace",
+      "permanent": true
+    },
+    {
+      "source": "/delena-konstrukce",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/delena-konstrukce/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/venkovni-kompakt",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/venkovni-kompakt/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/vrt",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/vrt/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/plosny-kolektor",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/plosny-kolektor/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/fotovoltaika",
+      "destination": "/chytre-funkce/fotovoltaika",
+      "permanent": true
+    },
+    {
+      "source": "/fotovoltaika/",
+      "destination": "/chytre-funkce/fotovoltaika",
+      "permanent": true
+    },
+    {
+      "source": "/fotovoltaika-a-tepelne-cerpadlo",
+      "destination": "/chytre-funkce/fotovoltaika",
+      "permanent": true
+    },
+    {
+      "source": "/fotovoltaika-a-tepelne-cerpadlo/",
+      "destination": "/chytre-funkce/fotovoltaika",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-vzduch-voda",
+      "destination": "/katalog/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-vzduch-voda/",
+      "destination": "/katalog/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-zeme-voda",
+      "destination": "/katalog/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-zeme-voda/",
+      "destination": "/katalog/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop",
+      "destination": "/katalog/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kategorie/tepelna-cerpadla-voda-voda-eshop/",
+      "destination": "/katalog/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/kontaktni-formular/",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/kombinace-topnych-okruhu",
+      "destination": "/navrh-reseni/kombinace-topnych-okruhu",
+      "permanent": true
+    },
+    {
+      "source": "/kombinace-topnych-okruhu/",
+      "destination": "/navrh-reseni/kombinace-topnych-okruhu",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*/",
+      "destination": "/katalog/voda-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-voda-voda-:path*",
+      "destination": "/katalog/voda-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*/",
+      "destination": "/katalog/vzduch-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-vzduch-voda-:path*",
+      "destination": "/katalog/vzduch-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*/",
+      "destination": "/katalog/zeme-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/tepelne-cerpadlo-zeme-voda-:path*",
+      "destination": "/katalog/zeme-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/:path*/",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/produkt/:path*",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-boxair",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-boxair/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-praha",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-praha/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/:path*/",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/uploads/:path*",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/asp_faq/:path*/",
+      "destination": "/kontakty/",
+      "permanent": true
+    },
+    {
+      "source": "/asp_faq/:path*",
+      "destination": "/kontakty/",
+      "permanent": true
+    },
+    {
+      "source": "/asp_faq",
+      "destination": "/kontakty/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/voda-voda_:path*/",
+      "destination": "/katalog/voda-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/voda-voda_:path*",
+      "destination": "/katalog/voda-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/vzduch-voda_:path*/",
+      "destination": "/katalog/vzduch-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/vzduch-voda_:path*",
+      "destination": "/katalog/vzduch-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/zeme-voda_:path*/",
+      "destination": "/katalog/zeme-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/zeme-voda_:path*",
+      "destination": "/katalog/zeme-voda/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/:path*/",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo/:path*",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/cerpadlo",
+      "destination": "/katalog/",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/podlahove-topeni",
+      "destination": "/navrh-reseni/podlahove-topeni",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/podlahove-topeni/",
+      "destination": "/navrh-reseni/podlahove-topeni",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/radiatory",
+      "destination": "/navrh-reseni/radiatory",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/radiatory/",
+      "destination": "/navrh-reseni/radiatory",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/vice-topnych-okruhu",
+      "destination": "/navrh-reseni/kombinace-topnych-okruhu",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/vice-topnych-okruhu/",
+      "destination": "/navrh-reseni/kombinace-topnych-okruhu",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/:path*/",
+      "destination": "/navrh-reseni/",
+      "permanent": true
+    },
+    {
+      "source": "/topny-system/:path*",
+      "destination": "/navrh-reseni/",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/plosny-kolektor-2",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/plosny-kolektor-2/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/voda-voda-2",
+      "destination": "/tepelna-cerpadla/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/voda-voda-2/",
+      "destination": "/tepelna-cerpadla/voda-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/zeme-voda-2",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/zeme-voda-2/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/vzduch-vzduch",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/vzduch-vzduch/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/:path*/",
+      "destination": "/tepelna-cerpadla/",
+      "permanent": true
+    },
+    {
+      "source": "/typ-cerpadla/:path*",
+      "destination": "/tepelna-cerpadla/",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/ceny-tc",
+      "destination": "/cena",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/ceny-tc/",
+      "destination": "/cena",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/proc-tc",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/proc-tc/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/proc-uv",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/proc-uv/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/instalujeme",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/instalujeme/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/:path*/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zalozky-hp",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/dekujeme-vas-zajem",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/dekujeme-vas-zajem/",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/dekuji-vyplneni-naseho-formulare",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/dekuji-vyplneni-naseho-formulare/",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/vas-dotaz-odeslan",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/vas-dotaz-odeslan/",
+      "destination": "/poptavka",
+      "permanent": true
+    },
+    {
+      "source": "/novostavba-5-kw",
+      "destination": "/navrh-reseni/novostavba",
+      "permanent": true
+    },
+    {
+      "source": "/novostavba-5-kw/",
+      "destination": "/navrh-reseni/novostavba",
+      "permanent": true
+    },
+    {
+      "source": "/porovnani-nakladu-vytapeni-novostavby-:path*/",
+      "destination": "/porovnani-nakladu",
+      "permanent": true
+    },
+    {
+      "source": "/porovnani-nakladu-vytapeni-novostavby-:path*",
+      "destination": "/porovnani-nakladu",
+      "permanent": true
+    },
+    {
+      "source": "/proc-tepelna-cerpadla",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/proc-tepelna-cerpadla/",
+      "destination": "/tepelna-cerpadla",
+      "permanent": true
+    },
+    {
+      "source": "/proc-usporne-vytapeni",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/proc-usporne-vytapeni/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/reference-voda-voda-3",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/reference-voda-voda-3/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/reference-vzduch-voda-2",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/reference-vzduch-voda-2/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-kolinsko",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-kolinsko/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-mladoboleslavsko",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/rodinny-dum-mladoboleslavsko/",
+      "destination": "/reference",
+      "permanent": true
+    },
+    {
+      "source": "/zeme-voda-2",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/zeme-voda-2/",
+      "destination": "/tepelna-cerpadla/zeme-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-lwa-od-nemeckeho-vyrobce-firmy-alpha-innotec",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-lwa-od-nemeckeho-vyrobce-firmy-alpha-innotec/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-lwd-od-nemeckeho-vyrobce-firmy-alpha-innotec",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/tepelne-cerpadlo-lwd-od-nemeckeho-vyrobce-firmy-alpha-innotec/",
+      "destination": "/tepelna-cerpadla/vzduch-voda",
+      "permanent": true
+    },
+    {
+      "source": "/nezarazene",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/nezarazene/",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }
