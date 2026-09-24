@@ -149,6 +149,37 @@
   "tool2_title": "Porovnání nákladů",
   "tool2_desc": "Srovnání ročních nákladů — tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.",
   "tool2_cta": "Porovnat náklady",
+  "faq_headline": "Časté dotazy k ceně tepelného čerpadla",
+  "faq": [
+    {
+      "q": "Kolik stojí tepelné čerpadlo?",
+      "a": "Záleží na typu a výkonu. Vzduch-voda stojí od 334 000 Kč, voda-voda od 379 000 Kč a země-voda od 429 000 Kč. Všechny ceny jsou na klíč — zahrnují dodávku čerpadla, zásobník teplé vody, montáž, elektroinstalaci a uvedení do provozu. Přesnou cenu určí tepelná ztráta vašeho domu, kterou spočítáme zdarma."
+    },
+    {
+      "q": "Kolik stojí tepelné čerpadlo vzduch-voda?",
+      "a": "Kompletní instalace tepelného čerpadla vzduch-voda začíná od 334 000 Kč. Cena zahrnuje čerpadlo Master Therm BoxAir, zásobník TUV, montáž, elektroinstalaci a uvedení do provozu. Vzduch-voda je nejčastější volba — hodí se pro 95 % domů a instalace nevyžaduje vrty ani zemní práce."
+    },
+    {
+      "q": "Kolik stojí tepelné čerpadlo s vrty (země-voda)?",
+      "a": "Tepelné čerpadlo země-voda vychází od 429 000 Kč. Cena zahrnuje i hloubkové vrty nebo plošný zemní kolektor. Provozní náklady jsou ze všech typů nejnižší — průměrný topný faktor (COP) 4,3. Systém navíc v létě umí úsporně chladit."
+    },
+    {
+      "q": "Kolik stojí tepelné čerpadlo s montáží?",
+      "a": "Montáž je vždy součástí naší ceny na klíč. Vzduch-voda od 334 000 Kč, voda-voda od 379 000 Kč, země-voda od 429 000 Kč. Cena zahrnuje dodávku, montáž, elektroinstalaci, zapojení na HDO tarif a uvedení do provozu. Žádné skryté poplatky."
+    },
+    {
+      "q": "Lze cenu snížit dotací?",
+      "a": "Ano. Bezúročný úvěr NZÚ (RPSN 0 %) pokryje až 350 000 Kč u vzduch-voda nebo 400 000 Kč u země-voda — splácíte pouze jistinu, stát platí úroky. Zranitelné domácnosti mohou čerpat přímou dotaci NZÚ Light až 150 000 Kč, kterou není třeba vracet. Instalaci tak lze pořídit s vlastními prostředky od 0 Kč."
+    },
+    {
+      "q": "Jaká je návratnost investice do tepelného čerpadla?",
+      "a": "Pro rodinný dům s tepelnou ztrátou 13 kW vychází provoz tepelného čerpadla na 37 000 Kč ročně oproti 106 000 Kč u elektrokotle. Roční úspora 69 000 Kč znamená návratnost investice 389 000 Kč za 5,6 roku. Životnost čerpadla je 20–25 let."
+    },
+    {
+      "q": "Jak dlouho trvá montáž tepelného čerpadla?",
+      "a": "Vzduch-voda: 2–5 pracovních dní. Země-voda s vrty: 5–7 dní (z toho 1–2 dny vrtné práce). Voda-voda: 5–7 dní podle podmínek studní. Po montáži probíhá uvedení do provozu a zaškolení obsluhy."
+    }
+  ],
   "cta_headline": "Chcete přesnou nabídku?",
   "cta_text": "Připravíme individuální kalkulaci zdarma — včetně odhadu provozních nákladů a dotačních možností.",
   "cta_button": "Chci bezplatnou kalkulaci"
