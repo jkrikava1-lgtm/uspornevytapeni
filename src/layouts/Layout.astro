@@ -52,7 +52,7 @@ const navGroups = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    {heroImg && <link rel="preload" as="image" href={heroImg} fetchpriority="high" />}
+    {heroImg && <link rel="preload" as="image" href={heroImg} fetchpriority="high" media="(min-width: 1024px)" />}
     <title>{title} | {titleSuffix}</title>
     <link rel="canonical" href={canonicalURL} />
     <!-- Open Graph -->
@@ -198,7 +198,7 @@ const navGroups = [
          NE reklamní tag: ten i tak odešle remarketingový zásah do Google Ads.
          Jediné spolehlivé řešení je gtag.js vůbec nespustit. -->
     <script is:inline>
-      (function () {
+      window.addEventListener('load', function () {
         if (window.uvBezMereni && window.uvBezMereni()) return;
         var t = document.createElement('script');
         t.async = true;
@@ -207,7 +207,7 @@ const navGroups = [
         gtag('js', new Date());
         gtag('config', 'G-QYVPWZ4YR7');
         gtag('config', 'AW-1019513575');
-      })();
+      });
     </script>
   </head>
   <body class="antialiased">
@@ -377,15 +377,15 @@ const navGroups = [
       })();
     </script>
 
-    <!-- Měřicí kód Seznamu (Sklik) — načítá se vždy, souhlas se předává parametrem consent -->
+    <!-- Měřicí kód Seznamu (Sklik) — načítá se po page load, souhlas se předává parametrem consent -->
     <script is:inline>
-      (function () {
+      window.addEventListener('load', function () {
         if (window.uvBezMereni && window.uvBezMereni()) return;
         var t = document.createElement('script');
         t.src = 'https://c.seznam.cz/js/rc.js';
         t.defer = true;
         document.head.appendChild(t);
-      })();
+      });
     </script>
 
     <!-- ═══ Měřicí modul — všechny události chodí přes uvTrack() ═══ -->
