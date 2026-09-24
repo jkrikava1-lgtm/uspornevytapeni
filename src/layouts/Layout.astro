@@ -209,8 +209,23 @@ const navGroups = [
         gtag('config', 'AW-1019513575');
       });
     </script>
+    <!-- Google Tag Manager — načítá se po load, consent defaults jsou v dataLayer výš -->
+    <script is:inline>
+      window.addEventListener('load', function () {
+        if (window.uvBezMereni && window.uvBezMereni()) return;
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-W9PGNXHG');
+      });
+    </script>
   </head>
   <body class="antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9PGNXHG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ═══ Cookie lišta — první vrstva (přijmout / odmítnout rovnocenně) ═══ -->
     <div id="cookie-banner" class="fixed inset-0 z-[100] hidden">
