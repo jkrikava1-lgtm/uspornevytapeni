@@ -13,7 +13,7 @@ const whyUsIcons = [
 const maxChart = Math.max(...hp.chart_items.map(i => i.value));
 ---
 
-<Layout title={hp.meta_title} description={hp.meta_description}>
+<Layout title={hp.meta_title} description={hp.meta_description} heroImg={hp.hero_slides[0]?.src}>
 
   <!-- HERO -->
   <section class="relative bg-navy-700 text-white overflow-hidden pt-12 lg:pt-16">
@@ -86,7 +86,8 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
               {hp.hero_slides.map((slide, i) => (
                 <div class={`absolute inset-0 transition-opacity duration-700 ${i === 0 ? 'opacity-100' : 'opacity-0'}`} data-hero-slide>
                   <div class="absolute inset-0">
-                    <img src={slide.src} alt={slide.label} class="w-full h-full object-cover" loading="lazy"
+                    <img src={slide.src} alt={slide.label} class="w-full h-full object-cover"
+                      loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : 'auto'}
                       onerror="this.style.display='none'" />
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
