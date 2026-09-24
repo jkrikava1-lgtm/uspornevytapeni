@@ -58,21 +58,21 @@
       "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
       "emoji": "🌬️",
       "href": "/tepelna-cerpadla/vzduch-voda",
-      "image": "/images/produkty/tc-vzduch-voda-card.webp"
+      "image": "/images/produkty/boxair-kompakt-dum.webp"
     },
     {
       "title": "Země – voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
       "emoji": "🌱",
       "href": "/tepelna-cerpadla/zeme-voda",
-      "image": "/images/produkty/tc-zeme-voda-card.webp"
+      "image": "/images/produkty/aquamaster-technicka.webp"
     },
     {
       "title": "Voda – voda",
       "desc": "Maximální výkon a účinnost. Pro objekty, které mají studnu s vydatným zdrojem vody.",
       "emoji": "💧",
       "href": "/tepelna-cerpadla/voda-voda",
-      "image": "/images/produkty/tc-voda-voda-card.webp"
+      "image": "/images/ilustrace/zeme-voda.webp"
     }
   ],
   "savings_label": "Proč tepelné čerpadlo",
