@@ -13,7 +13,7 @@
     },
     {
       "datum": "Připravte podklady",
-      "popis": "U bezúročného úvěru je potřeba renovační pas (zpracuje ho certifikovaný poradce EKIS zdarma). U NZÚ Light renovační pas není podmínkou."
+      "popis": "U bezúročného úvěru je potřeba <a href=\"#renovacni-pas\" class=\"font-semibold underline underline-offset-2 decoration-current/40 hover:decoration-current transition-colors\">renovační pas</a> (zpracuje ho certifikovaný poradce EKIS zdarma). U NZÚ Light renovační pas není podmínkou."
     },
     {
       "datum": "Podejte žádost",
@@ -27,7 +27,7 @@
   "bezne_desc": "Stát podporuje instalaci tepelného čerpadla formou <strong>bezúročného úvěru</strong> (RPSN 0 %). Úroky po celou dobu splácení hradí stát, vy vracíte jen půjčenou částku.",
   "bezne_jak": "<strong>Jak to funguje:</strong> Nejprve zažádáte přes SFŽP. Po schválení žádosti si půjčíte v bance nebo stavební spořitelně. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10–15 let.",
   "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspořeny statisíce předem — finance na celou instalaci s nulovými úroky.",
-  "bezne_nevyhoda": "<strong>Podmínka:</strong> K žádosti potřebujete renovační pas (zpracuje certifikovaný poradce EKIS — zdarma). Banka pak prověří vaši bonitu.",
+  "bezne_nevyhoda": "<strong>Podmínka:</strong> K žádosti potřebujete <a href=\"#renovacni-pas\" class=\"font-semibold underline underline-offset-2 decoration-current/40 hover:decoration-current transition-colors\">renovační pas</a> (zpracuje certifikovaný poradce EKIS — zdarma). Banka pak prověří vaši bonitu.",
   "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
   "zranitelne_subtitle": "příjemci dávek, starobní důchodci a lidé s invalidním důchodem 3. stupně v energeticky neúsporném domě",
   "zranitelne_desc": "Nízkopříjmové domácnosti dostávají <strong>přímou dotaci</strong> — peníze, které nemusí vracet. Podmínkou je splnění příjmových kritérií a vlastnictví max. 2 nemovitostí. <strong>Renovační pas není podmínkou</strong> — nabízí se jako volitelná bezplatná služba.",

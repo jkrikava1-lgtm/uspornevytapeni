@@ -43,7 +43,7 @@ import site from '../data/site.json';
                 </div>
                 <div class="pb-5">
                   <div class="font-bold text-charcoal-900 text-sm">{item.datum}</div>
-                  <p class="text-charcoal-600 text-sm mt-0.5 leading-relaxed">{item.popis}</p>
+                  <p class="text-charcoal-600 text-sm mt-0.5 leading-relaxed" set:html={item.popis} />
                 </div>
               </div>
             ))}
@@ -156,8 +156,10 @@ import site from '../data/site.json';
     </div>
   </section>
 
-  <!-- Renovační pas -->
-  <section class="bg-gray-50 py-10 lg:py-14">
+  <!-- Renovační pas — má id, protože se na něj odkazuje z míst, kde se
+       o pasu mluví. Clarity ukázala, že tam lidé klikali naprázdno.
+       scroll-mt kompenzuje lepivou hlavičku, jinak by nadpis zmizel pod ní. -->
+  <section id="renovacni-pas" class="scroll-mt-20 lg:scroll-mt-28 bg-gray-50 py-10 lg:py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.renovacni_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-5">{data.renovacni_intro}</p>
