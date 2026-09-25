@@ -87,49 +87,49 @@
           "model": "AquaMaster 17I",
           "vykon": "1–5 kW",
           "cop": "4,3",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq17i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/AQ17I.pdf"
         },
         {
           "model": "AquaMaster 22I",
           "vykon": "2–7 kW",
           "cop": "4,5",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq22i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/AQ22I.pdf"
         },
         {
           "model": "AquaMaster 26I",
           "vykon": "3–9 kW",
           "cop": "4,5",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq26i_bldc_14511_ehpa_062014.pdf"
+          "pdf": "/pdf/AQ26I.pdf"
         },
         {
           "model": "AquaMaster 30I",
           "vykon": "4–12 kW",
           "cop": "4,6",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq30i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/AQ30I.pdf"
         },
         {
           "model": "AquaMaster 37I",
           "vykon": "5–15 kW",
           "cop": "4,7",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/aq37i_bldc_14511_ehpa_062014.pdf"
+          "pdf": "/pdf/AQ37I.pdf"
         },
         {
           "model": "AquaMaster 45I",
           "vykon": "7–22 kW",
           "cop": "4,6",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_aq45i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/AQ45I.pdf"
         },
         {
           "model": "AquaMaster 60I",
           "vykon": "7–35 kW",
           "cop": "4,7",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/MTTC_aq60i_bldc_14511_ehpa_072015.pdf"
+          "pdf": "/pdf/AQ60I.pdf"
         },
         {
           "model": "AquaMaster 90I",
           "vykon": "10–48 kW",
           "cop": "4,6",
-          "pdf": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/10/MTTC_aq90i_bldc_14511_ehpa_072015.pdf"
+          "pdf": "/pdf/AQ90I.pdf"
         }
       ]
     },
