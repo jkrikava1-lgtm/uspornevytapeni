@@ -107,31 +107,31 @@
           "model": "BoxAir 26I",
           "vykon": "3–9 kW",
           "cop": "4,8",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba26i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA26I.pdf"
         },
         {
           "model": "BoxAir 30I",
           "vykon": "5–12 kW",
           "cop": "5,2",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba30i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA30I.pdf"
         },
         {
           "model": "BoxAir 37I",
           "vykon": "5–17 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/05/ba37i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA37I.pdf"
         },
         {
           "model": "BoxAir 45I",
           "vykon": "7–22 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/MTTC_ba45i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA45I.pdf"
         },
         {
           "model": "BoxAir 60I",
           "vykon": "10–35 kW",
           "cop": "4,8",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA60I.pdf"
         }
       ]
     },
@@ -228,31 +228,31 @@
           "model": "BoxAir 22IS",
           "vykon": "2–7 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba22is_bldc_ehpa.pdf"
+          "pdf": "/pdf/BA22IS.pdf"
         },
         {
           "model": "BoxAir 26IS",
           "vykon": "3–9 kW",
           "cop": "4,6",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba26is_bldc_ehpa.pdf"
+          "pdf": "/pdf/BA26IS.pdf"
         },
         {
           "model": "BoxAir 37IS",
           "vykon": "5–17 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba37is_14511_ehpa.pdf"
+          "pdf": "/pdf/BA37IS.pdf"
         },
         {
           "model": "BoxAir 45IS",
           "vykon": "7–22 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/09/technický_list_ba45is_14511_ehpa.pdf"
+          "pdf": "/pdf/BA45IS.pdf"
         },
         {
           "model": "BoxAir 60IS",
           "vykon": "10–35 kW",
           "cop": "4,8",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technický_list_ba60is_14511_ehpa.pdf"
+          "pdf": "/pdf/BA60IS.pdf"
         }
       ]
     },
@@ -281,7 +281,7 @@
           "model": "BoxAir 22ISC",
           "vykon": "2–7 kW",
           "cop": "4,7",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/06/technický_list_ba22isc_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA22ISC.pdf"
         },
         {
           "model": "BoxAir 26ISC",
@@ -293,7 +293,7 @@
           "model": "BoxAir 37ISC",
           "vykon": "5–17 kW",
           "cop": "4,5",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2013/06/technický_list_ba37isc_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA37ISC.pdf"
         }
       ]
     },
@@ -322,13 +322,13 @@
           "model": "BoxAir 60I (Inverter)",
           "vykon": "10–35 kW",
           "cop": "4,8",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba60i_bldc_14511_ehpa.pdf"
+          "pdf": "/pdf/BA60I.pdf"
         },
         {
           "model": "BoxAir 60IS (Inverter Split)",
           "vykon": "10–35 kW",
           "cop": "4,8",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/technický_list_ba60is_14511_ehpa.pdf"
+          "pdf": "/pdf/BA60IS.pdf"
         },
         {
           "model": "BoxAir 60IP (R290)",
@@ -346,13 +346,13 @@
           "model": "BoxAir 75Z",
           "vykon": "30,8 kW",
           "cop": "4,0",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/ba75z_14511_032018.pdf"
+          "pdf": "/pdf/BA75Z.pdf"
         },
         {
           "model": "EasyMaster 60Z",
           "vykon": "24,6 kW",
           "cop": "4,1",
-          "pdf_chybi": "https://www.uspornevytapeni.cz/wp-content/uploads/2020/03/MTTC_em60z_14511.pdf"
+          "pdf": "/pdf/EM60Z.pdf"
         },
         {
           "model": "EasyMaster 75Z",
