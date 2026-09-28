@@ -69,12 +69,12 @@
   "footer_col2_title": "Informace",
   "footer_col1_items": [
     {
-      "label": "Novostavba",
-      "href": "/navrh-reseni/novostavba"
-    },
-    {
       "label": "Stávající dům",
       "href": "/navrh-reseni/stavajici-dum"
+    },
+    {
+      "label": "Novostavba",
+      "href": "/navrh-reseni/novostavba"
     },
     {
       "label": "Velký výkon",
@@ -104,12 +104,12 @@
   "nav_navrh": "Návrh řešení",
   "nav_navrh_items": [
     {
-      "href": "/navrh-reseni/novostavba",
-      "label": "Novostavba"
-    },
-    {
       "href": "/navrh-reseni/stavajici-dum",
       "label": "Stávající dům"
+    },
+    {
+      "href": "/navrh-reseni/novostavba",
+      "label": "Novostavba"
     },
     {
       "href": "/navrh-reseni/velky-vykon",

@@ -30,13 +30,13 @@ import data from '../data/cenova-kalkulace.json';
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.step1_title}</h2>
         <p class="text-charcoal-500 text-sm mb-8">{data.step1_desc}</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
-            <span class="choice-icon"><img src="/images/ikony/novostavba.webp" alt="Ikona novostavby" class="w-14 h-14 object-contain" /></span>
+          <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
+            <span class="choice-icon"><img src="/images/ikony/stavajici-dum.webp" alt="Ikona stávajícího domu" class="w-14 h-14 object-contain" /></span>
             <span class="choice-label">{data.step1_opt1_label}</span>
             <span class="choice-desc">{data.step1_opt1_desc}</span>
           </button>
-          <button class="choice-card" data-field="typ_objektu" data-value="Stávající dům">
-            <span class="choice-icon"><img src="/images/ikony/stavajici-dum.webp" alt="Ikona stávajícího domu" class="w-14 h-14 object-contain" /></span>
+          <button class="choice-card" data-field="typ_objektu" data-value="Novostavba">
+            <span class="choice-icon"><img src="/images/ikony/novostavba.webp" alt="Ikona novostavby" class="w-14 h-14 object-contain" /></span>
             <span class="choice-label">{data.step1_opt2_label}</span>
             <span class="choice-desc">{data.step1_opt2_desc}</span>
           </button>

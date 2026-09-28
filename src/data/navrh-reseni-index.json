@@ -6,33 +6,6 @@
   "section_typ_objektu": "Podle typu objektu",
   "typ_objektu_cards": [
     {
-      "href": "/navrh-reseni/novostavba",
-      "title": "Novostavba",
-      "desc": "Optimální systém vytápění pro nový dům — tepelné čerpadlo, podlahové vytápění i chlazení v jednom projektu.",
-      "img": "/images/hero/novostavba-vizual.webp",
-      "icon": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-      "children": [
-        {
-          "href": "/navrh-reseni/podlahove-topeni",
-          "title": "Podlahové topení",
-          "icon": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
-          "icon_img": "/images/ikony/podlahove-topeni.webp"
-        },
-        {
-          "href": "/navrh-reseni/radiatory",
-          "title": "Radiátory",
-          "icon": "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z",
-          "icon_img": "/images/ikony/radiatory.webp"
-        },
-        {
-          "href": "/navrh-reseni/chlazeni",
-          "title": "Chlazení",
-          "icon": "M12 3v1m0 16v1m-8-9H3m18 0h-1M5.636 5.636l.707.707m12.02 12.02l.707.707M5.636 18.364l.707-.707m12.02-12.02l.707-.707",
-          "icon_img": "/images/ikony/chlazeni.webp"
-        }
-      ]
-    },
-    {
       "href": "/navrh-reseni/stavajici-dum",
       "title": "Stávající dům",
       "desc": "Výměna starého kotle za tepelné čerpadlo. Napojíme na stávající rozvody bez zbytečných komplikací.",
@@ -56,6 +29,33 @@
           "title": "Doinstalace chlazení",
           "icon": "M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z",
           "icon_img": "/images/ikony/doinstalace-chlazeni.webp"
+        }
+      ]
+    },
+    {
+      "href": "/navrh-reseni/novostavba",
+      "title": "Novostavba",
+      "desc": "Optimální systém vytápění pro nový dům — tepelné čerpadlo, podlahové vytápění i chlazení v jednom projektu.",
+      "img": "/images/hero/novostavba-vizual.webp",
+      "icon": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+      "children": [
+        {
+          "href": "/navrh-reseni/podlahove-topeni",
+          "title": "Podlahové topení",
+          "icon": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+          "icon_img": "/images/ikony/podlahove-topeni.webp"
+        },
+        {
+          "href": "/navrh-reseni/radiatory",
+          "title": "Radiátory",
+          "icon": "M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z",
+          "icon_img": "/images/ikony/radiatory.webp"
+        },
+        {
+          "href": "/navrh-reseni/chlazeni",
+          "title": "Chlazení",
+          "icon": "M12 3v1m0 16v1m-8-9H3m18 0h-1M5.636 5.636l.707.707m12.02 12.02l.707.707M5.636 18.364l.707-.707m12.02-12.02l.707-.707",
+          "icon_img": "/images/ikony/chlazeni.webp"
         }
       ]
     },
