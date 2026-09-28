@@ -11,22 +11,27 @@ import data from '../../data/stavajici-dum.json';
     breadcrumb={[{ label: 'Návrh řešení', href: '/navrh-reseni/stavajici-dum' }, { label: 'Stávající dům', href: '/navrh-reseni/stavajici-dum' }]}
   />
 
+  <!--
+    Dvousloupcové rozvržení na PC, ale v mobilu se sloupce musí prostřídat,
+    aby obě fotky neskončily přímo pod sebou. Obaly sloupců jsou proto
+    v mobilu `contents` — jejich obsah se stane přímými položkami gridu
+    a `order-*` určí pořadí. Na lg se obaly vrátí do bloku a `order` přestane
+    hrát roli, takže PC dostane původní sloupce.
+  -->
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div>
-          <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
-          <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
-          <div class="space-y-4 text-charcoal-600 leading-relaxed">
-            <p>{data.intro_text1}</p>
-            <p>{data.intro_text2}</p>
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
+        <div class="contents lg:block">
+          <div class="order-1">
+            <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.intro_label}</div>
+            <h2 class="text-3xl font-extrabold text-charcoal-900 mb-6">{data.intro_headline}</h2>
+            <div class="space-y-4 text-charcoal-600 leading-relaxed">
+              <p>{data.intro_text1}</p>
+              <p>{data.intro_text2}</p>
+            </div>
           </div>
 
-          <img src="/images/hero/stary-kotel.webp" width="1000" height="750" loading="lazy"
-               alt="Výměna starého kotle za tepelné čerpadlo"
-               class="rounded-2xl w-full object-cover mt-8" />
-
-          <div class="mt-8 space-y-4">
+          <div class="order-3 space-y-4 lg:mt-8">
             {[
               { title: data.feat1_title, desc: data.feat1_desc },
               { title: data.feat2_title, desc: data.feat2_desc },
@@ -46,10 +51,23 @@ import data from '../../data/stavajici-dum.json';
               </div>
             ))}
           </div>
+
+          <figure class="order-5 max-w-sm lg:mt-8">
+            <img src="/images/ilustrace/tc-stary-dum-zelen.webp" width="768" height="1024" loading="lazy"
+                 alt="Tepelné čerpadlo BoxAir u staršího rodinného domu"
+                 class="rounded-2xl w-full object-cover" />
+            <figcaption class="mt-2.5 text-sm text-charcoal-400">
+              Venkovní jednotka u staršího domu — na betonový základ, bez zásahu do fasády.
+            </figcaption>
+          </figure>
         </div>
 
-        <div class="space-y-6">
-          <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
+        <div class="contents lg:block lg:space-y-6">
+          <img src="/images/hero/stary-kotel.webp" width="1000" height="750" loading="lazy"
+               alt="Výměna starého kotle za tepelné čerpadlo"
+               class="order-2 rounded-2xl w-full object-cover" />
+
+          <div class="order-4 bg-gray-50 rounded-xl p-7 border border-gray-200">
             <h3 class="font-bold text-charcoal-900 mb-5">{data.comparison_headline}</h3>
             <div class="space-y-3">
               {[
@@ -74,16 +92,7 @@ import data from '../../data/stavajici-dum.json';
             <p class="text-xs text-charcoal-400 mt-4">{data.comparison_footnote}</p>
           </div>
 
-          <figure class="max-w-sm mx-auto">
-            <img src="/images/ilustrace/tc-stary-dum-zelen.webp" width="768" height="1024" loading="lazy"
-                 alt="Tepelné čerpadlo BoxAir u staršího rodinného domu"
-                 class="rounded-2xl w-full object-cover" />
-            <figcaption class="mt-2.5 text-sm text-charcoal-400">
-              Venkovní jednotka u staršího domu — na betonový základ, bez zásahu do fasády.
-            </figcaption>
-          </figure>
-
-          <div class="bg-navy-700 rounded-xl p-6 text-white">
+          <div class="order-6 bg-navy-700 rounded-xl p-6 text-white">
             <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-2">{data.tip_label}</div>
             <p class="text-sm text-navy-100 leading-relaxed">{data.tip_text}</p>
             <a href="/dotace" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-300 hover:text-brand-300 mt-3">
