@@ -22,6 +22,10 @@ import data from '../../data/stavajici-dum.json';
             <p>{data.intro_text2}</p>
           </div>
 
+          <img src="/images/hero/stary-kotel.webp" width="1000" height="750" loading="lazy"
+               alt="Výměna starého kotle za tepelné čerpadlo"
+               class="rounded-2xl w-full object-cover mt-8" />
+
           <div class="mt-8 space-y-4">
             {[
               { title: data.feat1_title, desc: data.feat1_desc },
@@ -42,19 +46,9 @@ import data from '../../data/stavajici-dum.json';
               </div>
             ))}
           </div>
-
-          <figure class="mt-8 max-w-sm">
-            <img src="/images/ilustrace/tc-stary-dum-zelen.webp" width="768" height="1024" loading="lazy"
-                 alt="Tepelné čerpadlo BoxAir u staršího rodinného domu"
-                 class="rounded-2xl w-full object-cover" />
-            <figcaption class="mt-2.5 text-sm text-charcoal-400">
-              Venkovní jednotka u staršího domu — na betonový základ, bez zásahu do fasády.
-            </figcaption>
-          </figure>
         </div>
 
         <div class="space-y-6">
-          <img src="/images/hero/stary-kotel.webp" alt="Výměna starého kotle za tepelné čerpadlo" class="rounded-2xl w-full object-cover" loading="lazy" />
           <div class="bg-gray-50 rounded-xl p-7 border border-gray-200">
             <h3 class="font-bold text-charcoal-900 mb-5">{data.comparison_headline}</h3>
             <div class="space-y-3">
@@ -79,6 +73,15 @@ import data from '../../data/stavajici-dum.json';
             </div>
             <p class="text-xs text-charcoal-400 mt-4">{data.comparison_footnote}</p>
           </div>
+
+          <figure class="max-w-sm mx-auto">
+            <img src="/images/ilustrace/tc-stary-dum-zelen.webp" width="768" height="1024" loading="lazy"
+                 alt="Tepelné čerpadlo BoxAir u staršího rodinného domu"
+                 class="rounded-2xl w-full object-cover" />
+            <figcaption class="mt-2.5 text-sm text-charcoal-400">
+              Venkovní jednotka u staršího domu — na betonový základ, bez zásahu do fasády.
+            </figcaption>
+          </figure>
 
           <div class="bg-navy-700 rounded-xl p-6 text-white">
             <div class="text-brand-300 text-xs font-semibold uppercase tracking-wider mb-2">{data.tip_label}</div>
