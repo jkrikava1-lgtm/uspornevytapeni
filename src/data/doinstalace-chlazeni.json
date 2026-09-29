@@ -16,8 +16,8 @@
   "fancoil_points": [
     "Fancoil lze umístit nad dveře nebo zabudovat do podhledu, pokud v místnosti je.",
     "Ke každému fancoilu se musí dodatečně natáhnout měděné potrubí a každý chladící okruh má vlastní oběhové čerpadlo.",
-    "Počítejte i s malým odpadním potrubím pro odvod kondenzátu — v hotovém domě je to nejpracnější část.",
-    "Investice cca 20 000 Kč za místnost."
+    "Nejpracnější je odvod kondenzátu. V novostavbě se malé odpadní potrubí zakreslí do projektu a položí s ostatními rozvody, v hotovém domě se pro něj musí hledat cesta.",
+    "Investice cca 35 000 Kč za místnost — víc než v novostavbě právě kvůli dodatečným rozvodům a odvodu kondenzátu."
   ],
   "tip_box": "Nevíte, jestli vaše čerpadlo reverzní chod umí? Napište nám model — zjistíme to a rovnou navrhneme, jak by chlazení ve vašem domě vypadalo: podlahou, fancoily, nebo jejich kombinací.",
   "cta_button": "Zpracujte mi nabídku"
