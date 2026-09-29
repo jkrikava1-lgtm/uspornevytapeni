@@ -2,6 +2,12 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import data from '../../data/navrh-reseni-index.json';
+
+// Na mobilu se obě mřížky rozpadnou do jedné (`contents`), aby karta a její
+// podstránky zůstaly u sebe; `order` je prostřídá. Třídy musí být zapsané celé,
+// jinak si jich Tailwind nevšimne.
+const poradiKaret = ['order-1', 'order-3', 'order-5'];
+const poradiPodstranek = ['order-2', 'order-4', 'order-6'];
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
@@ -15,62 +21,51 @@ import data from '../../data/navrh-reseni-index.json';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-charcoal-600 text-sm leading-relaxed max-w-3xl mb-10">Tepelné čerpadlo je investice na desítky let. Proto je důležité vybrat správný typ a konfiguraci systému přesně podle vašeho domu. Pomůžeme vám s výběrem — ať stavíte nový dům, rekonstruujete vytápění ve stávajícím, nebo potřebujete řešení pro větší objekt.</p>
 
-      <!-- 3 hlavní karty -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 gap-4 md:block">
+      <!-- Hlavní karty — vlastní mřížka, aby se všechny tři srovnaly na stejnou výšku -->
+      <div class="contents md:grid md:grid-cols-3 md:gap-8">
         {data.typ_objektu_cards.map((card, ci) => (
-          <div class="flex flex-col items-center">
-            <!-- Hlavní karta -->
-            <a href={card.href} class="group bg-white rounded-xl border border-gray-200 hover:border-brand-300 hover:shadow-lg transition-all overflow-hidden w-full">
-              <img src={card.img} alt={card.title} class="w-full h-52 object-cover object-[center_15%]" loading="lazy" />
-              <div class="p-7">
-                <h3 class="text-lg font-bold text-charcoal-900 mb-2 group-hover:text-brand-500 transition-colors">{card.title}</h3>
-                <p class="text-sm text-charcoal-500 leading-relaxed mb-3">{card.desc}</p>
-                <span class="text-sm font-semibold text-brand-500 flex items-center gap-1">
-                  {data.link_more}
-                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                  </svg>
-                </span>
-              </div>
-            </a>
-
-            <!-- Podstrom s vlákny -->
-            {card.children && card.children.length > 0 && (
-              <div class="flex flex-col items-center w-full">
-                {card.children.map((child, i) => (
-                  <Fragment>
-                    <div class="w-px h-4 bg-gray-200"></div>
-                    <a href={child.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
-                      <img src={child.icon_img} alt={child.title} class="w-8 h-8 object-contain flex-shrink-0" />
-                      <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{child.title}</span>
-                      <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                    </a>
-                  </Fragment>
-                ))}
-                <!-- Vlákno dolů ke kombinaci -->
-                <div class="w-px h-4 bg-gray-200"></div>
-              </div>
-            )}
-          </div>
+          <a
+            href={card.href}
+            class:list={['group flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:border-brand-300 hover:shadow-lg', poradiKaret[ci]]}
+          >
+            <img src={card.img} alt={card.title} class="h-52 w-full object-cover object-[center_15%]" loading="lazy" />
+            <div class="flex flex-1 flex-col p-7">
+              <h3 class="mb-2 text-lg font-bold text-charcoal-900 transition-colors group-hover:text-brand-500">{card.title}</h3>
+              <p class="mb-3 text-sm leading-relaxed text-charcoal-500">{card.desc}</p>
+              {/* mt-auto drží odkaz u dolní hrany i u kratšího popisu */}
+              <span class="mt-auto flex items-center gap-1 text-sm font-semibold text-brand-500">
+                {data.link_more}
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
         ))}
       </div>
 
-      <!-- Sdílený blok Kombinace okruhů — přes dva sloupce -->
-      {data.shared_link && (
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="md:col-span-2">
-            <a href={data.shared_link.href} class="group flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3.5 border border-gray-200 hover:bg-white hover:border-brand-300 hover:shadow-md transition-all w-full">
-              <img src={data.shared_link.icon_img} alt={data.shared_link.title} class="w-8 h-8 object-contain flex-shrink-0" />
-              <span class="text-sm font-semibold text-charcoal-700 group-hover:text-brand-500 transition-colors flex-1">{data.shared_link.title}</span>
-              <svg class="w-3.5 h-3.5 text-charcoal-300 group-hover:text-brand-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </a>
+      <!-- Podstránky pod každou větví; kombinace okruhů patří do obou -->
+      <div class="contents md:mt-3 md:grid md:grid-cols-3 md:gap-8">
+        {data.typ_objektu_cards.map((card, ci) => (
+          <div class="contents md:flex md:flex-col md:gap-3">
+            {[...(card.children ?? []), ...(card.children?.length && data.shared_link ? [data.shared_link] : [])].map(item => (
+              <a
+                href={item.href}
+                class:list={['group flex items-center gap-3 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 transition-all hover:border-brand-300 hover:bg-white hover:shadow-md', poradiPodstranek[ci]]}
+              >
+                <img src={item.icon_img} alt={item.title} class="w-8 h-8 object-contain flex-shrink-0" />
+                <span class="flex-1 text-sm font-semibold text-charcoal-700 transition-colors group-hover:text-brand-500">{item.title}</span>
+                <svg class="w-3.5 h-3.5 flex-shrink-0 text-charcoal-300 transition-all group-hover:translate-x-0.5 group-hover:text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            ))}
           </div>
-          <div></div>
-        </div>
-      )}
+        ))}
+      </div>
+      </div>
 
     </div>
-  </section>
+  </article>
 
   <!-- Jak probíhá návrh -->
   <section class="py-12 lg:py-16">
@@ -108,5 +103,5 @@ import data from '../../data/navrh-reseni-index.json';
       <p class="text-charcoal-500 mb-8">{data.cta_text}</p>
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
-  </article>
+  </section>
 </Layout>
