@@ -45,43 +45,49 @@
       "id": "10",
       "popis": "1 deska, bez žeber",
       "poznamka": "Nejmenší hloubka, nejnižší výkon. Hodí se tam, kde je málo místa.",
-      "rez": "D",
-      "hloubka": 47
+      "hloubka": 47,
+      "obr_w": 1879,
+      "obr_h": 163
     },
     {
       "id": "11",
       "popis": "1 deska + 1 řada žeber",
       "poznamka": "Štíhlý radiátor s jednou konvekční plochou navíc.",
-      "rez": "DZ",
-      "hloubka": 63
+      "hloubka": 63,
+      "obr_w": 1873,
+      "obr_h": 246
     },
     {
       "id": "20",
       "popis": "2 desky, bez žeber",
       "poznamka": "Dvě desky bez žeber — hladký vzhled, střední výkon.",
-      "rez": "D_D",
-      "hloubka": 66
+      "hloubka": 66,
+      "obr_w": 1879,
+      "obr_h": 248
     },
     {
       "id": "21",
       "popis": "2 desky + 1 řada žeber",
       "poznamka": "Dvě desky s jednou řadou žeber.",
-      "rez": "DZD",
-      "hloubka": 66
+      "hloubka": 66,
+      "obr_w": 1876,
+      "obr_h": 255
     },
     {
       "id": "22",
       "popis": "2 desky + 2 řady žeber",
       "poznamka": "Nejčastěji instalovaný typ v rodinných domech.",
-      "rez": "DZZD",
-      "hloubka": 100
+      "hloubka": 100,
+      "obr_w": 1886,
+      "obr_h": 340
     },
     {
       "id": "33",
       "popis": "3 desky + 3 řady žeber",
       "poznamka": "Největší výkon při stejné výšce i délce — časté řešení při přechodu na tepelné čerpadlo.",
-      "rez": "DZDZDZ",
-      "hloubka": 155
+      "hloubka": 155,
+      "obr_w": 1811,
+      "obr_h": 440
     }
   ],
   "radik_vykony": {
@@ -963,7 +969,6 @@
     ]
   },
   "radik_hloubka_label": "hloubka",
-  "radik_legenda_deska": "vodní deska",
-  "radik_legenda_zebra": "konvekční žebra",
-  "radik_rez_popis": "Schéma je vodorovný řez tělesem — zeď je vpravo."
+  "radik_rez_popis": "Vodorovný řez tělesem, kóta udává hloubku v mm.",
+  "radik_kresba_zdroj": "Kresba: KORADO, a.s., katalog RADIK."
 }
