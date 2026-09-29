@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import data from '../../data/radiatory.json';
+import RadikTabulka from '../../components/RadikTabulka.astro';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
@@ -28,7 +29,12 @@ import data from '../../data/radiatory.json';
           </p>
         </div>
 
-        <p class="text-charcoal-600 leading-relaxed">
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.tabulka_title}</h2>
+        <p class="text-charcoal-600 leading-relaxed mb-6">{data.tabulka_intro}</p>
+
+        <RadikTabulka />
+
+        <p class="text-charcoal-600 leading-relaxed mt-10">
           {data.outro}
         </p>
       </div>
