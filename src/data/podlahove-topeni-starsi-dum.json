@@ -1,10 +1,10 @@
 {
   "meta_title": "Podlahové topení ve starším domě",
-  "meta_description": "Jak doinstalovat podlahové topení ve starším domě bez rozsáhlé rekonstrukce? Suchý systém, nízké náklady, kombinace s radiátory. Postup krok za krokem.",
+  "meta_description": "Tři cesty, jak dodělat podlahovku ve starším domě: vybourat podlahu, nebo položit suchý systém či Spider přímo na stávající podlahu od 27 mm. Výšky, ceny i omezení.",
   "hero_title": "Podlahové topení ve starším domě",
   "hero_subtitle": "Jak doinstalovat podlahovku, když máte podlahy hotové.",
   "intro1": "Podlahové topení je, díky teplotám topné vody se kterými pracuje, pro tepelné čerpadlo nejvhodnější.",
-  "intro2": "Jak ale podlahové topení dodělat, když mám podlahy už hotové? Není to úplně jednoduché, ale lze to:",
+  "intro2": "Jak ale podlahové topení dodělat, když mám podlahy už hotové? Cesty jsou tři. Jedna znamená vybourat podlahu a postavit ji znovu, další dvě se pokládají na to, co máte.",
   "steps": [
     "Pokud není známé přesné složení podlahy, udělá se do podlahy sonda — otvor. Díky této sondě zjistíme skladbu podlahy a její výšku.",
     "Pro podlahové topení je ideální výška cca 22 cm. Skladba: hydroizolace (1 cm), tepelná izolace (10 cm polystyrenu, nebo 6 cm polyuretanu), systémová deska s topením (32–55 mm), betonový potěr (5–6 cm) nebo anhydrit (3–4 cm), krytina.",
@@ -18,5 +18,72 @@
   "note": "Ne každý se do rekonstrukce tohoto typu pustí, nicméně jde to a budete odměněni příjemnou a rovnoměrně rozvrstvenou teplotou v domě.",
   "cta_button": "Zpracujte mi nabídku",
   "skladba_title": "Kolik to sebere z výšky místnosti",
-  "skladba_intro": "Skladba z kroku 2 v řezu. Podle použitých materiálů vyjde podlaha na 16 až 22 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný."
+  "skladba_intro": "Skladba z kroku 2 v řezu. Podle použitých materiálů vyjde podlaha na 16 až 22 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný.",
+  "porovnani_title": "Tři cesty ve zkratce",
+  "porovnani_hlavicka": [
+    "",
+    "Klasická cesta",
+    "Suchý systém",
+    "Spider"
+  ],
+  "porovnani_radky": [
+    [
+      "Stavební výška",
+      "16–22 cm",
+      "3,0–5,3 cm",
+      "2,7 cm"
+    ],
+    [
+      "Bourá se původní podlaha",
+      "ano",
+      "ne",
+      "ne"
+    ],
+    [
+      "Systémová deska",
+      "373 Kč/m²",
+      "1 317 Kč/m²",
+      "617 Kč/m²"
+    ],
+    [
+      "Mokrý proces",
+      "beton nebo anhydrit",
+      "žádný",
+      "samonivelační hmota"
+    ],
+    [
+      "První zátop",
+      "po vyzrání potěru",
+      "ihned po montáži",
+      "nejdříve po 7 dnech"
+    ],
+    [
+      "Zateplí zároveň podlahu",
+      "ano",
+      "ne",
+      "ne"
+    ]
+  ],
+  "porovnani_pozn": "Ceny jsou za systémovou desku, ve které je mezi variantami hlavní rozdíl — ostatní komponenty vyjdou přibližně stejně. U klasické cesty proti tomu připočtěte bourání, odvoz suti, izolaci, betonáž a týdny schnutí.",
+  "suchy_title": "Suchý systém — položí se na stávající podlahu",
+  "suchy_text1": "Systémová izolační deska s hliníkovým plechem se pokládá přímo na původní podlahu. Nic se nebourá a nic se nezalévá. Trubku zakryjeme buď dvěma vrstvami roznášecího plechu (celkem 30 mm), nebo dvěma vrstvami sádrovláknitých desek Fermacell či Cetris (celkem 53 mm). Na to už jde rovnou plovoucí podlaha, vinyl, linoleum i dlažba.",
+  "suchy_body": [
+    "Skladba je lehká, takže se hodí i na dřevěné stropy a do půdních vestaveb, kde beton nepřipadá v úvahu.",
+    "Montáž je rychlá a čistá, není potřeba žádné speciální nářadí.",
+    "Systém má menší tepelnou setrvačnost než beton — rychleji reguluje a zatopit můžete hned po montáži.",
+    "Trubka se pokládá pouze do meandru, ne do spirály.",
+    "Podklad musí být rovný, čistý a v niveletě. Nerovnosti je třeba předem vyrovnat."
+  ],
+  "spider_title": "Spider — nejnižší stavební výška",
+  "spider_text1": "Samolepicí deska vysoká 22 mm se nalepí na původní podlahu, do ní se vloží trubka a celé se to zalije samonivelační hmotou. Ta musí horní hranu desky překrýt aspoň o 5 mm, takže celková výška vyjde na 27 mm. Je to nejnižší skladba, jakou umíme — a zvládne i koupelnu.",
+  "spider_body": [
+    "Trubka 16×2 dovolí okruhy až 100 m. To znamená méně vývodů z rozdělovače a nižší tlakovou ztrátu než u systémů s tenčí trubkou.",
+    "Zalévání samonivelační hmotou dělají specializované firmy — my ho neprovádíme. Montáž desek a trubek zajistíme, na zálivku doporučíme partnera.",
+    "První zátop je možný nejdříve za 7 dní. Následuje topná zkouška podle ČSN EN 1264-4 a teprve po ní se pokládá nášlapná vrstva.",
+    "Nepřerušená plocha může mít nejvýše 40 m² a nejdelší strana 8 m, jinak je potřeba dilatační spára.",
+    "Podlaha unese 200 kg/m², což pro běžný byt i dům stačí."
+  ],
+  "limit_title": "Kdy se bourání nevyhnete",
+  "limit_text": "Obě nízké skladby leží na původní podlaze a nijak ji nezateplují. Norma ČSN EN 1264-4 přitom požaduje, aby tepelný odpor podkladu vyhovoval — jinak půjde velká část tepla dolů místo do místnosti. Pokud tedy máte pod sebou nezateplenou desku na terénu, suchý systém ani Spider problém nevyřeší a je potřeba jít klasickou cestou. Posoudíme to sondou ještě před rozhodnutím.",
+  "klasika_title": "Klasická cesta — vybourat a postavit znovu"
 }
