@@ -281,6 +281,12 @@
 
 <!-- Controls -->
 <div class="controls">
+  <span class="ctrl-label">Model</span>
+  <div class="btn-group" id="model-btns">
+    <button class="btn active" onclick="setModel('BA22I')">BoxAir 22I</button>
+    <button class="btn" onclick="setModel('BA30I')">BoxAir 30I</button>
+    <button class="btn" onclick="setModel('BA45I')">BoxAir 45I</button>
+  </div>
   <span class="ctrl-label">Otáčky</span>
   <div class="btn-group" id="rps-btns">
     <button class="btn active" onclick="setRps(30)">30 otáček/s</button>
@@ -316,37 +322,106 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>
 const DATA = {
-  30: [
-    { db:15, wb:11, tv35:{kwt:10.3,kwe:1.5}, tv45:{kwt:9.7,kwe:1.9},  tv55:{kwt:9.0,kwe:2.4} },
-    { db:10, wb:8,  tv35:{kwt:9.1,kwe:1.6},  tv45:{kwt:8.6,kwe:1.9},  tv55:{kwt:8.0,kwe:2.4} },
-    { db:7,  wb:6,  tv35:{kwt:8.3,kwe:1.6},  tv45:{kwt:7.8,kwe:1.9},  tv55:{kwt:7.3,kwe:2.3} },
-    { db:2,  wb:1,  tv35:{kwt:6.3,kwe:1.5},  tv45:{kwt:6.0,kwe:1.9},  tv55:{kwt:5.7,kwe:2.2} },
-    { db:-5, wb:-6, tv35:{kwt:4.9,kwe:1.5},  tv45:{kwt:5.0,kwe:1.8},  tv55:{kwt:4.6,kwe:2.1} },
-    { db:-10,wb:-11,tv35:{kwt:4.2,kwe:1.4},  tv45:{kwt:4.3,kwe:1.7},  tv55:{kwt:4.1,kwe:2.0} },
-    { db:-15,wb:-16,tv35:{kwt:3.5,kwe:1.4},  tv45:{kwt:3.8,kwe:1.6},  tv55:{kwt:3.6,kwe:1.9} },
-    { db:-20,wb:-21,tv35:{kwt:2.9,kwe:1.3},  tv45:{kwt:3.3,kwe:1.5},  tv55:{kwt:3.2,kwe:1.7} },
-  ],
-  60: [
-    { db:15, wb:11, tv35:{kwt:19.1,kwe:3.2}, tv45:{kwt:17.9,kwe:3.9}, tv55:{kwt:16.6,kwe:4.6} },
-    { db:10, wb:8,  tv35:{kwt:16.9,kwe:3.2}, tv45:{kwt:15.9,kwe:3.8}, tv55:{kwt:14.8,kwe:4.5} },
-    { db:7,  wb:6,  tv35:{kwt:15.4,kwe:3.2}, tv45:{kwt:14.5,kwe:3.8}, tv55:{kwt:13.6,kwe:4.5} },
-    { db:2,  wb:1,  tv35:{kwt:10.6,kwe:3.0}, tv45:{kwt:10.3,kwe:3.6}, tv55:{kwt:9.9,kwe:4.2} },
-    { db:-5, wb:-6, tv35:{kwt:8.3,kwe:2.9},  tv45:{kwt:8.2,kwe:3.4},  tv55:{kwt:8.1,kwe:3.9} },
-    { db:-10,wb:-11,tv35:{kwt:7.2,kwe:2.8},  tv45:{kwt:7.2,kwe:3.2},  tv55:{kwt:7.2,kwe:3.7} },
-    { db:-15,wb:-16,tv35:{kwt:6.2,kwe:2.6},  tv45:{kwt:6.3,kwe:3.0},  tv55:{kwt:6.3,kwe:3.4} },
-    { db:-20,wb:-21,tv35:{kwt:5.3,kwe:2.5},  tv45:{kwt:5.6,kwe:2.8},  tv55:{kwt:5.9,kwe:3.1} },
-  ],
-  90: [
-    { db:15, wb:11, tv35:{kwt:27.6,kwe:5.6}, tv45:{kwt:26.0,kwe:6.6}, tv55:{kwt:21.7,kwe:6.9} },
-    { db:10, wb:8,  tv35:{kwt:24.6,kwe:5.5}, tv45:{kwt:23.1,kwe:6.5}, tv55:{kwt:19.4,kwe:6.7} },
-    { db:7,  wb:6,  tv35:{kwt:23.1,kwe:5.5}, tv45:{kwt:21.8,kwe:6.4}, tv55:{kwt:18.3,kwe:6.6} },
-    { db:2,  wb:1,  tv35:{kwt:16.2,kwe:5.2}, tv45:{kwt:15.6,kwe:6.1}, tv55:{kwt:13.4,kwe:6.2} },
-    { db:-5, wb:-6, tv35:{kwt:12.9,kwe:5.0}, tv45:{kwt:12.6,kwe:5.8}, tv55:{kwt:10.1,kwe:5.7} },
-    { db:-10,wb:-11,tv35:{kwt:11.3,kwe:4.7}, tv45:{kwt:11.0,kwe:5.4}, tv55:{kwt:9.7,kwe:5.5} },
-    { db:-15,wb:-16,tv35:{kwt:9.7,kwe:4.5},  tv45:{kwt:9.6,kwe:5.2},  tv55:{kwt:8.3,kwe:5.2} },
-    { db:-20,wb:-21,tv35:{kwt:8.4,kwe:4.3},  tv45:{kwt:8.5,kwe:4.9},  tv55:{kwt:7.6,kwe:4.9} },
-  ]
+  'BA22I': {
+    30: [
+      { db:15, wb:11, tv35:{kwt:3.11,kwe:0.51}, tv45:{kwt:2.94,kwe:0.65}, tv55:{kwt:2.85,kwe:0.82} },
+      { db:10, wb:8, tv35:{kwt:2.78,kwe:0.52}, tv45:{kwt:2.62,kwe:0.65}, tv55:{kwt:2.53,kwe:0.81} },
+      { db:7, wb:6, tv35:{kwt:2.55,kwe:0.52}, tv45:{kwt:2.39,kwe:0.65}, tv55:{kwt:2.31,kwe:0.79} },
+      { db:2, wb:1, tv35:{kwt:1.97,kwe:0.51}, tv45:{kwt:1.85,kwe:0.62}, tv55:{kwt:1.81,kwe:0.75} },
+      { db:-5, wb:-6, tv35:{kwt:1.57,kwe:0.49}, tv45:{kwt:1.48,kwe:0.58}, tv55:{kwt:1.45,kwe:0.69} },
+      { db:-10, wb:-11, tv35:{kwt:1.38,kwe:0.46}, tv45:{kwt:1.29,kwe:0.54}, tv55:{kwt:1.26,kwe:0.64} },
+      { db:-15, wb:-16, tv35:{kwt:1.19,kwe:0.44}, tv45:{kwt:1.1,kwe:0.5}, tv55:{kwt:1.08,kwe:0.59} },
+      { db:-20, wb:-21, tv35:{kwt:1.03,kwe:0.4}, tv45:{kwt:0.95,kwe:0.45}, tv55:{kwt:0.93,kwe:0.53} },
+    ],
+    60: [
+      { db:15, wb:11, tv35:{kwt:5.97,kwe:1}, tv45:{kwt:5.8,kwe:1.26}, tv55:{kwt:5.53,kwe:1.54} },
+      { db:10, wb:8, tv35:{kwt:5.34,kwe:1.01}, tv45:{kwt:5.19,kwe:1.25}, tv55:{kwt:4.94,kwe:1.51} },
+      { db:7, wb:6, tv35:{kwt:4.91,kwe:1.01}, tv45:{kwt:4.76,kwe:1.24}, tv55:{kwt:4.52,kwe:1.49} },
+      { db:2, wb:1, tv35:{kwt:3.79,kwe:0.98}, tv45:{kwt:3.71,kwe:1.18}, tv55:{kwt:3.56,kwe:1.4} },
+      { db:-5, wb:-6, tv35:{kwt:3.06,kwe:0.95}, tv45:{kwt:3.01,kwe:1.12}, tv55:{kwt:2.88,kwe:1.31} },
+      { db:-10, wb:-11, tv35:{kwt:2.7,kwe:0.9}, tv45:{kwt:2.66,kwe:1.05}, tv55:{kwt:2.54,kwe:1.22} },
+      { db:-15, wb:-16, tv35:{kwt:2.36,kwe:0.85}, tv45:{kwt:2.33,kwe:0.98}, tv55:{kwt:2.24,kwe:1.13} },
+      { db:-20, wb:-21, tv35:{kwt:2.09,kwe:0.79}, tv45:{kwt:2.07,kwe:0.9}, tv55:{kwt:1.99,kwe:1.03} },
+    ],
+    90: [
+      { db:15, wb:11, tv35:{kwt:9.45,kwe:1.61}, tv45:{kwt:8.97,kwe:1.97}, tv55:{kwt:8.04,kwe:2.28} },
+      { db:10, wb:8, tv35:{kwt:8.39,kwe:1.61}, tv45:{kwt:7.99,kwe:1.95}, tv55:{kwt:7.18,kwe:2.23} },
+      { db:7, wb:6, tv35:{kwt:7.66,kwe:1.6}, tv45:{kwt:7.31,kwe:1.92}, tv55:{kwt:6.59,kwe:2.19} },
+      { db:2, wb:1, tv35:{kwt:5.33,kwe:1.52}, tv45:{kwt:5.2,kwe:1.81}, tv55:{kwt:4.8,kwe:2.05} },
+      { db:-5, wb:-6, tv35:{kwt:4.2,kwe:1.42}, tv45:{kwt:4.16,kwe:1.68}, tv55:{kwt:3.91,kwe:1.89} },
+      { db:-10, wb:-11, tv35:{kwt:3.64,kwe:1.32}, tv45:{kwt:3.64,kwe:1.55}, tv55:{kwt:3.46,kwe:1.74} },
+      { db:-15, wb:-16, tv35:{kwt:3.1,kwe:1.22}, tv45:{kwt:3.14,kwe:1.42}, tv55:{kwt:3.03,kwe:1.6} },
+      { db:-20, wb:-21, tv35:{kwt:2.64,kwe:1.08}, tv45:{kwt:2.73,kwe:1.26}, tv55:{kwt:2.7,kwe:1.43} },
+    ],
+  },
+  'BA30I': {
+    30: [
+      { db:15, wb:11, tv35:{kwt:5.27,kwe:0.75}, tv45:{kwt:4.97,kwe:0.97}, tv55:{kwt:4.66,kwe:1.21} },
+      { db:10, wb:8, tv35:{kwt:4.68,kwe:0.77}, tv45:{kwt:4.41,kwe:0.97}, tv55:{kwt:4.14,kwe:1.19} },
+      { db:7, wb:6, tv35:{kwt:4.27,kwe:0.78}, tv45:{kwt:4.03,kwe:0.97}, tv55:{kwt:3.78,kwe:1.17} },
+      { db:2, wb:1, tv35:{kwt:3.25,kwe:0.76}, tv45:{kwt:3.1,kwe:0.92}, tv55:{kwt:2.95,kwe:1.11} },
+      { db:-5, wb:-6, tv35:{kwt:2.56,kwe:0.74}, tv45:{kwt:2.46,kwe:0.88}, tv55:{kwt:2.37,kwe:1.03} },
+      { db:-10, wb:-11, tv35:{kwt:2.21,kwe:0.71}, tv45:{kwt:2.14,kwe:0.82}, tv55:{kwt:2.08,kwe:0.96} },
+      { db:-15, wb:-16, tv35:{kwt:1.89,kwe:0.68}, tv45:{kwt:1.85,kwe:0.77}, tv55:{kwt:1.81,kwe:0.89} },
+      { db:-20, wb:-21, tv35:{kwt:1.61,kwe:0.64}, tv45:{kwt:1.6,kwe:0.71}, tv55:{kwt:1.59,kwe:0.8} },
+    ],
+    60: [
+      { db:15, wb:11, tv35:{kwt:10.63,kwe:1.64}, tv45:{kwt:10.12,kwe:2.04}, tv55:{kwt:9.54,kwe:2.48} },
+      { db:10, wb:8, tv35:{kwt:9.46,kwe:1.66}, tv45:{kwt:9.02,kwe:2.03}, tv55:{kwt:8.51,kwe:2.43} },
+      { db:7, wb:6, tv35:{kwt:8.65,kwe:1.67}, tv45:{kwt:8.26,kwe:2.01}, tv55:{kwt:7.79,kwe:2.39} },
+      { db:2, wb:1, tv35:{kwt:6.32,kwe:1.62}, tv45:{kwt:6.12,kwe:1.91}, tv55:{kwt:5.86,kwe:2.25} },
+      { db:-5, wb:-6, tv35:{kwt:5.01,kwe:1.57}, tv45:{kwt:4.89,kwe:1.81}, tv55:{kwt:4.74,kwe:2.09} },
+      { db:-10, wb:-11, tv35:{kwt:4.35,kwe:1.5}, tv45:{kwt:4.28,kwe:1.7}, tv55:{kwt:4.17,kwe:1.94} },
+      { db:-15, wb:-16, tv35:{kwt:3.73,kwe:1.43}, tv45:{kwt:3.7,kwe:1.59}, tv55:{kwt:3.64,kwe:1.8} },
+      { db:-20, wb:-21, tv35:{kwt:3.2,kwe:1.34}, tv45:{kwt:3.23,kwe:1.46}, tv55:{kwt:3.22,kwe:1.63} },
+    ],
+    90: [
+      { db:15, wb:11, tv35:{kwt:15.51,kwe:2.66}, tv45:{kwt:15.21,kwe:3.25}, tv55:{kwt:13.21,kwe:3.49} },
+      { db:10, wb:8, tv35:{kwt:13.97,kwe:2.67}, tv45:{kwt:13.66,kwe:3.22}, tv55:{kwt:11.81,kwe:3.42} },
+      { db:7, wb:6, tv35:{kwt:12.87,kwe:2.67}, tv45:{kwt:12.54,kwe:3.18}, tv55:{kwt:10.8,kwe:3.37} },
+      { db:2, wb:1, tv35:{kwt:9.05,kwe:2.56}, tv45:{kwt:8.91,kwe:3.02}, tv55:{kwt:8.08,kwe:3.17} },
+      { db:-5, wb:-6, tv35:{kwt:7.21,kwe:2.46}, tv45:{kwt:7.07,kwe:2.85}, tv55:{kwt:6.36,kwe:2.97} },
+      { db:-10, wb:-11, tv35:{kwt:6.24,kwe:2.34}, tv45:{kwt:6.09,kwe:2.68}, tv55:{kwt:5.41,kwe:2.78} },
+      { db:-15, wb:-16, tv35:{kwt:5.28,kwe:2.23}, tv45:{kwt:5.13,kwe:2.52}, tv55:{kwt:4.69,kwe:2.64} },
+      { db:-20, wb:-21, tv35:{kwt:4.39,kwe:2.09}, tv45:{kwt:4.22,kwe:2.34}, tv55:{kwt:3.78,kwe:2.44} },
+    ],
+  },
+  'BA45I': {
+    30: [
+      { db:15, wb:11, tv35:{kwt:10.32,kwe:1.52}, tv45:{kwt:9.67,kwe:1.94}, tv55:{kwt:8.97,kwe:2.4} },
+      { db:10, wb:8, tv35:{kwt:9.13,kwe:1.55}, tv45:{kwt:8.58,kwe:1.94}, tv55:{kwt:7.99,kwe:2.37} },
+      { db:7, wb:6, tv35:{kwt:8.3,kwe:1.57}, tv45:{kwt:7.82,kwe:1.94}, tv55:{kwt:7.31,kwe:2.34} },
+      { db:2, wb:1, tv35:{kwt:6.28,kwe:1.53}, tv45:{kwt:6.01,kwe:1.86}, tv55:{kwt:5.72,kwe:2.23} },
+      { db:-5, wb:-6, tv35:{kwt:4.88,kwe:1.5}, tv45:{kwt:4.97,kwe:1.78}, tv55:{kwt:4.63,kwe:2.1} },
+      { db:-10, wb:-11, tv35:{kwt:4.17,kwe:1.44}, tv45:{kwt:4.34,kwe:1.69}, tv55:{kwt:4.08,kwe:1.97} },
+      { db:-15, wb:-16, tv35:{kwt:3.5,kwe:1.39}, tv45:{kwt:3.81,kwe:1.6}, tv55:{kwt:3.58,kwe:1.85} },
+      { db:-20, wb:-21, tv35:{kwt:2.92,kwe:1.31}, tv45:{kwt:3.27,kwe:1.49}, tv55:{kwt:3.18,kwe:1.71} },
+    ],
+    60: [
+      { db:15, wb:11, tv35:{kwt:19.12,kwe:3.15}, tv45:{kwt:17.9,kwe:3.86}, tv55:{kwt:16.63,kwe:4.63} },
+      { db:10, wb:8, tv35:{kwt:16.91,kwe:3.17}, tv45:{kwt:15.89,kwe:3.83}, tv55:{kwt:14.82,kwe:4.54} },
+      { db:7, wb:6, tv35:{kwt:15.37,kwe:3.17}, tv45:{kwt:14.51,kwe:3.79}, tv55:{kwt:13.59,kwe:4.46} },
+      { db:2, wb:1, tv35:{kwt:10.63,kwe:3.05}, tv45:{kwt:10.28,kwe:3.6}, tv55:{kwt:9.89,kwe:4.2} },
+      { db:-5, wb:-6, tv35:{kwt:8.35,kwe:2.93}, tv45:{kwt:8.24,kwe:3.4}, tv55:{kwt:8.1,kwe:3.93} },
+      { db:-10, wb:-11, tv35:{kwt:7.23,kwe:2.78}, tv45:{kwt:7.24,kwe:3.19}, tv55:{kwt:7.23,kwe:3.66} },
+      { db:-15, wb:-16, tv35:{kwt:6.17,kwe:2.64}, tv45:{kwt:6.31,kwe:3}, tv55:{kwt:6.31,kwe:3.36} },
+      { db:-20, wb:-21, tv35:{kwt:5.31,kwe:2.46}, tv45:{kwt:5.6,kwe:2.76}, tv55:{kwt:5.87,kwe:3.12} },
+    ],
+    90: [
+      { db:15, wb:11, tv35:{kwt:27.62,kwe:5.61}, tv45:{kwt:25.96,kwe:6.65}, tv55:{kwt:21.74,kwe:6.86} },
+      { db:10, wb:8, tv35:{kwt:24.56,kwe:5.54}, tv45:{kwt:23.11,kwe:6.52}, tv55:{kwt:19.37,kwe:6.7} },
+      { db:7, wb:6, tv35:{kwt:23.12,kwe:5.49}, tv45:{kwt:21.78,kwe:6.44}, tv55:{kwt:18.27,kwe:6.61} },
+      { db:2, wb:1, tv35:{kwt:16.24,kwe:5.23}, tv45:{kwt:15.61,kwe:6.09}, tv55:{kwt:13.37,kwe:6.23} },
+      { db:-5, wb:-6, tv35:{kwt:12.91,kwe:4.98}, tv45:{kwt:12.57,kwe:5.76}, tv55:{kwt:10.09,kwe:5.69} },
+      { db:-10, wb:-11, tv35:{kwt:11.26,kwe:4.73}, tv45:{kwt:11.05,kwe:5.44}, tv55:{kwt:9.66,kwe:5.51} },
+      { db:-15, wb:-16, tv35:{kwt:9.69,kwe:4.52}, tv45:{kwt:9.64,kwe:5.16}, tv55:{kwt:8.33,kwe:5.15} },
+      { db:-20, wb:-21, tv35:{kwt:8.41,kwe:4.28}, tv45:{kwt:8.51,kwe:4.86}, tv55:{kwt:7.64,kwe:4.89} },
+    ],
+  },
 };
+
+const MODELY = ['BA22I','BA30I','BA45I'];
+let currentModel = 'BA22I';
 
 const TV_KEYS = ['tv35','tv45','tv55'];
 const TV_LABELS = ['Topná voda 35°C','Topná voda 45°C','Topná voda 55°C'];
@@ -366,12 +441,28 @@ function copColor(c) {
   return '#ff6b35';
 }
 
+function setModel(m) {
+  currentModel = m;
+  document.querySelectorAll('#model-btns .btn').forEach((b,i) => {
+    b.classList.toggle('active', MODELY[i] === m);
+  });
+  updateBadge();
+  updateSummary();
+  if (currentView === 'table') renderTable();
+  else renderChart();
+}
+
+function updateBadge() {
+  const otacky = currentRps === 'all' ? 'všechny otáčky' : currentRps + ' otáček/s';
+  document.getElementById('rps-badge').textContent = 'BoxAir ' + currentModel.replace('BA','') + ' · ' + otacky;
+}
+
 function setRps(rps) {
   currentRps = rps;
   document.querySelectorAll('#rps-btns .btn').forEach((b,i) => {
     b.classList.toggle('active', [30,60,90,'all'][i] === rps);
   });
-  document.getElementById('rps-badge').textContent = rps === 'all' ? 'Všechny otáčky' : rps + 'all';
+  updateBadge();
   updateSummary();
   if (currentView === 'table') renderTable();
   else renderChart();
@@ -388,7 +479,7 @@ function setView(v) {
 
 function getAllRows() {
   const rpsKeys = currentRps === 'all' ? [30,60,90] : [currentRps];
-  return rpsKeys.flatMap(r => DATA[r].map(row => ({...row, rps: r})));
+  return rpsKeys.flatMap(r => DATA[currentModel][r].map(row => ({...row, rps: r})));
 }
 
 function updateSummary() {
@@ -424,7 +515,7 @@ function renderTable() {
 
   let html = '';
   rpsKeys.forEach(rps => {
-    const rows = DATA[rps];
+    const rows = DATA[currentModel][rps];
     if (currentRps === 'all') {
       html += `<div style="padding:10px 20px 4px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--border);background:rgba(255,255,255,0.015)">${rps} otáček/s</div>`;
     }
@@ -466,7 +557,7 @@ function renderChart() {
   if (chartInstance) chartInstance.destroy();
 
   const rpsKeys = currentRps === 'all' ? [30,60,90] : [currentRps];
-  const labels = DATA[30].map(r => `${r.db}°C`);
+  const labels = DATA[currentModel][30].map(r => `${r.db}°C`);
   const datasets = [];
 
   rpsKeys.forEach(rps => {
@@ -476,7 +567,7 @@ function renderChart() {
       const opacity = rps === 30 ? 'ff' : rps === 60 ? 'cc' : '99';
       datasets.push({
         label: `${TV_LABELS[ti]} · ${rps}rps`,
-        data: DATA[rps].map(r => r[tv].kwt),
+        data: DATA[currentModel][rps].map(r => r[tv].kwt),
         borderColor: color + opacity,
         backgroundColor: color + '18',
         borderWidth: 2,
@@ -514,7 +605,8 @@ function renderChart() {
         },
         y: {
           min: 0,
-          max: 30,
+          suggestedMax: Math.ceil(Math.max(...Object.values(DATA[currentModel])
+            .flat().flatMap(r => TV_KEYS.map(k => r[k].kwt))) / 5) * 5,
           grid: { color: '#2a3347' },
           ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } },
           title: { display: true, text: 'Topný výkon (kW)', color: '#7a8899', font: { size: 11 } }
@@ -533,6 +625,7 @@ function renderChart() {
 }
 
 // Init
+updateBadge();
 updateSummary();
 renderTable();
 </script>
