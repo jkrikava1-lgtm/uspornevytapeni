@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import data from '../../data/velikost-radiatoru.json';
+import radik from '../../data/radik-klasik.json';
+import RadikTabulka from '../../components/RadikTabulka.astro';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
@@ -33,7 +35,12 @@ import data from '../../data/velikost-radiatoru.json';
           ))}
         </div>
 
-        <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.alt_title}</h2>
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-4">{radik.radik_title}</h2>
+        <p class="text-charcoal-600 leading-relaxed mb-6">{radik.radik_intro}</p>
+
+        <RadikTabulka />
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-4">{data.alt_title}</h2>
         <p class="text-charcoal-600 leading-relaxed mb-4">
           {data.alt_intro}
         </p>

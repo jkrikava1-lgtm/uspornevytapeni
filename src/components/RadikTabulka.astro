@@ -1,0 +1,230 @@
+---
+import data from '../data/radik-klasik.json';
+
+const vysky = data.radik_vysky;
+const delky = data.radik_delky;
+const vychozi = data.radik_vychozi;
+
+// Mezera po tisících jako pevná — číslo se nesmí zlomit na konec řádku.
+const cislo = (v: number | null) => (v == null ? '–' : String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ' '));
+
+const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)[vychozi];
+---
+
+<div class="radik" data-radik data-ok={data.radik_vysledek_ok} data-nic={data.radik_vysledek_nic}>
+  <!-- volba typu -->
+  <div class="flex flex-wrap gap-2" role="group" aria-label="Typ radiátoru">
+    {data.radik_typy.map(t => (
+      <button
+        type="button"
+        data-typ={t.id}
+        data-poznamka={t.poznamka}
+        aria-pressed={t.id === vychozi ? 'true' : 'false'}
+        class="radik-tab flex-1 min-w-[104px] rounded-lg border px-3 py-2 text-left transition-colors"
+      >
+        <span class="block text-sm font-bold">Typ {t.id}</span>
+        <span class="block text-[11px] leading-snug opacity-80">{t.popis}</span>
+      </button>
+    ))}
+  </div>
+
+  <p class="mt-3 text-sm text-charcoal-500" data-radik-poznamka>
+    {data.radik_typy.find(t => t.id === vychozi)?.poznamka}
+  </p>
+
+  <!-- filtr podle potřebného výkonu -->
+  <div class="mt-5 rounded-xl border border-gray-200 bg-gray-50 p-4 sm:p-5">
+    <label for="radik-vykon" class="block text-sm font-semibold text-charcoal-800">
+      {data.radik_vstup_label}
+    </label>
+    <div class="mt-2 flex flex-wrap items-center gap-2">
+      <div class="relative">
+        <input
+          id="radik-vykon"
+          type="number"
+          inputmode="numeric"
+          min="50"
+          max="5000"
+          step="10"
+          placeholder={data.radik_vstup_placeholder}
+          aria-describedby="radik-vysledek"
+          class="w-36 rounded-md border border-gray-300 bg-white py-2 pl-3 pr-9 text-sm text-charcoal-900 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+        />
+        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-charcoal-400">W</span>
+      </div>
+      <button
+        type="button"
+        data-radik-reset
+        class="hidden rounded-md px-3 py-2 text-sm font-semibold text-charcoal-500 underline-offset-2 hover:text-brand-500 hover:underline"
+      >
+        {data.radik_reset}
+      </button>
+    </div>
+    <p id="radik-vysledek" aria-live="polite" class="mt-2 text-sm text-charcoal-500" data-radik-vysledek>{data.radik_vstup_hint}</p>
+  </div>
+
+  <!-- tabulka -->
+  <div class="mt-5 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+    <table class="w-full min-w-[520px] border-collapse text-sm">
+      <caption class="sr-only">
+        Tepelné výkony radiátorů RADIK KLASIK ve wattech podle výšky a délky, teplotní spád 55/45/20 °C
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col" rowspan="2" class="radik-rohova sticky left-0 z-10 bg-navy-700 px-3 py-2 text-left align-bottom text-xs font-semibold text-white">
+            {data.radik_hlavicka_delka}<span class="block font-normal opacity-70">[mm]</span>
+          </th>
+          <th scope="colgroup" colspan={vysky.length} class="bg-navy-700 px-3 py-2 text-center text-xs font-semibold uppercase tracking-wider text-white">
+            {data.radik_hlavicka_vyska}
+          </th>
+        </tr>
+        <tr>
+          {vysky.map(h => (
+            <th scope="col" class="bg-navy-700 px-3 py-2 text-right text-xs font-semibold text-white">{h}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {delky.map((d, i) => (
+          <tr class="border-b border-gray-100 last:border-0 odd:bg-white even:bg-gray-50/70">
+            <th scope="row" class="radik-delka sticky left-0 z-10 px-3 py-1.5 text-left text-xs font-bold text-charcoal-800">
+              {cislo(d)}
+            </th>
+            {vysky.map((_, j) => {
+              const v = vychoziVykony[i][j];
+              return (
+                <td class="radik-bunka px-3 py-1.5 text-right tabular-nums" data-w={v ?? ''}>{cislo(v)}</td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 sm:p-5">
+    <div class="text-xs font-semibold uppercase tracking-wider text-amber-700">{data.radik_pozn_title}</div>
+    <p class="mt-1.5 text-sm leading-relaxed text-charcoal-700">{data.radik_pozn_text}</p>
+  </div>
+
+  <p class="mt-3 text-xs text-charcoal-400">{data.radik_zdroj}</p>
+
+  <script is:inline type="application/json" data-radik-data set:html={JSON.stringify(data.radik_vykony)} />
+</div>
+
+<style>
+  /* Přebarvení vlastními třídami, ať se stavy dají přepínat z JS jedním atributem. */
+  .radik-tab {
+    border-color: var(--color-gray-200);
+    background: #fff;
+    color: var(--color-charcoal-600);
+  }
+  .radik-tab:hover {
+    border-color: var(--color-brand-300);
+    color: var(--color-brand-500);
+  }
+  .radik-tab[aria-pressed='true'] {
+    border-color: var(--color-brand-500);
+    background: var(--color-brand-500);
+    color: #fff;
+  }
+
+  /* Ulepená první sloupec musí mít vlastní pozadí, jinak přes něj prosvítají buňky. */
+  .radik-delka {
+    background: inherit;
+  }
+  tr:nth-child(odd) > .radik-delka {
+    background: #fff;
+  }
+  tr:nth-child(even) > .radik-delka {
+    background: color-mix(in srgb, var(--color-gray-50) 70%, #fff);
+  }
+
+  .radik-bunka {
+    color: var(--color-charcoal-700);
+  }
+  .radik-bunka[data-w=''] {
+    color: var(--color-charcoal-300);
+  }
+  /* Filtr je aktivní: vyhovující buňky zvýraznit, ostatní potlačit. */
+  .radik[data-filtr] .radik-bunka {
+    color: var(--color-charcoal-300);
+  }
+  .radik[data-filtr] .radik-bunka[data-staci] {
+    background: var(--color-brand-50);
+    color: var(--color-brand-600);
+    font-weight: 700;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-radik]').forEach(root => {
+    const zdroj = root.querySelector('[data-radik-data]');
+    if (!zdroj) return;
+
+    const vykony: Record<string, (number | null)[][]> = JSON.parse(zdroj.textContent || '{}');
+    const radky = Array.from(root.querySelectorAll('tbody tr'));
+    const vstup = root.querySelector<HTMLInputElement>('#radik-vykon');
+    const reset = root.querySelector<HTMLButtonElement>('[data-radik-reset]');
+    const vysledek = root.querySelector<HTMLElement>('[data-radik-vysledek]');
+    const poznamka = root.querySelector<HTMLElement>('[data-radik-poznamka]');
+    const taby = Array.from(root.querySelectorAll<HTMLButtonElement>('.radik-tab'));
+
+    const hint = vysledek?.textContent || '';
+    const sablonaOk = root.dataset.ok || '';
+    const sablonaNic = root.dataset.nic || '';
+    const cislo = (v: number | null) => (v == null ? '–' : String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ' '));
+
+    function vykresli(typ: string) {
+      const m = vykony[typ];
+      if (!m) return;
+      radky.forEach((tr, i) => {
+        tr.querySelectorAll<HTMLElement>('.radik-bunka').forEach((td, j) => {
+          const v = m[i][j];
+          td.textContent = cislo(v);
+          td.dataset.w = v == null ? '' : String(v);
+        });
+      });
+      zvyrazni();
+    }
+
+    function zvyrazni() {
+      const potreba = Number(vstup?.value);
+      const aktivni = Number.isFinite(potreba) && potreba > 0;
+      let vyhovuje = 0;
+
+      root.querySelectorAll<HTMLElement>('.radik-bunka').forEach(td => {
+        const w = Number(td.dataset.w);
+        const ok = aktivni && td.dataset.w !== '' && w >= potreba;
+        if (ok) {
+          td.dataset.staci = '';
+          vyhovuje++;
+        } else {
+          delete td.dataset.staci;
+        }
+      });
+
+      if (aktivni) root.dataset.filtr = '';
+      else delete root.dataset.filtr;
+
+      reset?.classList.toggle('hidden', !aktivni);
+      if (!vysledek) return;
+      if (!aktivni) vysledek.textContent = hint;
+      else vysledek.textContent = (vyhovuje ? sablonaOk : sablonaNic).replace('{W}', cislo(potreba));
+    }
+
+    taby.forEach(tab => {
+      tab.addEventListener('click', () => {
+        taby.forEach(t => t.setAttribute('aria-pressed', String(t === tab)));
+        if (poznamka) poznamka.textContent = tab.dataset.poznamka || '';
+        vykresli(tab.dataset.typ || '');
+      });
+    });
+
+    vstup?.addEventListener('input', zvyrazni);
+    reset?.addEventListener('click', () => {
+      if (vstup) vstup.value = '';
+      zvyrazni();
+    });
+  });
+</script>
