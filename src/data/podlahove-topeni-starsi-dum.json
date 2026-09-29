@@ -18,7 +18,7 @@
   "note": "Ne každý se do rekonstrukce tohoto typu pustí, nicméně jde to a budete odměněni příjemnou a rovnoměrně rozvrstvenou teplotou v domě.",
   "cta_button": "Zpracujte mi nabídku",
   "skladba_title": "Kolik to sebere z výšky místnosti",
-  "skladba_intro": "Skladba z kroku 2 v řezu. Podle použitých materiálů vyjde podlaha na 16 až 22 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný.",
+  "skladba_intro": "Skladba z kroku 2 v řezu, tedy podlaha na desce na terénu. Podle použitých materiálů vyjde na 16 až 22 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný. V patře nad vytápěným prostorem tepelná izolace odpadá a skladba je o 6 až 10 cm nižší.",
   "porovnani_title": "Tři cesty ve zkratce",
   "porovnani_hlavicka": [
     "",
@@ -56,15 +56,9 @@
       "po vyzrání potěru",
       "ihned po montáži",
       "nejdříve po 7 dnech"
-    ],
-    [
-      "Izolace podlahy",
-      "součást skladby",
-      "doplní se pod systém",
-      "doplní se pod systém"
     ]
   ],
-  "porovnani_pozn": "Ceny jsou za systémovou desku, ve které je mezi variantami hlavní rozdíl — ostatní komponenty vyjdou přibližně stejně. U klasické cesty proti tomu připočtěte bourání, odvoz suti, izolaci, betonáž a týdny schnutí.",
+  "porovnani_pozn": "Ceny jsou za systémovou desku, ve které je mezi variantami hlavní rozdíl — ostatní komponenty vyjdou přibližně stejně. U klasické cesty proti tomu připočtěte bourání, odvoz suti, betonáž a týdny schnutí.",
   "suchy_title": "Suchý systém — položí se na stávající podlahu",
   "suchy_text1": "Systémová izolační deska s hliníkovým plechem se pokládá přímo na původní podlahu. Nic se nebourá a nic se nezalévá. Trubku zakryjeme dvěma vrstvami sádrovláknitých desek Fermacell či Cetris (celkem 53 mm). Na to už jde rovnou plovoucí podlaha, vinyl, linoleum i dlažba.",
   "suchy_body": [
@@ -83,8 +77,7 @@
     "Nepřerušená plocha může mít nejvýše 40 m² a nejdelší strana 8 m, jinak je potřeba dilatační spára.",
     "Podlaha unese 200 kg/m², což pro běžný byt i dům stačí."
   ],
-  "limit_title": "Co když je podlaha nezateplená",
-  "limit_text": "Obě nízké skladby leží na původní podlaze a samy ji nezateplují. Norma ČSN EN 1264-4 přitom požaduje, aby tepelný odpor podkladu vyhovoval — jinak jde velká část tepla dolů místo do místnosti. Pokud tedy máte pod sebou nezateplenou desku na terénu, doplní se tepelná izolace pod systém, stejně jako u klasické cesty; suchý systém i Spider pak fungují normálně a celková výška i tak vyjde níž než u klasiky. Pokud je podlahové topení v patře, pod kterým je vytápěný prostor, tepelná izolace nutná není.",
+  "limit_title": "Kdy je potřeba tepelná izolace",
   "klasika_title": "Klasická cesta — vybourat a postavit znovu",
   "video_id": "yG0gPJgBreQ",
   "video_titulek": "Rekonstruujete? Systém podlahového vytápění SPIDER Vám s tím pomůže",
@@ -108,5 +101,11 @@
       "popisek": "Trubka zaklapnutá v drážce, u stěny okrajový dilatační pás."
     }
   ],
-  "suchy_foto_zdroj": "Foto: GIACOMINI CZECH, s.r.o."
+  "suchy_foto_zdroj": "Foto: GIACOMINI CZECH, s.r.o.",
+  "limit_lead": "O tepelné izolaci nerozhoduje zvolený systém, ale to, co je pod podlahou. Platí to pro všechny tři cesty stejně.",
+  "limit_body": [
+    "Podlaha na desce na terénu — tepelná izolace být musí. U klasické cesty je součástí nové skladby, u suchého systému i Spideru se doplní pod systém. Bez ní by šla velká část tepla do země místo do místnosti.",
+    "Podlaha v patře, pod kterým se topí — tepelná izolace nutná není. Teplo, které projde dolů, z domu neuteče."
+  ],
+  "limit_zaver": "Norma ČSN EN 1264-4 v obou případech klade požadavky na tepelný odpor podkladu. I s doplněnou izolací vyjde suchý systém i Spider níž než klasická cesta."
 }
