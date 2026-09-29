@@ -431,7 +431,10 @@ let currentRps = 30;
 let currentView = 'table';
 let chartInstance = null;
 
-function cop(kwt, kwe) { return (kwt / kwe).toFixed(2); }
+// české desetinné číslo — čárka místo tečky
+function cz(n, d = 2) { return Number(n).toFixed(d).replace('.', ','); }
+
+function cop(kwt, kwe) { return cz(kwt / kwe); }
 function copNum(kwt, kwe) { return kwt / kwe; }
 
 function copColor(c) {
@@ -500,13 +503,13 @@ function updateSummary() {
     });
   });
 
-  document.getElementById('s-kwt-max').innerHTML = `${maxKwt} <span>kW</span>`;
+  document.getElementById('s-kwt-max').innerHTML = `${cz(maxKwt)} <span>kW</span>`;
   document.getElementById('s-kwt-max-cond').textContent = maxKwtCond;
-  document.getElementById('s-kwt-min').innerHTML = `${minKwt} <span>kW</span>`;
+  document.getElementById('s-kwt-min').innerHTML = `${cz(minKwt)} <span>kW</span>`;
   document.getElementById('s-kwt-min-cond').textContent = minKwtCond;
-  document.getElementById('s-cop-max').textContent = maxCop.toFixed(2);
+  document.getElementById('s-cop-max').textContent = cz(maxCop);
   document.getElementById('s-cop-max-cond').textContent = maxCopCond;
-  document.getElementById('s-cop-avg').textContent = (sumCop/count).toFixed(2);
+  document.getElementById('s-cop-avg').textContent = cz(sumCop/count);
 }
 
 function renderTable() {
@@ -541,9 +544,9 @@ function renderTable() {
         const kwt = row[tv].kwt, kwe = row[tv].kwe;
         const c = copNum(kwt, kwe);
         const cc = copColor(c);
-        html += `<td style="border-left:1px solid var(--border)" class="kwt">${kwt}</td>
-                 <td class="kwe">${kwe}</td>
-                 <td><span class="cop-cell" style="color:${cc};background:${cc}22">${(c).toFixed(2)}</span></td>`;
+        html += `<td style="border-left:1px solid var(--border)" class="kwt">${cz(kwt)}</td>
+                 <td class="kwe">${cz(kwe)}</td>
+                 <td><span class="cop-cell" style="color:${cc};background:${cc}22">${cz(c)}</span></td>`;
       });
       html += `</tr>`;
     });
@@ -596,6 +599,9 @@ function renderChart() {
           titleColor: '#e8edf5',
           bodyColor: '#7a8899',
           padding: 12,
+          callbacks: {
+            label: (ctx) => `${ctx.dataset.label}: ${cz(ctx.parsed.y)} kW`,
+          },
         }
       },
       scales: {
@@ -608,7 +614,8 @@ function renderChart() {
           suggestedMax: Math.ceil(Math.max(...Object.values(DATA[currentModel])
             .flat().flatMap(r => TV_KEYS.map(k => r[k].kwt))) / 5) * 5,
           grid: { color: '#2a3347' },
-          ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 } },
+          ticks: { color: '#7a8899', font: { family: 'DM Mono', size: 11 },
+                   callback: (v) => String(v).replace('.', ',') },
           title: { display: true, text: 'Topný výkon (kW)', color: '#7a8899', font: { size: 11 } }
         }
       }
