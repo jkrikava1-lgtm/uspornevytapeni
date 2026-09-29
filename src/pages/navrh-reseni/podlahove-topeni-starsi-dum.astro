@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
 import SkladbaPodlahy from '../../components/SkladbaPodlahy.astro';
+import VideoFasada from '../../components/VideoFasada.astro';
 import vetev from '../../data/stavajici-dum.json';
 import data from '../../data/podlahove-topeni-starsi-dum.json';
 ---
@@ -86,6 +87,15 @@ import data from '../../data/podlahove-topeni-starsi-dum.json';
             </li>
           ))}
         </ul>
+
+        <VideoFasada
+          id={data.video_id}
+          titulek={data.video_titulek}
+          nahled="/images/video/spider-nahled.webp"
+          start={data.video_start}
+          popisek={data.video_popisek}
+          pozn={data.video_pozn}
+        />
 
         <div class="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-5 sm:p-6">
           <div class="text-xs font-semibold uppercase tracking-wider text-amber-700">{data.limit_title}</div>
