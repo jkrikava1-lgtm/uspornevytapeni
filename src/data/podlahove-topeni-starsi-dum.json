@@ -91,5 +91,22 @@
   "video_start": 12,
   "video_popisek": "Pokládka Spideru na původní podlahu — deska, trubka, zálivka.",
   "video_pozn": "Video: GIACOMINI CZECH, s.r.o. Kliknutím se načte přehrávač z YouTube.",
-  "video_konec": 81
+  "video_konec": 81,
+  "suchy_fotky": [
+    {
+      "src": "/images/ilustrace/suchy-system-deska.webp",
+      "w": 1000,
+      "h": 547,
+      "alt": "Systémová izolační deska suchého podlahového vytápění s hliníkovým plechem",
+      "popisek": "Systémová deska s hliníkovým plechem — plech rozvádí teplo do plochy."
+    },
+    {
+      "src": "/images/ilustrace/suchy-system-pokladka.webp",
+      "w": 1000,
+      "h": 1092,
+      "alt": "Položená systémová deska s trubkou podlahového vytápění a okrajovým pásem u stěny",
+      "popisek": "Trubka zaklapnutá v drážce, u stěny okrajový dilatační pás."
+    }
+  ],
+  "suchy_foto_zdroj": "Foto: GIACOMINI CZECH, s.r.o."
 }
