@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
+import SkladbaPodlahy from '../../components/SkladbaPodlahy.astro';
 import vetev from '../../data/stavajici-dum.json';
 import data from '../../data/podlahove-topeni-starsi-dum.json';
 ---
@@ -32,6 +33,10 @@ import data from '../../data/podlahove-topeni-starsi-dum.json';
             </div>
           ))}
         </div>
+
+        <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-1">{data.skladba_title}</h2>
+        <p class="text-charcoal-600 leading-relaxed">{data.skladba_intro}</p>
+        <SkladbaPodlahy />
 
         <div class="bg-brand-50 rounded-xl p-6 border border-brand-100 mt-8">
           <p class="text-charcoal-700 text-sm leading-relaxed">

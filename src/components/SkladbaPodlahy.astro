@@ -1,0 +1,152 @@
+---
+// Řez skladbou podlahy s podlahovým topením. Kreslíme to, protože krok 2 na
+// stránce má šest vrstev s tloušťkami natlačených do jedné věty — a návštěvník
+// řeší hlavně to, kolik mu podlahovka sebere z výšky místnosti.
+// Tloušťky jsou z textu stránky (data/podlahove-topeni-starsi-dum.json).
+
+interface Vrstva {
+  nazev: string;
+  vysoka: number; // cm — varianta polystyren + beton
+  nizka: number; // cm — varianta polyuretan + anhydrit
+  barva: string;
+  popis_vysoka?: string;
+  popis_nizka?: string;
+  trubky?: boolean;
+}
+
+// pořadí shora dolů, tedy obráceně než se pokládá
+const vrstvy: Vrstva[] = [
+  { nazev: 'Krytina', vysoka: 1.5, nizka: 1.5, barva: '#b99c77', popis_vysoka: 'podle typu, v kresbě 1,5 cm', popis_nizka: 'podle typu, v kresbě 1,5 cm' },
+  {
+    nazev: 'Potěr',
+    vysoka: 5.5,
+    nizka: 3.5,
+    barva: '#cfcfcf',
+    popis_vysoka: 'beton 5–6 cm',
+    popis_nizka: 'anhydrit 3–4 cm',
+  },
+  { nazev: 'Systémová deska s topením', vysoka: 4, nizka: 4, barva: '#ededed', trubky: true, popis_vysoka: '3,2–5,5 cm', popis_nizka: '3,2–5,5 cm' },
+  {
+    nazev: 'Tepelná izolace',
+    vysoka: 10,
+    nizka: 6,
+    barva: '#dce7f0',
+    popis_vysoka: 'polystyren 10 cm',
+    popis_nizka: 'polyuretan 6 cm',
+  },
+  { nazev: 'Hydroizolace', vysoka: 1, nizka: 1, barva: '#4a4a4a' },
+];
+
+const MERITKO = 11; // px na centimetr — obě varianty musí mít stejné, jinak rozdíl výšek nic neřekne
+const SIRKA = 118;
+const KOTA = 46; // místo vlevo na kótu
+const OKRAJ = 8;
+const PODKLAD = 10; // naznačený původní podklad pod hydroizolací
+
+function stack(klic: 'vysoka' | 'nizka') {
+  let y = OKRAJ;
+  const kusy = vrstvy.map(v => {
+    const h = v[klic] * MERITKO;
+    const kus = { ...v, y, h, tloustka: v[klic] };
+    y += h;
+    return kus;
+  });
+  return { kusy, celkem: y - OKRAJ, vyska: y + PODKLAD + OKRAJ };
+}
+
+const varianty = [
+  { klic: 'vysoka' as const, titulek: 'Polystyren + beton', ...stack('vysoka') },
+  { klic: 'nizka' as const, titulek: 'Polyuretan + anhydrit', ...stack('nizka') },
+];
+const nejvyssi = Math.max(...varianty.map(v => v.vyska));
+const cm = (n: number) => String(n).replace('.', ',');
+---
+
+<figure class="mt-8">
+  <div class="rounded-2xl border border-gray-200 bg-white p-5 sm:p-7">
+    <div class="flex items-end justify-center gap-4 sm:gap-14">
+      {varianty.map(v => (
+        <div class="w-[47%] text-center sm:w-auto">
+          <svg
+            viewBox={`0 0 ${KOTA + SIRKA + OKRAJ} ${nejvyssi}`}
+            width={KOTA + SIRKA + OKRAJ}
+            height={nejvyssi}
+            class="h-auto w-full sm:w-[172px]"
+            role="img"
+            aria-label={`Řez podlahou, varianta ${v.titulek}, celková výška ${cm(v.celkem / MERITKO)} centimetrů`}
+          >
+            {/* obě varianty stojí na stejné úrovni, ať je rozdíl výšek vidět */}
+            <g transform={`translate(0 ${nejvyssi - v.vyska})`}>
+              {/* naznačený původní podklad */}
+              <rect x={KOTA} y={v.celkem + OKRAJ} width={SIRKA} height={PODKLAD} fill="#f3f3f3" />
+              <line
+                x1={KOTA} y1={v.celkem + OKRAJ} x2={KOTA + SIRKA} y2={v.celkem + OKRAJ}
+                stroke="#9a9a9a" stroke-width="1"
+              />
+              {[...Array(9)].map((_, i) => (
+                <line
+                  x1={KOTA + 4 + i * 13} y1={v.celkem + OKRAJ + PODKLAD}
+                  x2={KOTA + 12 + i * 13} y2={v.celkem + OKRAJ}
+                  stroke="#c9c9c9" stroke-width="1"
+                />
+              ))}
+
+              {v.kusy.map(k => (
+                <>
+                  <rect x={KOTA} y={k.y} width={SIRKA} height={k.h} fill={k.barva} stroke="#6f6f6f" stroke-width="0.8" />
+                  {k.trubky &&
+                    [...Array(5)].map((_, i) => (
+                      <circle cx={KOTA + 16 + i * 22} cy={k.y + k.h / 2} r={k.h * 0.28} fill="#fff" stroke="#C41E2A" stroke-width="1.6" />
+                    ))}
+                </>
+              ))}
+
+              {/* kóta celkové výšky */}
+              <line x1={KOTA - 16} y1={OKRAJ} x2={KOTA - 16} y2={v.celkem + OKRAJ} stroke="#1B3A5C" stroke-width="1" />
+              <path d={`M ${KOTA - 20} ${OKRAJ + 5} L ${KOTA - 16} ${OKRAJ} L ${KOTA - 12} ${OKRAJ + 5}`} fill="none" stroke="#1B3A5C" stroke-width="1" />
+              <path d={`M ${KOTA - 20} ${v.celkem + OKRAJ - 5} L ${KOTA - 16} ${v.celkem + OKRAJ} L ${KOTA - 12} ${v.celkem + OKRAJ - 5}`} fill="none" stroke="#1B3A5C" stroke-width="1" />
+              <line x1={KOTA - 20} y1={OKRAJ} x2={KOTA} y2={OKRAJ} stroke="#1B3A5C" stroke-width="0.6" />
+              <line x1={KOTA - 20} y1={v.celkem + OKRAJ} x2={KOTA} y2={v.celkem + OKRAJ} stroke="#1B3A5C" stroke-width="0.6" />
+              <text
+                x={KOTA - 22} y={OKRAJ + v.celkem / 2}
+                transform={`rotate(-90 ${KOTA - 22} ${OKRAJ + v.celkem / 2})`}
+                text-anchor="middle" font-size="15" font-weight="700" fill="#1B3A5C"
+              >
+                {cm(v.celkem / MERITKO)} cm
+              </text>
+            </g>
+          </svg>
+          <div class="mt-2 text-sm font-semibold text-charcoal-800">{v.titulek}</div>
+        </div>
+      ))}
+    </div>
+
+    {/* legenda — názvy vrstev se do kresby nevejdou, tenké vrstvy mají 1 cm */}
+    <ul class="mt-7 space-y-2 border-t border-gray-100 pt-5">
+      {vrstvy.map(v => (
+        <li class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+          <span class="h-3.5 w-3.5 flex-none rounded-sm border border-charcoal-300" style={`background:${v.barva}`}></span>
+          <span class="font-semibold text-charcoal-800">{v.nazev}</span>
+          <span class="text-charcoal-500">
+            {!v.popis_vysoka
+              ? `${cm(v.vysoka)} cm`
+              : v.popis_vysoka === v.popis_nizka
+                ? v.popis_vysoka
+                : `${v.popis_vysoka} / ${v.popis_nizka}`}
+          </span>
+        </li>
+      ))}
+      <li class="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-sm">
+        <span class="h-3.5 w-3.5 flex-none rounded-sm border border-charcoal-300 bg-gray-100"></span>
+        <span class="font-semibold text-charcoal-800">Původní podklad</span>
+        <span class="text-charcoal-500">zůstává, vybourá se vše nad ním</span>
+      </li>
+    </ul>
+  </div>
+
+  <figcaption class="mt-2.5 text-sm text-charcoal-400">
+    Obě varianty jsou ve stejném měřítku, kresleny středními hodnotami z uvedených rozsahů. Polyuretan místo
+    polystyrenu ušetří 4 cm, anhydrit místo betonu další 2 cm — dohromady 6 cm, což při nízkých prazích nebo
+    schodech často rozhoduje o tom, jestli je zákrok průchodný.
+  </figcaption>
+</figure>
