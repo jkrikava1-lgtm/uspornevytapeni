@@ -58,10 +58,10 @@
       "nejdříve po 7 dnech"
     ],
     [
-      "Zateplí zároveň podlahu",
-      "ano",
-      "ne",
-      "ne"
+      "Izolace podlahy",
+      "součást skladby",
+      "doplní se pod systém",
+      "doplní se pod systém"
     ]
   ],
   "porovnani_pozn": "Ceny jsou za systémovou desku, ve které je mezi variantami hlavní rozdíl — ostatní komponenty vyjdou přibližně stejně. U klasické cesty proti tomu připočtěte bourání, odvoz suti, izolaci, betonáž a týdny schnutí.",
@@ -83,7 +83,7 @@
     "Nepřerušená plocha může mít nejvýše 40 m² a nejdelší strana 8 m, jinak je potřeba dilatační spára.",
     "Podlaha unese 200 kg/m², což pro běžný byt i dům stačí."
   ],
-  "limit_title": "Kdy se bourání nevyhnete",
-  "limit_text": "Obě nízké skladby leží na původní podlaze a nijak ji nezateplují. Norma ČSN EN 1264-4 přitom požaduje, aby tepelný odpor podkladu vyhovoval — jinak půjde velká část tepla dolů místo do místnosti. Pokud tedy máte pod sebou nezateplenou desku na terénu, suchý systém ani Spider problém nevyřeší a je potřeba jít klasickou cestou. Posoudíme to sondou ještě před rozhodnutím.",
+  "limit_title": "Co když je podlaha nezateplená",
+  "limit_text": "Obě nízké skladby leží na původní podlaze a samy ji nezateplují. Norma ČSN EN 1264-4 přitom požaduje, aby tepelný odpor podkladu vyhovoval — jinak jde velká část tepla dolů místo do místnosti. Pokud tedy máte pod sebou nezateplenou desku na terénu, doplní se tepelná izolace pod systém, stejně jako u klasické cesty. Suchý systém i Spider pak fungují normálně a celková výška i tak vyjde níž než u klasiky.",
   "klasika_title": "Klasická cesta — vybourat a postavit znovu"
 }
