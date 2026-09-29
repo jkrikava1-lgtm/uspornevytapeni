@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
+import vetev from '../../data/novostavba.json';
 import data from '../../data/chlazeni.json';
 ---
 
@@ -70,6 +72,13 @@ import data from '../../data/chlazeni.json';
       </div>
     </div>
   </section>
+
+
+  <SouvisejiciTemata
+    headline={vetev.related_headline}
+    items={vetev.related_items}
+    krome="/navrh-reseni/chlazeni"
+  />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",

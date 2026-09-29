@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
+import vetev from '../../data/novostavba.json';
 import data from '../../data/podlahove-topeni.json';
 ---
 
@@ -42,4 +44,11 @@ import data from '../../data/podlahove-topeni.json';
       </div>
     </div>
   </section>
+
+  <SouvisejiciTemata
+    headline={vetev.related_headline}
+    items={vetev.related_items}
+    krome="/navrh-reseni/podlahove-topeni"
+  />
+
 </Layout>

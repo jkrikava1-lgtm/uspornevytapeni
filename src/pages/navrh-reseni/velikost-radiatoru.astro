@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
+import vetev from '../../data/stavajici-dum.json';
 import data from '../../data/velikost-radiatoru.json';
 import radik from '../../data/radik-klasik.json';
 import RadikTabulka from '../../components/RadikTabulka.astro';
@@ -94,4 +96,11 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
       </div>
     </div>
   </section>
+
+  <SouvisejiciTemata
+    headline={vetev.related_headline}
+    items={vetev.related_items}
+    krome="/navrh-reseni/velikost-radiatoru"
+  />
+
 </Layout>

@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
+import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
+import vetev from '../../data/stavajici-dum.json';
 import data from '../../data/doinstalace-chlazeni.json';
 ---
 
@@ -74,4 +76,11 @@ import data from '../../data/doinstalace-chlazeni.json';
       </div>
     </div>
   </section>
+
+  <SouvisejiciTemata
+    headline={vetev.related_headline}
+    items={vetev.related_items}
+    krome="/navrh-reseni/doinstalace-chlazeni"
+  />
+
 </Layout>
