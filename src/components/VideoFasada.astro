@@ -9,11 +9,12 @@ interface Props {
   titulek: string;
   nahled: string;
   start?: number;
+  konec?: number;
   popisek?: string;
   pozn?: string;
 }
 
-const { id, titulek, nahled, start = 0, popisek, pozn } = Astro.props;
+const { id, titulek, nahled, start = 0, konec, popisek, pozn } = Astro.props;
 ---
 
 <figure class="mt-6">
@@ -21,6 +22,7 @@ const { id, titulek, nahled, start = 0, popisek, pozn } = Astro.props;
     class="video-fasada relative overflow-hidden rounded-2xl bg-charcoal-900"
     data-video={id}
     data-start={start}
+    data-end={konec}
     data-titulek={titulek}
   >
     <button
@@ -66,11 +68,13 @@ const { id, titulek, nahled, start = 0, popisek, pozn } = Astro.props;
     tlacitko?.addEventListener('click', () => {
       const id = obal.dataset.video;
       const start = obal.dataset.start || '0';
+      // end = sekunda, na které se přehrávání zastaví (od začátku videa)
+      const konec = obal.dataset.end ? `&end=${obal.dataset.end}` : '';
       const ramec = document.createElement('iframe');
       // nocookie doména + rel=0, ať se po dohrání nenabízí cizí videa
       // mute=1 — bez zvuku, a zároveň to je podmínka, za které prohlížeče
       // vůbec dovolí automatické spuštění
-      ramec.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&rel=0&start=${start}`;
+      ramec.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&rel=0&start=${start}${konec}`;
       ramec.title = obal.dataset.titulek || 'Video';
       ramec.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share';
       ramec.allowFullscreen = true;
