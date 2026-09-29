@@ -10,7 +10,7 @@
   "radik_hlavicka_delka": "Délka",
   "radik_hlavicka_vyska": "Výška [mm]",
   "radik_pozn_title": "Pozor na teplotu topné vody",
-  "radik_pozn_text": "Hodnoty platí pro spád 55/45 °C podle ČSN EN 442. Čím níž teplotu topné vody stáhnete, tím levněji čerpadlo topí — ale tím méně radiátor odevzdá. Při návrhu proto počítáme s rezervou, aby systém běžel i na 45 °C.",
+  "radik_pozn_text": "Hodnoty platí pro spád 55/45 °C podle ČSN EN 442. Čím níž teplotu topné vody stáhnete, tím levněji čerpadlo topí.",
   "radik_zdroj": "Zdroj: KORADO, a.s. — technický list RADIK KLASIK (CZ ODT 5.01-01/16 M). Tepelné výkony podle EN 442.",
   "radik_vysky": [
     200,
