@@ -1,27 +1,27 @@
 {
-  "meta_title": "Chlazení tepelným čerpadlem — podlahou i fancoily",
-  "meta_description": "Jak chladit dům tepelným čerpadlem? Podlahové chlazení je téměř zdarma, fancoily nabízejí plný výkon. Rozdíly, ceny i zkušenosti. Přidáme chlazení i ke stávajícímu systému.",
-  "hero_title": "Jak na chlazení domu tepelným čerpadlem",
-  "hero_subtitle": "Komfortní chlazení domu tepelným čerpadlem.",
-  "intro1": "Chceme bydlet komfortně a chlazení domu ke komfortnímu bydlení patří. Obzvlášť, pokud je instalace chlazení jednoduchá a levná. Pokud máte topný systém s tepelným čerpadlem jako zdrojem tepla, máte k dispozici i chlazení.",
-  "intro2": "Stačí chlazení objednat a tepelné čerpadlo dokáže vyrobit z topné vody vodu chladící a předat ji do domu. Moderní dům by měl umožňovat letní chlazení — nejčastěji se používá chladící temperace podlahovým systémem, ale rozšiřuje se i plnohodnotné chladící řešení.",
-  "podlaha_title": "Chlazení podlahovým systémem",
+  "meta_title": "Chlazení novostavby tepelným čerpadlem",
+  "meta_description": "V novostavbě se chlazení navrhuje spolu s topením — chladí se stejným okruhem, kterým se topí. Co se rozhoduje v projektu: zdroj tepla, krytina, podhledy pro fancoily.",
+  "hero_title": "Chlazení v novostavbě",
+  "hero_subtitle": "Navrhnout ho spolu s topením je nejlevnější způsob, jak ho mít.",
+  "intro1": "Tepelné čerpadlo umí pracovat i obráceně — místo aby teplo do domu dodávalo, odvádí ho ven. V novostavbě je to výhoda, kterou nemusíte draho vykupovat: chladí se stejným okruhem, kterým se topí. Stačí na chlazení myslet už při návrhu.",
+  "intro2": "Rozhodnutí, která chlazení ovlivní, padají dřív, než se začne stavět — jaký zdroj tepla, jestli podlahové topení, kudy povedou rozvody, jaká bude krytina a jestli se počítá s podhledem. Dodatečně jde doplnit skoro všechno, ale pokaždé dráž a se zásahem do hotového domu.",
+  "podlaha_title": "Chlazení podlahou — počítá se s ním v projektu",
   "podlaha_points": [
-    "Lze využít stejný systém jako při topení — jedním systémem řešíte vytápění i chlazení",
-    "Funguje díky velké ploše podlahy — dokáže snížit teplotu o několik stupňů",
-    "Nutné sledovat rosný bod — prostorové termostaty mají čidlo rosného bodu a při zvýšené vlhkosti automaticky zvýší teplotu chladící vody",
-    "Podlahová krytina musí být vhodná pro chlazení: dlažba, kámen, lino, vinyl, lze i plovoucí podlahy"
+    "Chladí se stejným okruhem, kterým se topí. Pokud je podlahovka v projektu, chlazení na rozvodech nic nepřidá.",
+    "Díky velké ploše podlahy sníží teplotu o několik stupňů. Je tiché a rovnoměrné, nikde nefouká.",
+    "U zemního čerpadla jde o pasivní chlazení — využívá stálou teplotu vrtu nebo kolektoru a provozně je téměř zdarma. Volba zdroje se dělá právě teď.",
+    "Krytinu vybírejte s ohledem na chlazení: dlažba, kámen, lino, vinyl, jdou i plovoucí podlahy.",
+    "Rosný bod hlídají prostorové termostaty s čidlem vlhkosti — při zvýšené vlhkosti samy zvednou teplotu chladící vody. Počítejte s nimi už v elektroprojektu."
   ],
   "podlaha_quote": "„Při venkovní teplotě 35 °C jsem udržel podlahovým chlazením vnitřní teplotu v domě na 23 °C.“",
-  "fancoil_title": "Chlazení fancoilovými jednotkami",
+  "fancoil_title": "Fancoily — když chcete plnohodnotné chlazení",
   "fancoil_points": [
-    "Nejefektivnější metoda pro plnohodnotné chlazení — stabilní teplota i v největších vedrech",
-    "Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru",
-    "Lze je umístit nad dveře nebo zabudovat v podhledu",
-    "Pro cirkulaci chladící vody se použije měděné potrubí ke každému fancoilu",
-    "Každý chladící okruh má vlastní oběhové čerpadlo",
-    "Potřebné malé odpadní potrubí pro odvod kondenzované vlhkosti",
-    "Investice cca 30 000 Kč na místnost"
+    "Podlaha temperuje, fancoil chladí. Drží stabilní teplotu i v největších vedrech a reaguje rychleji.",
+    "Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru.",
+    "V novostavbě se dá schovat do podhledu nebo umístit nad dveře — v hotovém domě je to podstatně větší zásah.",
+    "Ke každému fancoilu vede měděné potrubí a každý chladící okruh má vlastní oběhové čerpadlo. V projektu se zakreslí a položí spolu s ostatními rozvody.",
+    "Potřeba je i malé odpadní potrubí pro odvod kondenzované vlhkosti. Právě to se dodatečně vede nejhůř.",
+    "Investice cca 30 000 Kč na místnost."
   ],
   "cta_button": "Zpracujte mi nabídku"
 }

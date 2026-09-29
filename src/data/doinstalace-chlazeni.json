@@ -1,25 +1,24 @@
 {
-  "meta_title": "Jak doinstalovat chlazení",
-  "meta_description": "Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše.",
+  "meta_title": "Doinstalace chlazení do stávajícího domu",
+  "meta_description": "Máte tepelné čerpadlo a chcete chladit? Pokud umí reverzní chod, jde to. S podlahovým topením bez zásahu do domu, bez něj přes fancoily. Podmínky, postup i cena.",
   "hero_title": "Jak doinstalovat chlazení",
   "hero_subtitle": "Zdroj tepla se může změnit ve zdroj chladu.",
-  "intro": "Standardy bydlení se zvyšují a chlazení je komfort, který si můžete s tepelným čerpadlem dopřát relativně jednoduše. Pokud máte topný systém s tepelným čerpadlem jako zdrojem tepla, máte k dispozici i chlazení. Stačí chlazení objednat a tepelné čerpadlo dokáže vyrobit z topné vody vodu chladící.",
+  "intro": "Máte-li v domě tepelné čerpadlo, chlazení nejspíš už máte po ruce — jen se nepoužívá. Podmínka je jediná: čerpadlo musí umět reverzní chod, což většina moderních jednotek zvládá. Pak dokáže z topné vody vyrobit vodu chladící a poslat ji do domu. Kolik práce to obnáší, rozhoduje jediná otázka.",
   "podlaha_title": "Máte podlahové topení?",
-  "podlaha_intro": "Pokud máte podlahové topení, je to jednoduché a můžete chladit přímo podlahovým topným systémem. Díky velké ploše podlahy dokáže snížit teplotu o několik stupňů.",
+  "podlaha_intro": "Pak je to nejjednodušší případ. Chladí se stejným okruhem, kterým se topí, takže se do domu nijak nezasahuje — nebourá se a nic se nevede navíc. Díky velké ploše podlahy sníží teplotu o několik stupňů.",
   "podlaha_points": [
-    "Jedním systémem řešíte vytápění i chlazení",
-    "Prostorové termostaty s čidlem rosného bodu hlídají kondenzaci",
-    "Vhodné krytiny: dlažba, kámen, lino, vinyl, plovoucí podlahy"
+    "Dokoupí se prostorové termostaty s čidlem rosného bodu, aby při zvýšené vlhkosti samy zvedly teplotu chladící vody.",
+    "Zkontrolujeme krytinu — dlažba, kámen, lino, vinyl i plovoucí podlahy jsou pro chlazení vhodné.",
+    "U zemního čerpadla jde o pasivní chlazení, takže provoz stojí prakticky jen elektřinu oběhového čerpadla."
   ],
   "fancoil_title": "Nemáte podlahové topení?",
-  "fancoil_intro": "Pokud podlahové topení nemáte, lze chladit speciálními radiátory — fancoily. Fancoil je speciální radiátor s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru.",
+  "fancoil_intro": "Pak se chladí fancoily — speciálními radiátory s vestavěným ventilátorem, který vhání vyrobený chlad do prostoru. Do hotového domu je doplnit lze, ale na rozdíl od podlahovky to zásah znamená.",
   "fancoil_points": [
-    "Nejefektivnější metoda pro plnohodnotné chlazení",
-    "Lze umístit nad dveře nebo zabudovat v podhledu",
-    "Měděné potrubí ke každému fancoilu, vlastní oběhové čerpadlo",
-    "Malé odpadní potrubí pro odvod kondenzované vlhkosti",
-    "Investice cca 20 000 Kč za místnost"
+    "Fancoil lze umístit nad dveře nebo zabudovat do podhledu, pokud v místnosti je.",
+    "Ke každému fancoilu se musí dodatečně natáhnout měděné potrubí a každý chladící okruh má vlastní oběhové čerpadlo.",
+    "Počítejte i s malým odpadním potrubím pro odvod kondenzátu — v hotovém domě je to nejpracnější část.",
+    "Investice cca 20 000 Kč za místnost."
   ],
-  "tip_box": "Nechte si navrhnout komfortní chlazení. Posoudíme váš dům a navrhneme optimální řešení — ať už podlahovým systémem, fancoily, nebo jejich kombinací.",
+  "tip_box": "Nevíte, jestli vaše čerpadlo reverzní chod umí? Napište nám model — zjistíme to a rovnou navrhneme, jak by chlazení ve vašem domě vypadalo: podlahou, fancoily, nebo jejich kombinací.",
   "cta_button": "Zpracujte mi nabídku"
 }

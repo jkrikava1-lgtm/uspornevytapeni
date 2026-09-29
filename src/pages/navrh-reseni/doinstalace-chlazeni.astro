@@ -83,4 +83,14 @@ import data from '../../data/doinstalace-chlazeni.json';
     krome="/navrh-reseni/doinstalace-chlazeni"
   />
 
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Lze chlazení doinstalovat k existujícímu tepelnému čerpadlu?", "acceptedAnswer": { "@type": "Answer", "text": "Ano, pokud čerpadlo podporuje reverzní chod — což většina moderních jednotek zvládá. Pak dokáže z topné vody vyrobit vodu chladící. Fancoily lze přidat dodatečně, podlahové pasivní chlazení je dostupné u zemních čerpadel. Posoudíme možnosti pro váš systém." } },
+      { "@type": "Question", "name": "Dá se chladit stávajícím podlahovým topením?" , "acceptedAnswer": { "@type": "Answer", "text": "Ano, a je to nejjednodušší případ — chladí se stejným okruhem, kterým se topí, takže se do domu nijak nezasahuje. Dokoupí se prostorové termostaty s čidlem rosného bodu a zkontroluje se podlahová krytina. Vhodná je dlažba, kámen, lino, vinyl i plovoucí podlahy." } },
+      { "@type": "Question", "name": "Co když podlahové topení nemám?", "acceptedAnswer": { "@type": "Answer", "text": "Pak se chladí fancoily — speciálními radiátory s vestavěným ventilátorem. Do hotového domu je doplnit lze, ale znamená to zásah: ke každému fancoilu se musí dodatečně natáhnout měděné potrubí, každý okruh má vlastní oběhové čerpadlo a je potřeba malé odpadní potrubí pro odvod kondenzátu." } },
+      { "@type": "Question", "name": "Kolik stojí doinstalace chlazení?", "acceptedAnswer": { "@type": "Answer", "text": "Pokud máte podlahové topení, jde hlavně o prostorové termostaty s čidlem rosného bodu a nastavení systému. U fancoilů počítejte s investicí přibližně 20 000 Kč za místnost včetně rozvodů." } }
+    ]
+  })} />
 </Layout>
