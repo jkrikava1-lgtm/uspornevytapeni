@@ -7,7 +7,7 @@
   "intro2": "Jak ale podlahové topení dodělat, když mám podlahy už hotové? Cesty jsou tři. Jedna znamená vybourat podlahu a postavit ji znovu, další dvě se pokládají na to, co máte.",
   "steps": [
     "Pokud není známé přesné složení podlahy, udělá se do podlahy sonda — otvor. Díky této sondě zjistíme skladbu podlahy a její výšku.",
-    "Pro podlahové topení je ideální výška cca 22 cm. Skladba: hydroizolace (1 cm), tepelná izolace (10 cm polystyrenu, nebo 6 cm polyuretanu), systémová deska s topením (32–55 mm), betonový potěr (5–6 cm) nebo anhydrit (3–4 cm), krytina.",
+    "Pro podlahové topení je ideální výška cca 21 cm. Skladba: hydroizolace (1 cm), tepelná izolace (10 cm polystyrenu, nebo 6 cm polyuretanu), systémová deska s topením (30 mm), betonový potěr (5–6 cm) nebo anhydrit (3–4 cm), krytina.",
     "Pak je potřeba to nejtěžší — celou stávající podlahu vybourat. Cca 80 m² nám stavební firma vybourala za jeden den.",
     "Položí se nová hydroizolace. Pokud v domě byla, je bouráním určitě poškozena.",
     "Položí se tepelná izolace a podlahový topný systém. 80 m² opět jeden den.",
@@ -18,7 +18,7 @@
   "note": "Ne každý se do rekonstrukce tohoto typu pustí, nicméně jde to a budete odměněni příjemnou a rovnoměrně rozvrstvenou teplotou v domě.",
   "cta_button": "Zpracujte mi nabídku",
   "skladba_title": "Kolik to sebere z výšky místnosti",
-  "skladba_intro": "Skladba z kroku 2 v řezu, tedy podlaha na desce na terénu. Podle použitých materiálů vyjde na 16 až 22 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný. V patře nad vytápěným prostorem tepelná izolace odpadá a skladba je o 6 až 10 cm nižší.",
+  "skladba_intro": "Skladba z kroku 2 v řezu, tedy podlaha na desce na terénu. Podle použitých materiálů vyjde na 15 až 21 cm — což je při rekonstrukci často to, co rozhodne, jestli je zákrok průchodný. V patře nad vytápěným prostorem tepelná izolace odpadá a skladba je o 6 až 10 cm nižší.",
   "porovnani_title": "Tři cesty ve zkratce",
   "porovnani_hlavicka": [
     "",
@@ -29,7 +29,7 @@
   "porovnani_radky": [
     [
       "Stavební výška",
-      "16–22 cm",
+      "15–21 cm",
       "5,3 cm",
       "2,7 cm"
     ],
