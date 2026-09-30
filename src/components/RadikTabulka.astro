@@ -42,7 +42,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
         class:list={['w-full', t.id === vychozi ? '' : 'hidden']}
       />
     ))}
-    <figcaption class="mt-3 text-xs text-charcoal-400" data-radik-popisek>
+    <figcaption class="mt-3 text-xs text-charcoal-500" data-radik-popisek>
       {`${data.radik_rez_popis} ${data.radik_kresba_zdroj}`}
     </figcaption>
   </figure>
@@ -72,7 +72,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
           aria-describedby="radik-vysledek"
           class="w-36 rounded-md border border-gray-300 bg-white py-2 pl-3 pr-9 text-sm text-charcoal-900 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
         />
-        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-charcoal-400">W</span>
+        <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-charcoal-500">W</span>
       </div>
       <button
         type="button"
@@ -110,7 +110,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
                 step="0.1"
                 class="w-full rounded-md border border-gray-300 bg-white py-2 pl-2.5 pr-7 text-sm text-charcoal-900 focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
               />
-              <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-xs text-charcoal-400">m</span>
+              <span class="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-xs text-charcoal-500">m</span>
             </div>
           </div>
         ))}
@@ -122,7 +122,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
           {data.odhad_varianty.map((v, i) => (
             <label class="odhad-volba cursor-pointer rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm text-charcoal-700">
               <input type="radio" name="odhad-standard" value={v.w} checked={i === 1} class="sr-only" />
-              {v.popis} <span class="text-charcoal-400">{v.w} W/m³</span>
+              {v.popis} <span class="text-charcoal-500">{v.w} W/m³</span>
             </label>
           ))}
         </div>
@@ -182,11 +182,11 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
   </div>
 
   <div class="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 sm:p-5">
-    <div class="text-xs font-semibold uppercase tracking-wider text-amber-700">{data.radik_pozn_title}</div>
+    <div class="text-xs font-semibold uppercase tracking-wider text-amber-800">{data.radik_pozn_title}</div>
     <p class="mt-1.5 text-sm leading-relaxed text-charcoal-700">{data.radik_pozn_text}</p>
   </div>
 
-  <p class="mt-3 text-xs text-charcoal-400">{data.radik_zdroj}</p>
+  <p class="mt-3 text-xs text-charcoal-500">{data.radik_zdroj}</p>
 
   <script is:inline type="application/json" data-radik-data set:html={JSON.stringify(data.radik_vykony)} />
 </div>

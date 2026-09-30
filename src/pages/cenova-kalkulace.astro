@@ -16,7 +16,7 @@ import data from '../data/cenova-kalkulace.json';
 
       <!-- Progress bar -->
       <div id="progress-wrap" class="mb-10">
-        <div class="flex items-center justify-between text-xs text-charcoal-400 mb-2">
+        <div class="flex items-center justify-between text-xs text-charcoal-500 mb-2">
           <span id="progress-label" data-template={data.progress_template}>{data.progress_template.replace('{n}', '1').replace('{total}', '6')}</span>
           <span id="progress-pct">17 %</span>
         </div>
@@ -144,10 +144,10 @@ import data from '../data/cenova-kalkulace.json';
                 <input type="range" id="ztrata-slider" min="2" max="30" value="10" step="1" class="flex-1 accent-brand-500 cursor-pointer" />
                 <div class="w-20 text-right">
                   <span id="ztrata-val" class="text-2xl font-extrabold text-brand-500">10</span>
-                  <span class="text-sm text-charcoal-400 ml-1">kW</span>
+                  <span class="text-sm text-charcoal-500 ml-1">kW</span>
                 </div>
               </div>
-              <div class="flex justify-between text-xs text-charcoal-400"><span>2 kW</span><span>30 kW</span></div>
+              <div class="flex justify-between text-xs text-charcoal-500"><span>2 kW</span><span>30 kW</span></div>
             </div>
           </div>
           <div id="plocha-wrap" class="hidden">
@@ -231,7 +231,7 @@ import data from '../data/cenova-kalkulace.json';
   .choice-icon { @apply w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-charcoal-500; }
   .choice-card.selected .choice-icon { @apply bg-brand-100 text-brand-600; }
   .choice-label { @apply font-bold text-charcoal-900 text-sm; }
-  .choice-desc { @apply text-xs text-charcoal-400 leading-snug; }
+  .choice-desc { @apply text-xs text-charcoal-500 leading-snug; }
   .back-btn { @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer border border-gray-200 hover:border-gray-300; }
   .choice-card--help { width:100%; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1rem 1.25rem; border-radius:0.75rem; border:2px dashed #fde68a; background-color:rgba(255,251,235,0.5); transition:all 150ms; cursor:pointer; text-align:left; }
   .choice-card--help:hover { border-color:#f59e0b; background-color:#fffbeb; }

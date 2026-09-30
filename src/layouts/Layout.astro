@@ -301,7 +301,7 @@ const navGroups = [
             <button id="cookie-reject-2" class="py-2.5 text-sm font-semibold text-charcoal-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors">Odmítnout vše</button>
           </div>
         </div>
-        <a href="/gdpr" class="block mt-4 text-center text-xs text-charcoal-400 hover:text-brand-500 transition-colors">Zásady ochrany osobních údajů</a>
+        <a href="/gdpr" class="block mt-4 text-center text-xs text-charcoal-500 hover:text-brand-500 transition-colors">Zásady ochrany osobních údajů</a>
       </div>
     </div>
 
@@ -761,7 +761,8 @@ const navGroups = [
         </div>
 
         <div class="mt-12 pt-8 border-t border-navy-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-navy-200">
-          <p>{site.footer_copyright}</p>
+          {/* barvu je nutné zapsat: základní pravidlo p{color} přebíjí dědění z rodiče */}
+          <p class="text-navy-200">{site.footer_copyright}</p>
           <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             <button type="button" onclick="window.openCookieSettings && window.openCookieSettings()" class="hover:text-white transition-colors underline underline-offset-4 decoration-navy-500">Nastavení cookies</button>
             <a href="/gdpr" class="hover:text-white transition-colors">Zásady ochrany osobních údajů</a>

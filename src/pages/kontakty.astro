@@ -24,7 +24,7 @@ import data from '../data/kontakty.json';
               <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <img src={contact.img} alt={contact.name} class="w-20 h-20 rounded-full object-cover mb-4 cursor-pointer hover:ring-4 hover:ring-brand-200 transition-all" loading="lazy" data-lightbox />
                 <div class="font-bold text-charcoal-900 text-base mb-0.5">{contact.name}</div>
-                <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-4">{contact.role}</div>
+                <div class="text-xs text-charcoal-500 font-semibold uppercase tracking-wider mb-4">{contact.role}</div>
                 <div class="space-y-2">
                   <a href={contact.phone_href} data-place="kontakty" class="flex items-center gap-2 text-sm text-charcoal-700 hover:text-brand-500 transition-colors">
                     <svg class="w-4 h-4 text-navy-700 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@ import data from '../data/kontakty.json';
                 </svg>
               </div>
               <div>
-                <div class="text-xs text-charcoal-400 font-semibold uppercase tracking-wider mb-1">{data.address_label}</div>
+                <div class="text-xs text-charcoal-500 font-semibold uppercase tracking-wider mb-1">{data.address_label}</div>
                 <div class="font-bold text-charcoal-900">{site.address_line1}<br />{site.address_line2}</div>
               </div>
             </div>
