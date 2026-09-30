@@ -15,13 +15,13 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
   />
 
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="space-y-6">
-        <p class="text-charcoal-600 leading-relaxed">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed">
           {data.intro1}
         </p>
-        <p class="text-charcoal-600 leading-relaxed">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed">
           {data.intro2}
         </p>
 
@@ -38,17 +38,17 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
         </figure>
 
         <div class="bg-gray-100 rounded-xl p-6">
-          <p class="font-semibold text-charcoal-800">
+          <p class="max-w-3xl font-semibold text-charcoal-800">
             {data.highlight}
           </p>
         </div>
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.tabulka_title}</h2>
-        <p class="text-charcoal-600 leading-relaxed mb-6">{data.tabulka_intro}</p>
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed mb-6">{data.tabulka_intro}</p>
 
         <RadikTabulka />
 
-        <p class="text-charcoal-600 leading-relaxed mt-10">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed mt-10">
           {data.outro}
         </p>
       </div>

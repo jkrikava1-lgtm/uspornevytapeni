@@ -16,13 +16,13 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
   />
 
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="space-y-6">
-        <p class="text-charcoal-600 leading-relaxed">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed">
           {data.intro1}
         </p>
-        <p class="text-charcoal-600 leading-relaxed">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed">
           {data.intro2}
         </p>
 
@@ -40,7 +40,7 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-10 mb-4">{data.check_title}</h2>
 
-        <div class="space-y-5">
+        <div class="max-w-3xl space-y-5">
           {data.check_steps.map((item, i) => (
             <div class="flex gap-4 items-start">
               <div class="w-8 h-8 bg-charcoal-800 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">{i + 1}</div>
@@ -50,12 +50,12 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
         </div>
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-4">{radik.radik_title}</h2>
-        <p class="text-charcoal-600 leading-relaxed mb-6">{radik.radik_intro}</p>
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed mb-6">{radik.radik_intro}</p>
 
         <RadikTabulka />
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-4">{data.alt_title}</h2>
-        <p class="text-charcoal-600 leading-relaxed mb-4">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed mb-4">
           {data.alt_intro}
         </p>
         <div class="space-y-3">
@@ -72,7 +72,7 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
         </div>
 
         <div class="bg-gray-100 rounded-xl p-6 mt-8">
-          <p class="font-semibold text-sm text-charcoal-800">
+          <p class="max-w-3xl font-semibold text-sm text-charcoal-800">
             {data.tip_box}
           </p>
         </div>
@@ -86,7 +86,7 @@ import RadikTabulka from '../../components/RadikTabulka.astro';
           </div>
         </div>
 
-        <p class="text-charcoal-600 text-sm mt-6">
+        <p class="max-w-3xl text-charcoal-600 text-sm mt-6">
           {data.outro}
         </p>
       </div>

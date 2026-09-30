@@ -14,10 +14,10 @@ import data from '../../data/kombinace-topnych-okruhu.json';
   />
 
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="space-y-6">
-        <p class="text-charcoal-600 leading-relaxed">
+        <p class="max-w-3xl text-charcoal-600 leading-relaxed">
           {data.intro}
         </p>
 
@@ -42,7 +42,7 @@ import data from '../../data/kombinace-topnych-okruhu.json';
           {data.examples.map(ex => (
             <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <h3 class="font-bold text-charcoal-900 mb-2">{ex.title}</h3>
-              <p class="text-charcoal-600 text-sm leading-relaxed">
+              <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed">
                 {ex.desc}
               </p>
             </div>
