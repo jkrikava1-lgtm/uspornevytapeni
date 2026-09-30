@@ -38,38 +38,6 @@ const odCeny = cenyTypu[0]?.text ?? '';
         <img src="/images/reference/tuklaty-1.webp" alt="Tepelné čerpadlo Master Therm u rodinného domu v Tuklatech" class="rounded-2xl w-full max-h-64 object-cover" style="object-position: 50% 45%;" loading="lazy" />
       </div>
 
-      <!-- Rozcestník typů. Ceny a podrobnosti jsou níž v sekci „Kolik stojí
-           jednotlivé typy" — tady by se jen zdvojovaly. -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        {[
-          { typ: data.price1_typ, veta: data.price1_veta, odkaz: '#cena-vzduch-voda', highlight: true },
-          { typ: data.price2_typ, veta: data.price2_veta, odkaz: '#cena-zeme-voda', highlight: false },
-          { typ: data.price3_typ, veta: data.price3_veta, odkaz: '#cena-voda-voda', highlight: false },
-        ].map(item => (
-          <a
-            href={item.odkaz}
-            data-place="cena-karta-nahore"
-            class:list={[
-              'group flex flex-col rounded-xl border-2 p-5 transition-all hover:shadow-md',
-              item.highlight
-                ? 'border-brand-500 bg-brand-50 hover:border-brand-600'
-                : 'border-gray-200 bg-white hover:border-brand-200',
-            ]}
-          >
-            {item.highlight && (
-              <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-brand-500">{data.highlight_badge}</div>
-            )}
-            <h3 class="text-lg font-bold text-charcoal-900">{item.typ}</h3>
-            <p class="mt-1.5 text-sm leading-relaxed text-charcoal-500">{item.veta}</p>
-            <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
-              Ceny a podrobnosti
-              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </a>
-        ))}
-      </div>
 
       <div>
         <h2 class="text-2xl font-extrabold text-charcoal-900 mb-6">{data.factors_headline}</h2>
