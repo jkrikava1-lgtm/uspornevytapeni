@@ -970,5 +970,30 @@
   },
   "radik_hloubka_label": "hloubka",
   "radik_rez_popis": "Vodorovný řez tělesem, kóta udává hloubku v mm.",
-  "radik_kresba_zdroj": "Kresba: KORADO, a.s., katalog RADIK."
+  "radik_kresba_zdroj": "Kresba: KORADO, a.s., katalog RADIK.",
+  "odhad_summary": "Neznáte tepelnou ztrátu? Odhadněte ji z rozměrů místnosti",
+  "odhad_intro": "Vynásobte objem místnosti podle toho, jak je dům zateplený. Je to hrubý odhad pro představu — přesné číslo dá až výpočet tepelné ztráty od projektanta.",
+  "odhad_vyska": "Výška",
+  "odhad_sirka": "Šířka",
+  "odhad_delka": "Délka",
+  "odhad_standard": "Stav domu",
+  "odhad_varianty": [
+    {
+      "id": "novostavba",
+      "popis": "Novostavba",
+      "w": 18
+    },
+    {
+      "id": "castecne",
+      "popis": "Částečně zateplený",
+      "w": 30
+    },
+    {
+      "id": "nezateplen",
+      "popis": "Nezateplený",
+      "w": 38
+    }
+  ],
+  "odhad_pouzit": "Použít v tabulce",
+  "odhad_vyzva": "Zadejte všechny tři rozměry v metrech."
 }
