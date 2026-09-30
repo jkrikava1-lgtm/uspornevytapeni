@@ -105,5 +105,9 @@
   ],
   "limit_zaver": "Norma ČSN EN 1264-4 v obou případech klade požadavky na tepelný odpor podkladu. I s doplněnou izolací vyjde suchý systém i Spider níž než klasická cesta.",
   "video_soubor": "/video/spider-pokladka.mp4",
-  "video_nahled": "/images/video/spider-nahled.webp"
+  "video_nahled": "/images/video/spider-nahled.webp",
+  "klasika_video_soubor": "/video/podlahovka-klasika.mp4",
+  "klasika_video_nahled": "/images/video/podlahovka-klasika-nahled.webp",
+  "klasika_video_popisek": "Pokládka klasického systému v novostavbě — systémová deska, trubka, napojení na rozdělovač.",
+  "klasika_video_pozn": "Video: GIACOMINI CZECH, s.r.o."
 }

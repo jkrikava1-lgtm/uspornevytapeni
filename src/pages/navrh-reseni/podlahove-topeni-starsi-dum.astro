@@ -138,6 +138,24 @@ import data from '../../data/podlahove-topeni-starsi-dum.json';
 
         <h2 class="text-xl font-extrabold text-charcoal-900 mt-12 mb-4">{data.klasika_title}</h2>
 
+        <figure class="mt-6">
+          <video
+            src={data.klasika_video_soubor}
+            poster={data.klasika_video_nahled}
+            controls
+            muted
+            playsinline
+            preload="none"
+            width="1280"
+            height="720"
+            class="w-full rounded-2xl bg-charcoal-900"
+          ></video>
+          <figcaption class="mt-2.5 text-sm text-charcoal-500">
+            {data.klasika_video_popisek}
+            <span class="block text-xs">{data.klasika_video_pozn}</span>
+          </figcaption>
+        </figure>
+
         <div class="max-w-3xl space-y-5 mt-8">
           {data.steps.map((item, i) => (
             <div class="flex gap-4 items-start">
