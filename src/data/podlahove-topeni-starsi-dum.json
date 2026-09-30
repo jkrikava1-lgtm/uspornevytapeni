@@ -79,12 +79,8 @@
   ],
   "limit_title": "Kdy je potřeba tepelná izolace",
   "klasika_title": "Klasická cesta — vybourat a postavit znovu",
-  "video_id": "yG0gPJgBreQ",
-  "video_titulek": "Rekonstruujete? Systém podlahového vytápění SPIDER Vám s tím pomůže",
-  "video_start": 12,
   "video_popisek": "Pokládka Spideru na původní podlahu — deska, trubka, zálivka.",
-  "video_pozn": "Video: GIACOMINI CZECH, s.r.o. Kliknutím se načte přehrávač z YouTube.",
-  "video_konec": 81,
+  "video_pozn": "Video: GIACOMINI CZECH, s.r.o.",
   "suchy_fotky": [
     {
       "src": "/images/ilustrace/suchy-system-deska.webp",
@@ -107,5 +103,7 @@
     "Podlaha na desce na terénu — tepelná izolace být musí. U klasické cesty je součástí nové skladby, u suchého systému i Spideru se doplní pod systém. Bez ní by šla velká část tepla do země místo do místnosti.",
     "Podlaha v patře, pod kterým se topí — tepelná izolace nutná není. Teplo, které projde dolů, z domu neuteče."
   ],
-  "limit_zaver": "Norma ČSN EN 1264-4 v obou případech klade požadavky na tepelný odpor podkladu. I s doplněnou izolací vyjde suchý systém i Spider níž než klasická cesta."
+  "limit_zaver": "Norma ČSN EN 1264-4 v obou případech klade požadavky na tepelný odpor podkladu. I s doplněnou izolací vyjde suchý systém i Spider níž než klasická cesta.",
+  "video_soubor": "/video/spider-pokladka.mp4",
+  "video_nahled": "/images/video/spider-nahled.webp"
 }

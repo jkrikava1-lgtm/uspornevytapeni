@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import SouvisejiciTemata from '../../components/SouvisejiciTemata.astro';
 import SkladbaPodlahy from '../../components/SkladbaPodlahy.astro';
-import VideoFasada from '../../components/VideoFasada.astro';
 import vetev from '../../data/stavajici-dum.json';
 import data from '../../data/podlahove-topeni-starsi-dum.json';
 ---
@@ -105,15 +104,22 @@ import data from '../../data/podlahove-topeni-starsi-dum.json';
           ))}
         </ul>
 
-        <VideoFasada
-          id={data.video_id}
-          titulek={data.video_titulek}
-          nahled="/images/video/spider-nahled.webp"
-          start={data.video_start}
-          konec={data.video_konec}
-          popisek={data.video_popisek}
-          pozn={data.video_pozn}
-        />
+        <figure class="mt-6">
+          <video
+            src={data.video_soubor}
+            poster={data.video_nahled}
+            controls
+            playsinline
+            preload="none"
+            width="1280"
+            height="714"
+            class="w-full rounded-2xl bg-charcoal-900"
+          ></video>
+          <figcaption class="mt-2.5 text-sm text-charcoal-500">
+            {data.video_popisek}
+            <span class="block text-xs">{data.video_pozn}</span>
+          </figcaption>
+        </figure>
 
         <div class="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-5 sm:p-6">
           <div class="text-xs font-semibold uppercase tracking-wider text-amber-800">{data.limit_title}</div>
