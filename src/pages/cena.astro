@@ -3,6 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import data from '../data/cena.json';
 import site from '../data/site.json';
+
+// Nejnižší cena pro úvod — počítá se z dat sekce „Kolik stojí jednotlivé typy",
+// aby se číslo neudržovalo na dvou místech.
+const cenyTypu = (data.typy ?? [])
+  .map((t: any) => ({ text: t.cena as string, hodnota: Number(String(t.cena).replace(/\D/g, '')) }))
+  .filter(c => c.hodnota > 0)
+  .sort((a, b) => a.hodnota - b.hodnota);
+const odCeny = cenyTypu[0]?.text ?? '';
 ---
 
 <Layout title={data.meta_title} description={data.meta_description} breadcrumbs={[{ label: 'Cena', href: '/cena' }]}>
@@ -20,56 +28,41 @@ import site from '../data/site.json';
         <div>
           <h2 class="text-xl font-extrabold text-charcoal-900 mb-3">{data.intro_headline}</h2>
           <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
+          {odCeny && (
+            <p class="mt-4 text-sm text-charcoal-600">
+              Systém na klíč vyjde <strong class="text-lg font-extrabold text-navy-700">{odCeny}</strong>,
+              podle typu čerpadla a stavu domu. Ceny jednotlivých typů najdete níž.
+            </p>
+          )}
         </div>
         <img src="/images/reference/tuklaty-1.webp" alt="Tepelné čerpadlo Master Therm u rodinného domu v Tuklatech" class="rounded-2xl w-full max-h-64 object-cover" style="object-position: 50% 45%;" loading="lazy" />
       </div>
 
-      <!-- Cenové tabulky -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <!-- Rozcestník typů. Ceny a podrobnosti jsou níž v sekci „Kolik stojí
+           jednotlivé typy" — tady by se jen zdvojovaly. -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         {[
-          {
-            typ: data.price1_typ,
-            rozsah: data.price1_rozsah,
-            poznamka: data.price1_poznamka,
-            body: [data.price1_body1, data.price1_body2, data.price1_body3],
-            odkaz: '#cena-vzduch-voda',
-            highlight: true,
-          },
-          {
-            typ: data.price2_typ,
-            rozsah: data.price2_rozsah,
-            poznamka: data.price2_poznamka,
-            body: [data.price2_body1, data.price2_body2, data.price2_body3],
-            odkaz: '#cena-zeme-voda',
-            highlight: false,
-          },
-          {
-            typ: data.price3_typ,
-            rozsah: data.price3_rozsah,
-            poznamka: data.price3_poznamka,
-            body: [data.price3_body1, data.price3_body2, data.price3_body3],
-            odkaz: '#cena-voda-voda',
-            highlight: false,
-          },
+          { typ: data.price1_typ, veta: data.price1_veta, odkaz: '#cena-vzduch-voda', highlight: true },
+          { typ: data.price2_typ, veta: data.price2_veta, odkaz: '#cena-zeme-voda', highlight: false },
+          { typ: data.price3_typ, veta: data.price3_veta, odkaz: '#cena-voda-voda', highlight: false },
         ].map(item => (
-          <a href={item.odkaz} data-place="cena-karta-nahore"
-             class={`group block rounded-xl p-7 border-2 transition-all hover:shadow-md ${item.highlight ? 'border-brand-500 bg-brand-50 hover:border-brand-600' : 'border-gray-200 bg-white hover:border-brand-200'}`}>
-            {item.highlight && <div class="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-3">{data.highlight_badge}</div>}
-            <h3 class="text-lg font-bold text-charcoal-900 mb-2">{item.typ}</h3>
-            <div class="text-2xl font-extrabold text-navy-700 mb-1">{item.rozsah}</div>
-            <div class="text-xs text-charcoal-400 mb-5">{item.poznamka}</div>
-            <ul class="space-y-2">
-              {item.body.map(b => (
-                <li class="flex items-center gap-2 text-sm text-charcoal-600">
-                  <svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                  </svg>
-                  {b}
-                </li>
-              ))}
-            </ul>
-          <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
-              Podrobnosti a příklady
+          <a
+            href={item.odkaz}
+            data-place="cena-karta-nahore"
+            class:list={[
+              'group flex flex-col rounded-xl border-2 p-5 transition-all hover:shadow-md',
+              item.highlight
+                ? 'border-brand-500 bg-brand-50 hover:border-brand-600'
+                : 'border-gray-200 bg-white hover:border-brand-200',
+            ]}
+          >
+            {item.highlight && (
+              <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-brand-500">{data.highlight_badge}</div>
+            )}
+            <h3 class="text-lg font-bold text-charcoal-900">{item.typ}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-charcoal-500">{item.veta}</p>
+            <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
+              Ceny a podrobnosti
               <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
               </svg>
@@ -174,6 +167,51 @@ import site from '../data/site.json';
   </section>
   )}
 
+  <!-- Návratnost investice -->
+  <section class="py-10 lg:py-14">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.roi_headline}</h2>
+      <p class="text-charcoal-500 text-sm mb-8">Modelový příklad pro rodinný dům 150 m², přechod z plynového kotle.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div class="bg-navy-700 rounded-xl p-6 text-white">
+          <div class="space-y-0">
+            {[
+              { label: data.roi_price_label, value: data.roi_price, highlight: false },
+              { label: data.roi_dotace_label, value: data.roi_dotace, highlight: false },
+              { label: data.roi_net_label, value: data.roi_net, highlight: true },
+              { label: data.roi_annual_savings_label, value: data.roi_annual_savings, highlight: false },
+              { label: data.roi_payback_label, value: data.roi_payback, highlight: true },
+            ].map(row => (
+              <div class={`flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4 ${row.highlight ? 'pt-4' : ''}`}>
+                <span class={`text-sm ${row.highlight ? 'text-white font-semibold' : 'text-navy-200'}`}>{row.label}</span>
+                <span class={`text-sm font-bold flex-shrink-0 ${row.highlight ? 'text-brand-400 text-base' : 'text-white'}`}>{row.value}</span>
+              </div>
+            ))}
+          </div>
+          <p class="text-navy-300 text-xs mt-4 leading-relaxed [&_a]:text-white [&_a]:underline [&_a]:underline-offset-2" set:html={data.roi_footnote}></p>
+        </div>
+        <div class="space-y-4">
+          <div class="p-5 bg-green-50 border border-green-200 rounded-xl">
+            <h3 class="font-bold text-green-800 mb-2 text-sm">Roční úspora oproti plynovému kotli</h3>
+            <p class="text-green-700 text-sm leading-relaxed">Tepelné čerpadlo vzduch-voda vyjde na 1 kWh tepla zhruba na 1,20 Kč. Plynový kotel vychází na 2,10 Kč, elektrokotel na 3,40 Kč. U domu s roční potřebou 31 191 kWh to proti plynu znamená úsporu <strong>kolem 28 000 Kč</strong>, proti elektrokotli 69 000 Kč.</p>
+          </div>
+          <div class="p-5 bg-blue-50 border border-blue-200 rounded-xl">
+            <h3 class="font-bold text-blue-800 mb-2 text-sm">Záruka 7 let a životnost</h3>
+            <p class="text-blue-700 text-sm leading-relaxed">Master Therm dává <strong>7 let záruky na celé tepelné čerpadlo</strong>, ne jen na kompresor. Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Životnost čerpadla je okolo 20 let.</p>
+          </div>
+          <div class="p-5 bg-navy-50 border border-navy-200 rounded-xl">
+            <h3 class="font-bold text-navy-800 mb-2 text-sm">Online správa v ceně</h3>
+            <p class="text-navy-700 text-sm leading-relaxed">Internetový modul i přístup do online správy jsou součástí každého čerpadla — <strong>bez příplatku a bez měsíčních poplatků</strong>. Topení ovládáte z mobilu a my vidíme případnou poruchu dřív, než ji poznáte doma.</p>
+          </div>
+          <div class="p-5 bg-amber-50 border border-amber-200 rounded-xl">
+            <h3 class="font-bold text-amber-800 mb-2 text-sm">Jak dlouho trvá montáž?</h3>
+            <p class="text-amber-700 text-sm leading-relaxed">Vzduch-voda: <strong>2–5 dní</strong>. Země-voda s vrty: <strong>5–7 dní</strong> (z toho 1–2 dny vrtné práce). Voda-voda: <strong>5–7 dní</strong> podle podmínek studní.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Cena podle typu — míří na dotazy „cena tepelného čerpadla vzduch voda / země voda / voda voda" -->
   <section class="py-10 lg:py-14 border-t border-gray-100">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -275,50 +313,6 @@ import site from '../data/site.json';
     </div>
   </section>
 
-  <!-- Návratnost investice -->
-  <section class="py-10 lg:py-14">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.roi_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-8">Modelový příklad pro rodinný dům 150 m², přechod z plynového kotle.</p>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-        <div class="bg-navy-700 rounded-xl p-6 text-white">
-          <div class="space-y-0">
-            {[
-              { label: data.roi_price_label, value: data.roi_price, highlight: false },
-              { label: data.roi_dotace_label, value: data.roi_dotace, highlight: false },
-              { label: data.roi_net_label, value: data.roi_net, highlight: true },
-              { label: data.roi_annual_savings_label, value: data.roi_annual_savings, highlight: false },
-              { label: data.roi_payback_label, value: data.roi_payback, highlight: true },
-            ].map(row => (
-              <div class={`flex justify-between py-3 border-b border-navy-600 last:border-0 gap-4 ${row.highlight ? 'pt-4' : ''}`}>
-                <span class={`text-sm ${row.highlight ? 'text-white font-semibold' : 'text-navy-200'}`}>{row.label}</span>
-                <span class={`text-sm font-bold flex-shrink-0 ${row.highlight ? 'text-brand-400 text-base' : 'text-white'}`}>{row.value}</span>
-              </div>
-            ))}
-          </div>
-          <p class="text-navy-300 text-xs mt-4 leading-relaxed [&_a]:text-white [&_a]:underline [&_a]:underline-offset-2" set:html={data.roi_footnote}></p>
-        </div>
-        <div class="space-y-4">
-          <div class="p-5 bg-green-50 border border-green-200 rounded-xl">
-            <h3 class="font-bold text-green-800 mb-2 text-sm">Roční úspora oproti plynovému kotli</h3>
-            <p class="text-green-700 text-sm leading-relaxed">Tepelné čerpadlo vzduch-voda vyjde na 1 kWh tepla zhruba na 1,20 Kč. Plynový kotel vychází na 2,10 Kč, elektrokotel na 3,40 Kč. U domu s roční potřebou 31 191 kWh to proti plynu znamená úsporu <strong>kolem 28 000 Kč</strong>, proti elektrokotli 69 000 Kč.</p>
-          </div>
-          <div class="p-5 bg-blue-50 border border-blue-200 rounded-xl">
-            <h3 class="font-bold text-blue-800 mb-2 text-sm">Záruka 7 let a životnost</h3>
-            <p class="text-blue-700 text-sm leading-relaxed">Master Therm dává <strong>7 let záruky na celé tepelné čerpadlo</strong>, ne jen na kompresor. Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Životnost čerpadla je okolo 20 let.</p>
-          </div>
-          <div class="p-5 bg-navy-50 border border-navy-200 rounded-xl">
-            <h3 class="font-bold text-navy-800 mb-2 text-sm">Online správa v ceně</h3>
-            <p class="text-navy-700 text-sm leading-relaxed">Internetový modul i přístup do online správy jsou součástí každého čerpadla — <strong>bez příplatku a bez měsíčních poplatků</strong>. Topení ovládáte z mobilu a my vidíme případnou poruchu dřív, než ji poznáte doma.</p>
-          </div>
-          <div class="p-5 bg-amber-50 border border-amber-200 rounded-xl">
-            <h3 class="font-bold text-amber-800 mb-2 text-sm">Jak dlouho trvá montáž?</h3>
-            <p class="text-amber-700 text-sm leading-relaxed">Vzduch-voda: <strong>2–5 dní</strong>. Země-voda s vrty: <strong>5–7 dní</strong> (z toho 1–2 dny vrtné práce). Voda-voda: <strong>5–7 dní</strong> podle podmínek studní.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FAQ schema -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
