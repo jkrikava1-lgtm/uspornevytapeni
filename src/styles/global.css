@@ -50,6 +50,10 @@
   --color-gray-900: #1a1a1a;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Rám stránky: 1440 px místo výchozích 1280 — na širokých monitorech
+     se obsah přestane krčit uprostřed. */
+  --container-8xl: 90rem;
 }
 
 @layer base {

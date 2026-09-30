@@ -23,7 +23,7 @@ import site from '../data/site.json';
 
   <!-- Intro -->
   <section class="pt-10 pb-10 lg:pt-12 lg:pb-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-6">
         <img src="/images/nzu-logo.webp" alt="Nová zelená úsporám" class="h-10 w-auto" />
       </div>
@@ -32,7 +32,7 @@ import site from '../data/site.json';
           <p class="text-charcoal-600 text-lg leading-relaxed mb-8" set:html={data.intro} />
 
           <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.harmonogram_headline}</h2>
-          <p class="text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
+          <p class="max-w-3xl text-charcoal-500 text-sm mb-6">{data.harmonogram_intro}</p>
 
           <div class="space-y-0">
             {data.harmonogram.map((item, i) => (
@@ -56,9 +56,9 @@ import site from '../data/site.json';
 
   <!-- Hlavní změna: Dotace vs Úvěry -->
   <section class="py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
+      <p class="max-w-3xl text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
@@ -77,8 +77,8 @@ import site from '../data/site.json';
           </div>
 
           <div class="space-y-3 mt-4">
-            <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_desc} />
-            <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_jak} />
+            <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_desc} />
+            <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_jak} />
             <div class="bg-green-50 border border-green-200 rounded-lg p-3">
               <p class="text-green-800 text-sm" set:html={data.bezne_vyhoda} />
             </div>
@@ -137,9 +137,9 @@ import site from '../data/site.json';
 
   <!-- Podpora tepelných čerpadel -->
   <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.tc_headline}</h2>
-      <p class="text-charcoal-500 text-sm mb-6">{data.tc_intro}</p>
+      <p class="max-w-3xl text-charcoal-500 text-sm mb-6">{data.tc_intro}</p>
 
       <div class="bg-navy-700 rounded-xl p-5 text-white mb-4">
         <div class="space-y-0">
@@ -152,7 +152,7 @@ import site from '../data/site.json';
         </div>
       </div>
 
-      <p class="text-charcoal-600 text-sm leading-relaxed">{data.tc_note}</p>
+      <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed">{data.tc_note}</p>
     </div>
   </section>
 
@@ -160,7 +160,7 @@ import site from '../data/site.json';
        o pasu mluví. Clarity ukázala, že tam lidé klikali naprázdno.
        scroll-mt kompenzuje lepivou hlavičku, jinak by nadpis zmizel pod ní. -->
   <section id="renovacni-pas" class="scroll-mt-20 lg:scroll-mt-28 bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.renovacni_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-5">{data.renovacni_intro}</p>
 
@@ -172,7 +172,7 @@ import site from '../data/site.json';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
               </svg>
             </div>
-            <span class="text-charcoal-600 text-sm leading-relaxed" set:html={item} />
+            <span class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={item} />
           </div>
         ))}
       </div>
@@ -190,7 +190,7 @@ import site from '../data/site.json';
 
   <!-- FAQ sekce -->
   <section class="py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-3">{data.faq_headline}</h2>
       <p class="text-charcoal-500 mb-8 max-w-2xl">Rozklikněte otázku, která vás zajímá.</p>
       <div class="max-w-4xl space-y-3">
@@ -204,7 +204,7 @@ import site from '../data/site.json';
                 </svg>
               </span>
             </summary>
-            <p class="px-6 pb-5 -mt-1 text-charcoal-600 leading-relaxed">{item.a}</p>
+            <p class="px-6 pb-5 -mt-1 max-w-3xl text-charcoal-600 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>

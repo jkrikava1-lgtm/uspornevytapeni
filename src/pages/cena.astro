@@ -13,13 +13,13 @@ import site from '../data/site.json';
   />
 
   <section class="pt-10 pb-6 lg:pt-12 lg:pb-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Úvod -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-6">
         <div>
           <h2 class="text-xl font-extrabold text-charcoal-900 mb-3">{data.intro_headline}</h2>
-          <p class="text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
+          <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.intro_text} />
         </div>
         <img src="/images/reference/tuklaty-1.webp" alt="Tepelné čerpadlo Master Therm u rodinného domu v Tuklatech" class="rounded-2xl w-full max-h-64 object-cover" style="object-position: 50% 45%;" loading="lazy" />
       </div>
@@ -109,7 +109,7 @@ import site from '../data/site.json';
   <!-- Modelové příklady — vykreslí se, až budou v cena.json vyplněné modely -->
   {data.modely && data.modely.length > 0 && (
   <section class="py-10 lg:py-14 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.modely_label}</div>
       <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-4">{data.modely_headline}</h2>
       <p class="text-charcoal-500 leading-relaxed max-w-3xl mb-10">{data.modely_lead}</p>
@@ -176,7 +176,7 @@ import site from '../data/site.json';
 
   <!-- Cena podle typu — míří na dotazy „cena tepelného čerpadla vzduch voda / země voda / voda voda" -->
   <section class="py-10 lg:py-14 border-t border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.typy_label}</div>
       <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-4">{data.typy_headline}</h2>
       <p class="text-charcoal-500 leading-relaxed max-w-3xl mb-10">{data.typy_lead}</p>
@@ -202,7 +202,7 @@ import site from '../data/site.json';
                   <h3 class="text-2xl font-extrabold text-charcoal-900">{t.typ}</h3>
                   <div class="text-2xl font-extrabold text-brand-500 whitespace-nowrap">{t.cena}</div>
                 </div>
-                <p class="text-charcoal-600 leading-relaxed mb-7">{t.text}</p>
+                <p class="max-w-3xl text-charcoal-600 leading-relaxed mb-7">{t.text}</p>
 
                 <div class="text-xs font-bold text-charcoal-400 uppercase tracking-wider mb-3">Co cenu nejvíc ovlivní</div>
                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 mb-7">
@@ -238,7 +238,7 @@ import site from '../data/site.json';
       </div>
 
       <div class="flex flex-col sm:flex-row sm:items-center gap-5 mt-8">
-        <p class="text-sm text-charcoal-400 leading-relaxed flex-1">{data.typy_note}</p>
+        <p class="text-sm text-charcoal-400 leading-relaxed flex-1 max-w-3xl">{data.typy_note}</p>
         <a href="/cenova-kalkulace" data-place="cena-typy" class="flex-shrink-0 inline-flex items-center justify-center px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors text-sm">
           {data.typy_cta}
         </a>
@@ -247,7 +247,7 @@ import site from '../data/site.json';
   </section>
 
   <section class="py-10 lg:py-14 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Co zahrnuje cena montáže tepelného čerpadla?</h2>
       <p class="text-charcoal-500 text-sm mb-8">Naše cena je vždy za kompletní realizaci na klíč — žádné skryté náklady.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -277,7 +277,7 @@ import site from '../data/site.json';
 
   <!-- Návratnost investice -->
   <section class="py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.roi_headline}</h2>
       <p class="text-charcoal-500 text-sm mb-8">Modelový příklad pro rodinný dům 150 m², přechod z plynového kotle.</p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -333,7 +333,7 @@ import site from '../data/site.json';
 
   <!-- FAQ sekce -->
   <section class="py-10 lg:py-14">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-3">{data.faq_headline}</h2>
       <p class="text-charcoal-500 mb-8 max-w-2xl">Rozklikněte otázku, která vás zajímá.</p>
       <div class="max-w-4xl space-y-3">
@@ -347,7 +347,7 @@ import site from '../data/site.json';
                 </svg>
               </span>
             </summary>
-            <p class="px-6 pb-5 -mt-1 text-charcoal-600 leading-relaxed">{item.a}</p>
+            <p class="px-6 pb-5 -mt-1 max-w-3xl text-charcoal-600 leading-relaxed">{item.a}</p>
           </details>
         ))}
       </div>
