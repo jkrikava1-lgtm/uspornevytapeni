@@ -105,7 +105,7 @@ import ref from '../data/reference.json';
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
         var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, fullscreenControl: true, fullscreenControlOptions: { position: 'topleft' } });
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+          attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>', maxZoom: 19
         }).addTo(map);
         var cluster = L.markerClusterGroup({
           maxClusterRadius: 45,
