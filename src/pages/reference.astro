@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import ref from '../data/reference.json';
+import site from '../data/site.json';
 ---
 
 <Layout title={ref.meta_title} description={ref.meta_description}>
@@ -100,13 +101,11 @@ import ref from '../data/reference.json';
   <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
   <script is:inline src="https://unpkg.com/leaflet.fullscreen@3.0.2/Control.FullScreen.js"></script>
-  <script is:inline>
+  <script is:inline define:vars={{ mapTiles: site.map_tiles, mapAttr: site.map_attribution }}>
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
         var map = L.map('ref-map', { center: [50.0, 15.5], zoom: 8, fullscreenControl: true, fullscreenControlOptions: { position: 'topleft' } });
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '\u00a9 <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>', maxZoom: 19
-        }).addTo(map);
+        L.tileLayer(mapTiles, { attribution: mapAttr, maxZoom: 19 }).addTo(map);
         var cluster = L.markerClusterGroup({
           maxClusterRadius: 45,
           iconCreateFunction: function(c) {

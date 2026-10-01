@@ -506,13 +506,11 @@ const icons: Record<string, string> = {
   <!-- Mapa realizací -->
   <script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script is:inline src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script is:inline>
+  <script is:inline define:vars={{ mapTiles: site.map_tiles, mapAttr: site.map_attribution }}>
     (function() {
       fetch('/data/cities.json').then(function(r){return r.json()}).then(function(CITIES){
         var map = L.map('mt-map', { center: [50.0, 15.5], zoom: 8 });
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>', maxZoom: 19
-        }).addTo(map);
+        L.tileLayer(mapTiles, { attribution: mapAttr, maxZoom: 19 }).addTo(map);
         var cluster = L.markerClusterGroup({
           maxClusterRadius: 45,
           iconCreateFunction: function(c) {
