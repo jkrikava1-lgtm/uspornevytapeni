@@ -37,6 +37,24 @@ import data from '../../data/podlahove-topeni.json';
             </div>
           ))}
         </div>
+
+        <figure class="clear-both mt-8">
+          <video
+            src={data.video_soubor}
+            poster={data.video_nahled}
+            controls
+            muted
+            playsinline
+            preload="none"
+            width="1280"
+            height="720"
+            class="w-full rounded-2xl bg-charcoal-900"
+          ></video>
+          <figcaption class="mt-2.5 text-sm text-charcoal-500">
+            {data.video_popisek}
+            <span class="block text-xs">{data.video_pozn}</span>
+          </figcaption>
+        </figure>
       </div>
 
       <div class="mt-12 text-center">

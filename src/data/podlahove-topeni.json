@@ -15,5 +15,9 @@
     "Systém natlakujeme a zůstane natlakovaný do úplného dokončení betonáže.",
     "Po dokončení lití podlahy pomalu a postupně natápíme."
   ],
-  "cta_button": "Zpracujte mi nabídku"
+  "cta_button": "Zpracujte mi nabídku",
+  "video_soubor": "/video/podlahovka-klasika.mp4",
+  "video_nahled": "/images/video/podlahovka-klasika-nahled.webp",
+  "video_popisek": "Pokládka podlahového topení — systémová deska s výstupky, natažení trubky a napojení na rozdělovač.",
+  "video_pozn": "Video: GIACOMINI CZECH, s.r.o."
 }
