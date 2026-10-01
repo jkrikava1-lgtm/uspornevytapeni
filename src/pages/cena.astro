@@ -91,7 +91,9 @@ const odCeny = cenyTypu[0]?.text ?? '';
 
               <div class="flex flex-1 flex-col p-6 lg:p-7">
                 <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-4">
-                  <h3 class="text-2xl font-extrabold text-charcoal-900">{t.typ}</h3>
+                  <h3 class="text-2xl font-extrabold text-charcoal-900">
+                    <a href={t.detail_href} data-place="cena-nadpis-typu" class="hover:text-brand-500 hover:underline underline-offset-4 transition-colors">{t.typ}</a>
+                  </h3>
                   <div class="text-2xl font-extrabold text-brand-500 whitespace-nowrap">{t.cena}</div>
                 </div>
                 <p class="mb-6 leading-relaxed text-charcoal-600">{t.text}</p>

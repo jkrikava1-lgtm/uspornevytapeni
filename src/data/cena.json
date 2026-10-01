@@ -60,7 +60,8 @@
       "katalog_label": "Katalog vzduch – voda",
       "image": "/images/produkty/boxair-kompakt-dum.webp",
       "image_alt": "Tepelné čerpadlo vzduch-voda BoxAir u rodinného domu",
-      "badge": "Nejčastější volba"
+      "badge": "Nejčastější volba",
+      "detail_href": "/tepelna-cerpadla/vzduch-voda"
     },
     {
       "typ": "Voda – voda",
@@ -78,7 +79,8 @@
       "katalog_href": "/katalog/voda-voda",
       "katalog_label": "Katalog voda – voda",
       "image": "/images/ilustrace/zeme-voda.webp",
-      "image_alt": "Tepelné čerpadlo voda-voda AquaMaster"
+      "image_alt": "Tepelné čerpadlo voda-voda AquaMaster",
+      "detail_href": "/tepelna-cerpadla/voda-voda"
     },
     {
       "typ": "Země – voda",
@@ -96,7 +98,8 @@
       "katalog_href": "/katalog/zeme-voda",
       "katalog_label": "Katalog země – voda",
       "image": "/images/produkty/aquamaster-technicka.webp",
-      "image_alt": "Tepelné čerpadlo země-voda AquaMaster"
+      "image_alt": "Tepelné čerpadlo země-voda AquaMaster",
+      "detail_href": "/tepelna-cerpadla/zeme-voda"
     }
   ],
   "typy_note": "Uvedený topný faktor je průměr za topnou sezónu, se kterým počítáme i v porovnání nákladů. Maxima jednotlivých modelů z technických listů najdete v katalogu. Konkrétní model i cenu určí návrh podle tepelné ztráty vašeho domu — proto děláme nabídky individuálně a zdarma.",
