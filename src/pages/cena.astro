@@ -76,7 +76,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         {data.typy.map(t => (
-          <div id={t.anchor} class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all scroll-mt-24 hover:border-brand-200 hover:shadow-md">
+          <div id={t.anchor} class="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white scroll-mt-24">
 
               <div class="relative h-44 flex-none">
                 <img src={t.image} alt={t.image_alt} loading="lazy" width="640" height="600"
@@ -92,7 +92,10 @@ const odCeny = cenyTypu[0]?.text ?? '';
               <div class="flex flex-1 flex-col p-6 lg:p-7">
                 <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-4">
                   <h3 class="text-2xl font-extrabold text-charcoal-900">
-                    <a href={t.detail_href} data-place="cena-nadpis-typu" class="hover:text-brand-500 hover:underline underline-offset-4 transition-colors">{t.typ}</a>
+                    <a href={t.detail_href} data-place="cena-nadpis-typu" class="inline-flex items-center gap-1.5 text-navy-700 underline decoration-2 decoration-navy-700/30 underline-offset-4 transition-colors hover:text-brand-500 hover:decoration-brand-500">
+                      {t.typ}
+                      <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                    </a>
                   </h3>
                   <div class="text-2xl font-extrabold text-brand-500 whitespace-nowrap">{t.cena}</div>
                 </div>
