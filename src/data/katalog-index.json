@@ -10,31 +10,31 @@
   },
   "cards": [
     {
-      "title": "Vzduch \u2013 voda",
-      "description": "Nejobl\u00edben\u011bj\u0161\u00ed \u0159e\u0161en\u00ed pro rodinn\u00e9 domy. Rychl\u00e1 instalace, n\u00edzk\u00e9 po\u0159izovac\u00ed n\u00e1klady.",
+      "title": "Vzduch – voda",
+      "description": "Nejoblíbenější řešení pro rodinné domy. Rychlá instalace, nízké pořizovací náklady.",
       "href": "/katalog/vzduch-voda",
       "image": "/images/produkty/boxair-inverter-banner.webp",
-      "linkText": "Zobrazit modely \u2192",
+      "linkText": "Zobrazit modely →",
       "gradientFrom": "navy-700",
       "gradientTo": "navy-900",
       "overlayColor": "navy-800"
     },
     {
-      "title": "Zem\u011b \u2013 voda",
-      "description": "Nejvy\u0161\u0161\u00ed \u00fa\u010dinnost d\u00edky stabiln\u00ed teplot\u011b zemsk\u00e9ho povrchu. Plo\u0161n\u00fd kolektor nebo vrt.",
+      "title": "Země – voda",
+      "description": "Nejvyšší účinnost díky stabilní teplotě zemského povrchu. Plošný kolektor nebo vrt.",
       "href": "/katalog/zeme-voda",
       "image": "/images/produkty/aquamaster-inverter-banner.webp",
-      "linkText": "Zobrazit modely \u2192",
+      "linkText": "Zobrazit modely →",
       "gradientFrom": "green-700",
       "gradientTo": "green-900",
       "overlayColor": "green-800"
     },
     {
-      "title": "Voda \u2013 voda",
-      "description": "\u0160pi\u010dkov\u00e1 \u00fa\u010dinnost vyu\u017e\u00edvaj\u00edc\u00ed podzemn\u00ed vodu. Ide\u00e1ln\u00ed tam, kde je dostatek spodn\u00ed vody.",
+      "title": "Voda – voda",
+      "description": "Nejvyšší účinnost ze všech typů — průměrný topný faktor 5,0. Vhodné tam, kde je dostatek spodní vody.",
       "href": "/katalog/voda-voda",
       "image": "/images/produkty/aquamaster-combi-banner.webp",
-      "linkText": "Zobrazit modely \u2192",
+      "linkText": "Zobrazit modely →",
       "gradientFrom": "cyan-700",
       "gradientTo": "cyan-900",
       "overlayColor": "cyan-800"
