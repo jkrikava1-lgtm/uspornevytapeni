@@ -21,7 +21,7 @@ Pokud už čerpadlo s R410A máte, nic neřešte. Nařízení je nastavené tak,
 
 ## Propan není horší chladivo
 
-Ať je to řečeno rovnou: R290 není nouzové řešení. Má vliv na klima prakticky nulový a termodynamicky je výborný — zvládá vyšší výstupní teploty než R410A, což se hodí zejména u radiátorových soustav.
+R290 není nouzové řešení. Má vliv na klima prakticky nulový a termodynamicky je výborný — zvládá vyšší výstupní teploty než R410A, což se hodí zejména u radiátorových soustav.
 
 Má ale jednu vlastnost, se kterou se musí počítat při návrhu: **propan je hořlavý.**
 
@@ -48,9 +48,9 @@ Dělená (splitová) tepelná čerpadla **už nepůjde objednat vůbec**. Výjim
 
 U kompaktních venkovních jednotek řady BoxAir si zatím můžete vybrat mezi ověřenou starší konstrukcí a modernějším provedením. Starší konstrukce má přitom shodné rozměry jako jednotky, které už jsou v provozu — což se hodí při výměně, kde se nemusí předělávat základ ani prostupy.
 
-## Co z toho plyne, když se rozhodujete teď
+## Jak se rozhodnout
 
-Nejde o to, že by jedna varianta byla lepší než druhá. Jde o to, že se liší v tom, co po vás budou chtít:
+Ani jedna varianta není lepší než druhá. Liší se v tom, co po vás budou chtít:
 
 **Objednat do konce roku 2026** dává smysl, pokud máte pro jednotku jen jedno možné místo a to je blízko oken, sklepního světlíku nebo vpusti. Nebo pokud vyměňujete starší čerpadlo a chcete využít stávající základ a prostupy.
 

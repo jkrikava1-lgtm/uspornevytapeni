@@ -2,7 +2,7 @@
   "meta_title": "Tepelná čerpadla vzduch-voda — cena od 334 000 Kč",
   "meta_description": "Cena tepelného čerpadla vzduch-voda od 334 000 Kč na klíč — dodávka, montáž, zásobník i uvedení do provozu. Venkovní kompakt nebo split, montáž za 2–5 dní.",
   "hero_title": "Tepelná čerpadla vzduch – voda",
-  "hero_subtitle": "Maximální úspora. Rychlá montáž. Ověřené řešení pro české klima.",
+  "hero_subtitle": "Topný faktor 3,3. Montáž za 2–5 dní. Ověřené řešení pro české klima.",
   "intro_text1": "Díky klimatickým podmínkám České republiky je provoz tepelného čerpadla vzduch–voda mimořádně ekonomický. Průměrná teplota vzduchu v topném období se pohybuje kolem <strong>+4 °C</strong>, což znamená, že systém pracuje s velmi vysokou účinností i v zimě.",
   "intro_text2": "Pokud máte jeden topný okruh (většina domů), instaluje se kromě TČ pouze bojler. V případě více okruhů (podlahové topení + radiátory nebo třeba vytápění bazénu) je třeba instalovat malou akumulační nádobu (50–100 litrů).",
   "intro_text3": "<strong>Co bude ještě uvnitř domu?</strong> Podle konkrétního návrhu zapojení: bojler na ohřev užitkové vody, případně akumulační nádoba (u kombinovaných systémů) a další prvky dle typu vytápění.",
@@ -46,7 +46,7 @@
     "rychlá a cenově dostupnější montáž",
     "vhodný pro novostavby i rekonstrukce",
     "inverterové technologie (plynulá regulace výkonu podle potřeby domu) jako standard",
-    "kvalitní zpracování a špičkové technologie"
+    "český výrobce — náhradní díly skladem"
   ],
   "variant1_placement_title": "Kam se jednotka umístí?",
   "variant1_placement_text": "Venkovní kompakt lze instalovat u domu, na zahradě nebo na jiné vhodné místo. Rádi vám ukážeme možnosti umístění i reálné realizace.",
@@ -57,7 +57,7 @@
   "variant1_cta_text": "Nechte si navrhnout venkovní kompakt na míru:",
   "variant1_cta_button": "Zpracujte mi nabídku",
   "variant2_title": "Vzduch – voda: Dělená konstrukce neboli Split",
-  "variant2_subtitle": "Maximální variabilita umístění a špičkové technologie",
+  "variant2_subtitle": "Kompresor venku, zásobník uvnitř — volnější umístění obou jednotek",
   "variant2_outdoor_title": "Venkovní jednotka",
   "variant2_outdoor_bullets": [
     "obsahuje výparník a ventilátor",
@@ -88,12 +88,12 @@
     "BoxAir Inverter Split",
     "BoxAir Inverter Split Combi"
   ],
-  "variant2_model_desc": "špičkové modely od společnosti Master Therm",
+  "variant2_model_desc": "modely od společnosti Master Therm",
   "variant2_catalog_link": "Katalog vzduch–voda",
   "variant2_cta_text": "Vše navrhneme individuálně podle vašeho domu. Nechte si navrhnout dělený systém na míru:",
   "variant2_cta_button": "Zpracujte mi nabídku",
   "cta_headline": "Nejste si jistí, která varianta je pro vás vhodná?",
-  "cta_text": "Navrhneme řešení přesně podle typu domu, způsobu vytápění i vašich finančních očekávání. Cílem je jediné – maximální úspora, spolehlivost a dlouhodobý komfort.",
+  "cta_text": "Navrhneme řešení přesně podle typu domu, způsobu vytápění i vašich finančních možností. Nabídku dostanete do 48 hodin a nic vás nezavazuje.",
   "cta_subtext": "Rádi vám zpracujeme individuální cenovou kalkulaci:",
   "cta_button": "Zpracujte mi nabídku"
 }
