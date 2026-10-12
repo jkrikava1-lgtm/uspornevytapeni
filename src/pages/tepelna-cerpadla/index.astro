@@ -4,27 +4,27 @@ import PageHero from '../../components/PageHero.astro';
 import data from '../../data/tepelna-cerpadla-index.json';
 import ref from '../../data/reference.json';
 
-// Jeden zdroj pro schéma i pro viditelné otázky – aby se nemohly rozejít.
+// Jeden zdroj pro schéma i pro viditelné otázky - aby se nemohly rozejít.
 const faq = [
   {
     q: 'Jaký typ tepelného čerpadla je pro můj dům nejvhodnější?',
-    a: 'Pro rodinné domy bez velkého pozemku je nejčastější volbou čerpadlo vzduch–voda – instalace trvá 2–5 dní a nevyžaduje zemní práce. Pokud máte zahradní pozemek alespoň 400 m² nebo je možný vrt, doporučujeme zemní čerpadlo pro vyšší efektivitu v zimě. Čerpadlo voda–voda se hodí tam, kde je dostatek podzemní vody. Správný typ vždy doporučujeme po konzultaci a prohlídce objektu.'
+    a: 'Pro rodinné domy bez velkého pozemku je nejčastější volbou čerpadlo vzduch-voda - instalace trvá 2-5 dní a nevyžaduje zemní práce. Pokud máte zahradní pozemek alespoň 400 m² nebo je možný vrt, doporučujeme zemní čerpadlo pro vyšší efektivitu v zimě. Čerpadlo voda-voda se hodí tam, kde je dostatek podzemní vody. Správný typ vždy doporučujeme po konzultaci a prohlídce objektu.'
   },
   {
     q: 'Funguje tepelné čerpadlo i při velkých mrazech?',
-    a: 'Moderní inverterová tepelná čerpadla vzduch–voda fungují spolehlivě až do −20 °C. Zemní čerpadla jsou zcela nezávislá na venkovní teplotě, protože čerpají teplo z hloubky, kde je celoroční teplota kolem 10–12 °C. Všechna naše čerpadla Master Therm mají integrovanou elektrickou dotopovou spirálu pro extrémní mrazy.'
+    a: 'Moderní inverterová tepelná čerpadla vzduch-voda fungují spolehlivě až do −20 °C. Zemní čerpadla jsou zcela nezávislá na venkovní teplotě, protože čerpají teplo z hloubky, kde je celoroční teplota kolem 10-12 °C. Všechna naše čerpadla Master Therm mají integrovanou elektrickou dotopovou spirálu pro extrémní mrazy.'
   },
   {
     q: 'Lze tepelné čerpadlo kombinovat se stávajícím kotlem?',
-    a: 'Ano. Takzvaný bivalentní provoz – kdy čerpadlo pokrývá většinu sezóny a záložní kotel pouze nejstudenější dny – je zcela běžný. Umožňuje levnější investici a rychlou návratnost. Stávající radiátorové otopné soustavy většinou není nutné předělávat, optimalizujeme pouze provozní teplotu.'
+    a: 'Ano. Takzvaný bivalentní provoz - kdy čerpadlo pokrývá většinu sezóny a záložní kotel pouze nejstudenější dny - je zcela běžný. Umožňuje levnější investici a rychlou návratnost. Stávající radiátorové otopné soustavy většinou není nutné předělávat, optimalizujeme pouze provozní teplotu.'
   },
   {
     q: 'Kolik stojí tepelné čerpadlo a jaká je návratnost?',
-    a: 'Systém vzduch-voda na klíč začíná na 334 000 Kč, u zemních čerpadel se připočítávají vrty nebo kolektor. Z programu Nová zelená úsporám lze čerpat bezúročný úvěr až 350 000 Kč (vzduch-voda), respektive až 400 000 Kč (země-voda), zranitelné domácnosti mají nárok na přímou dotaci až 150 000 Kč. Návratnost investice vychází typicky na 7–10 let, po celou dobu životnosti 20–25 let pak platíte jen za elektřinu.'
+    a: 'Systém vzduch-voda na klíč začíná na 334 000 Kč, u zemních čerpadel se připočítávají vrty nebo kolektor. Z programu Nová zelená úsporám lze čerpat bezúročný úvěr až 350 000 Kč (vzduch-voda), respektive až 400 000 Kč (země-voda), zranitelné domácnosti mají nárok na přímou dotaci až 150 000 Kč. Návratnost investice vychází typicky na 7-10 let, po celou dobu životnosti 20-25 let pak platíte jen za elektřinu.'
   },
   {
     q: 'Jaká je záruka a kolik stojí online správa?',
-    a: 'Master Therm poskytuje záruku 7 let na celé tepelné čerpadlo, nejen na kompresor. Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Internetový modul i přístup do online správy jsou součástí každého čerpadla – bez příplatku a bez měsíčních poplatků. Připojení k internetu není jen formalita kvůli záruce: jednotky máme pod nepřetržitým dohledem a případnou odchylku vidíme dřív, než se projeví u vás doma.'
+    a: 'Master Therm poskytuje záruku 7 let na celé tepelné čerpadlo, nejen na kompresor. Podmínkou je připojení čerpadla k internetu a servisní prohlídka jednou za dvě topné sezóny. Internetový modul i přístup do online správy jsou součástí každého čerpadla - bez příplatku a bez měsíčních poplatků. Připojení k internetu není jen formalita kvůli záruce: jednotky máme pod nepřetržitým dohledem a případnou odchylku vidíme dřív, než se projeví u vás doma.'
   },
 ];
 ---
@@ -47,7 +47,7 @@ const faq = [
 
   <article class="pt-10 pb-10 lg:pt-12 lg:pb-12">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-charcoal-600 text-sm leading-relaxed max-w-3xl mb-10">Tepelné čerpadlo je moderní zdroj vytápění, který odebírá energii z okolního prostředí – ze vzduchu, ze země nebo z vody – a přeměňuje ji na teplo pro váš dům. Dodáváme výhradně inverterová <a href="/mastertherm/" class="text-brand-500 font-semibold hover:text-brand-600 transition-colors">tepelná čerpadla Master Therm</a>, českého výrobce s vlastní výrobou od roku 1994. Vyberte typ podle zdroje energie:</p>
+      <p class="text-charcoal-600 text-sm leading-relaxed max-w-3xl mb-10">Tepelné čerpadlo je moderní zdroj vytápění, který odebírá energii z okolního prostředí - ze vzduchu, ze země nebo z vody - a přeměňuje ji na teplo pro váš dům. Dodáváme výhradně inverterová <a href="/mastertherm/" class="text-brand-500 font-semibold hover:text-brand-600 transition-colors">tepelná čerpadla Master Therm</a>, českého výrobce s vlastní výrobou od roku 1994. Vyberte typ podle zdroje energie:</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {data.cards.map(card => (
@@ -84,10 +84,10 @@ const faq = [
               <th class="text-left py-3 pr-4 text-charcoal-500 font-medium w-36"></th>
               <th class="text-center py-4 px-3 bg-white rounded-t-xl border-t border-x border-gray-200">
                 <span class="block text-[10px] font-bold uppercase tracking-wider text-brand-500 mb-1">Nejčastější volba</span>
-                <span class="text-navy-700 font-bold">Vzduch – voda</span>
+                <span class="text-navy-700 font-bold">Vzduch - voda</span>
               </th>
-              <th class="text-center py-3 px-3 align-bottom text-green-800 font-bold">Země – voda</th>
-              <th class="text-center py-3 px-3 align-bottom text-cyan-700 font-bold">Voda – voda</th>
+              <th class="text-center py-3 px-3 align-bottom text-green-800 font-bold">Země - voda</th>
+              <th class="text-center py-3 px-3 align-bottom text-cyan-700 font-bold">Voda - voda</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-100">
@@ -98,7 +98,7 @@ const faq = [
               { label: "Hlučnost", a: "mírná (venk. j.)", b: "tichý", c: "tichý" },
               { label: "Funkce v mrazech", a: "do −20 °C", b: "bez omezení", c: "bez omezení" },
               { label: "Pasivní chlazení", a: "ne", b: "ano (téměř zdarma)", c: "ano" },
-              { label: "Délka montáže", a: "2–5 dní", b: "5–7 dní", c: "5–7 dní" },
+              { label: "Délka montáže", a: "2-5 dní", b: "5-7 dní", c: "5-7 dní" },
               { label: "Pro koho", a: "95 % domů", b: "pozemek min. 200 m²", c: "dostatek spodní vody" },
             ].map((row, i, arr) => (
               <tr>
@@ -115,14 +115,14 @@ const faq = [
     </div>
   </section>
 
-  <!-- Realizace – důkaz mezi tabulkou a argumenty -->
+  <!-- Realizace - důkaz mezi tabulkou a argumenty -->
   <section class="py-12 lg:py-16 bg-white">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
         <div>
           <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-2">Takhle to vypadá u zákazníků</h2>
           <p class="text-charcoal-500">
-            <strong class="text-charcoal-900">{ref.map_stat1_num} instalací</strong> ve <strong class="text-charcoal-900">{ref.map_stat2_num} obcích</strong> – rodinné domy, bytové domy i komerční objekty.
+            <strong class="text-charcoal-900">{ref.map_stat1_num} instalací</strong> ve <strong class="text-charcoal-900">{ref.map_stat2_num} obcích</strong> - rodinné domy, bytové domy i komerční objekty.
           </p>
         </div>
         <a href="/reference" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">
@@ -135,7 +135,7 @@ const faq = [
         {ref.references.slice(0, 4).map(item => (
           <a href="/reference" class="group block">
             <div class="rounded-xl overflow-hidden border border-gray-200 mb-3">
-              <img src={item.image} alt={`Instalace ${item.system} – ${item.lokalita}`} loading="lazy"
+              <img src={item.image} alt={`Instalace ${item.system} - ${item.lokalita}`} loading="lazy"
                 width="480" height="360"
                 class="w-full h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
@@ -159,19 +159,19 @@ const faq = [
           {
             title: "Nízké provozní náklady",
             icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
-            text: "Tepelné čerpadlo vyrobí z 1 kWh elektřiny 3–5 kWh tepla. Za stejnou cenu elektřiny vytopíte dům několikanásobně levněji než přímotopem nebo elektrokotlem. Proti plynu ušetříte kolem 28 000 Kč ročně.",
+            text: "Tepelné čerpadlo vyrobí z 1 kWh elektřiny 3-5 kWh tepla. Za stejnou cenu elektřiny vytopíte dům několikanásobně levněji než přímotopem nebo elektrokotlem. Proti plynu ušetříte kolem 28 000 Kč ročně.",
             link: { href: "/porovnani-nakladu", label: "Porovnat náklady" }
           },
           {
             title: "Ekologické vytápění",
             icon: "M13 10V3L4 14h7v7l9-11h-7z",
-            text: "Využívá obnovitelnou energii z prostředí – ze vzduchu, ze země nebo z vody. V domě nevznikají žádné spaliny ani emise. V kombinaci s fotovoltaikou topíte převážně z vlastní elektřiny.",
+            text: "Využívá obnovitelnou energii z prostředí - ze vzduchu, ze země nebo z vody. V domě nevznikají žádné spaliny ani emise. V kombinaci s fotovoltaikou topíte převážně z vlastní elektřiny.",
             link: { href: "/chytre-funkce/fotovoltaika", label: "Spolupráce s fotovoltaikou" }
           },
           {
             title: "V létě umí chladit",
             icon: "M20 12H4m16 0l-4-4m4 4l-4 4M4 12l4-4m-4 4l4 4",
-            text: "Stejný systém, který v zimě topí, umí v létě chladit – podlahovým okruhem nebo fancoily. Pokud máte podlahové topení, nepotřebujete k tomu nic navíc, stačí chlazení objednat.",
+            text: "Stejný systém, který v zimě topí, umí v létě chladit - podlahovým okruhem nebo fancoily. Pokud máte podlahové topení, nepotřebujete k tomu nic navíc, stačí chlazení objednat.",
             link: { href: "/navrh-reseni/chlazeni", label: "Jak na chlazení" }
           },
           {

@@ -1,10 +1,10 @@
 {
-  "meta_title": "Tepelná čerpadla Master Therm – prodej, montáž a servis",
+  "meta_title": "Tepelná čerpadla Master Therm - prodej, montáž a servis",
   "meta_description": "Autorizovaný partner Master Therm už 20 let. 439 instalací, servis a vyřízení dotace NZÚ. Návrh systému a orientační cena do 24 hodin zdarma.",
   "hero_badge": "Autorizovaný partner Master Therm od roku 2006",
   "hero_h1": "Tepelná čerpadla Master Therm",
   "hero_h1_sub": "prodej, montáž a servis",
-  "hero_text": "Česká tepelná čerpadla Master Therm dodáváme, instalujeme a servisujeme už 20 let. Přes 400 instalací ve východních a středních Čechách. Návrh systému a orientační cenu vám zašleme do 24 hodin – zdarma a bez závazků.",
+  "hero_text": "Česká tepelná čerpadla Master Therm dodáváme, instalujeme a servisujeme už 20 let. Přes 400 instalací ve východních a středních Čechách. Návrh systému a orientační cenu vám zašleme do 24 hodin - zdarma a bez závazků.",
   "hero_cta_primary": "Nezávazná poptávka",
   "hero_cta_secondary": "Spočítat orientační cenu",
   "hero_phone_note": "Nebo rovnou zavolejte:",
@@ -14,7 +14,7 @@
     "Vyřídíme dotaci NZÚ"
   ],
   "hero_image": "/images/reference/tuklaty-2.webp",
-  "hero_image_alt": "Tepelné čerpadlo Master Therm BoxAir u rodinného domu – naše realizace u Prahy",
+  "hero_image_alt": "Tepelné čerpadlo Master Therm BoxAir u rodinného domu - naše realizace u Prahy",
   "trust": [
     {
       "num": "20+ let",
@@ -34,12 +34,12 @@
     }
   ],
   "why_headline": "Značka, kterou známe do posledního šroubku",
-  "why_intro": "Neděláme deset značek napůl. Děláme jednu pořádně. Master Therm montujeme od roku 2006 – známe každou generaci čerpadel, kterou kdy výrobce vyrobil a známe lidi, kteří je vyvíjejí.",
+  "why_intro": "Neděláme deset značek napůl. Děláme jednu pořádně. Master Therm montujeme od roku 2006 - známe každou generaci čerpadel, kterou kdy výrobce vyrobil a známe lidi, kteří je vyvíjejí.",
   "why_brand_label": "Proč Master Therm",
   "why_brand_cards": [
     {
       "title": "Česká výroba od roku 1994",
-      "desc": "Jeden z nejstarších českých výrobců tepelných čerpadel. Přes 70 % produkce míří na export do západní Evropy – Velké Británie, Irska, Nizozemska, Belgie či Švýcarska.",
+      "desc": "Jeden z nejstarších českých výrobců tepelných čerpadel. Přes 70 % produkce míří na export do západní Evropy - Velké Británie, Irska, Nizozemska, Belgie či Švýcarska.",
       "icon": "factory"
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "title": "Výpočet pro váš dům",
-      "desc": "Každý dům řešíme individuálně – vypočteme tepelnou ztrátu, vymyslíme schéma zapojení. Tepelné čerpadlo dodáme správného výkonu, ne to, co je zrovna na skladě.",
+      "desc": "Každý dům řešíme individuálně - vypočteme tepelnou ztrátu, vymyslíme schéma zapojení. Tepelné čerpadlo dodáme správného výkonu, ne to, co je zrovna na skladě.",
       "icon": "ruler"
     },
     {
@@ -84,10 +84,10 @@
   "rekon_headline": "Měníte starý kotel? Radiátory mohou zůstat.",
   "rekon_text": "Nejčastěji instalujeme Master Therm právě do starších domů výměnou za kotel na uhlí, plyn nebo elektřinu.",
   "rekon_items": [
-    "Topná voda až 75 °C – stávající litinové či ocelové radiátory obvykle není nutné měnit",
+    "Topná voda až 75 °C - stávající litinové či ocelové radiátory obvykle není nutné měnit",
     "Žádná přestavba na podlahové topení, žádné bourání",
     "Zařídíme profesionální vyčištění topného systému",
-    "Na výměnu neekologického kotle lze čerpat podporu NZÚ – pomůžeme s celou žádostí"
+    "Na výměnu neekologického kotle lze čerpat podporu NZÚ - pomůžeme s celou žádostí"
   ],
   "rekon_cta": "Chci nabídku na výměnu kotle",
   "rekon_big_num": "75 °C",
@@ -97,42 +97,42 @@
   "cena_lead": "Orientační ceny včetně montáže, zásobníku teplé vody a zprovoznění:",
   "cena_cards": [
     {
-      "typ": "Vzduch – voda",
+      "typ": "Vzduch - voda",
       "cena": "od 349 000 Kč",
       "desc": "Nejčastější volba, vhodná pro 95 % domácností"
     },
     {
-      "typ": "Voda – voda",
+      "typ": "Voda - voda",
       "cena": "od 379 000 Kč",
       "desc": "Pro objekty se studnou s vydatným zdrojem vody"
     },
     {
-      "typ": "Země – voda",
+      "typ": "Země - voda",
       "cena": "od 429 000 Kč",
       "desc": "Nejvyšší účinnost, v létě umí i úsporně chladit"
     }
   ],
-  "cena_note": "Přesnou cenu určí návrh podle tepelné ztráty vašeho domu – proto děláme nabídky individuálně a zdarma.",
+  "cena_note": "Přesnou cenu určí návrh podle tepelné ztráty vašeho domu - proto děláme nabídky individuálně a zdarma.",
   "fin_headline": "Stát vám s pořízením pomůže",
   "fin_cards": [
     {
       "title": "Bezúročný úvěr NZÚ",
       "big": "až 350 000 Kč",
-      "desc": "Pro běžné domácnosti – na čerpadlo vzduch-voda až 350 000 Kč, na země-voda až 400 000 Kč. Splatnost 10–15 let, úroky platí stát (RPSN 0 %). Měsíční splátku tak z velké části pokryje to, co ušetříte za energie."
+      "desc": "Pro běžné domácnosti - na čerpadlo vzduch-voda až 350 000 Kč, na země-voda až 400 000 Kč. Splatnost 10-15 let, úroky platí stát (RPSN 0 %). Měsíční splátku tak z velké části pokryje to, co ušetříte za energie."
     },
     {
       "title": "Přímá dotace NZÚ Light",
       "big": "až 150 000 Kč",
-      "desc": "Pro zranitelné domácnosti – příjemce dávek, starobní důchodce a lidi s invalidním důchodem 3. stupně. Jednorázový příspěvek, který se nevrací, čerpat lze i zálohově předem."
+      "desc": "Pro zranitelné domácnosti - příjemce dávek, starobní důchodce a lidi s invalidním důchodem 3. stupně. Jednorázový příspěvek, který se nevrací, čerpat lze i zálohově předem."
     }
   ],
-  "fin_note": "Na co máte nárok, zjistíme v rámci nabídky. S žádostí i s renovačním pasem vám pomůžeme – pas zpracuje certifikovaný poradce EKIS zdarma.",
+  "fin_note": "Na co máte nárok, zjistíme v rámci nabídky. S žádostí i s renovačním pasem vám pomůžeme - pas zpracuje certifikovaný poradce EKIS zdarma.",
   "fin_link": "Podrobně o dotacích",
   "calc_headline": "Kolik bude Master Therm stát u vás?",
   "calc_text": "Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu. Nezávazně a zdarma.",
   "calc_cta": "Spustit cenovou kalkulaci",
   "ref_headline": "439 instalací. Podívejte se, kde všude",
-  "ref_lead": "Rodinné domy, bytové domy i komerční objekty – Jičínsko, Liberecko, Mladoboleslavsko, Hradecko, Praha a střední Čechy.",
+  "ref_lead": "Rodinné domy, bytové domy i komerční objekty - Jičínsko, Liberecko, Mladoboleslavsko, Hradecko, Praha a střední Čechy.",
   "ref_items": [
     {
       "lokalita": "Studenec",
@@ -158,13 +158,13 @@
   ],
   "quote_text": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
   "quote_name": "Roman Vojtek",
-  "quote_location": "Praha – tepelné čerpadlo vzduch-voda",
+  "quote_location": "Praha - tepelné čerpadlo vzduch-voda",
   "quote_image": "/images/ilustrace/vojtek-reference.webp",
   "gmb_score": "5,0",
   "gmb_text": "Hodnocení na Googlu. Zákazníci nás chválí za rychlost, pořádek při montáži a servis, který přijede.",
   "gmb_cta": "Přečíst recenze na Googlu",
   "gmb_href": "https://share.google/66F7YjcrxXkEXskH6",
-  "fve_text": "<strong>Máte nebo plánujete fotovoltaiku?</strong> Master Therm si s ní rozumí – topí a ohřívá vodu přednostně z vašich solárních přebytků, dům funguje jako akumulační baterie. A díky <a href=\"/chytre-funkce/desuperheater\">desuperheateru</a> ohřívá užitkovou vodu prakticky jako vedlejší produkt topení.",
+  "fve_text": "<strong>Máte nebo plánujete fotovoltaiku?</strong> Master Therm si s ní rozumí - topí a ohřívá vodu přednostně z vašich solárních přebytků, dům funguje jako akumulační baterie. A díky <a href=\"/chytre-funkce/desuperheater\">desuperheateru</a> ohřívá užitkovou vodu prakticky jako vedlejší produkt topení.",
   "steps_headline": "Od poptávky k teplu ve čtyřech krocích",
   "steps": [
     {
@@ -177,30 +177,30 @@
     },
     {
       "title": "Montáž",
-      "desc": "Instalace obvykle za 2–5 dní, včetně uvedení do provozu a zaškolení."
+      "desc": "Instalace obvykle za 2-5 dní, včetně uvedení do provozu a zaškolení."
     },
     {
       "title": "Servis a podpora",
-      "desc": "Jsme autorizovaný servis – staráme se o čerpadlo po celou dobu jeho života."
+      "desc": "Jsme autorizovaný servis - staráme se o čerpadlo po celou dobu jeho života."
     }
   ],
   "faq_headline": "Časté dotazy",
   "faq": [
     {
       "q": "Nebude čerpadlo rušit nás nebo sousedy?",
-      "a": "Moderní řady Master Therm mají frekvenčně řízený kompresor a tiché ventilátory s plynulou regulací – neběží na plný výkon, ale přesně na takový, jaký dům zrovna potřebuje. Při návrhu navíc řešíme i umístění jednotky vůči oknům a sousedům. Po dohodě vás rádi vezmeme na některou z našich realizací poslechnout si provoz naživo."
+      "a": "Moderní řady Master Therm mají frekvenčně řízený kompresor a tiché ventilátory s plynulou regulací - neběží na plný výkon, ale přesně na takový, jaký dům zrovna potřebuje. Při návrhu navíc řešíme i umístění jednotky vůči oknům a sousedům. Po dohodě vás rádi vezmeme na některou z našich realizací poslechnout si provoz naživo."
     },
     {
       "q": "Opravdu ušetřím tolik, kolik se slibuje?",
-      "a": "Tepelné čerpadlo vyrobí z 1 kWh elektřiny 3–5 kWh tepla. Oproti elektrokotli klesnou náklady na vytápění zhruba na třetinu, oproti plynu o desítky procent – konkrétní čísla pro váš dům spočítáme v návrhu. Úspora závisí na stavu domu a topné soustavy, proto neslibujeme paušální čísla, ale počítáme individuálně."
+      "a": "Tepelné čerpadlo vyrobí z 1 kWh elektřiny 3-5 kWh tepla. Oproti elektrokotli klesnou náklady na vytápění zhruba na třetinu, oproti plynu o desítky procent - konkrétní čísla pro váš dům spočítáme v návrhu. Úspora závisí na stavu domu a topné soustavy, proto neslibujeme paušální čísla, ale počítáme individuálně."
     },
     {
       "q": "Proč ne levnější čerpadlo z e-shopu?",
-      "a": "Asociace pro využití tepelných čerpadel i Ministerstvo průmyslu opakovaně varují před levnými dovozy s nekontrolovanou reálnou účinností. Čerpadlo je investice na 15–20 let – rozhoduje účinnost v mrazu, dostupnost dílů a servis. Master Therm vyrábí v ČR, díly jsou skladem a servis vám zabezpečíme my."
+      "a": "Asociace pro využití tepelných čerpadel i Ministerstvo průmyslu opakovaně varují před levnými dovozy s nekontrolovanou reálnou účinností. Čerpadlo je investice na 15-20 let - rozhoduje účinnost v mrazu, dostupnost dílů a servis. Master Therm vyrábí v ČR, díly jsou skladem a servis vám zabezpečíme my."
     },
     {
       "q": "Jak funguje záruka až 7 let?",
-      "a": "Prodloužená tovární záruka je vázaná na dvě podmínky: připojení čerpadla k internetu a pravidelnou servisní prohlídku jednou za dvě topné sezóny. Připojení není formalita, ale výhoda – systém je pod nepřetržitým dohledem a případnou anomálii (tlak chladiva, čidlo, cyklování) vidí servis dřív, než se projeví doma."
+      "a": "Prodloužená tovární záruka je vázaná na dvě podmínky: připojení čerpadla k internetu a pravidelnou servisní prohlídku jednou za dvě topné sezóny. Připojení není formalita, ale výhoda - systém je pod nepřetržitým dohledem a případnou anomálii (tlak chladiva, čidlo, cyklování) vidí servis dřív, než se projeví doma."
     },
     {
       "q": "Děláte i servis čerpadel Master Therm, která jste nemontovali vy?",
@@ -208,7 +208,7 @@
     },
     {
       "q": "Jaký je rozdíl mezi vámi a výrobcem?",
-      "a": "Master Therm čerpadla vyrábí, my je navrhujeme, montujeme a servisujeme u vás doma. Jako autorizovaný partner dodáváme stejná čerpadla se stejnou tovární zárukou – navíc s výpočtem pro váš dům a vyřízením dotace."
+      "a": "Master Therm čerpadla vyrábí, my je navrhujeme, montujeme a servisujeme u vás doma. Jako autorizovaný partner dodáváme stejná čerpadla se stejnou tovární zárukou - navíc s výpočtem pro váš dům a vyřízením dotace."
     },
     {
       "q": "Kde všude montujete?",
@@ -216,7 +216,7 @@
     },
     {
       "q": "Jak dlouho trvá dodání?",
-      "a": "Konkrétní termín potvrdíme přímo v nabídce – závisí na dostupnosti zvoleného modelu u výrobce a na vytížení našich montážních kapacit. Před topnou sezónou je poptávka nejvyšší, proto se vyplatí ozvat s předstihem."
+      "a": "Konkrétní termín potvrdíme přímo v nabídce - závisí na dostupnosti zvoleného modelu u výrobce a na vytížení našich montážních kapacit. Před topnou sezónou je poptávka nejvyšší, proto se vyplatí ozvat s předstihem."
     },
     {
       "q": "Lze na Master Therm získat dotaci?",
@@ -232,6 +232,6 @@
   "contact_name": "Jakub Křikava",
   "contact_role": "obchod a technická podpora",
   "contact_image": "/images/team/kuba.webp",
-  "contact_note": "Volejte v pracovní dny 8–17 h. Když to nezvedneme, určitě zavoláme zpět.",
+  "contact_note": "Volejte v pracovní dny 8-17 h. Když to nezvedneme, určitě zavoláme zpět.",
   "sticky_call": "Zavolat: 777 724 573"
 }

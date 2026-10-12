@@ -5,7 +5,7 @@ import ref from '../data/reference.json';
 import poptavka from '../data/poptavka.json';
 import site from '../data/site.json';
 
-// Ikony karet – klíč z mastertherm.json → SVG path
+// Ikony karet - klíč z mastertherm.json → SVG path
 const icons: Record<string, string> = {
   factory: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
   shield: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
@@ -142,7 +142,7 @@ const icons: Record<string, string> = {
     </div>
   </section>
 
-  <!-- ═══ REKONSTRUKCE – hlavní use-case návštěvníků ═══ -->
+  <!-- ═══ REKONSTRUKCE - hlavní use-case návštěvníků ═══ -->
   <section class="bg-navy-700 py-14 text-white">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -238,7 +238,7 @@ const icons: Record<string, string> = {
       <h2 class="text-3xl lg:text-4xl font-extrabold text-charcoal-900 mb-4">{mt.ref_headline}</h2>
       <p class="text-lg text-charcoal-500 leading-relaxed max-w-3xl mb-8">{mt.ref_lead}</p>
 
-      <!-- Mapa realizací – stejná komponenta jako na /reference -->
+      <!-- Mapa realizací - stejná komponenta jako na /reference -->
       <div class="rounded-2xl overflow-hidden border border-gray-200 shadow-sm mb-10">
         <div style="background:#1B3A5C;color:white;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
           <div style="font-size:0.82rem;display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
@@ -259,7 +259,7 @@ const icons: Record<string, string> = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {mt.ref_items.map(item => (
           <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-            <img src={item.image} alt={`Instalace ${item.system} – ${item.lokalita}`} class="h-52 w-full object-cover" loading="lazy" width="480" height="320" />
+            <img src={item.image} alt={`Instalace ${item.system} - ${item.lokalita}`} class="h-52 w-full object-cover" loading="lazy" width="480" height="320" />
             <div class="p-5">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">{item.lokalita}</span>
@@ -428,7 +428,7 @@ const icons: Record<string, string> = {
             <div>
               <label for="mt-priloha" class="block text-sm font-semibold text-charcoal-800 mb-2">Příloha <span class="font-normal text-charcoal-500">(nepovinné)</span></label>
               <input id="mt-priloha" type="file" name="priloha" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx" class="w-full text-sm text-charcoal-600 file:mr-4 file:py-2.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-charcoal-700 hover:file:bg-gray-200 file:cursor-pointer file:transition-colors" />
-              <p class="text-xs text-charcoal-500 mt-1">Max. 5 MB – PDF, obrázky, dokumenty</p>
+              <p class="text-xs text-charcoal-500 mt-1">Max. 5 MB - PDF, obrázky, dokumenty</p>
             </div>
 
             <div class="flex items-start gap-3">
@@ -481,7 +481,7 @@ const icons: Record<string, string> = {
     </div>
   </section>
 
-  <!-- Sticky lišta „Zavolat" – jen mobil -->
+  <!-- Sticky lišta „Zavolat" - jen mobil -->
   <div class="fixed bottom-0 left-0 right-0 z-40 bg-brand-500 lg:hidden">
     <a href={site.phone_href} data-place="sticky-mobil" class="flex items-center justify-center gap-2.5 py-3.5 text-white font-bold text-lg">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -527,9 +527,9 @@ const icons: Record<string, string> = {
         }
         function pop(d) {
           var b = [];
-          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#fad7d3;color:#7b1a1a">vzduch–voda: '+d.vzduch+'×</span>');
-          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d5f5e3;color:#1a6b3a">země–voda: '+d.zeme+'×</span>');
-          if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda–voda: '+d.voda+'×</span>');
+          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#fad7d3;color:#7b1a1a">vzduch-voda: '+d.vzduch+'×</span>');
+          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d5f5e3;color:#1a6b3a">země-voda: '+d.zeme+'×</span>');
+          if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda-voda: '+d.voda+'×</span>');
           return '<div style="font-weight:700;font-size:1rem;color:#1a2e12;margin-bottom:6px">'+d.city+'</div>'+
             '<div style="font-size:0.82rem;color:#555;margin:2px 0">Instalací: <strong>'+d.count+'</strong></div>'+
             '<div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px">'+b.join('')+'</div>';
@@ -561,7 +561,7 @@ const icons: Record<string, string> = {
   const successBox = document.getElementById('mt-form-success')!;
   const errorBox = document.getElementById('mt-form-error')!;
 
-  // Začátek vyplňování – jednou za načtení stránky
+  // Začátek vyplňování - jednou za načtení stránky
   ['input', 'focusin'].forEach(ev => form?.addEventListener(ev, () => {
     if (zapocatoVyplnovani) return;
     zapocatoVyplnovani = true;

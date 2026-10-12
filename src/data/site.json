@@ -54,15 +54,15 @@
       "href": "/reference"
     },
     {
-      "label": "Katalog vzduch–voda",
+      "label": "Katalog vzduch-voda",
       "href": "/katalog/vzduch-voda"
     },
     {
-      "label": "Katalog země–voda",
+      "label": "Katalog země-voda",
       "href": "/katalog/zeme-voda"
     },
     {
-      "label": "Katalog voda–voda",
+      "label": "Katalog voda-voda",
       "href": "/katalog/voda-voda"
     }
   ],
@@ -81,15 +81,15 @@
       "href": "/navrh-reseni/velky-vykon"
     },
     {
-      "label": "Vzduch – voda",
+      "label": "Vzduch - voda",
       "href": "/tepelna-cerpadla/vzduch-voda"
     },
     {
-      "label": "Země – voda",
+      "label": "Země - voda",
       "href": "/tepelna-cerpadla/zeme-voda"
     },
     {
-      "label": "Voda – voda",
+      "label": "Voda - voda",
       "href": "/tepelna-cerpadla/voda-voda"
     }
   ],
@@ -120,15 +120,15 @@
   "nav_tc_items": [
     {
       "href": "/tepelna-cerpadla/vzduch-voda",
-      "label": "Vzduch – voda"
+      "label": "Vzduch - voda"
     },
     {
       "href": "/tepelna-cerpadla/zeme-voda",
-      "label": "Země – voda"
+      "label": "Země - voda"
     },
     {
       "href": "/tepelna-cerpadla/voda-voda",
-      "label": "Voda – voda"
+      "label": "Voda - voda"
     }
   ],
   "nav_funkce": "Chytré funkce",
@@ -158,15 +158,15 @@
   "nav_katalog_items": [
     {
       "href": "/katalog/vzduch-voda",
-      "label": "Katalog vzduch – voda"
+      "label": "Katalog vzduch - voda"
     },
     {
       "href": "/katalog/zeme-voda",
-      "label": "Katalog země – voda"
+      "label": "Katalog země - voda"
     },
     {
       "href": "/katalog/voda-voda",
-      "label": "Katalog voda – voda"
+      "label": "Katalog voda - voda"
     }
   ],
   "nav_cena": "Cena",

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Katalog – Vzduch-voda",
+    "title": "Katalog - Vzduch-voda",
     "description": "Kompletní katalog tepelných čerpadel vzduch-voda Master Therm. BoxAir Inverter, Split, Split Combi a velké objekty. Výkony, COP, technické listy."
   },
   "hero": {
-    "title": "Katalog vzduch – voda",
+    "title": "Katalog vzduch - voda",
     "subtitle": "Kompletní katalog modelů Master Therm",
     "breadcrumb": [
       {
@@ -12,7 +12,7 @@
         "href": "/katalog"
       },
       {
-        "label": "Vzduch – voda",
+        "label": "Vzduch - voda",
         "href": "/katalog/vzduch-voda"
       }
     ]
@@ -71,7 +71,7 @@
       "number": 1,
       "numberStyle": "brand",
       "title": "BoxAir Inverter",
-      "subtitle": "Venkovní kompakt · 2–35 kW",
+      "subtitle": "Venkovní kompakt · 2-35 kW",
       "bannerImage": "/images/produkty/boxair-inverter-banner.webp",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
@@ -82,54 +82,54 @@
       "description": "BoxAir je tepelné čerpadlo vzduch-voda, venkovní kompakt, vyráběné ve výkonu od 2 do 35 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů.",
       "features": [
         "nenáročná instalace a excelentní výkon bez poruch při zachování rozumné ceny",
-        "inverterová technologie – plynulá regulace výkonu podle potřeby domu",
+        "inverterová technologie - plynulá regulace výkonu podle potřeby domu",
         "u většiny domů odpadá potřeba akumulační nádoby",
         "ocenění Grand Prix For Arch 2007"
       ],
       "showPowerGrid": true,
       "powerGridLabel": "Dostupné výkony",
       "powerValues": [
-        "2–7 kW",
-        "3–9 kW",
-        "5–12 kW",
-        "5–17 kW",
-        "7–22 kW",
-        "10–35 kW"
+        "2-7 kW",
+        "3-9 kW",
+        "5-12 kW",
+        "5-17 kW",
+        "7-22 kW",
+        "10-35 kW"
       ],
       "products": [
         {
           "model": "BoxAir 22I",
-          "vykon": "2–7 kW",
+          "vykon": "2-7 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA22I.pdf"
         },
         {
           "model": "BoxAir 26I",
-          "vykon": "3–9 kW",
+          "vykon": "3-9 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA26I.pdf"
         },
         {
           "model": "BoxAir 30I",
-          "vykon": "5–12 kW",
+          "vykon": "5-12 kW",
           "cop": "5,2",
           "pdf": "/pdf/BA30I.pdf"
         },
         {
           "model": "BoxAir 37I",
-          "vykon": "5–17 kW",
+          "vykon": "5-17 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA37I.pdf"
         },
         {
           "model": "BoxAir 45I",
-          "vykon": "7–22 kW",
+          "vykon": "7-22 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA45I.pdf"
         },
         {
           "model": "BoxAir 60I",
-          "vykon": "10–35 kW",
+          "vykon": "10-35 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA60I.pdf"
         }
@@ -140,7 +140,7 @@
       "number": 2,
       "numberStyle": "white",
       "title": "BoxAir Inverter P",
-      "subtitle": "Propanové (R290) · 2–50 kW",
+      "subtitle": "Propanové (R290) · 2-50 kW",
       "bannerImage": "/images/produkty/boxair-inverter-p-banner.webp",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
@@ -150,54 +150,54 @@
       ],
       "description": "BoxAir Inverter P je propanová řada tepelných čerpadel vzduch-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Celoaluminiová skříň, barva antracit RAL 7016. Max. teplota topné vody 75 °C, provoz při venkovních teplotách od −20 do +40 °C.",
       "features": [
-        "přírodní chladivo R290 (propan) – GWP = 3, ekologicky šetrné",
-        "max. teplota topné vody 75 °C – vhodné i pro radiátorové systémy",
+        "přírodní chladivo R290 (propan) - GWP = 3, ekologicky šetrné",
+        "max. teplota topné vody 75 °C - vhodné i pro radiátorové systémy",
         "energetická třída A+++ u všech modelů"
       ],
       "showPowerGrid": true,
       "powerGridLabel": "Dostupné výkony",
       "powerValues": [
-        "2–7 kW",
-        "4–14 kW",
-        "6–20 kW",
-        "8–25 kW",
-        "7–30 kW",
-        "12–50 kW"
+        "2-7 kW",
+        "4-14 kW",
+        "6-20 kW",
+        "8-25 kW",
+        "7-30 kW",
+        "12-50 kW"
       ],
       "products": [
         {
           "model": "BoxAir 22IP",
-          "vykon": "2–7 kW",
+          "vykon": "2-7 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA22IP.pdf"
         },
         {
           "model": "BoxAir 26IP",
-          "vykon": "4–14 kW",
+          "vykon": "4-14 kW",
           "cop": "5,1",
           "pdf": "/pdf/BA26IP.pdf"
         },
         {
           "model": "BoxAir 37IP",
-          "vykon": "6–20 kW",
+          "vykon": "6-20 kW",
           "cop": "4,9",
           "pdf": "/pdf/BA37IP.pdf"
         },
         {
           "model": "BoxAir 45IP",
-          "vykon": "8–25 kW",
+          "vykon": "8-25 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA45IP.pdf"
         },
         {
           "model": "BoxAir 60IP",
-          "vykon": "7–30 kW",
+          "vykon": "7-30 kW",
           "cop": "4,9",
           "pdf": "/pdf/BA60IP.pdf"
         },
         {
           "model": "BoxAir 90IP",
-          "vykon": "12–50 kW",
+          "vykon": "12-50 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA90IP.pdf"
         }
@@ -208,7 +208,7 @@
       "number": 3,
       "numberStyle": "white",
       "title": "BoxAir Inverter Split",
-      "subtitle": "Dělená konstrukce · 2–35 kW",
+      "subtitle": "Dělená konstrukce · 2-35 kW",
       "bannerImage": "/images/produkty/boxair-split-banner.webp",
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
@@ -218,7 +218,7 @@
       ],
       "description": "BoxAir Inverter Split je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 35 kW. Nerezová konstrukce, kompresor a ventilátor s plynulou regulací otáček, vestavěný elektrokotel a oběhové čerpadlo, schopnost chlazení a řízení více topných okruhů.",
       "features": [
-        "velmi variabilní systém s možností instalace rozsáhlé výbavy – potenciál TČ využit na 100 %",
+        "velmi variabilní systém s možností instalace rozsáhlé výbavy - potenciál TČ využit na 100 %",
         "v základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody",
         "používá se tam, kde je výhodné rozdělit instalaci na dvě části (venkovní jednotka na střeše, na konzoli na stěně apod.)"
       ],
@@ -226,31 +226,31 @@
       "products": [
         {
           "model": "BoxAir 22IS",
-          "vykon": "2–7 kW",
+          "vykon": "2-7 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA22IS.pdf"
         },
         {
           "model": "BoxAir 26IS",
-          "vykon": "3–9 kW",
+          "vykon": "3-9 kW",
           "cop": "4,6",
           "pdf": "/pdf/BA26IS.pdf"
         },
         {
           "model": "BoxAir 37IS",
-          "vykon": "5–17 kW",
+          "vykon": "5-17 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA37IS.pdf"
         },
         {
           "model": "BoxAir 45IS",
-          "vykon": "7–22 kW",
+          "vykon": "7-22 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA45IS.pdf"
         },
         {
           "model": "BoxAir 60IS",
-          "vykon": "10–35 kW",
+          "vykon": "10-35 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA60IS.pdf"
         }
@@ -261,7 +261,7 @@
       "number": 4,
       "numberStyle": "brand",
       "title": "BoxAir Inverter Split Combi",
-      "subtitle": "S integrovaným bojlerem · 2–17 kW",
+      "subtitle": "S integrovaným bojlerem · 2-17 kW",
       "bannerImage": "/images/produkty/boxair-split-combi-banner.webp",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
@@ -272,26 +272,26 @@
       "description": "BoxAir Inverter Split Combi je tepelné čerpadlo vzduch-voda, dělené konstrukce, ve výkonu od 2 do 17 kW. Nerezová konstrukce, ventilátor s plynulou regulací otáček, vestavěný elektrokotel, schopnost chlazení a řízení více topných okruhů. Součástí je integrovaný nerezový zásobník teplé vody o objemu 180 litrů.",
       "features": [
         "výhodné řešení dělené konstrukce pro malé strojovny",
-        "integrovaný nerezový bojler 180 l – úspora místa",
+        "integrovaný nerezový bojler 180 l - úspora místa",
         "vysoká spolehlivost a bezporuchový provoz"
       ],
       "showPowerGrid": false,
       "products": [
         {
           "model": "BoxAir 22ISC",
-          "vykon": "2–7 kW",
+          "vykon": "2-7 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA22ISC.pdf"
         },
         {
           "model": "BoxAir 26ISC",
-          "vykon": "3–9 kW",
+          "vykon": "3-9 kW",
           "cop": "4,6",
           "pdf": "/pdf/BA26ISC.pdf"
         },
         {
           "model": "BoxAir 37ISC",
-          "vykon": "5–17 kW",
+          "vykon": "5-17 kW",
           "cop": "4,5",
           "pdf": "/pdf/BA37ISC.pdf"
         }
@@ -302,7 +302,7 @@
       "number": 5,
       "numberStyle": "white",
       "title": "Tepelná čerpadla pro velké objekty",
-      "subtitle": "Výkon 10–50 kW · Možnost kaskád",
+      "subtitle": "Výkon 10-50 kW · Možnost kaskád",
       "bannerImage": "/images/produkty/boxair-velke-banner.webp",
       "bannerGradient": "from-brand-600 to-brand-800",
       "bannerOverlay": "from-brand-700 via-brand-700/80",
@@ -313,32 +313,32 @@
       "description": "Tepelná čerpadla vzduch-voda v této kategorii disponují výkonem od 10 do 35 kW a je možné je dodat jak v kompaktní verzi, tak dělené (split). Tepelná čerpadla lze spojovat do kaskád a výkon strojovny tak navýšit prakticky neomezeně. V základní verzi řídí 2 nezávislé topné okruhy a okruh ohřevu teplé vody.",
       "features": [
         "kompaktní i split verze",
-        "možnost kaskádového zapojení – prakticky neomezený výkon",
-        "osvědčila se především kompaktní verze – za rozumné peníze velké výkony"
+        "možnost kaskádového zapojení - prakticky neomezený výkon",
+        "osvědčila se především kompaktní verze - za rozumné peníze velké výkony"
       ],
       "showPowerGrid": false,
       "products": [
         {
           "model": "BoxAir 60I (Inverter)",
-          "vykon": "10–35 kW",
+          "vykon": "10-35 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA60I.pdf"
         },
         {
           "model": "BoxAir 60IS (Inverter Split)",
-          "vykon": "10–35 kW",
+          "vykon": "10-35 kW",
           "cop": "4,8",
           "pdf": "/pdf/BA60IS.pdf"
         },
         {
           "model": "BoxAir 60IP (R290)",
-          "vykon": "7–30 kW",
+          "vykon": "7-30 kW",
           "cop": "4,9",
           "pdf": "/pdf/BA60IP.pdf"
         },
         {
           "model": "BoxAir 90IP (R290)",
-          "vykon": "12–50 kW",
+          "vykon": "12-50 kW",
           "cop": "4,7",
           "pdf": "/pdf/BA90IP.pdf"
         },
@@ -364,12 +364,12 @@
     }
   ],
   "moreLink": {
-    "text": "Více o tepelných čerpadlech vzduch–voda",
+    "text": "Více o tepelných čerpadlech vzduch-voda",
     "href": "/tepelna-cerpadla/vzduch-voda"
   },
   "cta": {
     "headline": "Nevíte, který model vybrat?",
-    "text": "Pomůžeme vám vybrat správný výkon i typ – zdarma.",
+    "text": "Pomůžeme vám vybrat správný výkon i typ - zdarma.",
     "button": "Odeslat poptávku",
     "href": "/poptavka"
   }

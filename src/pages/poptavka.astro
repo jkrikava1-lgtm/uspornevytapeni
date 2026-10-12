@@ -75,7 +75,7 @@ import site from '../data/site.json';
             <div>
               <label class="block text-sm font-semibold text-charcoal-800 mb-2">Příloha <span class="font-normal text-charcoal-500">(nepovinné)</span></label>
               <input type="file" name="priloha" id="priloha" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx" class="w-full text-sm text-charcoal-600 file:mr-4 file:py-2.5 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-100 file:text-charcoal-700 hover:file:bg-gray-200 file:cursor-pointer file:transition-colors" />
-              <p class="text-xs text-charcoal-500 mt-1">Max. 5 MB – PDF, obrázky, dokumenty</p>
+              <p class="text-xs text-charcoal-500 mt-1">Max. 5 MB - PDF, obrázky, dokumenty</p>
             </div>
             <div class="flex items-start gap-3">
               <input type="checkbox" name="souhlas" id="souhlas" required class="mt-1 w-4 h-4 accent-brand-500" />
@@ -164,7 +164,7 @@ import site from '../data/site.json';
   const successBox = document.getElementById('form-success')!;
   const errorBox = document.getElementById('form-error')!;
 
-  // Začátek vyplňování – jednou za načtení stránky
+  // Začátek vyplňování - jednou za načtení stránky
   ['input', 'focusin'].forEach(ev => form?.addEventListener(ev, () => {
     if (zapocatoVyplnovani) return;
     zapocatoVyplnovani = true;

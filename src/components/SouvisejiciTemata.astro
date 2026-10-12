@@ -1,6 +1,6 @@
 ---
 // Blok "související témata" pro podstránky Návrhu řešení. Rodičovské stránky
-// (Novostavba, Stávající dům) ho měly vlastní, podstránky nic – končily slepě.
+// (Novostavba, Stávající dům) ho měly vlastní, podstránky nic - končily slepě.
 // Bere karty rodiče a vynechá tu, na které zrovna jsme.
 interface Karta {
   href: string;
@@ -18,7 +18,7 @@ interface Props {
 const { headline, items, krome } = Astro.props;
 const karty = krome ? items.filter(i => i.href !== krome) : items;
 
-// Ať poslední řádek nezůstane rozbitý – mřížku volíme podle počtu karet.
+// Ať poslední řádek nezůstane rozbitý - mřížku volíme podle počtu karet.
 const sloupce = karty.length % 3 === 0 ? 'lg:grid-cols-3' : karty.length === 5 ? 'lg:grid-cols-5' : 'lg:grid-cols-4';
 ---
 

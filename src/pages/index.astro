@@ -92,7 +92,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
                       {/* Přednačtení prvního snímku řeší <link rel="preload" media="(min-width:1024px)">
                           v Layoutu. Tady schválně zůstává lazy: karusel je hidden lg:block, takže
                           na mobilu by se eager obrázek stáhl (110 kB), i když ho nikdo neuvidí.
-                          LCP na mobilu je nadpis, na desktopu tenhle obrázek – a ten si zajistí preload. */}
+                          LCP na mobilu je nadpis, na desktopu tenhle obrázek - a ten si zajistí preload. */}
                       onerror="this.style.display='none'" />
                   </div>
                   <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
@@ -256,7 +256,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
           </div>
           <div>
             <div class="text-sm font-bold text-charcoal-900 mb-2">Členové AVTČ</div>
-            <p class="text-sm text-charcoal-500 leading-relaxed">Jsme členy Asociace pro využití tepelných čerpadel – profesní organizace sdružující přední firmy v oboru.</p>
+            <p class="text-sm text-charcoal-500 leading-relaxed">Jsme členy Asociace pro využití tepelných čerpadel - profesní organizace sdružující přední firmy v oboru.</p>
           </div>
         </div>
 
@@ -362,7 +362,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
     "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
     "author": { "@type": "Person", "name": "Roman Vojtek" },
     "reviewBody": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
-    "name": "Tepelné čerpadlo vzduch-voda – Praha"
+    "name": "Tepelné čerpadlo vzduch-voda - Praha"
   })} />
 
 </Layout>
@@ -373,7 +373,7 @@ const maxChart = Math.max(...hp.chart_items.map(i => i.value));
   if (slides.length > 1) {
     let current = 0;
 
-    /* Snímky 2 a 3 nemají src, jen data-src – jinak by si je prohlížeč stáhl
+    /* Snímky 2 a 3 nemají src, jen data-src - jinak by si je prohlížeč stáhl
        hned při načtení stránky (leží v ploše obrazovky, takže na ně lazy
        nezabírá) a přidal 220 kB k tomu, co je potřeba pro první vykreslení.
        Dotahují se až v klidu po načtení a vždy o krok napřed, aby přechod

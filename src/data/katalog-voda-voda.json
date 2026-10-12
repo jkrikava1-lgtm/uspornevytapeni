@@ -1,10 +1,10 @@
 {
   "meta": {
-    "title": "Katalog – Voda-voda",
+    "title": "Katalog - Voda-voda",
     "description": "Kompletní katalog tepelných čerpadel voda-voda Master Therm. AquaMaster, AquaMaster Inverter, AquaMaster Inverter Combi. Výkony, COP, technické listy."
   },
   "hero": {
-    "title": "Katalog voda – voda",
+    "title": "Katalog voda - voda",
     "subtitle": "Kompletní katalog modelů Master Therm",
     "breadcrumb": [
       {
@@ -12,7 +12,7 @@
         "href": "/katalog"
       },
       {
-        "label": "Voda – voda",
+        "label": "Voda - voda",
         "href": "/katalog/voda-voda"
       }
     ]
@@ -68,13 +68,13 @@
       "number": 1,
       "numberStyle": "brand",
       "title": "AquaMaster Inverter",
-      "subtitle": "Inverterová technologie · 1–54 kW",
+      "subtitle": "Inverterová technologie · 1-54 kW",
       "bannerGradient": "from-navy-700 to-navy-900",
       "bannerOverlay": "from-navy-800 via-navy-800/80",
       "subtitleColor": "text-navy-200",
       "description": "AquaMaster Inverter s plynulou regulací výkonu. Ocenění FOR ARCH Grand Prix 2008. Široký rozsah výkonů a rozsáhlá volitelná výbava umožňují navrhnout systém přesně podle požadavků a dosáhnout optimální provozní ekonomiky.",
       "features": [
-        "inverterová technologie – plynulá regulace výkonu",
+        "inverterová technologie - plynulá regulace výkonu",
         "ocenění FOR ARCH Grand Prix 2008",
         "rozsáhlá výbava a možnosti rozšíření"
       ],
@@ -82,49 +82,49 @@
       "products": [
         {
           "model": "AquaMaster 17I",
-          "vykon": "2–5 kW",
+          "vykon": "2-5 kW",
           "cop": "4,3",
           "pdf": "/pdf/AQ17I.pdf"
         },
         {
           "model": "AquaMaster 22I",
-          "vykon": "3–9 kW",
+          "vykon": "3-9 kW",
           "cop": "4,5",
           "pdf": "/pdf/AQ22I.pdf"
         },
         {
           "model": "AquaMaster 26I",
-          "vykon": "4–13 kW",
+          "vykon": "4-13 kW",
           "cop": "4,5",
           "pdf": "/pdf/AQ26I.pdf"
         },
         {
           "model": "AquaMaster 30I",
-          "vykon": "5–14 kW",
+          "vykon": "5-14 kW",
           "cop": "4,6",
           "pdf": "/pdf/AQ30I.pdf"
         },
         {
           "model": "AquaMaster 37I",
-          "vykon": "6–20 kW",
+          "vykon": "6-20 kW",
           "cop": "4,7",
           "pdf": "/pdf/AQ37I.pdf"
         },
         {
           "model": "AquaMaster 45I",
-          "vykon": "9–28 kW",
+          "vykon": "9-28 kW",
           "cop": "4,6",
           "pdf": "/pdf/AQ45I.pdf"
         },
         {
           "model": "AquaMaster 60I",
-          "vykon": "13–41 kW",
+          "vykon": "13-41 kW",
           "cop": "4,7",
           "pdf": "/pdf/AQ60I.pdf"
         },
         {
           "model": "AquaMaster 90I",
-          "vykon": "27–54 kW",
+          "vykon": "27-54 kW",
           "cop": "4,6",
           "pdf": "/pdf/AQ90I.pdf"
         }
@@ -139,7 +139,7 @@
       "number": 2,
       "numberStyle": "white",
       "title": "AquaMaster Inverter P",
-      "subtitle": "Propanové (R290) · 2–80 kW",
+      "subtitle": "Propanové (R290) · 2-80 kW",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
@@ -148,45 +148,45 @@
       ],
       "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
-        "přírodní chladivo R290 (propan) – GWP = 3, ekologicky šetrné",
-        "max. teplota topné vody 75 °C – vhodné i pro radiátorové systémy",
+        "přírodní chladivo R290 (propan) - GWP = 3, ekologicky šetrné",
+        "max. teplota topné vody 75 °C - vhodné i pro radiátorové systémy",
         "energetická třída A+++ u všech modelů"
       ],
       "footnote": "* Podmínky W10W35, COP při 60 Hz",
       "products": [
         {
           "model": "AquaMaster 17IP",
-          "vykon": "3–7 kW",
+          "vykon": "3-7 kW",
           "cop": "5,6",
           "pdf": "/pdf/AQ17IP.pdf"
         },
         {
           "model": "AquaMaster 22IP",
-          "vykon": "3–11 kW",
+          "vykon": "3-11 kW",
           "cop": "5,7",
           "pdf": "/pdf/AQ22IP.pdf"
         },
         {
           "model": "AquaMaster 30IP",
-          "vykon": "4–15 kW",
+          "vykon": "4-15 kW",
           "cop": "6,0",
           "pdf": "/pdf/AQ30IP.pdf"
         },
         {
           "model": "AquaMaster 37IP",
-          "vykon": "7–22 kW",
+          "vykon": "7-22 kW",
           "cop": "5,5",
           "pdf": "/pdf/AQ37IP.pdf"
         },
         {
           "model": "AquaMaster 45IP",
-          "vykon": "10–45 kW",
+          "vykon": "10-45 kW",
           "cop": "5,7",
           "pdf": "/pdf/AQ45IP.pdf"
         },
         {
           "model": "AquaMaster 90IP",
-          "vykon": "20–93 kW",
+          "vykon": "20-93 kW",
           "cop": "6,0",
           "pdf": "/pdf/AQ90IP.pdf"
         }
@@ -198,13 +198,13 @@
       "number": 3,
       "numberStyle": "white",
       "title": "AquaMaster Inverter Combi",
-      "subtitle": "All-in-one s integrovaným bojlerem · 3–20 kW",
+      "subtitle": "All-in-one s integrovaným bojlerem · 3-20 kW",
       "bannerGradient": "from-cyan-700 to-cyan-900",
       "bannerOverlay": "from-cyan-800 via-cyan-800/80",
       "subtitleColor": "text-cyan-100",
       "description": "Konstrukce „all in one“ s integrovaným nerezovým zásobníkem TUV, solárním výměníkem a inverterovým kompresorem. Moderní BLDC kompresor s variabilními oběhovými čerpadly a unikátním řídicím systémem. Volitelný modul pasivního chlazení umožňuje přímé využití chladicího efektu země bez spotřeby energie.",
       "features": [
-        "all-in-one – integrovaný nerezový bojler a solární výměník",
+        "all-in-one - integrovaný nerezový bojler a solární výměník",
         "minimální nároky na instalaci a zapojení",
         "volitelné pasivní chlazení bez spotřeby energie"
       ],
@@ -212,31 +212,31 @@
       "products": [
         {
           "model": "AquaMaster 17IC",
-          "vykon": "2–5 kW",
+          "vykon": "2-5 kW",
           "cop": "4,6",
           "pdf": "/pdf/AQ17IC.pdf"
         },
         {
           "model": "AquaMaster 22IC",
-          "vykon": "3–9 kW",
+          "vykon": "3-9 kW",
           "cop": "4,5",
           "pdf": "/pdf/AQ22IC.pdf"
         },
         {
           "model": "AquaMaster 26IC",
-          "vykon": "4–13 kW",
+          "vykon": "4-13 kW",
           "cop": "4,5",
           "pdf": "/pdf/AQ26IC.pdf"
         },
         {
           "model": "AquaMaster 30IC",
-          "vykon": "5–14 kW",
+          "vykon": "5-14 kW",
           "cop": "4,6",
           "pdf": "/pdf/AQ30IC.pdf"
         },
         {
           "model": "AquaMaster 37IC",
-          "vykon": "6–20 kW",
+          "vykon": "6-20 kW",
           "cop": "4,7",
           "pdf": "/pdf/AQ37IC.pdf"
         }
@@ -251,7 +251,7 @@
       "number": 4,
       "numberStyle": "brand",
       "title": "AquaMaster Inverter Combi P",
-      "subtitle": "Propanové all-in-one (R290) · 2–10 kW",
+      "subtitle": "Propanové all-in-one (R290) · 2-10 kW",
       "bannerGradient": "from-green-700 to-green-900",
       "bannerOverlay": "from-green-800 via-green-800/80",
       "subtitleColor": "text-green-100",
@@ -260,21 +260,21 @@
       ],
       "description": "Ultra kompaktní jednotka s přírodním chladivem R290 a integrovaným nerezovým zásobníkem TUV 150 litrů. Zabere pouze 0,3 m² podlahové plochy. Max. teplota topné vody 75 °C, ochrana proti legionelle bez dohřívání.",
       "features": [
-        "přírodní chladivo R290 (propan) – GWP = 3",
+        "přírodní chladivo R290 (propan) - GWP = 3",
         "all-in-one s integrovaným nerezovým bojlerem 150 l",
-        "minimální nároky na prostor – pouze 0,3 m²"
+        "minimální nároky na prostor - pouze 0,3 m²"
       ],
       "footnote": "* Podmínky W10W35, COP při 60 Hz",
       "products": [
         {
           "model": "AquaMaster 17ICP",
-          "vykon": "2–7 kW",
+          "vykon": "2-7 kW",
           "cop": "5,8",
           "pdf": "/pdf/AQ17ICP.pdf"
         },
         {
           "model": "AquaMaster 22ICP",
-          "vykon": "3–11 kW",
+          "vykon": "3-11 kW",
           "cop": "5,7",
           "pdf": "/pdf/AQ22ICP.pdf"
         }
@@ -283,12 +283,12 @@
     }
   ],
   "moreLink": {
-    "text": "Více o tepelných čerpadlech voda–voda",
+    "text": "Více o tepelných čerpadlech voda-voda",
     "href": "/tepelna-cerpadla/voda-voda"
   },
   "cta": {
     "headline": "Nevíte, který model vybrat?",
-    "text": "Pomůžeme vám vybrat správný výkon i typ – zdarma.",
+    "text": "Pomůžeme vám vybrat správný výkon i typ - zdarma.",
     "button": "Odeslat poptávku",
     "href": "/poptavka"
   }

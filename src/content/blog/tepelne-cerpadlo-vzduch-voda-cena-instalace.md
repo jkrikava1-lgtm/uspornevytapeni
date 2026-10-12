@@ -7,7 +7,7 @@ category: "Průvodce"
 image: "/images/hero/boxair-dum-kamen.webp"
 ---
 
-Tepelné čerpadlo vzduch-voda je nejrozšířenějším typem – z našich 439 instalací jich připadá na tenhle typ přes 90 %. Důvod je prostý: žádné zemní práce, rychlá montáž a příznivá cena.
+Tepelné čerpadlo vzduch-voda je nejrozšířenějším typem - z našich 439 instalací jich připadá na tenhle typ přes 90 %. Důvod je prostý: žádné zemní práce, rychlá montáž a příznivá cena.
 
 ## Kolik to stojí?
 
@@ -19,23 +19,23 @@ Cena systému vzduch-voda zahrnuje venkovní jednotku, vnitřní část, zásobn
 | cca 160 m² | do 13 kW | BoxAir 37I PLUS | od 389 000 Kč |
 | cca 220 m² | do 19 kW | BoxAir 45I PLUS | od 409 000 Kč |
 
-Jde o nejčastější situace z našich realizací – všechny tři s radiátory, tedy bez přestavby otopné soustavy. Stejné příklady i s podrobnostmi najdete na stránce [cena tepelného čerpadla](/cena).
+Jde o nejčastější situace z našich realizací - všechny tři s radiátory, tedy bez přestavby otopné soustavy. Stejné příklady i s podrobnostmi najdete na stránce [cena tepelného čerpadla](/cena).
 
 S dotací NZÚ (bezúročný úvěr až 350 000 Kč nebo přímá dotace až 150 000 Kč) klesne reálná cena výrazně.
 
 ## Jak probíhá instalace?
 
-Montáž trvá **2–5 dní** podle rozsahu prací. Nevyžaduje zemní práce, výkopy ani stavební povolení. Typický průběh u výměny bez zásahu do otopné soustavy:
+Montáž trvá **2-5 dní** podle rozsahu prací. Nevyžaduje zemní práce, výkopy ani stavební povolení. Typický průběh u výměny bez zásahu do otopné soustavy:
 
-1. **Den 1** – osazení venkovní jednotky, přívod elektřiny, propojení s interiérem
-2. **Den 2** – zapojení zásobníku TUV, propojení s topným systémem (podlaha nebo radiátory)
-3. **Den 3** – nastavení regulace, spuštění, školení majitele
+1. **Den 1** - osazení venkovní jednotky, přívod elektřiny, propojení s interiérem
+2. **Den 2** - zapojení zásobníku TUV, propojení s topným systémem (podlaha nebo radiátory)
+3. **Den 3** - nastavení regulace, spuštění, školení majitele
 
-Venkovní jednotka stojí na konzole u domu nebo na střeše – domluvíme umístění podle konkrétní situace.
+Venkovní jednotka stojí na konzole u domu nebo na střeše - domluvíme umístění podle konkrétní situace.
 
 ## Kolik stojí provoz?
 
-Tepelné čerpadlo vzduch-voda dosahuje průměrného topného faktoru **COP 3,3** – na každou 1 kWh elektřiny tedy dodá zhruba 3,3 kWh tepla. Z téhle hodnoty vychází i náklady níže. Podrobně o tom, jak [COP číst správně](/blog/cop-tepelneho-cerpadla).
+Tepelné čerpadlo vzduch-voda dosahuje průměrného topného faktoru **COP 3,3** - na každou 1 kWh elektřiny tedy dodá zhruba 3,3 kWh tepla. Z téhle hodnoty vychází i náklady níže. Podrobně o tom, jak [COP číst správně](/blog/cop-tepelneho-cerpadla).
 
 **Roční náklady na vytápění rodinného domu:**
 
@@ -49,6 +49,6 @@ Proti plynu tedy ušetříte kolem **28 000 Kč ročně**, proti elektrickému v
 
 ## Funguje i při velkých mrazech?
 
-Moderní inverterová čerpadla Master Therm pracují spolehlivě do **−20 °C**. Při extrémních mrazech (pod −15 °C) pomůže integrovaná elektrická dotopová spirála – jde jen o několik dní v roce.
+Moderní inverterová čerpadla Master Therm pracují spolehlivě do **−20 °C**. Při extrémních mrazech (pod −15 °C) pomůže integrovaná elektrická dotopová spirála - jde jen o několik dní v roce.
 
 Chcete přesnou kalkulaci pro váš dům? [Cenová kalkulace online](/cenova-kalkulace) nebo nás rovnou [kontaktujte](/poptavka).

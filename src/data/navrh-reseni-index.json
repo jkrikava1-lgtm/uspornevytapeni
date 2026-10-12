@@ -1,8 +1,8 @@
 {
   "meta_title": "Návrh řešení vytápění pro váš dům",
-  "meta_description": "Navrhujeme optimální vytápění na míru – novostavby, rekonstrukce, podlahové topení, radiátory, chlazení i kaskádové systémy. Bezplatná konzultace a prohlídka objektu.",
+  "meta_description": "Navrhujeme optimální vytápění na míru - novostavby, rekonstrukce, podlahové topení, radiátory, chlazení i kaskádové systémy. Bezplatná konzultace a prohlídka objektu.",
   "hero_title": "Návrh řešení",
-  "hero_subtitle": "Vybereme správné řešení pro váš dům – ať stavíte, rekonstruujete nebo potřebujete velký výkon.",
+  "hero_subtitle": "Vybereme správné řešení pro váš dům - ať stavíte, rekonstruujete nebo potřebujete velký výkon.",
   "section_typ_objektu": "Podle typu objektu",
   "typ_objektu_cards": [
     {
@@ -35,7 +35,7 @@
     {
       "href": "/navrh-reseni/novostavba",
       "title": "Novostavba",
-      "desc": "Optimální systém vytápění pro nový dům – tepelné čerpadlo, podlahové vytápění i chlazení v jednom projektu.",
+      "desc": "Optimální systém vytápění pro nový dům - tepelné čerpadlo, podlahové vytápění i chlazení v jednom projektu.",
       "img": "/images/hero/novostavba-vizual.webp",
       "icon": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
       "children": [
@@ -88,7 +88,7 @@
     {
       "href": "/navrh-reseni/radiatory",
       "title": "Radiátory",
-      "desc": "Tepelné čerpadlo funguje i s radiátory – záleží na typu a velikosti.",
+      "desc": "Tepelné čerpadlo funguje i s radiátory - záleží na typu a velikosti.",
       "icon": "M4 6h16M4 10h16M4 14h16M4 18h16",
       "emoji": "🌡️"
     },
@@ -102,7 +102,7 @@
     {
       "href": "/navrh-reseni/kombinace-topnych-okruhu",
       "title": "Kombinace okruhů",
-      "desc": "Podlahovka + radiátory v jednom systému – běžné a funkční řešení.",
+      "desc": "Podlahovka + radiátory v jednom systému - běžné a funkční řešení.",
       "icon": "M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01",
       "emoji": "🔀"
     }
@@ -112,7 +112,7 @@
     {
       "href": "/navrh-reseni/chlazeni",
       "title": "Chlazení tepelným čerpadlem",
-      "desc": "Tepelné čerpadlo v létě chladí – dvě funkce za cenu jedné.",
+      "desc": "Tepelné čerpadlo v létě chladí - dvě funkce za cenu jedné.",
       "icon": "M12 3v1m0 16v1m-8-9H3m18 0h-1m-2.636-5.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z",
       "emoji": "❄️"
     },
@@ -135,7 +135,7 @@
     }
   ],
   "cta_headline": "Nevíte si rady?",
-  "cta_text": "Pošlete poptávku a navrhneme řešení přesně pro váš dům – zdarma.",
+  "cta_text": "Pošlete poptávku a navrhneme řešení přesně pro váš dům - zdarma.",
   "cta_button": "Odeslat poptávku",
   "shared_link": {
     "href": "/navrh-reseni/kombinace-topnych-okruhu",

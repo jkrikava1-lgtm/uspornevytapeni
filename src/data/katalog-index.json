@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Katalog tepelných čerpadel",
-    "description": "Katalog tepelných čerpadel Master Therm – vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění."
+    "description": "Katalog tepelných čerpadel Master Therm - vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění."
   },
   "hero": {
     "title": "Katalog tepelných čerpadel",
-    "subtitle": "Tepelná čerpadla Master Therm – česká výroba, mezinárodní ocenění.",
+    "subtitle": "Tepelná čerpadla Master Therm - česká výroba, mezinárodní ocenění.",
     "breadcrumbLabel": "Katalog"
   },
   "cards": [
     {
-      "title": "Vzduch – voda",
+      "title": "Vzduch - voda",
       "description": "Nejoblíbenější řešení pro rodinné domy. Rychlá instalace, nízké pořizovací náklady.",
       "href": "/katalog/vzduch-voda",
       "image": "/images/produkty/boxair-inverter-banner.webp",
@@ -20,7 +20,7 @@
       "overlayColor": "navy-800"
     },
     {
-      "title": "Země – voda",
+      "title": "Země - voda",
       "description": "Nejvyšší účinnost díky stabilní teplotě zemského povrchu. Plošný kolektor nebo vrt.",
       "href": "/katalog/zeme-voda",
       "image": "/images/produkty/aquamaster-inverter-banner.webp",
@@ -30,8 +30,8 @@
       "overlayColor": "green-800"
     },
     {
-      "title": "Voda – voda",
-      "description": "Nejvyšší účinnost ze všech typů – průměrný topný faktor 5,0. Vhodné tam, kde je dostatek spodní vody.",
+      "title": "Voda - voda",
+      "description": "Nejvyšší účinnost ze všech typů - průměrný topný faktor 5,0. Vhodné tam, kde je dostatek spodní vody.",
       "href": "/katalog/voda-voda",
       "image": "/images/produkty/aquamaster-combi-banner.webp",
       "linkText": "Zobrazit modely →",
@@ -42,7 +42,7 @@
   ],
   "cta": {
     "headline": "Nevíte, který model vybrat?",
-    "text": "Pomůžeme vám vybrat správný výkon i typ – zdarma.",
+    "text": "Pomůžeme vám vybrat správný výkon i typ - zdarma.",
     "button": "Odeslat poptávku",
     "href": "/poptavka"
   }

@@ -35,11 +35,11 @@ import site from '../data/site.json';
         {ref.references.map((item) => (
           <div
             class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow cursor-pointer js-gallery-card"
-            data-title={`${item.lokalita} – ${item.system}`}
+            data-title={`${item.lokalita} - ${item.system}`}
             data-gallery={JSON.stringify(item.gallery)}
           >
             <div class="relative">
-              <img src={item.image} alt={`Instalace ${item.system} – ${item.lokalita}`} class="h-56 w-full object-cover" loading="lazy" />
+              <img src={item.image} alt={`Instalace ${item.system} - ${item.lokalita}`} class="h-56 w-full object-cover" loading="lazy" />
               <div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md flex items-center gap-1">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                 {item.gallery.length}
@@ -122,9 +122,9 @@ import site from '../data/site.json';
         }
         function pop(d) {
           var b = [];
-          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#fad7d3;color:#7b1a1a">vzduch\u2013voda: '+d.vzduch+'\u00d7</span>');
-          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d5f5e3;color:#1a6b3a">zem\u011b\u2013voda: '+d.zeme+'\u00d7</span>');
-          if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda\u2013voda: '+d.voda+'\u00d7</span>');
+          if (d.vzduch>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#fad7d3;color:#7b1a1a">vzduch-voda: '+d.vzduch+'\u00d7</span>');
+          if (d.zeme>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#d5f5e3;color:#1a6b3a">zem\u011b-voda: '+d.zeme+'\u00d7</span>');
+          if (d.voda>0) b.push('<span style="display:inline-block;padding:2px 9px;border-radius:20px;font-size:0.74rem;font-weight:600;background:#cce3f5;color:#0d4a7a">voda-voda: '+d.voda+'\u00d7</span>');
           return '<div style="font-weight:700;font-size:1rem;color:#1a2e12;margin-bottom:6px">'+d.city+'</div>'+
             '<div style="font-size:0.82rem;color:#555;margin:2px 0">\ud83d\udce6 Instalac\u00ed: <strong>'+d.count+'</strong></div>'+
             '<div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:4px">'+b.join('')+'</div>';
@@ -234,11 +234,11 @@ import site from '../data/site.json';
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Reference instalací tepelných čerpadel – Úsporné vytápění s.r.o.",
+    "name": "Reference instalací tepelných čerpadel - Úsporné vytápění s.r.o.",
     "description": "Realizované instalace tepelných čerpadel Master Therm v rodinných domech po celé České republice.",
     "numberOfItems": 15,
     "itemListElement": [
       "Studenec","Staňkova Lhota","Dolní Bousov","Kopidlno","Sobotka","Koclířov","Chuchelna","Býkev","Hradec Králové","Pecka","Průhonice","Přepeře","Tuklaty","Jesenice","Kostelní Lhota"
-    ].map((lokalita, i) => ({ "@type": "ListItem", "position": i + 1, "name": `Rekonstrukce rodinného domu – ${lokalita}` }))
+    ].map((lokalita, i) => ({ "@type": "ListItem", "position": i + 1, "name": `Rekonstrukce rodinného domu - ${lokalita}` }))
   })} />
 </Layout>

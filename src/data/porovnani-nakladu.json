@@ -1,12 +1,12 @@
 {
   "meta_title": "Porovnání nákladů na vytápění 2026",
-  "meta_description": "Kolik ušetříte s tepelným čerpadlem oproti plynu nebo elektřině? Srovnání ročních nákladů 2026 – TČ, plyn, pelety, elektřina, dřevo i uhlí.",
+  "meta_description": "Kolik ušetříte s tepelným čerpadlem oproti plynu nebo elektřině? Srovnání ročních nákladů 2026 - TČ, plyn, pelety, elektřina, dřevo i uhlí.",
   "hero_title": "Porovnání nákladů na vytápění",
   "hero_subtitle": "Kolik skutečně stojí vytápění rodinného domu? Objektivní srovnání ročních nákladů podle typu zdroje tepla.",
   "note_text": "Výpočty vycházejí z aktuálních dat TZB-info (březen 2026) pro rodinný dům s tepelnou ztrátou 13 kW, čtyřčlennou rodinu a ohřev teplé vody (celková potřeba 31 191 kWh/rok). Uvedené částky zahrnují náklady na vytápění a teplou vodu.",
   "highlight_badge": "Nejnižší náklady",
   "savings_prefix": "Úspora s TČ:",
-  "chart_headline": "Roční náklady na vytápění – vizuální srovnání",
+  "chart_headline": "Roční náklady na vytápění - vizuální srovnání",
   "chart_items": [
     {
       "label": "Palivové dřevo",
@@ -56,7 +56,7 @@
   "factor1_title": "Zateplení domu",
   "factor1_desc": "Lépe zateplený dům = nižší potřeba tepla = menší spotřeba energie u všech zdrojů.",
   "factor2_title": "Typ tepelného čerpadla",
-  "factor2_desc": "Země-voda dosahuje vyššího COP než vzduch-voda – ještě nižší spotřeba elektřiny.",
+  "factor2_desc": "Země-voda dosahuje vyššího COP než vzduch-voda - ještě nižší spotřeba elektřiny.",
   "factor3_title": "Tarif HDO",
   "factor3_desc": "Speciální tarif pro tepelná čerpadla výrazně snižuje cenu elektřiny.",
   "factor4_title": "Fotovoltaika",
@@ -66,9 +66,9 @@
   "tool1_desc": "Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu.",
   "tool1_cta": "Spočítat cenu",
   "tool2_title": "Porovnání nákladů",
-  "tool2_desc": "Srovnání ročních nákladů – tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.",
+  "tool2_desc": "Srovnání ročních nákladů - tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.",
   "tool2_cta": "Porovnat náklady",
   "cta_headline": "Chcete výpočet pro váš dům?",
-  "cta_text": "Připravíme individuální srovnání spotřeby zdarma – na základě skutečných parametrů vašeho domu.",
+  "cta_text": "Připravíme individuální srovnání spotřeby zdarma - na základě skutečných parametrů vašeho domu.",
   "cta_button": "Chci srovnání pro můj dům"
 }

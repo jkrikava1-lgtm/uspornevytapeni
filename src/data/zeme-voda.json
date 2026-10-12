@@ -1,22 +1,22 @@
 {
-  "meta_title": "Tepelná čerpadla země-voda – cena od 429 000 Kč",
+  "meta_title": "Tepelná čerpadla země-voda - cena od 429 000 Kč",
   "meta_description": "Cena tepelného čerpadla země-voda od 429 000 Kč na klíč, vrt se počítá zvlášť. Plošný kolektor nebo vrt, stabilní výkon i v mrazech. Průměrný COP 4,3.",
-  "hero_title": "Tepelná čerpadla země – voda",
-  "hero_subtitle": "Stabilní výkon díky stálé teplotě v zemi. Dvě varianty – plošný kolektor nebo vrt.",
+  "hero_title": "Tepelná čerpadla země - voda",
+  "hero_subtitle": "Stabilní výkon díky stálé teplotě v zemi. Dvě varianty - plošný kolektor nebo vrt.",
   "intro_bullets": [
-    "do země uložíme plastové potrubí (stovky metrů), ve kterém obíhá nemrznoucí směs a průchodem zemí se ohřívá – toto teplo odebírá tepelné čerpadlo a předává jej domu",
-    "díky stálejší teplotě v zemi mají tepelná čerpadla země–voda stabilnější výkon",
-    "systém navrhujeme vždy tak, aby svým topným výkonem pokrýval 100 % potřeby domu – případný další zdroj tepla je pak spíše záložní než doplňkový",
+    "do země uložíme plastové potrubí (stovky metrů), ve kterém obíhá nemrznoucí směs a průchodem zemí se ohřívá - toto teplo odebírá tepelné čerpadlo a předává jej domu",
+    "díky stálejší teplotě v zemi mají tepelná čerpadla země-voda stabilnější výkon",
+    "systém navrhujeme vždy tak, aby svým topným výkonem pokrýval 100 % potřeby domu - případný další zdroj tepla je pak spíše záložní než doplňkový",
     "zemní kolektor lze udělat tak, aby kolem domu nebyla vidět jakákoli technologie"
   ],
-  "intro_summary": "Tepelné čerpadlo země–voda vám můžeme navrhnout ve dvou variantách:",
-  "variant1_title": "Země – voda: Plošný kolektor",
+  "intro_summary": "Tepelné čerpadlo země-voda vám můžeme navrhnout ve dvou variantách:",
+  "variant1_title": "Země - voda: Plošný kolektor",
   "variant1_subtitle": "Pro ty, kteří mají dostatečný pozemek",
   "variant1_bullets": [
     "je vždy důležité, aby plocha kolektoru byla dostatečná, proto tuto plochu vždy vypočítává náš projektant a garantujeme, že teplota v kolektoru nepůjde ani na konci topné sezóny pod 0 °C",
-    "počítejte, že z 1 m² dostanete průměrně 20 W – pokud tedy máte dům, který potřebuje na vytopení cca 8 kW (8 000 W), potřebujete kolektor alespoň 400 m²",
-    "plošný kolektor je „dobíjen“ solární energií, tedy sluncem – pokud jej tedy uděláte o něco větší, než je vypočteno, systému jen prospějete",
-    "pokud je kolektor navržen dostatečně velký, nevyčerpává (neochlazuje) nadměrně zemi a česká zahrada nemá problém s fungováním – pouze sousedovi sleze sníh o pár dní dříve než vám",
+    "počítejte, že z 1 m² dostanete průměrně 20 W - pokud tedy máte dům, který potřebuje na vytopení cca 8 kW (8 000 W), potřebujete kolektor alespoň 400 m²",
+    "plošný kolektor je „dobíjen“ solární energií, tedy sluncem - pokud jej tedy uděláte o něco větší, než je vypočteno, systému jen prospějete",
+    "pokud je kolektor navržen dostatečně velký, nevyčerpává (neochlazuje) nadměrně zemi a česká zahrada nemá problém s fungováním - pouze sousedovi sleze sníh o pár dní dříve než vám",
     "za náročnější výkopové práce budete odměněni stabilní ekonomikou provozu"
   ],
   "variant1_params_label": "Klíčové parametry",
@@ -38,10 +38,10 @@
       "value": "neklesne pod 0 °C"
     }
   ],
-  "variant1_cta_text": "Tepelné čerpadlo země–voda s plošným kolektorem vám rádi navrhneme:",
+  "variant1_cta_text": "Tepelné čerpadlo země-voda s plošným kolektorem vám rádi navrhneme:",
   "variant1_cta_button": "Zpracujte mi nabídku",
-  "variant2_title": "Země – voda: Vrt (vertikální zemní kolektor)",
-  "variant2_subtitle": "Nejznámější systém tepelného čerpadla – nenáročný na prostor",
+  "variant2_title": "Země - voda: Vrt (vertikální zemní kolektor)",
+  "variant2_subtitle": "Nejznámější systém tepelného čerpadla - nenáročný na prostor",
   "variant2_bullets": [
     "vrt je nenáročný na prostor, ale díky vrtacím pracím je ze všech tepelných čerpadel nejdražším systémem",
     "je třeba počítat, že pokud z 1 m vrtu dostanete 60 W, na dům, který potřebuje na vytopení cca 8 kW (8 000 W), budete potřebovat cca 130 m vrtu",
@@ -70,6 +70,6 @@
   "variant2_cta_text": "Navrhneme vám spolehlivý systém tepelného čerpadla s vrtem:",
   "variant2_cta_button": "Zpracujte mi nabídku",
   "cta_headline": "Nejste si jistí, která varianta je pro vás vhodná?",
-  "cta_text": "Navrhneme řešení přesně podle vašeho pozemku, typu domu i rozpočtu. Plošný kolektor i vrt mají své výhody – pomůžeme vám vybrat to nejlepší.",
+  "cta_text": "Navrhneme řešení přesně podle vašeho pozemku, typu domu i rozpočtu. Plošný kolektor i vrt mají své výhody - pomůžeme vám vybrat to nejlepší.",
   "cta_button": "Zpracujte mi nabídku"
 }
