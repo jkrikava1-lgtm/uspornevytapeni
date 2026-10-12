@@ -1,5 +1,5 @@
 ---
-title: "Rekonstrukce topení v rodinném domě — přechod na tepelné čerpadlo"
+title: "Rekonstrukce topení v rodinném domě – přechod na tepelné čerpadlo"
 description: "Jak probíhá výměna plynového kotle za tepelné čerpadlo? Co se musí udělat, co zůstat může a jak dlouho to trvá. Průvodce rekonstrukcí topení krok za krokem."
 pubDate: 2026-05-05
 author: "Jakub Křikava"
@@ -11,14 +11,14 @@ Výměna plynového kotle za tepelné čerpadlo je nejčastější typ zakázky,
 
 ## Může tepelné čerpadlo vytápět přes staré radiátory?
 
-Ano — za podmínek. Klasické radiátory jsou navržené pro výstupní teplotu 70–80 °C. Tepelné čerpadlo pracuje nejlépe při 35–50 °C.
+Ano – za podmínek. Klasické radiátory jsou navržené pro výstupní teplotu 70–80 °C. Tepelné čerpadlo pracuje nejlépe při 35–50 °C.
 
 Řešení jsou dvě:
 
-1. **Radiátory zvětšit** (desková tělesa místo článkových) — efektivní, ale nákladné
-2. **Provozovat na vyšší teplotě** — TČ to zvládne, COP klesne na 2,5–3,0 místo průměrných 3,3
+1. **Radiátory zvětšit** (desková tělesa místo článkových) – efektivní, ale nákladné
+2. **Provozovat na vyšší teplotě** – TČ to zvládne, COP klesne na 2,5–3,0 místo průměrných 3,3
 
-V praxi posoudíme každý radiátor zvlášť. Domy postavené po roce 1990 mají zpravidla předimenzované radiátory — fungují na nižší teplotě bez úprav. Starší domy většinou vyžadují výměnu alespoň části těles.
+V praxi posoudíme každý radiátor zvlášť. Domy postavené po roce 1990 mají zpravidla předimenzované radiátory – fungují na nižší teplotě bez úprav. Starší domy většinou vyžadují výměnu alespoň části těles.
 
 ## Co se při rekonstrukci typicky mění?
 
@@ -32,12 +32,12 @@ V praxi posoudíme každý radiátor zvlášť. Domy postavené po roce 1990 maj
 
 ## Jak dlouho rekonstrukce trvá?
 
-- **Den 1** — demontáž kotle, příprava místa pro TČ, výměna zásobníku TUV
-- **Den 2–3** — instalace venkovní a vnitřní části TČ, propojení s topným systémem
-- **Den 4** — případná výměna radiátorů, hydraulické vyvážení
-- **Den 5** — nastavení regulace, spuštění, zkouška všech místností
+- **Den 1** – demontáž kotle, příprava místa pro TČ, výměna zásobníku TUV
+- **Den 2–3** – instalace venkovní a vnitřní části TČ, propojení s topným systémem
+- **Den 4** – případná výměna radiátorů, hydraulické vyvážení
+- **Den 5** – nastavení regulace, spuštění, zkouška všech místností
 
-Dům bez topení zůstane **jen první den** — druhý den již TČ ohřívá.
+Dům bez topení zůstane **jen první den** – druhý den již TČ ohřívá.
 
 ## Kolik se ušetří?
 
@@ -49,6 +49,6 @@ Přechod z kondenzačního plynového kotle na tepelné čerpadlo vzduch-voda:
 
 Čísla vycházejí z našeho [porovnání nákladů na vytápění](/porovnani-nakladu), kde najdete i pelety, uhlí, dřevo a elektrokotel.
 
-Při [ceně systému od 334 000 Kč](/cena) to znamená návratnost zhruba dvanáct let. Pokud dnes topíte elektrokotlem nebo přímotopy, je to výrazně rychlejší — úspora tam vychází na 69 000 Kč ročně a investice se vrátí zhruba za pět a půl roku. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
+Při [ceně systému od 334 000 Kč](/cena) to znamená návratnost zhruba dvanáct let. Pokud dnes topíte elektrokotlem nebo přímotopy, je to výrazně rychlejší – úspora tam vychází na 69 000 Kč ročně a investice se vrátí zhruba za pět a půl roku. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
 
 Chcete vědět, jak to vyjde u vás? [Spočítejte si to online](/cenova-kalkulace) nebo nás [kontaktujte přímo](/poptavka).

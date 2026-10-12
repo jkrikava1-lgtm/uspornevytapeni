@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Katalog tepelných čerpadel",
-    "description": "Katalog tepelných čerpadel Master Therm — vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění."
+    "description": "Katalog tepelných čerpadel Master Therm – vzduch-voda, země-voda, voda-voda. Česká výroba, mezinárodní ocenění."
   },
   "hero": {
     "title": "Katalog tepelných čerpadel",
-    "subtitle": "Tepelná čerpadla Master Therm — česká výroba, mezinárodní ocenění.",
+    "subtitle": "Tepelná čerpadla Master Therm – česká výroba, mezinárodní ocenění.",
     "breadcrumbLabel": "Katalog"
   },
   "cards": [
@@ -31,7 +31,7 @@
     },
     {
       "title": "Voda – voda",
-      "description": "Nejvyšší účinnost ze všech typů — průměrný topný faktor 5,0. Vhodné tam, kde je dostatek spodní vody.",
+      "description": "Nejvyšší účinnost ze všech typů – průměrný topný faktor 5,0. Vhodné tam, kde je dostatek spodní vody.",
       "href": "/katalog/voda-voda",
       "image": "/images/produkty/aquamaster-combi-banner.webp",
       "linkText": "Zobrazit modely →",
@@ -42,7 +42,7 @@
   ],
   "cta": {
     "headline": "Nevíte, který model vybrat?",
-    "text": "Pomůžeme vám vybrat správný výkon i typ — zdarma.",
+    "text": "Pomůžeme vám vybrat správný výkon i typ – zdarma.",
     "button": "Odeslat poptávku",
     "href": "/poptavka"
   }

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Katalog — Země-voda",
+    "title": "Katalog – Země-voda",
     "description": "Kompletní katalog tepelných čerpadel země-voda Master Therm. AquaMaster, AquaMaster Inverter, AquaMaster Inverter Combi. Výkony, COP, technické listy."
   },
   "hero": {
@@ -77,7 +77,7 @@
       ],
       "description": "AquaMaster Inverter s plynulou regulací výkonu podle potřeby domu. Ocenění FOR ARCH Grand Prix 2008. Optimální provozní ekonomika díky inverterové technologii.",
       "features": [
-        "inverterová technologie — plynulá regulace výkonu",
+        "inverterová technologie – plynulá regulace výkonu",
         "ocenění FOR ARCH Grand Prix 2008",
         "rozsáhlá výbava a možnosti rozšíření"
       ],
@@ -148,8 +148,8 @@
       ],
       "description": "AquaMaster Inverter P je propanová řada tepelných čerpadel země-voda s chladivem R290. Přírodní chladivo s minimálním dopadem na životní prostředí (GWP = 3). Max. teplota topné vody 75 °C. Energetická třída A+++.",
       "features": [
-        "přírodní chladivo R290 (propan) — GWP = 3, ekologicky šetrné",
-        "max. teplota topné vody 75 °C — vhodné i pro radiátorové systémy",
+        "přírodní chladivo R290 (propan) – GWP = 3, ekologicky šetrné",
+        "max. teplota topné vody 75 °C – vhodné i pro radiátorové systémy",
         "energetická třída A+++ u všech modelů"
       ],
       "products": [
@@ -206,7 +206,7 @@
       ],
       "description": "Konstrukce „all in one“ s integrovaným nerezovým zásobníkem TUV, solárním výměníkem a inverterovým kompresorem. Moderní BLDC kompresor s variabilními oběhovými čerpadly a unikátním řídicím systémem. Volitelný modul pasivního chlazení.",
       "features": [
-        "all-in-one — integrovaný nerezový bojler a solární výměník",
+        "all-in-one – integrovaný nerezový bojler a solární výměník",
         "minimální nároky na instalaci a zapojení",
         "volitelné pasivní chlazení bez spotřeby energie"
       ],
@@ -259,9 +259,9 @@
       ],
       "description": "Ultra kompaktní jednotka země–voda s přírodním chladivem R290 a integrovaným nerezovým zásobníkem TUV 150 litrů. Zabere pouze 0,3 m² podlahové plochy. Max. teplota topné vody 75 °C, ochrana proti legionelle bez dohřívání.",
       "features": [
-        "přírodní chladivo R290 (propan) — GWP = 3",
+        "přírodní chladivo R290 (propan) – GWP = 3",
         "all-in-one s integrovaným nerezovým bojlerem 150 l",
-        "minimální nároky na prostor — pouze 0,3 m²",
+        "minimální nároky na prostor – pouze 0,3 m²",
         "online 24/7 monitoring a chytrá domácnost"
       ],
       "products": [
@@ -286,7 +286,7 @@
   },
   "cta": {
     "headline": "Nevíte, který model vybrat?",
-    "text": "Pomůžeme vám vybrat správný výkon i typ — zdarma.",
+    "text": "Pomůžeme vám vybrat správný výkon i typ – zdarma.",
     "button": "Odeslat poptávku",
     "href": "/poptavka"
   }

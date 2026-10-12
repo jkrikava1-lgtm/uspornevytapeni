@@ -1,17 +1,17 @@
 {
   "radik_title": "Jaký výkon má který radiátor",
-  "radik_intro": "Tabulka platí pro deskové radiátory KORADO RADIK KLASIK, které jsou v českých domech nejrozšířenější. Čísla jsou tepelné výkony ve wattech při teplotním spádu 55/45 °C a teplotě v místnosti 20 °C — tedy přesně v režimu, ve kterém pracuje tepelné čerpadlo.",
+  "radik_intro": "Tabulka platí pro deskové radiátory KORADO RADIK KLASIK, které jsou v českých domech nejrozšířenější. Čísla jsou tepelné výkony ve wattech při teplotním spádu 55/45 °C a teplotě v místnosti 20 °C – tedy přesně v režimu, ve kterém pracuje tepelné čerpadlo.",
   "radik_vstup_label": "Tepelná ztráta místnosti",
   "radik_vstup_hint": "Zadejte watty a tabulka zvýrazní rozměry, které místnost utopí.",
   "radik_vstup_placeholder": "např. 800",
   "radik_reset": "Zrušit",
   "radik_vysledek_ok": "Zvýrazněné rozměry pokryjí {W} W. Najděte si řádek s výškou, která se vám vejde pod okno, a odečtěte potřebnou délku.",
-  "radik_vysledek_nic": "Žádný rozměr tohoto typu nedá {W} W. Zkuste vyšší typ — nebo do místnosti přidejte druhý radiátor.",
+  "radik_vysledek_nic": "Žádný rozměr tohoto typu nedá {W} W. Zkuste vyšší typ – nebo do místnosti přidejte druhý radiátor.",
   "radik_hlavicka_delka": "Délka",
   "radik_hlavicka_vyska": "Výška [mm]",
   "radik_pozn_title": "Pozor na teplotu topné vody",
   "radik_pozn_text": "Hodnoty platí pro spád 55/45 °C podle ČSN EN 442. Čím níž teplotu topné vody stáhnete, tím levněji čerpadlo topí.",
-  "radik_zdroj": "Zdroj: KORADO, a.s. — technický list RADIK KLASIK (CZ ODT 5.01-01/16 M). Tepelné výkony podle EN 442.",
+  "radik_zdroj": "Zdroj: KORADO, a.s. – technický list RADIK KLASIK (CZ ODT 5.01-01/16 M). Tepelné výkony podle EN 442.",
   "radik_vysky": [
     200,
     300,
@@ -60,7 +60,7 @@
     {
       "id": "20",
       "popis": "2 desky, bez žeber",
-      "poznamka": "Dvě desky bez žeber — hladký vzhled, střední výkon.",
+      "poznamka": "Dvě desky bez žeber – hladký vzhled, střední výkon.",
       "hloubka": 66,
       "obr_w": 1879,
       "obr_h": 248
@@ -84,7 +84,7 @@
     {
       "id": "33",
       "popis": "3 desky + 3 řady žeber",
-      "poznamka": "Největší výkon při stejné výšce i délce — časté řešení při přechodu na tepelné čerpadlo.",
+      "poznamka": "Největší výkon při stejné výšce i délce – časté řešení při přechodu na tepelné čerpadlo.",
       "hloubka": 155,
       "obr_w": 1811,
       "obr_h": 440
@@ -972,7 +972,7 @@
   "radik_rez_popis": "Vodorovný řez tělesem, kóta udává hloubku v mm.",
   "radik_kresba_zdroj": "Kresba: KORADO, a.s., katalog RADIK.",
   "odhad_summary": "Neznáte tepelnou ztrátu? Odhadněte ji z rozměrů místnosti",
-  "odhad_intro": "Vynásobte objem místnosti podle toho, jak je dům zateplený. Je to hrubý odhad pro představu — přesné číslo dá až výpočet tepelné ztráty od projektanta.",
+  "odhad_intro": "Vynásobte objem místnosti podle toho, jak je dům zateplený. Je to hrubý odhad pro představu – přesné číslo dá až výpočet tepelné ztráty od projektanta.",
   "odhad_vyska": "Výška",
   "odhad_sirka": "Šířka",
   "odhad_delka": "Délka",

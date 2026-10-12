@@ -8,7 +8,7 @@ interface Props {
   breadcrumbs?: { label: string; href: string }[];
   /** Dopadové stránky (PPC): jen logo + telefon + CTA. Čím míň odboček, tím víc poptávek. */
   simpleNav?: boolean;
-  /** Cíl hlavního CTA v hlavičce — u LP kotva na formulář na stránce. */
+  /** Cíl hlavního CTA v hlavičce – u LP kotva na formulář na stránce. */
   ctaHref?: string;
   /** Firemní podpis za titulkem. Zkrácený, aby se titulek vešel do výpisu
    *  Googlu (~60 znaků). Stránky s domluveným zněním titulku posílají site.name. */
@@ -28,7 +28,7 @@ const breadcrumbSchema = breadcrumbs ? {
 const canonicalURL = new URL(Astro.url.pathname, 'https://uspornevytapeni.cz');
 
 /* Postranní výzva k poptávce.
-   Neukazuje se tam, kde už člověk převádí nebo kde je vlastní formulář —
+   Neukazuje se tam, kde už člověk převádí nebo kde je vlastní formulář –
    překrývala by ho a nemá co nabídnout navíc. */
 const cestaBezLomitka = Astro.url.pathname.replace(/\/$/, '');
 const skrytBocniCTA = simpleNav || ['/poptavka', '/cenova-kalkulace', '/kontakty'].includes(cestaBezLomitka);
@@ -121,7 +121,7 @@ const navGroups = [
       "sameAs": ["https://share.google/66F7YjcrxXkEXskH6", "https://www.firmy.cz/detail/2538489-usporne-vytapeni-s-r-o-tepelna-cerpadla-jicin-valdicke-predmesti.html"]
     })} />
     {breadcrumbSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
-    <!-- Consent Mode v2 — musí být synchronní a PŘED načtením gtag.js -->
+    <!-- Consent Mode v2 – musí být synchronní a PŘED načtením gtag.js -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){ dataLayer.push(arguments); }
@@ -199,7 +199,7 @@ const navGroups = [
       })();
     </script>
     <!-- gtag.js se načítá VŽDY; bez souhlasu neukládá nic a posílá jen anonymní signál.
-         Výjimkou je vyloučení vlastních návštěv (?bez-mereni=1) — tam se
+         Výjimkou je vyloučení vlastních návštěv (?bez-mereni=1) – tam se
          nenačítá vůbec. Samotný přepínač ga-disable-* totiž umlčí GA4, ale
          NE reklamní tag: ten i tak odešle remarketingový zásah do Google Ads.
          Jediné spolehlivé řešení je gtag.js vůbec nespustit. -->
@@ -215,7 +215,7 @@ const navGroups = [
         gtag('config', 'AW-1019513575');
       });
     </script>
-    <!-- Google Tag Manager — načítá se po load, consent defaults jsou v dataLayer výš -->
+    <!-- Google Tag Manager – načítá se po load, consent defaults jsou v dataLayer výš -->
     <script is:inline>
       window.addEventListener('load', function () {
         if (window.uvBezMereni && window.uvBezMereni()) return;
@@ -233,7 +233,7 @@ const navGroups = [
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9PGNXHG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- ═══ Cookie lišta — první vrstva (přijmout / odmítnout rovnocenně) ═══ -->
+    <!-- ═══ Cookie lišta – první vrstva (přijmout / odmítnout rovnocenně) ═══ -->
     <div id="cookie-banner" class="fixed inset-0 z-[100] hidden">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
       <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-md bg-white border border-gray-200 rounded-2xl shadow-2xl p-7">
@@ -257,7 +257,7 @@ const navGroups = [
       </div>
     </div>
 
-    <!-- ═══ Cookie lišta — druhá vrstva (nastavení) ═══ -->
+    <!-- ═══ Cookie lišta – druhá vrstva (nastavení) ═══ -->
     <div id="cookie-modal" class="fixed inset-0 z-[200] hidden">
       <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
       <div class="absolute bottom-0 left-0 right-0 sm:bottom-auto sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:w-full sm:max-w-lg bg-white border border-gray-200 sm:rounded-xl shadow-2xl p-6">
@@ -384,7 +384,7 @@ const navGroups = [
         on('cookie-save',     function () { window.saveConsent(isOn('analytics'), isOn('marketing')); });
         on('cookie-settings', window.openCookieSettings);
 
-        // Zavření klikem mimo se nepočítá jako souhlas — lišta se vrátí.
+        // Zavření klikem mimo se nepočítá jako souhlas – lišta se vrátí.
         if (modal) {
           modal.addEventListener('click', function (e) {
             if (e.target === this || e.target === this.firstElementChild) {
@@ -398,7 +398,7 @@ const navGroups = [
       })();
     </script>
 
-    <!-- Měřicí kód Seznamu (Sklik) — načítá se po page load, souhlas se předává parametrem consent -->
+    <!-- Měřicí kód Seznamu (Sklik) – načítá se po page load, souhlas se předává parametrem consent -->
     <script is:inline>
       window.addEventListener('load', function () {
         if (window.uvBezMereni && window.uvBezMereni()) return;
@@ -409,7 +409,7 @@ const navGroups = [
       });
     </script>
 
-    <!-- ═══ Měřicí modul — všechny události chodí přes uvTrack() ═══ -->
+    <!-- ═══ Měřicí modul – všechny události chodí přes uvTrack() ═══ -->
     <script is:inline>
     (function () {
       var ADS_ID       = 'AW-1019513575';
@@ -439,7 +439,7 @@ const navGroups = [
       }
       window.uvNormalizePhone = normalizePhone;
 
-      // rc.js se načítá s defer, při rychlé akci nemusí být hotový — krátce počkáme (max 3 s)
+      // rc.js se načítá s defer, při rychlé akci nemusí být hotový – krátce počkáme (max 3 s)
       function sklikConversion(id, hodnota, userData) {
         var pokus = 0;
         (function odesli() {
@@ -524,7 +524,7 @@ const navGroups = [
 
     /* ── Microsoft Clarity ──────────────────────────────────────────────
        Nahrávky relací a mapy rolování. Spadá do kategorie „analytika",
-       takže se načte teprve po souhlasu — nikdy dřív. Když návštěvník
+       takže se načte teprve po souhlasu – nikdy dřív. Když návštěvník
        souhlas udělí až dodatečně přes lištu, chytneme to na události
        uv-consent-updated a Clarity doplníme za běhu.
        Maskování vstupních polí řeší Clarity ve výchozím nastavení; je
@@ -589,7 +589,7 @@ const navGroups = [
           </a>
           <div class="flex items-center gap-1.5">
             <!-- Telefon: na mobilu jediná cesta k hovoru odkudkoli ze stránky.
-                 Klik se měří automaticky — Layout odchytává všechny tel: odkazy. -->
+                 Klik se měří automaticky – Layout odchytává všechny tel: odkazy. -->
             <a href={site.phone_href} data-place="hlavicka-mobil" aria-label={`Zavolat ${site.phone}`}
                class="hidden min-[360px]:inline-flex items-center justify-center w-9 h-9 flex-shrink-0 border border-gray-200 text-brand-500 hover:bg-brand-50 hover:border-brand-200 rounded-lg transition-colors">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -841,10 +841,10 @@ const navGroups = [
     </script>
 
     <!--
-      Vercel Speed Insights — měří Core Web Vitals u skutečných návštěvníků.
+      Vercel Speed Insights – měří Core Web Vitals u skutečných návštěvníků.
       Skript servíruje sám Vercel z /_vercel/, takže projde i přes CSP
       default-src 'self' a nepřidává žádnou závislost do package.json.
-      Balíček @vercel/speed-insights schválně nepoužíváme — jeho peer
+      Balíček @vercel/speed-insights schválně nepoužíváme – jeho peer
       závislosti počítají s Reactem, Vue nebo Svelte, Astro mezi nimi není.
       Data se začnou sbírat, až se Speed Insights zapne i v projektu na Vercelu.
     -->
@@ -871,7 +871,7 @@ const navGroups = [
     </script>
 
     {!skrytBocniCTA && (
-      <!-- Postranní výzva — jen desktop. Na mobilu má tutéž roli tlačítko
+      <!-- Postranní výzva – jen desktop. Na mobilu má tutéž roli tlačítko
            v lepivé hlavičce, kde je i telefon. -->
       <a href="/poptavka" data-place="bocni-ousko"
          class="group fixed right-0 top-[35%] z-40 hidden lg:flex items-center gap-2.5 pl-4 pr-2.5 py-3 bg-white/20 hover:bg-white/40 backdrop-blur-md backdrop-saturate-150 border border-r-0 border-white/30 text-navy-900 rounded-l-lg shadow-md transition-all duration-300 text-[13px] font-bold whitespace-nowrap">

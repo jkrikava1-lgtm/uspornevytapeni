@@ -1,13 +1,13 @@
 ---
 // Řez skladbou podlahy s podlahovým topením. Kreslíme to, protože krok 2 na
-// stránce má šest vrstev s tloušťkami natlačených do jedné věty — a návštěvník
+// stránce má šest vrstev s tloušťkami natlačených do jedné věty – a návštěvník
 // řeší hlavně to, kolik mu podlahovka sebere z výšky místnosti.
 // Tloušťky jsou z textu stránky (data/podlahove-topeni-starsi-dum.json).
 
 interface Vrstva {
   nazev: string;
-  vysoka: number; // cm — varianta polystyren + beton
-  nizka: number; // cm — varianta polyuretan + anhydrit
+  vysoka: number; // cm – varianta polystyren + beton
+  nizka: number; // cm – varianta polyuretan + anhydrit
   barva: string;
   popis_vysoka?: string;
   popis_nizka?: string;
@@ -37,7 +37,7 @@ const vrstvy: Vrstva[] = [
   { nazev: 'Hydroizolace', vysoka: 1, nizka: 1, barva: '#2f2f2f' },
 ];
 
-const MERITKO = 11; // px na centimetr — obě varianty musí mít stejné, jinak rozdíl výšek nic neřekne
+const MERITKO = 11; // px na centimetr – obě varianty musí mít stejné, jinak rozdíl výšek nic neřekne
 const SIRKA = 118;
 const KOTA = 46; // místo vlevo na kótu
 const OKRAJ = 8;
@@ -121,7 +121,7 @@ const cm = (n: number) => String(n).replace('.', ',');
       ))}
     </div>
 
-    {/* legenda — názvy vrstev se do kresby nevejdou, tenké vrstvy mají 1 cm */}
+    {/* legenda – názvy vrstev se do kresby nevejdou, tenké vrstvy mají 1 cm */}
     <ul class="mt-7 space-y-2 border-t border-gray-100 pt-5">
       {vrstvy.map(v => (
         <li class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
@@ -146,7 +146,7 @@ const cm = (n: number) => String(n).replace('.', ',');
 
   <figcaption class="mt-2.5 text-sm text-charcoal-500">
     Obě varianty jsou ve stejném měřítku, kresleny středními hodnotami z uvedených rozsahů. Polyuretan místo
-    polystyrenu ušetří 4 cm, anhydrit místo betonu další 2 cm — dohromady 6 cm, což při nízkých prazích nebo
+    polystyrenu ušetří 4 cm, anhydrit místo betonu další 2 cm – dohromady 6 cm, což při nízkých prazích nebo
     schodech často rozhoduje o tom, jestli je zákrok průchodný.
   </figcaption>
 </figure>

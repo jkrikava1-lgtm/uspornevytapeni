@@ -5,7 +5,7 @@ const vysky = data.radik_vysky;
 const delky = data.radik_delky;
 const vychozi = data.radik_vychozi;
 
-// Mezera po tisících jako pevná — číslo se nesmí zlomit na konec řádku.
+// Mezera po tisících jako pevná – číslo se nesmí zlomit na konec řádku.
 const cislo = (v: number | null) => (v == null ? '–' : String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ' '));
 
 const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)[vychozi];
@@ -21,7 +21,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
         data-typ={t.id}
         data-poznamka={t.poznamka}
         aria-pressed={t.id === vychozi ? 'true' : 'false'}
-        data-note={`${t.popis} · ${data.radik_hloubka_label} ${t.hloubka} mm — ${t.poznamka}`}
+        data-note={`${t.popis} · ${data.radik_hloubka_label} ${t.hloubka} mm – ${t.poznamka}`}
         class="radik-tab flex-1 min-w-[88px] rounded-lg border px-3 py-2.5 text-center transition-colors"
       >
         <span class="block text-sm font-bold leading-none">Typ {t.id}</span>
@@ -37,7 +37,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
         width={t.obr_w}
         height={t.obr_h}
         loading={t.id === vychozi ? 'eager' : 'lazy'}
-        alt={`Vodorovný řez otopným tělesem RADIK KLASIK typ ${t.id} — ${t.popis}, hloubka ${t.hloubka} mm`}
+        alt={`Vodorovný řez otopným tělesem RADIK KLASIK typ ${t.id} – ${t.popis}, hloubka ${t.hloubka} mm`}
         data-radik-obr={t.id}
         class:list={['w-full', t.id === vychozi ? '' : 'hidden']}
       />
@@ -50,7 +50,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
   <p class="mt-3 text-sm text-charcoal-500" data-radik-poznamka>
     {(() => {
       const t = data.radik_typy.find(x => x.id === vychozi)!;
-      return `${t.popis} · ${data.radik_hloubka_label} ${t.hloubka} mm — ${t.poznamka}`;
+      return `${t.popis} · ${data.radik_hloubka_label} ${t.hloubka} mm – ${t.poznamka}`;
     })()}
   </p>
 
@@ -84,7 +84,7 @@ const vychoziVykony = (data.radik_vykony as Record<string, (number | null)[][]>)
     </div>
     <p id="radik-vysledek" aria-live="polite" class="mt-2 text-sm text-charcoal-500" data-radik-vysledek>{data.radik_vstup_hint}</p>
 
-    {/* Odhad ztráty z objemu — pro ty, kdo výpočet od projektanta nemají */}
+    {/* Odhad ztráty z objemu – pro ty, kdo výpočet od projektanta nemají */}
     <details class="mt-4 border-t border-gray-200 pt-4" data-odhad>
       <summary class="cursor-pointer text-sm font-semibold text-brand-500 hover:text-brand-600">
         {data.odhad_summary}

@@ -1,7 +1,7 @@
 {
   "meta_title": "Tepelná čerpadla pro rodinné domy",
-  "meta_description": "Navrhujeme tepelná čerpadla na míru — vzduch-voda od 334 000 Kč. S dotací NZÚ výrazně levněji. Autorizovaný partner Master Therm. Bezplatná konzultace.",
-  "hero_badge": "Dodáváme tepelná čerpadla Master Therm — česká výroba od roku 1994",
+  "meta_description": "Navrhujeme tepelná čerpadla na míru – vzduch-voda od 334 000 Kč. S dotací NZÚ výrazně levněji. Autorizovaný partner Master Therm. Bezplatná konzultace.",
+  "hero_badge": "Dodáváme tepelná čerpadla Master Therm – česká výroba od roku 1994",
   "hero_h1_line1": "Tepelná čerpadla a vytápění",
   "hero_h1_highlight": "řešíme každý den",
   "hero_h1_line3": "Smysluplný systém navrhneme i vám",
@@ -18,12 +18,12 @@
     {
       "src": "/images/hero/boxairy-strecha.webp",
       "label": "Tepelná čerpadla vzduch-voda",
-      "desc": "BoxAir Inverter — spolehlivý provoz na střeše i u domu"
+      "desc": "BoxAir Inverter – spolehlivý provoz na střeše i u domu"
     },
     {
       "src": "/images/hero/boxair-snezka.webp",
       "label": "Vytápění i v drsných podmínkách",
-      "desc": "BoxAir s výhledem na Sněžku — topí spolehlivě i na horách: 1040 m n. m."
+      "desc": "BoxAir s výhledem na Sněžku – topí spolehlivě i na horách: 1040 m n. m."
     }
   ],
   "stat1_number": "40+",
@@ -42,7 +42,7 @@
   "card1_href": "/navrh-reseni/stavajici-dum",
   "card1_img": "/images/hero/stary-kotel.webp",
   "card2_title": "Stavím nový dům",
-  "card2_desc": "Navrhneme optimální systém vytápění pro vaši novostavbu — tepelné čerpadlo, podlahové vytápění i chlazení v jednom.",
+  "card2_desc": "Navrhneme optimální systém vytápění pro vaši novostavbu – tepelné čerpadlo, podlahové vytápění i chlazení v jednom.",
   "card2_href": "/navrh-reseni/novostavba",
   "card2_img": "/images/hero/novostavba-vizual.webp",
   "card3_title": "Potřebuji velký výkon",
@@ -141,11 +141,11 @@
     },
     {
       "title": "Master Therm",
-      "desc": "Jsme autorizovaný partner firmy Master Therm — vyrábí česká tepelná čerpadla s mezinárodním oceněním."
+      "desc": "Jsme autorizovaný partner firmy Master Therm – vyrábí česká tepelná čerpadla s mezinárodním oceněním."
     },
     {
       "title": "Servis od výrobce",
-      "desc": "Servis zajišťujeme přímo — bez prostředníků, bez čekání. Rychlá odezva a náhradní díly skladem."
+      "desc": "Servis zajišťujeme přímo – bez prostředníků, bez čekání. Rychlá odezva a náhradní díly skladem."
     },
     {
       "title": "Podpora po celou dobu",
@@ -154,10 +154,10 @@
   ],
   "testimonial_text": "Firma Úsporné vytápění s.r.o. nám místo elektrokotle namontovala tepelné čerpadlo vzduch-voda Master Therm. Provoz je jednoduchý, bezproblémový a hlavně o dvě třetiny levnější. S jejich prací jsme velmi spokojeni.",
   "testimonial_name": "Roman Vojtek",
-  "testimonial_location": "Praha — tepelné čerpadlo vzduch-voda",
+  "testimonial_location": "Praha – tepelné čerpadlo vzduch-voda",
   "dotace_label": "Nová zelená úsporám",
   "dotace_headline": "Získejte dotaci",
-  "dotace_text": "Pomůžeme vám s celým procesem žádosti — od poradenství po schválení.",
+  "dotace_text": "Pomůžeme vám s celým procesem žádosti – od poradenství po schválení.",
   "dotace_cta": "Zjistit nárok na dotaci",
   "cta_headline": "Připraveni začít?",
   "cta_text": "Zavolejte nám nebo vyplňte poptávkový formulář. Konzultace je zdarma, bez závazků.",

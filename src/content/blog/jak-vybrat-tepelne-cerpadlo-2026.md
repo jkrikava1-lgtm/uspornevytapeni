@@ -17,7 +17,7 @@ image: "/images/hero/boxairy-strecha.webp"
 
 ## Vzduch-voda
 
-Odebírá teplo z venkovního vzduchu. Funguje do −20 °C. **Nejrychlejší instalace, žádné zemní práce** — proto je to nejčastější volba.
+Odebírá teplo z venkovního vzduchu. Funguje do −20 °C. **Nejrychlejší instalace, žádné zemní práce** – proto je to nejčastější volba.
 
 ## Země-voda
 
@@ -29,4 +29,4 @@ Nejvyšší COP ze všech typů. Podmínka: dvě studny a hydrogeologický průz
 
 ---
 
-Správný typ vždy doporučujeme po konzultaci — záleží na domě, pozemku a topném systému. [Poptávka je zdarma](/poptavka).
+Správný typ vždy doporučujeme po konzultaci – záleží na domě, pozemku a topném systému. [Poptávka je zdarma](/poptavka).

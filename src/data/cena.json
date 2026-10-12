@@ -1,14 +1,14 @@
 {
-  "meta_title": "Cena tepelného čerpadla včetně montáže — od 334 000 Kč",
-  "meta_description": "Kolik stojí tepelné čerpadlo včetně montáže? Vzduch-voda od 334 000 Kč, země-voda od 429 000 Kč — cena na klíč včetně dodávky a uvedení do provozu.",
+  "meta_title": "Cena tepelného čerpadla včetně montáže – od 334 000 Kč",
+  "meta_description": "Kolik stojí tepelné čerpadlo včetně montáže? Vzduch-voda od 334 000 Kč, země-voda od 429 000 Kč – cena na klíč včetně dodávky a uvedení do provozu.",
   "hero_title": "Cena tepelného čerpadla",
-  "hero_subtitle": "Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat — přesnou nabídku připravíme zdarma.",
+  "hero_subtitle": "Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat – přesnou nabídku připravíme zdarma.",
   "intro_headline": "Cena systému, ne jen čerpadla",
-  "intro_text": "Nemluvme o ceně tepelného čerpadla, ale o <strong>ceně systému s tepelným čerpadlem</strong>. Cena zahrnuje kompletní realizaci „na klíč“ — dodávku, montáž, zapojení, uvedení do provozu a zaškolení. Každý dům je jiný, proto cenu stanovujeme vždy individuálně.",
+  "intro_text": "Nemluvme o ceně tepelného čerpadla, ale o <strong>ceně systému s tepelným čerpadlem</strong>. Cena zahrnuje kompletní realizaci „na klíč“ – dodávku, montáž, zapojení, uvedení do provozu a zaškolení. Každý dům je jiný, proto cenu stanovujeme vždy individuálně.",
   "intro_highlight": "Nejlepší poměr cena/výkon nabízí tepelné čerpadlo <strong>vzduch-voda</strong>. Pořizovací cena je nejnižší ze všech typů, díky dlouhé topné sezóně v Česku je provoz velmi ekonomický a průměrný topný faktor (COP) je 3,3.",
   "modely_label": "Modelové příklady",
   "modely_headline": "Kolik stojí tepelné čerpadlo vzduch-voda u domu jako je ten váš",
-  "modely_lead": "Nejčastější situace z našich realizací. Slouží k představě — přesnou cenu určí návrh podle tepelné ztráty vašeho domu.",
+  "modely_lead": "Nejčastější situace z našich realizací. Slouží k představě – přesnou cenu určí návrh podle tepelné ztráty vašeho domu.",
   "modely": [
     {
       "plocha": "cca 120 m²",
@@ -38,19 +38,19 @@
       "poznamka": ""
     }
   ],
-  "modely_note": "Ceny jsou na klíč — dodávka, montáž, zásobník teplé vody, zapojení a uvedení do provozu. Nezahrnují dotaci, o kterou lze cenu ještě snížit.",
+  "modely_note": "Ceny jsou na klíč – dodávka, montáž, zásobník teplé vody, zapojení a uvedení do provozu. Nezahrnují dotaci, o kterou lze cenu ještě snížit.",
   "typy_label": "Cena podle typu",
   "typy_headline": "Kolik stojí jednotlivé typy tepelných čerpadel",
-  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduchu odpadají zemní práce, u vody a země je v ceně i zdroj — vrty, kolektor nebo studny. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
+  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduchu odpadají zemní práce, u vody a země je v ceně i zdroj – vrty, kolektor nebo studny. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
   "typy": [
     {
       "typ": "Vzduch – voda",
       "anchor": "cena-vzduch-voda",
       "cena": "od 334 000 Kč",
-      "text": "Nejčastější volba, vhodná zhruba pro 95 % domácností. Teplo odebírá z venkovního vzduchu, takže nepotřebuje vrty ani zemní práce — instalace je tím pádem nejrychlejší i nejlevnější ze všech typů.",
+      "text": "Nejčastější volba, vhodná zhruba pro 95 % domácností. Teplo odebírá z venkovního vzduchu, takže nepotřebuje vrty ani zemní práce – instalace je tím pádem nejrychlejší i nejlevnější ze všech typů.",
       "ovlivnuje": [
         "Výkon čerpadla podle tepelné ztráty domu",
-        "Stav otopné soustavy — jestli radiátory zůstanou, nebo se mění",
+        "Stav otopné soustavy – jestli radiátory zůstanou, nebo se mění",
         "Způsob přípravy teplé vody (zásobník, desuperheater, průtokový ohřev)",
         "Elektroinstalace: jistič, tarif, případně posílení přípojky"
       ],
@@ -67,7 +67,7 @@
       "typ": "Voda – voda",
       "anchor": "cena-voda-voda",
       "cena": "od 379 000 Kč",
-      "text": "Nejvyšší účinnost ze všech typů — čerpá teplo z podzemní vody, která má přes celý rok stálou teplotu. Podmínkou je vydatný zdroj vody. Cenu nejvíc rozhýbe hydrogeologický průzkum a provedení studní.",
+      "text": "Nejvyšší účinnost ze všech typů – čerpá teplo z podzemní vody, která má přes celý rok stálou teplotu. Podmínkou je vydatný zdroj vody. Cenu nejvíc rozhýbe hydrogeologický průzkum a provedení studní.",
       "ovlivnuje": [
         "Výsledek hydrogeologického průzkumu",
         "Hloubka a vydatnost čerpací a vsakovací studny",
@@ -86,7 +86,7 @@
       "typ": "Země – voda",
       "anchor": "cena-zeme-voda",
       "cena": "od 429 000 Kč",
-      "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V ceně je i zdroj tepla — hloubkové vrty nebo plošný zemní kolektor — a právě proto je pořizovací cena nejvyšší. V létě systém umí úsporně chladit.",
+      "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V ceně je i zdroj tepla – hloubkové vrty nebo plošný zemní kolektor – a právě proto je pořizovací cena nejvyšší. V létě systém umí úsporně chladit.",
       "ovlivnuje": [
         "Počet a hloubka vrtů, nebo plocha zemního kolektoru",
         "Geologické podmínky pozemku a dostupnost vrtné techniky",
@@ -102,15 +102,15 @@
       "detail_href": "/tepelna-cerpadla/zeme-voda"
     }
   ],
-  "typy_note": "Uvedený topný faktor je průměr za topnou sezónu, se kterým počítáme i v porovnání nákladů. Maxima jednotlivých modelů z technických listů najdete v katalogu. Konkrétní model i cenu určí návrh podle tepelné ztráty vašeho domu — proto děláme nabídky individuálně a zdarma.",
+  "typy_note": "Uvedený topný faktor je průměr za topnou sezónu, se kterým počítáme i v porovnání nákladů. Maxima jednotlivých modelů z technických listů najdete v katalogu. Konkrétní model i cenu určí návrh podle tepelné ztráty vašeho domu – proto děláme nabídky individuálně a zdarma.",
   "typy_cta": "Spočítat orientační cenu",
   "factors_headline": "Co ovlivňuje výslednou cenu?",
   "factor1_title": "Výkon čerpadla",
   "factor1_desc": "Závisí na ploše, zateplení a tepelných ztrátách objektu. Správné dimenzování = nižší provozní náklady.",
   "factor2_title": "Stávající otopná soustava",
-  "factor2_desc": "Zachování radiátorů vs. nové podlahové vytápění — každá varianta má jinou cenu a účinnost.",
+  "factor2_desc": "Zachování radiátorů vs. nové podlahové vytápění – každá varianta má jinou cenu a účinnost.",
   "factor3_title": "Příprava TUV",
-  "factor3_desc": "Zásobník teplé vody, desuperheater nebo průtokový ohřev — různé investice s různou návratností.",
+  "factor3_desc": "Zásobník teplé vody, desuperheater nebo průtokový ohřev – různé investice s různou návratností.",
   "factor4_title": "Elektroinstalace",
   "factor4_desc": "Jistič, HDO tarif, případně posílení přípojky. Zajistíme vše koordinovaně.",
   "roi_label": "Návratnost investice",
@@ -125,27 +125,27 @@
   "roi_net": "od 0 Kč",
   "roi_payback_label": "Návratnost",
   "roi_payback": "5,6 roku",
-  "roi_footnote": "* Vychází z našeho <a href=\"/porovnani-nakladu\">porovnání nákladů na vytápění</a> — rodinný dům s tepelnou ztrátou 13 kW, čtyřčlenná rodina, celková potřeba 31 191 kWh/rok. Provoz tepelného čerpadla vyjde na 37 000 Kč ročně, elektrokotel na 106 000 Kč. Proti plynovému kotli (65 000 Kč) je úspora 28 000 Kč ročně a návratnost kolem čtrnácti let. Bezúročný úvěr NZÚ pokryje celou instalaci — splácíte jen jistinu, stát hradí úroky (RPSN 0 %).",
+  "roi_footnote": "* Vychází z našeho <a href=\"/porovnani-nakladu\">porovnání nákladů na vytápění</a> – rodinný dům s tepelnou ztrátou 13 kW, čtyřčlenná rodina, celková potřeba 31 191 kWh/rok. Provoz tepelného čerpadla vyjde na 37 000 Kč ročně, elektrokotel na 106 000 Kč. Proti plynovému kotli (65 000 Kč) je úspora 28 000 Kč ročně a návratnost kolem čtrnácti let. Bezúročný úvěr NZÚ pokryje celou instalaci – splácíte jen jistinu, stát hradí úroky (RPSN 0 %).",
   "tools_headline": "Užitečné nástroje",
   "tool1_title": "Cenová kalkulace",
   "tool1_desc": "Odpovězte na 6 otázek a do 24 hodin vám zašleme návrh systému i orientační cenu.",
   "tool1_cta": "Spočítat cenu",
   "tool2_title": "Porovnání nákladů",
-  "tool2_desc": "Srovnání ročních nákladů — tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.",
+  "tool2_desc": "Srovnání ročních nákladů – tepelné čerpadlo vs. plyn vs. elektřina vs. tuhá paliva.",
   "tool2_cta": "Porovnat náklady",
   "faq_headline": "Časté dotazy k ceně tepelného čerpadla",
   "faq": [
     {
       "q": "Kolik stojí tepelné čerpadlo?",
-      "a": "Záleží na typu a výkonu. Vzduch-voda stojí od 334 000 Kč, voda-voda od 379 000 Kč a země-voda od 429 000 Kč. Všechny ceny jsou na klíč — zahrnují dodávku čerpadla, zásobník teplé vody, montáž, elektroinstalaci a uvedení do provozu. Přesnou cenu určí tepelná ztráta vašeho domu — podle ní navrhneme konkrétní model a připravíme nabídku."
+      "a": "Záleží na typu a výkonu. Vzduch-voda stojí od 334 000 Kč, voda-voda od 379 000 Kč a země-voda od 429 000 Kč. Všechny ceny jsou na klíč – zahrnují dodávku čerpadla, zásobník teplé vody, montáž, elektroinstalaci a uvedení do provozu. Přesnou cenu určí tepelná ztráta vašeho domu – podle ní navrhneme konkrétní model a připravíme nabídku."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo vzduch-voda?",
-      "a": "Kompletní instalace tepelného čerpadla vzduch-voda začíná od 334 000 Kč. Cena zahrnuje čerpadlo Master Therm BoxAir, zásobník TUV, montáž, elektroinstalaci a uvedení do provozu. Vzduch-voda je nejčastější volba — hodí se pro 95 % domů a instalace nevyžaduje vrty ani zemní práce."
+      "a": "Kompletní instalace tepelného čerpadla vzduch-voda začíná od 334 000 Kč. Cena zahrnuje čerpadlo Master Therm BoxAir, zásobník TUV, montáž, elektroinstalaci a uvedení do provozu. Vzduch-voda je nejčastější volba – hodí se pro 95 % domů a instalace nevyžaduje vrty ani zemní práce."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s vrty (země-voda)?",
-      "a": "Tepelné čerpadlo země-voda vychází od 429 000 Kč. Cena zahrnuje i hloubkové vrty nebo plošný zemní kolektor. Provozní náklady jsou ze všech typů nejnižší — průměrný topný faktor (COP) 4,3. Systém navíc v létě umí úsporně chladit."
+      "a": "Tepelné čerpadlo země-voda vychází od 429 000 Kč. Cena zahrnuje i hloubkové vrty nebo plošný zemní kolektor. Provozní náklady jsou ze všech typů nejnižší – průměrný topný faktor (COP) 4,3. Systém navíc v létě umí úsporně chladit."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s montáží?",
@@ -153,7 +153,7 @@
     },
     {
       "q": "Lze cenu snížit dotací?",
-      "a": "Ano. Bezúročný úvěr NZÚ (RPSN 0 %) pokryje až 350 000 Kč u vzduch-voda nebo 400 000 Kč u země-voda — splácíte pouze jistinu, stát platí úroky. Zranitelné domácnosti mohou čerpat přímou dotaci NZÚ Light až 150 000 Kč, kterou není třeba vracet. Instalaci tak lze pořídit s vlastními prostředky od 0 Kč."
+      "a": "Ano. Bezúročný úvěr NZÚ (RPSN 0 %) pokryje až 350 000 Kč u vzduch-voda nebo 400 000 Kč u země-voda – splácíte pouze jistinu, stát platí úroky. Zranitelné domácnosti mohou čerpat přímou dotaci NZÚ Light až 150 000 Kč, kterou není třeba vracet. Instalaci tak lze pořídit s vlastními prostředky od 0 Kč."
     },
     {
       "q": "Jaká je návratnost investice do tepelného čerpadla?",
@@ -165,6 +165,6 @@
     }
   ],
   "cta_headline": "Chcete přesnou nabídku?",
-  "cta_text": "Připravíme individuální kalkulaci zdarma — včetně odhadu provozních nákladů a dotačních možností.",
+  "cta_text": "Připravíme individuální kalkulaci zdarma – včetně odhadu provozních nákladů a dotačních možností.",
   "cta_button": "Chci bezplatnou kalkulaci"
 }

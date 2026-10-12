@@ -17,8 +17,8 @@
   "label_objekt": "Typ objektu",
   "placeholder_objekt": "Vyberte typ objektu",
   "options_objekt": [
-    "Rodinný dům — novostavba",
-    "Rodinný dům — rekonstrukce",
+    "Rodinný dům – novostavba",
+    "Rodinný dům – rekonstrukce",
     "Bytový dům",
     "Komerční objekt",
     "Jiné"
@@ -30,7 +30,7 @@
     "Elektrický kotel",
     "Kotel na tuhá paliva",
     "Tepelné čerpadlo (výměna)",
-    "Novostavba — zatím nic",
+    "Novostavba – zatím nic",
     "Jiné"
   ],
   "label_zprava": "Zpráva",

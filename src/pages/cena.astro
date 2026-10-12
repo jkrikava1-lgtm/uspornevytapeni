@@ -4,7 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import data from '../data/cena.json';
 import site from '../data/site.json';
 
-// Nejnižší cena pro úvod — počítá se z dat sekce „Kolik stojí jednotlivé typy",
+// Nejnižší cena pro úvod – počítá se z dat sekce „Kolik stojí jednotlivé typy",
 // aby se číslo neudržovalo na dvou místech.
 const cenyTypu = (data.typy ?? [])
   .map((t: any) => ({ text: t.cena as string, hodnota: Number(String(t.cena).replace(/\D/g, '')) }))
@@ -67,7 +67,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
 
   <!-- Co zahrnuje cena montáže -->
 
-  <!-- Cena podle typu — míří na dotazy „cena tepelného čerpadla vzduch voda / země voda / voda voda" -->
+  <!-- Cena podle typu – míří na dotazy „cena tepelného čerpadla vzduch voda / země voda / voda voda" -->
   <section class="py-10 lg:py-14 bg-gray-50">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-brand-500 text-sm font-semibold uppercase tracking-wider mb-3">{data.typy_label}</div>
@@ -141,7 +141,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
     </div>
   </section>
 
-  <!-- Modelové příklady — vykreslí se, až budou v cena.json vyplněné modely -->
+  <!-- Modelové příklady – vykreslí se, až budou v cena.json vyplněné modely -->
   {data.modely && data.modely.length > 0 && (
   <section class="py-10 lg:py-14 border-t border-gray-100">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,7 +189,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
       <p class="text-sm text-charcoal-500 leading-relaxed mt-8 max-w-3xl">{data.modely_note}</p>
       <div class="mt-8 max-w-3xl rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
         <p class="text-charcoal-700 leading-relaxed">
-          <strong class="text-charcoal-900">Žádný z těch domů ale není ten váš.</strong> Přesnou cenu určuje tepelná ztráta vašeho domu. Ozvěte se a do 24 hodin se vám ozveme s návrhem řešení — nezávazně.
+          <strong class="text-charcoal-900">Žádný z těch domů ale není ten váš.</strong> Přesnou cenu určuje tepelná ztráta vašeho domu. Ozvěte se a do 24 hodin se vám ozveme s návrhem řešení – nezávazně.
         </p>
         <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
           <a href="/poptavka" data-place="cena-po-modelech"
@@ -250,7 +250,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
   <section class="py-10 lg:py-14 bg-gray-50">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">Co zahrnuje cena montáže tepelného čerpadla?</h2>
-      <p class="text-charcoal-500 text-sm mb-8">Naše cena je vždy za kompletní realizaci na klíč — žádné skryté náklady.</p>
+      <p class="text-charcoal-500 text-sm mb-8">Naše cena je vždy za kompletní realizaci na klíč – žádné skryté náklady.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {[
           { icon: "M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18", title: "Tepelné čerpadlo", desc: "Dodávka jednotky Master Therm včetně zásobníku TUV a příslušenství." },
@@ -258,7 +258,7 @@ const odCeny = cenyTypu[0]?.text ?? '';
           { icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 4a2 2 0 100 4m0-4a2 2 0 110 4m6-4a2 2 0 100 4m0-4a2 2 0 110 4", title: "Uvedení do provozu", desc: "Nastavení regulace, napojení na otopnou soustavu, první spuštění a seřízení." },
           { icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", title: "Zaškolení", desc: "Obsluhu vás naučíme pracovat s regulací a ovládáním přes mobil." },
           { icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", title: "Dokumentace", desc: "Revizní zpráva, protokol o uvedení do provozu, podklady pro dotaci NZÚ." },
-          { icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z", title: "Online správa", desc: "Internetový modul i přístup do online správy — bez příplatku a bez měsíčních poplatků. Topení ovládáte z mobilu." },
+          { icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z", title: "Online správa", desc: "Internetový modul i přístup do online správy – bez příplatku a bez měsíčních poplatků. Topení ovládáte z mobilu." },
         ].map(item => (
           <div class="flex gap-3 p-5 bg-white rounded-xl border border-gray-200">
             <div class="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5">

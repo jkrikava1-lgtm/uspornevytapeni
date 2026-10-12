@@ -14,7 +14,7 @@
     {
       "href": "/chytre-funkce/fotovoltaika",
       "title": "Spolupráce s fotovoltaikou",
-      "desc": "Tepelné čerpadlo využije přebytky ze solárních panelů — topíte vlastní elektřinou místo ze sítě.",
+      "desc": "Tepelné čerpadlo využije přebytky ze solárních panelů – topíte vlastní elektřinou místo ze sítě.",
       "icon": "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z",
       "icon_img": "/images/ikony/fotovoltaika.webp"
     },
@@ -35,7 +35,7 @@
     {
       "href": "/chytre-funkce/desuperheater",
       "title": "Desuperheater",
-      "desc": "Využití odpadního tepla z kompresoru pro ohřev teplé vody — zdarma jako bonus k vytápění.",
+      "desc": "Využití odpadního tepla z kompresoru pro ohřev teplé vody – zdarma jako bonus k vytápění.",
       "icon": "M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z",
       "icon_img": "/images/ikony/desuperheater.webp"
     }
