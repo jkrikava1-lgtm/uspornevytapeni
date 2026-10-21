@@ -4,6 +4,13 @@ import mt from '../data/mastertherm.json';
 import ref from '../data/reference.json';
 import poptavka from '../data/poptavka.json';
 import site from '../data/site.json';
+import Lightbox from '../components/Lightbox.astro';
+
+// Fotky k realizacím bereme z reference.json podle lokality, ať nejsou cesty
+// k obrázkům na dvou místech a nerozešly se.
+const galerie = new Map<string, string[]>(
+  (ref.references as any[]).map(r => [r.lokalita, r.gallery ?? []])
+);
 
 // Ikony karet - klíč z mastertherm.json → SVG path
 const icons: Record<string, string> = {
@@ -258,8 +265,23 @@ const icons: Record<string, string> = {
       <!-- Vybrané realizace -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {mt.ref_items.map(item => (
-          <div class="bg-white rounded-xl border border-gray-200 overflow-hidden">
-            <img src={item.image} alt={`Instalace ${item.system} - ${item.lokalita}`} class="h-52 w-full object-cover" loading="lazy" width="480" height="320" />
+          <div
+            class:list={["bg-white rounded-xl border border-gray-200 overflow-hidden transition-shadow",
+                         (galerie.get(item.lokalita)?.length ?? 0) > 1 && "cursor-pointer hover:shadow-md js-gallery-card"]}
+            role={(galerie.get(item.lokalita)?.length ?? 0) > 1 ? 'button' : undefined}
+            tabindex={(galerie.get(item.lokalita)?.length ?? 0) > 1 ? 0 : undefined}
+            data-title={`${item.lokalita} - ${item.system}`}
+            data-gallery={JSON.stringify(galerie.get(item.lokalita) ?? [])}
+          >
+            <div class="relative">
+              <img src={item.image} alt={`Instalace ${item.system} - ${item.lokalita}`} class="h-52 w-full object-cover" loading="lazy" width="480" height="320" />
+              {(galerie.get(item.lokalita)?.length ?? 0) > 1 && (
+                <div class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-md flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  {galerie.get(item.lokalita)?.length}
+                </div>
+              )}
+            </div>
             <div class="p-5">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-xs font-bold text-brand-500 uppercase tracking-wider">{item.lokalita}</span>
@@ -546,6 +568,7 @@ const icons: Record<string, string> = {
       });
     })();
   </script>
+  <Lightbox />
 </Layout>
 
 <script>

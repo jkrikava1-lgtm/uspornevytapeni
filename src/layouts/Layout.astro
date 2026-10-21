@@ -28,10 +28,11 @@ const breadcrumbSchema = breadcrumbs ? {
 const canonicalURL = new URL(Astro.url.pathname, 'https://uspornevytapeni.cz');
 
 /* Postranní výzva k poptávce.
-   Neukazuje se tam, kde už člověk převádí nebo kde je vlastní formulář -
-   překrývala by ho a nemá co nabídnout navíc. */
+   Neukazuje se na stránkách, kde člověk už vyplňuje - tam by jen překážela.
+   Na stránkách s vlastním formulářem se ukazuje, ale míří na něj (ctaHref),
+   ne pryč ze stránky. */
 const cestaBezLomitka = Astro.url.pathname.replace(/\/$/, '');
-const skrytBocniCTA = simpleNav || ['/poptavka', '/cenova-kalkulace', '/kontakty'].includes(cestaBezLomitka);
+const skrytBocniCTA = ['/poptavka', '/cenova-kalkulace', '/kontakty'].includes(cestaBezLomitka);
 const ogImage = 'https://uspornevytapeni.cz/images/hero/boxairy-strecha.webp';
 
 const navGroups = [
@@ -873,7 +874,7 @@ const navGroups = [
     {!skrytBocniCTA && (
       <!-- Postranní výzva - jen desktop. Na mobilu má tutéž roli tlačítko
            v lepivé hlavičce, kde je i telefon. -->
-      <a href="/poptavka" data-place="bocni-ousko"
+      <a href={ctaHref} data-place="bocni-ousko"
          class="group fixed right-0 top-[35%] z-40 hidden lg:flex items-center gap-2.5 pl-4 pr-2.5 py-3 bg-white/20 hover:bg-white/40 backdrop-blur-md backdrop-saturate-150 border border-r-0 border-white/30 text-navy-900 rounded-l-lg shadow-md transition-all duration-300 text-[13px] font-bold whitespace-nowrap">
         Nezávazná poptávka
         <span class="w-5 h-5 rounded-full bg-brand-500 group-hover:bg-brand-400 flex items-center justify-center flex-shrink-0 transition-colors">
