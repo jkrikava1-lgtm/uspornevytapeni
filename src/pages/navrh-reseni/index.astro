@@ -29,7 +29,9 @@ const poradiPodstranek = ['order-2', 'order-4', 'order-6'];
             href={card.href}
             class:list={['group flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:border-brand-300 hover:shadow-lg', poradiKaret[ci]]}
           >
-            <img src={card.img} alt={card.title} class="h-52 w-full object-cover object-[center_15%]" loading="lazy" />
+            <img src={card.img} alt={card.title} class="h-52 w-full object-cover object-[center_15%]" loading="lazy"
+                 srcset={card.img.includes("novostavba-vizual") ? "/images/hero/novostavba-vizual-712.webp 712w, /images/hero/novostavba-vizual.webp 1328w" : undefined}
+                 sizes="(max-width: 768px) 100vw, 440px" />
             <div class="flex flex-1 flex-col p-7">
               <h3 class="mb-2 text-lg font-bold text-charcoal-900 transition-colors group-hover:text-brand-500">{card.title}</h3>
               <p class="mb-3 text-sm leading-relaxed text-charcoal-500">{card.desc}</p>
