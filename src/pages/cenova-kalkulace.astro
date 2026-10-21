@@ -267,7 +267,26 @@ import data from '../data/cenova-kalkulace.json';
       odeslaneKroky.add(n);
       uvTrack('kalkulace_krok_' + n, { krok: n });
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Po odpovědi nescrollujeme na začátek stránky — tam je jen hero a člověk
+    // musí znovu hledat otázku. Měření v Clarity na tom ukazovalo 172 mrtvých
+    // a 79 zuřivých kliků do hera. Místo toho posuneme na ukazatel kroku tak,
+    // aby otázka začínala hned pod lepivou hlavičkou.
+    scrollNaKrok(n);
+  }
+
+  function scrollNaKrok(n: number) {
+    // rAF: panel s poděkováním se odkrývá až po návratu z showStep
+    requestAnimationFrame(() => {
+      const wrap = document.getElementById('progress-wrap');
+      const panel = document.getElementById(n > TOTAL_STEPS ? 'step-success' : `step-${n}`);
+      const cil = wrap && !wrap.classList.contains('hidden') ? wrap : panel;
+      if (!cil) return;
+      const hlavicka = document.getElementById('header');
+      const odsazeni = (hlavicka ? hlavicka.offsetHeight : 0) + 16;
+      const y = cil.getBoundingClientRect().top + window.scrollY - odsazeni;
+      const bezAnimace = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: Math.max(0, y), behavior: bezAnimace ? 'auto' : 'smooth' });
+    });
   }
 
   document.querySelectorAll<HTMLButtonElement>('.choice-card, .choice-card--help').forEach(card => {
