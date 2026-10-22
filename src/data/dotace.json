@@ -72,6 +72,11 @@
     {
       "q": "Kolik je dotace na tepelné čerpadlo voda-voda?",
       "a": "Stejně jako u vzduch-voda a země-voda je to 150 000 Kč z programu NZÚ Light pro zranitelné domácnosti. Běžné domácnosti místo přímé dotace čerpají bezúročný úvěr, u voda-voda až 400 000 Kč."
+    },
+    {
+      "id": "decil",
+      "q": "Co je příjmový decil a jak zjistím, do kterého patřím?",
+      "a": "Decil znamená desetinu. Statistici seřadí všechny domácnosti podle příjmu a rozdělí je na deset stejně velkých skupin — v prvním decilu je desetina s nejnižšími příjmy, v desátém s nejvyššími. Do 3. decilu tedy patří 30 % domácností s nejnižšími příjmy v zemi. Nerozhoduje přitom celkový příjem domácnosti, ale příjem přepočtený na její velikost: první dospělý se počítá jako 1, každý další dospělý a dítě nad 13 let jako 0,5 a dítě do 13 let jako 0,3. Podle nástroje Fondu platného od června 2026 je hranicí 3. decilu 25 425 Kč a hranicí 5. decilu 31 058 Kč čistého měsíčně na jednu takovou jednotku. V praxi to znamená, že do 3. decilu se vejde jednotlivec s příjmem do 25 425 Kč, bezdětný pár do 38 138 Kč nebo rodina se dvěma dětmi do 13 let do 53 393 Kč. Dvojice starobních důchodců, pro kterou platí mírnější 5. decil, má hranici 46 587 Kč. Posuzuje se průměr čistých příjmů všech členů domácnosti za poslední tři ukončené měsíce. Svůj decil si spočítáte v oficiálním nástroji Fondu — ke stažení na novazelenausporam.cz v sekci Dokumenty. Rádi vám s tím pomůžeme."
     }
   ],
   "cta_headline": "Nevíte, na co máte nárok?",
@@ -128,7 +133,7 @@
     ],
     "podminky_title": "Podmínky",
     "podminky": [
-      "<strong>Kdo — stačí splnit jednu z možností:</strong> domácnost pobírá dávku státní sociální pomoci; nebo má příjem do 3. decilu; nebo ji tvoří výhradně starobní důchodci s příjmem do 5. decilu; nebo v ní někdo pobírá invalidní důchod 3. stupně a příjem nepřesahuje 5. decil.",
+      "<strong>Kdo — stačí splnit jednu z možností:</strong> domácnost pobírá dávku státní sociální pomoci; nebo má příjem do <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">3. decilu</a>; nebo ji tvoří výhradně starobní důchodci s příjmem do <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">5. decilu</a>; nebo v ní někdo pobírá invalidní důchod 3. stupně a příjem nepřesahuje <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">5. decil</a>.",
       "<strong>Dům ve třídě E až G</strong> (nezateplený). Týká se tří příjmových variant — u domácnosti s dávkou státní sociální pomoci se třída nesleduje.",
       "<strong>Nejvýše dvě nemovitosti</strong> určené k bydlení v domácnosti žadatele.",
       "<strong>Renovační pas není podmínkou.</strong> Je zdarma, takže se vyplatí, ale žádost bez něj projde.",

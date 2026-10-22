@@ -176,8 +176,8 @@ import site from '../data/site.json';
       <h2 class="text-2xl lg:text-3xl font-extrabold text-charcoal-900 mb-3">{data.faq_headline}</h2>
       <p class="text-charcoal-500 mb-8 max-w-2xl">Rozklikněte otázku, která vás zajímá.</p>
       <div class="max-w-4xl space-y-3">
-        {data.faq.map((item, i) => (
-          <details open={i === 0} class="group bg-white border border-gray-200 rounded-xl open:border-brand-200 open:shadow-sm transition-colors">
+        {data.faq.map((item: any, i: number) => (
+          <details open={i === 0} id={item.id ? `faq-${item.id}` : undefined} class="group scroll-mt-28 bg-white border border-gray-200 rounded-xl open:border-brand-200 open:shadow-sm transition-colors">
             <summary class="flex items-start justify-between gap-4 cursor-pointer list-none px-6 py-4 font-bold text-charcoal-900 marker:hidden [&::-webkit-details-marker]:hidden hover:text-brand-500 transition-colors">
               {item.q}
               <span class="flex-shrink-0 w-7 h-7 rounded-full bg-gray-100 group-open:bg-brand-50 flex items-center justify-center transition-colors mt-0.5">
@@ -202,4 +202,22 @@ import site from '../data/site.json';
       <a href="/poptavka" class="inline-flex items-center justify-center px-6 py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-md transition-colors">{data.cta_button}</a>
     </div>
   </section>
+
+  <script>
+    // Odkazy z podmínek vedou na konkrétní dotaz. Zavřený <details> se sám
+    // neotevře ve všech prohlížečích, proto ho otevřeme a odrolujeme pod hlavičku.
+    function otevriDotaz(plynule: boolean) {
+      if (!location.hash.startsWith('#faq-')) return;
+      const cil = document.querySelector<HTMLDetailsElement>(location.hash);
+      if (!cil) return;
+      cil.open = true;
+      const hlavicka = document.getElementById('header');
+      const odsazeni = (hlavicka ? hlavicka.offsetHeight : 0) + 16;
+      const y = cil.getBoundingClientRect().top + window.scrollY - odsazeni;
+      const bezAnimace = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: Math.max(0, y), behavior: plynule && !bezAnimace ? 'smooth' : 'auto' });
+    }
+    window.addEventListener('hashchange', () => otevriDotaz(true));
+    otevriDotaz(false);
+  </script>
 </Layout>
