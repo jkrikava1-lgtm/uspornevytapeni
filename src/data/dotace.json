@@ -20,60 +20,6 @@
       "popis": "Žádost se podává elektronicky přes portál zadosti.sfzp.cz - před zahájením prací, v průběhu i po dokončení."
     }
   ],
-  "zmena_headline": "Dvě skupiny žadatelů",
-  "zmena_intro": "Podpora se liší podle příjmové situace domácnosti:",
-  "bezne_title": "Běžné domácnosti",
-  "bezne_subtitle": "středně a vysokopříjmové",
-  "bezne_desc": "Stát podporuje instalaci tepelného čerpadla formou <strong>bezúročného úvěru</strong> (RPSN 0 %). Úroky po celou dobu splácení hradí stát, vy vracíte jen půjčenou částku.",
-  "bezne_jak": "<strong>Jak to funguje:</strong> Nejprve zažádáte přes SFŽP. Po schválení žádosti si půjčíte v bance nebo stavební spořitelně. Dílčí renovace: až 750 000 Kč, komplexní renovace: až 2 000 000 Kč. Splatnost 10-15 let.",
-  "bezne_vyhoda": "<strong>Výhoda:</strong> Nemusíte mít naspořeny statisíce předem - finance na celou instalaci s nulovými úroky.",
-  "bezne_nevyhoda": "<strong>Podmínka:</strong> K žádosti potřebujete <a href=\"#renovacni-pas\" class=\"font-semibold underline underline-offset-2 decoration-current/40 hover:decoration-current transition-colors\">renovační pas</a> (zpracuje certifikovaný poradce EKIS - zdarma). Banka pak prověří vaši bonitu.",
-  "zranitelne_title": "Zranitelné domácnosti (NZÚ Light)",
-  "zranitelne_subtitle": "příjemci dávek, starobní důchodci a lidé s invalidním důchodem 3. stupně v energeticky neúsporném domě",
-  "zranitelne_desc": "Nízkopříjmové domácnosti dostávají <strong>přímou dotaci</strong> - peníze, které nemusí vracet. Podmínkou je splnění příjmových kritérií a vlastnictví max. 2 nemovitostí. <strong>Renovační pas není podmínkou</strong> - nabízí se jako volitelná bezplatná služba.",
-  "zranitelne_body": [
-    {
-      "label": "Dotace na TČ vzduch-voda, země-voda i voda-voda",
-      "value": "150 000 Kč"
-    },
-    {
-      "label": "Dotace na TČ vzduch-vzduch",
-      "value": "100 000 Kč"
-    },
-    {
-      "label": "Renovační pas (volitelně, zdarma)",
-      "value": "až 50 000 Kč"
-    },
-    {
-      "label": "Čerpání",
-      "value": "možné zálohově předem"
-    }
-  ],
-  "tc_headline": "Kolik dostanete na tepelné čerpadlo?",
-  "tc_intro": "Výše podpory závisí na kategorii a typu čerpadla. U bezúročného úvěru se jedná o maximální půjčku, stát platí úroky - vy vracíte jen jistinu. U NZÚ Light jde o přímou dotaci:",
-  "tc_body": [
-    {
-      "label": "TČ vzduch-vzduch - bezúročný úvěr",
-      "value": "až 200 000 Kč"
-    },
-    {
-      "label": "TČ vzduch-voda - bezúročný úvěr",
-      "value": "až 350 000 Kč"
-    },
-    {
-      "label": "TČ země-voda - bezúročný úvěr",
-      "value": "až 400 000 Kč"
-    },
-    {
-      "label": "TČ vzduch-vzduch - dotace NZÚ Light",
-      "value": "100 000 Kč"
-    },
-    {
-      "label": "TČ vzduch-voda, země-voda, voda-voda - dotace NZÚ Light",
-      "value": "150 000 Kč"
-    }
-  ],
-  "tc_note": "Nové čerpadlo musí svým jmenovitým výkonem pokrýt alespoň 60 % tepelné ztráty domu a být na Seznamu výrobků a technologií (SVT) Fondu - vše, co dodáváme, splňuje. Žádost se podává přes zadosti.sfzp.cz.",
   "renovacni_headline": "Renovační pas a energetické poradenství",
   "renovacni_intro": "U bezúročného úvěru je renovační pas povinný. U NZÚ Light nikoli - ale je zdarma, takže se vyplatí.",
   "renovacni_body": [
@@ -131,13 +77,81 @@
   "cta_headline": "Nevíte, na co máte nárok?",
   "cta_text": "Poradíme vám s kategorií i celou žádostí - zdarma a nezávazně.",
   "cta_button": "Odeslat poptávku",
-  "podminky_headline": "Podmínky, které je potřeba splnit",
-  "podminky_intro": "Platí pro přímou dotaci i pro bezúročný úvěr. Vycházíme ze závazných pokynů programu ve znění od 24. 6. 2026.",
-  "podminky_body": [
-    "<strong>Nové čerpadlo nahrazuje hlavní zdroj tepla.</strong> Od roku 2026 jím může být <em>jakýkoliv</em> stávající hlavní zdroj - tedy i dosluhující tepelné čerpadlo. Dřív šlo jen o vyjmenované kotle a lokální topidla. Přenosná topidla a provizorní zdroje se za hlavní zdroj nepovažují.",
-    "<strong>Výkon musí krýt alespoň 60 % tepelné ztráty domu.</strong> Spočítáme ji při návrhu, abyste nenarazili až u podání žádosti.",
-    "<strong>Na dům nesmí být dříve čerpána dotace na výměnu zdroje.</strong> Podmínka se váže na nemovitost, ne na spotřebič - rozhoduje tedy i to, co čerpal případný předchozí majitel. Týká se programů Zelená úsporám, Nová zelená úsporám, NZÚ Light a kotlíkových dotací.",
-    "<strong>Starý zdroj je nutné ekologicky zlikvidovat</strong> a doložit o tom potvrzení. Výjimkou je původní elektrické vytápění nebo plynový kotel, které zůstanou jako záložní zdroj k čerpadlu. U zařízení s chladivem potvrzení vystavuje certifikovaná osoba.",
-    "<strong>Výdaje uhrazené nejdříve 12 měsíců před podáním žádosti.</strong> Starší faktury už uznat nelze. Dokončení se dokládá do 24 měsíců."
-  ]
+  "skupiny_headline": "Dvě cesty podle příjmu domácnosti",
+  "skupiny_intro": "Program Nová zelená úsporám má pro rodinné domy přesně dvě větve. Každá má vlastní podmínky, proto je najdete u obou kompletní. Údaje odpovídají závazným pokynům ve znění od 24. 6. 2026.",
+  "skupina_bezne": {
+    "title": "Běžné domácnosti",
+    "subtitle": "bezúročný úvěr, RPSN 0 %",
+    "lead": "Stát za vás hradí úroky po celou dobu splácení. Peníze si půjčíte v bance nebo stavební spořitelně, vracíte jen jistinu.",
+    "castky_title": "Kolik si můžete půjčit na čerpadlo",
+    "castky": [
+      {
+        "label": "TČ vzduch-vzduch",
+        "value": "200 000 Kč"
+      },
+      {
+        "label": "TČ vzduch-voda",
+        "value": "350 000 Kč"
+      },
+      {
+        "label": "TČ země-voda, voda-voda nebo hybridní",
+        "value": "400 000 Kč"
+      }
+    ],
+    "podminky_title": "Podmínky",
+    "podminky": [
+      "<strong>Kdo:</strong> fyzická osoba, vlastník domu. Nemovitost nesmí spoluvlastnit firma ani fond.",
+      "<strong>Bez dluhů u státu:</strong> žádné závazky po splatnosti u finančního úřadu, sociálního zabezpečení ani Fondu. Hypotéka na domě nevadí.",
+      "<strong>Renovační pas je povinný</strong> u dílčích opatření, tedy i u samostatné výměny zdroje. Zpracuje ho poradce EKIS zdarma.",
+      "<strong>Banka posuzuje bonitu.</strong> Fond schválí strop, konečnou částku určí finanční instituce.",
+      "<strong>Celkový strop:</strong> 750 000 Kč na nemovitost za dílčí opatření, 2 000 000 Kč za všechny žádosti dohromady.",
+      "<strong>Splatnost bez úroků:</strong> 10 let do 500 000 Kč, 15 let nad 500 000 Kč.",
+      "<strong>Nové čerpadlo nahrazuje hlavní zdroj tepla.</strong> Od roku 2026 jakýkoliv, tedy i dosluhující tepelné čerpadlo. Přenosná topidla se za hlavní zdroj nepovažují.",
+      "<strong>Výkon kryje alespoň 60 % tepelné ztráty</strong> domu. Spočítáme ji při návrhu.",
+      "<strong>Čerpadlo musí být na seznamu SVT</strong> Fondu. Vše, co dodáváme, splňuje.",
+      "<strong>Na dům nesmí být dříve čerpána dotace na výměnu zdroje</strong> — Zelená úsporám, NZÚ, NZÚ Light nebo kotlíkové dotace. Podmínka se váže na nemovitost, ne na spotřebič, takže rozhoduje i to, co čerpal předchozí majitel.",
+      "<strong>Ekologická likvidace starého zdroje</strong> s potvrzením. Výjimka: elektrické vytápění nebo plynový kotel, které zůstanou jako záložní zdroj k čerpadlu.",
+      "<strong>Lhůty:</strong> výdaje uhrazené nejdříve 12 měsíců před podáním žádosti, dokončení doložit do 24 měsíců.",
+      "<strong>Opakovaná žádost</strong> je možná až po vyhodnocení a vypořádání té předchozí."
+    ]
+  },
+  "skupina_zranitelne": {
+    "title": "Zranitelné domácnosti",
+    "subtitle": "přímá dotace NZÚ Light",
+    "lead": "Peníze, které nevracíte. Žádáte-li před dokončením prací, vyplácí se zálohově předem, takže nemusíte mít našetřeno.",
+    "castky_title": "Kolik dostanete na čerpadlo",
+    "castky": [
+      {
+        "label": "TČ vzduch-voda",
+        "value": "150 000 Kč"
+      },
+      {
+        "label": "TČ země-voda, voda-voda",
+        "value": "150 000 Kč"
+      },
+      {
+        "label": "TČ vzduch-vzduch",
+        "value": "100 000 Kč"
+      },
+      {
+        "label": "TČ jen pro ohřev vody",
+        "value": "60 000 Kč"
+      }
+    ],
+    "podminky_title": "Podmínky",
+    "podminky": [
+      "<strong>Kdo — stačí splnit jednu z možností:</strong> domácnost pobírá dávku státní sociální pomoci; nebo má příjem do 3. decilu; nebo ji tvoří výhradně starobní důchodci s příjmem do 5. decilu; nebo v ní někdo pobírá invalidní důchod 3. stupně a příjem nepřesahuje 5. decil.",
+      "<strong>Dům ve třídě E až G</strong> (nezateplený). Týká se tří příjmových variant — u domácnosti s dávkou státní sociální pomoci se třída nesleduje.",
+      "<strong>Nejvýše dvě nemovitosti</strong> určené k bydlení v domácnosti žadatele.",
+      "<strong>Renovační pas není podmínkou.</strong> Je zdarma, takže se vyplatí, ale žádost bez něj projde.",
+      "<strong>Vyplácí se zálohově předem</strong>, pokud žádáte před dokončením realizace.",
+      "<strong>Nové čerpadlo nahrazuje hlavní zdroj tepla.</strong> Od roku 2026 jakýkoliv, tedy i dosluhující tepelné čerpadlo. Přenosná topidla se za hlavní zdroj nepovažují.",
+      "<strong>Výkon kryje alespoň 60 % tepelné ztráty</strong> domu. Spočítáme ji při návrhu.",
+      "<strong>Čerpadlo musí být na seznamu SVT</strong> Fondu. Vše, co dodáváme, splňuje.",
+      "<strong>Na dům nesmí být dříve čerpána dotace na výměnu zdroje</strong> — Zelená úsporám, NZÚ, NZÚ Light nebo kotlíkové dotace. Podmínka se váže na nemovitost, ne na spotřebič, takže rozhoduje i to, co čerpal předchozí majitel.",
+      "<strong>Ekologická likvidace starého zdroje</strong> s potvrzením. Výjimka: elektrické vytápění nebo plynový kotel, které zůstanou jako záložní zdroj k čerpadlu. U zařízení s chladivem potvrzení vystavuje certifikovaná osoba.",
+      "<strong>Lhůty:</strong> výdaje uhrazené nejdříve 12 měsíců před podáním žádosti, dokončení doložit do 24 měsíců.",
+      "<strong>Úvěr navíc:</strong> příjemci NZÚ Light si mohou k dotaci vzít i bezúročný úvěr a neplatí pro ně minimální výše 100 000 Kč."
+    ]
+  }
 }

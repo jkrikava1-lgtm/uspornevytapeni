@@ -54,66 +54,69 @@ import site from '../data/site.json';
     </div>
   </section>
 
-  <!-- Hlavní změna: Dotace vs Úvěry -->
+  <!-- Dvě větve programu. Každá má úplný výčet podmínek včetně těch
+       společných - stránka je vstupní bránou z vyhledávání pro obě skupiny
+       zvlášť, takže opakování je tu záměrné a lepší než odkaz jinam. -->
   <section class="py-10 lg:py-14">
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.zmena_headline}</h2>
-      <p class="max-w-3xl text-charcoal-500 text-sm mb-6">{data.zmena_intro}</p>
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.skupiny_headline}</h2>
+      <p class="max-w-3xl text-charcoal-500 text-sm mb-7">{data.skupiny_intro}</p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-
-        <!-- Běžné domácnosti -->
-        <div class="bg-white border border-gray-200 rounded-xl p-6">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-9 h-9 bg-navy-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-extrabold text-charcoal-900">{data.bezne_title}</h3>
-              <p class="text-charcoal-500 text-xs">{data.bezne_subtitle}</p>
-            </div>
-          </div>
-
-          <div class="space-y-3 mt-4">
-            <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_desc} />
-            <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={data.bezne_jak} />
-            <div class="bg-green-50 border border-green-200 rounded-lg p-3">
-              <p class="text-green-800 text-sm" set:html={data.bezne_vyhoda} />
-            </div>
-            <div class="bg-amber-50 border border-amber-200 rounded-lg p-3">
-              <p class="text-amber-800 text-sm" set:html={data.bezne_nevyhoda} />
-            </div>
-          </div>
-        </div>
-
-        <!-- Zranitelné domácnosti -->
-        <div class="bg-navy-700 text-white rounded-xl p-6">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="w-9 h-9 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="font-extrabold text-white">{data.zranitelne_title}</h3>
-              <p class="text-white/70 text-xs">{data.zranitelne_subtitle}</p>
-            </div>
-          </div>
-
-          <p class="text-white/90 text-sm leading-relaxed mt-4 mb-4" set:html={data.zranitelne_desc} />
-
-          <div class="space-y-0">
-            {data.zranitelne_body.map(item => (
-              <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
-                <span class="text-sm text-white/80">{item.label}</span>
-                <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+        {[
+          { s: data.skupina_bezne, tmavy: false },
+          { s: data.skupina_zranitelne, tmavy: true },
+        ].map(({ s, tmavy }) => (
+          <div class:list={["rounded-2xl p-6 lg:p-7 border",
+                            tmavy ? "bg-navy-700 border-navy-700 text-white" : "bg-white border-gray-200"]}>
+            <div class="flex items-center gap-3">
+              <div class:list={["w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0",
+                                tmavy ? "bg-brand-500" : "bg-navy-700"]}>
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {tmavy
+                    ? <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    : <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>}
+                </svg>
               </div>
-            ))}
+              <div>
+                <h3 class:list={["font-extrabold text-lg", tmavy ? "text-white" : "text-charcoal-900"]}>{s.title}</h3>
+                <p class:list={["text-xs", tmavy ? "text-white/70" : "text-charcoal-500"]}>{s.subtitle}</p>
+              </div>
+            </div>
+
+            <p class:list={["text-sm leading-relaxed mt-4", tmavy ? "text-white/90" : "text-charcoal-600"]}>{s.lead}</p>
+
+            <div class:list={["text-xs font-bold uppercase tracking-wider mt-6 mb-1",
+                              tmavy ? "text-white/60" : "text-charcoal-500"]}>{s.castky_title}</div>
+            <div class="space-y-0">
+              {s.castky.map(c => (
+                <div class:list={["flex justify-between gap-4 py-2.5 border-b last:border-0",
+                                  tmavy ? "border-navy-600" : "border-gray-100"]}>
+                  <span class:list={["text-sm", tmavy ? "text-white/80" : "text-charcoal-600"]}>{c.label}</span>
+                  <span class:list={["text-sm font-bold flex-shrink-0", tmavy ? "text-white" : "text-charcoal-900"]}>{c.value}</span>
+                </div>
+              ))}
+            </div>
+
+            <div class:list={["text-xs font-bold uppercase tracking-wider mt-7 mb-3",
+                              tmavy ? "text-white/60" : "text-charcoal-500"]}>{s.podminky_title}</div>
+            <ul class="space-y-2.5">
+              {s.podminky.map(p => (
+                <li class="flex gap-2.5 items-start">
+                  <span class:list={["w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5",
+                                     tmavy ? "bg-brand-500" : "bg-brand-500"]}>
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                    </svg>
+                  </span>
+                  <span class:list={["text-sm leading-relaxed", tmavy ? "text-white/90" : "text-charcoal-600"]} set:html={p} />
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ))}
       </div>
+
       <div class="mt-8 max-w-3xl rounded-xl border border-gray-200 bg-white p-5 sm:p-6">
         <p class="text-charcoal-700 leading-relaxed">
           <strong class="text-charcoal-900">Nevíte, do které skupiny patříte?</strong> Zjistíme to za vás v rámci nabídky a řekneme rovnou, kolik si můžete odečíst. S žádostí i s renovačním pasem pak pomůžeme.
@@ -131,50 +134,6 @@ import site from '../data/site.json';
             <a href={site.phone_href} data-place="dotace-po-castkach" class="font-bold text-navy-700 hover:text-brand-500 transition-colors whitespace-nowrap">{site.phone}</a>
           </span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Podpora tepelných čerpadel -->
-  <section class="bg-gray-50 py-10 lg:py-14">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.tc_headline}</h2>
-      <p class="max-w-3xl text-charcoal-500 text-sm mb-6">{data.tc_intro}</p>
-
-      <div class="bg-navy-700 rounded-xl p-5 text-white mb-4">
-        <div class="space-y-0">
-          {data.tc_body.map(item => (
-            <div class="flex justify-between py-2.5 border-b border-navy-600 last:border-0 gap-4">
-              <span class="text-sm text-navy-100">{item.label}</span>
-              <span class="text-sm font-bold flex-shrink-0">{item.value}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <p class="max-w-3xl text-charcoal-600 text-sm leading-relaxed">{data.tc_note}</p>
-    </div>
-  </section>
-
-  <!-- Podmínky programu. Doplněno 10/2026 podle závazných pokynů NZÚ Light
-       ve znění od 24. 6. 2026 - stránka je neuváděla a lidé na ně naráželi
-       až u podání žádosti. -->
-  <section class="py-10 lg:py-14">
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.podminky_headline}</h2>
-      <p class="max-w-3xl text-charcoal-500 text-sm mb-5">{data.podminky_intro}</p>
-
-      <div class="space-y-3">
-        {data.podminky_body.map(item => (
-          <div class="flex gap-2.5 items-start">
-            <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
-              </svg>
-            </div>
-            <span class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={item} />
-          </div>
-        ))}
       </div>
     </div>
   </section>
