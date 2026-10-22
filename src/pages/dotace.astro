@@ -156,6 +156,29 @@ import site from '../data/site.json';
     </div>
   </section>
 
+  <!-- Podmínky programu. Doplněno 10/2026 podle závazných pokynů NZÚ Light
+       ve znění od 24. 6. 2026 - stránka je neuváděla a lidé na ně naráželi
+       až u podání žádosti. -->
+  <section class="py-10 lg:py-14">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-extrabold text-charcoal-900 mb-2">{data.podminky_headline}</h2>
+      <p class="max-w-3xl text-charcoal-500 text-sm mb-5">{data.podminky_intro}</p>
+
+      <div class="space-y-3">
+        {data.podminky_body.map(item => (
+          <div class="flex gap-2.5 items-start">
+            <div class="w-5 h-5 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <span class="max-w-3xl text-charcoal-600 text-sm leading-relaxed" set:html={item} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- Renovační pas - má id, protože se na něj odkazuje z míst, kde se
        o pasu mluví. Clarity ukázala, že tam lidé klikali naprázdno.
        scroll-mt kompenzuje lepivou hlavičku, jinak by nadpis zmizel pod ní. -->

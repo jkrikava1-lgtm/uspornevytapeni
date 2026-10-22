@@ -33,7 +33,7 @@
   "zranitelne_desc": "Nízkopříjmové domácnosti dostávají <strong>přímou dotaci</strong> - peníze, které nemusí vracet. Podmínkou je splnění příjmových kritérií a vlastnictví max. 2 nemovitostí. <strong>Renovační pas není podmínkou</strong> - nabízí se jako volitelná bezplatná služba.",
   "zranitelne_body": [
     {
-      "label": "Dotace na TČ vzduch-voda / země-voda",
+      "label": "Dotace na TČ vzduch-voda, země-voda i voda-voda",
       "value": "150 000 Kč"
     },
     {
@@ -69,11 +69,11 @@
       "value": "100 000 Kč"
     },
     {
-      "label": "TČ vzduch-voda / země-voda - dotace NZÚ Light",
+      "label": "TČ vzduch-voda, země-voda, voda-voda - dotace NZÚ Light",
       "value": "150 000 Kč"
     }
   ],
-  "tc_note": "Podmínkou je certifikované zařízení na Seznamu výrobků a technologií (SVT) - vše, co dodáváme, splňuje. Žádost se podává přes zadosti.sfzp.cz.",
+  "tc_note": "Nové čerpadlo musí svým jmenovitým výkonem pokrýt alespoň 60 % tepelné ztráty domu a být na Seznamu výrobků a technologií (SVT) Fondu - vše, co dodáváme, splňuje. Žádost se podává přes zadosti.sfzp.cz.",
   "renovacni_headline": "Renovační pas a energetické poradenství",
   "renovacni_intro": "U bezúročného úvěru je renovační pas povinný. U NZÚ Light nikoli - ale je zdarma, takže se vyplatí.",
   "renovacni_body": [
@@ -118,9 +118,26 @@
     {
       "q": "Kdy se otevřel příjem žádostí o podporu NZÚ v roce 2026?",
       "a": "Program NZÚ byl dočasně uzavřen v listopadu 2025 kvůli vyčerpání alokace. V roce 2026 přešel do nové etapy s bezúročnými úvěry pro běžné domácnosti a přímými dotacemi NZÚ Light pro zranitelné. Žádosti se podávají přes portál zadosti.sfzp.cz. Síť certifikovaných energetických poradců (EKIS) je v provozu od dubna 2026."
+    },
+    {
+      "q": "Dostanu dotaci na výměnu starého tepelného čerpadla za nové?",
+      "a": "Ano. Od roku 2026 lze nahradit jakýkoliv stávající hlavní zdroj tepla, tedy i dosluhující tepelné čerpadlo - do konce roku 2025 to u vyjmenovaných zdrojů nešlo. Podmínkou je, že na danou nemovitost nebyla v minulosti čerpána dotace na výměnu zdroje (Zelená úsporám, Nová zelená úsporám, NZÚ Light nebo kotlíkové dotace), že nové čerpadlo pokryje alespoň 60 % tepelné ztráty domu a že staré zajistíte ekologicky zlikvidovat. U zařízení s chladivem potvrzení o likvidaci vystavuje certifikovaná osoba."
+    },
+    {
+      "q": "Kolik je dotace na tepelné čerpadlo voda-voda?",
+      "a": "Stejně jako u vzduch-voda a země-voda je to 150 000 Kč z programu NZÚ Light pro zranitelné domácnosti. Pouze tepelné čerpadlo vzduch-vzduch má nižší sazbu, 100 000 Kč. Běžné domácnosti místo přímé dotace čerpají bezúročný úvěr."
     }
   ],
   "cta_headline": "Nevíte, na co máte nárok?",
   "cta_text": "Poradíme vám s kategorií i celou žádostí - zdarma a nezávazně.",
-  "cta_button": "Odeslat poptávku"
+  "cta_button": "Odeslat poptávku",
+  "podminky_headline": "Podmínky, které je potřeba splnit",
+  "podminky_intro": "Platí pro přímou dotaci i pro bezúročný úvěr. Vycházíme ze závazných pokynů programu ve znění od 24. 6. 2026.",
+  "podminky_body": [
+    "<strong>Nové čerpadlo nahrazuje hlavní zdroj tepla.</strong> Od roku 2026 jím může být <em>jakýkoliv</em> stávající hlavní zdroj - tedy i dosluhující tepelné čerpadlo. Dřív šlo jen o vyjmenované kotle a lokální topidla. Přenosná topidla a provizorní zdroje se za hlavní zdroj nepovažují.",
+    "<strong>Výkon musí krýt alespoň 60 % tepelné ztráty domu.</strong> Spočítáme ji při návrhu, abyste nenarazili až u podání žádosti.",
+    "<strong>Na dům nesmí být dříve čerpána dotace na výměnu zdroje.</strong> Podmínka se váže na nemovitost, ne na spotřebič - rozhoduje tedy i to, co čerpal případný předchozí majitel. Týká se programů Zelená úsporám, Nová zelená úsporám, NZÚ Light a kotlíkových dotací.",
+    "<strong>Starý zdroj je nutné ekologicky zlikvidovat</strong> a doložit o tom potvrzení. Výjimkou je původní elektrické vytápění nebo plynový kotel, které zůstanou jako záložní zdroj k čerpadlu. U zařízení s chladivem potvrzení vystavuje certifikovaná osoba.",
+    "<strong>Výdaje uhrazené nejdříve 12 měsíců před podáním žádosti.</strong> Starší faktury už uznat nelze. Dokončení se dokládá do 24 měsíců."
+  ]
 }
