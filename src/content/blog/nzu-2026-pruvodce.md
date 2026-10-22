@@ -15,7 +15,6 @@ Půjčíte si v bance nebo stavební spořitelně, stát zaplatí úroky po celo
 
 | Typ čerpadla | Max. výše úvěru |
 |---|---|
-| Vzduch-vzduch | 200 000 Kč |
 | Vzduch-voda | 350 000 Kč |
 | Země-voda | 400 000 Kč |
 
@@ -31,7 +30,6 @@ Přímá nevratná dotace - bez úvěru, peníze nemusíte vracet.
 
 | Typ čerpadla | Výše dotace |
 |---|---|
-| Vzduch-vzduch | 100 000 Kč |
 | Vzduch-voda | 150 000 Kč |
 | Země-voda | 150 000 Kč |
 
