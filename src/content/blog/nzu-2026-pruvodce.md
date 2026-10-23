@@ -33,7 +33,7 @@ Přímá nevratná dotace - bez úvěru, peníze nemusíte vracet.
 | Vzduch-voda | 150 000 Kč |
 | Země-voda | 150 000 Kč |
 
-Renovační pas není povinný, ale nabízí se zdarma přes poradce EKIS. Dotaci lze čerpat zálohově předem.
+Renovační pas je povinnou přílohou žádosti, zpracuje ho poradce EKIS zdarma. Dotaci lze čerpat zálohově předem.
 
 ---
 
