@@ -13,7 +13,7 @@
     },
     {
       "datum": "Připravte podklady",
-      "popis": "Pro bezúročný úvěr i pro NZÚ Light je potřeba <a href=\"#renovacni-pas\" class=\"font-semibold underline underline-offset-2 decoration-current/40 hover:decoration-current transition-colors\">renovační pas</a> (zpracuje ho certifikovaný poradce EKIS zdarma). U NZÚ Light k němu patří i záznam o návštěvě poradce na místě."
+      "popis": "Pro bezúročný úvěr i pro NZÚ Light je potřeba <a href=\"#renovacni-pas\" class=\"font-semibold underline underline-offset-2 decoration-current/40 hover:decoration-current transition-colors\">renovační pas</a>. Zranitelným domácnostem ho musí poradce zpracovat zdarma, u ostatních rodinných domů na něj stát přispívá 3 000 Kč."
     },
     {
       "datum": "Podejte žádost",
@@ -21,10 +21,11 @@
     }
   ],
   "renovacni_headline": "Renovační pas a energetické poradenství",
-  "renovacni_intro": "Renovační pas je povinná příloha žádosti - u bezúročného úvěru i u přímé dotace NZÚ Light. Poradce ho zpracuje zdarma.",
+  "renovacni_intro": "Renovační pas je povinná příloha žádosti - u bezúročného úvěru i u přímé dotace NZÚ Light. Zranitelné domácnosti ho mají zdarma, ostatním na něj stát přispívá 3 000 Kč.",
   "renovacni_body": [
-    "<strong>Renovační pas:</strong> Dokument od certifikovaného poradce, který posoudí váš dům a stanoví optimální postup renovace. Je povinnou přílohou žádosti - u bezúročného úvěru i u NZÚ Light.",
-    "<strong>Kde ho získat:</strong> Kontaktujte bezplatné energetické poradenské centrum EKIS - poradce pas zpracuje zdarma. Síť poradců funguje od dubna 2026."
+    "<strong>Renovační pas:</strong> Dokument od energetického specialisty, který posoudí váš dům a stanoví optimální postup renovace. Je povinnou přílohou žádosti - u bezúročného úvěru i u NZÚ Light.",
+    "<strong>Kde ho získat:</strong> Vystavit ho smí jen energetický specialista nebo autorizovaný architekt, inženýr či technik zapsaný v evidenci poradců SFŽP. Poradce najdeme a žádost s vámi vyřídíme.",
+    "<strong>Co stojí:</strong> Domácnostem ohroženým energetickou chudobou ho poradce musí zpracovat bezplatně, včetně dotačního poradenství - stát mu za to zaplatí až 8 000 Kč. U ostatních rodinných domů přispívá 3 000 Kč a případný rozdíl si s poradcem dohodnete."
   ],
   "tip_box": "Nejste si jisti, do které kategorie patříte? Zavolejte nám - rádi vám poradíme ještě před podáním žádosti.",
   "faq_headline": "Časté dotazy",
@@ -35,7 +36,7 @@
     },
     {
       "q": "Kdo má nárok na podporu na tepelné čerpadlo?",
-      "a": "Bezúročný úvěr z programu NZÚ 2026 může čerpat každá domácnost instalující certifikované tepelné čerpadlo. Podmínkou je renovační pas (zdarma přes poradce EKIS) a splnění podmínek banky pro úvěr. Výše úvěru: TČ vzduch-voda až 350 000 Kč, TČ země-voda nebo voda-voda až 400 000 Kč."
+      "a": "Bezúročný úvěr z programu NZÚ 2026 může čerpat každá domácnost instalující certifikované tepelné čerpadlo. Podmínkou je renovační pas (stát na něj přispívá 3 000 Kč) a splnění podmínek banky pro úvěr. Výše úvěru: TČ vzduch-voda až 350 000 Kč, TČ země-voda nebo voda-voda až 400 000 Kč."
     },
     {
       "q": "Jak funguje bezúročný úvěr na tepelné čerpadlo?",
@@ -47,15 +48,15 @@
     },
     {
       "q": "Musím zateplovat dům, abych dostal bezúročný úvěr na tepelné čerpadlo?",
-      "a": "Ne. Tepelné čerpadlo je tzv. dílčí opatření - lze ho pořídit zcela samostatně bez zateplení nebo jiných stavebních úprav. Podmínkou je renovační pas (zdarma přes EKIS poradce) a posouzení vhodnosti TČ pro vaši otopnou soustavu. Zateplovat nemusíte."
+      "a": "Ne. Tepelné čerpadlo je tzv. dílčí opatření - lze ho pořídit zcela samostatně bez zateplení nebo jiných stavebních úprav. Podmínkou je renovační pas a posouzení vhodnosti TČ pro vaši otopnou soustavu. Zateplovat nemusíte."
     },
     {
       "q": "Co je Renovační pas a potřebuji ho pro dotaci?",
-      "a": "Renovační pas je dokument od certifikovaného energetického poradce, který posoudí váš dům a stanoví optimální postup renovace. Je povinnou přílohou žádosti - u bezúročného úvěru i u přímé dotace NZÚ Light. Zpracuje ho poradce EKIS zdarma. Síť poradců EKIS funguje od dubna 2026."
+      "a": "Renovační pas je dokument, který posoudí energetický stav vašeho domu a stanoví optimální postup renovace. Je povinnou přílohou žádosti - u bezúročného úvěru i u přímé dotace NZÚ Light. Vystavit ho smí jen energetický specialista s oprávněním podle zákona o hospodaření energií nebo autorizovaný architekt, inženýr či technik zapsaný v evidenci poradců SFŽP."
     },
     {
       "q": "K čemu mě zavazuje renovační pas?",
-      "a": "K ničemu konkrétnímu. Renovační pas je dokument od certifikovaného energetického poradce, který posoudí energetický stav vašeho domu a doporučí optimální postup renovace. Nezavazuje vás k žádným dalším pracím - jde jen o plán do budoucna. Zpracuje ho poradce EKIS zdarma, obvykle po jedné návštěvě."
+      "a": "K ničemu konkrétnímu. Renovační pas je dokument od certifikovaného energetického poradce, který posoudí energetický stav vašeho domu a doporučí optimální postup renovace. Nezavazuje vás k žádným dalším pracím - jde jen o plán do budoucna. Zpracuje ho energetický specialista, obvykle po jedné návštěvě domu."
     },
     {
       "q": "Kdy mohu podat žádost - před instalací, nebo až po?",
@@ -63,7 +64,7 @@
     },
     {
       "q": "Kdy se otevřel příjem žádostí o podporu NZÚ v roce 2026?",
-      "a": "Program NZÚ byl dočasně uzavřen v listopadu 2025 kvůli vyčerpání alokace. V roce 2026 přešel do nové etapy s bezúročnými úvěry pro běžné domácnosti a přímými dotacemi NZÚ Light pro zranitelné. Žádosti se podávají přes portál zadosti.sfzp.cz. Síť certifikovaných energetických poradců (EKIS) je v provozu od dubna 2026."
+      "a": "Program NZÚ byl dočasně uzavřen v listopadu 2025 kvůli vyčerpání alokace. V roce 2026 přešel do nové etapy s bezúročnými úvěry pro běžné domácnosti a přímými dotacemi NZÚ Light pro zranitelné. Žádosti se podávají přes portál zadosti.sfzp.cz. Renovační pasy vystavují poradci zapsaní v evidenci SFŽP."
     },
     {
       "q": "Dostanu dotaci na výměnu starého tepelného čerpadla za nové?",
@@ -81,7 +82,12 @@
     {
       "id": "trida",
       "q": "Jak se dokládá, že je dům v energetické třídě E až G?",
-      "a": "Průkaz energetické náročnosti budovy (PENB) si kvůli tomu pořizovat nemusíte. Zatřídění vyplývá z renovačního pasu NZÚ: jeho zpracovatel spočítá průměrný součinitel prostupu tepla obálkou budovy ve stávajícím stavu a z něj vyjde klasifikační třída. Renovační pas smí pro účely žádosti vystavit jen energetický specialista s oprávněním podle zákona o hospodaření energií, nebo autorizovaný architekt, inženýr či technik činný ve výstavbě — vlastník domu ani osoba jemu blízká ho vystavit nemůže. K žádosti se navíc přikládá záznam o návštěvě na místě na závazném formuláři, podepsaný žadatelem i poradcem, takže dům někdo opravdu vidí. Podmínka třídy E až G platí pro tři příjmové varianty; domácnosti, která pobírá dávku státní sociální pomoci, se netýká. U NZÚ Light je renovační pas i poradenství zdarma a pomůžeme vám je zařídit."
+      "a": "Průkaz energetické náročnosti budovy (PENB) si kvůli tomu pořizovat nemusíte. Zatřídění vyplývá z renovačního pasu NZÚ: jeho zpracovatel spočítá průměrný součinitel prostupu tepla obálkou budovy ve stávajícím stavu a z něj vyjde klasifikační třída. Renovační pas smí pro účely žádosti vystavit jen energetický specialista s oprávněním podle zákona o hospodaření energií, nebo autorizovaný architekt, inženýr či technik činný ve výstavbě — vlastník domu ani osoba jemu blízká ho vystavit nemůže. K žádosti se navíc přikládá záznam o návštěvě na místě na závazném formuláři, podepsaný žadatelem i poradcem, takže dům někdo opravdu vidí. Podmínka třídy E až G platí pro tři příjmové varianty; domácnosti, která pobírá dávku státní sociální pomoci, se netýká. U NZÚ Light musí být renovační pas i dotační poradenství zdarma a pomůžeme vám je zařídit."
+    },
+    {
+      "id": "cena-pasu",
+      "q": "Kolik stojí renovační pas?",
+      "a": "Záleží na příjmové skupině. Domácnostem ohroženým energetickou chudobou, tedy žadatelům o NZÚ Light, musí poradce zpracovat renovační pas i dotační poradenství bezplatně - výzva mu to přímo ukládá a stát mu za to zaplatí až 8 000 Kč na jeden rodinný dům. U ostatních rodinných domů stát poradci přispívá 3 000 Kč, u bytových domů 5 000 Kč. Pokud si poradce účtuje víc, rozdíl doplácíte - konkrétní cenu si s ním dohodnete předem, žádný strop výzva nestanoví. Samotná konzultace bývá zdarma, placená je až práce na dokumentu: obhlídka domu a výpočty. Rádi vám poradce doporučíme."
     }
   ],
   "cta_headline": "Nevíte, na co máte nárok?",
@@ -108,7 +114,7 @@
     "podminky": [
       "<strong>Kdo:</strong> fyzická osoba, vlastník domu. Nemovitost nesmí spoluvlastnit firma ani fond.",
       "<strong>Bez dluhů u státu:</strong> žádné závazky po splatnosti u finančního úřadu, sociálního zabezpečení ani Fondu. Hypotéka na domě nevadí.",
-      "<strong>Renovační pas je povinný</strong> u dílčích opatření, tedy i u samostatné výměny zdroje. Zpracuje ho poradce EKIS zdarma.",
+      "<strong>Renovační pas je povinný</strong> u dílčích opatření, tedy i u samostatné výměny zdroje. Vystaví ho energetický specialista, stát mu na něj přispívá <a href=\"#faq-cena-pasu\" class=\"underline decoration-current/40 underline-offset-2 hover:decoration-current transition-colors\">3 000 Kč</a>.",
       "<strong>Banka posuzuje bonitu.</strong> Fond schválí strop, konečnou částku určí finanční instituce.",
       "<strong>Celkový strop:</strong> 750 000 Kč na nemovitost za dílčí opatření, 2 000 000 Kč za všechny žádosti dohromady.",
       "<strong>Splatnost bez úroků:</strong> 10 let do 500 000 Kč, 15 let nad 500 000 Kč.",
@@ -141,7 +147,7 @@
       "<strong>Kdo — stačí splnit jednu z možností:</strong> domácnost pobírá dávku státní sociální pomoci; nebo má příjem do <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">3. decilu</a>; nebo ji tvoří výhradně starobní důchodci s příjmem do <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">5. decilu</a>; nebo v ní někdo pobírá invalidní důchod 3. stupně a příjem nepřesahuje <a href=\"#faq-decil\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">5. decil</a>.",
       "<strong>Dům ve třídě E až G</strong> (nezateplený). Týká se tří příjmových variant — u domácnosti s dávkou státní sociální pomoci se třída nesleduje. Zatřídění dokládá <a href=\"#faq-trida\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">renovační pas</a>, průkaz energetické náročnosti kvůli tomu pořizovat nemusíte.",
       "<strong>Nejvýše dvě nemovitosti</strong> určené k bydlení v domácnosti žadatele.",
-      "<strong>Renovační pas je povinná příloha žádosti.</strong> Vystaví ho energetický specialista nebo autorizovaný inženýr, u NZÚ Light zdarma. Je v něm i zatřídění domu do třídy E až G.",
+      "<strong>Renovační pas je povinná příloha žádosti.</strong> Vystaví ho energetický specialista nebo autorizovaný inženýr a zranitelným domácnostem ho musí zpracovat <a href=\"#faq-cena-pasu\" class=\"underline decoration-white/40 underline-offset-2 hover:decoration-white transition-colors\">bezplatně</a>, včetně dotačního poradenství. Je v něm i zatřídění domu do třídy E až G.",
       "<strong>Vyplácí se zálohově předem</strong>, pokud žádáte před dokončením realizace.",
       "<strong>Nové čerpadlo nahrazuje hlavní zdroj tepla.</strong> Od roku 2026 jakýkoliv, tedy i dosluhující tepelné čerpadlo. Přenosná topidla se za hlavní zdroj nepovažují.",
       "<strong>Výkon kryje alespoň 60 % tepelné ztráty</strong> domu. Spočítáme ji při návrhu.",

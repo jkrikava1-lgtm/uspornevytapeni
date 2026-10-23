@@ -20,7 +20,7 @@ Půjčíte si v bance nebo stavební spořitelně, stát zaplatí úroky po celo
 
 Dílčí renovace celkem: až 750 000 Kč · Splatnost 10-15 let.
 
-**Postup:** Poradce EKIS (zdarma) → renovační pas → žádost na zadosti.sfzp.cz → banka.
+**Postup:** energetický specialista → renovační pas (stát přispívá 3 000 Kč) → žádost na zadosti.sfzp.cz → banka.
 
 ## NZÚ Light (pro zranitelné domácnosti)
 
@@ -33,7 +33,7 @@ Přímá nevratná dotace - bez úvěru, peníze nemusíte vracet.
 | Vzduch-voda | 150 000 Kč |
 | Země-voda | 150 000 Kč |
 
-Renovační pas je povinnou přílohou žádosti, zpracuje ho poradce EKIS zdarma. Dotaci lze čerpat zálohově předem.
+Renovační pas je povinnou přílohou žádosti a zranitelným domácnostem ho poradce musí zpracovat zdarma. Dotaci lze čerpat zálohově předem.
 
 ---
 
