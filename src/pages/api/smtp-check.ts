@@ -14,7 +14,9 @@ import { timingSafeEqual } from 'node:crypto';
  * Když token není nastavený v proměnných prostředí, je endpoint vypnutý.
  */
 
-const NENALEZENO = new Response('Not found', { status: 404 });
+// Pozor: Response musí vzniknout pro každý požadavek znovu. Tělo sdílené
+// instance lze přečíst jen jednou a další požadavek by skončil chybou 500.
+const nenalezeno = () => new Response('Not found', { status: 404 });
 
 function tokenSedi(zadany: string | null, ocekavany: string): boolean {
   if (!zadany) return false;
@@ -26,8 +28,8 @@ function tokenSedi(zadany: string | null, ocekavany: string): boolean {
 
 export async function GET({ url }: { url: URL }) {
   const ocekavany = import.meta.env.SMTP_CHECK_TOKEN;
-  if (!ocekavany) return NENALEZENO;
-  if (!tokenSedi(url.searchParams.get('token'), ocekavany)) return NENALEZENO;
+  if (!ocekavany) return nenalezeno();
+  if (!tokenSedi(url.searchParams.get('token'), ocekavany)) return nenalezeno();
 
   const host = import.meta.env.SMTP_HOST;
   const port = Number(import.meta.env.SMTP_PORT);
