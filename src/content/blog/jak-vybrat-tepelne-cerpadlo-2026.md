@@ -9,7 +9,7 @@ image: "/images/hero/boxairy-strecha.webp"
 
 | | Vzduch-voda | Země-voda | Voda-voda |
 |---|---|---|---|
-| Cena od | 309 000 Kč | 429 000 Kč | 379 000 Kč |
+| Cena od | 309 000 Kč | 409 000 Kč | 379 000 Kč |
 | Průměrný COP | 3,3 | 4,3 | 5,0 |
 | Zemní práce | žádné | vrt nebo kolektor | 2 studny |
 | Montáž | 2-5 dní | 5-7 dní | 5-7 dní |
