@@ -41,7 +41,7 @@
   "modely_note": "Ceny jsou na klíč - dodávka, montáž, zásobník teplé vody, zapojení a uvedení do provozu. Nezahrnují dotaci, o kterou lze cenu ještě snížit.",
   "typy_label": "Cena podle typu",
   "typy_headline": "Kolik stojí jednotlivé typy tepelných čerpadel",
-  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduch-voda odpadají zemní práce, u země-voda je v ceně i zdroj - vrty nebo kolektor. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
+  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduch-voda odpadají zemní práce, u země-voda je v nejnižší ceně i zdroj tepla, tedy plošný kolektor - s vrtem systém vyjde dráž. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
   "typy": [
     {
       "typ": "Vzduch-voda",
@@ -110,7 +110,7 @@
         "záruka 7 let",
         "online monitoring"
       ],
-      "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V ceně je i zdroj tepla - hloubkové vrty nebo plošný zemní kolektor - a právě proto je pořizovací cena nejvyšší. V létě systém umí úsporně chladit.",
+      "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V nejnižší ceně je i zdroj tepla, tedy plošný zemní kolektor - a právě proto je pořizovací cena nejvyšší ze všech typů. Varianta s hloubkovými vrty vyjde dráž, zato zabere jen zlomek pozemku. V létě systém umí úsporně chladit.",
       "ovlivnuje": [
         "Počet a hloubka vrtů, nebo plocha zemního kolektoru",
         "Geologické podmínky pozemku a dostupnost vrtné techniky",
@@ -169,7 +169,7 @@
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s vrty (země-voda)?",
-      "a": "Tepelné čerpadlo země-voda vychází od 409 000 Kč. Cena zahrnuje i hloubkové vrty nebo plošný zemní kolektor. Provozní náklady jsou ze všech typů nejnižší - průměrný topný faktor (COP) 4,3. Systém navíc v létě umí úsporně chladit."
+      "a": "Tepelné čerpadlo země-voda vychází od 409 000 Kč a v té nejnižší ceně je i zdroj tepla, tedy plošný zemní kolektor. Varianta s hloubkovými vrty je dražší - počítejte zhruba 2 000 Kč za metr vrtu. Provozní náklady jsou ze všech typů nejnižší - průměrný topný faktor (COP) 4,3. Systém navíc v létě umí úsporně chladit."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s montáží?",
