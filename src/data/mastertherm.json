@@ -97,17 +97,17 @@
   "cena_lead": "Orientační ceny včetně montáže, zásobníku teplé vody a zprovoznění:",
   "cena_cards": [
     {
-      "typ": "Vzduch - voda",
-      "cena": "od 349 000 Kč",
+      "typ": "Vzduch-voda",
+      "cena": "od 309 000 Kč",
       "desc": "Nejčastější volba, vhodná pro 95 % domácností"
     },
     {
-      "typ": "Voda - voda",
+      "typ": "Voda-voda",
       "cena": "od 379 000 Kč",
       "desc": "Pro objekty se studnou s vydatným zdrojem vody"
     },
     {
-      "typ": "Země - voda",
+      "typ": "Země-voda",
       "cena": "od 409 000 Kč",
       "desc": "Nejvyšší účinnost, v létě umí i úsporně chladit"
     }
