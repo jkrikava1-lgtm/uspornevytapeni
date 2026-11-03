@@ -41,7 +41,7 @@
   "modely_note": "Ceny jsou na klíč - dodávka, montáž, zásobník teplé vody, zapojení a uvedení do provozu. Nezahrnují dotaci, o kterou lze cenu ještě snížit.",
   "typy_label": "Cena podle typu",
   "typy_headline": "Kolik stojí jednotlivé typy tepelných čerpadel",
-  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduch-voda odpadají zemní práce, u země-voda je v nejnižší ceně i zdroj tepla, tedy plošný kolektor - s vrtem systém vyjde dráž. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
+  "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduch-voda odpadají zemní práce, u země-voda je v nejnižší ceně i zdroj tepla, tedy plošný kolektor - s vrtem systém vyjde dráž.",
   "typy": [
     {
       "typ": "Vzduch-voda",
