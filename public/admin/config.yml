@@ -255,30 +255,6 @@ collections:
           - { label: "Úvod — text (HTML)", name: intro_text, widget: markdown }
           - { label: "Úvod — zvýrazněný text (HTML)", name: intro_highlight, widget: markdown }
 
-          # --- Ceníky ---
-          - { label: "Badge nejoblíbenější", name: highlight_badge, widget: string }
-
-          - { label: "Ceník 1 — typ", name: price1_typ, widget: string }
-          - { label: "Ceník 1 — cenový rozsah", name: price1_rozsah, widget: string }
-          - { label: "Ceník 1 — poznámka", name: price1_poznamka, widget: string }
-          - { label: "Ceník 1 — bod 1", name: price1_body1, widget: string }
-          - { label: "Ceník 1 — bod 2", name: price1_body2, widget: string }
-          - { label: "Ceník 1 — bod 3", name: price1_body3, widget: string }
-
-          - { label: "Ceník 2 — typ", name: price2_typ, widget: string }
-          - { label: "Ceník 2 — cenový rozsah", name: price2_rozsah, widget: string }
-          - { label: "Ceník 2 — poznámka", name: price2_poznamka, widget: string }
-          - { label: "Ceník 2 — bod 1", name: price2_body1, widget: string }
-          - { label: "Ceník 2 — bod 2", name: price2_body2, widget: string }
-          - { label: "Ceník 2 — bod 3", name: price2_body3, widget: string }
-
-          - { label: "Ceník 3 — typ", name: price3_typ, widget: string }
-          - { label: "Ceník 3 — cenový rozsah", name: price3_rozsah, widget: string }
-          - { label: "Ceník 3 — poznámka", name: price3_poznamka, widget: string }
-          - { label: "Ceník 3 — bod 1", name: price3_body1, widget: string }
-          - { label: "Ceník 3 — bod 2", name: price3_body2, widget: string }
-          - { label: "Ceník 3 — bod 3", name: price3_body3, widget: string }
-
           # --- Modelové příklady ---
           # Dokud je seznam prázdný, sekce se na webu nezobrazí.
           - { label: "Modelové příklady — štítek sekce", name: modely_label, widget: string }
@@ -309,6 +285,13 @@ collections:
               - { label: "Typ čerpadla", name: typ, widget: string }
               - { label: "Kotva v URL (bez #)", name: anchor, widget: string }
               - { label: "Cena od", name: cena, widget: string }
+              - { label: "Nadpis seznamu co je v ceně", name: obsahuje_title, widget: string, required: false }
+              - label: "Co je v ceně"
+                name: obsahuje
+                widget: list
+                required: false
+                field:
+                  { label: "Položka", name: item, widget: string }
               - { label: "Popis", name: text, widget: text }
               - label: "Co cenu nejvíc ovlivní"
                 name: ovlivnuje
@@ -319,6 +302,10 @@ collections:
               - { label: "COP (rozsah dle modelů)", name: cop, widget: string }
               - { label: "Odkaz na katalog", name: katalog_href, widget: string }
               - { label: "Text odkazu na katalog", name: katalog_label, widget: string }
+              - { label: "Odkaz na stránku typu", name: detail_href, widget: string }
+              - { label: "Obrázek karty", name: image, widget: image }
+              - { label: "Popis obrázku", name: image_alt, widget: string }
+              - { label: "Štítek v rohu (nepovinné, např. Nejčastější volba)", name: badge, widget: string, required: false }
           - { label: "Podle typu — poznámka pod sekcí", name: typy_note, widget: text }
           - { label: "Podle typu — tlačítko", name: typy_cta, widget: string }
 
@@ -356,6 +343,16 @@ collections:
           - { label: "Nástroj 2 — název", name: tool2_title, widget: string }
           - { label: "Nástroj 2 — popis", name: tool2_desc, widget: text }
           - { label: "Nástroj 2 — CTA", name: tool2_cta, widget: string }
+
+          # --- Časté dotazy ---
+          # Zobrazují se i ve vyhledávání jako strukturovaná data.
+          - { label: "Časté dotazy — nadpis", name: faq_headline, widget: string }
+          - label: "Časté dotazy"
+            name: faq
+            widget: list
+            fields:
+              - { label: "Otázka", name: q, widget: string }
+              - { label: "Odpověď", name: a, widget: text }
 
           # --- CTA ---
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
