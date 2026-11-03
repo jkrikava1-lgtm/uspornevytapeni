@@ -47,7 +47,7 @@
       "typ": "Vzduch-voda",
       "anchor": "cena-vzduch-voda",
       "cena": "od 309 000 Kč",
-      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje_title": "Co je v ceně",
       "obsahuje": [
         "DPH",
         "montáž na klíč",
@@ -75,7 +75,7 @@
       "typ": "Voda-voda",
       "anchor": "cena-voda-voda",
       "cena": "od 379 000 Kč",
-      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje_title": "Co je v ceně",
       "obsahuje": [
         "DPH",
         "montáž na klíč",
@@ -102,7 +102,7 @@
       "typ": "Země-voda",
       "anchor": "cena-zeme-voda",
       "cena": "od 409 000 Kč",
-      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje_title": "Co je v ceně",
       "obsahuje": [
         "DPH",
         "montáž na klíč",
