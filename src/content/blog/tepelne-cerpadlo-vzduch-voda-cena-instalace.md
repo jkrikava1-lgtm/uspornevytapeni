@@ -1,6 +1,6 @@
 ---
 title: "Tepelné čerpadlo vzduch-voda: cena, instalace a provoz"
-description: "Tepelné čerpadlo vzduch-voda od 334 000 Kč s montáží. Jak probíhá instalace, kolik stojí provoz a kdy se investice vrátí. Reálná čísla z praxe."
+description: "Tepelné čerpadlo vzduch-voda od 309 000 Kč s montáží. Jak probíhá instalace, kolik stojí provoz a kdy se investice vrátí. Reálná čísla z praxe."
 pubDate: 2026-06-15
 author: "Jakub Křikava"
 category: "Průvodce"
@@ -15,7 +15,7 @@ Cena systému vzduch-voda zahrnuje venkovní jednotku, vnitřní část, zásobn
 
 | Velikost domu | Tepelná ztráta | Model | Cena systému |
 |---|---|---|---|
-| cca 120 m² | do 8,5 kW | BoxAir 26I PLUS | od 334 000 Kč |
+| cca 120 m² | do 8,5 kW | BoxAir 26I PLUS | od 309 000 Kč |
 | cca 160 m² | do 13 kW | BoxAir 37I PLUS | od 389 000 Kč |
 | cca 220 m² | do 19 kW | BoxAir 45I PLUS | od 409 000 Kč |
 

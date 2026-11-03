@@ -1,6 +1,6 @@
 {
-  "meta_title": "Cena tepelného čerpadla včetně montáže - od 334 000 Kč",
-  "meta_description": "Kolik stojí tepelné čerpadlo včetně montáže? Vzduch-voda od 334 000 Kč, země-voda od 429 000 Kč - cena na klíč včetně dodávky a uvedení do provozu.",
+  "meta_title": "Cena tepelného čerpadla včetně montáže - od 309 000 Kč",
+  "meta_description": "Kolik stojí tepelné čerpadlo včetně montáže? Vzduch-voda od 309 000 Kč, země-voda od 429 000 Kč - cena na klíč včetně dodávky a uvedení do provozu.",
   "hero_title": "Cena tepelného čerpadla",
   "hero_subtitle": "Cena závisí na typu objektu, výkonu a zvoleném systému. Orientační rozsahy vám pomohou se zorientovat - přesnou nabídku připravíme zdarma.",
   "intro_headline": "Cena systému, ne jen čerpadla",
@@ -12,7 +12,7 @@
   "modely": [
     {
       "plocha": "cca 120 m²",
-      "cena": "cca 334 000 Kč",
+      "cena": "cca 309 000 Kč",
       "model": "BoxAir 26I PLUS",
       "ztrata": "do 8,5 kW",
       "system": "radiátory",
@@ -46,7 +46,15 @@
     {
       "typ": "Vzduch - voda",
       "anchor": "cena-vzduch-voda",
-      "cena": "od 334 000 Kč",
+      "cena": "od 309 000 Kč",
+      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje": [
+        "DPH",
+        "montáž na klíč",
+        "zásobník teplé vody",
+        "záruka 7 let",
+        "online monitoring"
+      ],
       "text": "Nejčastější volba, vhodná zhruba pro 95 % domácností. Teplo odebírá z venkovního vzduchu, takže nepotřebuje vrty ani zemní práce - instalace je tím pádem nejrychlejší i nejlevnější ze všech typů.",
       "ovlivnuje": [
         "Výkon čerpadla podle tepelné ztráty domu",
@@ -67,6 +75,14 @@
       "typ": "Voda - voda",
       "anchor": "cena-voda-voda",
       "cena": "od 379 000 Kč",
+      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje": [
+        "DPH",
+        "montáž na klíč",
+        "zásobník teplé vody",
+        "záruka 7 let",
+        "online monitoring"
+      ],
       "text": "Nejvyšší účinnost ze všech typů - čerpá teplo z podzemní vody, která má přes celý rok stálou teplotu. Podmínkou je vydatný zdroj vody. Cenu nejvíc rozhýbe hydrogeologický průzkum a provedení studní.",
       "ovlivnuje": [
         "Výsledek hydrogeologického průzkumu",
@@ -86,6 +102,14 @@
       "typ": "Země - voda",
       "anchor": "cena-zeme-voda",
       "cena": "od 429 000 Kč",
+      "obsahuje_title": "V ceně je všechno tohle",
+      "obsahuje": [
+        "DPH",
+        "montáž na klíč",
+        "zásobník teplé vody",
+        "záruka 7 let",
+        "online monitoring"
+      ],
       "text": "Nejstabilnější provoz i v mrazech, protože teplota v zemi se přes rok téměř nemění. V ceně je i zdroj tepla - hloubkové vrty nebo plošný zemní kolektor - a právě proto je pořizovací cena nejvyšší. V létě systém umí úsporně chladit.",
       "ovlivnuje": [
         "Počet a hloubka vrtů, nebo plocha zemního kolektoru",
@@ -137,11 +161,11 @@
   "faq": [
     {
       "q": "Kolik stojí tepelné čerpadlo?",
-      "a": "Záleží na typu a výkonu. Vzduch-voda stojí od 334 000 Kč, voda-voda od 379 000 Kč a země-voda od 429 000 Kč. Všechny ceny jsou na klíč - zahrnují dodávku čerpadla, zásobník teplé vody, montáž, elektroinstalaci a uvedení do provozu. Přesnou cenu určí tepelná ztráta vašeho domu - podle ní navrhneme konkrétní model a připravíme nabídku."
+      "a": "Záleží na typu a výkonu. Vzduch-voda stojí od 309 000 Kč, voda-voda od 379 000 Kč a země-voda od 429 000 Kč. Všechny ceny jsou na klíč - jsou včetně DPH a zahrnují dodávku čerpadla, zásobník teplé vody, montáž, elektroinstalaci, uvedení do provozu, záruku 7 let i online monitoring. Přesnou cenu určí tepelná ztráta vašeho domu - podle ní navrhneme konkrétní model a připravíme nabídku."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo vzduch-voda?",
-      "a": "Kompletní instalace tepelného čerpadla vzduch-voda začíná od 334 000 Kč. Cena zahrnuje čerpadlo Master Therm BoxAir, zásobník TUV, montáž, elektroinstalaci a uvedení do provozu. Vzduch-voda je nejčastější volba - hodí se pro 95 % domů a instalace nevyžaduje vrty ani zemní práce."
+      "a": "Kompletní instalace tepelného čerpadla vzduch-voda začíná od 309 000 Kč. Cena je včetně DPH a zahrnuje čerpadlo Master Therm BoxAir, zásobník TUV, montáž, elektroinstalaci, uvedení do provozu, záruku 7 let i online monitoring. Vzduch-voda je nejčastější volba - hodí se pro 95 % domů a instalace nevyžaduje vrty ani zemní práce."
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s vrty (země-voda)?",
@@ -149,7 +173,7 @@
     },
     {
       "q": "Kolik stojí tepelné čerpadlo s montáží?",
-      "a": "Montáž je vždy součástí naší ceny na klíč. Vzduch-voda od 334 000 Kč, voda-voda od 379 000 Kč, země-voda od 429 000 Kč. Cena zahrnuje dodávku, montáž, elektroinstalaci, zapojení na HDO tarif a uvedení do provozu. Žádné skryté poplatky."
+      "a": "Montáž je vždy součástí naší ceny na klíč. Vzduch-voda od 309 000 Kč, voda-voda od 379 000 Kč, země-voda od 429 000 Kč. Cena je včetně DPH a zahrnuje dodávku, montáž, elektroinstalaci, zapojení na HDO tarif, uvedení do provozu, záruku 7 let i online monitoring. Žádné skryté poplatky."
     },
     {
       "q": "Lze cenu snížit dotací?",
