@@ -27,36 +27,46 @@
     "Spider"
   ],
   "porovnani_radky": [
-    [
-      "Stavební výška",
-      "15-21 cm",
-      "5,3 cm",
-      "2,7 cm"
-    ],
-    [
-      "Bourá se původní podlaha",
-      "ano",
-      "ne",
-      "ne"
-    ],
-    [
-      "Systémová deska",
-      "373 Kč/m²",
-      "1 317 Kč/m²",
-      "617 Kč/m²"
-    ],
-    [
-      "Mokrý proces",
-      "beton nebo anhydrit",
-      "žádný",
-      "samonivelační hmota"
-    ],
-    [
-      "První zátop",
-      "po vyzrání potěru",
-      "ihned po montáži",
-      "nejdříve po 7 dnech"
-    ]
+    {
+      "bunky": [
+        "Stavební výška",
+        "15-21 cm",
+        "5,3 cm",
+        "2,7 cm"
+      ]
+    },
+    {
+      "bunky": [
+        "Bourá se původní podlaha",
+        "ano",
+        "ne",
+        "ne"
+      ]
+    },
+    {
+      "bunky": [
+        "Systémová deska",
+        "373 Kč/m²",
+        "1 317 Kč/m²",
+        "617 Kč/m²"
+      ]
+    },
+    {
+      "bunky": [
+        "Mokrý proces",
+        "beton nebo anhydrit",
+        "žádný",
+        "samonivelační hmota"
+      ]
+    },
+    {
+      "bunky": [
+        "První zátop",
+        "po vyzrání potěru",
+        "ihned po montáži",
+        "nejdříve po 7 dnech"
+      ]
+    }
   ],
   "porovnani_pozn": "Ceny jsou za systémovou desku, ve které je mezi variantami hlavní rozdíl - ostatní komponenty vyjdou přibližně stejně. U klasické cesty proti tomu připočtěte bourání, odvoz suti, betonáž a týdny schnutí.",
   "suchy_title": "Suchý systém - položí se na stávající podlahu",

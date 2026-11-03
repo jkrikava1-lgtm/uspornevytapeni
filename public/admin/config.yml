@@ -116,6 +116,11 @@ collections:
   # ============================================================
   # ÚVODNÍ STRÁNKA (homepage.json)
   # ============================================================
+
+          # --- Doplněno ---
+          - { label: "Krátký název firmy", name: name_short, widget: string }
+          - { label: "Mapa — adresa dlaždic (technické)", name: map_tiles, widget: string }
+          - { label: "Mapa — popisek zdroje (HTML)", name: map_attribution, widget: string }
   - name: homepage
     label: "Úvodní stránka"
     files:
@@ -182,6 +187,7 @@ collections:
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji", name: emoji, widget: string }
               - { label: "URL", name: href, widget: string }
+              - { label: "Obrázek", name: image, widget: image, required: false }
 
           # --- Úspory / graf ---
           - { label: "Úspory — štítek sekce", name: savings_label, widget: string }
@@ -234,6 +240,9 @@ collections:
   # ============================================================
   # CENA TEPELNÉHO ČERPADLA (cena.json)
   # ============================================================
+
+          - { label: "Statistika 4 — číslo", name: stat4_number, widget: string }
+          - { label: "Statistika 4 — popis", name: stat4_label, widget: string }
   - name: cena
     label: "Stránka Cena"
     files:
@@ -392,39 +401,11 @@ collections:
               - { label: "Popis", name: popis, widget: text }
 
           # --- Změna dotace vs. úvěry ---
-          - { label: "Změna — nadpis", name: zmena_headline, widget: string }
-          - { label: "Změna — úvod", name: zmena_intro, widget: text }
 
           # --- Běžné domácnosti ---
-          - { label: "Běžné — nadpis", name: bezne_title, widget: string }
-          - { label: "Běžné — podnadpis", name: bezne_subtitle, widget: string }
-          - { label: "Běžné — popis (HTML)", name: bezne_desc, widget: markdown }
-          - { label: "Běžné — jak to funguje (HTML)", name: bezne_jak, widget: markdown }
-          - { label: "Běžné — výhoda (HTML)", name: bezne_vyhoda, widget: markdown }
-          - { label: "Běžné — nevýhoda (HTML)", name: bezne_nevyhoda, widget: markdown }
 
           # --- Zranitelné domácnosti ---
-          - { label: "Zranitelné — nadpis", name: zranitelne_title, widget: string }
-          - { label: "Zranitelné — podnadpis", name: zranitelne_subtitle, widget: string }
-          - { label: "Zranitelné — popis (HTML)", name: zranitelne_desc, widget: markdown }
-          - label: "Zranitelné — přehled podpory"
-            name: zranitelne_body
-            widget: list
-            fields:
-              - { label: "Popisek", name: label, widget: string }
-              - { label: "Hodnota", name: value, widget: string }
-
           # --- Podpora TČ ---
-          - { label: "Podpora TČ — nadpis", name: tc_headline, widget: string }
-          - { label: "Podpora TČ — úvod", name: tc_intro, widget: text }
-          - label: "Podpora TČ — položky"
-            name: tc_body
-            widget: list
-            fields:
-              - { label: "Popisek", name: label, widget: string }
-              - { label: "Hodnota", name: value, widget: string }
-          - { label: "Podpora TČ — poznámka", name: tc_note, widget: text }
-
           # --- Renovační pas ---
           - { label: "Renovační pas — nadpis", name: renovacni_headline, widget: string }
           - { label: "Renovační pas — úvod", name: renovacni_intro, widget: text }
@@ -448,6 +429,59 @@ collections:
   # jsou domluvené s DataAds kvůli skóre kvality reklam — neměnit
   # bez konzultace.
   # ============================================================
+
+          # --- Příjmové skupiny ---
+          - { label: "Skupiny — nadpis", name: skupiny_headline, widget: string }
+          - { label: "Skupiny — úvodní text", name: skupiny_intro, widget: text }
+          - label: "Běžné domácnosti"
+            name: skupina_bezne
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Úvodní text", name: lead, widget: text }
+              - { label: "Částky — nadpis", name: castky_title, widget: string }
+              - label: "Částky"
+                name: castky
+                widget: list
+                fields:
+                  - { label: "Popis", name: label, widget: string }
+                  - { label: "Částka", name: value, widget: string }
+              - { label: "Podmínky — nadpis", name: podminky_title, widget: string }
+              - label: "Podmínky (lze použít HTML)"
+                name: podminky
+                widget: list
+                field: { label: "Podmínka", name: item, widget: text }
+          - label: "Zranitelné domácnosti"
+            name: skupina_zranitelne
+            widget: object
+            fields:
+              - { label: "Nadpis", name: title, widget: string }
+              - { label: "Podnadpis", name: subtitle, widget: string }
+              - { label: "Úvodní text", name: lead, widget: text }
+              - { label: "Částky — nadpis", name: castky_title, widget: string }
+              - label: "Částky"
+                name: castky
+                widget: list
+                fields:
+                  - { label: "Popis", name: label, widget: string }
+                  - { label: "Částka", name: value, widget: string }
+              - { label: "Podmínky — nadpis", name: podminky_title, widget: string }
+              - label: "Podmínky (lze použít HTML)"
+                name: podminky
+                widget: list
+                field: { label: "Podmínka", name: item, widget: text }
+
+          # --- Časté dotazy ---
+          # Zobrazují se i ve vyhledávání jako strukturovaná data.
+          - { label: "Časté dotazy — nadpis", name: faq_headline, widget: string }
+          - label: "Časté dotazy"
+            name: faq
+            widget: list
+            fields:
+              - { label: "Kotva pro odkazování (nepovinné)", name: id, widget: string, required: false }
+              - { label: "Otázka", name: q, widget: string }
+              - { label: "Odpověď", name: a, widget: text }
   - name: mastertherm
     label: "Dopadová stránka — Master Therm (PPC)"
     files:
@@ -862,6 +896,9 @@ collections:
   # ============================================================
   # POROVNÁNÍ NÁKLADŮ (porovnani-nakladu.json)
   # ============================================================
+
+          - { label: "Obec — popisek pole", name: label_obec, widget: string }
+          - { label: "Obec — nápověda v poli", name: placeholder_obec, widget: string }
   - name: porovnani-nakladu
     label: "Stránka Porovnání nákladů"
     files:
@@ -1135,6 +1172,8 @@ collections:
   # ============================================================
   # TEPELNÁ ČERPADLA — země-voda (zeme-voda.json)
   # ============================================================
+
+          - { label: "Úvod — třetí odstavec (HTML)", name: intro_text3, widget: markdown }
   - name: zeme-voda
     label: "TČ Země–voda"
     files:
@@ -1264,6 +1303,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Text odkazu na kartě", name: card_link_text, widget: string }
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
@@ -1790,6 +1830,7 @@ collections:
               - { label: "Podnadpis", name: subtitle, widget: string }
               - { label: "Banner gradient", name: bannerGradient, widget: string }
               - { label: "Banner overlay", name: bannerOverlay, widget: string }
+              - { label: "Banner obrázek", name: bannerImage, widget: image, required: false }
               - { label: "Barva podnadpisu", name: subtitleColor, widget: string }
               - label: "Obrázky produktu"
                 name: productImages
@@ -1851,8 +1892,18 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
               - { label: "Obrázek", name: img, widget: image }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
+              - label: "Podřízené odkazy"
+                name: children
+                widget: list
+                required: false
+                fields:
+                  - { label: "URL", name: href, widget: string }
+                  - { label: "Název", name: title, widget: string }
+                  - { label: "Ikona (SVG path)", name: icon, widget: string, required: false }
+                  - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
           - { label: "Text odkazu Více", name: link_more, widget: string }
           - { label: "Sekce — topný systém nadpis", name: section_topny_system, widget: string }
           - label: "Odkazy topný systém"
@@ -1863,6 +1914,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Sekce — chlazení nadpis", name: section_chlazeni, widget: string }
           - label: "Odkazy chlazení"
@@ -1873,6 +1925,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "Sekce — konfigurace nadpis", name: section_konfigurace, widget: string }
           - label: "Odkazy konfigurace"
@@ -1883,6 +1936,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
               - { label: "Ikona (SVG path)", name: icon, widget: string }
           - { label: "CTA — nadpis", name: cta_headline, widget: string }
           - { label: "CTA — text", name: cta_text, widget: text }
@@ -1891,6 +1945,15 @@ collections:
   # ============================================================
   # NÁVRH ŘEŠENÍ — novostavba (novostavba.json)
   # ============================================================
+
+          - label: "Společný odkaz pod rozcestníkem"
+            name: shared_link
+            widget: object
+            fields:
+              - { label: "URL", name: href, widget: string }
+              - { label: "Název", name: title, widget: string }
+              - { label: "Popis", name: desc, widget: string }
+              - { label: "Ikona", name: icon_img, widget: image }
   - name: novostavba
     label: "Návrh řešení — Novostavba"
     files:
@@ -1943,6 +2006,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
 
   # ============================================================
   # NÁVRH ŘEŠENÍ — stávající dům (stavajici-dum.json)
@@ -2000,6 +2064,7 @@ collections:
               - { label: "Název", name: title, widget: string }
               - { label: "Popis", name: desc, widget: text }
               - { label: "Emoji ikona", name: emoji, widget: string, required: false }
+              - { label: "Ikona (obrázek)", name: icon_img, widget: image, required: false }
 
   # ============================================================
   # NÁVRH ŘEŠENÍ — velký výkon (velky-vykon.json)
@@ -2050,19 +2115,34 @@ collections:
           - { label: "CTA — text", name: cta_text, widget: text }
           - { label: "CTA — tlačítko 1", name: cta_button1, widget: string }
           - { label: "CTA — tlačítko 2", name: cta_button2, widget: string }
-          - { label: "Související — nadpis", name: related_headline, widget: string }
-          - label: "Související položky"
-            name: related_items
-            widget: list
-            fields:
-              - { label: "URL", name: href, widget: string }
-              - { label: "Název", name: title, widget: string }
-              - { label: "Popis", name: desc, widget: text }
-              - { label: "Emoji ikona", name: emoji, widget: string, required: false }
 
   # ============================================================
   # KONFIGURACE — podlahové topení (podlahove-topeni.json)
   # ============================================================
+
+          # --- Konfigurace systému ---
+          - { label: "Konfigurace — nadpis", name: konfigurace_headline, widget: string }
+          - { label: "Jeden kompresor — nadpis", name: konfig_jedno_title, widget: string }
+          - { label: "Jeden kompresor — popis", name: konfig_jedno_desc, widget: text }
+          - { label: "Jeden kompresor — modely", name: konfig_jedno_modely, widget: string }
+          - { label: "Dva kompresory — nadpis", name: konfig_dvou_title, widget: string }
+          - { label: "Dva kompresory — popis", name: konfig_dvou_desc, widget: text }
+          - label: "Dva kompresory — body"
+            name: konfig_dvou_body
+            widget: list
+            field: { label: "Bod", name: item, widget: string }
+          - { label: "Kaskády — nadpis", name: konfig_kaskady_title, widget: string }
+          - { label: "Kaskády — popis", name: konfig_kaskady_desc, widget: text }
+          - label: "Kaskády — body"
+            name: konfig_kaskady_body
+            widget: list
+            field: { label: "Bod", name: item, widget: string }
+
+          # --- Další segmenty ---
+          - { label: "Segment 4 — typ", name: segment4_typ, widget: string }
+          - { label: "Segment 4 — popis", name: segment4_popis, widget: text }
+          - { label: "Segment 5 — typ", name: segment5_typ, widget: string }
+          - { label: "Segment 5 — popis", name: segment5_popis, widget: text }
   - name: podlahove-topeni
     label: "Konfigurace — Podlahové topení"
     files:
@@ -2089,6 +2169,12 @@ collections:
   # ============================================================
   # KONFIGURACE — podlahové topení starší dům (podlahove-topeni-starsi-dum.json)
   # ============================================================
+
+          # --- Video ---
+          - { label: "Video — soubor", name: video_soubor, widget: file }
+          - { label: "Video — náhledový obrázek", name: video_nahled, widget: image }
+          - { label: "Video — popisek", name: video_popisek, widget: text }
+          - { label: "Video — poznámka", name: video_pozn, widget: string }
   - name: podlahove-topeni-starsi-dum
     label: "Konfigurace — Podlahovka ve starším domě"
     files:
@@ -2114,6 +2200,70 @@ collections:
   # ============================================================
   # KONFIGURACE — radiátory (radiatory.json)
   # ============================================================
+
+          # --- Skladba a porovnání ---
+          - { label: "Skladba — nadpis", name: skladba_title, widget: string }
+          - { label: "Skladba — úvodní text", name: skladba_intro, widget: text }
+          - { label: "Porovnání — nadpis", name: porovnani_title, widget: string }
+          - label: "Porovnání — záhlaví tabulky"
+            name: porovnani_hlavicka
+            widget: list
+            field: { label: "Sloupec", name: item, widget: string }
+          - label: "Porovnání — řádky tabulky"
+            name: porovnani_radky
+            widget: list
+            fields:
+              - label: "Buňky řádku (první je název parametru)"
+                name: bunky
+                widget: list
+                field: { label: "Buňka", name: item, widget: string }
+          - { label: "Porovnání — poznámka", name: porovnani_pozn, widget: text }
+
+          # --- Klasická cesta ---
+          - { label: "Klasická cesta — nadpis", name: klasika_title, widget: string }
+          - { label: "Klasická cesta — video soubor", name: klasika_video_soubor, widget: file }
+          - { label: "Klasická cesta — náhled videa", name: klasika_video_nahled, widget: image }
+          - { label: "Klasická cesta — popisek videa", name: klasika_video_popisek, widget: text }
+          - { label: "Klasická cesta — poznámka k videu", name: klasika_video_pozn, widget: string }
+
+          # --- Suchý systém ---
+          - { label: "Suchý systém — nadpis", name: suchy_title, widget: string }
+          - { label: "Suchý systém — text", name: suchy_text1, widget: text }
+          - label: "Suchý systém — body"
+            name: suchy_body
+            widget: list
+            field: { label: "Bod", name: item, widget: string }
+          - label: "Suchý systém — fotky"
+            name: suchy_fotky
+            widget: list
+            fields:
+              - { label: "Obrázek", name: src, widget: image }
+              - { label: "Šířka v bodech", name: w, widget: number, value_type: int }
+              - { label: "Výška v bodech", name: h, widget: number, value_type: int }
+              - { label: "Popis pro čtečky", name: alt, widget: string }
+              - { label: "Popisek pod obrázkem", name: popisek, widget: text }
+          - { label: "Suchý systém — zdroj fotek", name: suchy_foto_zdroj, widget: string }
+
+          # --- Spider ---
+          - { label: "Spider — nadpis", name: spider_title, widget: string }
+          - { label: "Spider — text", name: spider_text1, widget: text }
+          - label: "Spider — body"
+            name: spider_body
+            widget: list
+            field: { label: "Bod", name: item, widget: string }
+          - { label: "Spider — video soubor", name: video_soubor, widget: file }
+          - { label: "Spider — náhled videa", name: video_nahled, widget: image }
+          - { label: "Spider — popisek videa", name: video_popisek, widget: string }
+          - { label: "Spider — poznámka k videu", name: video_pozn, widget: string }
+
+          # --- Kdy to nejde ---
+          - { label: "Limity — nadpis", name: limit_title, widget: string }
+          - { label: "Limity — úvodní text", name: limit_lead, widget: text }
+          - label: "Limity — body"
+            name: limit_body
+            widget: list
+            field: { label: "Bod", name: item, widget: text }
+          - { label: "Limity — závěr", name: limit_zaver, widget: text }
   - name: radiatory
     label: "Konfigurace — Radiátory"
     files:
@@ -2135,6 +2285,11 @@ collections:
   # ============================================================
   # KONFIGURACE — velikost radiátorů (velikost-radiatoru.json)
   # ============================================================
+
+          - { label: "Tabulka — nadpis", name: tabulka_title, widget: string }
+          - { label: "Tabulka — úvodní text", name: tabulka_intro, widget: text }
+          - { label: "Fotka — popis pro čtečky", name: foto_alt, widget: string }
+          - { label: "Fotka — popisek pod obrázkem", name: foto_popisek, widget: text }
   - name: velikost-radiatoru
     label: "Konfigurace — Úprava radiátorů"
     files:
@@ -2173,6 +2328,9 @@ collections:
   # ============================================================
   # KONFIGURACE — kombinace topných okruhů (kombinace-topnych-okruhu.json)
   # ============================================================
+
+          - { label: "Fotka — popis pro čtečky", name: foto_alt, widget: string }
+          - { label: "Fotka — popisek pod obrázkem", name: foto_popisek, widget: text }
   - name: kombinace-topnych-okruhu
     label: "Konfigurace — Kombinace okruhů"
     files:
