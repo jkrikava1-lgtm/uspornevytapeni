@@ -44,7 +44,7 @@
   "typy_lead": "Pořizovací cena se liší hlavně tím, odkud čerpadlo bere teplo. U vzduchu odpadají zemní práce, u vody a země je v ceně i zdroj - vrty, kolektor nebo studny. Ceny jsou na klíč, tedy včetně montáže, zásobníku teplé vody a uvedení do provozu.",
   "typy": [
     {
-      "typ": "Vzduch - voda",
+      "typ": "Vzduch-voda",
       "anchor": "cena-vzduch-voda",
       "cena": "od 309 000 Kč",
       "obsahuje_title": "V ceně je všechno tohle",
@@ -65,14 +65,14 @@
       "rady": "BoxAir Inverter 2-35 kW · BoxAir Inverter P s chladivem R290 2-50 kW · Split 2-35 kW",
       "cop": "3,3",
       "katalog_href": "/katalog/vzduch-voda",
-      "katalog_label": "Katalog vzduch - voda",
+      "katalog_label": "Katalog vzduch-voda",
       "image": "/images/produkty/boxair-kompakt-dum.webp",
       "image_alt": "Tepelné čerpadlo vzduch-voda BoxAir u rodinného domu",
       "badge": "Nejčastější volba",
       "detail_href": "/tepelna-cerpadla/vzduch-voda"
     },
     {
-      "typ": "Voda - voda",
+      "typ": "Voda-voda",
       "anchor": "cena-voda-voda",
       "cena": "od 379 000 Kč",
       "obsahuje_title": "V ceně je všechno tohle",
@@ -93,13 +93,13 @@
       "rady": "AquaMaster Inverter 1-54 kW · AquaMaster Inverter P s chladivem R290 2-80 kW",
       "cop": "5,0",
       "katalog_href": "/katalog/voda-voda",
-      "katalog_label": "Katalog voda - voda",
+      "katalog_label": "Katalog voda-voda",
       "image": "/images/ilustrace/zeme-voda.webp",
       "image_alt": "Tepelné čerpadlo voda-voda AquaMaster",
       "detail_href": "/tepelna-cerpadla/voda-voda"
     },
     {
-      "typ": "Země - voda",
+      "typ": "Země-voda",
       "anchor": "cena-zeme-voda",
       "cena": "od 429 000 Kč",
       "obsahuje_title": "V ceně je všechno tohle",
@@ -120,7 +120,7 @@
       "rady": "AquaMaster Inverter 1-48 kW · AquaMaster Inverter P s chladivem R290 1-70 kW",
       "cop": "4,3",
       "katalog_href": "/katalog/zeme-voda",
-      "katalog_label": "Katalog země - voda",
+      "katalog_label": "Katalog země-voda",
       "image": "/images/produkty/aquamaster-technicka.webp",
       "image_alt": "Tepelné čerpadlo země-voda AquaMaster",
       "detail_href": "/tepelna-cerpadla/zeme-voda"
