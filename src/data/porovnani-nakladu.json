@@ -15,19 +15,18 @@
   "kalkulacka_pozn": "Orientační přepočet. Vychází ze stejných sazeb za kWh jako tabulka výše, takže u referenčního domu dá stejná čísla. Vaše skutečné náklady ovlivní zateplení, tarif i způsob ohřevu vody.",
   "chart_items": [
     {
-      "label": "Palivové dřevo",
-      "value": 29000,
-      "color": "bg-amber-500",
-      "poznamka": "Klasický kotel na dřevo (3. emisní třída), účinnost 65 %",
-      "uspory": "levnější palivo, ale pracné"
-    },
-    {
       "label": "Tepelné čerpadlo",
       "value": 39000,
       "color": "bg-emerald-500",
       "poznamka": "Vzduch/voda, COP 3,3",
-      "uspory": "",
       "highlight": true
+    },
+    {
+      "label": "Palivové dřevo",
+      "value": 42000,
+      "color": "bg-amber-500",
+      "poznamka": "Klasický kotel na dřevo (3. emisní třída), účinnost 65 %, teplá voda z elektrického bojleru",
+      "uspory": "~3 000 Kč/rok"
     },
     {
       "label": "Hnědé uhlí",
@@ -59,10 +58,10 @@
     },
     {
       "label": "Elektřina přímotop",
-      "value": 119000,
+      "value": 124000,
       "color": "bg-rose-600",
       "poznamka": "Elektrokotel, podlahové rohože a fólie, konvekční a sálavé panely, akumulační kamna i teplovodní akumulační nádrže, účinnost 95 %",
-      "uspory": "~80 000 Kč/rok"
+      "uspory": "~85 000 Kč/rok"
     }
   ],
   "factors_headline": "Faktory ovlivňující úsporu",
