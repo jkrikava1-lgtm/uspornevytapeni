@@ -37,6 +37,13 @@
       "uspory": "~13 000 Kč/rok"
     },
     {
+      "label": "Propan",
+      "value": 54000,
+      "color": "bg-violet-500",
+      "poznamka": "Kondenzační kotel na propan, účinnost 102 %",
+      "uspory": "~17 000 Kč/rok"
+    },
+    {
       "label": "Dřevní pelety",
       "value": 58000,
       "color": "bg-cyan-600",
