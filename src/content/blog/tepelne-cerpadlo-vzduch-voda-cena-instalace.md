@@ -41,11 +41,11 @@ Tepelné čerpadlo vzduch-voda dosahuje průměrného topného faktoru **COP 3,3
 
 | Zdroj | Roční náklady |
 |---|---|
-| Tepelné čerpadlo vzduch-voda (COP 3,3) | ~37 000 Kč |
-| Zemní plyn (kondenzační kotel) | ~65 000 Kč |
-| Elektrokotel a přímotopy | ~106 000 Kč |
+| Tepelné čerpadlo vzduch-voda (COP 3,3) | ~39 000 Kč |
+| Zemní plyn (kondenzační kotel) | ~71 000 Kč |
+| Elektrokotel a přímotopy | ~119 000 Kč |
 
-Proti plynu tedy ušetříte kolem **28 000 Kč ročně**, proti elektrickému vytápění zhruba 69 000 Kč. Celé srovnání včetně pelet, uhlí a dřeva najdete v [porovnání nákladů](/porovnani-nakladu).
+Proti plynu tedy ušetříte kolem **32 000 Kč ročně**, proti elektrickému vytápění zhruba 80 000 Kč. Celé srovnání včetně pelet, uhlí a dřeva najdete v [porovnání nákladů](/porovnani-nakladu).
 
 ## Funguje i při velkých mrazech?
 

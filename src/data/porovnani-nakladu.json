@@ -23,46 +23,46 @@
     },
     {
       "label": "Tepelné čerpadlo",
-      "value": 37000,
+      "value": 39000,
       "color": "bg-emerald-500",
       "poznamka": "Vzduch/voda, COP 3,3",
       "uspory": "",
       "highlight": true
     },
     {
-      "label": "Propan",
-      "value": 54000,
-      "color": "bg-violet-500",
-      "poznamka": "Kondenzační kotel na propan, účinnost 102 %",
-      "uspory": "~17 000 Kč/rok"
-    },
-    {
       "label": "Hnědé uhlí",
       "value": 57000,
       "color": "bg-stone-600",
       "poznamka": "Klasický kotel na uhlí (3. emisní třída), účinnost 75 %",
-      "uspory": "~20 000 Kč/rok"
+      "uspory": "~18 000 Kč/rok"
     },
     {
       "label": "Dřevní pelety",
-      "value": 58000,
+      "value": 57000,
       "color": "bg-cyan-600",
       "poznamka": "Automatický peletový kotel, účinnost 92 %",
-      "uspory": "~21 000 Kč/rok"
+      "uspory": "~18 000 Kč/rok"
+    },
+    {
+      "label": "Propan",
+      "value": 59000,
+      "color": "bg-violet-500",
+      "poznamka": "Kondenzační kotel na propan, účinnost 102 %",
+      "uspory": "~20 000 Kč/rok"
     },
     {
       "label": "Zemní plyn",
-      "value": 65000,
+      "value": 71000,
       "color": "bg-yellow-500",
       "poznamka": "Kondenzační kotel, účinnost 102 %",
-      "uspory": "~28 000 Kč/rok"
+      "uspory": "~32 000 Kč/rok"
     },
     {
       "label": "Elektřina přímotop",
-      "value": 106000,
+      "value": 119000,
       "color": "bg-rose-600",
       "poznamka": "Elektrokotel, podlahové rohože a fólie, konvekční a sálavé panely, akumulační kamna i teplovodní akumulační nádrže, účinnost 95 %",
-      "uspory": "~69 000 Kč/rok"
+      "uspory": "~80 000 Kč/rok"
     }
   ],
   "factors_headline": "Faktory ovlivňující úsporu",

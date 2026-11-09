@@ -43,12 +43,12 @@ Dům bez topení zůstane **jen první den** - druhý den již TČ ohřívá.
 
 Přechod z kondenzačního plynového kotle na tepelné čerpadlo vzduch-voda:
 
-- Zemní plyn (kondenzační kotel): **~65 000 Kč/rok**
-- Tepelné čerpadlo vzduch-voda (COP 3,3): **~37 000 Kč/rok**
-- **Roční úspora: ~28 000 Kč**
+- Zemní plyn (kondenzační kotel): **~71 000 Kč/rok**
+- Tepelné čerpadlo vzduch-voda (COP 3,3): **~39 000 Kč/rok**
+- **Roční úspora: ~32 000 Kč**
 
 Čísla vycházejí z našeho [porovnání nákladů na vytápění](/porovnani-nakladu), kde najdete i pelety, uhlí, dřevo a elektrokotel.
 
-Při [ceně systému od 309 000 Kč](/cena) to znamená návratnost zhruba jedenáct let. Pokud dnes topíte elektrokotlem nebo přímotopy, je to výrazně rychlejší - úspora tam vychází na 69 000 Kč ročně a investice se vrátí zhruba za čtyři a půl roku. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
+Při [ceně systému od 309 000 Kč](/cena) to znamená návratnost zhruba deset let. Pokud dnes topíte elektrokotlem nebo přímotopy, je to výrazně rychlejší - úspora tam vychází na 80 000 Kč ročně a investice se vrátí zhruba za čtyři roky. Bezúročný úvěr NZÚ (RPSN 0 %) navíc znamená, že nemusíte mít částku předem: měsíční splátku z velké části pokryje to, co ušetříte za energie.
 
 Chcete vědět, jak to vyjde u vás? [Spočítejte si to online](/cenova-kalkulace) nebo nás [kontaktujte přímo](/poptavka).
