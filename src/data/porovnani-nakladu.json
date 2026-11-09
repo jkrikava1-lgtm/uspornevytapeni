@@ -29,13 +29,6 @@
       "uspory": "~3 000 Kč/rok"
     },
     {
-      "label": "Hnědé uhlí",
-      "value": 57000,
-      "color": "bg-stone-600",
-      "poznamka": "Klasický kotel na uhlí (3. emisní třída), účinnost 75 %",
-      "uspory": "~18 000 Kč/rok"
-    },
-    {
       "label": "Dřevní pelety",
       "value": 57000,
       "color": "bg-cyan-600",
@@ -48,6 +41,13 @@
       "color": "bg-violet-500",
       "poznamka": "Kondenzační kotel na propan, účinnost 102 %",
       "uspory": "~20 000 Kč/rok"
+    },
+    {
+      "label": "Hnědé uhlí",
+      "value": 66000,
+      "color": "bg-stone-600",
+      "poznamka": "Klasický kotel na uhlí (3. emisní třída), účinnost 75 %, teplá voda z elektrického bojleru",
+      "uspory": "~27 000 Kč/rok"
     },
     {
       "label": "Zemní plyn",
