@@ -12,7 +12,7 @@
   "kalkulacka_lead": "Zadejte, čím topíte a kolik za to ročně zaplatíte. Z toho odvodíme, kolik tepla váš dům potřebuje, a přepočítáme na něj všechny zdroje.",
   "kalkulacka_label_zdroj": "Čím topíte dnes",
   "kalkulacka_label_castka": "Kolik ročně zaplatíte za vytápění a teplou vodu",
-  "kalkulacka_pozn": "Orientační přepočet. Vychází ze stejných sazeb za kWh jako tabulka výše, takže u referenčního domu dá stejná čísla. Vaše skutečné náklady ovlivní zateplení, tarif i způsob ohřevu vody.",
+  "kalkulacka_pozn": "Orientační přepočet.",
   "chart_items": [
     {
       "label": "Tepelné čerpadlo",
