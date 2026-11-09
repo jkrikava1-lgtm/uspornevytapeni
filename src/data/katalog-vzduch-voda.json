@@ -4,7 +4,7 @@
     "description": "Kompletní katalog tepelných čerpadel vzduch-voda Master Therm. BoxAir Inverter, Split, Split Combi a velké objekty. Výkony, COP, technické listy."
   },
   "hero": {
-    "title": "Katalog vzduch - voda",
+    "title": "Katalog vzduch-voda",
     "subtitle": "Kompletní katalog modelů Master Therm",
     "breadcrumb": [
       {
@@ -12,7 +12,7 @@
         "href": "/katalog"
       },
       {
-        "label": "Vzduch - voda",
+        "label": "Vzduch-voda",
         "href": "/katalog/vzduch-voda"
       }
     ]

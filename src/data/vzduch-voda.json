@@ -1,7 +1,7 @@
 {
   "meta_title": "Tepelná čerpadla vzduch-voda - cena od 309 000 Kč",
   "meta_description": "Cena tepelného čerpadla vzduch-voda od 309 000 Kč na klíč - dodávka, montáž, zásobník i uvedení do provozu. Venkovní kompakt nebo split, montáž za 2-5 dní.",
-  "hero_title": "Tepelná čerpadla vzduch - voda",
+  "hero_title": "Tepelná čerpadla vzduch-voda",
   "hero_subtitle": "Topný faktor 3,3. Montáž za 2-5 dní. Ověřené řešení pro české klima.",
   "intro_text1": "Díky klimatickým podmínkám České republiky je provoz tepelného čerpadla vzduch-voda mimořádně ekonomický. Průměrná teplota vzduchu v topném období se pohybuje kolem <strong>+4 °C</strong>, což znamená, že systém pracuje s velmi vysokou účinností i v zimě.",
   "intro_text2": "Pokud máte jeden topný okruh (většina domů), instaluje se kromě TČ pouze bojler. V případě více okruhů (podlahové topení + radiátory nebo třeba vytápění bazénu) je třeba instalovat malou akumulační nádobu (50-100 litrů).",
@@ -37,7 +37,7 @@
       "value": "72 × 53 cm"
     }
   ],
-  "variant1_title": "Vzduch - voda: Venkovní kompakt",
+  "variant1_title": "Vzduch-voda: Venkovní kompakt",
   "variant1_subtitle": "Nejprodávanější řešení pro rodinné domy, jednoduché a funkční",
   "variant1_question": "Proč je venkovní kompakt tak oblíbený?",
   "variant1_bullets": [
@@ -56,7 +56,7 @@
   "variant1_catalog_link": "Katalog vzduch-voda",
   "variant1_cta_text": "Nechte si navrhnout venkovní kompakt na míru:",
   "variant1_cta_button": "Zpracujte mi nabídku",
-  "variant2_title": "Vzduch - voda: Dělená konstrukce neboli Split",
+  "variant2_title": "Vzduch-voda: Dělená konstrukce neboli Split",
   "variant2_subtitle": "Kompresor venku, zásobník uvnitř - volnější umístění obou jednotek",
   "variant2_outdoor_title": "Venkovní jednotka",
   "variant2_outdoor_bullets": [

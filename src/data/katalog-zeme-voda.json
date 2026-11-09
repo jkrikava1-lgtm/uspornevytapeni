@@ -4,7 +4,7 @@
     "description": "Kompletní katalog tepelných čerpadel země-voda Master Therm. AquaMaster, AquaMaster Inverter, AquaMaster Inverter Combi. Výkony, COP, technické listy."
   },
   "hero": {
-    "title": "Katalog země - voda",
+    "title": "Katalog země-voda",
     "subtitle": "Kompletní katalog modelů Master Therm",
     "breadcrumb": [
       {
@@ -12,7 +12,7 @@
         "href": "/katalog"
       },
       {
-        "label": "Země - voda",
+        "label": "Země-voda",
         "href": "/katalog/zeme-voda"
       }
     ]

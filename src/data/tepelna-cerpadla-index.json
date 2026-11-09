@@ -7,7 +7,7 @@
     {
       "emoji": "🌬️",
       "image": "/images/produkty/boxair-kompakt-dum.webp",
-      "title": "Vzduch - voda",
+      "title": "Vzduch-voda",
       "desc": "Nejrozšířenější typ. Snadná instalace za 2-5 dní, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
       "href": "/tepelna-cerpadla/vzduch-voda",
       "gradient": "from-navy-700 to-navy-900"
@@ -15,7 +15,7 @@
     {
       "emoji": "🌱",
       "image": "/images/produkty/aquamaster-technicka.webp",
-      "title": "Země - voda",
+      "title": "Země-voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Plošný kolektor nebo hloubkový vrt podle pozemku.",
       "href": "/tepelna-cerpadla/zeme-voda",
       "gradient": "from-green-700 to-green-900"
@@ -23,7 +23,7 @@
     {
       "emoji": "💧",
       "image": "/images/ilustrace/zeme-voda.webp",
-      "title": "Voda - voda",
+      "title": "Voda-voda",
       "desc": "Nejvyšší topný faktor ze všech typů, 5,0, využívající podzemní vodu. Ideální tam, kde je dostatek spodní vody.",
       "href": "/tepelna-cerpadla/voda-voda",
       "gradient": "from-cyan-700 to-cyan-900"

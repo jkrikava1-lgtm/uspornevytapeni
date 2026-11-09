@@ -54,21 +54,21 @@
   "products_cta": "Zjistit více",
   "products": [
     {
-      "title": "Vzduch - voda",
+      "title": "Vzduch-voda",
       "desc": "Nejrozšířenější typ. Snadná instalace, výborný poměr cena/výkon. Vhodné pro 95 % domácností.",
       "emoji": "🌬️",
       "href": "/tepelna-cerpadla/vzduch-voda",
       "image": "/images/produkty/boxair-kompakt-dum.webp"
     },
     {
-      "title": "Země - voda",
+      "title": "Země-voda",
       "desc": "Nejvyšší účinnost i v mrazivých zimách. Ideální tam, kde je dost pozemku pro zemní kolektory.",
       "emoji": "🌱",
       "href": "/tepelna-cerpadla/zeme-voda",
       "image": "/images/produkty/aquamaster-technicka.webp"
     },
     {
-      "title": "Voda - voda",
+      "title": "Voda-voda",
       "desc": "Nejvyšší topný faktor ze všech typů, 5,0. Pro objekty, které mají studnu s vydatným zdrojem vody.",
       "emoji": "💧",
       "href": "/tepelna-cerpadla/voda-voda",
