@@ -892,13 +892,12 @@ collections:
             widget: list
             field:
               { label: "Výhoda", name: item, widget: string }
+          - { label: "Obec — popisek pole", name: label_obec, widget: string }
+          - { label: "Obec — nápověda v poli", name: placeholder_obec, widget: string }
 
   # ============================================================
   # POROVNÁNÍ NÁKLADŮ (porovnani-nakladu.json)
   # ============================================================
-
-          - { label: "Obec — popisek pole", name: label_obec, widget: string }
-          - { label: "Obec — nápověda v poli", name: placeholder_obec, widget: string }
   - name: porovnani-nakladu
     label: "Stránka Porovnání nákladů"
     files:
@@ -919,6 +918,16 @@ collections:
           - { label: "Metodická poznámka", name: note_text, widget: text }
           - { label: "Badge nejnižší náklady", name: highlight_badge, widget: string }
           - { label: "Prefix úspory", name: savings_prefix, widget: string }
+
+          # --- Kalkulačka ---
+          # Sazby za kWh se dopočítají z hodnot grafu a z referenční potřeby,
+          # takže kalkulačka a tabulka si nemůžou odporovat.
+          - { label: "Kalkulačka — referenční potřeba tepla (kWh/rok)", name: potreba_referencni, widget: number }
+          - { label: "Kalkulačka — nadpis", name: kalkulacka_title, widget: string }
+          - { label: "Kalkulačka — úvodní text", name: kalkulacka_lead, widget: text }
+          - { label: "Kalkulačka — popisek výběru zdroje", name: kalkulacka_label_zdroj, widget: string }
+          - { label: "Kalkulačka — popisek částky", name: kalkulacka_label_castka, widget: string }
+          - { label: "Kalkulačka — poznámka pod výpočtem", name: kalkulacka_pozn, widget: text }
 
           # --- Graf ---
           - { label: "Graf — nadpis", name: chart_headline, widget: string }
