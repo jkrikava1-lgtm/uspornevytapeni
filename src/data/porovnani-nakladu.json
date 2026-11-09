@@ -16,9 +16,9 @@
   "chart_items": [
     {
       "label": "Palivové dřevo",
-      "value": 22000,
+      "value": 29000,
       "color": "bg-amber-500",
-      "poznamka": "Zplyňovací kotel, účinnost 86 %",
+      "poznamka": "Klasický kotel na dřevo (3. emisní třída), účinnost 65 %",
       "uspory": "levnější palivo, ale pracné"
     },
     {
