@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 import site from '../data/site.json';
 import data from '../data/kontakty.json';
+
+// Adresa je klikací – v Clarity bylo vidět, jak na ni lidé klikají a nic se neděje.
+// Skládá se z údajů v site.json, aby nevznikl další klíč k údržbě.
+const adresa = `${site.address_line1}, ${site.address_line2}`;
+const adresaMapyHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(adresa)}`;
 ---
 
 <Layout title={data.meta_title} description={data.meta_description}>
@@ -54,8 +59,10 @@ import data from '../data/kontakty.json';
               </div>
               <div>
                 <div class="text-xs text-charcoal-500 font-semibold uppercase tracking-wider mb-1">{data.address_label}</div>
-                <div class="font-bold text-charcoal-900">{site.address_line1}<br />{site.address_line2}</div>
-              </div>
+                <a href={adresaMapyHref} target="_blank" rel="noopener"
+                   class="font-bold text-charcoal-900 underline decoration-charcoal-300 underline-offset-4 transition-colors hover:text-brand-500 hover:decoration-brand-500">
+                  {site.address_line1}<br />{site.address_line2}
+                </a>
             </div>
           </div>
 
