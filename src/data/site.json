@@ -185,6 +185,8 @@
     }
   ],
   "nav_cena_mobile_extra": [],
+  "facebook": "https://www.facebook.com/usporne.vytapeni",
+  "instagram": "https://www.instagram.com/uspo_vytapeni/",
   "map_tiles": "https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_46ca_1_6a6f3967b1495c0d5cc09969",
   "map_attribution": "© <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap contributors</a> © <a href=\"https://carto.com/attributions\">CARTO</a>"
 }
