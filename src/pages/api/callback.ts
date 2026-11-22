@@ -36,7 +36,7 @@ export async function GET({ url }: { url: URL }) {
   }
 
   // Editor otevírá přihlášení ve vyskakovacím okně a čeká na postMessage.
-  // Když se sem někdo dostane napřímo (bez openeru), token nemá komu předat —
+  // Když se sem někdo dostane napřímo (bez openeru), token nemá komu předat –
   // v tom případě to radši srozumitelně vysvětlíme, než abychom nechali bílou stránku.
   const html = `<!DOCTYPE html>
 <html lang="cs"><head><meta charset="utf-8"><title>Přihlášení do editoru</title>

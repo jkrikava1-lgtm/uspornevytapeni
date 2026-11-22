@@ -25,12 +25,12 @@ export async function POST({ request }: { request: Request }) {
   const body = `
 Nová cenová kalkulace z webu
 ============================
-Typ objektu:        ${data.typ_objektu ?? '—'}
-Ohřev TUV:          ${data.ohrev_tuv ?? '—'}
-Topný systém:       ${data.topny_system ?? '—'}
-Typ TČ:             ${data.typ_tc ?? '—'}
-Tepelná ztráta:     ${data.tepelna_ztrata ?? '—'}
-Vytápěná plocha:    ${data.plocha ?? '—'}
+Typ objektu:        ${data.typ_objektu ?? '–'}
+Ohřev TUV:          ${data.ohrev_tuv ?? '–'}
+Topný systém:       ${data.topny_system ?? '–'}
+Typ TČ:             ${data.typ_tc ?? '–'}
+Tepelná ztráta:     ${data.tepelna_ztrata ?? '–'}
+Vytápěná plocha:    ${data.plocha ?? '–'}
 
 Kontakt
 -------

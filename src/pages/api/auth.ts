@@ -1,7 +1,7 @@
 export const prerender = false;
 
 export async function GET() {
-  // Na Vercelu jsou secrets dostupné až za běhu přes process.env —
+  // Na Vercelu jsou secrets dostupné až za běhu přes process.env –
   // import.meta.env se propisuje při buildu, proto obojí.
   const clientId = import.meta.env.GITHUB_CLIENT_ID ?? process.env.GITHUB_CLIENT_ID;
 

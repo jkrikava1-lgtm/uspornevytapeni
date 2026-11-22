@@ -50,13 +50,13 @@ export async function POST({ request }: { request: Request }) {
     return Response.json({ error: 'SMTP not configured' }, { status: 500 });
   }
 
-  const jmeno    = data.jmeno    ?? '—';
-  const telefon  = data.telefon  ?? '—';
-  const email    = data.email    ?? '—';
-  const obec     = data.obec     ?? '—';
-  const objekt   = data.objekt   ?? '—';
-  const vytapeni = data.vytapeni ?? '—';
-  const zprava   = data.zprava   ?? '—';
+  const jmeno    = data.jmeno    ?? '–';
+  const telefon  = data.telefon  ?? '–';
+  const email    = data.email    ?? '–';
+  const obec     = data.obec     ?? '–';
+  const objekt   = data.objekt   ?? '–';
+  const vytapeni = data.vytapeni ?? '–';
+  const zprava   = data.zprava   ?? '–';
   const zdroj    = data.zdroj    ?? 'Web (formulář poptávky)';
 
   const body = `
@@ -85,7 +85,7 @@ ${zprava}
     from: `"Úsporné vytápění" <${from}>`,
     to: 'info@uspornevytapeni.cz',
     replyTo: String(email),
-    subject: `Poptávka: ${jmeno} — ${objekt}`,
+    subject: `Poptávka: ${jmeno} – ${objekt}`,
     text: body,
   };
 
