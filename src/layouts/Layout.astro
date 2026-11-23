@@ -881,7 +881,7 @@ const navGroups = [
       </a>
     )}
     <script>
-      (function(){let v:string|null=null;function c(){fetch('/version.json',{cache:'no-store'}).then(r=>r.json()).then((d:{v:string})=>{if(d.v==='dev')return;if(v===null){v=d.v;return;}if(d.v!==v)location.reload();}).catch(()=>{});}c();setInterval(c,30000);})();
+      (function(){let v:string|null=null;function c(){fetch('/version.json?_='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then((d:{v:string})=>{if(d.v==='dev')return;if(v===null){v=d.v;return;}if(d.v!==v)location.reload();}).catch(()=>{});}c();setInterval(c,30000);})();
     </script>
   </body>
 </html>
